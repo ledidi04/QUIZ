@@ -1,0 +1,344 @@
+/* === RESET & BASE === */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', system-ui, sans-serif;
+    line-height: 1.6;
+    color: #1a1a2e;
+    background-color: #f8f9fc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* === NAVIGATION === */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #002395, #d21034);
+    padding: 0.75rem 1.25rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f1c40f;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #f1c40f;
+}
+
+
+/* Hamburger mobile */
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.nav-toggle .bar {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+
+/* === CONTAINER === */
+
+.container {
+    flex: 1;
+    width: 95%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+
+/* === HOME PAGE === */
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    color: #002395;
+    margin-bottom: 0.5rem;
+}
+
+.hero .lead {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+
+/* === FORM === */
+
+.start-form {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: #002395;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #ccd1d9;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #002395;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 35, 149, 0.15);
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    text-align: center;
+    width: 100%;
+    background: #d21034;
+    color: #fff;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    background: #b00d2a;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    color: #1a1a2e;
+    border: 2px solid #ccd1d9;
+}
+
+.btn-secondary:hover {
+    border-color: #002395;
+    background: #e8f0fe;
+}
+
+
+/* === FOOTER === */
+
+.footer {
+    background: #002395;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+
+/* === QUIZ PAGES === */
+
+.welcome-message {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+}
+
+.card h2,
+.card h3 {
+    margin-bottom: 1rem;
+    color: #002395;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.8rem;
+}
+
+.subject-btn {
+    background: #f1f5f9;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 0.9rem 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    color: #1a1a2e;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.subject-btn:hover,
+.subject-btn.active {
+    border-color: #002395;
+    background: #dce8fa;
+}
+
+
+/* === QUIZ CONTAINER (dynamique) === */
+
+#quizContainer {
+    margin-top: 1rem;
+}
+
+.question-block {
+    margin-bottom: 1.5rem;
+}
+
+.question-text {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: #f8f9fc;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: 0.15s;
+    font-size: 0.95rem;
+}
+
+.option-btn:hover {
+    border-color: #002395;
+    background: #eef2ff;
+}
+
+.option-btn.correct {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.option-btn.wrong {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+.explication {
+    background: #fff9e6;
+    border-left: 4px solid #f1c40f;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.9rem;
+}
+
+.score-display {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem 0;
+    color: #002395;
+}
+
+
+/* === RESPONSIVE === */
+
+@media (max-width: 640px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #002395;
+        padding: 1rem;
+    }
+    .nav-menu.show {
+        display: flex;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    .start-form {
+        padding: 1.2rem;
+    }
+    .container {
+        margin: 1rem auto;
+    }
+}
