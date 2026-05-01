@@ -2797,26 +2797,6 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 
 
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'Qu''est-ce que le solvant ?',
-    'Le liquide qui dissout le soluté (ex: l''eau dans l''eau salée).', 'Examen 9e AF', 1);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'La substance dissoute', 0, 1),
-(@qid, 'Le liquide qui dissout', 1, 2),
-(@qid, 'Le mélange final', 0, 3),
-(@qid, 'Le précipité', 0, 4);
-
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'Qu''est-ce que le soluté ?',
-    'La substance qui est dissoute dans le solvant.', 'Examen 9e AF', 1);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Le liquide', 0, 1),
-(@qid, 'La substance dissoute', 1, 2),
-(@qid, 'Le mélange final', 0, 3),
-(@qid, 'Le récipient', 0, 4);
-
 -- Suite Santé - Maladies infectieuses
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (4, 2, 'Qu''est-ce qu''une maladie infectieuse ?',
@@ -3013,16 +2993,6 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Ils se cassent', 0, 4);
 
 
-
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'De quoi est constituée une molécule d''eau ?',
-    'De deux atomes d''hydrogène et un atome d''oxygène.', 'Examen 9e AF', 1);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, '1 H + 1 O', 0, 1),
-(@qid, '2 H + 1 O', 1, 2),
-(@qid, '1 H + 2 O', 0, 3),
-(@qid, '2 H + 2 O', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (4, 2, 'Qu''est-ce que le squelette humain ?',
