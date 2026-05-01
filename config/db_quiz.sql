@@ -3758,7 +3758,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'L''or', 0, 1),
 (@qid, 'Le sucre', 1, 2),
 (@qid, 'Le pétrole', 0, 3),
-(@qid, 'Le café uniquement', 0, 4);
+(@qid, 'Le café', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (5, 2, 'Qu''est-ce que le Code Noir ?',
