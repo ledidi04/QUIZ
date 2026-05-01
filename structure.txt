@@ -2,6 +2,11 @@
 ├── index.php
 ├── 9e/
 │   ├── index.php
+|   ├── completer.php
+|   ├── paire.php
+|   ├── qcm.php
+|   ├── vf.php
+|   ├── Exam.php
 │   └── examen/ dossiers contanant les examens qu'on va tirer les questions
 ├── ns4/
 │   ├── index.php

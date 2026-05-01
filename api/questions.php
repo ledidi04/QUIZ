@@ -1,218 +1,162 @@
 <?php
 /**
  * API de questions - Quiz Ayiti
+ * Version finale corrigée
  * 
- * Retourne un JSON des questions pour une classe et une matière données
- * 
- * GET /api/questions.php?classe=9e&matiere=maths
- * GET /api/questions.php?classe=9e&matiere=espagnol
- * GET /api/questions.php?classe=ns4&matiere=physique
- * 
- * @version 2.0
+ * Types dans la DB :
+ *   type_id = 1 -> completion
+ *   type_id = 2 -> qcm
  */
-
-// ═══════════════════════════════════════
-// HEADERS
-// ═══════════════════════════════════════
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
-
-// Gérer les requêtes OPTIONS (CORS preflight)
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    http_response_code(200);
-    exit;
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { 
+    http_response_code(200); 
+    exit; 
 }
 
-// ═══════════════════════════════════════
-// CONFIGURATION
-// ═══════════════════════════════════════
-require_once __DIR__ . '/../config/connexion.php';
+// Paramètres
+$classe  = trim(strtolower($_GET['classe']  ?? '9e'));
+$matiere = trim(strtolower($_GET['matiere'] ?? 'maths'));
+$type    = trim(strtolower($_GET['type']    ?? ''));  // 'qcm' ou 'completion'
+$limit   = isset($_GET['limit']) ? (int)$_GET['limit'] : 20;
+$random  = isset($_GET['random']) && $_GET['random'] !== 'false';
 
-// ═══════════════════════════════════════
-// VALIDATION DES PARAMÈTRES
-// ═══════════════════════════════════════
-$classe  = $_GET['classe']  ?? '';
-$matiere = $_GET['matiere'] ?? '';
-$limit   = isset($_GET['limit']) ? (int)$_GET['limit'] : 50; // max 50 questions par défaut
-$random  = isset($_GET['random']) ? filter_var($_GET['random'], FILTER_VALIDATE_BOOLEAN) : false;
-
-// Nettoyage basique
-$classe  = trim(strtolower($classe));
-$matiere = trim(strtolower($matiere));
-
-// Classes et matières valides
+// Validation
 $classesValides = ['9e', 'ns4'];
-
 $matieresValides = [
-    '9e'  => [
-        'creole', 'francais', 'maths', 'sciences_exp', 
-        'sciences_soc', 'anglais', 'espagnol'
-    ],
-    'ns4' => [
-        'francais', 'maths', 'physique', 'chimie', 
-        'svt', 'histoire_geo', 'anglais'
-    ],
+    '9e'  => ['creole','francais','maths','sciences_exp','sciences_soc','anglais','espagnol'],
+    'ns4' => ['francais','maths','physique','chimie','svt','histoire_geo','anglais'],
 ];
 
-// Vérifier si la classe est valide
+// Mapping type -> type_id dans la base de données
+$typeMapping = [
+    'qcm'        => 2,  // type_id = 2 dans types_exercice
+    'completion' => 1,  // type_id = 1 dans types_exercice
+    'vf'         => 2,  // Vrai/Faux inclus dans QCM
+];
+
 if (!in_array($classe, $classesValides)) {
     http_response_code(400);
-    echo json_encode([
-        'success' => false,
-        'error'   => 'Classe invalide',
-        'valid_classes' => $classesValides
-    ], JSON_UNESCAPED_UNICODE);
+    echo json_encode(['success' => false, 'error' => 'Classe invalide']);
     exit;
 }
-
-// Vérifier si la matière est valide pour cette classe
 if (!in_array($matiere, $matieresValides[$classe] ?? [])) {
     http_response_code(400);
-    echo json_encode([
-        'success' => false,
-        'error'   => 'Matière invalide pour cette classe',
-        'valid_matieres' => $matieresValides[$classe] ?? []
-    ], JSON_UNESCAPED_UNICODE);
+    echo json_encode(['success' => false, 'error' => 'Matière invalide : ' . $matiere]);
     exit;
 }
-
-// Limiter le nombre de questions (sécurité)
 if ($limit < 1) $limit = 1;
 if ($limit > 100) $limit = 100;
 
-// ═══════════════════════════════════════
-// REQUÊTE À LA BASE DE DONNÉES
-// ═══════════════════════════════════════
 try {
+    // Connexion à la base de données
+    require_once __DIR__ . '/../config/connexion.php';
     $pdo = getDB();
 
-    // Requête principale avec ORDER BY RAND() si demandé
-    $orderBy = $random ? 'RAND()' : 'q.id ASC';
+    // 1. Récupérer l'ID de la classe
+    $stmt = $pdo->prepare("SELECT id FROM classes WHERE nom = ?");
+    $stmt->execute([$classe]);
+    $classeId = $stmt->fetchColumn();
     
-    $sql = "
-        SELECT 
-            q.id,
-            t.code AS type_code,
-            t.nom   AS type_nom,
-            q.enonce,
-            q.explication,
-            q.difficulte,
-            q.source,
-            q.reponse_attendue,
-            r.id    AS reponse_id,
-            r.texte AS reponse_texte,
-            r.est_correcte,
-            r.ordre
-        FROM questions q
-        JOIN types_exercice t ON q.type_id = t.id
-        JOIN matieres m ON q.matiere_id = m.id
-        JOIN classes c ON m.classe_id = c.id
-        LEFT JOIN reponses r ON q.id = r.question_id
-        WHERE c.nom = :classe 
-          AND m.nom = :matiere
-        ORDER BY {$orderBy}, r.ordre ASC
-    ";
-
-    // Si limit est défini, on limite le nombre de questions
-    if ($limit > 0) {
-        $sql .= " LIMIT :limit";
+    if (!$classeId) {
+        throw new Exception("Classe '$classe' non trouvée dans la base de données");
     }
 
+    // 2. Récupérer l'ID de la matière
+    $stmt = $pdo->prepare("SELECT id FROM matieres WHERE classe_id = ? AND nom = ?");
+    $stmt->execute([$classeId, $matiere]);
+    $matiereId = $stmt->fetchColumn();
+    
+    if (!$matiereId) {
+        throw new Exception("Matière '$matiere' non trouvée pour la classe '$classe'");
+    }
+
+    // 3. Construire la requête pour récupérer les questions
+    $sql = "SELECT q.id, t.code AS type_code, q.enonce, q.explication, q.reponse_attendue
+            FROM questions q
+            JOIN types_exercice t ON q.type_id = t.id
+            WHERE q.matiere_id = :matiere_id";
+    
+    $params = [':matiere_id' => $matiereId];
+
+    // 4. Filtrer par type si spécifié
+    if (!empty($type) && isset($typeMapping[$type])) {
+        $sql .= " AND q.type_id = :type_id";
+        $params[':type_id'] = $typeMapping[$type];
+    }
+
+    // 5. Ordre aléatoire ou non
+    if ($random) {
+        $sql .= " ORDER BY RAND()";
+    } else {
+        $sql .= " ORDER BY q.id ASC";
+    }
+
+    $sql .= " LIMIT :limit";
+    $params[':limit'] = $limit;
+
+    // 6. Exécuter la requête
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':classe', $classe, PDO::PARAM_STR);
-    $stmt->bindParam(':matiere', $matiere, PDO::PARAM_STR);
-    if ($limit > 0) {
-        $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+    foreach ($params as $key => $value) {
+        if ($key === ':limit') {
+            $stmt->bindValue($key, (int)$value, PDO::PARAM_INT);
+        } else {
+            $stmt->bindValue($key, $value);
+        }
     }
     $stmt->execute();
-    
-    $rows = $stmt->fetchAll();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // Si aucune question trouvée
-    if (empty($rows)) {
-        echo json_encode([
-            'success' => true,
-            'classe'  => $classe,
-            'matiere' => $matiere,
-            'total'   => 0,
-            'message' => 'Aucune question trouvée pour cette matière. Reviens bientôt !',
-            'questions' => []
-        ], JSON_UNESCAPED_UNICODE);
-        exit;
-    }
-
-    // ═══════════════════════════════════════
-    // REGROUPEMENT PAR QUESTION
-    // ═══════════════════════════════════════
+    // 7. Formater les résultats
     $questions = [];
-    
     foreach ($rows as $row) {
-        $qid = $row['id'];
-        
-        // Si la question n'existe pas encore dans le tableau, on l'initialise
-        if (!isset($questions[$qid])) {
-            $questions[$qid] = [
-                'id'               => (int) $qid,
-                'type'             => $row['type_code'],
-                'type_nom'         => $row['type_nom'],
-                'enonce'           => $row['enonce'],
-                'explication'      => $row['explication'],
-                'difficulte'       => (int) $row['difficulte'],
-                'source'           => $row['source'],
-                'reponse_attendue' => $row['reponse_attendue'],
-                'options'          => [],
-            ];
-        }
-        
-        // Ajouter l'option si elle existe (pour QCM, V/F, appariement...)
-        if ($row['reponse_id']) {
-            $questions[$qid]['options'][] = [
-                'id'      => (int) $row['reponse_id'],
-                'texte'   => $row['reponse_texte'],
-                'correct' => (bool) $row['est_correcte'],
-                'ordre'   => (int) $row['ordre'],
-            ];
-        }
-    }
+        $q = [
+            'id'               => (int)$row['id'],
+            'type'             => ($row['type_code'] === 'completion') ? 'completion' : 'qcm',
+            'enonce'           => $row['enonce'],
+            'explication'      => $row['explication'] ?? null,
+            'reponse_attendue' => $row['reponse_attendue'] ?? null,
+            'options'          => []
+        ];
 
-    // Mélanger les options pour chaque question (éviter la mémorisation de l'ordre)
-    if ($random) {
-        foreach ($questions as &$question) {
-            if (!empty($question['options'])) {
-                shuffle($question['options']);
+        // 8. Pour les QCM, récupérer les 4 options
+        if ($q['type'] === 'qcm') {
+            $optStmt = $pdo->prepare(
+                "SELECT texte, est_correcte FROM reponses WHERE question_id = ? ORDER BY ordre ASC"
+            );
+            $optStmt->execute([$row['id']]);
+            $options = $optStmt->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach ($options as $opt) {
+                $q['options'][] = [
+                    'texte'   => $opt['texte'],
+                    'correct' => (bool)$opt['est_correcte']
+                ];
+            }
+
+            // Mélanger les options pour plus de variété
+            if (!empty($q['options'])) {
+                shuffle($q['options']);
             }
         }
-        // Mélanger aussi l'ordre des questions
-        $questions = array_values($questions);
-        shuffle($questions);
-    } else {
-        $questions = array_values($questions);
+
+        $questions[] = $q;
     }
 
-    // ═══════════════════════════════════════
-    // RÉPONSE JSON
-    // ═══════════════════════════════════════
+    // 9. Retourner la réponse JSON
     echo json_encode([
         'success'   => true,
         'classe'    => $classe,
         'matiere'   => $matiere,
+        'type'      => $type,
         'total'     => count($questions),
-        'questions' => $questions,
+        'questions' => $questions
     ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
-} catch (PDOException $e) {
-    // Erreur de connexion à la base de données
+} catch (Exception $e) {
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'error'   => 'Erreur de base de données',
-        'message' => 'Impossible de se connecter à la base de données. Vérifiez la configuration.',
-        // En production, ne pas afficher le message d'erreur détaillé
-        // 'debug' => $e->getMessage()
+        'error'   => $e->getMessage()
     ], JSON_UNESCAPED_UNICODE);
-    
-    // Logger l'erreur en production
-    error_log('Quiz API Error: ' . $e->getMessage());
 }

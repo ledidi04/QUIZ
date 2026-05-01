@@ -47,64 +47,49 @@
     /**
      * Charge les questions depuis l'API
      */
-    async function loadQuiz(matiere) {
+    // Dans quiz.js, remplace la fonction loadQuiz() par celle-ci :
+
+    async function loadQuiz(matiereParam) {
+        const matiere = matiereParam || (typeof getSelectedMatiere === 'function' ? getSelectedMatiere() : '');
+        const type = typeof getSelectedType === 'function' ? getSelectedType() : '';
+
+        if (!matiere) return;
         if (!quizContainer) return;
 
-        // Afficher le loader
-        quizContainer.innerHTML = `
-      <div style="text-align:center; padding: 2rem;">
-        <div style="font-size: 2rem; margin-bottom: 0.75rem;">⏳</div>
-        <p style="color: #64748b;">Chargement des questions...</p>
-      </div>
-    `;
+        quizContainer.innerHTML = `<div style="text-align:center;padding:2rem;"><span style="font-size:2rem;">⏳</span><p>Chargement...</p></div>`;
+
+        // Construire l'URL avec le type
+        let url = `${API_URL}?classe=${encodeURIComponent(CLASSE)}&matiere=${encodeURIComponent(matiere)}`;
+        if (type && type !== 'examen') {
+            url += `&type=${encodeURIComponent(type)}`; // type = qcm, vf, completion, appariement
+        }
+        url += '&random=true'; // Toujours aléatoire pour varier les questions
+
+        if (type === 'examen') {
+            url += '&limit=60'; // 60 questions pour le mode examen
+        }
+
+        console.log('Chargement:', url);
 
         try {
-            const url = `${API_URL}?classe=${encodeURIComponent(CLASSE)}&matiere=${encodeURIComponent(matiere)}`;
-            console.log('Chargement depuis:', url);
-
             const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`Erreur HTTP: ${response.status}`);
-            }
-
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
             const data = await response.json();
-            console.log('Données reçues:', data);
-
-            if (data.error) {
-                throw new Error(data.error);
-            }
+            if (data.error) throw new Error(data.error);
 
             currentQuestions = data.questions || [];
             currentIndex = 0;
             score = 0;
 
             if (currentQuestions.length === 0) {
-                quizContainer.innerHTML = `
-          <div style="text-align:center; padding: 2rem;">
-            <div style="font-size: 3rem; margin-bottom: 0.75rem;">📭</div>
-            <h3 style="color: #334155; margin-bottom: 0.5rem;">Aucune question trouvée</h3>
-            <p style="color: #94a3b8;">Cette matière n'a pas encore de questions. Reviens bientôt !</p>
-          </div>
-        `;
+                quizContainer.innerHTML = `<p>Aucune question pour ${matiere} (type: ${type})</p>`;
                 return;
             }
 
-            // Mélanger les questions (optionnel)
-            // currentQuestions = shuffleArray(currentQuestions);
-
-            // Afficher la première question
             renderQuestion();
-
         } catch (err) {
-            console.error('Erreur:', err);
-            quizContainer.innerHTML = `
-        <div style="text-align:center; padding: 2rem;">
-          <div style="font-size: 3rem; margin-bottom: 0.75rem;">❌</div>
-          <h3 style="color: #dc3545; margin-bottom: 0.5rem;">Erreur de chargement</h3>
-          <p style="color: #64748b; margin-bottom: 1rem;">${err.message}</p>
-          <p style="color: #94a3b8; font-size: 0.85rem;">Vérifie que la base de données est bien importée et que l'API est accessible.</p>
-        </div>
-      `;
+            quizContainer.innerHTML = `<p>Erreur : ${err.message}</p>`;
+            console.error(err);
         }
     }
 
