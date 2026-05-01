@@ -1284,7 +1284,7 @@ SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Poumon', 0, 1),
 (@qid, 'Foie', 1, 2),
-(@qid, 'Cœur', 0, 3),
+(@qid, 'Coeur', 0, 3),
 (@qid, 'Rein', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
@@ -1442,10 +1442,10 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
     'Cardia = entrée de l''estomac.', 'Examen 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Du cœur', 0, 1),
+(@qid, 'Du coeur', 0, 1),
 (@qid, 'De l''estomac', 1, 2),
 (@qid, 'De l''utérus', 0, 3),
-(@qid, 'De l''œsophage', 0, 4);
+(@qid, 'De l''oesophage', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (4, 2, 'Quelle est l''unité de puissance ?', 'Watt.', 'Examen 9e AF', 1);
@@ -1538,11 +1538,11 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (4, 2, 'L''organe principal de la circulation sanguine est :',
-    'Le cœur.', 'Examen 9e AF', 1);
+    'Le coeur.', 'Examen 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Le poumon', 0, 1),
-(@qid, 'Le cœur', 1, 2),
+(@qid, 'Le coeur', 1, 2),
 (@qid, 'Le foie', 0, 3),
 (@qid, 'Le rein', 0, 4);
 
@@ -1768,7 +1768,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 
 -- Le système circulatoire
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'Quel est le rôle principal du cœur ?',
+(4, 2, 'Quel est le rôle principal du coeur ?',
     'Pomper le sang dans tout l''organisme.', 'Examen 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
@@ -1778,7 +1778,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Oxygéner le sang', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'Combien de cavités comprend le cœur humain ?',
+(4, 2, 'Combien de cavités comprend le coeur humain ?',
     'Quatre : deux oreillettes et deux ventricules.', 'Examen 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
@@ -1788,7 +1788,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '5', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'Quels sont les vaisseaux qui transportent le sang du cœur vers les organes ?',
+(4, 2, 'Quels sont les vaisseaux qui transportent le sang du coeur vers les organes ?',
     'Les artères.', 'Examen 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
@@ -1798,7 +1798,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Les valvules', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'Quels vaisseaux ramènent le sang au cœur ?',
+(4, 2, 'Quels vaisseaux ramènent le sang au coeur ?',
     'Les veines.', 'Examen 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
@@ -1839,11 +1839,11 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (4, 2, 'Qu''est-ce que la circulation pulmonaire ?',
-    'La circulation entre le cœur et les poumons.', 'Programme 9e AF', 2);
+    'La circulation entre le coeur et les poumons.', 'Programme 9e AF', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'La circulation dans tout le corps', 0, 1),
-(@qid, 'La circulation entre le cœur et les poumons', 1, 2),
+(@qid, 'La circulation entre le coeur et les poumons', 1, 2),
 (@qid, 'La circulation dans le cerveau', 0, 3),
 (@qid, 'La circulation dans les reins', 0, 4);
 
@@ -1863,7 +1863,7 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
     'Les poumons.', 'Examen 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Le cœur', 0, 1),
+(@qid, 'Le coeur', 0, 1),
 (@qid, 'Les poumons', 1, 2),
 (@qid, 'Le foie', 0, 3),
 (@qid, 'Les reins', 0, 4);
@@ -1914,7 +1914,7 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
     'Le cerveau.', 'Examen 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Le cœur', 0, 1),
+(@qid, 'Le coeur', 0, 1),
 (@qid, 'Le cerveau', 1, 2),
 (@qid, 'Les poumons', 0, 3),
 (@qid, 'Le foie', 0, 4);
@@ -1942,16 +1942,16 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Les organes des sens
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (4, 2, 'Quel est l''organe de la vue ?',
-    'L''œil.', 'Examen 9e AF', 1);
+    'L''oeil.', 'Examen 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'L''oreille', 0, 1),
-(@qid, 'L''œil', 1, 2),
+(@qid, 'L''oeil', 1, 2),
 (@qid, 'La langue', 0, 3),
 (@qid, 'Le nez', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'Quelle partie de l''œil contrôle la quantité de lumière entrant ?',
+(4, 2, 'Quelle partie de l''oeil contrôle la quantité de lumière entrant ?',
     'La pupille (et l''iris qui l''entoure).', 'Examen 9e AF', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
@@ -1961,7 +1961,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'La rétine', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'Où se forme l''image dans l''œil ?',
+(4, 2, 'Où se forme l''image dans l''oeil ?',
     'Sur la rétine.', 'Examen 9e AF', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
@@ -2754,7 +2754,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Les artérioles', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'Le sang riche en oxygène sort du cœur par quelle artère ?',
+(4, 2, 'Le sang riche en oxygène sort du coeur par quelle artère ?',
     'L''aorte.', 'Examen 9e AF', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
@@ -2806,7 +2806,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Une maladie héréditaire', 0, 1),
 (@qid, 'Une maladie causée par un microbe', 1, 2),
 (@qid, 'Une maladie des os', 0, 3),
-(@qid, 'Une maladie du cœur', 0, 4);
+(@qid, 'Une maladie du coeur', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (4, 2, 'Comment le virus de la rage se transmet-il ?',
@@ -3034,7 +3034,7 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
 (4, 1, 'L''inflammation de la vessie s''appelle la ________.', NULL, 'Examen 9e AF', 2, 'cystite');
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
-(4, 1, 'Le cœur possède ________ cavités.', NULL, 'Examen 9e AF', 1, '4|quatre');
+(4, 1, 'Le coeur possède ________ cavités.', NULL, 'Examen 9e AF', 1, '4|quatre');
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
 (4, 1, 'La photosynthèse produit du ________ et de l''oxygène.', NULL, 'Examen 9e AF', 1, 'glucose');
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
