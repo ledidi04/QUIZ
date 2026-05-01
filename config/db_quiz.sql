@@ -1654,6 +1654,1408 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Le chyle traverse les parois de l''intestin', 0, 3),
 (@qid, 'Les aliments avancent poussés par les muscles', 1, 4);
 
+
+-- Le système digestif
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Où commence la digestion des glucides ?',
+    'Dans la bouche, grâce à l''amylase salivaire.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dans l''estomac', 0, 1),
+(@qid, 'Dans la bouche', 1, 2),
+(@qid, 'Dans l''intestin grêle', 0, 3),
+(@qid, 'Dans le gros intestin', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel organe produit la bile ?',
+    'Le foie produit la bile, stockée dans la vésicule biliaire.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''estomac', 0, 1),
+(@qid, 'Le foie', 1, 2),
+(@qid, 'Le pancréas', 0, 3),
+(@qid, 'L''intestin grêle', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle de la bile ?',
+    'Émulsifier les graisses pour faciliter leur digestion.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Digérer les protéines', 0, 1),
+(@qid, 'Émulsifier les graisses', 1, 2),
+(@qid, 'Absorber l''eau', 0, 3),
+(@qid, 'Produire des enzymes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel suc digestif est produit par l''estomac ?',
+    'Le suc gastrique, contenant de l''acide chlorhydrique et de la pepsine.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le suc pancréatique', 0, 1),
+(@qid, 'Le suc gastrique', 1, 2),
+(@qid, 'La bile', 0, 3),
+(@qid, 'La salive', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel nutriment est principalement digéré dans l''estomac ?',
+    'Les protéines, grâce à la pepsine.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les glucides', 0, 1),
+(@qid, 'Les protéines', 1, 2),
+(@qid, 'Les lipides', 0, 3),
+(@qid, 'Les vitamines', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Où se fait l''absorption des nutriments ?',
+    'Dans l''intestin grêle, grâce aux villosités intestinales.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dans l''estomac', 0, 1),
+(@qid, 'Dans l''intestin grêle', 1, 2),
+(@qid, 'Dans le gros intestin', 0, 3),
+(@qid, 'Dans la bouche', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle du gros intestin ?',
+    'Absorber l''eau et les sels minéraux, former les selles.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Digérer les protéines', 0, 1),
+(@qid, 'Absorber l''eau et former les selles', 1, 2),
+(@qid, 'Produire la bile', 0, 3),
+(@qid, 'Absorber les nutriments', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment appelle-t-on les mouvements qui font avancer les aliments dans le tube digestif ?',
+    'Le péristaltisme.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La mastication', 0, 1),
+(@qid, 'Le péristaltisme', 1, 2),
+(@qid, 'La digestion', 0, 3),
+(@qid, 'L''absorption', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle du pancréas dans la digestion ?',
+    'Produire le suc pancréatique contenant plusieurs enzymes digestives.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Produire la bile', 0, 1),
+(@qid, 'Produire le suc pancréatique', 1, 2),
+(@qid, 'Stocker les aliments', 0, 3),
+(@qid, 'Absorber l''eau', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que le chyme ?',
+    'La bouillie alimentaire sortant de l''estomac.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La salive mélangée aux aliments', 0, 1),
+(@qid, 'La bouillie sortant de l''estomac', 1, 2),
+(@qid, 'Les selles', 0, 3),
+(@qid, 'La bile', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que le chyle ?',
+    'Le liquide laiteux absorbé par les vaisseaux lymphatiques de l''intestin.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le suc gastrique', 0, 1),
+(@qid, 'Le liquide absorbé par les vaisseaux lymphatiques', 1, 2),
+(@qid, 'La salive', 0, 3),
+(@qid, 'Le suc pancréatique', 0, 4);
+
+-- Le système circulatoire
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle principal du cœur ?',
+    'Pomper le sang dans tout l''organisme.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Produire le sang', 0, 1),
+(@qid, 'Pomper le sang', 1, 2),
+(@qid, 'Filtrer le sang', 0, 3),
+(@qid, 'Oxygéner le sang', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Combien de cavités comprend le cœur humain ?',
+    'Quatre : deux oreillettes et deux ventricules.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2', 0, 1),
+(@qid, '4', 1, 2),
+(@qid, '3', 0, 3),
+(@qid, '5', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quels sont les vaisseaux qui transportent le sang du cœur vers les organes ?',
+    'Les artères.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les veines', 0, 1),
+(@qid, 'Les artères', 1, 2),
+(@qid, 'Les capillaires', 0, 3),
+(@qid, 'Les valvules', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quels vaisseaux ramènent le sang au cœur ?',
+    'Les veines.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les artères', 0, 1),
+(@qid, 'Les veines', 1, 2),
+(@qid, 'Les capillaires', 0, 3),
+(@qid, 'Les artérioles', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel composant du sang transporte l''oxygène ?',
+    'L''hémoglobine contenue dans les globules rouges.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le plasma', 0, 1),
+(@qid, 'L''hémoglobine', 1, 2),
+(@qid, 'Les globules blancs', 0, 3),
+(@qid, 'Les plaquettes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle des globules blancs ?',
+    'Défendre l''organisme contre les infections.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Transporter l''oxygène', 0, 1),
+(@qid, 'Défendre l''organisme', 1, 2),
+(@qid, 'Coaguler le sang', 0, 3),
+(@qid, 'Transporter le CO2', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle des plaquettes sanguines ?',
+    'La coagulation du sang en cas de blessure.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Transporter l''oxygène', 0, 1),
+(@qid, 'Coaguler le sang', 1, 2),
+(@qid, 'Combattre les microbes', 0, 3),
+(@qid, 'Transporter les nutriments', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que la circulation pulmonaire ?',
+    'La circulation entre le cœur et les poumons.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La circulation dans tout le corps', 0, 1),
+(@qid, 'La circulation entre le cœur et les poumons', 1, 2),
+(@qid, 'La circulation dans le cerveau', 0, 3),
+(@qid, 'La circulation dans les reins', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est la différence entre le sang artériel et le sang veineux ?',
+    'Le sang artériel est riche en oxygène, le sang veineux est riche en CO2.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pas de différence', 0, 1),
+(@qid, 'Le sang artériel est riche en O2, le veineux en CO2', 1, 2),
+(@qid, 'Le sang veineux est plus clair', 0, 3),
+(@qid, 'Le sang artériel n''existe pas', 0, 4);
+
+-- Le système respiratoire
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est l''organe principal de la respiration ?',
+    'Les poumons.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le cœur', 0, 1),
+(@qid, 'Les poumons', 1, 2),
+(@qid, 'Le foie', 0, 3),
+(@qid, 'Les reins', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel gaz est inspiré lors de la respiration ?',
+    'Le dioxygène (O2).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le dioxyde de carbone', 0, 1),
+(@qid, 'Le dioxygène', 1, 2),
+(@qid, 'L''azote', 0, 3),
+(@qid, 'L''hydrogène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel gaz est rejeté lors de l''expiration ?',
+    'Le dioxyde de carbone (CO2).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le dioxygène', 0, 1),
+(@qid, 'Le dioxyde de carbone', 1, 2),
+(@qid, 'L''azote', 0, 3),
+(@qid, 'L''hydrogène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Où se produit l''échange gazeux dans les poumons ?',
+    'Dans les alvéoles pulmonaires.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dans la trachée', 0, 1),
+(@qid, 'Dans les alvéoles pulmonaires', 1, 2),
+(@qid, 'Dans les bronches', 0, 3),
+(@qid, 'Dans le larynx', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel muscle principal permet la respiration ?',
+    'Le diaphragme.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le biceps', 0, 1),
+(@qid, 'Le diaphragme', 1, 2),
+(@qid, 'Le muscle cardiaque', 0, 3),
+(@qid, 'Le quadriceps', 0, 4);
+
+-- Le système nerveux
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est l''organe principal du système nerveux ?',
+    'Le cerveau.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le cœur', 0, 1),
+(@qid, 'Le cerveau', 1, 2),
+(@qid, 'Les poumons', 0, 3),
+(@qid, 'Le foie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''une synapse ?',
+    'La zone de communication entre deux neurones.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un type de cellule sanguine', 0, 1),
+(@qid, 'La zone de communication entre deux neurones', 1, 2),
+(@qid, 'Un muscle', 0, 3),
+(@qid, 'Un vaisseau sanguin', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle de la moelle épinière ?',
+    'Transmettre les messages nerveux entre le cerveau et le corps.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Produire le sang', 0, 1),
+(@qid, 'Transmettre les messages nerveux', 1, 2),
+(@qid, 'Pomper le sang', 0, 3),
+(@qid, 'Digérer les aliments', 0, 4);
+
+-- Les organes des sens
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est l''organe de la vue ?',
+    'L''œil.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''oreille', 0, 1),
+(@qid, 'L''œil', 1, 2),
+(@qid, 'La langue', 0, 3),
+(@qid, 'Le nez', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle partie de l''œil contrôle la quantité de lumière entrant ?',
+    'La pupille (et l''iris qui l''entoure).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La cornée', 0, 1),
+(@qid, 'La pupille', 1, 2),
+(@qid, 'Le cristallin', 0, 3),
+(@qid, 'La rétine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Où se forme l''image dans l''œil ?',
+    'Sur la rétine.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sur la cornée', 0, 1),
+(@qid, 'Sur la rétine', 1, 2),
+(@qid, 'Sur le cristallin', 0, 3),
+(@qid, 'Sur l''iris', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle partie de l''oreille capte les sons ?',
+    'Le tympan, situé dans l''oreille moyenne.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le pavillon', 0, 1),
+(@qid, 'Le tympan', 1, 2),
+(@qid, 'Le nerf auditif', 0, 3),
+(@qid, 'Le cerveau', 0, 4);
+
+-- La reproduction humaine
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel organe produit les spermatozoïdes ?',
+    'Les testicules.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les ovaires', 0, 1),
+(@qid, 'Les testicules', 1, 2),
+(@qid, 'La prostate', 0, 3),
+(@qid, 'L''utérus', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel organe produit les ovules ?',
+    'Les ovaires.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les testicules', 0, 1),
+(@qid, 'Les ovaires', 1, 2),
+(@qid, 'L''utérus', 0, 3),
+(@qid, 'Les trompes de Fallope', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Où se produit la fécondation ?',
+    'Dans les trompes de Fallope.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dans l''utérus', 0, 1),
+(@qid, 'Dans les trompes de Fallope', 1, 2),
+(@qid, 'Dans les ovaires', 0, 3),
+(@qid, 'Dans le vagin', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel organe abrite le développement de l''embryon ?',
+    'L''utérus.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les ovaires', 0, 1),
+(@qid, 'L''utérus', 1, 2),
+(@qid, 'Les trompes', 0, 3),
+(@qid, 'Le vagin', 0, 4);
+
+-- Hygiène et maladies
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel microbe cause le tétanos ?',
+    'Une bactérie (Clostridium tetani).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un virus', 0, 1),
+(@qid, 'Une bactérie', 1, 2),
+(@qid, 'Un champignon', 0, 3),
+(@qid, 'Un parasite', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle maladie est transmise par le moustique Anophèle ?',
+    'Le paludisme (malaria).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La dengue', 0, 1),
+(@qid, 'Le paludisme', 1, 2),
+(@qid, 'Le choléra', 0, 3),
+(@qid, 'Le SIDA', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel virus cause le SIDA ?',
+    'Le VIH (Virus de l''Immunodéficience Humaine).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le virus de la grippe', 0, 1),
+(@qid, 'Le VIH', 1, 2),
+(@qid, 'Le virus Ebola', 0, 3),
+(@qid, 'Le virus Zika', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment se transmet principalement le choléra ?',
+    'Par l''eau contaminée.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Par l''air', 0, 1),
+(@qid, 'Par l''eau contaminée', 1, 2),
+(@qid, 'Par les moustiques', 0, 3),
+(@qid, 'Par le sang uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un antibiotique ?',
+    'Un médicament qui tue ou empêche la croissance des bactéries.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un médicament contre les virus', 0, 1),
+(@qid, 'Un médicament qui tue les bactéries', 1, 2),
+(@qid, 'Un vaccin', 0, 3),
+(@qid, 'Un antiseptique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un vaccin ?',
+    'Une préparation qui stimule le système immunitaire contre une maladie.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un antibiotique', 0, 1),
+(@qid, 'Une préparation qui stimule l''immunité', 1, 2),
+(@qid, 'Un antiseptique', 0, 3),
+(@qid, 'Un virus actif', 0, 4);
+
+-- ============================================
+-- THÈME 2 : PHYSIQUE (80 QCM)
+-- ============================================
+
+-- Électricité
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''unité de la tension électrique ?',
+    'Le volt (V).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ampère', 0, 1),
+(@qid, 'Le volt', 1, 2),
+(@qid, 'L''ohm', 0, 3),
+(@qid, 'Le watt', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''unité de l''intensité du courant électrique ?',
+    'L''ampère (A).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le volt', 0, 1),
+(@qid, 'L''ampère', 1, 2),
+(@qid, 'L''ohm', 0, 3),
+(@qid, 'Le watt', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''unité de la résistance électrique ?',
+    'L''ohm (Ω).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le volt', 0, 1),
+(@qid, 'L''ohm', 1, 2),
+(@qid, 'L''ampère', 0, 3),
+(@qid, 'Le watt', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est la loi d''Ohm ?',
+    'U = R × I (tension = résistance × intensité).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'U = R + I', 0, 1),
+(@qid, 'U = R × I', 1, 2),
+(@qid, 'U = R / I', 0, 3),
+(@qid, 'U = I / R', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel instrument mesure la tension électrique ?',
+    'Le voltmètre.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ampèremètre', 0, 1),
+(@qid, 'Le voltmètre', 1, 2),
+(@qid, 'L''ohmmètre', 0, 3),
+(@qid, 'Le wattmètre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment branche-t-on un voltmètre dans un circuit ?',
+    'En dérivation (en parallèle).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'En série', 0, 1),
+(@qid, 'En dérivation', 1, 2),
+(@qid, 'En court-circuit', 0, 3),
+(@qid, 'Peu importe', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment branche-t-on un ampèremètre dans un circuit ?',
+    'En série.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'En série', 1, 1),
+(@qid, 'En dérivation', 0, 2),
+(@qid, 'En court-circuit', 0, 3),
+(@qid, 'Peu importe', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un conducteur électrique ?',
+    'Un matériau qui laisse passer le courant électrique (métaux, cuivre, aluminium).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un matériau qui bloque le courant', 0, 1),
+(@qid, 'Un matériau qui laisse passer le courant', 1, 2),
+(@qid, 'Un générateur', 0, 3),
+(@qid, 'Un récepteur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un isolant électrique ?',
+    'Un matériau qui ne laisse pas passer le courant (plastique, verre, bois sec).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un matériau conducteur', 0, 1),
+(@qid, 'Un matériau qui ne laisse pas passer le courant', 1, 2),
+(@qid, 'Un générateur', 0, 3),
+(@qid, 'Un semi-conducteur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Parmi ces matériaux, lequel est le meilleur conducteur ?',
+    'Le cuivre.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le plastique', 0, 1),
+(@qid, 'Le cuivre', 1, 2),
+(@qid, 'Le verre', 0, 3),
+(@qid, 'Le bois', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un court-circuit ?',
+    'Quand le courant passe directement du + au - sans traverser de récepteur.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un circuit trop long', 0, 1),
+(@qid, 'Le courant passe directement du + au - sans récepteur', 1, 2),
+(@qid, 'Un circuit ouvert', 0, 3),
+(@qid, 'Un circuit avec trop de lampes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle d''un générateur dans un circuit ?',
+    'Fournir l''énergie électrique au circuit (pile, génératrice).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Fournir l''énergie électrique', 1, 1),
+(@qid, 'Bloquer le courant', 0, 2),
+(@qid, 'Consommer l''énergie', 0, 3),
+(@qid, 'Mesurer le courant', 0, 4);
+
+-- Énergie et sources d'énergie
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''une source d''énergie renouvelable ?',
+    'Une source qui se reconstitue naturellement (soleil, vent, eau).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une source épuisable', 0, 1),
+(@qid, 'Une source qui se reconstitue naturellement', 1, 2),
+(@qid, 'Le pétrole', 0, 3),
+(@qid, 'Le charbon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Parmi ces sources, laquelle n''est PAS renouvelable ?',
+    'Le pétrole.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le soleil', 0, 1),
+(@qid, 'Le pétrole', 1, 2),
+(@qid, 'Le vent', 0, 3),
+(@qid, 'L''eau', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que l''énergie solaire ?',
+    'L''énergie provenant des rayons du soleil.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''énergie du vent', 0, 1),
+(@qid, 'L''énergie provenant du soleil', 1, 2),
+(@qid, 'L''énergie de l''eau', 0, 3),
+(@qid, 'L''énergie du pétrole', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment appelle-t-on l''énergie du vent ?',
+    'L''énergie éolienne.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''énergie hydraulique', 0, 1),
+(@qid, 'L''énergie éolienne', 1, 2),
+(@qid, 'L''énergie solaire', 0, 3),
+(@qid, 'L''énergie géothermique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle énergie est produite par les barrages ?',
+    'L''énergie hydraulique.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''énergie solaire', 0, 1),
+(@qid, 'L''énergie hydraulique', 1, 2),
+(@qid, 'L''énergie nucléaire', 0, 3),
+(@qid, 'L''énergie éolienne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le principal gaz responsable de l''effet de serre ?',
+    'Le dioxyde de carbone (CO2).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''oxygène', 0, 1),
+(@qid, 'Le dioxyde de carbone', 1, 2),
+(@qid, 'L''azote', 0, 3),
+(@qid, 'L''hydrogène', 0, 4);
+
+-- Mécanique : poids, masse, forces
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est la différence entre la masse et le poids ?',
+    'La masse est invariable (en kg), le poids dépend de la gravité (en N).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pas de différence', 0, 1),
+(@qid, 'La masse est invariable, le poids dépend de la gravité', 1, 2),
+(@qid, 'Le poids est invariable', 0, 3),
+(@qid, 'La masse dépend de la gravité', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''unité de la masse ?',
+    'Le kilogramme (kg).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le newton', 0, 1),
+(@qid, 'Le kilogramme', 1, 2),
+(@qid, 'Le pascal', 0, 3),
+(@qid, 'Le mètre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''unité du poids ?',
+    'Le newton (N).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le kilogramme', 0, 1),
+(@qid, 'Le newton', 1, 2),
+(@qid, 'Le mètre', 0, 3),
+(@qid, 'Le litre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle formule relie le poids et la masse ?',
+    'P = m × g (poids = masse × intensité de la pesanteur).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'P = m / g', 0, 1),
+(@qid, 'P = m × g', 1, 2),
+(@qid, 'P = m + g', 0, 3),
+(@qid, 'P = g / m', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est la valeur approximative de g sur Terre ?',
+    'Environ 9,8 N/kg.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 N/kg', 0, 1),
+(@qid, '9,8 N/kg', 1, 2),
+(@qid, '100 N/kg', 0, 3),
+(@qid, '50 N/kg', 0, 4);
+
+-- Pression
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est la formule de la pression ?',
+    'P = F / S (pression = force / surface).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'P = F × S', 0, 1),
+(@qid, 'P = F / S', 1, 2),
+(@qid, 'P = S / F', 0, 3),
+(@qid, 'P = F + S', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''unité de pression ?',
+    'Le pascal (Pa).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le newton', 0, 1),
+(@qid, 'Le pascal', 1, 2),
+(@qid, 'Le kilogramme', 0, 3),
+(@qid, 'Le mètre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Pourquoi un clou pointu s''enfonce-t-il mieux qu''un clou plat ?',
+    'Parce que la surface est plus petite, donc la pression est plus grande.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parce qu''il est plus léger', 0, 1),
+(@qid, 'Parce que la pression est plus grande (surface petite)', 1, 2),
+(@qid, 'Parce qu''il est plus lourd', 0, 3),
+(@qid, 'Parce qu''il est plus solide', 0, 4);
+
+-- Optique
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'À quelle vitesse la lumière se déplace-t-elle dans le vide ?',
+    'Environ 300 000 km/s.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '300 km/s', 0, 1),
+(@qid, '300 000 km/s', 1, 2),
+(@qid, '3 000 km/s', 0, 3),
+(@qid, '30 km/s', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel phénomène produit un arc-en-ciel ?',
+    'La dispersion de la lumière blanche par les gouttes d''eau.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La réflexion', 0, 1),
+(@qid, 'La dispersion de la lumière', 1, 2),
+(@qid, 'L''absorption', 0, 3),
+(@qid, 'L''ombre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''une ombre ?',
+    'Une zone sombre créée par un objet qui bloque la lumière.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une zone éclairée', 0, 1),
+(@qid, 'Une zone sombre où la lumière est bloquée', 1, 2),
+(@qid, 'Un type de lumière', 0, 3),
+(@qid, 'Une réflexion', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle couleur obtient-on en mélangeant le rouge et le bleu ?',
+    'Le magenta.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le vert', 0, 1),
+(@qid, 'Le magenta', 1, 2),
+(@qid, 'Le jaune', 0, 3),
+(@qid, 'Le cyan', 0, 4);
+
+-- Chaleur et température
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''unité de température dans le Système International ?',
+    'Le kelvin (K), mais le degré Celsius (°C) est couramment utilisé.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le degré Celsius', 0, 1),
+(@qid, 'Le kelvin', 1, 2),
+(@qid, 'Le fahrenheit', 0, 3),
+(@qid, 'Le joule', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel instrument mesure la température ?',
+    'Le thermomètre.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le baromètre', 0, 1),
+(@qid, 'Le thermomètre', 1, 2),
+(@qid, 'L''ampèremètre', 0, 3),
+(@qid, 'Le voltmètre', 0, 4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- L'eau et ses propriétés
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quels sont les trois états de l''eau ?',
+    'Solide (glace), liquide, gazeux (vapeur d''eau).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Solide, gazeux, plasma', 0, 1),
+(@qid, 'Solide, liquide, gazeux', 1, 2),
+(@qid, 'Liquide, visqueux, solide', 0, 3),
+(@qid, 'Gazeux, liquide, ionisé', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'À quelle température l''eau bout-elle au niveau de la mer ?',
+    'À 100°C.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0°C', 0, 1),
+(@qid, '100°C', 1, 2),
+(@qid, '50°C', 0, 3),
+(@qid, '200°C', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'À quelle température l''eau gèle-t-elle ?',
+    'À 0°C.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0°C', 1, 1),
+(@qid, '100°C', 0, 2),
+(@qid, '-100°C', 0, 3),
+(@qid, '50°C', 0, 4);
+
+-- ============================================
+-- THÈME 4 : GÉOLOGIE ET ENVIRONNEMENT (50 QCM)
+-- ============================================
+
+-- Structure de la Terre
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelles sont les trois principales couches de la Terre ?',
+    'La croûte, le manteau et le noyau.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Lithosphère, hydrosphère, atmosphère', 0, 1),
+(@qid, 'Croûte, manteau, noyau', 1, 2),
+(@qid, 'Sol, sous-sol, roche-mère', 0, 3),
+(@qid, 'Sial, sima, nife', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un séisme ?',
+    'Un tremblement de terre causé par la libération d''énergie dans la croûte terrestre.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une éruption volcanique', 0, 1),
+(@qid, 'Un tremblement de terre', 1, 2),
+(@qid, 'Un tsunami', 0, 3),
+(@qid, 'Un glissement de terrain', 0, 4);
+
+
+
+
+
+
+-- THÈME 5 : ÉCOLOGIE ET ENVIRONNEMENT 
+
+-- Écosystèmes
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un écosystème ?',
+    'L''ensemble formé par les êtres vivants et leur milieu.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Uniquement les animaux', 0, 1),
+(@qid, 'L''ensemble des êtres vivants et leur milieu', 1, 2),
+(@qid, 'Uniquement les plantes', 0, 3),
+(@qid, 'Le climat d''une région', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un producteur dans une chaîne alimentaire ?',
+    'Un organisme qui produit sa propre nourriture (plantes vertes).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un animal carnivore', 0, 1),
+(@qid, 'Une plante verte (produit sa nourriture)', 1, 2),
+(@qid, 'Un décomposeur', 0, 3),
+(@qid, 'Un champignon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un consommateur dans une chaîne alimentaire ?',
+    'Un organisme qui se nourrit d''autres êtres vivants.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une plante', 0, 1),
+(@qid, 'Un organisme qui se nourrit d''autres êtres vivants', 1, 2),
+(@qid, 'Un minéral', 0, 3),
+(@qid, 'Le soleil', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle des décomposeurs ?',
+    'Décomposer la matière organique morte et la transformer en éléments minéraux.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Produire de l''oxygène', 0, 1),
+(@qid, 'Décomposer la matière organique morte', 1, 2),
+(@qid, 'Chasser les proies', 0, 3),
+(@qid, 'Fabriquer de la nourriture', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que la photosynthèse ?',
+    'Le processus par lequel les plantes produisent leur nourriture en utilisant la lumière.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La respiration des plantes', 0, 1),
+(@qid, 'La production de nourriture par les plantes avec la lumière', 1, 2),
+(@qid, 'L''absorption d''eau par les racines', 0, 3),
+(@qid, 'La croissance des tiges', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel gaz les plantes absorbent-elles pour la photosynthèse ?',
+    'Le dioxyde de carbone (CO2).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''oxygène', 0, 1),
+(@qid, 'Le dioxyde de carbone', 1, 2),
+(@qid, 'L''azote', 0, 3),
+(@qid, 'L''hydrogène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel gaz les plantes rejettent-elles lors de la photosynthèse ?',
+    'Le dioxygène (O2).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le dioxyde de carbone', 0, 1),
+(@qid, 'Le dioxygène', 1, 2),
+(@qid, 'L''azote', 0, 3),
+(@qid, 'Le méthane', 0, 4);
+
+-- Pollution et environnement
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que la pollution de l''air ?',
+    'La présence de substances nocives dans l''atmosphère.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La présence de nuages', 0, 1),
+(@qid, 'La présence de substances nocives dans l''atmosphère', 1, 2),
+(@qid, 'La présence de vent', 0, 3),
+(@qid, 'La présence d''oiseaux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que l''effet de serre ?',
+    'Le réchauffement de l''atmosphère dû aux gaz qui retiennent la chaleur.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le refroidissement de la Terre', 0, 1),
+(@qid, 'Le réchauffement de l''atmosphère par les gaz', 1, 2),
+(@qid, 'Un type de serre pour les plantes', 0, 3),
+(@qid, 'La couche d''ozone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que la déforestation ?',
+    'La destruction massive des forêts.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La plantation d''arbres', 0, 1),
+(@qid, 'La destruction massive des forêts', 1, 2),
+(@qid, 'La croissance des arbres', 0, 3),
+(@qid, 'La protection des forêts', 0, 4);
+
+-- THÈME 6 : ÉLECTRICITÉ DOMESTIQUE 
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Que signifie le terme « mise à la terre » ?',
+    'Relier un appareil électrique à la terre pour éviter les chocs électriques.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Mettre l''appareil au sol', 0, 1),
+(@qid, 'Relier l''appareil à la terre pour sécurité', 1, 2),
+(@qid, 'Enterrer le câble', 0, 3),
+(@qid, 'Isoler l''appareil', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''unité de la puissance électrique ?',
+    'Le watt (W).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le volt', 0, 1),
+(@qid, 'Le watt', 1, 2),
+(@qid, 'L''ampère', 0, 3),
+(@qid, 'L''ohm', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un disjoncteur ?',
+    'Un dispositif qui coupe le courant en cas de surcharge ou court-circuit.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un générateur de courant', 0, 1),
+(@qid, 'Un dispositif de protection qui coupe le courant', 1, 2),
+(@qid, 'Un type de prise électrique', 0, 3),
+(@qid, 'Un compteur électrique', 0, 4);
+
+-- THÈME 7 : BIOLOGIE VÉGÉTALE 
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle partie de la plante absorbe l''eau et les sels minéraux ?',
+    'Les racines (spécialement les poils absorbants).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les feuilles', 0, 1),
+(@qid, 'Les racines', 1, 2),
+(@qid, 'La tige', 0, 3),
+(@qid, 'Les fleurs', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle de la chlorophylle ?',
+    'Capter l''énergie lumineuse pour la photosynthèse.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Donner la couleur verte uniquement', 0, 1),
+(@qid, 'Capter l''énergie lumineuse pour la photosynthèse', 1, 2),
+(@qid, 'Absorber l''eau', 0, 3),
+(@qid, 'Protéger la plante', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment s''appelle la reproduction sans fleurs chez les plantes ?',
+    'La reproduction asexuée (bouturage, tubercule, rhizome).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La reproduction sexuée', 0, 1),
+(@qid, 'La reproduction asexuée', 1, 2),
+(@qid, 'La floraison', 0, 3),
+(@qid, 'La fécondation', 0, 4);
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''étoile la plus proche de la Terre ?',
+    'Le Soleil.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Proxima du Centaure', 0, 1),
+(@qid, 'Le Soleil', 1, 2),
+(@qid, 'La Lune', 0, 3),
+(@qid, 'Sirius', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le satellite naturel de la Terre ?',
+    'La Lune.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le Soleil', 0, 1),
+(@qid, 'La Lune', 1, 2),
+(@qid, 'Mars', 0, 3),
+(@qid, 'Vénus', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Combien de planètes compte le système solaire ?',
+    'Huit planètes.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '7', 0, 1),
+(@qid, '8', 1, 2),
+(@qid, '9', 0, 3),
+(@qid, '10', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel phénomène provoque les marées ?',
+    'L''attraction gravitationnelle de la Lune et du Soleil sur les océans.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le vent', 0, 1),
+(@qid, 'L''attraction de la Lune et du Soleil', 1, 2),
+(@qid, 'Les courants marins', 0, 3),
+(@qid, 'La rotation de la Terre uniquement', 0, 4);
+
+
+
+-- Suite Anatomie - Système digestif
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Où se termine la digestion ?',
+    'Dans l''intestin grêle.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dans l''estomac', 0, 1),
+(@qid, 'Dans l''intestin grêle', 1, 2),
+(@qid, 'Dans le gros intestin', 0, 3),
+(@qid, 'Dans le rectum', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est l''enzyme présent dans la salive ?',
+    'L''amylase salivaire.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La pepsine', 0, 1),
+(@qid, 'L''amylase salivaire', 1, 2),
+(@qid, 'La lipase', 0, 3),
+(@qid, 'La trypsine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel organe stocke la bile ?',
+    'La vésicule biliaire.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le foie', 0, 1),
+(@qid, 'La vésicule biliaire', 1, 2),
+(@qid, 'Le pancréas', 0, 3),
+(@qid, 'L''estomac', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quels sont les nutriments absorbés par l''organisme ?',
+    'Les glucides, les lipides, les protides, les vitamines, l''eau et les sels minéraux.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Uniquement les glucides', 0, 1),
+(@qid, 'Glucides, lipides, protides, vitamines, eau, sels minéraux', 1, 2),
+(@qid, 'Uniquement les protides', 0, 3),
+(@qid, 'Seulement l''eau et les sels minéraux', 0, 4);
+
+-- Suite Anatomie - Circulation
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quels sont les vaisseaux sanguins les plus fins ?',
+    'Les capillaires sanguins.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les artères', 0, 1),
+(@qid, 'Les capillaires', 1, 2),
+(@qid, 'Les veines', 0, 3),
+(@qid, 'Les artérioles', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Le sang riche en oxygène sort du cœur par quelle artère ?',
+    'L''aorte.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''artère pulmonaire', 0, 1),
+(@qid, 'L''aorte', 1, 2),
+(@qid, 'La veine cave', 0, 3),
+(@qid, 'L''artère coronaire', 0, 4);
+
+-- Suite Physique - Force et travail
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''unité de la force ?',
+    'Le newton (N).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le kilogramme', 0, 1),
+(@qid, 'Le newton', 1, 2),
+(@qid, 'Le mètre', 0, 3),
+(@qid, 'Le joule', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est l''unité du travail et de l''énergie ?',
+    'Le joule (J).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le newton', 0, 1),
+(@qid, 'Le joule', 1, 2),
+(@qid, 'Le watt', 0, 3),
+(@qid, 'Le pascal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que la force de pesanteur ?',
+    'La force d''attraction de la Terre sur tous les objets.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La force du vent', 0, 1),
+(@qid, 'La force d''attraction de la Terre', 1, 2),
+(@qid, 'La force magnétique', 0, 3),
+(@qid, 'La force électrique', 0, 4);
+
+
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que le solvant ?',
+    'Le liquide qui dissout le soluté (ex: l''eau dans l''eau salée).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La substance dissoute', 0, 1),
+(@qid, 'Le liquide qui dissout', 1, 2),
+(@qid, 'Le mélange final', 0, 3),
+(@qid, 'Le précipité', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que le soluté ?',
+    'La substance qui est dissoute dans le solvant.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le liquide', 0, 1),
+(@qid, 'La substance dissoute', 1, 2),
+(@qid, 'Le mélange final', 0, 3),
+(@qid, 'Le récipient', 0, 4);
+
+-- Suite Santé - Maladies infectieuses
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''une maladie infectieuse ?',
+    'Une maladie causée par un microbe (bactérie, virus, champignon).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une maladie héréditaire', 0, 1),
+(@qid, 'Une maladie causée par un microbe', 1, 2),
+(@qid, 'Une maladie des os', 0, 3),
+(@qid, 'Une maladie du cœur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment le virus de la rage se transmet-il ?',
+    'Par la morsure d''un animal infecté (chien, chat, chauve-souris).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Par l''eau', 0, 1),
+(@qid, 'Par morsure d''un animal infecté', 1, 2),
+(@qid, 'Par l''air', 0, 3),
+(@qid, 'Par contact avec la peau', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle est la meilleure prévention contre le tétanos ?',
+    'La vaccination (vaccin antitétanique).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les antibiotiques', 0, 1),
+(@qid, 'La vaccination', 1, 2),
+(@qid, 'Le repos', 0, 3),
+(@qid, 'L''isolement', 0, 4);
+
+-- Suite Nutrition
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel nutriment fournit le plus d''énergie par gramme ?',
+    'Les lipides (graisses).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les glucides', 0, 1),
+(@qid, 'Les lipides', 1, 2),
+(@qid, 'Les protéines', 0, 3),
+(@qid, 'Les vitamines', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quelle vitamine est produite par la peau au soleil ?',
+    'La vitamine D.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La vitamine A', 0, 1),
+(@qid, 'La vitamine D', 1, 2),
+(@qid, 'La vitamine C', 0, 3),
+(@qid, 'La vitamine B', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel minéral est important pour des os solides ?',
+    'Le calcium.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le fer', 0, 1),
+(@qid, 'Le calcium', 1, 2),
+(@qid, 'Le sodium', 0, 3),
+(@qid, 'Le potassium', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel nutriment est nécessaire à la croissance et à la réparation des tissus ?',
+    'Les protéines.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les glucides', 0, 1),
+(@qid, 'Les protéines', 1, 2),
+(@qid, 'Les lipides', 0, 3),
+(@qid, 'Les vitamines', 0, 4);
+
+-- Suite Géologie
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment appelle-t-on le point d''origine d''un séisme en profondeur ?',
+    'Le foyer (ou hypocentre).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''épicentre', 0, 1),
+(@qid, 'Le foyer (hypocentre)', 1, 2),
+(@qid, 'La faille', 0, 3),
+(@qid, 'Le cratère', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment appelle-t-on le point à la surface directement au-dessus du foyer d''un séisme ?',
+    'L''épicentre.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le foyer', 0, 1),
+(@qid, 'L''épicentre', 1, 2),
+(@qid, 'La faille', 0, 3),
+(@qid, 'Le volcan', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel type de roche est le granite ?',
+    'Une roche magmatique.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sédimentaire', 0, 1),
+(@qid, 'Magmatique', 1, 2),
+(@qid, 'Métamorphique', 0, 3),
+(@qid, 'Organique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment se forment les roches métamorphiques ?',
+    'Par transformation de roches existantes sous l''effet de la chaleur et de la pression.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Par refroidissement du magma', 0, 1),
+(@qid, 'Par chaleur et pression sur des roches existantes', 1, 2),
+(@qid, 'Par accumulation de sédiments', 0, 3),
+(@qid, 'Par érosion', 0, 4);
+
+-- Suite Écologie
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que la chaîne alimentaire ?',
+    'Une suite d''êtres vivants où chacun mange le précédent.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un magasin d''alimentation', 0, 1),
+(@qid, 'Une suite où chaque être vivant mange le précédent', 1, 2),
+(@qid, 'Un restaurant', 0, 3),
+(@qid, 'Un régime alimentaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un herbivore ?',
+    'Un animal qui se nourrit uniquement de végétaux.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un animal qui mange de la viande', 0, 1),
+(@qid, 'Un animal qui se nourrit de végétaux', 1, 2),
+(@qid, 'Un animal qui mange de tout', 0, 3),
+(@qid, 'Un animal qui mange des insectes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un carnivore ?',
+    'Un animal qui se nourrit de viande (d''autres animaux).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un animal qui mange des plantes', 0, 1),
+(@qid, 'Un animal qui se nourrit de viande', 1, 2),
+(@qid, 'Un animal qui mange de tout', 0, 3),
+(@qid, 'Un animal qui mange des fruits uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un omnivore ?',
+    'Un animal qui se nourrit à la fois de végétaux et d''animaux.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un herbivore', 0, 1),
+(@qid, 'Un animal qui mange végétaux et animaux', 1, 2),
+(@qid, 'Un carnivore strict', 0, 3),
+(@qid, 'Un décomposeur', 0, 4);
+
+-- Suite Physique - Magnétisme
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce qu''un aimant ?',
+    'Un objet capable d''attirer le fer et certains métaux.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un objet qui attire tous les métaux', 0, 1),
+(@qid, 'Un objet capable d''attirer le fer et certains métaux', 1, 2),
+(@qid, 'Un générateur électrique', 0, 3),
+(@qid, 'Une pile', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Comment appelle-t-on les deux extrémités d''un aimant ?',
+    'Les pôles (pôle nord et pôle sud).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les bouts', 0, 1),
+(@qid, 'Les pôles', 1, 2),
+(@qid, 'Les faces', 0, 3),
+(@qid, 'Les bornes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Que se passe-t-il quand on rapproche deux pôles identiques ?',
+    'Ils se repoussent.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ils s''attirent', 0, 1),
+(@qid, 'Ils se repoussent', 1, 2),
+(@qid, 'Rien ne se passe', 0, 3),
+(@qid, 'Ils fondent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Que se passe-t-il quand on rapproche deux pôles différents ?',
+    'Ils s''attirent.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ils s''attirent', 1, 1),
+(@qid, 'Ils se repoussent', 0, 2),
+(@qid, 'Rien ne se passe', 0, 3),
+(@qid, 'Ils se cassent', 0, 4);
+
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'De quoi est constituée une molécule d''eau ?',
+    'De deux atomes d''hydrogène et un atome d''oxygène.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 H + 1 O', 0, 1),
+(@qid, '2 H + 1 O', 1, 2),
+(@qid, '1 H + 2 O', 0, 3),
+(@qid, '2 H + 2 O', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Qu''est-ce que le squelette humain ?',
+    'L''ensemble des os du corps humain.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ensemble des muscles', 0, 1),
+(@qid, 'L''ensemble des os', 1, 2),
+(@qid, 'L''ensemble des nerfs', 0, 3),
+(@qid, 'L''ensemble des organes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Combien de reins possède normalement un être humain ?',
+    'Deux reins.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un', 0, 1),
+(@qid, 'Deux', 1, 2),
+(@qid, 'Trois', 0, 3),
+(@qid, 'Quatre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(4, 2, 'Quel est le rôle principal des reins ?',
+    'Filtrer le sang et produire l''urine.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pomper le sang', 0, 1),
+(@qid, 'Filtrer le sang et produire l''urine', 1, 2),
+(@qid, 'Digérer les aliments', 0, 3),
+(@qid, 'Produire la bile', 0, 4);
+
+
+
 -- Sciences Exp complétion (type_id=1)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
 (4, 1, 'Les poumons sont protégés par la ________.', NULL, 'Examen 9e AF', 1, 'cage thoracique|thorax');
@@ -4788,7 +6190,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Jamaïque', 0, 3),
 (@qid, 'République dominicaine', 0, 4);
 
--- Dernières questions pour dépasser 400
+
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (5, 2, 'Quel est le nom du premier journal haïtien ?',
     'La Gazette de Saint-Domingue.', 'Programme 9e AF', 2);
@@ -4825,7 +6227,7 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
 (5, 1, 'La plus petite entité territoriale haïtienne est la ________.', NULL, 'Examen 9e AF', 1, 'section communale');
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
-(5, 1, 'Haïti est située dans la mer des ________.', NULL, 'Examen 9e AF', 1, 'Caraïbes|Antilles');
+(5, 1, 'Haïti est située dans la mer des ________.', NULL, 'Examen 9e AF', 1, 'Caraïbes|Antilles|Caraibes');
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
 (5, 1, 'Haïti a obtenu son indépendance le 1er janvier ________.', NULL, 'Examen 9e AF', 1, '1804');
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
