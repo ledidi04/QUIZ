@@ -1,7 +1,7 @@
 -- =============================================
 -- Questions NS4 (Nouveaux Secondaires 4)
 -- Matières : Français(8), Maths(9), Physique(10),
---            Chimie(11), SVT(12), Histoire-Géo(12), Anglais(14)
+--            Chimie(11), SVT(12), Histoire-Géo(13), Anglais(14)
 -- Conforme programmes MENFP Haïti
 -- =============================================
 

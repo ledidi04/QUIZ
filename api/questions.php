@@ -22,7 +22,7 @@ $random  = isset($_GET['random']) && $_GET['random'] !== 'false';
 $classesValides = ['9e', 'ns4'];
 $matieresValides = [
     '9e'  => ['creole','francais','maths','sciences_exp','sciences_soc','anglais','espagnol'],
-    'ns4' => ['francais','maths','physique','chimie','svt','histoire_geo','anglais'],
+    'ns4' => ['philosophie','maths','physique','chimie','svt','histoire_geo','anglais'],
 ];
 
 // Mapping type -> type_id dans la base de données

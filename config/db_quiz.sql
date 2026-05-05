@@ -1533,8 +1533,8 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
     'Dor- est le radical (je dors, tu dors...).', 'Programme 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Dorm-', 0, 1),
-(@qid, 'Dor-', 1, 2),
+(@qid, 'Dorm-', 1, 1),
+(@qid, 'Dor-', 0, 2),
 (@qid, 'Dormi-', 0, 3),
 (@qid, 'Dormir-', 0, 4);
 
@@ -2424,15 +2424,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'classer', 1, 3),
 (@qid, 'enfiler', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(2, 2, 'Que signifie le mot "combustible" dans un texte sur l''énergie ?',
- 'Un combustible est une matière qui brûle pour produire de l''énergie (essence, charbon, bois…).', 'Programme 9e AF', 2);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Une machine qui produit de l''électricité', 0, 1),
-(@qid, 'Une matière qui brûle pour produire de l''énergie', 1, 2),
-(@qid, 'Un appareil de chauffage', 0, 3),
-(@qid, 'Une source d''eau', 0, 4);
+
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (2, 2, 'Quel est le contraire de "joyeux" ?',
@@ -2913,7 +2905,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Accord avec l''adverbe "tôt"', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(2, 2, 'Choisissez la bonne forme : "Les boissons qu''on a (servi/servies) étaient fraîches."',
+(2, 2, 'Choisissez la bonne forme : "Les boissons qu''on a _____________ étaient fraîches."',
  'Le COD "les boissons" (féminin pluriel) est avant le verbe servir → accord : servies.', 'Programme 9e AF', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
