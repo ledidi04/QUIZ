@@ -113,12 +113,25 @@ $name = getStudentName();
 
     <main class="container">
         <div class="page-header">
-            <div class="class-badge">🗺️ Cartes du Monde — 9ème AF</div>
-            <h1>Identifie les <span class="highlight">pays</span></h1>
+            <div class="class-badge">🗺️ Cartes — 9ème AF</div>
+            <h1>Identifie les <span class="highlight">cartes</span></h1>
             <?php if ($name): ?>
                 <p style="color:var(--gray-500);margin-top:0.5rem;">👋 <strong><?= e($name) ?></strong> — 10 questions aléatoires</p>
             <?php endif; ?>
+
+            <!-- Sélecteur de catégorie -->
+            <div style="display:flex;gap:0.75rem;justify-content:center;margin-top:1.25rem;flex-wrap:wrap;">
+                <button onclick="setCategory('pays')" id="btn-pays" class="cat-btn cat-active">🌍 Pays du monde</button>
+                <button onclick="setCategory('haiti')" id="btn-haiti" class="cat-btn">🇭🇹 Départements d'Haïti</button>
+                <button onclick="setCategory('all')" id="btn-all" class="cat-btn">🔀 Mélanger tout</button>
+            </div>
         </div>
+
+        <style>
+            .cat-btn { padding: 0.6rem 1.2rem; border: 2px solid var(--gray-300); background: var(--white); border-radius: 50px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s; color: var(--gray-600); font-family: inherit; }
+            .cat-btn:hover { border-color: #7c3aed; color: #7c3aed; background: #f5f3ff; }
+            .cat-active { border-color: #7c3aed !important; background: #7c3aed !important; color: white !important; }
+        </style>
 
         <!-- ===== ZONE QUIZ ===== -->
         <div id="quizContainer" class="card">
@@ -130,78 +143,134 @@ $name = getStudentName();
 
     <script>
         // ═══════════════════════════════════════
-        // BASE DE DONNÉES COMPLÈTE DES PAYS
+        // BASE DE DONNÉES — PAYS DU MONDE
         // ═══════════════════════════════════════
         const countriesData = [
             // Afrique
-            { name: 'Afrique du Sud', neighbors: ['Namibie', 'Botswana', 'Zimbabwe', 'Mozambique', 'Lesotho'] },
-            { name: 'Algérie', neighbors: ['Maroc', 'Tunisie', 'Libye', 'Mauritanie', 'Mali', 'Niger'] },
-            { name: 'Nigeria', neighbors: ['Cameroun', 'Tchad', 'Bénin', 'Niger', 'Ghana'] },
-            { name: 'Égypte', neighbors: ['Libye', 'Soudan', 'Israël', 'Arabie Saoudite', 'Jordanie'] },
+            { name: 'Afrique du Sud', category: 'pays', neighbors: ['Namibie', 'Botswana', 'Zimbabwe', 'Mozambique', 'Lesotho'] },
+            { name: 'Algérie', category: 'pays', neighbors: ['Maroc', 'Tunisie', 'Libye', 'Mauritanie', 'Mali', 'Niger'] },
+            { name: 'Nigeria', category: 'pays', neighbors: ['Cameroun', 'Tchad', 'Bénin', 'Niger', 'Ghana'] },
+            { name: 'Égypte', category: 'pays', neighbors: ['Libye', 'Soudan', 'Israël', 'Arabie Saoudite', 'Jordanie'] },
             
             // Europe
-            { name: 'France', neighbors: ['Espagne', 'Italie', 'Allemagne', 'Belgique', 'Suisse', 'Royaume-Uni'] },
-            { name: 'Allemagne', neighbors: ['France', 'Pologne', 'Autriche', 'Pays-Bas', 'Danemark', 'Suisse'] },
-            { name: 'Italie', neighbors: ['France', 'Espagne', 'Grèce', 'Suisse', 'Autriche', 'Slovénie'] },
-            { name: 'Espagne', neighbors: ['France', 'Portugal', 'Italie', 'Maroc', 'Andorre'] },
-            { name: 'Ukraine', neighbors: ['Pologne', 'Turquie', 'Roumanie', 'Biélorussie', 'Russie', 'Moldavie'] },
-            { name: 'Turquie', neighbors: ['Ukraine', 'Irak', 'Iran', 'Grèce', 'Bulgarie', 'Syrie'] },
-            { name: 'Russie', neighbors: ['Ukraine', 'Chine', 'Mongolie', 'Kazakhstan', 'Finlande', 'Pologne'] },
+            { name: 'France', category: 'pays', neighbors: ['Espagne', 'Italie', 'Allemagne', 'Belgique', 'Suisse', 'Royaume-Uni'] },
+            { name: 'Allemagne', category: 'pays', neighbors: ['France', 'Pologne', 'Autriche', 'Pays-Bas', 'Danemark', 'Suisse'] },
+            { name: 'Italie', category: 'pays', neighbors: ['France', 'Espagne', 'Grèce', 'Suisse', 'Autriche', 'Slovénie'] },
+            { name: 'Espagne', category: 'pays', image: 'Espagne.png', neighbors: ['France', 'Portugal', 'Italie', 'Maroc', 'Andorre'] },
+            { name: 'Ukraine', category: 'pays', neighbors: ['Pologne', 'Turquie', 'Roumanie', 'Biélorussie', 'Russie', 'Moldavie'] },
+            { name: 'Turquie', category: 'pays', neighbors: ['Ukraine', 'Irak', 'Iran', 'Grèce', 'Bulgarie', 'Syrie'] },
+            { name: 'Russie', category: 'pays', neighbors: ['Ukraine', 'Chine', 'Mongolie', 'Kazakhstan', 'Finlande', 'Pologne'] },
             
             // Amériques
-            { name: 'Canada', neighbors: ['USA', 'Mexique', 'Groenland', 'Russie'] },
-            { name: 'USA', neighbors: ['Canada', 'Mexique', 'Cuba', 'Bahamas', 'Jamaïque'] },
-            { name: 'Mexique', neighbors: ['USA', 'Cuba', 'Guatemala', 'Belize', 'Honduras'] },
-            { name: 'Brésil', neighbors: ['Argentine', 'Colombie', 'Pérou', 'Venezuela', 'Uruguay', 'Paraguay'] },
-            { name: 'Argentine', neighbors: ['Chili', 'Brésil', 'Uruguay', 'Paraguay', 'Bolivie'] },
-            { name: 'Chili', neighbors: ['Argentine', 'Pérou', 'Bolivie', 'Équateur'] },
-            { name: 'Colombie', neighbors: ['Venezuela', 'Brésil', 'Pérou', 'Panama', 'Équateur'] },
-            { name: 'Pérou', neighbors: ['Chili', 'Brésil', 'Colombie', 'Équateur', 'Bolivie'] },
-            { name: 'Venezuela', neighbors: ['Colombie', 'Brésil', 'Guyana', 'Trinidad'] },
+            { name: 'Canada', category: 'pays', neighbors: ['USA', 'Mexique', 'Groenland', 'Russie'] },
+            { name: 'USA', category: 'pays', neighbors: ['Canada', 'Mexique', 'Cuba', 'Bahamas', 'Jamaïque'] },
+            { name: 'Mexique', category: 'pays', neighbors: ['USA', 'Cuba', 'Guatemala', 'Belize', 'Honduras'] },
+            { name: 'Brésil', category: 'pays', neighbors: ['Argentine', 'Colombie', 'Pérou', 'Venezuela', 'Uruguay', 'Paraguay'] },
+            { name: 'Argentine', category: 'pays', neighbors: ['Chili', 'Brésil', 'Uruguay', 'Paraguay', 'Bolivie'] },
+            { name: 'Chili', category: 'pays', neighbors: ['Argentine', 'Pérou', 'Bolivie', 'Équateur'] },
+            { name: 'Colombie', category: 'pays', neighbors: ['Venezuela', 'Brésil', 'Pérou', 'Panama', 'Équateur'] },
+            { name: 'Pérou', category: 'pays', neighbors: ['Chili', 'Brésil', 'Colombie', 'Équateur', 'Bolivie'] },
+            { name: 'Venezuela', category: 'pays', neighbors: ['Colombie', 'Brésil', 'Guyana', 'Trinidad'] },
             
             // Moyen-Orient
-            { name: 'Arabie Saoudite', neighbors: ['Irak', 'Iran', 'Israël', 'Égypte', 'Yémen', 'Émirats'] },
-            { name: 'Irak', neighbors: ['Iran', 'Turquie', 'Arabie Saoudite', 'Syrie', 'Jordanie', 'Koweït'] },
-            { name: 'Iran', neighbors: ['Irak', 'Turquie', 'Afghanistan', 'Pakistan', 'Turkménistan', 'Azerbaïdjan'] },
-            { name: 'Israël', neighbors: ['Égypte', 'Arabie Saoudite', 'Liban', 'Syrie', 'Jordanie', 'Irak'] },
+            { name: 'Arabie Saoudite', category: 'pays', neighbors: ['Irak', 'Iran', 'Israël', 'Égypte', 'Yémen', 'Émirats'] },
+            { name: 'Irak', category: 'pays', neighbors: ['Iran', 'Turquie', 'Arabie Saoudite', 'Syrie', 'Jordanie', 'Koweït'] },
+            { name: 'Iran', category: 'pays', neighbors: ['Irak', 'Turquie', 'Afghanistan', 'Pakistan', 'Turkménistan', 'Azerbaïdjan'] },
+            { name: 'Israël', category: 'pays', neighbors: ['Égypte', 'Arabie Saoudite', 'Liban', 'Syrie', 'Jordanie', 'Irak'] },
             
             // Asie
-            { name: 'Chine', neighbors: ['Inde', 'Russie', 'Japon', 'Corée du Nord', 'Vietnam', 'Mongolie'] },
-            { name: 'Inde', neighbors: ['Chine', 'Pakistan', 'Bangladesh', 'Népal', 'Birmanie', 'Sri Lanka'] },
-            { name: 'Japon', neighbors: ['Chine', 'Corée du Sud', 'Corée du Nord', 'Russie', 'Taïwan'] },
-            { name: 'Coree du Sud', neighbors: ['Corée du Nord', 'Japon', 'Chine', 'Russie'] },
-            { name: 'Coree du Nord', neighbors: ['Corée du Sud', 'Chine', 'Russie', 'Japon'] },
+            { name: 'Chine', category: 'pays', neighbors: ['Inde', 'Russie', 'Japon', 'Corée du Nord', 'Vietnam', 'Mongolie'] },
+            { name: 'Inde', category: 'pays', neighbors: ['Chine', 'Pakistan', 'Bangladesh', 'Népal', 'Birmanie', 'Sri Lanka'] },
+            { name: 'Japon', category: 'pays', neighbors: ['Chine', 'Corée du Sud', 'Corée du Nord', 'Russie', 'Taïwan'] },
+            { name: 'Coree du Sud', category: 'pays', neighbors: ['Corée du Nord', 'Japon', 'Chine', 'Russie'] },
+            { name: 'Coree du Nord', category: 'pays', neighbors: ['Corée du Sud', 'Chine', 'Russie', 'Japon'] },
             
             // Océanie
-            { name: 'Australie', neighbors: ['Nouvelle-Zélande', 'Indonésie', 'Papouasie', 'Timor'] },
+            { name: 'Australie', category: 'pays', neighbors: ['Nouvelle-Zélande', 'Indonésie', 'Papouasie', 'Timor'] },
             
             // Caraïbes
-            { name: 'Cuba', neighbors: ['USA', 'Mexique', 'Haïti', 'Jamaïque', 'Bahamas'] },
-            { name: 'Haïti', neighbors: ['République Dominicaine', 'Cuba', 'Jamaïque', 'USA'] },
-            { name: 'République Dominicaine', neighbors: ['Haïti', 'Cuba', 'Porto Rico', 'USA'] }
+            { name: 'Cuba', category: 'pays', neighbors: ['USA', 'Mexique', 'Haïti', 'Jamaïque', 'Bahamas'] },
+            { name: 'Haïti', category: 'pays', neighbors: ['République Dominicaine', 'Cuba', 'Jamaïque', 'USA'] },
+            { name: 'République Dominicaine', category: 'pays', neighbors: ['Haïti', 'Cuba', 'Porto Rico', 'USA'] }
+        ];
+
+        // ═══════════════════════════════════════
+        // BASE DE DONNÉES — DÉPARTEMENTS D'HAÏTI
+        // ═══════════════════════════════════════
+        const haitiDepts = [
+            { name: 'Artibonite', category: 'haiti', image: 'artibonite.png', neighbors: ['Nord', 'Centre', 'Ouest', 'Nord-Ouest'] },
+            { name: 'Centre', category: 'haiti', image: 'centre.png', neighbors: ['Artibonite', 'Ouest', 'Nord-Est', 'Nord'] },
+            { name: 'Grand Anse', category: 'haiti', image: 'grand_anse.png', neighbors: ['Sud', 'Nippes', 'Nord-Ouest'] },
+            { name: 'Nippes', category: 'haiti', image: 'nippes.png', neighbors: ['Grand-Anse', 'Sud', 'Ouest', 'Artibonite'] },
+            { name: 'Nord', category: 'haiti', image: 'nord.png', neighbors: ['Nord-Est', 'Nord-Ouest', 'Artibonite', 'Centre'] },
+            { name: 'Nord-Est', category: 'haiti', image: 'nord-est.png', neighbors: ['Nord', 'Centre'] },
+            { name: 'Nord-Ouest', category: 'haiti', image: 'nord-ouest.png', neighbors: ['Nord', 'Artibonite'] },
+            { name: 'Ouest', category: 'haiti', image: 'ouest.png', neighbors: ['Artibonite', 'Centre', 'Sud-Est', 'Nippes'] },
+            { name: 'Sud', category: 'haiti', image: 'sud.png', neighbors: ['Grand-Anse', 'Nippes', 'Sud-Est'] },
+            { name: 'Sud-Est', category: 'haiti', image: 'sud-est.png', neighbors: ['Sud', 'Nippes', 'Ouest'] }
         ];
 
         let currentQuestions = [], currentIndex = 0, score = 0;
         let userAnswers = [];
+        let activeCategory = 'pays';
 
         // ═══════════════════════════════════════
-        // DÉMARRAGE AUTOMATIQUE
+        // SÉLECTION DE CATÉGORIE
+        // ═══════════════════════════════════════
+        function setCategory(cat) {
+            activeCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('cat-active'));
+            document.getElementById('btn-' + cat).classList.add('cat-active');
+            initQuiz();
+        }
+
+        // ═══════════════════════════════════════
+        // CONSTRUCTION DU POOL SELON CATÉGORIE
+        // ═══════════════════════════════════════
+        function buildPool() {
+            if (activeCategory === 'pays') return [...countriesData];
+            if (activeCategory === 'haiti') return [...haitiDepts];
+            return [...countriesData, ...haitiDepts];
+        }
+
+        function getQuestionText(item) {
+            return item.category === 'haiti'
+                ? 'Quel département d\'Haïti est représenté sur cette carte ?'
+                : 'Quel pays est représenté sur cette carte ?';
+        }
+
+        function getImagePath(item) {
+            const base = '<?= $basePath ?>/9e/cartes/';
+            if (item.category === 'haiti') return base + item.image;
+            // Pays : nom normalisé
+            return base + item.name.toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^a-z0-9]/g, ' ')
+                .trim()
+                .replace(/\s+/g, '-') + '.png';
+        }
+
+        // ═══════════════════════════════════════
+        // DÉMARRAGE DU QUIZ
         // ═══════════════════════════════════════
         function initQuiz() {
-            const pool = [...countriesData];
+            const pool = buildPool();
             const shuffled = [...pool].sort(() => Math.random() - 0.5);
-            const selected = shuffled.slice(0, 10);
+            const selected = shuffled.slice(0, Math.min(10, shuffled.length));
             
-            currentQuestions = selected.map(country => {
-                let options = [country.name];
+            currentQuestions = selected.map(item => {
+                // Distracteurs depuis le même pool ou les voisins
+                const allNames = pool.map(x => x.name);
+                let options = [item.name];
                 
-                country.neighbors.forEach(n => {
-                    if (!options.includes(n) && options.length < 4) options.push(n);
+                item.neighbors.forEach(n => {
+                    if (!options.includes(n) && options.length < 4 && allNames.includes(n)) options.push(n);
                 });
                 
+                // Compléter avec des noms aléatoires du pool
                 if (options.length < 4) {
                     const others = pool
-                        .filter(c => !options.includes(c.name) && c.name !== country.name)
+                        .filter(c => !options.includes(c.name) && c.name !== item.name)
                         .sort(() => Math.random() - 0.5)
                         .slice(0, 4 - options.length);
                     others.forEach(c => options.push(c.name));
@@ -210,12 +279,11 @@ $name = getStudentName();
                 options = options.slice(0, 4).sort(() => Math.random() - 0.5);
                 
                 return {
-                    image: country.name.toLowerCase()
-                        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-                        .replace(/[^a-z0-9]/g, ' ') + '.png',
-                    correctName: country.name,
+                    image: getImagePath(item),
+                    correctName: item.name,
+                    questionText: getQuestionText(item),
                     options: options,
-                    correctIndex: options.indexOf(country.name)
+                    correctIndex: options.indexOf(item.name)
                 };
             });
             
@@ -235,12 +303,11 @@ $name = getStudentName();
             
             const q = currentQuestions[currentIndex];
             const pct = (currentIndex / currentQuestions.length) * 100;
-            const imagePath = '<?= $basePath ?>/9e/cartes/' + q.image;
             
             let h = '';
             h += `<div class="question-progress"><span>Question ${currentIndex+1}/${currentQuestions.length}</span><div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div></div>`;
-            h += `<p class="question-text">Quel pays est représenté sur cette carte ?</p>`;
-            h += `<div class="map-image-wrapper"><img src="${imagePath}" alt="Carte" class="map-image" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22450%22 height=%22300%22><rect fill=%22%23f0f4ff%22 width=%22450%22 height=%22300%22/><text fill=%22%237c3aed%22 x=%22225%22 y=%22150%22 text-anchor=%22middle%22 font-size=%2218%22>Image non disponible</text></svg>'"></div>`;
+            h += `<p class="question-text">${q.questionText}</p>`;
+            h += `<div class="map-image-wrapper"><img src="${q.image}" alt="Carte" class="map-image" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22450%22 height=%22300%22><rect fill=%22%23f0f4ff%22 width=%22450%22 height=%22300%22/><text fill=%22%237c3aed%22 x=%22225%22 y=%22150%22 text-anchor=%22middle%22 font-size=%2218%22>Image non disponible</text></svg>'"></div>`;
             
             q.options.forEach((opt, i) => {
                 h += `<button class="option-btn" data-index="${i}"><strong>${String.fromCharCode(65+i)}.</strong> ${opt}</button>`;
@@ -303,7 +370,7 @@ $name = getStudentName();
             </div>`;
             
             if (userAnswers.length > 0) {
-                h += `<table class="summary-table"><thead><tr><th>#</th><th>Pays</th><th>Résultat</th></tr></thead><tbody>`;
+                h += `<table class="summary-table"><thead><tr><th>#</th><th>Réponse</th><th>Résultat</th></tr></thead><tbody>`;
                 userAnswers.forEach((a, i) => h += `<tr class="${a.correct?'row-correct':'row-wrong'}"><td>${i+1}</td><td>${a.question}</td><td>${a.correct?'✅':'❌'}</td></tr>`);
                 h += `</tbody></table>`;
             }
@@ -319,5 +386,6 @@ $name = getStudentName();
         // Lancement automatique
         initQuiz();
     </script>
+
 </body>
 </html>
