@@ -653,6 +653,52 @@ $pageTitle = 'QCM - 9ème AF';
     <script>
         // Configuration
         const API_URL = '<?= $basePath ?>/api/questions.php';
+
+        /**
+         * Convertit les caractères mathématiques Unicode en HTML lisible.
+         * Utilise split/join (pas de regex) pour éviter les bugs sur mobile.
+         */
+        function formatMath(text) {
+            if (!text) return text;
+            const REPLACEMENTS = [
+                // Symboles mathématiques
+                ['\u221a', '&radic;'], ['\u222b', '&int;'], ['\u221e', '&infin;'],
+                ['\u2248', '&asymp;'], ['\u2260', '&ne;'], ['\u2261', '&equiv;'],
+                ['\u2192', '&rarr;'], ['\u21c4', '&#8644;'], ['\u00d7', '&times;'],
+                ['\u00b7', '&middot;'], ['\u0394', '&Delta;'], ['\u03c0', '&pi;'],
+                ['\u03c3', '&sigma;'], ['\u03b5', '&epsilon;'], ['\u00b0', '&deg;'],
+                ['\u2113', '&#8467;'],
+                // Exposants → <sup>
+                ['\u2070','<sup>0</sup>'],['\u00b9','<sup>1</sup>'],['\u00b2','<sup>2</sup>'],
+                ['\u00b3','<sup>3</sup>'],['\u2074','<sup>4</sup>'],['\u2075','<sup>5</sup>'],
+                ['\u2076','<sup>6</sup>'],['\u2077','<sup>7</sup>'],['\u2078','<sup>8</sup>'],
+                ['\u2079','<sup>9</sup>'],['\u207f','<sup>n</sup>'],['\u207a','<sup>+</sup>'],
+                ['\u207b','<sup>-</sup>'],['\u207c','<sup>=</sup>'],['\u207d','<sup>(</sup>'],
+                ['\u207e','<sup>)</sup>'],['\u02e3','<sup>x</sup>'],['\u1d34','<sup>H</sup>'],
+                ['\u1d56','<sup>p</sup>'],['\u1d43','<sup>a</sup>'],['\u1d47','<sup>b</sup>'],
+                ['\u1d9c','<sup>c</sup>'],['\u1d48','<sup>d</sup>'],['\u1d49','<sup>e</sup>'],
+                ['\u1da0','<sup>f</sup>'],['\u1d4d','<sup>g</sup>'],['\u02b0','<sup>h</sup>'],
+                ['\u2071','<sup>i</sup>'],['\u02b2','<sup>j</sup>'],['\u1d4f','<sup>k</sup>'],
+                ['\u02e1','<sup>l</sup>'],['\u1d50','<sup>m</sup>'],['\u1d52','<sup>o</sup>'],
+                ['\u02b3','<sup>r</sup>'],['\u02e2','<sup>s</sup>'],['\u1d57','<sup>t</sup>'],
+                ['\u1d58','<sup>u</sup>'],['\u1d5b','<sup>v</sup>'],['\u02b7','<sup>w</sup>'],
+                ['\u02b8','<sup>y</sup>'],
+                // Indices → <sub>
+                ['\u2080','<sub>0</sub>'],['\u2081','<sub>1</sub>'],['\u2082','<sub>2</sub>'],
+                ['\u2083','<sub>3</sub>'],['\u2084','<sub>4</sub>'],['\u2085','<sub>5</sub>'],
+                ['\u2086','<sub>6</sub>'],['\u2087','<sub>7</sub>'],['\u2088','<sub>8</sub>'],
+                ['\u2089','<sub>9</sub>'],['\u2099','<sub>n</sub>'],['\u2093','<sub>x</sub>'],
+                ['\u2090','<sub>a</sub>'],['\u2091','<sub>e</sub>'],['\u2092','<sub>o</sub>'],
+                ['\u1d62','<sub>i</sub>'],['\u1d63','<sub>r</sub>'],['\u1d64','<sub>u</sub>'],
+                ['\u1d65','<sub>v</sub>'],['\u208a','<sub>+</sub>'],['\u208b','<sub>-</sub>'],
+            ];
+            for (const [from, to] of REPLACEMENTS) {
+                text = text.split(from).join(to);
+            }
+            text = text.replace(/<\/sup><sup>/g, '');
+            text = text.replace(/<\/sub><sub>/g, '');
+            return text;
+        }
         const CLASSE = '9e';
         const QUIZ_TYPE = 'qcm';
 
@@ -772,7 +818,7 @@ $pageTitle = 'QCM - 9ème AF';
             `;
 
             // Énoncé
-            html += `<p class="question-text">${q.enonce}</p>`;
+            html += `<p class="question-text">${formatMath(q.enonce)}</p>`;
 
             // Options QCM
             if (q.options && q.options.length >= 2) {
@@ -782,7 +828,7 @@ $pageTitle = 'QCM - 9ème AF';
                         <button class="option-btn" 
                                 data-correct="${option.correct}" 
                                 data-index="${index}">
-                            <strong>${letter}.</strong> ${option.texte}
+                            <strong>${letter}.</strong> ${formatMath(option.texte)}
                         </button>
                     `;
                 });
@@ -829,7 +875,7 @@ $pageTitle = 'QCM - 9ème AF';
             if (q.explication && q.explication.trim() !== '') {
                 const explDiv = document.createElement('div');
                 explDiv.className = 'explication';
-                explDiv.innerHTML = `<strong>💡 Explication :</strong> ${q.explication}`;
+                explDiv.innerHTML = `<strong>💡 Explication :</strong> ${formatMath(q.explication)}`;
                 quizContainer.appendChild(explDiv);
             }
 

@@ -15,8 +15,10 @@ $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Plateforme de quiz éducatif pour les élèves de 9ème année et NS4 en Haïti">
+    <meta name="google-site-verification" content="ikYgHEBCKlQWimzFOnFPfwoOUqXJ41fPNc6nXbI1lng" />
     <title>Quiz Ayiti - 9ème & NS4</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
