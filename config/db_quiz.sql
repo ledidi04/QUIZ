@@ -805,6 +805,2597 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'J''ai écrivé', 0, 3),
 (@qid, 'J''avais écrit', 0, 4);
 
+
+
+-- ============================================================
+-- QCM FRANÇAIS - 9e ANNÉE FONDAMENTALE (HAÏTI)
+-- 400+ Questions à Choix Multiples
+-- Basé sur le programme officiel 9e AF (2010-2023)
+-- matiere_id = 2 (Français), type_id = 2 (QCM)
+-- difficulté : 1 = facile, 2 = moyen, 3 = difficile
+-- ============================================================
+
+-- ============================================================
+-- SECTION 1 : GRAMMAIRE - NATURE DES MOTS (40 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature du mot "rapidement" dans "Il court rapidement" ?',
+ 'Rapidement est un adverbe de manière qui modifie le verbe courir.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjectif qualificatif', 0, 1),
+(@qid, 'Nom commun', 0, 2),
+(@qid, 'Adverbe', 1, 3),
+(@qid, 'Pronom personnel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Cette belle maison appartient à mon oncle", combien y a-t-il d''adjectifs ?',
+ 'Belle est un adjectif qualificatif, mon est un adjectif possessif → 2 adjectifs.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un seul adjectif', 0, 1),
+(@qid, 'Deux adjectifs', 1, 2),
+(@qid, 'Trois adjectifs', 0, 3),
+(@qid, 'Aucun adjectif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature du mot "que" dans "Je crois que tu as raison" ?',
+ 'Que introduit une proposition subordonnée conjonctive : c''est une conjonction de subordination.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pronom relatif', 0, 1),
+(@qid, 'Conjonction de subordination', 1, 2),
+(@qid, 'Adverbe', 0, 3),
+(@qid, 'Conjonction de coordination', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le pronom personnel sujet de la 3e personne du pluriel ?',
+ 'Ils/Elles est le pronom personnel sujet de la 3e personne du pluriel.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vous', 0, 1),
+(@qid, 'Eux', 0, 2),
+(@qid, 'Ils / Elles', 1, 3),
+(@qid, 'Leur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Les enfants jouent dans le jardin", le groupe nominal sujet est :',
+ 'Les enfants est le groupe nominal qui fait l''action (jouer) : c''est le sujet.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'dans le jardin', 0, 1),
+(@qid, 'le jardin', 0, 2),
+(@qid, 'Les enfants', 1, 3),
+(@qid, 'jouent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le rôle du mot "leur" dans "Je leur ai donné un cadeau" ?',
+ 'Leur est ici un pronom personnel complément d''objet indirect (COI) : donné à eux.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjectif possessif', 0, 1),
+(@qid, 'Pronom COI', 1, 2),
+(@qid, 'Pronom COD', 0, 3),
+(@qid, 'Adverbe', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature du mot "dont" dans "Le livre dont tu parles est intéressant" ?',
+ 'Dont est un pronom relatif représentant le livre.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Conjonction de coordination', 0, 1),
+(@qid, 'Adverbe de lieu', 0, 2),
+(@qid, 'Pronom relatif', 1, 3),
+(@qid, 'Préposition', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Il mange vite", le mot "vite" est :',
+ 'Vite modifie le verbe manger → c''est un adverbe de manière.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un adjectif', 0, 1),
+(@qid, 'Un adverbe', 1, 2),
+(@qid, 'Un nom', 0, 3),
+(@qid, 'Un verbe', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature du mot "mais" dans "Il est fatigué mais il travaille" ?',
+ 'Mais est une conjonction de coordination exprimant l''opposition.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Conjonction de subordination', 0, 1),
+(@qid, 'Adverbe', 0, 2),
+(@qid, 'Conjonction de coordination', 1, 3),
+(@qid, 'Pronom', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la fonction de "de bonnes notes" dans "Il obtient de bonnes notes" ?',
+ 'De bonnes notes est le COD du verbe obtenir.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sujet', 0, 1),
+(@qid, 'Complément d''objet indirect', 0, 2),
+(@qid, 'Complément d''objet direct', 1, 3),
+(@qid, 'Attribut du sujet', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est l''attribut du sujet dans "Marie est intelligente" ?',
+ 'Intelligente est relié au sujet Marie par le verbe d''état est → c''est l''attribut du sujet.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Marie', 0, 1),
+(@qid, 'est', 0, 2),
+(@qid, 'intelligente', 1, 3),
+(@qid, 'Il n''y en a pas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Où vas-tu ?", le mot "où" est :',
+ 'Où interroge sur le lieu → c''est un adverbe interrogatif de lieu.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pronom relatif', 0, 1),
+(@qid, 'Adverbe interrogatif', 1, 2),
+(@qid, 'Conjonction', 0, 3),
+(@qid, 'Préposition', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature du mot "notre" dans "Notre école est grande" ?',
+ 'Notre détermine le nom école → c''est un adjectif possessif (déterminant possessif).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pronom possessif', 0, 1),
+(@qid, 'Adjectif qualificatif', 0, 2),
+(@qid, 'Adjectif possessif', 1, 3),
+(@qid, 'Article défini', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Identifiez le verbe d''état parmi les propositions suivantes :',
+ 'Paraître est un verbe d''état (comme être, sembler, devenir, rester, avoir l''air…).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Courir', 0, 1),
+(@qid, 'Manger', 0, 2),
+(@qid, 'Paraître', 1, 3),
+(@qid, 'Construire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Il parle à voix basse", le groupe "à voix basse" est :',
+ 'À voix basse précise la manière de parler → c''est un complément circonstanciel de manière.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'COD', 0, 1),
+(@qid, 'Complément circonstanciel de temps', 0, 2),
+(@qid, 'Complément circonstanciel de manière', 1, 3),
+(@qid, 'Attribut du sujet', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature du mot "chaque" dans "Chaque élève doit travailler" ?',
+ 'Chaque est un adjectif indéfini (déterminant indéfini) qui détermine le nom élève.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Article défini', 0, 1),
+(@qid, 'Adjectif indéfini', 1, 2),
+(@qid, 'Adjectif numéral', 0, 3),
+(@qid, 'Pronom indéfini', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Le chat que j''ai vu hier est gris", quel est l''antécédent du pronom relatif "que" ?',
+ 'Que reprend le nom chat : c''est son antécédent.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hier', 0, 1),
+(@qid, 'gris', 0, 2),
+(@qid, 'chat', 1, 3),
+(@qid, 'j''ai vu', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le genre et le nombre de "les belles éoliennes" ?',
+ 'Belles = féminin pluriel, éoliennes = nom féminin pluriel.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Masculin singulier', 0, 1),
+(@qid, 'Féminin singulier', 0, 2),
+(@qid, 'Féminin pluriel', 1, 3),
+(@qid, 'Masculin pluriel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la fonction du groupe "depuis ce matin" dans "Il travaille depuis ce matin" ?',
+ 'Depuis ce matin indique le temps → complément circonstanciel de temps.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'COD', 0, 1),
+(@qid, 'Sujet', 0, 2),
+(@qid, 'Complément circonstanciel de temps', 1, 3),
+(@qid, 'Complément circonstanciel de lieu', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Lequel de ces mots est un adverbe de négation ?',
+ 'Ne...pas encadre le verbe pour exprimer la négation. "Jamais" est aussi un adverbe de négation.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Souvent', 0, 1),
+(@qid, 'Jamais', 1, 2),
+(@qid, 'Toujours', 0, 3),
+(@qid, 'Très', 0, 4);
+
+-- ============================================================
+-- SECTION 2 : CONJUGAISON - TEMPS ET MODES (60 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le passé composé du verbe "partir" à la 3e personne du singulier ?',
+ 'Partir est un verbe de mouvement qui se conjugue avec l''auxiliaire ÊTRE. → il est parti.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'il a parti', 0, 1),
+(@qid, 'il est parti', 1, 2),
+(@qid, 'il avait parti', 0, 3),
+(@qid, 'il sera parti', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Conjuguez "écrire" au passé composé, 1ère personne du singulier.',
+ 'Le participe passé de écrire est écrit → j''ai écrit.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'j''ai écrivi', 0, 1),
+(@qid, 'j''ai écrit', 1, 2),
+(@qid, 'j''ai écrivé', 0, 3),
+(@qid, 'j''avais écrit', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est l''imparfait du verbe "être" à la 2e personne du pluriel ?',
+ 'À l''imparfait : nous étions, vous étiez, ils étaient.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vous êtes', 0, 1),
+(@qid, 'vous serez', 0, 2),
+(@qid, 'vous étiez', 1, 3),
+(@qid, 'vous aviez', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Si j''avais de l''argent, j''achèterais un roman", le verbe "achèterais" est au :',
+ 'J''achèterais = conditionnel présent (mode conditionnel, temps présent).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Futur simple', 0, 1),
+(@qid, 'Imparfait', 0, 2),
+(@qid, 'Conditionnel présent', 1, 3),
+(@qid, 'Subjonctif présent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le futur simple du verbe "aller" à la 1ère personne du singulier ?',
+ 'Aller a un radical irrégulier au futur : ir- → j''irai.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'je vais', 0, 1),
+(@qid, 'j''allais', 0, 2),
+(@qid, 'j''irai', 1, 3),
+(@qid, 'j''allerai', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la forme correcte du subjonctif présent de "faire" à la 3e personne du singulier ?',
+ 'Au subjonctif présent : que je fasse, que tu fasses, qu''il fasse.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'qu''il fait', 0, 1),
+(@qid, 'qu''il ferait', 0, 2),
+(@qid, 'qu''il fasse', 1, 3),
+(@qid, 'qu''il fera', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel auxiliaire utilise-t-on pour conjuguer "naître" au passé composé ?',
+ 'Naître est un verbe intransitif de changement d''état → auxiliaire ÊTRE.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'avoir', 0, 1),
+(@qid, 'être', 1, 2),
+(@qid, 'les deux sont possibles', 0, 3),
+(@qid, 'aucun auxiliaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Conjuguez "recevoir" au plus-que-parfait, 3e personne du pluriel.',
+ 'Plus-que-parfait = auxiliaire à l''imparfait + participe passé → ils avaient reçu.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ils ont reçu', 0, 1),
+(@qid, 'ils avaient reçu', 1, 2),
+(@qid, 'ils auront reçu', 0, 3),
+(@qid, 'ils recevaient', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le participe passé du verbe "lire" ?',
+ 'Lire → lu (participe passé irrégulier).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lisé', 0, 1),
+(@qid, 'li', 0, 2),
+(@qid, 'lu', 1, 3),
+(@qid, 'lit', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Tout le monde t''applaudira si tu réussis", "applaudira" est au :',
+ 'Applaudira = futur simple de l''indicatif, 3e personne du singulier.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Présent de l''indicatif', 0, 1),
+(@qid, 'Futur simple', 1, 2),
+(@qid, 'Conditionnel présent', 0, 3),
+(@qid, 'Subjonctif présent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le présent de l''indicatif du verbe "vouloir" à la 1ère personne du singulier ?',
+ 'Vouloir est irrégulier au présent : je veux, tu veux, il veut…', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'je voulais', 0, 1),
+(@qid, 'je veux', 1, 2),
+(@qid, 'je voudrais', 0, 3),
+(@qid, 'je voule', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Conjuguez "finir" au présent de l''indicatif, 2e personne du singulier.',
+ 'Finir (2e groupe) : je finis, tu finis, il finit…', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tu fines', 0, 1),
+(@qid, 'tu finies', 0, 2),
+(@qid, 'tu finis', 1, 3),
+(@qid, 'tu finie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Les fleurs étaient déjà fanées quand elle décida de décorer la salle", le verbe "décida" est à quel temps ?',
+ 'Décida = passé simple (utilisé dans les récits pour une action passée précise).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Imparfait', 0, 1),
+(@qid, 'Passé composé', 0, 2),
+(@qid, 'Passé simple', 1, 3),
+(@qid, 'Plus-que-parfait', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Le verbe "avoir" au subjonctif présent, 1ère personne du singulier est :',
+ 'Avoir au subjonctif : que j''aie, que tu aies, qu''il ait…', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'que j''ai', 0, 1),
+(@qid, 'que j''aie', 1, 2),
+(@qid, 'que j''avais', 0, 3),
+(@qid, 'que j''aurais', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la forme passive de "Le directeur convoque les élèves" ?',
+ 'À la voix passive, le COD devient sujet : Les élèves sont convoqués par le directeur.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les élèves convoqueront le directeur', 0, 1),
+(@qid, 'Les élèves sont convoqués par le directeur', 1, 2),
+(@qid, 'Le directeur est convoqué par les élèves', 0, 3),
+(@qid, 'Les élèves ont été convoqués', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel temps utilise-t-on dans la proposition subordonnée après "si" conditionnel ?',
+ 'Dans une phrase conditionnelle : Si + imparfait → conditionnel présent.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Futur simple', 0, 1),
+(@qid, 'Conditionnel présent', 0, 2),
+(@qid, 'Imparfait', 1, 3),
+(@qid, 'Subjonctif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Conjuguez "être" au futur simple, 1ère personne du pluriel.',
+ 'Être au futur : je serai, tu seras, il sera, nous serons.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nous sommes', 0, 1),
+(@qid, 'nous étions', 0, 2),
+(@qid, 'nous serons', 1, 3),
+(@qid, 'nous aurions', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est l''infinitif du verbe conjugué dans "ils virent" (passé simple) ?',
+ 'Virent = passé simple du verbe voir (3e personne du pluriel).', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'venir', 0, 1),
+(@qid, 'virer', 0, 2),
+(@qid, 'voir', 1, 3),
+(@qid, 'vivre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le participe passé du verbe "confier" ?',
+ 'Confier est du 1er groupe → participe passé en -é : confié.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'confis', 0, 1),
+(@qid, 'confié', 1, 2),
+(@qid, 'confiant', 0, 3),
+(@qid, 'confiait', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Il faut que tu sois présent", le verbe "sois" est au :',
+ 'Il faut que + subjonctif → sois = subjonctif présent du verbe être.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Présent de l''indicatif', 0, 1),
+(@qid, 'Imparfait', 0, 2),
+(@qid, 'Subjonctif présent', 1, 3),
+(@qid, 'Conditionnel présent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Conjuguez "inviter" au conditionnel présent, 1ère personne du pluriel.',
+ 'Conditionnel présent = radical du futur + terminaison de l''imparfait → nous inviterions.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nous invitions', 0, 1),
+(@qid, 'nous inviterons', 0, 2),
+(@qid, 'nous inviterions', 1, 3),
+(@qid, 'nous avons invité', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Le verbe "se lever" au passé composé, 3e personne du singulier féminin est :',
+ 'Se lever est un verbe pronominal → auxiliaire être. Accord avec le sujet féminin : elle s''est levée.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'elle a levé', 0, 1),
+(@qid, 'elle s''est levée', 1, 2),
+(@qid, 'elle est levée', 0, 3),
+(@qid, 'elle s''est levé', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le présent de l''indicatif du verbe "prendre" à la 1ère personne du pluriel ?',
+ 'Prendre au présent : je prends, tu prends, il prend, nous prenons.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nous prendons', 0, 1),
+(@qid, 'nous prenons', 1, 2),
+(@qid, 'nous prennons', 0, 3),
+(@qid, 'nous prenions', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Transformez "Le vent produit de l''électricité" à la voix passive.',
+ 'De l''électricité est produite par le vent.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le vent est produit par l''électricité', 0, 1),
+(@qid, 'De l''électricité est produite par le vent', 1, 2),
+(@qid, 'L''électricité produit le vent', 0, 3),
+(@qid, 'Le vent a produit de l''électricité', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Conjuguez "pouvoir" au présent de l''indicatif, 2e personne du singulier.',
+ 'Pouvoir au présent : je peux, tu peux, il peut…', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tu pouvez', 0, 1),
+(@qid, 'tu pouves', 0, 2),
+(@qid, 'tu peux', 1, 3),
+(@qid, 'tu pourrais', 0, 4);
+
+-- ============================================================
+-- SECTION 3 : ORTHOGRAPHE ET ACCORDS (60 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le pluriel irrégulier du mot "œil" ?',
+ 'Œil → yeux est un pluriel irrégulier à retenir absolument.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'œils', 0, 1),
+(@qid, 'yeux', 1, 2),
+(@qid, 'œilx', 0, 3),
+(@qid, 'œilles', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Lequel de ces mots prend un "x" au pluriel ?',
+ 'Les mots en -eau font leur pluriel en -eaux : bateau → bateaux.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'festival → festivals', 0, 1),
+(@qid, 'bateau → bateaux', 1, 2),
+(@qid, 'pneu → pneus', 0, 3),
+(@qid, 'bal → bals', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Complétez : "Pedro _____ le meilleur élève de la classe." avec "est" ou "ait" ?',
+ '"Est" est la forme correcte ici : il s''agit du verbe être au présent de l''indicatif.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ait', 0, 1),
+(@qid, 'est', 1, 2),
+(@qid, 'aie', 0, 3),
+(@qid, 'et', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "On dit qu''un bienfait n''_____ jamais perdu", on écrit :',
+ 'N''est jamais perdu → est : verbe être à l''indicatif présent, pas de subjonctif ici.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ait', 0, 1),
+(@qid, 'est', 1, 2),
+(@qid, 'aît', 0, 3),
+(@qid, 'ai', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Lequel de ces adjectifs est correctement accordé ?',
+ 'Heureuses est l''accord correct de heureux au féminin pluriel.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'des filles heureuxes', 0, 1),
+(@qid, 'des filles heureuse', 0, 2),
+(@qid, 'des filles heureuses', 1, 3),
+(@qid, 'des filles heureux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le féminin de "doux" ?',
+ 'Doux → douce au féminin (la consonne finale x devient c + e).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'douxe', 0, 1),
+(@qid, 'douche', 0, 2),
+(@qid, 'douce', 1, 3),
+(@qid, 'dousse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Lequel de ces mots s''écrit avec un accent circonflexe ?',
+ 'Forêt s''écrit avec un accent circonflexe sur le e (trace de l''ancien "forest").', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'maison', 0, 1),
+(@qid, 'foret', 0, 2),
+(@qid, 'forêt', 1, 3),
+(@qid, 'jardin', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le pluriel de "travail" ?',
+ 'Travail → travaux (pluriel en -aux, irrégulier).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'travails', 0, 1),
+(@qid, 'travails', 0, 2),
+(@qid, 'travaux', 1, 3),
+(@qid, 'travailx', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Comment s''écrit le contraire de "courageux" ?',
+ 'Le préfixe privatif in- devant courageux donne incourageux... mais le vrai antonyme est peureux ou lâche. Le contraire construit est "peureux".', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'décourageux', 0, 1),
+(@qid, 'incourageux', 0, 2),
+(@qid, 'peureux', 1, 3),
+(@qid, 'recourageux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Les histoires que j''ai lues sont captivantes", pourquoi "lues" prend-il un "e" ?',
+ 'Le COD "les histoires" est placé avant le verbe lire → accord du participe passé avec le COD féminin pluriel.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parce que histoires est masculin pluriel', 0, 1),
+(@qid, 'Accord avec le COD féminin pluriel placé avant', 1, 2),
+(@qid, 'Parce qu''on utilise l''auxiliaire être', 0, 3),
+(@qid, 'Il n''y a pas de règle, c''est aléatoire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Laquelle de ces phrases est orthographiquement correcte ?',
+ 'Ces enfants jouent correctement s''écrit sans erreur.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ses enfant joues dans la cour.', 0, 1),
+(@qid, 'Ces enfants jouent correctement.', 1, 2),
+(@qid, 'Ces enfant jou dans la cour.', 0, 3),
+(@qid, 'Ses enfants jouent correctement.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le féminin de "beau" ?',
+ 'Beau → belle au féminin (doublement de la consonne finale).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'beaue', 0, 1),
+(@qid, 'bel', 0, 2),
+(@qid, 'belle', 1, 3),
+(@qid, 'beaux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Comment écrit-on le pluriel de "voix" ?',
+ 'Voix ne change pas au pluriel car il se termine déjà par x.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'voixs', 0, 1),
+(@qid, 'voixx', 0, 2),
+(@qid, 'voix', 1, 3),
+(@qid, 'voixes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Laquelle de ces phrases utilise correctement "a" et "à" ?',
+ 'Il a mangé (verbe avoir) à la maison (préposition) → emploi correct des deux formes.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il à mangé a la maison.', 0, 1),
+(@qid, 'Il a mangé à la maison.', 1, 2),
+(@qid, 'Il a mangé a la maison.', 0, 3),
+(@qid, 'Il à mangé à la maison.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le féminin de "directeur" ?',
+ 'Directeur → directrice (formation irrégulière au féminin).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'directeure', 0, 1),
+(@qid, 'directeuse', 0, 2),
+(@qid, 'directrice', 1, 3),
+(@qid, 'directeure', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Comment s''écrit "on" dans "On se lève tôt ce matin" ?',
+ 'On est un pronom indéfini sujet → s''écrit toujours "on" (sans apostrophe ni n'').', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ont', 0, 1),
+(@qid, 'on', 1, 2),
+(@qid, 'on''t', 0, 3),
+(@qid, 'n''on', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est l''orthographe correcte : "énergies renouvelables" ou "énergie renouvellable" ?',
+ 'Renouvelable s''écrit avec un seul "l" (comme renouveler).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'énergie renouvellable', 0, 1),
+(@qid, 'énergies renouvelables', 1, 2),
+(@qid, 'énergie renouvelable', 0, 3),
+(@qid, 'énergies renouvellables', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le pluriel de "genou" ?',
+ 'Genou fait partie des mots en -ou qui prennent un x au pluriel : genou → genoux.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'genous', 0, 1),
+(@qid, 'genoux', 1, 2),
+(@qid, 'genouxs', 0, 3),
+(@qid, 'genues', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Il faudrait que votre fille _____ de meilleures notes", on écrit :',
+ 'Il faudrait que + subjonctif → elle ait (subjonctif présent de avoir).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'a', 0, 1),
+(@qid, 'est', 0, 2),
+(@qid, 'ait', 1, 3),
+(@qid, 'ai', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la bonne orthographe de l''adverbe formé à partir de "élégant" ?',
+ 'Élégant → élégamment (adjectifs en -ant forment l''adverbe en -amment).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'éléganment', 0, 1),
+(@qid, 'élégantement', 0, 2),
+(@qid, 'élégamment', 1, 3),
+(@qid, 'élégemment', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le pluriel de "animal" ?',
+ 'Animal → animaux (les noms en -al forment généralement leur pluriel en -aux).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'animals', 0, 1),
+(@qid, 'animaux', 1, 2),
+(@qid, 'animalx', 0, 3),
+(@qid, 'animales', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Laquelle de ces phrases est à la forme négative correcte ?',
+ 'La négation "ne...pas" encadre le verbe.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Je ne lève me pas tôt.', 0, 1),
+(@qid, 'Je me lève tôt ne pas.', 0, 2),
+(@qid, 'Je ne me lève pas tôt.', 1, 3),
+(@qid, 'Pas je me lève tôt.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le féminin de "vieux" ?',
+ 'Vieux → vieille au féminin (forme totalement différente).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vieuxe', 0, 1),
+(@qid, 'vielle', 0, 2),
+(@qid, 'vieille', 1, 3),
+(@qid, 'vieusse', 0, 4);
+
+-- ============================================================
+-- SECTION 4 : VOCABULAIRE ET SENS DES MOTS (60 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le synonyme de "tranquille" ?',
+ 'Tranquille et paisible ont le même sens : calme, sans agitation.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'agité', 0, 1),
+(@qid, 'paisible', 1, 2),
+(@qid, 'bruyant', 0, 3),
+(@qid, 'nerveux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le synonyme de "grimper" ?',
+ 'Grimper et escalader signifient tous deux monter en s''aidant des mains et des pieds.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'descendre', 0, 1),
+(@qid, 'tomber', 0, 2),
+(@qid, 'escalader', 1, 3),
+(@qid, 'glisser', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Que signifie l''expression "source d''énergie renouvelable" ?',
+ 'Une énergie renouvelable est une énergie qui ne peut pas être épuisée car elle se renouvelle naturellement.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Énergie qui coûte très cher', 0, 1),
+(@qid, 'Énergie qui ne peut pas être épuisée', 1, 2),
+(@qid, 'Énergie produite par le pétrole', 0, 3),
+(@qid, 'Énergie qui pollue l''environnement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le contraire de "nocif" ?',
+ 'Nocif (qui nuit) → bénéfique ou inoffensif (qui ne nuit pas).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'dangereux', 0, 1),
+(@qid, 'bénéfique', 1, 2),
+(@qid, 'nuisible', 0, 3),
+(@qid, 'toxique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le synonyme de "beau" dans le contexte d''une description ?',
+ 'Beau et ravissant sont synonymes dans une description positive d''une apparence.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'laid', 0, 1),
+(@qid, 'ravissant', 1, 2),
+(@qid, 'horrible', 0, 3),
+(@qid, 'affreux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel verbe remplace "mettre" dans "mettre la clé dans la serrure" ?',
+ 'Placer = mettre quelque chose à un endroit précis.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'enfiler', 0, 1),
+(@qid, 'placer', 1, 2),
+(@qid, 'poser', 0, 3),
+(@qid, 'classer', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel verbe remplace "mettre" dans "mettre un livre dans une bibliothèque" ?',
+ 'Ranger = mettre quelque chose à sa place dans un rangement.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'poser', 0, 1),
+(@qid, 'introduire', 0, 2),
+(@qid, 'classer', 1, 3),
+(@qid, 'enfiler', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Que signifie le mot "combustible" dans un texte sur l''énergie ?',
+ 'Un combustible est une matière qui brûle pour produire de l''énergie (essence, charbon, bois…).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une machine qui produit de l''électricité', 0, 1),
+(@qid, 'Une matière qui brûle pour produire de l''énergie', 1, 2),
+(@qid, 'Un appareil de chauffage', 0, 3),
+(@qid, 'Une source d''eau', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le contraire de "joyeux" ?',
+ 'Joyeux (content, heureux) → triste est son contraire.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gai', 0, 1),
+(@qid, 'triste', 1, 2),
+(@qid, 'heureux', 0, 3),
+(@qid, 'content', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel mot est un synonyme de "copain" ?',
+ 'Copain et ami sont synonymes : une personne avec laquelle on a des liens d''amitié.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ennemi', 0, 1),
+(@qid, 'ami', 1, 2),
+(@qid, 'inconnu', 0, 3),
+(@qid, 'adversaire', 0, 4);
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel mot appartient à la famille du mot "énergie" ?',
+ 'Énergétique est un adjectif de la même famille lexicale que énergie.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'électricien', 0, 1),
+(@qid, 'énergétique', 1, 2),
+(@qid, 'ingénieur', 0, 3),
+(@qid, 'centralisé', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le sens du préfixe "re-" dans le mot "renouvelable" ?',
+ 'Le préfixe re- indique la répétition ou le recommencement : renouvelable = qui peut être renouvelé.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Contre, opposition', 0, 1),
+(@qid, 'De nouveau, répétition', 1, 2),
+(@qid, 'Privation, absence de', 0, 3),
+(@qid, 'En dessous', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Que désigne le mot "féculents" dans un texte sur la nutrition ?',
+ 'Les féculents sont des aliments riches en amidon : riz, pâtes, pommes de terre, pain…', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des fruits exotiques', 0, 1),
+(@qid, 'Des légumes verts', 0, 2),
+(@qid, 'Des aliments riches en amidon comme le riz et les pâtes', 1, 3),
+(@qid, 'Des produits laitiers', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le sens du mot "indispensable" ?',
+ 'Indispensable = dont on ne peut pas se passer, absolument nécessaire.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Inutile', 0, 1),
+(@qid, 'Facultatif', 0, 2),
+(@qid, 'Absolument nécessaire', 1, 3),
+(@qid, 'Difficile à trouver', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le contraire de "réel" ?',
+ 'Réel = qui existe vraiment → irréel = qui n''existe pas, imaginaire.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'actuel', 0, 1),
+(@qid, 'imaginaire', 1, 2),
+(@qid, 'concret', 0, 3),
+(@qid, 'véritable', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Le mot "éolienne" vient du nom de :',
+ 'Éole est le dieu du vent dans la mythologie grecque. Éolienne = qui utilise le vent.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éole, dieu du vent', 1, 1),
+(@qid, 'Éole, dieu de la mer', 0, 2),
+(@qid, 'Sol, le soleil', 0, 3),
+(@qid, 'Un ingénieur nommé Éolien', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Ils veulent qu''on répartisse les terres équitablement", que signifie "équitablement" ?',
+ 'Équitablement = de façon juste et égale pour tous.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'rapidement', 0, 1),
+(@qid, 'de façon juste pour tous', 1, 2),
+(@qid, 'uniquement', 0, 3),
+(@qid, 'progressivement', 0, 4);
+
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Que signifie "consoler" quelqu''un ?',
+ 'Consoler = réconforter quelqu''un qui souffre ou est triste.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le mettre en colère', 0, 1),
+(@qid, 'Le faire travailler', 0, 2),
+(@qid, 'Le réconforter dans sa peine', 1, 3),
+(@qid, 'Le punir', 0, 4);
+
+
+-- ============================================================
+-- SECTION 6 : PROPOSITIONS SUBORDONNÉES (30 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la proposition subordonnée dans "Je pense qu''il viendra demain" ?',
+ 'Qu''il viendra demain est une proposition subordonnée conjonctive COD du verbe pense.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Je pense', 0, 1),
+(@qid, 'qu''il viendra demain', 1, 2),
+(@qid, 'demain', 0, 3),
+(@qid, 'il viendra', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Le livre que tu m''as prêté est passionnant", identifiez la proposition subordonnée relative.',
+ 'Que tu m''as prêté est une proposition subordonnée relative qui qualifie le nom livre.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le livre est passionnant', 0, 1),
+(@qid, 'que tu m''as prêté', 1, 2),
+(@qid, 'tu m''as prêté', 0, 3),
+(@qid, 'est passionnant', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel pronom relatif convient dans "Ariane a choisi la solution _____ lui paraissait meilleure" ?',
+ 'Qui remplace le sujet (la solution) dans la proposition relative.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'que', 0, 1),
+(@qid, 'dont', 0, 2),
+(@qid, 'qui', 1, 3),
+(@qid, 'où', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel pronom relatif convient dans "Les amis _____ nous sommes entourés nous rendent la vie agréable" ?',
+ 'Dont introduit un complément introduit par de : entourés de → dont.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'que', 0, 1),
+(@qid, 'dont', 1, 2),
+(@qid, 'qui', 0, 3),
+(@qid, 'lequel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Les ateliers des artisans sont des lieux _____ on apprend beaucoup", le bon pronom relatif est :',
+ 'Où remplace un complément de lieu (dans ces lieux).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'que', 0, 1),
+(@qid, 'qui', 0, 2),
+(@qid, 'où', 1, 3),
+(@qid, 'dont', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Laquelle de ces phrases contient une proposition subordonnée de cause ?',
+ 'La conjonction "parce que" introduit une subordonnée de cause.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il travaille pour réussir.', 0, 1),
+(@qid, 'Il est absent parce qu''il est malade.', 1, 2),
+(@qid, 'Il viendra quand il pourra.', 0, 3),
+(@qid, 'Il mange bien afin d''être fort.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle conjonction introduit une subordonnée de but ?',
+ 'Afin que / pour que introduisent des subordonnées de but (finalité).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'parce que', 0, 1),
+(@qid, 'bien que', 0, 2),
+(@qid, 'afin que', 1, 3),
+(@qid, 'lorsque', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans quelle phrase trouve-t-on une subordonnée de concession ?',
+ 'Bien que introduit une subordonnée de concession (opposition).', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il dort parce qu''il est fatigué.', 0, 1),
+(@qid, 'Il sort quand il fait beau.', 0, 2),
+(@qid, 'Bien qu''il soit malade, il travaille.', 1, 3),
+(@qid, 'Il mange pour avoir de l''énergie.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Cela mérite qu''on l''extermine attentivement", la proposition "qu''on l''extermine" est :',
+ 'Qu''on l''extermine est une proposition subordonnée conjonctive COD du verbe mériter.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une proposition principale', 0, 1),
+(@qid, 'Une proposition subordonnée relative', 0, 2),
+(@qid, 'Une proposition subordonnée conjonctive', 1, 3),
+(@qid, 'Une proposition indépendante', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel mode verbal suit généralement la conjonction "bien que" ?',
+ 'Bien que (conjonction de concession) est toujours suivi du subjonctif.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''indicatif', 0, 1),
+(@qid, 'Le conditionnel', 0, 2),
+(@qid, 'Le subjonctif', 1, 3),
+(@qid, 'L''infinitif', 0, 4);
+
+-- ============================================================
+-- SECTION 7 : DISCOURS DIRECT ET INDIRECT (25 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Transformez au discours indirect : Le professeur dit : "Tu travailles bien."',
+ 'Au discours indirect : Le professeur dit qu''il travaillait bien (concordance des temps).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le professeur dit que tu travailles bien.', 0, 1),
+(@qid, 'Le professeur dit qu''il travaillait bien.', 1, 2),
+(@qid, 'Le professeur dit : il travaille bien.', 0, 3),
+(@qid, 'Le professeur dit qu''il travaille bien.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Au discours indirect, les guillemets sont :',
+ 'Au discours indirect, on supprime les guillemets et le deux-points. Le discours est intégré à la phrase principale.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Obligatoires', 0, 1),
+(@qid, 'Supprimés', 1, 2),
+(@qid, 'Remplacés par des tirets', 0, 3),
+(@qid, 'Remplacés par des parenthèses', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle phrase est au discours direct ?',
+ 'Le discours direct rapporte les paroles exactes avec guillemets et deux-points.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il dit qu''il reviendrait bientôt.', 0, 1),
+(@qid, 'Il déclara être fatigué.', 0, 2),
+(@qid, 'Il dit : "Je reviendrai bientôt."', 1, 3),
+(@qid, 'Il annonça son retour prochain.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans le passage du discours direct au indirect, "je" devient généralement :',
+ 'Au discours indirect, le pronom "je" du locuteur se transforme en "il/elle" (3e personne).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nous', 0, 1),
+(@qid, 'tu', 0, 2),
+(@qid, 'il / elle', 1, 3),
+(@qid, 'vous', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Au discours indirect, après un verbe introducteur au passé, le présent devient :',
+ 'Concordance des temps : présent → imparfait quand le verbe introducteur est au passé.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Futur', 0, 1),
+(@qid, 'Passé composé', 0, 2),
+(@qid, 'Imparfait', 1, 3),
+(@qid, 'Subjonctif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Transformez au discours direct : Il affirma qu''il était le meilleur.',
+ 'Discours direct : Il affirma : "Je suis le meilleur." (pronom il → je, imparfait → présent)', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il affirma : "Il est le meilleur."', 0, 1),
+(@qid, 'Il affirma : "Je suis le meilleur."', 1, 2),
+(@qid, 'Il affirma que : "Je suis le meilleur."', 0, 3),
+(@qid, 'Il affirma : "Tu es le meilleur."', 0, 4);
+
+-- ============================================================
+-- SECTION 8 : TYPES ET FORMES DE PHRASES (25 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Identifiez le type de la phrase "Ferme la porte !" :',
+ 'Une phrase qui exprime un ordre ou une demande est une phrase impérative (injonctive).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Phrase déclarative', 0, 1),
+(@qid, 'Phrase interrogative', 0, 2),
+(@qid, 'Phrase impérative', 1, 3),
+(@qid, 'Phrase exclamative', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la forme négative de "Jean s''est levé tard aujourd''hui" ?',
+ 'La négation s''insère autour du verbe conjugué : ne...pas.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Jean s''est ne levé pas tard aujourd''hui.', 0, 1),
+(@qid, 'Jean ne s''est pas levé tard aujourd''hui.', 1, 2),
+(@qid, 'Jean ne s''est levé pas tard aujourd''hui.', 0, 3),
+(@qid, 'Ne Jean s''est pas levé tard aujourd''hui.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle phrase est à la forme passive ?',
+ 'La forme passive se reconnaît : sujet + être + participe passé + par + agent.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le chien mange l''os.', 0, 1),
+(@qid, 'L''os est mangé par le chien.', 1, 2),
+(@qid, 'Le chien a mangé l''os.', 0, 3),
+(@qid, 'Mange l''os !', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '"Quelle belle journée !" est une phrase :',
+ 'Cette phrase exprime un sentiment (admiration) → phrase exclamative.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Interrogative', 0, 1),
+(@qid, 'Déclarative', 0, 2),
+(@qid, 'Exclamative', 1, 3),
+(@qid, 'Impérative', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Transformez à la forme affirmative : "Maman ne m''a pas remis des bonbons."',
+ 'Forme affirmative : supprimer ne...pas → Maman m''a remis des bonbons.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Maman ne m''a remis des bonbons.', 0, 1),
+(@qid, 'Maman m''a remis des bonbons.', 1, 2),
+(@qid, 'Maman m''a pas remis des bonbons.', 0, 3),
+(@qid, 'Maman ne remis pas des bonbons.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la forme interrogative de "Tu vas à l''école" avec inversion du sujet ?',
+ 'L''inversion du sujet donne : Vas-tu à l''école ? (le pronom sujet est placé après le verbe avec un tiret).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Est-ce tu vas à l''école ?', 0, 1),
+(@qid, 'Tu vas à l''école ?', 0, 2),
+(@qid, 'Vas-tu à l''école ?', 1, 3),
+(@qid, 'À l''école tu vas ?', 0, 4);
+
+-- ============================================================
+-- SECTION 9 : FIGURES DE STYLE ET TEXTES LITTÉRAIRES (20 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle figure de style est utilisée dans "Ses yeux sont des étoiles" ?',
+ 'Ses yeux sont des étoiles est une métaphore : on assimile les yeux à des étoiles sans "comme".', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Comparaison', 0, 1),
+(@qid, 'Métaphore', 1, 2),
+(@qid, 'Hyperbole', 0, 3),
+(@qid, 'Personnification', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la différence entre une métaphore et une comparaison ?',
+ 'La comparaison utilise un outil de comparaison (comme, tel que…) ; la métaphore fait une assimilation directe sans outil.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il n''y a aucune différence', 0, 1),
+(@qid, 'La métaphore utilise "comme", pas la comparaison', 0, 2),
+(@qid, 'La comparaison utilise "comme" tandis que la métaphore assimile directement', 1, 3),
+(@qid, 'La métaphore parle d''animaux, la comparaison de personnes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '"Il court comme le vent." Cette phrase contient :',
+ 'Il court comme le vent utilise l''outil de comparaison "comme" → c''est une comparaison.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une métaphore', 0, 1),
+(@qid, 'Une comparaison', 1, 2),
+(@qid, 'Une hyperbole', 0, 3),
+(@qid, 'Une antithèse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "La mer rugissait de colère", quelle figure de style est utilisée ?',
+ 'Rugir et avoir de la colère sont des caractéristiques humaines attribuées à la mer → personnification.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Métaphore', 0, 1),
+(@qid, 'Comparaison', 0, 2),
+(@qid, 'Personnification', 1, 3),
+(@qid, 'Antithèse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Qu''est-ce qu''une hyperbole ?',
+ 'L''hyperbole est une figure qui consiste à exagérer pour frapper l''imagination.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une figure qui minimise les choses', 0, 1),
+(@qid, 'Une figure d''exagération', 1, 2),
+(@qid, 'Une figure qui compare deux choses avec "comme"', 0, 3),
+(@qid, 'Une figure qui attribue des caractéristiques humaines aux objets', 0, 4);
+
+-- ============================================================
+-- SECTION 10 : PRODUCTION ÉCRITE ET TYPES DE TEXTES (20 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le but d''un texte narratif ?',
+ 'Un texte narratif raconte une histoire, réelle ou fictive, avec des personnages et des événements.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Expliquer le fonctionnement d''un appareil', 0, 1),
+(@qid, 'Raconter une histoire avec des personnages et des événements', 1, 2),
+(@qid, 'Convaincre le lecteur d''une opinion', 0, 3),
+(@qid, 'Décrire un lieu ou une personne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Comment commence généralement une lettre amicale ?',
+ 'Une lettre amicale commence par une formule d''appel : "Cher ami", "Ma chère…" etc.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Madame, Monsieur,', 0, 1),
+(@qid, 'Cher ami / Chère amie,', 1, 2),
+(@qid, 'À qui de droit,', 0, 3),
+(@qid, 'Bonjour le destinataire,', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Qu''est-ce qu''un texte descriptif ?',
+ 'Un texte descriptif présente les caractéristiques d''une personne, d''un lieu ou d''un objet.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un texte qui explique comment faire quelque chose', 0, 1),
+(@qid, 'Un texte qui raconte une histoire', 0, 2),
+(@qid, 'Un texte qui présente les caractéristiques d''une personne ou d''un lieu', 1, 3),
+(@qid, 'Un texte qui argumente pour convaincre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans une lettre formelle, quelle formule de politesse est correcte pour terminer ?',
+ '"Veuillez agréer, Monsieur, l''expression de mes salutations distinguées" est la formule correcte pour une lettre formelle.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Bisous, à bientôt !', 0, 1),
+(@qid, 'Au revoir et merci.', 0, 2),
+(@qid, 'Veuillez agréer mes salutations distinguées.', 1, 3),
+(@qid, 'Merci beaucoup, votre ami.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel connecteur logique exprime une conséquence ?',
+ 'Donc, par conséquent, c''est pourquoi → expriment la conséquence.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cependant', 0, 1),
+(@qid, 'Donc', 1, 2),
+(@qid, 'Pourtant', 0, 3),
+(@qid, 'Néanmoins', 0, 4);
+
+-- ============================================================
+-- SECTION 11 : ACCORD DU PARTICIPE PASSÉ (20 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Les colis que son ami lui avait confiés", pourquoi "confiés" prend-il un "s" ?',
+ 'Le COD "les colis" (masculin pluriel) est placé avant le verbe confier → accord du participe passé.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parce que ami est masculin singulier', 0, 1),
+(@qid, 'Accord avec le COD masculin pluriel "les colis" placé avant', 1, 2),
+(@qid, 'Parce qu''on utilise l''auxiliaire être', 0, 3),
+(@qid, 'Il n''y a pas de règle à ce sujet', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Elle est arrivée hier", le participe "arrivée" prend un "e" parce que :',
+ 'Arriver se conjugue avec être → le participe passé s''accorde avec le sujet féminin singulier : elle.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le COD est féminin', 0, 1),
+(@qid, 'Le sujet "elle" est féminin singulier', 1, 2),
+(@qid, 'Il y a un adverbe après', 0, 3),
+(@qid, 'C''est toujours le cas avec les verbes en -er', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Elles se sont levées tôt", pourquoi "levées" est au féminin pluriel ?',
+ 'Se lever est pronominal → auxiliaire être. Accord avec le sujet elles (féminin pluriel).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Accord avec le COD', 0, 1),
+(@qid, 'Accord avec le sujet féminin pluriel "elles"', 1, 2),
+(@qid, 'Il n''y a pas d''accord', 0, 3),
+(@qid, 'Accord avec l''adverbe "tôt"', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Choisissez la bonne forme : "Les boissons qu''on a (servi/servies) étaient fraîches."',
+ 'Le COD "les boissons" (féminin pluriel) est avant le verbe servir → accord : servies.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'servi', 0, 1),
+(@qid, 'servies', 1, 2),
+(@qid, 'servie', 0, 3),
+(@qid, 'servis', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Avec l''auxiliaire "avoir", le participe passé s''accorde :',
+ 'Avec avoir, le participe passé s''accorde avec le COD seulement s''il est placé AVANT le verbe.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Toujours avec le sujet', 0, 1),
+(@qid, 'Jamais', 0, 2),
+(@qid, 'Avec le COD placé avant le verbe', 1, 3),
+(@qid, 'Toujours avec le COD', 0, 4);
+
+-- ============================================================
+-- SECTION 12 : COMPLÉMENTS CIRCONSTANCIELS (20 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le complément circonstanciel de lieu dans "Il joue au football dans la cour" ?',
+ 'Dans la cour indique l''endroit où se passe l''action → CCL.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'au football', 0, 1),
+(@qid, 'Il', 0, 2),
+(@qid, 'dans la cour', 1, 3),
+(@qid, 'joue', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Elle chante magnifiquement sur scène chaque soir", combien y a-t-il de compléments circonstanciels ?',
+ 'Magnifiquement (manière) + sur scène (lieu) + chaque soir (temps) = 3 CC.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un seul', 0, 1),
+(@qid, 'Deux', 0, 2),
+(@qid, 'Trois', 1, 3),
+(@qid, 'Quatre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '"À cause de la pluie, le match a été annulé." La cause est exprimée par :',
+ 'À cause de est une locution prépositionnelle qui exprime la cause.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le verbe "annuler"', 0, 1),
+(@qid, 'Le groupe "à cause de la pluie"', 1, 2),
+(@qid, 'Le groupe "le match"', 0, 3),
+(@qid, 'L''adjectif verbal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel complément circonstanciel peut-on déplacer librement dans la phrase ?',
+ 'Les CC peuvent généralement être déplacés ou supprimés sans changer le sens essentiel de la phrase.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le sujet', 0, 1),
+(@qid, 'Le COD', 0, 2),
+(@qid, 'Le complément circonstanciel', 1, 3),
+(@qid, 'L''attribut du sujet', 0, 4);
+
+-- ============================================================
+-- SECTION 13 : VERBES PRONOMINAUX (15 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel auxiliaire utilise-t-on pour conjuguer les verbes pronominaux au passé composé ?',
+ 'Les verbes pronominaux se conjuguent toujours avec l''auxiliaire ÊTRE au passé composé.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'avoir', 0, 1),
+(@qid, 'être', 1, 2),
+(@qid, 'les deux selon le verbe', 0, 3),
+(@qid, 'aucun auxiliaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le sens de "se faire plaisir" dans un texte sur la nutrition ?',
+ 'Se faire plaisir = manger quelque chose qu''on aime par pur plaisir, sans nécessité nutritionnelle.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Se punir en ne mangeant rien', 0, 1),
+(@qid, 'Manger ce qu''on aime pour le plaisir', 1, 2),
+(@qid, 'Faire du sport pour se sentir bien', 0, 3),
+(@qid, 'Offrir des cadeaux aux autres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Ils se sont parlé", pourquoi le participe passé ne s''accorde-t-il pas ?',
+ '"Se" est un COI (se parler à = parler à soi-même) → pas d''accord du participe passé quand le pronom est COI.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parce que le sujet est masculin', 0, 1),
+(@qid, 'Parce que "se" est COI et non COD', 1, 2),
+(@qid, 'Parce qu''on utilise l''auxiliaire avoir', 0, 3),
+(@qid, 'Parce que le participe de parler est invariable', 0, 4);
+
+-- ============================================================
+-- SECTION 14 : CONJONCTIONS ET CONNECTEURS (20 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelles sont les conjonctions de coordination en français ? (Moyen mnémotechnique : MAIS OU ET…)',
+ 'Mais, ou, et, donc, or, ni, car → 7 conjonctions de coordination (MAÏS OU EST DONC OR NI CAR).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'mais, ou, et, donc, or, ni, car', 1, 1),
+(@qid, 'quand, si, parce que, bien que', 0, 2),
+(@qid, 'que, qui, dont, où, lequel', 0, 3),
+(@qid, 'car, parce que, puisque, comme', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel connecteur logique exprime l''opposition ?',
+ 'Cependant, pourtant, mais, néanmoins → expriment l''opposition entre deux idées.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'donc', 0, 1),
+(@qid, 'cependant', 1, 2),
+(@qid, 'car', 0, 3),
+(@qid, 'alors', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel connecteur logique exprime l''addition ?',
+ 'De plus, en outre, aussi, et → permettent d''ajouter une idée à une autre.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'pourtant', 0, 1),
+(@qid, 'de plus', 1, 2),
+(@qid, 'donc', 0, 3),
+(@qid, 'cependant', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "C''est pourquoi nous utilisons les éoliennes", "c''est pourquoi" exprime :',
+ 'C''est pourquoi est un connecteur de conséquence : il annonce le résultat de ce qui précède.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une cause', 0, 1),
+(@qid, 'Une conséquence', 1, 2),
+(@qid, 'Une opposition', 0, 3),
+(@qid, 'Une addition', 0, 4);
+
+-- ============================================================
+-- SECTION 15 : COMPLÉMENT SUPPLÉMENTAIRE - GRAMMAIRE AVANCÉE (30 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature grammaticale de "en réfléchissant" dans "En réfléchissant, j''ai changé d''avis" ?',
+ 'En réfléchissant est un gérondif (en + participe présent) qui exprime la simultanéité ou la manière.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un infinitif', 0, 1),
+(@qid, 'Un participe passé', 0, 2),
+(@qid, 'Un gérondif', 1, 3),
+(@qid, 'Un adjectif verbal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Il allait d''une maison à l''autre en cherchant un emploi", le gérondif exprime :',
+ 'En cherchant exprime la manière dont il allait d''une maison à l''autre (simultanéité + manière).', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La cause', 0, 1),
+(@qid, 'Le but', 0, 2),
+(@qid, 'La manière', 1, 3),
+(@qid, 'Le temps', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la différence entre "leur" adjectif et "leur" pronom dans une phrase ?',
+ '"Leur" adjectif possessif détermine un nom (leur livre), "leur" pronom remplace un COI (je leur parle = à eux).', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il n''y a aucune différence', 0, 1),
+(@qid, 'Adjectif : détermine un nom. Pronom : remplace un COI.', 1, 2),
+(@qid, 'Pronom : détermine un nom. Adjectif : remplace un COI.', 0, 3),
+(@qid, 'L''adjectif possessif prend un "s" au pluriel, le pronom aussi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Construis une phrase avec leur (adjectif possessif)", laquelle est correcte ?',
+ '"Leur maison est grande" : leur détermine le nom maison → adjectif possessif.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Je leur ai dit bonjour.', 0, 1),
+(@qid, 'Leur maison est grande.', 1, 2),
+(@qid, 'Il leur parlera demain.', 0, 3),
+(@qid, 'On leur a remis les prix.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Lequel de ces verbes appartient au 2e groupe ?',
+ 'Les verbes du 2e groupe ont l''infinitif en -ir et le participe présent en -issant : grandir → grandissant.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'venir', 0, 1),
+(@qid, 'tenir', 0, 2),
+(@qid, 'grandir', 1, 3),
+(@qid, 'sortir', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la règle générale pour former l''adverbe à partir d''un adjectif féminin ?',
+ 'On ajoute le suffixe -ment au féminin de l''adjectif : lente → lentement.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'On ajoute -ment au masculin', 0, 1),
+(@qid, 'On ajoute -ment au féminin', 1, 2),
+(@qid, 'On ajoute -ement à l''infinitif', 0, 3),
+(@qid, 'On ajoute -ique au nom', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est l''adverbe formé à partir de "léger" ?',
+ 'Léger → légère (féminin) + ment → légèrement.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'légèrement', 1, 1),
+(@qid, 'lègrement', 0, 2),
+(@qid, 'légèment', 0, 3),
+(@qid, 'légerment', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Laquelle de ces phrases contient une apposition ?',
+ 'Port-au-Prince, capitale d''Haïti, est une apposition : groupe nominal qui précise le nom propre.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il mange une pomme rouge.', 0, 1),
+(@qid, 'Port-au-Prince, capitale d''Haïti, est une belle ville.', 1, 2),
+(@qid, 'Elle court vite dans la rue.', 0, 3),
+(@qid, 'Les enfants jouent au ballon.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "On lui promet qu''il réussira facilement", la proposition subordonnée est au :',
+ 'Il réussira = futur de l''indicatif → la subordonnée dépend du verbe promettre au présent.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Présent de l''indicatif', 0, 1),
+(@qid, 'Futur simple de l''indicatif', 1, 2),
+(@qid, 'Conditionnel présent', 0, 3),
+(@qid, 'Subjonctif présent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature du groupe nominal "un roman" dans "J''achèterais un roman" ?',
+ 'Un roman est le COD du verbe acheter (je l''achète : pas de préposition → COD).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sujet', 0, 1),
+(@qid, 'COI', 0, 2),
+(@qid, 'COD', 1, 3),
+(@qid, 'Attribut du sujet', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Les problèmes de pollution le préoccupent", transformé à la voix passive, on obtient :',
+ 'À la voix passive : Il est préoccupé par les problèmes de pollution.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les problèmes sont préoccupés par lui.', 0, 1),
+(@qid, 'Il est préoccupé par les problèmes de pollution.', 1, 2),
+(@qid, 'La pollution préoccupe les problèmes.', 0, 3),
+(@qid, 'Les problèmes l''ont préoccupé.', 0, 4);
+
+-- ============================================================
+-- SECTION 16 : CONJUGAISON AVANCÉE (20 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Conjuguez "savoir" au présent de l''indicatif, 1ère personne du singulier.',
+ 'Savoir est irrégulier : je sais, tu sais, il sait, nous savons.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'je savis', 0, 1),
+(@qid, 'je savais', 0, 2),
+(@qid, 'je sais', 1, 3),
+(@qid, 'je sue', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le passé composé de "venir" à la 3e personne du pluriel ?',
+ 'Venir se conjugue avec être → ils sont venus (accord masculin pluriel).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ils ont venu', 0, 1),
+(@qid, 'ils sont venus', 1, 2),
+(@qid, 'ils avaient venu', 0, 3),
+(@qid, 'ils venaient', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le futur antérieur de "finir" à la 2e personne du singulier ?',
+ 'Futur antérieur = auxiliaire au futur + participe passé → tu auras fini.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tu finiras', 0, 1),
+(@qid, 'tu avais fini', 0, 2),
+(@qid, 'tu auras fini', 1, 3),
+(@qid, 'tu aurais fini', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Lequel de ces verbes est irrégulier au présent de l''indicatif ?',
+ 'Boire est irrégulier : je bois, tu bois, il boit, nous buvons, vous buvez, ils boivent.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'manger', 0, 1),
+(@qid, 'chanter', 0, 2),
+(@qid, 'boire', 1, 3),
+(@qid, 'parler', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Conjuguez "tenir" au passé composé, 1ère personne du singulier.',
+ 'Tenir → participe passé : tenu. Auxiliaire avoir → j''ai tenu.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'j''ai tendu', 0, 1),
+(@qid, 'j''ai tenu', 1, 2),
+(@qid, 'je suis tenu', 0, 3),
+(@qid, 'j''ai tenis', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est l''imparfait du verbe "avoir" à la 3e personne du pluriel ?',
+ 'Avoir à l''imparfait : j''avais, tu avais, il avait, nous avions, vous aviez, ils avaient.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ils ont', 0, 1),
+(@qid, 'ils auront', 0, 2),
+(@qid, 'ils avaient', 1, 3),
+(@qid, 'ils avaient eu', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Conjuguez "mettre" au passé simple, 3e personne du singulier.',
+ 'Mettre au passé simple : je mis, tu mis, il mit.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'il metta', 0, 1),
+(@qid, 'il mettit', 0, 2),
+(@qid, 'il mit', 1, 3),
+(@qid, 'il missa', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le conditionnel passé de "vouloir" à la 1ère personne du singulier ?',
+ 'Conditionnel passé = auxiliaire au conditionnel + participe passé → j''aurais voulu.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'je voudrais', 0, 1),
+(@qid, 'j''avais voulu', 0, 2),
+(@qid, 'j''aurais voulu', 1, 3),
+(@qid, 'j''aurai voulu', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Conjuguez "répartir" au subjonctif présent, 3e personne du pluriel.',
+ 'Répartir (3e groupe) au subjonctif : qu''ils répartissent.', 'Programme 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'qu''ils répartent', 0, 1),
+(@qid, 'qu''ils répartissent', 1, 2),
+(@qid, 'qu''ils répartiront', 0, 3),
+(@qid, 'qu''ils répartissaient', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Tu m''avais dit que Julie nous inviterait pour son anniversaire", quel est le temps de "inviterait" ?',
+ 'Inviterait = conditionnel présent (concordance des temps après un passé).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Futur simple', 0, 1),
+(@qid, 'Imparfait', 0, 2),
+(@qid, 'Conditionnel présent', 1, 3),
+(@qid, 'Subjonctif présent', 0, 4);
+
+-- ============================================================
+-- SECTION 17 : ORTHOGRAPHE ET HOMOPHONES (20 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Comment différencie-t-on "ce" et "se" ?',
+ '"Se" est un pronom réfléchi (il se lave). "Ce" est un démonstratif (ce livre) ou pronom (ce que je veux).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ils sont toujours interchangeables', 0, 1),
+(@qid, '"Se" = pronom réfléchi, "ce" = démonstratif', 1, 2),
+(@qid, '"Ce" = pronom réfléchi, "se" = démonstratif', 0, 3),
+(@qid, 'Il n''y a aucune différence', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Les nuits où je fais des rêves", le verbe "fais" s''écrit avec un "s" parce que :',
+ 'Faire au présent de l''indicatif : je fais (1ère personne du singulier = -s).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C''est un verbe du 2e groupe', 0, 1),
+(@qid, 'La 1ère personne du singulier de faire prend -s au présent', 1, 2),
+(@qid, 'C''est une faute d''orthographe', 0, 3),
+(@qid, 'On ajoute toujours -s aux verbes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Choisissez la bonne orthographe : "Tout le monde _____ parti."',
+ 'Tout le monde = sujet singulier → est parti (auxiliaire être, 3e personne singulier).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sont partis', 0, 1),
+(@qid, 'est parti', 1, 2),
+(@qid, 'est parties', 0, 3),
+(@qid, 'sont partie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la bonne orthographe : "par contre" ou "par-contre" ?',
+ 'Par contre s''écrit en deux mots séparés, sans tiret.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'par-contre', 0, 1),
+(@qid, 'par contre', 1, 2),
+(@qid, 'parcontre', 0, 3),
+(@qid, 'Par-Contre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Comment écrit-on "tout" dans "Elles sont toutes arrivées" ?',
+ 'Toutes = adjectif indéfini accordé avec elles (féminin pluriel) → toutes.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tout', 0, 1),
+(@qid, 'tous', 0, 2),
+(@qid, 'toutes', 1, 3),
+(@qid, 'toute', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Laquelle de ces phrases utilise correctement "son" et "sont" ?',
+ '"Son ami est là et ils sont heureux" → son = possessif, sont = verbe être.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Son ami est là et ils son heureux.', 0, 1),
+(@qid, 'Son ami est là et ils sont heureux.', 1, 2),
+(@qid, 'Sont ami est là et ils son heureux.', 0, 3),
+(@qid, 'Sont amis est là et ils sont heureux.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "on peut l''utiliser efficacement", l''adverbe "efficacement" est formé à partir de :',
+ 'Efficace (adjectif) → efficacément... mais la règle donne efficacement (féminin efficace + ment).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Du nom "efficacité"', 0, 1),
+(@qid, 'De l''adjectif "efficace"', 1, 2),
+(@qid, 'Du verbe "efficacer"', 0, 3),
+(@qid, 'Du préfixe "ef-"', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le pluriel de "bal" ?',
+ 'Bal fait partie des exceptions : bal → bals (et non "baux").', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'baux', 0, 1),
+(@qid, 'bals', 1, 2),
+(@qid, 'balx', 0, 3),
+(@qid, 'bale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Comment écrit-on le participe présent de "être" ?',
+ 'Le participe présent de être = étant.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'étant', 1, 1),
+(@qid, 'ayant', 0, 2),
+(@qid, 'étante', 0, 3),
+(@qid, 'sera', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Laquelle de ces phrases utilise "ni" correctement ?',
+ 'Ni...ni est une double négation : ni le charbon ni le pétrole ne sont des énergies renouvelables.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il ne veut pas ni de pain.', 0, 1),
+(@qid, 'Ni le charbon ni le pétrole ne sont renouvelables.', 1, 2),
+(@qid, 'Il ne mange ni et boit pas.', 0, 3),
+(@qid, 'Ni il vient mais il part.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "je panse à toi", quelle erreur d''orthographe est commise ?',
+ '"Panse" est le présent du verbe panser (soigner). La forme correcte ici est "pense" (du verbe penser).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Aucune erreur', 0, 1),
+(@qid, '"Panse" devrait s''écrire "pense"', 1, 2),
+(@qid, '"Je" devrait être "j''"', 0, 3),
+(@qid, '"Toi" devrait s''écrire "moi"', 0, 4);
+
+-- ============================================================
+-- SECTION 18 : VOCABULAIRE ÉTENDU (20 questions)
+-- ============================================================
+
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel mot est l''antonyme de "épuisable" ?',
+ 'Épuisable (qui peut être épuisé) → inépuisable (qui ne peut pas être épuisé) → préfixe privatif in-.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'réépuisable', 0, 1),
+(@qid, 'inépuisable', 1, 2),
+(@qid, 'désépuisable', 0, 3),
+(@qid, 'surépuisable', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Le mot "central" dans "plusieurs sortes de centrales" désigne :',
+ 'Une centrale (électrique) est une installation qui produit de l''énergie électrique.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une école au centre de la ville', 0, 1),
+(@qid, 'Une installation qui produit de l''énergie', 1, 2),
+(@qid, 'Un magasin au centre commercial', 0, 3),
+(@qid, 'Un bureau administratif', 0, 4);
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le sens de "prolongé" dans "des efforts prolongés" ?',
+ 'Prolongé = qui dure longtemps, qui se maintient dans le temps.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Bref et intense', 0, 1),
+(@qid, 'Qui dure longtemps', 1, 2),
+(@qid, 'Douloureux', 0, 3),
+(@qid, 'Facile à faire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel verbe de la liste peut remplacer "mettre ses bottes" ?',
+ 'Enfiler = passer un vêtement ou une chaussure autour du pied ou du corps.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'classer', 0, 1),
+(@qid, 'poser', 0, 2),
+(@qid, 'enfiler', 1, 3),
+(@qid, 'introduire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le sens de "concentrer" dans "notre cerveau a besoin d''énergie pour nous permettre de nous concentrer" ?',
+ 'Se concentrer = fixer son attention sur quelque chose, ne pas être distrait.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dormir profondément', 0, 1),
+(@qid, 'Fixer son attention, ne pas être distrait', 1, 2),
+(@qid, 'Courir très vite', 0, 3),
+(@qid, 'Parler à voix haute', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Que signifie l''expression "remonter le moral" dans le sujet de production écrite ?',
+ 'Remonter le moral = redonner courage et confiance à quelqu''un qui est découragé ou triste.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parler de choses tristes', 0, 1),
+(@qid, 'Redonner courage et confiance à quelqu''un', 1, 2),
+(@qid, 'Monter les escaliers rapidement', 0, 3),
+(@qid, 'Critiquer quelqu''un', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel préfixe permet de former le contraire de "possible" ?',
+ 'Im- + possible = impossible. Le préfixe im- (variante de in-) exprime la négation devant p, b, m.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'dé-', 0, 1),
+(@qid, 'sur-', 0, 2),
+(@qid, 'im-', 1, 3),
+(@qid, 're-', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans le domaine de l''alimentation, que signifie "féculents" ?',
+ 'Les féculents sont les aliments riches en amidon : riz, pain, pâtes, pommes de terre, etc.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des légumes verts comme les épinards', 0, 1),
+(@qid, 'Des aliments riches en amidon comme le riz et le pain', 1, 2),
+(@qid, 'Des produits sucrés comme le chocolat', 0, 3),
+(@qid, 'Des graisses animales', 0, 4);
+
+-- ============================================================
+-- SECTION 19 : QUESTIONS SUPPLÉMENTAIRES DIVERSES (30 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Je me lève toujours de bonne heure", mettez cette phrase à la forme négative.',
+ 'Forme négative : Je ne me lève jamais de bonne heure (ou : ...pas de bonne heure).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Je me lève toujours pas de bonne heure.', 0, 1),
+(@qid, 'Je ne me lève jamais de bonne heure.', 1, 2),
+(@qid, 'Jamais je lève de bonne heure.', 0, 3),
+(@qid, 'Je me ne lève pas de bonne heure.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature du mot "savant" dans "Un savant a examiné Julien" ?',
+ 'Savant est un nom (= un scientifique, un homme de science) et non un adjectif dans ce contexte.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjectif qualificatif', 0, 1),
+(@qid, 'Nom commun', 1, 2),
+(@qid, 'Adverbe', 0, 3),
+(@qid, 'Participe présent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle phrase contient une comparaison avec "comme" ?',
+ 'Un peu comme une voiture contient l''outil de comparaison "comme" → c''est une comparaison.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Son corps est une machine.', 0, 1),
+(@qid, 'Un peu comme une voiture, notre corps consomme de l''énergie.', 1, 2),
+(@qid, 'Les éoliennes sont des moulins à vent modernes.', 0, 3),
+(@qid, 'Le vent rugit de colère.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature de "gratuitement" dans "Le vent est gratuit et on peut l''utiliser gratuitement" ?',
+ 'Gratuitement est un adverbe de manière (formé sur gratuit + -ement).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjectif', 0, 1),
+(@qid, 'Nom', 0, 2),
+(@qid, 'Adverbe', 1, 3),
+(@qid, 'Verbe', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le groupe auquel appartient le verbe "choisir" ?',
+ 'Choisir = infinitif en -ir + participe présent choisissant → 2e groupe.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1er groupe (verbes en -er)', 0, 1),
+(@qid, '2e groupe (verbes en -ir type finir)', 1, 2),
+(@qid, '3e groupe (verbes irréguliers)', 0, 3),
+(@qid, 'Aucun groupe', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la forme du verbe "voir" au présent de l''indicatif, 3e personne du pluriel ?',
+ 'Voir au présent : je vois, tu vois, il voit, nous voyons, vous voyez, ils voient.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ils voyent', 0, 1),
+(@qid, 'ils voient', 1, 2),
+(@qid, 'ils voient', 0, 3),
+(@qid, 'ils voys', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Si tu vas au cinéma ce soir, tu verras un beau film", "verras" est au :',
+ 'Verras = futur simple de voir (Si + présent → futur dans une phrase de condition réelle).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Conditionnel présent', 0, 1),
+(@qid, 'Futur simple', 1, 2),
+(@qid, 'Subjonctif présent', 0, 3),
+(@qid, 'Imparfait', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le sujet de "Aujourd''hui, on utilise la version modernisée des moulins à vent" ?',
+ 'On est le pronom indéfini sujet de utilise.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Aujourd''hui', 0, 1),
+(@qid, 'on', 1, 2),
+(@qid, 'la version modernisée', 0, 3),
+(@qid, 'les moulins à vent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Identifiez le COD dans "Les enfants reçoivent beaucoup de récompenses pour leur réussite" :',
+ 'Beaucoup de récompenses = COD du verbe recevoir (on les reçoit → pas de préposition → COD).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les enfants', 0, 1),
+(@qid, 'beaucoup de récompenses', 1, 2),
+(@qid, 'pour leur réussite', 0, 3),
+(@qid, 'reçoivent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature du mot "captivantes" dans "Les histoires sont captivantes" ?',
+ 'Captivantes est un adjectif qualificatif attribut du sujet les histoires.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adverbe', 0, 1),
+(@qid, 'Nom commun', 0, 2),
+(@qid, 'Adjectif qualificatif attribut du sujet', 1, 3),
+(@qid, 'Participe présent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Les éoliennes prennent beaucoup de place", quel est le verbe ?',
+ 'Prennent est le verbe (présent de l''indicatif, 3e personne du pluriel de prendre).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les éoliennes', 0, 1),
+(@qid, 'prennent', 1, 2),
+(@qid, 'beaucoup', 0, 3),
+(@qid, 'de place', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la bonne orthographe de l''adverbe formé à partir de "intelligent" ?',
+ 'Intelligent → intelligemment (les adjectifs en -ent forment l''adverbe en -emment).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'intelligentment', 0, 1),
+(@qid, 'intelligemment', 1, 2),
+(@qid, 'intelligentement', 0, 3),
+(@qid, 'intelligément', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Jacques a remis les colis que son ami lui avait confiés", le pronom "lui" est :',
+ 'Lui est un pronom personnel COI (remis à lui → à son ami).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pronom COD', 0, 1),
+(@qid, 'Pronom COI', 1, 2),
+(@qid, 'Pronom sujet', 0, 3),
+(@qid, 'Adjectif possessif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le sens du mot "artisan" dans "Les ateliers des artisans" ?',
+ 'Un artisan est une personne qui exerce un métier manuel avec un savoir-faire particulier.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un médecin', 0, 1),
+(@qid, 'Un enseignant', 0, 2),
+(@qid, 'Un professionnel du métier manuel', 1, 3),
+(@qid, 'Un commerçant en gros', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Un débat suivra le film", transformez à la forme négative.',
+ 'Forme négative : Un débat ne suivra pas le film.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un débat suivra ne pas le film.', 0, 1),
+(@qid, 'Un débat ne suivra pas le film.', 1, 2),
+(@qid, 'Un ne débat suivra pas le film.', 0, 3),
+(@qid, 'Pas un débat suivra le film.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le sens de "réconforter" dans "réconforter un ami triste" ?',
+ 'Réconforter = consoler, rendre le moral à quelqu''un qui est triste ou découragé.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Faire rire quelqu''un', 0, 1),
+(@qid, 'Consoler et redonner courage à quelqu''un', 1, 2),
+(@qid, 'Donner de l''argent à quelqu''un', 0, 3),
+(@qid, 'Punir quelqu''un', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le pluriel de "festival" ?',
+ 'Festival → festivals (exception : ne suit pas la règle -al → -aux).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'festivaux', 0, 1),
+(@qid, 'festivals', 1, 2),
+(@qid, 'festivalx', 0, 3),
+(@qid, 'festivales', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle phrase contient une proposition principale et une subordonnée temporelle ?',
+ 'Quand il fait beau introduit une subordonnée circonstancielle de temps.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il mange parce qu''il a faim.', 0, 1),
+(@qid, 'Il sort quand il fait beau.', 1, 2),
+(@qid, 'Il travaille afin de réussir.', 0, 3),
+(@qid, 'Bien qu''il soit fatigué, il continue.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Les problèmes de pollution le préoccupent", que représente le pronom "le" ?',
+ '"Le" est un pronom personnel COD qui reprend un nom masculin singulier (la personne préoccupée).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un pronom sujet', 0, 1),
+(@qid, 'Un pronom COD masculin singulier', 1, 2),
+(@qid, 'Un article défini', 0, 3),
+(@qid, 'Un pronom COI', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le contraire de "éternelle" formé par un préfixe ?',
+ 'Le préfixe privatif non- ou éphémère → mais le contraire construit est "temporaire" ou "éphémère".', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'pré-éternelle', 0, 1),
+(@qid, 'temporaire', 1, 2),
+(@qid, 'sur-éternelle', 0, 3),
+(@qid, 'anti-éternelle', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature grammaticale de "de l''énergie" dans "Il produit de l''énergie" ?',
+ 'De l''énergie = article partitif + nom → complément d''objet direct de produire.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sujet', 0, 1),
+(@qid, 'COD avec article partitif', 1, 2),
+(@qid, 'Complément circonstanciel', 0, 3),
+(@qid, 'Attribut du sujet', 0, 4);
+
+-- ============================================================
+-- SECTION 20 : RÉVISION GÉNÉRALE ET CONSOLIDATION (20 questions)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Lequel de ces mots est un nom propre ?',
+ 'Haïti est un nom propre (désigne un pays précis) → prend une majuscule.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'pays', 0, 1),
+(@qid, 'Haïti', 1, 2),
+(@qid, 'montagne', 0, 3),
+(@qid, 'ville', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la règle d''accord de l''adjectif qualificatif ?',
+ 'L''adjectif qualificatif s''accorde en genre et en nombre avec le nom auquel il se rapporte.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il est toujours invariable', 0, 1),
+(@qid, 'Il s''accorde avec le verbe', 0, 2),
+(@qid, 'Il s''accorde en genre et en nombre avec le nom', 1, 3),
+(@qid, 'Il s''accorde uniquement en nombre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Qu''est-ce qu''un mot dérivé ?',
+ 'Un mot dérivé est formé à partir d''un mot de base auquel on ajoute un préfixe ou un suffixe.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un mot formé de deux mots collés', 0, 1),
+(@qid, 'Un mot formé à partir d''un radical avec un préfixe ou un suffixe', 1, 2),
+(@qid, 'Un mot emprunté à une autre langue', 0, 3),
+(@qid, 'Un mot qui a le même sens qu''un autre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "C''est pourquoi nous utilisons les éoliennes pour produire de l''électricité", l''infinitif "produire" dépend de :',
+ 'Pour produire = infinitif de but introduit par la préposition pour. Dépend du verbe utiliser.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C''est pourquoi', 0, 1),
+(@qid, 'nous utilisons', 1, 2),
+(@qid, 'les éoliennes', 0, 3),
+(@qid, 'de l''électricité', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature de "tôt" dans "Il se lève tôt" ?',
+ 'Tôt est un adverbe de temps qui précise le moment de l''action (il se lève).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjectif qualificatif', 0, 1),
+(@qid, 'Adverbe de temps', 1, 2),
+(@qid, 'Nom commun', 0, 3),
+(@qid, 'Préposition', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le mode de "Écrire une lettre à ton ami" (phrase impérative) ?',
+ 'Un ordre ou une consigne à l''infinitif utilise l''infinitif à valeur impérative.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Indicatif', 0, 1),
+(@qid, 'Subjonctif', 0, 2),
+(@qid, 'Infinitif', 1, 3),
+(@qid, 'Conditionnel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le rôle du verbe "allumer" dans "on allume la lumière" ?',
+ 'Allumer est le verbe principal de la proposition, conjugué au présent de l''indicatif.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjectif verbal', 0, 1),
+(@qid, 'Verbe principal conjugué', 1, 2),
+(@qid, 'Infinitif', 0, 3),
+(@qid, 'Participe présent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle phrase est construite avec le schéma : Sujet + Verbe + COD + CC de lieu ?',
+ 'Les élèves lisent leurs livres en classe = S + V + COD + CC lieu.', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il court rapidement.', 0, 1),
+(@qid, 'Les élèves lisent leurs livres en classe.', 1, 2),
+(@qid, 'Elle est belle.', 0, 3),
+(@qid, 'Viens ici !', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le temps de "avait brûlé" dans la phrase "On avait brûlé du charbon" ?',
+ 'Avait brûlé = plus-que-parfait de l''indicatif (auxiliaire à l''imparfait + participe passé).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Passé composé', 0, 1),
+(@qid, 'Imparfait', 0, 2),
+(@qid, 'Plus-que-parfait', 1, 3),
+(@qid, 'Passé antérieur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans "Ces sources d''énergie ne sont pas éternelles", quel est le sujet ?',
+ 'Ces sources d''énergie est le groupe nominal sujet du verbe sont.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ces sources', 0, 1),
+(@qid, 'Ces sources d''énergie', 1, 2),
+(@qid, 'd''énergie', 0, 3),
+(@qid, 'éternelles', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel connecteur logique exprime la cause dans une argumentation ?',
+ 'Car, parce que, puisque → expriment la cause.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'donc', 0, 1),
+(@qid, 'pourtant', 0, 2),
+(@qid, 'car', 1, 3),
+(@qid, 'de plus', 0, 4);
+
+
+
+-- ============================================
+-- QCM FRANÇAIS - TRANSFORMÉS + 20 SUPPLÉMENTAIRES
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Marie a choisi la solution _____ lui paraissait meilleure.',
+    'Qui remplace le sujet (la solution) dans la proposition relative.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'qui', 1, 1), (@qid, 'que', 0, 2), (@qid, 'dont', 0, 3), (@qid, 'où', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Les vrais amis _____ nous sommes entourés nous rendent la vie agréable.',
+    'Dont introduit un complément introduit par de : entourés de → dont.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'que', 0, 1), (@qid, 'qui', 0, 2), (@qid, 'où', 0, 3), (@qid, 'dont', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Les ateliers des peintres sont des lieux _____ l''on apprend beaucoup de choses.',
+    'Où remplace un complément de lieu (dans ces lieux).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'que', 0, 1), (@qid, 'qui', 0, 2), (@qid, 'où', 1, 3), (@qid, 'dont', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'C''est bien la fille _____ je pense.',
+    'Penser à quelqu''un → complément introduit par à → à laquelle.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'que', 0, 1), (@qid, 'à qui', 0, 2), (@qid, 'dont', 0, 3), (@qid, 'à laquelle', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'La manière _____ elle est vêtue est formidable.',
+    'Être vêtu de → dont exprime ici la manière (dont elle est vêtue).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'que', 0, 1), (@qid, 'par laquelle', 0, 2), (@qid, 'dont', 1, 3), (@qid, 'avec laquelle', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'J''ai parlé aux gamins et je _____ ai dit de se taire.',
+    'Aux gamins = à eux → leur (pronom COI pluriel).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lui', 0, 1), (@qid, 'le', 0, 2), (@qid, 'leur', 1, 3), (@qid, 'en', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Il ira au supermarché, il _____ achètera des sucreries.',
+    'Au supermarché = lieu → y (pronom adverbial de lieu).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'y', 1, 1), (@qid, 'leur', 0, 2), (@qid, 'en', 0, 3), (@qid, 'lui', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Je mange de la viande, tu _____ veux ?',
+    'De la viande → en (pronom adverbial remplaçant un partitif).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lui', 0, 1), (@qid, 'y', 0, 2), (@qid, 'en', 1, 3), (@qid, 'la', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Marc voit Yves, il _____ salue.',
+    'Yves = COD masculin singulier → le.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'en', 0, 1), (@qid, 'le', 1, 2), (@qid, 'y', 0, 3), (@qid, 'lui', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Du bon vin, il y _____ encore.',
+    'Du vin = article partitif → en. Il en reste encore.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'en est', 0, 1), (@qid, 'en a', 1, 2), (@qid, 'y est', 0, 3), (@qid, 'y a', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Le temps passe très vite, pense-_____ !',
+    'Penser à → y (pensez-y, pronom complément de la locution verbale).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'le', 0, 1), (@qid, 'lui', 0, 2), (@qid, 'y', 0, 3), (@qid, 'en', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'As-tu écrit à Boyer ? – Oui, je _____ ai écrit.',
+    'À Boyer = COI → lui (pronom personnel COI 3e personne singulier).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'le', 0, 1), (@qid, 'en', 0, 2), (@qid, 'y', 0, 3), (@qid, 'lui', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Des problèmes, il y en aura toujours : il faut _____ faire face.',
+    'Faire face à → y (pronom complément de la locution verbale).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'en', 0, 1), (@qid, 'lui', 0, 2), (@qid, 'y', 1, 3), (@qid, 'leur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '« Le censeur de l''établissement récompensera le lauréat. » À la voix passive, le lauréat sera _____ par le censeur.',
+    'Le lauréat = masculin singulier → récompensé.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'récompensé', 1, 1), (@qid, 'récompensées', 0, 2), (@qid, 'récompensés', 0, 3), (@qid, 'récompensée', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '« L''équipe de Torbeck a été battue par l''équipe de Fonfrède. » Le journal indique que l''équipe de Fonfrède _____ l''équipe de Torbeck.',
+    'A battu = voix active correspondant au passif "a été battue".', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'battait', 0, 1), (@qid, 'a été battue', 0, 2), (@qid, 'a battu', 1, 3), (@qid, 'est battue', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '« Le censeur récompensera le lauréat. » Le complément d''objet direct est :',
+    'Le lauréat = COD (récompensera qui ? → le lauréat).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'le censeur', 0, 1), (@qid, 'récompensera', 0, 2), (@qid, 'le lauréat', 1, 3), (@qid, 'par le censeur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Remplace le groupe souligné par un pronom : « Je me débarrasserai de ces colis. » → Je me _____ débarrasserai.',
+    'De ces colis → en (pronom remplaçant un complément introduit par de).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lui', 0, 1), (@qid, 'y', 0, 2), (@qid, 'en', 1, 3), (@qid, 'leur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Remplace le groupe entre parenthèses par un pronom : « Jean Roger monte (au sommet de la montagne). » → Jean Roger _____ monte.',
+    'Au sommet = lieu → y.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'leur', 0, 1), (@qid, 'y', 1, 2), (@qid, 'en', 0, 3), (@qid, 'lui', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'C''est une politesse _____ on ne peut se passer.',
+    'Se passer de → dont (pronom relatif remplaçant un complément en de).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'que', 0, 1), (@qid, 'à laquelle', 0, 2), (@qid, 'dont', 1, 3), (@qid, 'où', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '_____ a beaucoup vu peut avoir beaucoup retenu.',
+    'Quiconque = pronom indéfini signifiant "toute personne qui".', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Quiconque', 1, 1), (@qid, 'Cela', 0, 2), (@qid, 'Dont', 0, 3), (@qid, 'Qui', 0, 4);
+
+-- ============================================
+-- 20 QCM SUPPLÉMENTAIRES - FRANÇAIS
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans la phrase « Elle se souvient de son enfance », le verbe « se souvenir » est un verbe :',
+    'Se souvenir est un verbe pronominal (essentiellement pronominal, n''existe qu''à la forme pronominale).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Transitif direct', 0, 1), (@qid, 'Intransitif', 0, 2), (@qid, 'Pronominal', 1, 3), (@qid, 'Impersonnel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le mode du verbe dans « Il faut que tu termines ton travail avant ce soir » ?',
+    'Après "il faut que", le verbe est toujours au subjonctif.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Indicatif', 0, 1), (@qid, 'Conditionnel', 0, 2), (@qid, 'Subjonctif', 1, 3), (@qid, 'Impératif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Identifiez la figure de style dans : « Cette nouvelle l''a terrassé de douleur. »',
+    'Hyperbole : exagération pour exprimer l''intensité de la douleur.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Métaphore', 0, 1), (@qid, 'Comparaison', 0, 2), (@qid, 'Hyperbole', 1, 3), (@qid, 'Antithèse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans « Les mangues que j''ai achetées au marché sont délicieuses », l''accord du participe passé « achetées » se fait avec :',
+    'Le COD "que" (mis pour les mangues, féminin pluriel) est placé avant le verbe.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le sujet "je"', 0, 1), (@qid, 'Le COD "que" (les mangues)', 1, 2), (@qid, 'L''auxiliaire "avoir"', 0, 3), (@qid, 'Le complément "au marché"', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quel est le sens du préfixe « anti- » dans « antigel » ?',
+    'Anti- signifie "contre" (qui s''oppose au gel).', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Avant', 0, 1), (@qid, 'Contre', 1, 2), (@qid, 'Avec', 0, 3), (@qid, 'Sous', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '« Il est probable qu''il arrivera demain. » Le verbe « arrivera » est au :',
+    'Après "il est probable que", on utilise l''indicatif (pas le subjonctif).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Futur simple de l''indicatif', 1, 1), (@qid, 'Présent du subjonctif', 0, 2), (@qid, 'Conditionnel présent', 0, 3), (@qid, 'Futur antérieur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans « Tous les matins, elle prenait le même chemin », le verbe « prenait » est à :',
+    'Action répétée dans le passé → imparfait de l''indicatif (valeur itérative).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Passé simple', 0, 1), (@qid, 'Imparfait', 1, 2), (@qid, 'Passé composé', 0, 3), (@qid, 'Plus-que-parfait', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la nature de « que » dans « Je souhaite que tu réussisses » ?',
+    'Que introduit une proposition subordonnée complétive → conjonction de subordination.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pronom relatif', 0, 1), (@qid, 'Conjonction de subordination', 1, 2), (@qid, 'Adverbe', 0, 3), (@qid, 'Pronom interrogatif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Le mot « courageusement » est formé à partir de l''adjectif « courageux » par l''ajout du suffixe :',
+    '-ment est le suffixe formant l''adverbe à partir du féminin de l''adjectif (courageuse + ment).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '-age', 0, 1), (@qid, '-ment', 1, 2), (@qid, '-eux', 0, 3), (@qid, '-able', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'La proposition « bien qu''il soit fatigué » exprime :',
+    'Bien que introduit une proposition subordonnée de concession (opposition).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La cause', 0, 1), (@qid, 'La conséquence', 0, 2), (@qid, 'La concession', 1, 3), (@qid, 'Le but', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la fonction de « lui » dans « Je lui téléphone tous les soirs » ?',
+    'Téléphoner à quelqu''un → lui = COI (complément d''objet indirect).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'COD', 0, 1), (@qid, 'COI', 1, 2), (@qid, 'Sujet', 0, 3), (@qid, 'Attribut', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Parmi les phrases suivantes, laquelle est à la forme impersonnelle ?',
+    '"Il" ne désigne personne en particulier → verbe impersonnel.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il est parti tôt ce matin.', 0, 1), (@qid, 'Il faut absolument que tu viennes.', 1, 2), (@qid, 'Il a mangé tout le gâteau.', 0, 3), (@qid, 'Il viendra nous voir demain.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Le mot « irremplaçable » est formé du préfixe « ir- » et du suffixe « -able ». Le radical est :',
+    'Le radical est "remplaç-" (du verbe remplacer).', 'Programme 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ir', 0, 1), (@qid, 'remplaç-', 1, 2), (@qid, 'place', 0, 3), (@qid, 'irremplaçable', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans « Je ne sais pas s''il viendra », le mot « si » est une conjonction qui introduit :',
+    'Si introduit une interrogation indirecte (je ne sais pas quoi ? → s''il viendra).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une condition', 0, 1), (@qid, 'Une interrogation indirecte', 1, 2), (@qid, 'Une cause', 0, 3), (@qid, 'Une concession', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '« Les enfants se sont lavés avant le dîner. » Le participe passé « lavés » s''accorde avec :',
+    'Se laver → le COD "se" est placé avant le verbe et représente les enfants (masculin pluriel).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le sujet "les enfants"', 1, 1), (@qid, 'Le complément "le dîner"', 0, 2), (@qid, 'Il ne s''accorde pas', 0, 3), (@qid, 'L''auxiliaire "être" uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la valeur du présent dans « La Terre tourne autour du Soleil » ?',
+    'Présent de vérité générale (fait scientifique toujours vrai).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Présent de narration', 0, 1), (@qid, 'Présent de vérité générale', 1, 2), (@qid, 'Présent d''actualité', 0, 3), (@qid, 'Présent de futur proche', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Lequel de ces mots est un adverbe de manière ?',
+    'Vite modifie le verbe (il court vite) → adverbe de manière.', 'Programme 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hier', 0, 1), (@qid, 'Vite', 1, 2), (@qid, 'Ici', 0, 3), (@qid, 'Beaucoup', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans « C''est grâce à ton aide que j''ai réussi », le groupe « grâce à ton aide » exprime :',
+    'Grâce à introduit un complément circonstanciel de cause.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La conséquence', 0, 1), (@qid, 'La cause', 1, 2), (@qid, 'Le but', 0, 3), (@qid, 'L''opposition', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Quelle est la forme correcte du pluriel de « festival » ?',
+    'Festival → festivals (exception : ne suit pas la règle -al → -aux).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'festivaux', 0, 1), (@qid, 'festivals', 1, 2), (@qid, 'festivales', 0, 3), (@qid, 'festival', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '« Rien ne sert de courir, il faut partir à point. » Le mot « rien » est :',
+    'Rien = pronom indéfini négatif (ne... rien).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un article', 0, 1), (@qid, 'Un pronom indéfini', 1, 2), (@qid, 'Un adverbe', 0, 3), (@qid, 'Une conjonction', 0, 4);
+
+
+
+-- ============================================
+-- QCM FRANÇAIS - HOMOPHONES GRAMMATICAUX
+-- 20 Questions
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Tu ______ vue cette nouvelle console de jeux, celle qui est ______ dans la vitrine ?',
+    'L''as (avoir, 2e pers. sing.) = tu as vue / là = adverbe de lieu (là-bas).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'l''as / là', 1, 1), (@qid, 'la / là', 0, 2), (@qid, 'l''a / la', 0, 3), (@qid, 'là / l''as', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Rosemathe ______ commandée la semaine dernière.',
+    'L''a = pronom élidé + verbe avoir (elle l''a commandée).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'l''a', 1, 1), (@qid, 'la', 0, 2), (@qid, 'là', 0, 3), (@qid, 'l''as', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'J''espère que je pourrai ______ voir chez lui.',
+    'La = pronom personnel COD féminin singulier (la voir = voir elle).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'l''a', 0, 1), (@qid, 'là', 0, 2), (@qid, 'la', 1, 3), (@qid, 'las', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Pedro ______ le meilleur élève de la classe.',
+    'Est = verbe être au présent de l''indicatif, 3e personne du singulier.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'est', 1, 1), (@qid, 'ait', 0, 2), (@qid, 'es', 0, 3), (@qid, 'et', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Il faudrait que votre fille aînée ______ de meilleures notes.',
+    'Après "il faudrait que" → subjonctif présent de avoir = ait.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'a', 0, 1), (@qid, 'ait', 1, 2), (@qid, 'est', 0, 3), (@qid, 'ai', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Un bienfait n''______ jamais perdu.',
+    'N''est jamais perdu = verbe être au présent de l''indicatif (vérité générale).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'est', 1, 1), (@qid, 'ait', 0, 2), (@qid, 'es', 0, 3), (@qid, 'ai', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'La jeune athlète fait preuve de ______ froid.',
+    'Sang-froid = nom composé signifiant calme, maîtrise de soi.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sans', 0, 1), (@qid, 'sang', 1, 2), (@qid, 's''en', 0, 3), (@qid, 'cent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Mon frère ______ excusait toujours.',
+    'S''en = pronom réfléchi "se" élidé + pronom adverbial "en" (s''excusait de quelque chose).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sans', 0, 1), (@qid, 's''en', 1, 2), (@qid, 'sang', 0, 3), (@qid, 'cent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Ne le critiquez pas ______ savoir ce qui s''est passé.',
+    'Sans = préposition exprimant l''absence, suivi de l''infinitif.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sans', 1, 1), (@qid, 's''en', 0, 2), (@qid, 'cent', 0, 3), (@qid, 'sang', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Il a une réduction de quinze pour ______.',
+    'Pour cent = pourcentage (quinze pour cent = 15%).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'cent', 1, 1), (@qid, 'sans', 0, 2), (@qid, 'sang', 0, 3), (@qid, 's''en', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Une pièce ______ rideaux est plus lumineuse, mais beaucoup moins intime.',
+    'Sans = préposition indiquant l''absence de rideaux.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sans', 1, 1), (@qid, 'sang', 0, 2), (@qid, 'cent', 0, 3), (@qid, 's''en', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'L''eau de ce robinet n''est pas potable, il est dangereux ______ boire.',
+    'D''en boire = de + en (pronom remplaçant "de cette eau").', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'd''en', 1, 1), (@qid, 'dans', 0, 2), (@qid, 'dent', 0, 3), (@qid, 'dang', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Le civet de lièvre ______ le thym et le laurier.',
+    'Sent = verbe sentir au présent de l''indicatif, 3e pers. singulier.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'cent', 0, 1), (@qid, 's''en', 0, 2), (@qid, 'sent', 1, 3), (@qid, 'sans', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Le peintre Gustave a posé son chevalet ______ une vieille maison abandonnée.',
+    'Dans = préposition de lieu (à l''intérieur de la maison).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'd''en', 0, 1), (@qid, 'dans', 1, 2), (@qid, 'dang', 0, 3), (@qid, 'dent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Judelande a pris une décision ______.',
+    'Saine = adjectif féminin signifiant bonne pour la santé, judicieuse.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'saine', 1, 1), (@qid, 'scène', 0, 2), (@qid, 'senne', 0, 3), (@qid, 'cène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Catrine demeura ______ sur le seuil de l''hôtel. Le mot correctement orthographié est :',
+    'Pétrifiée = participe passé du verbe pétrifier, accordé au féminin singulier avec Catrine.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'pétrifiée', 1, 1), (@qid, 'petrifier', 0, 2), (@qid, 'pétrafiée', 0, 3), (@qid, 'pétrifiais', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Dans « Le soleil ______ couché », la forme correcte est :',
+    'S''était = pronom réfléchi "se" élidé + auxiliaire être à l''imparfait (verbe pronominal se coucher).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 's''était', 1, 1), (@qid, 's''étaits', 0, 2), (@qid, 'cestait', 0, 3), (@qid, 'cet été', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '« Une vapeur sanglante ______ l''horizon. » Le verbe correct est :',
+    'Embrasait = verbe embraser (enflammer, illuminer) à l''imparfait.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'embrasait', 1, 1), (@qid, 'embrassait', 0, 2), (@qid, 'embrayait', 0, 3), (@qid, 'enbrasait', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '« Il traîne une montagne de problèmes derrière lui. » Le mot « montagne » est ici au :',
+    'Sens figuré = image pour exprimer une grande quantité de problèmes.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sens figuré', 1, 1), (@qid, 'sens propre', 0, 2);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, '« Nous avons gravi la montagne pendant toute la journée. » « Montagne » est ici au :',
+    'Sens propre = relief géographique réel que l''on escalade.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sens figuré', 0, 1), (@qid, 'sens propre', 1, 2);
+
+
 -- Français complétion (type_id=1)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
 (2, 1, 'Les enfants jouent dans ________ (le/la) cour.', NULL, 'Programme 9e AF', 1, 'la');
@@ -13648,4 +16239,3 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
 (7, 1, '"¿Cuántos años tienes?" — Je réponds : "Tengo ________ años." (si j''en ai 15)', NULL, 'Programme 9e AF', 1, 'quince|15');
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
 (7, 1, 'Le verbe "ser" à la 3e personne du singulier (él/ella) est ________.', NULL, 'Programme 9e AF', 1, 'es');
-
