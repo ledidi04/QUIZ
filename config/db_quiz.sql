@@ -225,14 +225,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Yon pwofesè', 0, 3),
 (@qid, 'Yon bèt', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(1, 2, 'Kijan ou di "bonjour" an kreyòl ?', 'Bonjou = bonjour en créole haïtien.', 'Programme 9e AF', 1);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Bonsoir', 0, 1),
-(@qid, 'Bonjou', 1, 2),
-(@qid, 'Bonswa', 0, 3),
-(@qid, 'Adieu', 0, 4);
+
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (1, 2, 'Ki prenon "ou" vle di nan fraz "ou bèl" ?', 'Ou = tu/vous en créole.', 'Programme 9e AF', 1);
@@ -243,14 +236,6 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Ou', 1, 3),
 (@qid, 'Nou', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(1, 2, 'Ki tradiksyon mo "liv" an kreyòl ?', 'Liv = livre en français.', 'Programme 9e AF', 1);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Bwa', 0, 1),
-(@qid, 'Liv', 1, 2),
-(@qid, 'Plim', 0, 3),
-(@qid, 'Kaye', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (1, 2, 'Ki jou fèt endepandans Ayiti ?', '1e janvye 1804.', 'Programme 9e AF', 1);
@@ -270,14 +255,6 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Gonayiv', 0, 3),
 (@qid, 'Jakmèl', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(1, 2, 'Pòtoprens se ________ peyi Ayiti — ki mo ki manke ?', 'Kapital = capitale.', 'Programme 9e AF', 1);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'vilaj', 0, 1),
-(@qid, 'kapital', 1, 2),
-(@qid, 'plaj', 0, 3),
-(@qid, 'mòn', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (1, 2, 'Ki lang ofisyèl ki pale nan Ayiti ?', 'Kreyòl ak fransè sont les deux langues officielles.', 'Programme 9e AF', 1);
@@ -288,17 +265,9 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Fransè sèlman', 0, 3),
 (@qid, 'Kreyòl sèlman', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(1, 2, 'Ki moun ki te fonde endepandans Ayiti ?', 'Jean-Jacques Dessalines a proclamé l''indépendance.', 'Programme 9e AF', 1);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Toussaint Louverture', 0, 1),
-(@qid, 'Jean-Jacques Dessalines', 1, 2),
-(@qid, 'Alexandre Pétion', 0, 3),
-(@qid, 'Henri Christophe', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(1, 2, 'Ki nan fraz sa a ki nan tan pase ?', 'Te + verbe = passé.', 'Programme 9e AF', 1);
+(1, 2, 'Kilès nan fraz sa yo ki nan tan pase ?', 'Te + verbe = passé.', 'Programme 9e AF', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Mwen ap dòmi', 0, 1),
@@ -351,23 +320,897 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Mòn Wòch Kaiman', 0, 3),
 (@qid, 'Mòn Blan', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(1, 2, 'Ki mo ki vle di "dlo" an fransè ?', 'Dlo = eau en français.', 'Programme 9e AF', 1);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Feu', 0, 1),
-(@qid, 'Eau', 1, 2),
-(@qid, 'Air', 0, 3),
-(@qid, 'Terre', 0, 4);
+
+
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(1, 2, 'Nan kreyòl, ki mo ki vle di "travay" ?', 'Travay = travailler/travail.', 'Programme 9e AF', 1);
+(1, 2, '« Mari doktè lontan. » Ki tip predika ki nan fraz sa a ?',
+    'Predika nominal = pa gen vèb, se yon non (doktè) ki esansyèl nan predika a.', 'Examen 9e AF', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Dòmi', 0, 1),
-(@qid, 'Travay', 1, 2),
-(@qid, 'Manje', 0, 3),
-(@qid, 'Jwe', 0, 4);
+(@qid, 'Predika vèbal', 0, 1), (@qid, 'Predika nominal', 1, 2), (@qid, 'Predika adjektival', 0, 3), (@qid, 'Predika advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki lis ki nan lòd alfabetik ?',
+    'Abitasyon (A-bi-ta-syon), Abite (A-bi-te), Abitid (A-bi-tid), Abitye (A-bi-tye).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Abite — Abitye — Abitid — Abitasyon', 0, 1),
+(@qid, 'Abitasyon — Abite — Abitye — Abitid', 0, 2),
+(@qid, 'Abitid — Abite — Abitasyon — Abitye', 0, 3),
+(@qid, 'Abitasyon — Abite — Abitid — Abitye', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Tout peyi a te pran lari. » Ki figi estil sa ye ?',
+    'Metonimi = ranplase yon mo pa yon lòt ki gen yon relasyon lojik (peyi a = moun nan peyi a).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pleyonas', 0, 1), (@qid, 'Metonimi', 1, 2), (@qid, 'Konparezon', 0, 3), (@qid, 'Metafò', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Manno fè travay la. » Ki aspè ki koresponn ak vèb la ?',
+    'Aspè akonpli = aksyon an fini, reyalize nèt.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 1, 1), (@qid, 'Iteratif', 0, 2), (@qid, 'Inakonpli', 0, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Timoun yo pa bezwen vini jodi a. » Ki tip fraz sa ye ?',
+    'Fraz deklaratif = bay yon enfòmasyon, yon deklarasyon.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Enperatif', 0, 1), (@qid, 'Deklaratif', 1, 2), (@qid, 'Eksklamatif', 0, 3), (@qid, 'Entèwogatif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Antwanèt se yon vòlkan. » Ki figi estil sa ye ?',
+    'Metafò = konparezon san mo konparezon (Antwanèt konpare ak yon vòlkan san itilize "tankou").', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 1, 1), (@qid, 'Metonimi', 0, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki kalite detèminan « chak, tout, okenn » ye ?',
+    'Detèminan endefini = montre yon kantite ki pa presi.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Entèwogatif', 0, 1), (@qid, 'Nimeral òdinal', 0, 2), (@qid, 'Nimeral kadinal', 0, 3), (@qid, 'Endefini', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki figi estil ki gen nan fraz sa a : « Manman m di ale, frè m nan di m rete »',
+    'Antitèz = opozisyon ant de lide (ale vs rete).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metonimi', 0, 1), (@qid, 'Ipèbòl', 0, 2), (@qid, 'Konparezon', 0, 3), (@qid, 'Antitèz', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki predika ki nan fraz « Pitit gason Matye a vann bisiklèt li a. » ?',
+    'Predika vèbal = gen yon vèb (vann) ki esansyèl nan predika a.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Advèbyal', 0, 1), (@qid, 'Adjektival', 0, 2), (@qid, 'Nominal', 0, 3), (@qid, 'Vèbal', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nan fraz « Nou renmen peyi a anpil. » « Nou » se ki kalite pwonon ?',
+    'Pwonon pèsonèl = reprezante moun ki pale (1e, 2e, 3e pèsòn).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pèsonèl ranfòse', 0, 1), (@qid, 'Demonstratif', 0, 2), (@qid, 'Pèsonèl', 1, 3), (@qid, 'Posesif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nan fraz « Entèl se ansyen zanmi m. » « Entèl » se ki kalite pwonon ?',
+    'Pwonon endefini = itilize lè nou pa konnen idantite moun nan.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Demonstratif', 0, 1), (@qid, 'Pèsonèl ranfòse', 0, 2), (@qid, 'Endefini', 1, 3), (@qid, 'Posesif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nan fraz « Nouvo kay mwen an bèl anpil. » « mwen an » se ki kalite ?',
+    'Detèminan posesif = montre a ki moun kay la ye (mwen).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Konjonksyon', 0, 1), (@qid, 'Pwonon pèsonèl', 0, 2), (@qid, 'Pwonon relatif', 0, 3), (@qid, 'Detèminan posesif', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nan fraz « Se mwenmenm ki mèt katye a. » « mwenmenm » se ki kalite pwonon ?',
+    'Pwonon pèsonèl ranfòse = mete aksan sou moun nan pou ranfòse idantite l.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pwonon pèsonèl ranfòse', 1, 1), (@qid, 'Pwonon posesif', 0, 2), (@qid, 'Pwonon relatif', 0, 3), (@qid, 'Pwonon demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Kè m ap bat fò. » Ki kalite fraz sa ye ?',
+    'Fraz deklaratif = bay yon enfòmasyon san mande, san lòd, san emosyon fò.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Deklaratif', 1, 1), (@qid, 'Enperatif', 0, 2), (@qid, 'Eksklamatif', 0, 3), (@qid, 'Entèwogatif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Yo te rive yè. » Makè « te » endike ki tan ?',
+    'Makè "te" = pase (tan ki deja fini).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pase', 1, 1), (@qid, 'Prezan', 0, 2), (@qid, 'Fiti', 0, 3), (@qid, 'Kondisyonèl', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nan fraz « Liv mwen an », « mwen » se ...',
+    'Detèminan posesif = montre a ki moun liv la ye, li akonpaye non "liv".', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjektif', 0, 1), (@qid, 'Pwonon posesif', 0, 2), (@qid, 'Detèminan posesif', 1, 3), (@qid, 'Konjonksyon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki figi estil « Wodrig chante tankou papa l. » ?',
+    'Konparezon = itilize mo "tankou" pou fè konparezon ant Wodrig ak papa l.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metonimi', 0, 1), (@qid, 'Konparezon', 1, 2), (@qid, 'Metafò', 0, 3), (@qid, 'Pèsonifikasyon', 0, 4);
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Li ap prepare manje a pandan tout maten an. » Ki aspè vèbal sa a ye ?',
+    'Ap + vèb = aksyon an ap kontinye, li poko fini → aspè inakonpli (pwogresif).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Inakonpli', 1, 2), (@qid, 'Iteratif', 0, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Se pa ti bèl kay sa a bèl. » Ki figi estil sa a ye ?',
+    'Litòt = fè yon afimasyon pa mwayen yon negasyon (an reyalite kay la bèl anpil).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ipèbòl', 0, 1), (@qid, 'Litòt', 1, 2), (@qid, 'Antitèz', 0, 3), (@qid, 'Pleyonas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nan fraz « Sa m di a se sa. » « Sa » devan vèb la se ki kalite pwonon ?',
+    'Pwonon demonstratif = ranplase yon non, montre yon bagay deja mansyone.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pwonon endefini', 0, 1), (@qid, 'Pwonon pèsonèl', 0, 2), (@qid, 'Pwonon demonstratif', 1, 3), (@qid, 'Pwonon posesif', 0, 4);
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Lari Pòtoprens di: m pa ka sipòte fatra ankò. » se...',
+    'Pèsonifikasyon = bay yon bagay ki pa vivan (lari) karakteristik yon moun (pale).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Konparezon', 0, 1), (@qid, 'Metonimi', 0, 2), (@qid, 'Metafò', 0, 3), (@qid, 'Pèsonifikasyon', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Karin ekri menm jan ak pwofesè a. » se...',
+    'Konparezon = itilize "menm jan ak" pou fè resanblans ant Karin ak pwofesè a.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Konparezon', 1, 1), (@qid, 'Metafò', 0, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Metonimi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki konkòdans ki nan « Klas la te vid lè pwofesè a rantre. » ?',
+    'Te vid = pase ; rantre = prezan (aksyon ki fèt nan moman an, menm si nan yon kontèks pase).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pase + Fiti', 0, 1), (@qid, 'Fiti + Pase', 0, 2), (@qid, 'Prezan + Pase', 0, 3), (@qid, 'Pase + Prezan', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki predika ki nan « Pèp la malad. » ?',
+    'Predika adjektival = se yon adjektif (malad) ki esansyèl nan predika a.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Advèbyal', 0, 1), (@qid, 'Nominal', 0, 2), (@qid, 'Vèbal', 0, 3), (@qid, 'Adjektival', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki predika ki nan « Pwofesè Gachèt fò anpil. » ?',
+    'Predika adjektival = se adjektif "fò" ki esansyèl, pa gen vèb ni non.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vèbal', 0, 1), (@qid, 'Nominal', 0, 2), (@qid, 'Advèbyal', 0, 3), (@qid, 'Adjektival', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki lòd alfabetik ki kòrèk ?',
+    'Kan — Kann — Kannal — Kannistè — Kanntè (lèt pa lèt).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'kann — kanntè — kannal — kannistè — kan', 0, 1),
+(@qid, 'kann — kannal — kanntè — kannistè — kan', 0, 2),
+(@qid, 'kanni — kannistè — kanntè — kann — kan', 0, 3),
+(@qid, 'kan — kann — kannal — kannistè — kanntè', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nati pwopozisyon « Kòman n ap fè viv san nou pa manje ? » se...',
+    'Pwopozisyon entèwogatif = poze yon kesyon.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Konjonktif', 0, 1), (@qid, 'Enfinitiv', 0, 2), (@qid, 'Relatif', 0, 3), (@qid, 'Entèwogatif', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki kalite advèb nan « Melisa ap vini tousuit. » ?',
+    'Tousuit = advèb tan (li presize kilè aksyon an ap fèt).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tan', 1, 1), (@qid, 'fason', 0, 2), (@qid, 'kote', 0, 3), (@qid, 'entansite', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Elèv sila a se yon bonm. » se...',
+    'Metafò = konpare yon elèv ak yon bonm san mo konparezon.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 1, 1), (@qid, 'Metonimi', 0, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Mariterèz fè bon bouyon kabrit. » se...',
+    'Fè = aksyon ki fèt regilyèman, ki repete → aspè iteratif.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Inakonpli', 0, 1), (@qid, 'Akonpli', 0, 2), (@qid, 'Iteratif', 1, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Roje ap travay nan jaden mayi li a. » se...',
+    'Ap + vèb = aksyon an poko fini, li ap kontinye → aspè inakonpli.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Iteratif', 0, 1), (@qid, 'Akonpli', 0, 2), (@qid, 'Pwospektif', 0, 3), (@qid, 'Inakonpli', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nan fraz « Chak moun dwe responsab zak yo. » « Chak moun » se ki kalite pwonon ?',
+    'Chak moun = pwonon endefini (deziyen moun san presize kilès).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Endefini', 1, 1), (@qid, 'Pèsonèl ranfòse', 0, 2), (@qid, 'Demonstratif', 0, 3), (@qid, 'Posesif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nan fraz sa a: « Mwen ta ba w tout sa m genyen. » Kisa « ta » eksprime ?',
+    'Makè "ta" = kondisyonèl (yon aksyon ki depann de yon kondisyon).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Fiti', 0, 1), (@qid, 'Kondisyonèl', 1, 2), (@qid, 'Prezan', 0, 3), (@qid, 'Sibjonktif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Zakari al priye sou montay la pou Bondye di yon mo pou li. » Nan ki sans « montay » anplwaye la a ?',
+    'Sans pwòp = yon ti mòn reyèl kote Zakari al priye.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sans pwòp', 1, 1), (@qid, 'Sans figire', 0, 2), (@qid, 'Sans inik', 0, 3);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Pitit la manje yon tonm diri. » Nan ki sans mo « tonm » anplwaye la a ?',
+    'Sans figire = yon tonm = anpil diri, pa yon vrè tonm.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sans inik', 0, 1), (@qid, 'Sans pwòp', 0, 2), (@qid, 'Sans figire', 1, 3);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Marina toujou peye lekòl la. » se...',
+    'Toujou peye = aksyon ki repete regilyèman → aspè iteratif.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pwospektif', 0, 1), (@qid, 'Inakonpli', 0, 2), (@qid, 'Akonpli', 0, 3), (@qid, 'Iteratif', 1, 4);
+
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Solèy la kouche dèyè mòn lan. » Ki figi estil sa ye ?',
+    'Pèsonifikasyon = solèy la "kouche" tankou yon moun.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Pèsonifikasyon', 1, 2), (@qid, 'Metonimi', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Li pral manje talè. » Makè « pral » endike ki tan ?',
+    'Makè "pral" montre yon aksyon ki poko fèt → fiti (avni).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Fiti', 1, 1), (@qid, 'Pase', 0, 2), (@qid, 'Prezan', 0, 3), (@qid, 'Kondisyonèl', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nan fraz « Sa a se pa sa m te mande a. » « Sa a » se ki kalite pwonon ?',
+    'Sa a = pwonon demonstratif ki montre yon bagay prezan oswa deja site.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Endefini', 0, 1), (@qid, 'Demonstratif', 1, 2), (@qid, 'Pèsonèl', 0, 3), (@qid, 'Posesif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Li travay di tankou yon bourik. » Ki figi estil sa a ye ?',
+    'Konparezon = tankou fè resanblans ant li ak yon bourik.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Konparezon', 1, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Metonimi', 0, 4);
+
+
+-- ============================================
+-- QCM CRÉOLE - QUIZ 3 À 10 (Réussite Haïti)
+-- Format : matiere_id=1, type_id=2
+-- ============================================
+
+-- ============================================
+-- QUIZ 3 : Aspè, tip fraz, pwonon (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Pwofesè a ap fè kou a. » se...',
+    'Ap + vèb = aksyon an poko fini → aspè inakonpli.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Inakonpli', 1, 2), (@qid, 'Pwospektif', 0, 3), (@qid, 'Iteratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Direktè a site tout non yo. » se...',
+    'Site = aksyon fini nèt → aspè akonpli.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 1, 1), (@qid, 'Inakonpli', 0, 2), (@qid, 'Iteratif', 0, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Samnya kòmanse travay. » se...',
+    'Kòmanse = aksyon ki fèt regilyèman, ki repete → aspè iteratif.', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Pwospektif', 0, 2), (@qid, 'Iteratif', 1, 3), (@qid, 'Inakonpli', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Tip fraz « Èske nou pare? » se...',
+    'Èske = makè kesyon → fraz entèwogatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Entèwogatif', 1, 1), (@qid, 'Deklaratif', 0, 2), (@qid, 'Enperatif', 0, 3), (@qid, 'Eksklamatif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki kalite pwonon nan « Mwen twonpe mwen. » ?',
+    'Mwen = pwonon pèsonèl (1e pèsòn).', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pwonon relatif', 0, 1), (@qid, 'Pwonon pèsonèl', 1, 2), (@qid, 'Pwonon posesif', 0, 3), (@qid, 'Pwonon demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi estil « Wodrig chante tankou papa l. » se...',
+    'Tankou = mo konparezon → konparezon.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Konparezon', 1, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Metonimi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « premye, dezyèm, twazyèm » se...',
+    'Detèminan nimeral òdinal = montre lòd, ran.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Kadinal', 0, 1), (@qid, 'Endefini', 0, 2), (@qid, 'Òdinal', 1, 3), (@qid, 'Demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Peyi a ap depafini. » se...',
+    'Ap depafini = gen yon vèb → predika vèbal.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nominal', 0, 1), (@qid, 'Vèbal', 1, 2), (@qid, 'Adjektival', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Timoun yo twòp nan lakay la. » se...',
+    'Twòp = adjektif esansyèl → predika adjektival.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjektival', 1, 1), (@qid, 'Vèbal', 0, 2), (@qid, 'Nominal', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nati « Poukisa…? » se...',
+    'Poukisa poze yon kesyon → pwopozisyon entèwogatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Relatif', 0, 1), (@qid, 'Konjonktif', 0, 2), (@qid, 'Entèwogatif', 1, 3), (@qid, 'Enfinitif', 0, 4);
+
+-- ============================================
+-- QUIZ 4 : Detèminan, fraz, aspè (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « premye jou » se...',
+    'Premye montre lòd → detèminan òdinal.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Òdinal', 1, 1), (@qid, 'Kadinal', 0, 2), (@qid, 'Endefini', 0, 3), (@qid, 'Demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « kat elèv » se...',
+    'Kat = chif ki bay yon kantite egzak → nimeral kadinal.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Òdinal', 0, 1), (@qid, 'Kadinal', 1, 2), (@qid, 'Endefini', 0, 3), (@qid, 'Demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi estil « Ayiti se pèl peyi Antiy yo. » se...',
+    'Pèl = imaj san "tankou" pou dekri bote peyi a → metafò.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Konparezon', 0, 1), (@qid, 'Metafò', 1, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Metonimi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Tip fraz « Fè vit! » se...',
+    'Fraz ki bay yon lòd, yon kòmandman → enperatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Deklaratif', 0, 1), (@qid, 'Eksklamatif', 0, 2), (@qid, 'Enperatif', 1, 3), (@qid, 'Entèwogatif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Moyiz prezidan Repiblik d Ayiti. » se...',
+    'Prezidan = non esansyèl, pa gen vèb → predika nominal.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vèbal', 0, 1), (@qid, 'Nominal', 1, 2), (@qid, 'Adjektival', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki mo ki vini an premye nan lòd alfabetik?',
+    'Alfabèt = a, an, b, ch... Mo ki kòmanse pa "a" vini anvan.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Bato', 0, 1), (@qid, 'Avyon', 1, 2), (@qid, 'Chèz', 0, 3), (@qid, 'Dlo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Ou gen pou ou tann! » se...',
+    'Gen pou = aksyon ki poko fèt men ki pral rive → pwospektif.', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Inakonpli', 0, 2), (@qid, 'Pwospektif', 1, 3), (@qid, 'Iteratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nati « Kijan…? » se...',
+    'Kijan poze yon kesyon → pwopozisyon entèwogatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Relatif', 0, 1), (@qid, 'Konjonktif', 0, 2), (@qid, 'Entèwogatif', 1, 3), (@qid, 'Enfinitiv', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Jewòm renmen lavi. » se...',
+    'Renmen = vèb → predika vèbal.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nominal', 0, 1), (@qid, 'Vèbal', 1, 2), (@qid, 'Adjektival', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, '« Lari a di li bouke. » se egzanp...',
+    'Lari a pale tankou yon moun → pèsonifikasyon.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Pèsonifikasyon', 1, 2), (@qid, 'Metonimi', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+-- ============================================
+-- QUIZ 5 : Advèb, lòd, detèminan (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki kalite advèb nan « … tousuit. » ?',
+    'Tousuit = advèb tan (presize lè aksyon an fèt).', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Tan', 1, 1), (@qid, 'Fason', 0, 2), (@qid, 'Kote', 0, 3), (@qid, 'Kantite', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki kalite advèb nan « Pran anpe nan ji a. » ?',
+    'Anpe = advèb kantite (yon ti kantite).', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Tan', 0, 1), (@qid, 'Fason', 0, 2), (@qid, 'Kote', 0, 3), (@qid, 'Kantite', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nati « Kòman n ap fè viv san tèt ansanm ?» se...',
+    'Kòman = makè kesyon → pwopozisyon entèwogatif.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Konjonktif', 0, 1), (@qid, 'Entèwogatif', 1, 2), (@qid, 'Relatif', 0, 3), (@qid, 'Enfinitif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi « Tout klas la renmen ti pwofesè a… » se...',
+    'Tout klas la = tout elèv yo → metonimi (pati pou antye).', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Konparezon', 0, 1), (@qid, 'Metonimi', 1, 2), (@qid, 'Metafò', 0, 3), (@qid, 'Pèsonifikasyon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki mo ki mal ekri nan « Tout Ayisyen pale indistinkteman kreyòl. » ?',
+    'Distenkteman (avèk "e") pa "i" → distenkteman = byen klè, san konfizyon.', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ayisyen', 0, 1), (@qid, 'kreyòl', 0, 2), (@qid, 'indistinkteman', 1, 3), (@qid, 'pale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika nan fraz sa a « Pitit fi Maryo a pran lekòl li oserye » se...',
+    'Pran = vèb esansyèl → predika vèbal.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nominal', 0, 1), (@qid, 'Vèbal', 1, 2), (@qid, 'Adjektival', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « twa liv » se...',
+    'Twa = chif ki bay kantite egzak → kadinal.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Òdinal', 0, 1), (@qid, 'Kadinal', 1, 2), (@qid, 'Endefini', 0, 3), (@qid, 'Demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Chak semèn li mache. » se...',
+    'Chak semèn = aksyon ki repete → iteratif.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Iteratif', 1, 2), (@qid, 'Inakonpli', 0, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Jaden an bèl. » se...',
+    'Bèl = adjektif esansyèl → predika adjektival.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nominal', 0, 1), (@qid, 'Adjektival', 1, 2), (@qid, 'Vèbal', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi estil ki nan fraz sa : « Tifi sila se yon flè nan savann. » se...',
+    'Flè = imaj san "tankou" → metafò.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 1, 1), (@qid, 'Konparezon', 0, 2), (@qid, 'Metonimi', 0, 3), (@qid, 'Pèsonifikasyon', 0, 4);
+
+-- ============================================
+-- QUIZ 6 : Fraz enperatif, detèminan, aspè (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Tip fraz « Ann ale ! » se...',
+    'Ann ale = envitasyon, lòd dou → fraz enperatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Deklaratif', 0, 1), (@qid, 'Enperatif', 1, 2), (@qid, 'Entèwogatif', 0, 3), (@qid, 'Eksklamatif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Nou tout nan peyi a renmen tande Moris Siksto. » se...',
+    'Renmen = vèb → predika vèbal.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vèbal', 1, 1), (@qid, 'Nominal', 0, 2), (@qid, 'Adjektival', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi « Wodrig chante tankou papa l. » se...',
+    'Tankou = mo konparezon → konparezon.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Konparezon', 1, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Metonimi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Toni ak Jak ap netwaye lakou a. » se...',
+    'Ap netwaye = aksyon poko fini → inakonpli.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Inakonpli', 1, 2), (@qid, 'Iteratif', 0, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Chak jou li ekri. » se...',
+    'Chak jou = repetisyon → iteratif.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Iteratif', 1, 2), (@qid, 'Inakonpli', 0, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « sa a » se...',
+    'Sa a montre yon bagay → demonstratif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Demonstratif', 1, 1), (@qid, 'Posesif', 0, 2), (@qid, 'Endefini', 0, 3), (@qid, 'Òdinal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nati « Poukisa…? » se...',
+    'Poukisa = kesyon → entèwogatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Relatif', 0, 1), (@qid, 'Entèwogatif', 1, 2), (@qid, 'Konjonktif', 0, 3), (@qid, 'Enfinitif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Pèp la malad. » se...',
+    'Malad = adjektif → adjektival.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nominal', 0, 1), (@qid, 'Adjektival', 1, 2), (@qid, 'Vèbal', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi « Tout peyi a pran lari. » se...',
+    'Peyi a = moun nan peyi a → metonimi.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metonimi', 1, 1), (@qid, 'Metafò', 0, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Ou gen pou ou tann! » se...',
+    'Gen pou tann = aksyon fiti → pwospektif.', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Inakonpli', 0, 2), (@qid, 'Pwospektif', 1, 3), (@qid, 'Iteratif', 0, 4);
+
+-- ============================================
+-- QUIZ 7 : Detèminan, pwonon, lòd alfabetik (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « chak, tout, okenn » se detèminan...',
+    'Chak, tout, okenn pa bay yon kantite egzak → endefini.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Endefini', 1, 1), (@qid, 'Òdinal', 0, 2), (@qid, 'Kadinal', 0, 3), (@qid, 'Demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « premye, dezyèm… » se...',
+    'Ran, lòd → òdinal.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Endefini', 0, 1), (@qid, 'Òdinal', 1, 2), (@qid, 'Kadinal', 0, 3), (@qid, 'Demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Dirèk → Endirek: « Nou pral etidye. » → Yo di...',
+    'Nou pral etidye → Yo di yo pral etidye (yo = nou).', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'yo pral etidye', 1, 1), (@qid, 'nou pral etidye', 0, 2), (@qid, 'li pral etidye', 0, 3), (@qid, 'yo te etidye', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Pwonon nan « Pa nou an pi bon. » se...',
+    'Nou an = pwonon posesif (sa ki pou nou).', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pèsonèl', 0, 1), (@qid, 'Posesif', 1, 2), (@qid, 'Demonstratif', 0, 3), (@qid, 'Relatif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki mo ki premye nan lòd alfabetik?',
+    'Abitasyon kòmanse pa A-bi... ki vini anvan.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Bato', 0, 1), (@qid, 'Abitasyon', 1, 2), (@qid, 'Chèz', 0, 3), (@qid, 'Dèyè', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi estil « Tout zòn nan te nan antèman Tiwowo. » se...',
+    'Zòn nan = moun ki rete nan zòn nan → metonimi.', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Metonimi', 1, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Jaden an bèl. » se...',
+    'Bèl = adjektif → adjektival.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjektival', 1, 1), (@qid, 'Vèbal', 0, 2), (@qid, 'Nominal', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Chak semèn li li yon nouvo woman. » se...',
+    'Chak semèn = repete → iteratif.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Iteratif', 1, 2), (@qid, 'Inakonpli', 0, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nati « Kouman…? » se...',
+    'Kouman = kesyon → entèwogatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Relatif', 0, 1), (@qid, 'Entèwogatif', 1, 2), (@qid, 'Konjonktif', 0, 3), (@qid, 'Enfinitif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « twa kay » se...',
+    'Twa = kantite → kadinal.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Òdinal', 0, 1), (@qid, 'Kadinal', 1, 2), (@qid, 'Endefini', 0, 3), (@qid, 'Demonstratif', 0, 4);
+
+-- ============================================
+-- QUIZ 8 : Nati pwopozisyon, detèminan, figi estil (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nati « Konbyen liv pwezi ou gen lakay ou? » se...',
+    'Konbyen = kesyon → entèwogatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Entèwogatif', 1, 1), (@qid, 'Deklaratif', 0, 2), (@qid, 'Enperatif', 0, 3), (@qid, 'Konjonktif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Fonksyon « sa a » nan « Jèn fi sa a » se...',
+    'Sa a montre fi a → detèminan demonstratif.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Demonstratif', 1, 1), (@qid, 'Posesif', 0, 2), (@qid, 'Endefini', 0, 3), (@qid, 'Òdinal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi estil ki nan fraz sa a : « Te gen yon silans ki te layite kò li tout longè » se...',
+    'Silans layite kò li tankou yon moun → pèsonifikasyon.', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Pèsonifikasyon', 1, 2), (@qid, 'Metonimi', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Li te tchak. » se...',
+    'Tchak = adjektif → adjektival.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vèbal', 0, 1), (@qid, 'Adjektival', 1, 2), (@qid, 'Nominal', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi estil ki nan fraz sa a : « Tout estad la kanpe pou aplodi Nazon. » se...',
+    'Estad la = moun ki nan estad la → metonimi.', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Metonimi', 1, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki mo ki dènye nan lòd alfabetik « mannyè, mannigèt, mannigans, maniganse » ?',
+    'Mannyè vini apre lòt yo dapre lèt final yo.', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'mannyè', 1, 1), (@qid, 'mannigèt', 0, 2), (@qid, 'mannigans', 0, 3), (@qid, 'maniganse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « sis elèv » se...',
+    'Sis = chif 6 → kadinal.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Òdinal', 0, 1), (@qid, 'Kadinal', 1, 2), (@qid, 'Endefini', 0, 3), (@qid, 'Demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Chak jou li travay. » se...',
+    'Chak jou = aksyon ki repete → iteratif.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Iteratif', 1, 2), (@qid, 'Inakonpli', 0, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Klas la vid. » se...',
+    'Vid = adjektif → adjektival.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjektival', 1, 1), (@qid, 'Vèbal', 0, 2), (@qid, 'Nominal', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi « Lari a pale. » se...',
+    'Lari a pale tankou moun → pèsonifikasyon.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Pèsonifikasyon', 1, 2), (@qid, 'Metonimi', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+-- ============================================
+-- QUIZ 9 : Tip fraz, detèminan, aspè (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Tip fraz « Èske nou pare? » se...',
+    'Èske = makè kesyon → entèwogatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Entèwogatif', 1, 1), (@qid, 'Deklaratif', 0, 2), (@qid, 'Enperatif', 0, 3), (@qid, 'Eksklamatif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Mari se yon bon fanm. » se...',
+    'Bon fanm = non ak adjektif san vèb → nominal.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vèbal', 0, 1), (@qid, 'Nominal', 1, 2), (@qid, 'Adjektival', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Matin ap travay. » se...',
+    'Ap travay = vèb → vèbal.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nominal', 0, 1), (@qid, 'Vèbal', 1, 2), (@qid, 'Adjektival', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi estil « Jan fò anpil, li toujou fè ti mwayèn kat li. » se...',
+    'Litòt = di mwens pou eksprime plis (fò men fè mwayèn kat).', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Litòt', 1, 1), (@qid, 'Ipèbòl', 0, 2), (@qid, 'Metafò', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « kat, sèt, dis » se...',
+    'Chif ki bay kantite → kadinal.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Òdinal', 0, 1), (@qid, 'Kadinal', 1, 2), (@qid, 'Endefini', 0, 3), (@qid, 'Demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Dirèk → Endirek: « Nou pral travay. » → Yo di...',
+    'Nou pral travay → Yo di yo pral travay.', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'yo pral travay', 1, 1), (@qid, 'nou pral travay', 0, 2), (@qid, 'li pral travay', 0, 3), (@qid, 'yo te travay', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nati « Poukisa…? » se...',
+    'Poukisa = kesyon → entèwogatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Relatif', 0, 1), (@qid, 'Entèwogatif', 1, 2), (@qid, 'Konjonktif', 0, 3), (@qid, 'Enfinitif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Chak semèn yo jwe. » se...',
+    'Chak semèn = aksyon ki repete → iteratif.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Iteratif', 1, 2), (@qid, 'Inakonpli', 0, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Jaden an bèl. » se...',
+    'Bèl = adjektif → adjektival.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nominal', 0, 1), (@qid, 'Adjektival', 1, 2), (@qid, 'Vèbal', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi estil « Biyè vèt » se...',
+    'Biyè vèt = dola ameriken → metonimi (koulè pou lajan).', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Metonimi', 1, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Konparezon', 0, 4);
+
+-- ============================================
+-- QUIZ 10 : Pwopozisyon, aspè, figi (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nati « Lè jèn yo fini klas yo, y ap aprann metye. » se...',
+    'Fraz la gen yon pwopozisyon tan ("lè...") ki depann de yon lòt → konjonktif.', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Entèwogatif', 0, 1), (@qid, 'Konjonktif', 1, 2), (@qid, 'Relatif', 0, 3), (@qid, 'Enfinitif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Bòs mason an ap travay nan kay la » se...',
+    'Ap travay = aksyon poko fini → inakonpli.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Inakonpli', 1, 2), (@qid, 'Pwospektif', 0, 3), (@qid, 'Iteratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Etyèn nan lakou a. » se...',
+    'Nan lakou a = kote li ye → predika advèbyal.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nominal', 0, 1), (@qid, 'Advèbyal', 1, 2), (@qid, 'Vèbal', 0, 3), (@qid, 'Adjektival', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi estil « Adriyen al repoze. » se...',
+    'Repoze = mò → efemism (di yon bagay ki tris nan yon fason dous).', 'Quiz Kreyòl 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Efemism', 1, 1), (@qid, 'Metafò', 0, 2), (@qid, 'Pèsonifikasyon', 0, 3), (@qid, 'Metonimi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Detèminan « premye, dezyèm, senkyèm » se...',
+    'Òd, ran → òdinal.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Kadinal', 0, 1), (@qid, 'Òdinal', 1, 2), (@qid, 'Endefini', 0, 3), (@qid, 'Demonstratif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Ki mo ki dènye nan lòd alfabetik « tè – vòlkan – aliza – siklòn – katastròf » ?',
+    'Vòlkan (V) vini apre tout lòt yo.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tè', 0, 1), (@qid, 'vòlkan', 1, 2), (@qid, 'aliza', 0, 3), (@qid, 'siklòn', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Aspè « Chak semenn li fè mache. » se...',
+    'Chak semenn = repetisyon → iteratif.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Akonpli', 0, 1), (@qid, 'Iteratif', 1, 2), (@qid, 'Inakonpli', 0, 3), (@qid, 'Pwospektif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Predika « Ti chanm kay la sal ak tout kalte fatra. » se...',
+    'Sal = adjektif → adjektival.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Adjektival', 1, 1), (@qid, 'Vèbal', 0, 2), (@qid, 'Nominal', 0, 3), (@qid, 'Advèbyal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Nati « Kòman…? » se...',
+    'Kòman = kesyon → entèwogatif.', 'Quiz Kreyòl 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Relatif', 0, 1), (@qid, 'Entèwogatif', 1, 2), (@qid, 'Konjonktif', 0, 3), (@qid, 'Enfinitif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(1, 2, 'Figi estil « Lari a pale. » se...',
+    'Lari a pale tankou yon moun → pèsonifikasyon.', 'Quiz Kreyòl 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Metafò', 0, 1), (@qid, 'Pèsonifikasyon', 1, 2), (@qid, 'Metonimi', 0, 3), (@qid, 'Konparezon', 0, 4);
+
 
 -- Créole complétion (type_id=1)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
@@ -3394,6 +4237,152 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'sens figuré', 0, 1), (@qid, 'sens propre', 1, 2);
+
+
+-- ============================================
+-- QCM FRANÇAIS - ACCORD DU PARTICIPE PASSÉ
+-- 20 Questions - Phrases légèrement modifiées
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Les romans que j''ai (lire) _____ sont vraiment captivants.',
+    'Le COD "que" (romans, masculin pluriel) est placé avant le verbe → lus.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lu', 0, 1), (@qid, 'lus', 1, 2), (@qid, 'lue', 0, 3), (@qid, 'lues', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Les boissons qui ont été (offrir) _____ gratuitement sont délicieuses.',
+    'Avec l''auxiliaire être, accord avec le sujet "boissons" (féminin pluriel) → offertes.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'offert', 0, 1), (@qid, 'offerte', 0, 2), (@qid, 'offertes', 1, 3), (@qid, 'offerts', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Raymond a remis les colis que Jean Claude lui avait (confier) _____.',
+    'Le COD "que" (colis, masculin pluriel) placé avant → confiés.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'confié', 0, 1), (@qid, 'confiés', 1, 2), (@qid, 'confiée', 0, 3), (@qid, 'confiées', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'La rivière a été (détourner) _____ afin d''irriguer les champs de riz.',
+    'Auxiliaire être + sujet féminin singulier "la rivière" → détournée.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'détournés', 0, 1), (@qid, 'détournée', 1, 2), (@qid, 'détournées', 0, 3), (@qid, 'détourné', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Les dessins animés sont (concevoir) _____ spécialement pour les enfants.',
+    'Auxiliaire être + sujet masculin pluriel "les dessins" → conçus.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'conçues', 0, 1), (@qid, 'concue', 0, 2), (@qid, 'conçus', 1, 3), (@qid, 'conçu', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'De nombreux magasins se sont (installer) _____ à Pétion-Ville.',
+    'Verbe pronominal, accord avec le sujet masculin pluriel "magasins" → installés.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'installées', 0, 1), (@qid, 'installée', 0, 2), (@qid, 'installés', 1, 3), (@qid, 'installé', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Un pain de beurre (saler) _____.',
+    'Pain de beurre = locution où "beurre" est le mot principal (masculin singulier) → salé.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'salée', 0, 1), (@qid, 'salées', 0, 2), (@qid, 'salé', 1, 3), (@qid, 'salés', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Un recueil de légendes (antillais) _____.',
+    'Recueil = masculin singulier, l''adjectif "antillais" s''accorde avec ce nom → antillais.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'antillaise', 0, 1), (@qid, 'antillais', 1, 2), (@qid, 'antillaises', 0, 3), (@qid, 'antillaient', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Un pot en terre (cuire) _____.',
+    'Le participe passé "cuit" employé comme adjectif s''accorde avec "terre" (féminin singulier) → cuite.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'cuite', 1, 1), (@qid, 'cuits', 0, 2), (@qid, 'cuit', 0, 3), (@qid, 'cuites', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Leur deuxième rendez-vous s''est très bien (dérouler) _____.',
+    'Verbe pronominal, sujet masculin singulier "rendez-vous" → déroulé.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'déroulée', 0, 1), (@qid, 'déroulé', 1, 2), (@qid, 'déroulées', 0, 3), (@qid, 'déroulés', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Des abattements fiscaux spéciaux sont (prévoir) _____ pour les cultivateurs.',
+    'Auxiliaire être + sujet masculin pluriel "abattements" → prévus.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'prévus', 1, 1), (@qid, 'prévue', 0, 2), (@qid, 'prévu', 0, 3), (@qid, 'prévues', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Elles ont été (surprendre) _____ en train de copier.',
+    'Auxiliaire être + sujet féminin pluriel "elles" → surprises.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'surpris', 0, 1), (@qid, 'surprise', 0, 2), (@qid, 'surprises', 1, 3), (@qid, 'surprendre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Mes manuscrits (raturer) _____ attestent la peine qu''ils m''ont coûtée.',
+    'Participe passé employé comme adjectif épithète, accord avec "manuscrits" (masculin pluriel) → raturés.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'raturer', 0, 1), (@qid, 'raturée', 0, 2), (@qid, 'raturé', 0, 3), (@qid, 'raturés', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'La lampe qu''il a (allumer) _____ est posée sur la table.',
+    'Le COD "que" (lampe, féminin singulier) placé avant le verbe → allumée.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'allumée', 1, 1), (@qid, 'allumé', 0, 2), (@qid, 'allumées', 0, 3), (@qid, 'allumés', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'L''édifice qu''il a (construire) _____ est assez vaste.',
+    'Le COD "que" (édifice, masculin singulier) placé avant → construit (invariable).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'construit', 1, 1), (@qid, 'construite', 0, 2), (@qid, 'construits', 0, 3), (@qid, 'construittes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Les insectes nuisibles que les jardiniers auront (tuer) _____ dans le jardin.',
+    'Le COD "que" (insectes, masculin pluriel) avant le verbe → tués.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tué', 0, 1), (@qid, 'tuée', 0, 2), (@qid, 'tués', 1, 3), (@qid, 'tuées', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Des connaissances (acquérir) _____ sont toujours utiles.',
+    'Participe passé employé comme adjectif, accord avec "connaissances" (féminin pluriel) → acquises.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'acquisite', 0, 1), (@qid, 'acquises', 1, 2), (@qid, 'acquisent', 0, 3), (@qid, 'acquis', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Des critiques (constructif) _____ peuvent faire progresser.',
+    'Adjectif accordé avec "critiques" (féminin pluriel) → constructives.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'constructive', 0, 1), (@qid, 'constructives', 1, 2), (@qid, 'constructifs', 0, 3), (@qid, 'constructif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Un accueil et des sentiments (cordial) _____.',
+    'L''adjectif qualifiant deux noms (un masculin + un masculin) se met au masculin pluriel → cordiaux.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'cordiale', 0, 1), (@qid, 'cordiaux', 1, 2), (@qid, 'cordiales', 0, 3), (@qid, 'cordial', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(2, 2, 'Il faut entretenir de bonnes relations (social) _____.',
+    'Adjectif accordé avec "relations" (féminin pluriel) → sociales.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sociales', 1, 1), (@qid, 'sociale', 0, 2), (@qid, 'sociaux', 0, 3), (@qid, 'social', 0, 4);
 
 
 -- Français complétion (type_id=1)
@@ -15937,6 +16926,1644 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'I has gone to the store', 0, 3),
 (@qid, 'I had went to the store', 0, 4);
 
+-- ============================================
+-- QCM ANGLAIS - QUIZ 1 À 8 (Réussite Haïti)
+-- Format : matiere_id=6, type_id=2
+-- ============================================
+
+-- ============================================
+-- QUIZ 1 : Temps et structures de base (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Pepita ______ her sister from the US last week.',
+    'Last week = past tense marker → simple past "visited".', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'visits', 0, 1), (@qid, 'visited', 1, 2), (@qid, 'is visiting', 0, 3), (@qid, 'has visited', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Could you tell us ______ ?',
+    'Indirect question → subject + verb order (where the library is).', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'where is the library', 0, 1), (@qid, 'where the library is', 1, 2), (@qid, 'the library is where', 0, 3), (@qid, 'where does the library', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'My mother ______ her hair in the bathroom now.',
+    'Now = present continuous → is washing.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'washes', 0, 1), (@qid, 'is washing', 1, 2), (@qid, 'washed', 0, 3), (@qid, 'has washed', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Maria ______ is studying with Peter in the living room.',
+    'Present continuous: subject (she) + is + verb-ing.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'He', 0, 1), (@qid, 'She', 1, 2), (@qid, 'They', 0, 3), (@qid, 'We', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Jenny and I ______ were at the movies last night.',
+    'Jenny and I = we → plural subject.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'He', 0, 1), (@qid, 'We', 1, 2), (@qid, 'She', 0, 3), (@qid, 'It', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Last night uncle Peter (to visit) ______ us at home.',
+    'Last night = simple past → visited.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'visits', 0, 1), (@qid, 'visited', 1, 2), (@qid, 'visiting', 0, 3), (@qid, 'has visited', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Next year I (to be) ______ in secondary I.',
+    'Next year = future → will be.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'am', 0, 1), (@qid, 'will be', 1, 2), (@qid, 'was', 0, 3), (@qid, 'have been', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Keep silent. Dad (to listen) ______ to music now.',
+    'Now = present continuous → is listening.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'listens', 0, 1), (@qid, 'is listening', 1, 2), (@qid, 'listened', 0, 3), (@qid, 'was listening', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Billy has lived here ______ 3 years.',
+    'For + duration (3 years). Since + point in time.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 0, 1), (@qid, 'for', 1, 2), (@qid, 'ago', 0, 3), (@qid, 'during', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Do you have ______ to eat ?',
+    'Something = some thing in affirmative/interrogative offers.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nothing', 0, 1), (@qid, 'something', 1, 2), (@qid, 'anything', 0, 3), (@qid, 'everything', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If you walked faster, you ______ on time.',
+    'If + past → conditional (would + base verb).', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'would be', 1, 1), (@qid, 'will be', 0, 2), (@qid, 'are', 0, 3), (@qid, 'were', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Simon speaks English fluently, ______.',
+    'Simon (he) → question tag: doesn''t he ?', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'doesn''t he', 1, 1), (@qid, 'don''t he', 0, 2), (@qid, 'isn''t he', 0, 3), (@qid, 'wasn''t he', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I don''t have ______ to say about it.',
+    'Negative sentence → anything.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'anything', 1, 1), (@qid, 'something', 0, 2), (@qid, 'nothing', 0, 3), (@qid, 'everything', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Last night I (to see) ______ a very nice film.',
+    'Last night = simple past → saw (irregular).', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'see', 0, 1), (@qid, 'saw', 1, 2), (@qid, 'seen', 0, 3), (@qid, 'was seeing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'How old (to be) ______ you now ?',
+    'You + be (present) → are.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'is', 0, 1), (@qid, 'are', 1, 2), (@qid, 'am', 0, 3), (@qid, 'were', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Now, she (to write) ______ a letter.',
+    'Now = present continuous → is writing.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'writes', 0, 1), (@qid, 'is writing', 1, 2), (@qid, 'wrote', 0, 3), (@qid, 'has written', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'He (to go) ______ to school every day.',
+    'Every day = simple present; He → goes.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'go', 0, 1), (@qid, 'goes', 1, 2), (@qid, 'went', 0, 3), (@qid, 'is going', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I didn''t (to understand) ______ you.',
+    'Did + not + base verb → understand.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'understood', 0, 1), (@qid, 'understand', 1, 2), (@qid, 'understanding', 0, 3), (@qid, 'understands', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'They (to leave) ______ the house at 5 o''clock yesterday.',
+    'Yesterday = simple past → left (irregular).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'leaves', 0, 1), (@qid, 'left', 1, 2), (@qid, 'leaved', 0, 3), (@qid, 'were leaving', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Jane (to be) ______ currently in 9th grade.',
+    'Jane (she) + be (present) → is.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'is', 1, 1), (@qid, 'are', 0, 2), (@qid, 'am', 0, 3), (@qid, 'be', 0, 4);
+
+-- ============================================
+-- QUIZ 2 : Since, for, ago et expressions fréquentes (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Jack has been smoking ______ he was twelve years old.',
+    'Since + point in time (he was twelve).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 1, 1), (@qid, 'for', 0, 2), (@qid, 'ago', 0, 3), (@qid, 'from', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'We have lived in the same address ______ ten years.',
+    'For + duration (ten years).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 0, 1), (@qid, 'for', 1, 2), (@qid, 'ago', 0, 3), (@qid, 'during', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The plane took off two hours ______.',
+    'Ago = in the past from now.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 0, 1), (@qid, 'for', 0, 2), (@qid, 'ago', 1, 3), (@qid, 'before', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Jeff has been sick ______ three weeks.',
+    'For + duration (three weeks).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 0, 1), (@qid, 'for', 1, 2), (@qid, 'ago', 0, 3), (@qid, 'yet', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'We have been at home ______ the accident.',
+    'Since + point in time (the accident).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 1, 1), (@qid, 'for', 0, 2), (@qid, 'ago', 0, 3), (@qid, 'from', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Bob has lived here ______ three years.',
+    'For + duration (three years).', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 0, 1), (@qid, 'for', 1, 2), (@qid, 'ago', 0, 3), (@qid, 'during', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Have you already ______ your homework ?',
+    'Present perfect: have + past participle → done.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'did', 0, 1), (@qid, 'done', 1, 2), (@qid, 'do', 0, 3), (@qid, 'doing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'My parents have ______ me a wonderful gift for my birthday.',
+    'Present perfect: have + past participle → given.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gave', 0, 1), (@qid, 'given', 1, 2), (@qid, 'giving', 0, 3), (@qid, 'give', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If you don''t study your lessons, you ______.',
+    'If + present → future (will + base verb).', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will fail', 1, 1), (@qid, 'would fail', 0, 2), (@qid, 'failed', 0, 3), (@qid, 'fail', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'He ______ get a better grade if he studied.',
+    'If + past → conditional (would + base verb).', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'would', 1, 1), (@qid, 'will', 0, 2), (@qid, 'can', 0, 3), (@qid, 'shall', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If I had enough money I ______ give you some.',
+    'If + had → conditional (would + base verb).', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'would', 1, 1), (@qid, 'will', 0, 2), (@qid, 'can', 0, 3), (@qid, 'shall', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If you walked faster you ______ the train.',
+    'Conditional: would + catch (unreal present).', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'would catch', 1, 1), (@qid, 'will catch', 0, 2), (@qid, 'catch', 0, 3), (@qid, 'caught', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'My friend and I ______ 15 years old.',
+    'Friend and I = we → are.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'am', 0, 1), (@qid, 'are', 1, 2), (@qid, 'is', 0, 3), (@qid, 'be', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'We ______ the director yesterday.',
+    'Yesterday = simple past → saw.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'see', 0, 1), (@qid, 'saw', 1, 2), (@qid, 'seen', 0, 3), (@qid, 'are seeing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She ______ in Canada since 2004.',
+    'Since 2004 = present perfect → has been living / has lived.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lived', 0, 1), (@qid, 'has been living', 1, 2), (@qid, 'lives', 0, 3), (@qid, 'was living', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Someday you ______ me the truth.',
+    'Someday = future → will tell.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tell', 0, 1), (@qid, 'will tell', 1, 2), (@qid, 'told', 0, 3), (@qid, 'are telling', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'They ______ to the beach last Sunday.',
+    'Last Sunday = simple past → went.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'go', 0, 1), (@qid, 'went', 1, 2), (@qid, 'gone', 0, 3), (@qid, 'are going', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Last year, we ______ the garden.',
+    'Last year = simple past → planted.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'plant', 0, 1), (@qid, 'planted', 1, 2), (@qid, 'have planted', 0, 3), (@qid, 'are planting', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She ______ a very nice film last night.',
+    'Last night = simple past → saw.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sees', 0, 1), (@qid, 'saw', 1, 2), (@qid, 'seen', 0, 3), (@qid, 'is seeing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'We ______ waiting for you.',
+    'Present continuous → are waiting.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'is', 0, 1), (@qid, 'are', 1, 2), (@qid, 'am', 0, 3), (@qid, 'be', 0, 4);
+
+-- ============================================
+-- QUIZ 3 : Pronoms, tags et formes interrogatives (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Could you tell us ______ ?',
+    'Indirect question: subject + verb (where the post office is).', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'where is the post office', 0, 1), (@qid, 'where the post office is', 1, 2), (@qid, 'the post office is where', 0, 3), (@qid, 'where does the post office', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Maria is studying with Peter in the living room. ______ is studying with Peter.',
+    'Maria (female) → She.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'He', 0, 1), (@qid, 'She', 1, 2), (@qid, 'They', 0, 3), (@qid, 'It', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Jenny and I went to the movies last night. ______ went to the movies.',
+    'Jenny and I = We.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'He', 0, 1), (@qid, 'We', 1, 2), (@qid, 'She', 0, 3), (@qid, 'They', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Do you have ______ to declare ?',
+    'Interrogative/Offer → something (or anything in genuine question).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nothing', 0, 1), (@qid, 'anything', 1, 2), (@qid, 'something', 0, 3), (@qid, 'everything', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I can''t say ______ about that.',
+    'Negative → anything.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'something', 0, 1), (@qid, 'anything', 1, 2), (@qid, 'nothing', 0, 3), (@qid, 'everything', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'You don''t like turnips, ______ you ?',
+    'You don''t like → do you ? (positive tag for negative sentence).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'do', 1, 1), (@qid, 'don''t', 0, 2), (@qid, 'are', 0, 3), (@qid, 'aren''t', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Mrs. Diane sees a nice cat on the roof, ______ she ?',
+    'Sees (positive) → doesn''t she ?', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'doesn''t', 1, 1), (@qid, 'does', 0, 2), (@qid, 'isn''t', 0, 3), (@qid, 'don''t', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The man ______ wrote the book was rewarded.',
+    'Relative pronoun for person (subject) → who.', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'who', 1, 1), (@qid, 'which', 0, 2), (@qid, 'what', 0, 3), (@qid, 'whose', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Choose the correct question word: ______ is your birthday ?',
+    'When = for time/date.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'When', 1, 1), (@qid, 'Where', 0, 2), (@qid, 'What', 0, 3), (@qid, 'Who', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Choose the correct question word: ______ does she hate me ?',
+    'Why = for reason.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Why', 1, 1), (@qid, 'What', 0, 2), (@qid, 'When', 0, 3), (@qid, 'Where', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Choose the correct question word: ______ is your last name ?',
+    'What = for information.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'What', 1, 1), (@qid, 'Who', 0, 2), (@qid, 'When', 0, 3), (@qid, 'Why', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'You don''t have ______ to say about it.',
+    'Negative → anything.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'anything', 1, 1), (@qid, 'something', 0, 2), (@qid, 'nothing', 0, 3), (@qid, 'everything', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Dad hasn''t called me ______ three years.',
+    'For + duration (three years).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 0, 1), (@qid, 'for', 1, 2), (@qid, 'ago', 0, 3), (@qid, 'during', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Do you have ______ to eat ?',
+    'Question/Offer → something.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nothing', 0, 1), (@qid, 'anything', 0, 2), (@qid, 'something', 1, 3), (@qid, 'everything', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Pay attention, there is ______ at the door.',
+    'Affirmative → someone.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'someone', 1, 1), (@qid, 'anyone', 0, 2), (@qid, 'no one', 0, 3), (@qid, 'everyone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Please don''t tell ______ about the plan until next year.',
+    'Negative request → anyone.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'anyone', 1, 1), (@qid, 'someone', 0, 2), (@qid, 'no one', 0, 3), (@qid, 'everyone', 0, 4);
+
+-- ============================================
+-- QUIZ 4 : Comparatifs, modaux et formes négatives (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If I had enough money I ______ give you some.',
+    'If + had → would + base verb.', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'would', 1, 1), (@qid, 'will', 0, 2), (@qid, 'can', 0, 3), (@qid, 'shall', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'He ______ get a better grade if he studied.',
+    'If + past → would + base verb.', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'would', 1, 1), (@qid, 'will', 0, 2), (@qid, 'can', 0, 3), (@qid, 'shall', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'No one ______ do it. It wasn''t easy.',
+    'Past ability → could.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'could', 1, 1), (@qid, 'can', 0, 2), (@qid, 'will', 0, 3), (@qid, 'shall', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'You can''t be successful without ______.',
+    'Without + gerund → working.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'work', 0, 1), (@qid, 'working', 1, 2), (@qid, 'worked', 0, 3), (@qid, 'works', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Marc walks too ______.',
+    'Too + adverb of manner → slowly.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'slow', 0, 1), (@qid, 'slowly', 1, 2), (@qid, 'slowness', 0, 3), (@qid, 'slowful', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Marc is ______ than Peter.',
+    'Comparative of "tall" → taller.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tall', 0, 1), (@qid, 'taller', 1, 2), (@qid, 'tallest', 0, 3), (@qid, 'more tall', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If I saw him I ______ with him.',
+    'If + past → would + base verb.', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'would speak', 1, 1), (@qid, 'will speak', 0, 2), (@qid, 'speak', 0, 3), (@qid, 'spoke', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Yesterday there ______ many guests at the party.',
+    'Many guests (plural) + past → were.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'was', 0, 1), (@qid, 'were', 1, 2), (@qid, 'is', 0, 3), (@qid, 'are', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If you don''t leave now you ______ the meeting.',
+    'If + present → future (will + miss).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will miss', 1, 1), (@qid, 'would miss', 0, 2), (@qid, 'miss', 0, 3), (@qid, 'missed', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'James ______ games every day with Harry.',
+    'Every day + 3rd person singular → plays.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'play', 0, 1), (@qid, 'plays', 1, 2), (@qid, 'played', 0, 3), (@qid, 'is playing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She wrote the letter. The negative form is:',
+    'Simple past negative = she did not write.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She didn''t write the letter.', 1, 1), (@qid, 'She didn''t wrote the letter.', 0, 2), (@qid, 'She not wrote the letter.', 0, 3), (@qid, 'She don''t write the letter.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Paul is watching TV. The negative form is:',
+    'Present continuous negative = Paul is not watching TV.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Paul isn''t watching TV.', 1, 1), (@qid, 'Paul doesn''t watching TV.', 0, 2), (@qid, 'Paul not watching TV.', 0, 3), (@qid, 'Paul don''t watch TV.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'My parents have moved there ______ ten years.',
+    'For + duration (ten years).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 0, 1), (@qid, 'for', 1, 2), (@qid, 'ago', 0, 3), (@qid, 'during', 0, 4);
+
+-- ============================================
+-- QUIZ 5 : Vocabulaire : contraires et familles de mots (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Circle the word that doesn''t match: train – rain – bus – car.',
+    'Rain is weather, others are vehicles.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'train', 0, 1), (@qid, 'rain', 1, 2), (@qid, 'bus', 0, 3), (@qid, 'car', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Circle the word that doesn''t match: architect – teacher – pen – nurse.',
+    'Pen is an object, others are professions.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'architect', 0, 1), (@qid, 'teacher', 0, 2), (@qid, 'pen', 1, 3), (@qid, 'nurse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The opposite of long is ______.',
+    'Opposite of long = short.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tall', 0, 1), (@qid, 'short', 1, 2), (@qid, 'big', 0, 3), (@qid, 'wide', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The opposite of difficult is ______.',
+    'Opposite of difficult = easy.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hard', 0, 1), (@qid, 'easy', 1, 2), (@qid, 'heavy', 0, 3), (@qid, 'long', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'A woman whose husband is dead is a ______.',
+    'Widow = woman whose husband died.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'widow', 1, 1), (@qid, 'widower', 0, 2), (@qid, 'orphan', 0, 3), (@qid, 'wife', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'What parents do to children when they do something bad is a ______.',
+    'Punishment = consequence for bad behavior.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'punishment', 1, 1), (@qid, 'reward', 0, 2), (@qid, 'gift', 0, 3), (@qid, 'prize', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'What doctors give to sick people in order to make them get better are ______.',
+    'Medicines = drugs prescribed by doctors.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'medicines', 1, 1), (@qid, 'poisons', 0, 2), (@qid, 'foods', 0, 3), (@qid, 'drinks', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'My mother''s brother is my ______.',
+    'Mother''s brother = uncle.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'uncle', 1, 1), (@qid, 'aunt', 0, 2), (@qid, 'cousin', 0, 3), (@qid, 'nephew', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'My father''s father is my ______.',
+    'Father''s father = grandfather.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'grandfather', 1, 1), (@qid, 'grandmother', 0, 2), (@qid, 'uncle', 0, 3), (@qid, 'brother', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The person living next to me is my ______.',
+    'Person next door = neighbor.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'neighbor', 1, 1), (@qid, 'friend', 0, 2), (@qid, 'relative', 0, 3), (@qid, 'brother', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Give a prefix to indicate the opposite of ''expensive'': ______.',
+    'Opposite of expensive = inexpensive (prefix in-).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'inexpensive', 1, 1), (@qid, 'unexpensive', 0, 2), (@qid, 'disexpensive', 0, 3), (@qid, 'misexpensive', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Give a prefix to indicate the opposite of ''patient'': ______.',
+    'Opposite of patient = impatient (prefix im-).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'impatient', 1, 1), (@qid, 'unpatient', 0, 2), (@qid, 'dispatient', 0, 3), (@qid, 'inpatient', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Give a prefix to: ______ national.',
+    'International = between nations (prefix inter-).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'international', 1, 1), (@qid, 'unnational', 0, 2), (@qid, 'disnational', 0, 3), (@qid, 'innational', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Give a prefix to: ______ take.',
+    'Undertake = to take on a task (prefix under-).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'undertake', 1, 1), (@qid, 'overtake', 0, 2), (@qid, 'mistake', 0, 3), (@qid, 'retake', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'A plumber is someone who works with ______.',
+    'Plumber works with pipes and water systems.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'pipes', 1, 1), (@qid, 'wood', 0, 2), (@qid, 'electricity', 0, 3), (@qid, 'painting', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Waiters and ______ work in restaurants.',
+    'Waitresses (female waiters) work in restaurants too.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'waitresses', 1, 1), (@qid, 'teachers', 0, 2), (@qid, 'doctors', 0, 3), (@qid, 'drivers', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'In the ______ you see animals and trees.',
+    'Forest = place with trees and animals.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'city', 0, 1), (@qid, 'forest', 1, 2), (@qid, 'school', 0, 3), (@qid, 'hospital', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Ted and Teddy are ______. They were born in 2004.',
+    'Same birth year = same age (twins or same age).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'twins', 1, 1), (@qid, 'brothers', 0, 2), (@qid, 'friends', 0, 3), (@qid, 'cousins', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If Wilson is my brother, his son is my ______.',
+    'Brother''s son = nephew.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nephew', 1, 1), (@qid, 'niece', 0, 2), (@qid, 'cousin', 0, 3), (@qid, 'uncle', 0, 4);
+
+-- ============================================
+-- QUIZ 6 : Vocabulaire : familles (verbe–adjectif–nom) (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to drive'', the noun is ______.',
+    'Driver = person who drives.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'driver', 1, 1), (@qid, 'driven', 0, 2), (@qid, 'drove', 0, 3), (@qid, 'driving', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to sing'', the noun is ______.',
+    'Singer = person who sings.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'singer', 1, 1), (@qid, 'song', 0, 2), (@qid, 'sung', 0, 3), (@qid, 'singing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to leave'', the simple past is ______.',
+    'Leave → left (irregular verb).', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'leaved', 0, 1), (@qid, 'left', 1, 2), (@qid, 'leaving', 0, 3), (@qid, 'leaves', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to call'', the simple past is ______.',
+    'Call → called (regular verb).', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'calls', 0, 1), (@qid, 'called', 1, 2), (@qid, 'calling', 0, 3), (@qid, 'callen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to study'', the simple past is ______.',
+    'Study → studied (y → ied).', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'studyed', 0, 1), (@qid, 'studied', 1, 2), (@qid, 'studying', 0, 3), (@qid, 'studies', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to sell'', the simple past is ______.',
+    'Sell → sold (irregular verb).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'selled', 0, 1), (@qid, 'sold', 1, 2), (@qid, 'selling', 0, 3), (@qid, 'sells', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to see'', the simple past is ______.',
+    'See → saw (irregular verb).', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'see', 0, 1), (@qid, 'saw', 1, 2), (@qid, 'seen', 0, 3), (@qid, 'seeing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to buy'', the simple past is ______.',
+    'Buy → bought (irregular verb).', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'buyed', 0, 1), (@qid, 'bought', 1, 2), (@qid, 'buying', 0, 3), (@qid, 'buys', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to eat'', the simple past is ______.',
+    'Eat → ate (irregular verb).', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'eated', 0, 1), (@qid, 'ate', 1, 2), (@qid, 'eaten', 0, 3), (@qid, 'eating', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to respect'', the adjective is ______.',
+    'Respect → respectful.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'respectful', 1, 1), (@qid, 'respected', 0, 2), (@qid, 'respecting', 0, 3), (@qid, 'respectable', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the adjective ''respectful'', the noun is ______.',
+    'Respectful → respectfulness.', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'respectfulness', 1, 1), (@qid, 'respect', 0, 2), (@qid, 'respecting', 0, 3), (@qid, 'respectation', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the verb ''to study'', the adjective is ______.',
+    'Study → studious.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'studious', 1, 1), (@qid, 'studying', 0, 2), (@qid, 'studied', 0, 3), (@qid, 'study', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'From the adjective ''studious'', the noun is ______.',
+    'Studious → studiousness.', 'Quiz Anglais 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'studiousness', 1, 1), (@qid, 'student', 0, 2), (@qid, 'study', 0, 3), (@qid, 'studying', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Give a suffix to form a noun from ''product'': ______.',
+    'Product + ion → production.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'production', 1, 1), (@qid, 'producting', 0, 2), (@qid, 'productment', 0, 3), (@qid, 'productness', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Give a suffix to form a noun from ''enjoy'': ______.',
+    'Enjoy + ment → enjoyment.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'enjoyment', 1, 1), (@qid, 'enjoying', 0, 2), (@qid, 'enjoyness', 0, 3), (@qid, 'enjoyation', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'A person who takes care of a garden is a ______.',
+    'Gardener = person who tends a garden.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gardener', 1, 1), (@qid, 'gardener', 0, 2), (@qid, 'gardener', 0, 3), (@qid, 'gardener', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'A person who takes care of patients is a ______.',
+    'Nurse = healthcare professional for patients.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nurse', 1, 1), (@qid, 'doctor', 0, 2), (@qid, 'teacher', 0, 3), (@qid, 'driver', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'A man whose wife is dead is a ______.',
+    'Widower = man whose wife died.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'widower', 1, 1), (@qid, 'widow', 0, 2), (@qid, 'orphan', 0, 3), (@qid, 'husband', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'A part of land surrounded by water is called an ______.',
+    'Island = land surrounded by water.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'island', 1, 1), (@qid, 'mountain', 0, 2), (@qid, 'desert', 0, 3), (@qid, 'forest', 0, 4);
+
+-- ============================================
+-- QUIZ 7 : Lieux, maison, école, transport (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'They prefer to live in the ______.',
+    'Countryside = rural area, opposite of city.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'countryside', 1, 1), (@qid, 'city', 0, 2), (@qid, 'town', 0, 3), (@qid, 'village', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'It''s time for me to go ______.',
+    'Go home = return to one''s house.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'home', 1, 1), (@qid, 'house', 0, 2), (@qid, 'school', 0, 3), (@qid, 'office', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Put the book on the ______.',
+    'Shelf = flat surface for books.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'table', 0, 1), (@qid, 'shelf', 1, 2), (@qid, 'floor', 0, 3), (@qid, 'chair', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'They prefer to ride a ______.',
+    'Bicycle = two-wheeled vehicle.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'bicycle', 1, 1), (@qid, 'car', 0, 2), (@qid, 'bus', 0, 3), (@qid, 'plane', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I''m Miguel Diaz. I''m a ______.',
+    'Spanish-sounding name → Spanish.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Spanish', 1, 1), (@qid, 'French', 0, 2), (@qid, 'English', 0, 3), (@qid, 'Italian', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Movie watching is changing. People are downloading movies from the ______.',
+    'Internet = network for downloading content.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'internet', 1, 1), (@qid, 'radio', 0, 2), (@qid, 'television', 0, 3), (@qid, 'newspaper', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Sites like YouTube or Dailymotion are becoming more and more ______.',
+    'Popular = liked by many people.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'popular', 1, 1), (@qid, 'unpopular', 0, 2), (@qid, 'unknown', 0, 3), (@qid, 'boring', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Choose the general word: car – plane – boat – ______.',
+    'Vehicles = general category for all means of transport.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vehicles', 1, 1), (@qid, 'cars', 0, 2), (@qid, 'planes', 0, 3), (@qid, 'boats', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Choose the general word: sister – daughter – son – ______.',
+    'Family = general category for relatives.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'family', 1, 1), (@qid, 'sisters', 0, 2), (@qid, 'children', 0, 3), (@qid, 'parents', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Choose the general word: trees – forest – grass – ______.',
+    'Nature = general category for natural elements.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nature', 1, 1), (@qid, 'trees', 0, 2), (@qid, 'plants', 0, 3), (@qid, 'animals', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I was too tired to walk upstairs, so I took the ______.',
+    'Elevator = machine for going up/down floors.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'elevator', 1, 1), (@qid, 'stairs', 0, 2), (@qid, 'ladder', 0, 3), (@qid, 'escalator', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The mechanic sent me a ______ for repairing my car.',
+    'Bill = invoice/receipt for payment.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'bill', 1, 1), (@qid, 'letter', 0, 2), (@qid, 'card', 0, 3), (@qid, 'book', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The passengers were standing at the ______ of the bus.',
+    'Back of the bus = rear.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'back', 1, 1), (@qid, 'front', 0, 2), (@qid, 'side', 0, 3), (@qid, 'top', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'My father''s mother is my ______.',
+    'Father''s mother = grandmother.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'grandmother', 1, 1), (@qid, 'grandfather', 0, 2), (@qid, 'aunt', 0, 3), (@qid, 'mother', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'They left three hours ______.',
+    'Ago = past time reference.', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ago', 1, 1), (@qid, 'since', 0, 2), (@qid, 'for', 0, 3), (@qid, 'before', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I met Paul 5 years ______.',
+    'Ago = past time reference.', 'Quiz Anglais 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 0, 1), (@qid, 'for', 0, 2), (@qid, 'ago', 1, 3), (@qid, 'during', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'We have been waiting ______ a long time.',
+    'For + duration (a long time).', 'Quiz Anglais 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'since', 0, 1), (@qid, 'for', 1, 2), (@qid, 'ago', 0, 3), (@qid, 'during', 0, 4);
+
+
+
+-- ============================================
+-- QCM ANGLAIS SUPPLÉMENTAIRES - 9e AF
+-- Questions additionnelles style examens officiels
+-- ============================================
+
+-- ============================================
+-- LOT 1 : Temps et conjugaison (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She ______ to school by bus every morning.',
+    'Every morning = simple present; she → goes.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'go', 0, 1), (@qid, 'goes', 1, 2), (@qid, 'went', 0, 3), (@qid, 'is going', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'They ______ football in the park at this moment.',
+    'At this moment = present continuous → are playing.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'play', 0, 1), (@qid, 'are playing', 1, 2), (@qid, 'played', 0, 3), (@qid, 'were playing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'My father ______ a new car two weeks ago.',
+    'Two weeks ago = simple past → bought.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'buys', 0, 1), (@qid, 'bought', 1, 2), (@qid, 'has bought', 0, 3), (@qid, 'was buying', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'We ______ our homework yet.',
+    'Yet + present perfect negative → haven''t finished.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'didn''t finish', 0, 1), (@qid, 'haven''t finished', 1, 2), (@qid, 'don''t finish', 0, 3), (@qid, 'won''t finish', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She ______ in this hospital since 2015.',
+    'Since + point in time → present perfect: has worked.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'works', 0, 1), (@qid, 'has worked', 1, 2), (@qid, 'worked', 0, 3), (@qid, 'was working', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'When I arrived, they ______ dinner.',
+    'Action in progress when another occurred → past continuous: were having.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'have', 0, 1), (@qid, 'were having', 1, 2), (@qid, 'had', 0, 3), (@qid, 'have had', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Next summer, we ______ to France.',
+    'Next summer = future → will travel / are going to travel.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'travel', 0, 1), (@qid, 'will travel', 1, 2), (@qid, 'travelled', 0, 3), (@qid, 'have travelled', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Hurry up! The train ______ in five minutes.',
+    'Imminent future → is leaving (present continuous for future).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'leaves', 0, 1), (@qid, 'is leaving', 1, 2), (@qid, 'left', 0, 3), (@qid, 'will left', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I ______ my keys. I can''t find them anywhere.',
+    'Past action with present consequence → present perfect: have lost.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lost', 0, 1), (@qid, 'have lost', 1, 2), (@qid, 'lose', 0, 3), (@qid, 'was losing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'By the time we arrived, the movie ______.',
+    'Action completed before another past action → past perfect: had started.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'starts', 0, 1), (@qid, 'had started', 1, 2), (@qid, 'has started', 0, 3), (@qid, 'was starting', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Be quiet! The baby ______.',
+    'Now → present continuous: is sleeping.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sleeps', 0, 1), (@qid, 'is sleeping', 1, 2), (@qid, 'slept', 0, 3), (@qid, 'has slept', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'How long ______ English ?',
+    'Question about duration until now → present perfect continuous.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'do you learn', 0, 1), (@qid, 'have you been learning', 1, 2), (@qid, 'did you learn', 0, 3), (@qid, 'are you learning', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She looks tired. She ______ all day.',
+    'Continuous action until now → has been working.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'works', 0, 1), (@qid, 'has been working', 1, 2), (@qid, 'worked', 0, 3), (@qid, 'is working', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Water ______ at 100 degrees Celsius.',
+    'Scientific fact → simple present: boils.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'boil', 0, 1), (@qid, 'boils', 1, 2), (@qid, 'is boiling', 0, 3), (@qid, 'boiled', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'We ______ each other for ten years.',
+    'For ten years = duration → present perfect: have known.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'know', 0, 1), (@qid, 'have known', 1, 2), (@qid, 'knew', 0, 3), (@qid, 'are knowing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'What ______ at 8 o''clock last night ?',
+    'Specific past time → past continuous: were you doing.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'do you do', 0, 1), (@qid, 'were you doing', 1, 2), (@qid, 'did you do', 0, 3), (@qid, 'have you done', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I promise I ______ you tomorrow.',
+    'Promise → future: will call.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'call', 0, 1), (@qid, 'will call', 1, 2), (@qid, 'am calling', 0, 3), (@qid, 'called', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'While she ______, the phone rang.',
+    'While + past continuous: was cooking.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'cooks', 0, 1), (@qid, 'was cooking', 1, 2), (@qid, 'cooked', 0, 3), (@qid, 'has cooked', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She ______ never ______ to Port-au-Prince before.',
+    'Never + before → present perfect: has never been.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'has / been', 1, 1), (@qid, 'did / go', 0, 2), (@qid, 'was / going', 0, 3), (@qid, 'is / going', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'They ______ married since 2010.',
+    'Since + point → present perfect: have been.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'are', 0, 1), (@qid, 'have been', 1, 2), (@qid, 'were', 0, 3), (@qid, 'will be', 0, 4);
+
+-- ============================================
+-- LOT 2 : Modaux et conditionnels (15 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'You ______ smoke here. It''s forbidden.',
+    'Forbidden = prohibition → mustn''t.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'mustn''t', 1, 1), (@qid, 'don''t have to', 0, 2), (@qid, 'shouldn''t', 0, 3), (@qid, 'needn''t', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'You ______ wear a uniform. It''s not obligatory.',
+    'Not obligatory = absence of necessity → don''t have to.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'mustn''t', 0, 1), (@qid, 'don''t have to', 1, 2), (@qid, 'can''t', 0, 3), (@qid, 'shouldn''t', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'When I was young, I ______ run very fast.',
+    'Past ability → could.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'can', 0, 1), (@qid, 'could', 1, 2), (@qid, 'will', 0, 3), (@qid, 'must', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'You look sick. You ______ see a doctor.',
+    'Advice → should.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'should', 1, 1), (@qid, 'must', 0, 2), (@qid, 'can', 0, 3), (@qid, 'will', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ you please open the window ?',
+    'Polite request → Could.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Should', 0, 1), (@qid, 'Could', 1, 2), (@qid, 'Must', 0, 3), (@qid, 'Would', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If it rains tomorrow, we ______ at home.',
+    'If + present → will + base verb (first conditional).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will stay', 1, 1), (@qid, 'would stay', 0, 2), (@qid, 'stayed', 0, 3), (@qid, 'stay', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If I were rich, I ______ around the world.',
+    'If + were → would (second conditional, unreal).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will travel', 0, 1), (@qid, 'would travel', 1, 2), (@qid, 'travel', 0, 3), (@qid, 'travelled', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'If you had studied, you ______ the exam.',
+    'If + had → would have (third conditional, past unreal).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will pass', 0, 1), (@qid, 'would have passed', 1, 2), (@qid, 'would pass', 0, 3), (@qid, 'passed', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'He ______ be at home. The lights are on.',
+    'Probability/deduction → must.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'must', 1, 1), (@qid, 'can''t', 0, 2), (@qid, 'should', 0, 3), (@qid, 'will', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She ______ be at home. Her car is not here.',
+    'Negative deduction → can''t.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'must', 0, 1), (@qid, 'can''t', 1, 2), (@qid, 'should', 0, 3), (@qid, 'might', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'It ______ rain later. Take an umbrella.',
+    'Possibility → might.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'might', 1, 1), (@qid, 'must', 0, 2), (@qid, 'should', 0, 3), (@qid, 'can', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'You ______ eat more vegetables. It''s good for your health.',
+    'Advice → should.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'should', 1, 1), (@qid, 'must', 0, 2), (@qid, 'have to', 0, 3), (@qid, 'can', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I wish I ______ a car.',
+    'Wish + past simple for unreal present → had.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'have', 0, 1), (@qid, 'had', 1, 2), (@qid, 'will have', 0, 3), (@qid, 'am having', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'It''s time we ______.',
+    'It''s time + past simple → left.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'leave', 0, 1), (@qid, 'left', 1, 2), (@qid, 'will leave', 0, 3), (@qid, 'are leaving', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I would rather ______ at home tonight.',
+    'Would rather + base verb → stay.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'stay', 1, 1), (@qid, 'staying', 0, 2), (@qid, 'to stay', 0, 3), (@qid, 'stayed', 0, 4);
+
+-- ============================================
+-- LOT 3 : Pronoms, déterminants, quantifieurs (15 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'This book is ______, not mine.',
+    'Possessive pronoun → yours.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'your', 0, 1), (@qid, 'yours', 1, 2), (@qid, 'you', 0, 3), (@qid, 'your''s', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'There isn''t ______ milk in the fridge.',
+    'Negative sentence → any.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'some', 0, 1), (@qid, 'any', 1, 2), (@qid, 'no', 0, 3), (@qid, 'a', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'How ______ sugar do you need ?',
+    'Uncountable noun → much.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'many', 0, 1), (@qid, 'much', 1, 2), (@qid, 'few', 0, 3), (@qid, 'a lot', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'There are ______ students in the classroom.',
+    'Countable plural → many / a lot of.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'much', 0, 1), (@qid, 'many', 1, 2), (@qid, 'a little', 0, 3), (@qid, 'any', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I have ______ friends in Port-au-Prince.',
+    'Positive sentence → some.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'some', 1, 1), (@qid, 'any', 0, 2), (@qid, 'much', 0, 3), (@qid, 'a lot', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ of the students passed the test. Only two failed.',
+    'Almost all → Most.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'None', 0, 1), (@qid, 'Most', 1, 2), (@qid, 'Any', 0, 3), (@qid, 'Little', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She doesn''t have ______ money left.',
+    'Negative → any.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'some', 0, 1), (@qid, 'any', 1, 2), (@qid, 'no', 0, 3), (@qid, 'much', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The girl ______ is standing there is my cousin.',
+    'Relative pronoun for person (subject) → who.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'which', 0, 1), (@qid, 'who', 1, 2), (@qid, 'what', 0, 3), (@qid, 'whom', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The book ______ I bought yesterday is very interesting.',
+    'Relative pronoun for object → which/that.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'who', 0, 1), (@qid, 'which', 1, 2), (@qid, 'what', 0, 3), (@qid, 'where', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The friend with ______ I went to Cap-Haïtien is a doctor.',
+    'With + person → whom.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'who', 0, 1), (@qid, 'whom', 1, 2), (@qid, 'which', 0, 3), (@qid, 'that', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'This is the house ______ I was born.',
+    'Place → where.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'which', 0, 1), (@qid, 'where', 1, 2), (@qid, 'who', 0, 3), (@qid, 'when', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Everyone ______ present at the meeting yesterday.',
+    'Everyone + singular verb → was.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'were', 0, 1), (@qid, 'was', 1, 2), (@qid, 'are', 0, 3), (@qid, 'have been', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ of the two options is acceptable.',
+    'Two → either.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Both', 0, 1), (@qid, 'Either', 1, 2), (@qid, 'All', 0, 3), (@qid, 'Every', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She has two brothers. ______ of them lives in Haiti.',
+    'Two → both (with plural verb).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'All', 0, 1), (@qid, 'Both', 1, 2), (@qid, 'Either', 0, 3), (@qid, 'None', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I have read ______ of these books. They''re all interesting.',
+    'All of them → all.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'all', 1, 1), (@qid, 'every', 0, 2), (@qid, 'each', 0, 3), (@qid, 'some', 0, 4);
+
+-- ============================================
+-- LOT 4 : Vocabulaire et expressions (15 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'A person who flies an airplane is a ______.',
+    'Airplane pilot = pilot.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'driver', 0, 1), (@qid, 'pilot', 1, 2), (@qid, 'captain', 0, 3), (@qid, 'conductor', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The opposite of "cheap" is ______.',
+    'Opposite of cheap = expensive.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'costly', 0, 1), (@qid, 'expensive', 1, 2), (@qid, 'cheap', 0, 3), (@qid, 'small', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The synonym of "happy" is ______.',
+    'Synonym of happy = glad.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sad', 0, 1), (@qid, 'glad', 1, 2), (@qid, 'angry', 0, 3), (@qid, 'tired', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'My daughter''s son is my ______.',
+    'Daughter''s son = grandson.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nephew', 0, 1), (@qid, 'grandson', 1, 2), (@qid, 'cousin', 0, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'A child whose parents are dead is an ______.',
+    'Parents dead = orphan.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'orphan', 1, 1), (@qid, 'widow', 0, 2), (@qid, 'orphane', 0, 3), (@qid, 'widower', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Give the opposite of "possible": ______.',
+    'Opposite = impossible (prefix im-).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'impossible', 1, 1), (@qid, 'unpossible', 0, 2), (@qid, 'dispossible', 0, 3), (@qid, 'inpossible', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The noun form of "to decide" is ______.',
+    'Decide → decision.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'decisive', 0, 1), (@qid, 'decision', 1, 2), (@qid, 'deciding', 0, 3), (@qid, 'decided', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The adjective form of "to create" is ______.',
+    'Create → creative.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'creation', 0, 1), (@qid, 'creative', 1, 2), (@qid, 'created', 0, 3), (@qid, 'creating', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'A person who bakes bread is a ______.',
+    'Bread baker = baker.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'baker', 1, 1), (@qid, 'butcher', 0, 2), (@qid, 'cook', 0, 3), (@qid, 'seller', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The past participle of "to write" is ______.',
+    'Write → wrote → written.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'wrote', 0, 1), (@qid, 'written', 1, 2), (@qid, 'writing', 0, 3), (@qid, 'writes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '"Look for" means the same as ______.',
+    'Look for = search for.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'find', 0, 1), (@qid, 'search for', 1, 2), (@qid, 'look at', 0, 3), (@qid, 'watch', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '"Give up" means ______.',
+    'Give up = stop trying, abandon.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'continue', 0, 1), (@qid, 'stop', 1, 2), (@qid, 'give back', 0, 3), (@qid, 'start', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'He is interested ______ learning English.',
+    'Interested in + gerund.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'in', 1, 1), (@qid, 'on', 0, 2), (@qid, 'at', 0, 3), (@qid, 'for', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She is good ______ mathematics.',
+    'Good at + subject/gerund.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'in', 0, 1), (@qid, 'at', 1, 2), (@qid, 'on', 0, 3), (@qid, 'for', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I am looking forward ______ you.',
+    'Look forward to + gerund.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to see', 0, 1), (@qid, 'to seeing', 1, 2), (@qid, 'seeing', 0, 3), (@qid, 'see', 0, 4);
+
+-- ============================================
+-- LOT 5 : Questions et réponses (15 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ do you go to the market ? – Every Saturday.',
+    'Frequency → How often.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'How often', 1, 1), (@qid, 'How long', 0, 2), (@qid, 'How far', 0, 3), (@qid, 'How much', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ is it from here to Jacmel ? – About 80 km.',
+    'Distance → How far.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'How long', 0, 1), (@qid, 'How far', 1, 2), (@qid, 'How often', 0, 3), (@qid, 'How much', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ is your little sister ? – She''s five.',
+    'Age → How old.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'How old', 1, 1), (@qid, 'How much', 0, 2), (@qid, 'How many', 0, 3), (@qid, 'How long', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ does this bag cost ? – Fifty dollars.',
+    'Price → How much.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'How much', 1, 1), (@qid, 'How many', 0, 2), (@qid, 'How long', 0, 3), (@qid, 'How often', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ brothers do you have ? – Three.',
+    'Countable → How many.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'How much', 0, 1), (@qid, 'How many', 1, 2), (@qid, 'How old', 0, 3), (@qid, 'How long', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ have you been waiting ? – For two hours.',
+    'Duration → How long.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'How long', 1, 1), (@qid, 'How far', 0, 2), (@qid, 'How often', 0, 3), (@qid, 'How much', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ color do you prefer, red or blue ?',
+    'Choice between options → Which.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'What', 0, 1), (@qid, 'Which', 1, 2), (@qid, 'Who', 0, 3), (@qid, 'Whose', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ book is this ? – It''s mine.',
+    'Possession → Whose.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Who', 0, 1), (@qid, 'Whose', 1, 2), (@qid, 'Which', 0, 3), (@qid, 'What', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '______ did you invite to the party ? – All my friends.',
+    'Person → Whom/Who.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'What', 0, 1), (@qid, 'Who', 1, 2), (@qid, 'Which', 0, 3), (@qid, 'Whose', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'You like mangoes, ______ ?',
+    'Positive statement → negative tag: don''t you.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'don''t you', 1, 1), (@qid, 'do you', 0, 2), (@qid, 'aren''t you', 0, 3), (@qid, 'isn''t it', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She hasn''t seen that film, ______ ?',
+    'Negative statement → positive tag: has she.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hasn''t she', 0, 1), (@qid, 'has she', 1, 2), (@qid, 'doesn''t she', 0, 3), (@qid, 'isn''t she', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Let''s go to the beach, ______ ?',
+    'Let''s → shall we.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'don''t we', 0, 1), (@qid, 'shall we', 1, 2), (@qid, 'will we', 0, 3), (@qid, 'do we', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'I''m right, ______ ?',
+    'I am → aren''t I.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'am I', 0, 1), (@qid, 'aren''t I', 1, 2), (@qid, 'isn''t I', 0, 3), (@qid, 'don''t I', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'There is a problem, ______ ?',
+    'There is → isn''t there.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'isn''t there', 1, 1), (@qid, 'is there', 0, 2), (@qid, 'isn''t it', 0, 3), (@qid, 'doesn''t it', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She can swim very well, ______ ?',
+    'Can → can''t she.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'can she', 0, 1), (@qid, 'can''t she', 1, 2), (@qid, 'doesn''t she', 0, 3), (@qid, 'isn''t she', 0, 4);
+
+-- ============================================
+-- LOT 6 : Discours indirect et concordance (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'He said: "I am tired." → He said that he ______ tired.',
+    'Present → past in reported speech: was.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'is', 0, 1), (@qid, 'was', 1, 2), (@qid, 'has been', 0, 3), (@qid, 'will be', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She said: "I will come tomorrow." → She said that she ______ come the next day.',
+    'Will → would in reported speech.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will', 0, 1), (@qid, 'would', 1, 2), (@qid, 'is going to', 0, 3), (@qid, 'can', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'He asked me: "Where do you live?" → He asked me where ______.',
+    'Indirect question: subject + verb → I lived.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'do I live', 0, 1), (@qid, 'I lived', 1, 2), (@qid, 'did I live', 0, 3), (@qid, 'I live', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She told me: "Close the door!" → She told me ______ the door.',
+    'Imperative → to + base verb.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'close', 0, 1), (@qid, 'to close', 1, 2), (@qid, 'closing', 0, 3), (@qid, 'closed', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'He asked me ______ I liked mangoes.',
+    'Yes/No question → if.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'if', 1, 1), (@qid, 'what', 0, 2), (@qid, 'where', 0, 3), (@qid, 'who', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'My father said: "Don''t be late!" → My father told me ______ late.',
+    'Negative imperative → not to be.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'not be', 0, 1), (@qid, 'not to be', 1, 2), (@qid, 'don''t be', 0, 3), (@qid, 'to not be', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She said: "I have finished my work." → She said that she ______ her work.',
+    'Present perfect → past perfect: had finished.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'finished', 0, 1), (@qid, 'had finished', 1, 2), (@qid, 'has finished', 0, 3), (@qid, 'would finish', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'He said: "I saw the film yesterday." → He said that he ______ the film the day before.',
+    'Past simple → past perfect: had seen.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'saw', 0, 1), (@qid, 'had seen', 1, 2), (@qid, 'has seen', 0, 3), (@qid, 'was seeing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '"I can swim," she said. → She said that she ______ swim.',
+    'Can → could in reported speech.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'can', 0, 1), (@qid, 'could', 1, 2), (@qid, 'will', 0, 3), (@qid, 'is able', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, '"Don''t touch the wire!" he said. → He warned us ______ the wire.',
+    'Warn + not to + base verb.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'don''t touch', 0, 1), (@qid, 'not to touch', 1, 2), (@qid, 'to not touch', 0, 3), (@qid, 'didn''t touch', 0, 4);
+
+-- ============================================
+-- LOT 7 : Comparatifs et superlatifs (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'This bag is ______ than that one.',
+    'Comparative of "heavy" → heavier (y → ier).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'heavy', 0, 1), (@qid, 'heavier', 1, 2), (@qid, 'heaviest', 0, 3), (@qid, 'more heavy', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She is the ______ girl in the class.',
+    'Superlative of "intelligent" → most intelligent.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'intelligent', 0, 1), (@qid, 'most intelligent', 1, 2), (@qid, 'more intelligent', 0, 3), (@qid, 'intelligentest', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Mount Everest is the ______ mountain in the world.',
+    'Superlative of "high" → highest.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'high', 0, 1), (@qid, 'highest', 1, 2), (@qid, 'higher', 0, 3), (@qid, 'most high', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'This exercise is ______ than the previous one.',
+    'Comparative of "easy" → easier.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'easy', 0, 1), (@qid, 'easier', 1, 2), (@qid, 'easiest', 0, 3), (@qid, 'more easy', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'He is as ______ as his brother.',
+    'As + adjective + as → tall.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'taller', 0, 1), (@qid, 'tall', 1, 2), (@qid, 'tallest', 0, 3), (@qid, 'more tall', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'That was the ______ day of my life.',
+    'Superlative of "good" → best.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'good', 0, 1), (@qid, 'best', 1, 2), (@qid, 'better', 0, 3), (@qid, 'goodest', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'This is the ______ film I have ever seen.',
+    'Superlative of "bad" → worst.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'baddest', 0, 1), (@qid, 'worst', 1, 2), (@qid, 'worse', 0, 3), (@qid, 'bad', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'The more you study, the ______ your grades will be.',
+    'The + comparative, the + comparative → better.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'more good', 0, 1), (@qid, 'better', 1, 2), (@qid, 'best', 0, 3), (@qid, 'good', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'Port-au-Prince is ______ than Cap-Haïtien.',
+    'Comparative of "big" → bigger.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'big', 0, 1), (@qid, 'bigger', 1, 2), (@qid, 'biggest', 0, 3), (@qid, 'more big', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(6, 2, 'She is ______ student in the school.',
+    'Superlative → the best.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'the better', 0, 1), (@qid, 'the best', 1, 2), (@qid, 'a better', 0, 3), (@qid, 'good', 0, 4);
+
+
+
 -- Anglais complétion (type_id=1)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
 (6, 1, 'The opposite of "hot" is ________.', NULL, 'Programme 9e AF', 1, 'cold');
@@ -16221,6 +18848,1961 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '20', 1, 2),
 (@qid, '200', 0, 3),
 (@qid, '22', 0, 4);
+
+
+-- ============================================
+-- QCM ESPAGNOL - QUIZ 1 À 10 (Réussite Haïti)
+-- Format : matiere_id=7, type_id=2
+-- ============================================
+
+-- ============================================
+-- QUIZ 1 : Pronoms sujets, verbes SER et ESTAR (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ estudiante.',
+    'Yo + ser (présent) → soy.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'soy', 1, 1), (@qid, 'eres', 0, 2), (@qid, 'es', 0, 3), (@qid, 'somos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Tú _____ mi mejor amigo.',
+    'Tú + ser → eres.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'soy', 0, 1), (@qid, 'eres', 1, 2), (@qid, 'es', 0, 3), (@qid, 'somos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Él _____ profesor de matemáticas.',
+    'Él/Ella + ser → es.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'soy', 0, 1), (@qid, 'eres', 0, 2), (@qid, 'es', 1, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ de Haití.',
+    'Nosotros + ser → somos.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'soy', 0, 1), (@qid, 'es', 0, 2), (@qid, 'somos', 1, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ellos _____ hermanos.',
+    'Ellos/Ellas + ser → son.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'es', 0, 1), (@qid, 'somos', 0, 2), (@qid, 'son', 1, 3), (@qid, 'eres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿De dónde _____ usted ?',
+    'Usted + ser → es.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'eres', 0, 1), (@qid, 'es', 1, 2), (@qid, 'soy', 0, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Vosotros _____ muy simpáticos.',
+    'Vosotros + ser → sois.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sois', 1, 1), (@qid, 'somos', 0, 2), (@qid, 'son', 0, 3), (@qid, 'eres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ cansado hoy.',
+    'État temporaire → estar: estoy.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'estoy', 1, 1), (@qid, 'soy', 0, 2), (@qid, 'está', 0, 3), (@qid, 'es', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ enferma desde ayer.',
+    'État → estar: está.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'es', 0, 1), (@qid, 'está', 1, 2), (@qid, 'estoy', 0, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Dónde _____ mis llaves ?',
+    'Localisation → estar: están (llaves = féminin pluriel).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'está', 0, 1), (@qid, 'están', 1, 2), (@qid, 'es', 0, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ en la escuela ahora.',
+    'Maintenant → estar: estamos.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'somos', 0, 1), (@qid, 'estamos', 1, 2), (@qid, 'están', 0, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo _____ usted hoy ?',
+    'Hoy = aujourd''hui → estar: está.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'es', 0, 1), (@qid, 'está', 1, 2), (@qid, 'estás', 0, 3), (@qid, 'eres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "bonjour" en español ?',
+    'Buenos días = bonjour (le matin).', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Buenas noches', 0, 1), (@qid, 'Buenos días', 1, 2), (@qid, 'Adiós', 0, 3), (@qid, 'Hasta luego', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "merci" en español ?',
+    'Merci = gracias.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Por favor', 0, 1), (@qid, 'Gracias', 1, 2), (@qid, 'Perdón', 0, 3), (@qid, 'De nada', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "au revoir" en español ?',
+    'Adiós = au revoir (définitif) / Hasta luego = à plus tard.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hola', 0, 1), (@qid, 'Adiós', 1, 2), (@qid, 'Gracias', 0, 3), (@qid, 'Buenos días', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El artículo definido masculino singular es :',
+    'El = masculin singulier.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La', 0, 1), (@qid, 'El', 1, 2), (@qid, 'Los', 0, 3), (@qid, 'Las', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El artículo definido femenino singular es :',
+    'La = féminin singulier.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La', 1, 1), (@qid, 'El', 0, 2), (@qid, 'Las', 0, 3), (@qid, 'Lo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál es el plural de "la casa" ?',
+    'La casa → las casas.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Los casas', 0, 1), (@qid, 'Las casas', 1, 2), (@qid, 'Los casa', 0, 3), (@qid, 'El casas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál es el plural de "el libro" ?',
+    'El libro → los libros.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Los libros', 1, 1), (@qid, 'Las libros', 0, 2), (@qid, 'El libros', 0, 3), (@qid, 'Los libro', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál es la capital de España ?',
+    'Madrid = capitale de l''Espagne.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Barcelona', 0, 1), (@qid, 'Madrid', 1, 2), (@qid, 'Sevilla', 0, 3), (@qid, 'Valencia', 0, 4);
+
+-- ============================================
+-- QUIZ 2 : Verbes en -AR, -ER, -IR (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ español todos los días.',
+    'Hablar (régulier -AR) : yo hablo.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hablo', 1, 1), (@qid, 'hablas', 0, 2), (@qid, 'habla', 0, 3), (@qid, 'hablamos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Tú _____ muy bien.',
+    'Cantar : tú cantas.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'canto', 0, 1), (@qid, 'cantas', 1, 2), (@qid, 'canta', 0, 3), (@qid, 'cantan', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ en una oficina.',
+    'Trabajar : ella trabaja.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'trabajo', 0, 1), (@qid, 'trabaja', 1, 2), (@qid, 'trabajamos', 0, 3), (@qid, 'trabajan', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ en Puerto Príncipe.',
+    'Vivir : nosotros vivimos.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vive', 0, 1), (@qid, 'vivimos', 1, 2), (@qid, 'viven', 0, 3), (@qid, 'vivo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ellos _____ mucha fruta.',
+    'Comer : ellos comen.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'come', 0, 1), (@qid, 'comemos', 0, 2), (@qid, 'comen', 1, 3), (@qid, 'comes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo no _____ café.',
+    'Beber : yo bebo.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'bebe', 0, 1), (@qid, 'bebo', 1, 2), (@qid, 'bebes', 0, 3), (@qid, 'bebemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Tú _____ en Haití o en República Dominicana ?',
+    'Vivir : tú vives.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vives', 1, 1), (@qid, 'vive', 0, 2), (@qid, 'vivo', 0, 3), (@qid, 'vivimos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ la puerta.',
+    'Abrir : nosotros abrimos.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'abre', 0, 1), (@qid, 'abrimos', 1, 2), (@qid, 'abren', 0, 3), (@qid, 'abro', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ un libro interesante.',
+    'Leer : ella lee.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'leo', 0, 1), (@qid, 'lee', 1, 2), (@qid, 'lees', 0, 3), (@qid, 'leemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ a la escuela todos los días.',
+    'Ir (irrégulier) : yo voy.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'voy', 1, 1), (@qid, 'vas', 0, 2), (@qid, 'va', 0, 3), (@qid, 'ir', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Adónde _____ tú ?',
+    'Ir : tú vas.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'voy', 0, 1), (@qid, 'vas', 1, 2), (@qid, 'va', 0, 3), (@qid, 'vamos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Él _____ al supermercado.',
+    'Ir : él va.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'va', 1, 1), (@qid, 'vas', 0, 2), (@qid, 'voy', 0, 3), (@qid, 'van', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ al cine.',
+    'Ir : nosotros vamos.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vamos', 1, 1), (@qid, 'van', 0, 2), (@qid, 'va', 0, 3), (@qid, 'voy', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ellos _____ al parque.',
+    'Ir : ellos van.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'va', 0, 1), (@qid, 'vamos', 0, 2), (@qid, 'van', 1, 3), (@qid, 'voy', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "manger" en español ?',
+    'Comer = manger.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Beber', 0, 1), (@qid, 'Comer', 1, 2), (@qid, 'Dormir', 0, 3), (@qid, 'Hablar', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "boire" en español ?',
+    'Beber = boire.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Comer', 0, 1), (@qid, 'Beber', 1, 2), (@qid, 'Vivir', 0, 3), (@qid, 'Hablar', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "dormir" en español ?',
+    'Dormir = dormir.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Comer', 0, 1), (@qid, 'Beber', 0, 2), (@qid, 'Dormir', 1, 3), (@qid, 'Vivir', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál es el infinitivo del verbo "estoy" ?',
+    'Estoy → estar.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ser', 0, 1), (@qid, 'Estar', 1, 2), (@qid, 'Haber', 0, 3), (@qid, 'Tener', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál es el infinitivo del verbo "soy" ?',
+    'Soy → ser.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ser', 1, 1), (@qid, 'Estar', 0, 2), (@qid, 'Tener', 0, 3), (@qid, 'Ir', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál es el infinitivo de "voy" ?',
+    'Voy → ir.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ir', 1, 1), (@qid, 'Ser', 0, 2), (@qid, 'Estar', 0, 3), (@qid, 'Ver', 0, 4);
+
+-- ============================================
+-- QUIZ 3 : Adjectifs possessifs et genre (15 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ libro (mi / mis)',
+    'Libro = singulier → mi libro.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'mi', 1, 1), (@qid, 'mis', 0, 2), (@qid, 'mío', 0, 3), (@qid, 'tu', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ libros (mis / tu)',
+    'Libros = pluriel → mis libros.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'mi', 0, 1), (@qid, 'mis', 1, 2), (@qid, 'mío', 0, 3), (@qid, 'mía', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ casa (tu / tus)',
+    'Casa = singulier → tu casa.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tus', 0, 1), (@qid, 'tu', 1, 2), (@qid, 'su', 0, 3), (@qid, 'sus', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ hermanos (tus / tu)',
+    'Hermanos = pluriel → tus hermanos.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tus', 1, 1), (@qid, 'tu', 0, 2), (@qid, 'sus', 0, 3), (@qid, 'su', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ padre (su / sus)',
+    'Padre = singulier → su padre.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sus', 0, 1), (@qid, 'su', 1, 2), (@qid, 'tu', 0, 3), (@qid, 'mi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ amigos (nuestro / nuestros)',
+    'Amigos = masculin pluriel → nuestros.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nuestro', 0, 1), (@qid, 'nuestros', 1, 2), (@qid, 'nuestra', 0, 3), (@qid, 'nuestras', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ amigas (nuestras / nuestros)',
+    'Amigas = féminin pluriel → nuestras.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nuestras', 1, 1), (@qid, 'nuestros', 0, 2), (@qid, 'nuestro', 0, 3), (@qid, 'vuestro', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Este bolígrafo no es de mí, es _____.',
+    'Tuyo = le tien (pronom possessif masculin).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ti', 0, 1), (@qid, 'tuyo', 1, 2), (@qid, 'tu', 0, 3), (@qid, 'usted', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La casa es _____.',
+    'Mía = la mienne (féminin).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'mío', 0, 1), (@qid, 'mía', 1, 2), (@qid, 'mi', 0, 3), (@qid, 'mis', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Los libros son _____.',
+    'Nuestros = les nôtres (masculin pluriel).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nuestro', 0, 1), (@qid, 'nuestros', 1, 2), (@qid, 'nuestra', 0, 3), (@qid, 'nuestras', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El perro de Juan → Es _____ perro.',
+    'Son = son chien (à lui/elle, singulier).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'su', 1, 1), (@qid, 'sus', 0, 2), (@qid, 'tu', 0, 3), (@qid, 'mi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Los gatos de María y José → Son _____ gatos.',
+    'Leurs chats (pluriel) → sus.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'su', 0, 1), (@qid, 'sus', 1, 2), (@qid, 'tus', 0, 3), (@qid, 'mis', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ (notre) escuela es grande.',
+    'Notre école (féminin singulier) → nuestra.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nuestro', 0, 1), (@qid, 'Nuestra', 1, 2), (@qid, 'Nuestros', 0, 3), (@qid, 'Nuestras', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿De quién es este lápiz ? – Es _____. (à moi)',
+    'À moi = mío.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'mío', 1, 1), (@qid, 'mi', 0, 2), (@qid, 'tuyo', 0, 3), (@qid, 'su', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿De quién es esta mochila ? – Es _____. (à elle)',
+    'À elle = suyo (féminin = suya).', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'su', 0, 1), (@qid, 'suya', 1, 2), (@qid, 'suyo', 0, 3), (@qid, 'tuya', 0, 4);
+
+-- ============================================
+-- QUIZ 4 : Nombres, couleurs, jours et mois (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se escribe el número 15 en español ?',
+    '15 = quince.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cinco', 0, 1), (@qid, 'Quince', 1, 2), (@qid, 'Cincuenta', 0, 3), (@qid, 'Veinte', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice 30 en español ?',
+    '30 = treinta.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Treinta', 1, 1), (@qid, 'Trece', 0, 2), (@qid, 'Veinte', 0, 3), (@qid, 'Cuarenta', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice 100 en español ?',
+    '100 = cien.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cien', 1, 1), (@qid, 'Mil', 0, 2), (@qid, 'Diez', 0, 3), (@qid, 'Ciento', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál es el color del cielo ?',
+    'Azul = bleu.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Rojo', 0, 1), (@qid, 'Azul', 1, 2), (@qid, 'Verde', 0, 3), (@qid, 'Amarillo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿De qué color es la hierba ?',
+    'Verde = vert.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Azul', 0, 1), (@qid, 'Rojo', 0, 2), (@qid, 'Verde', 1, 3), (@qid, 'Blanco', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿De qué color es la nieve ?',
+    'Blanco = blanc.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Negro', 0, 1), (@qid, 'Blanco', 1, 2), (@qid, 'Rojo', 0, 3), (@qid, 'Amarillo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿De qué color es la sangre ?',
+    'Rojo = rouge.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Azul', 0, 1), (@qid, 'Verde', 0, 2), (@qid, 'Rojo', 1, 3), (@qid, 'Amarillo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "lundi" en español ?',
+    'Lunes = lundi.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Martes', 0, 1), (@qid, 'Lunes', 1, 2), (@qid, 'Miércoles', 0, 3), (@qid, 'Jueves', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "mardi" en español ?',
+    'Martes = mardi.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Lunes', 0, 1), (@qid, 'Martes', 1, 2), (@qid, 'Jueves', 0, 3), (@qid, 'Viernes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "samedi" en español ?',
+    'Sábado = samedi.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Domingo', 0, 1), (@qid, 'Sábado', 1, 2), (@qid, 'Viernes', 0, 3), (@qid, 'Jueves', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "dimanche" en español ?',
+    'Domingo = dimanche.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sábado', 0, 1), (@qid, 'Domingo', 1, 2), (@qid, 'Lunes', 0, 3), (@qid, 'Viernes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál es el primer mes del año ?',
+    'Enero = janvier (premier mois).', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Diciembre', 0, 1), (@qid, 'Enero', 1, 2), (@qid, 'Marzo', 0, 3), (@qid, 'Febrero', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "janvier" en español ?',
+    'Enero = janvier.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Enero', 1, 1), (@qid, 'Febrero', 0, 2), (@qid, 'Marzo', 0, 3), (@qid, 'Abril', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "été" en español ?',
+    'Verano = été.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Invierno', 0, 1), (@qid, 'Verano', 1, 2), (@qid, 'Otoño', 0, 3), (@qid, 'Primavera', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "hiver" en español ?',
+    'Invierno = hiver.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Verano', 0, 1), (@qid, 'Invierno', 1, 2), (@qid, 'Primavera', 0, 3), (@qid, 'Otoño', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Hoy es _____. (lundi)',
+    'Lunes = lundi.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lunes', 1, 1), (@qid, 'martes', 0, 2), (@qid, 'miércoles', 0, 3), (@qid, 'jueves', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mañana es _____. (mercredi)',
+    'Miércoles = mercredi.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'martes', 0, 1), (@qid, 'miércoles', 1, 2), (@qid, 'jueves', 0, 3), (@qid, 'viernes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Naranja es un color y una _____.',
+    'Naranja = orange (couleur et fruit).', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'verdura', 0, 1), (@qid, 'fruta', 1, 2), (@qid, 'carne', 0, 3), (@qid, 'bebida', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Son las tres _____ punto.',
+    'En punto = précises.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'menos', 0, 1), (@qid, 'en', 1, 2), (@qid, 'y', 0, 3), (@qid, 'con', 0, 4);
+
+-- ============================================
+-- QUIZ 5 : Verbes irréguliers courants (15 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (tener) dos hermanos.',
+    'Tener : yo tengo (irrégulier).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tengo', 1, 1), (@qid, 'tiene', 0, 2), (@qid, 'tienes', 0, 3), (@qid, 'tenemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Tú _____ (tener) un libro.',
+    'Tener : tú tienes.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tengo', 0, 1), (@qid, 'tienes', 1, 2), (@qid, 'tiene', 0, 3), (@qid, 'tenemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ (tener) quince años.',
+    'Tener : ella tiene.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tengo', 0, 1), (@qid, 'tiene', 1, 2), (@qid, 'tienes', 0, 3), (@qid, 'tienen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (hacer) la tarea.',
+    'Hacer : yo hago.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hago', 1, 1), (@qid, 'hace', 0, 2), (@qid, 'haces', 0, 3), (@qid, 'hacemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ (hacer) deporte.',
+    'Hacer : nosotros hacemos.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hago', 0, 1), (@qid, 'hacemos', 1, 2), (@qid, 'hacen', 0, 3), (@qid, 'hace', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (poner) la mesa.',
+    'Poner : yo pongo.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'pongo', 1, 1), (@qid, 'pone', 0, 2), (@qid, 'pones', 0, 3), (@qid, 'ponemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Qué _____ (decir) tú ?',
+    'Decir : tú dices.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'digo', 0, 1), (@qid, 'dices', 1, 2), (@qid, 'dice', 0, 3), (@qid, 'decimos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo no _____ (saber) la respuesta.',
+    'Saber : yo sé.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sé', 1, 1), (@qid, 'sabe', 0, 2), (@qid, 'sabes', 0, 3), (@qid, 'sabemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ (conocer) a mi madre.',
+    'Conocer : ella conoce.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'conozco', 0, 1), (@qid, 'conoce', 1, 2), (@qid, 'conoces', 0, 3), (@qid, 'conocemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (traer) un regalo.',
+    'Traer : yo traigo.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'traigo', 1, 1), (@qid, 'trae', 0, 2), (@qid, 'traes', 0, 3), (@qid, 'traemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mis padres _____ (venir) mañana.',
+    'Venir : ellos vienen.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'viene', 0, 1), (@qid, 'vienen', 1, 2), (@qid, 'vengo', 0, 3), (@qid, 'venimos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (salir) de casa a las ocho.',
+    'Salir : yo salgo.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'salgo', 1, 1), (@qid, 'sale', 0, 2), (@qid, 'sales', 0, 3), (@qid, 'salimos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuántos años _____ (tener) tú ?',
+    'Tener : tú tienes.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tengo', 0, 1), (@qid, 'tienes', 1, 2), (@qid, 'tiene', 0, 3), (@qid, 'tenemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ (venir) de Haití.',
+    'Venir : nosotros venimos.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vengo', 0, 1), (@qid, 'venimos', 1, 2), (@qid, 'vienen', 0, 3), (@qid, 'viene', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ (decir) la verdad.',
+    'Decir : ella dice.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'digo', 0, 1), (@qid, 'dice', 1, 2), (@qid, 'dices', 0, 3), (@qid, 'dicen', 0, 4);
+
+-- ============================================
+-- QUIZ 6 : Famille, professions, vocabulaire (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El padre de mi padre es mi _____.',
+    'Abuelo = grand-père.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'abuelo', 1, 1), (@qid, 'tío', 0, 2), (@qid, 'hermano', 0, 3), (@qid, 'primo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La madre de mi madre es mi _____.',
+    'Abuela = grand-mère.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tía', 0, 1), (@qid, 'abuela', 1, 2), (@qid, 'hermana', 0, 3), (@qid, 'prima', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El hermano de mi madre es mi _____.',
+    'Tío = oncle.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tío', 1, 1), (@qid, 'abuelo', 0, 2), (@qid, 'primo', 0, 3), (@qid, 'hermano', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La hermana de mi padre es mi _____.',
+    'Tía = tante.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'abuela', 0, 1), (@qid, 'tía', 1, 2), (@qid, 'prima', 0, 3), (@qid, 'madre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El hijo de mi tío es mi _____.',
+    'Primo = cousin.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hermano', 0, 1), (@qid, 'primo', 1, 2), (@qid, 'sobrino', 0, 3), (@qid, 'nieto', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El hijo de mi hermano es mi _____.',
+    'Sobrino = neveu.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'primo', 0, 1), (@qid, 'sobrino', 1, 2), (@qid, 'nieto', 0, 3), (@qid, 'hijo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La persona que enseña en la escuela es el _____.',
+    'Profesor = enseignant.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'médico', 0, 1), (@qid, 'profesor', 1, 2), (@qid, 'abogado', 0, 3), (@qid, 'ingeniero', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La persona que cura a los enfermos es el _____.',
+    'Médico = médecin.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'profesor', 0, 1), (@qid, 'médico', 1, 2), (@qid, 'abogado', 0, 3), (@qid, 'carpintero', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El que trabaja con madera es el _____.',
+    'Carpintero = menuisier.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'carnicero', 0, 1), (@qid, 'carpintero', 1, 2), (@qid, 'panadero', 0, 3), (@qid, 'jardinero', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La persona que defiende en un juicio es el _____.',
+    'Abogado = avocat.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'abogado', 1, 1), (@qid, 'juez', 0, 2), (@qid, 'policía', 0, 3), (@qid, 'médico', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "soeur" en español ?',
+    'Hermana = soeur.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hermano', 0, 1), (@qid, 'Hermana', 1, 2), (@qid, 'Madre', 0, 3), (@qid, 'Padre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "tante" en español ?',
+    'Tía = tante.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Tío', 0, 1), (@qid, 'Tía', 1, 2), (@qid, 'Abuela', 0, 3), (@qid, 'Madre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "hijo" en español ?',
+    'Hijo = fils.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hija', 0, 1), (@qid, 'Hijo', 1, 2), (@qid, 'Hermano', 0, 3), (@qid, 'Niño', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "hija" en español ?',
+    'Hija = fille.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hija', 1, 1), (@qid, 'Hijo', 0, 2), (@qid, 'Hermana', 0, 3), (@qid, 'Niña', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La esposa de mi hijo es mi _____.',
+    'Nuera = belle-fille (épouse du fils).', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nuera', 1, 1), (@qid, 'suegra', 0, 2), (@qid, 'cuñada', 0, 3), (@qid, 'yerno', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El esposo de mi hija es mi _____.',
+    'Yerno = gendre.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'suegro', 0, 1), (@qid, 'yerno', 1, 2), (@qid, 'cuñado', 0, 3), (@qid, 'nuera', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mi hermano y yo somos _____.',
+    'Hermanos = frères (frères et soeurs).', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hermanos', 1, 1), (@qid, 'primos', 0, 2), (@qid, 'amigos', 0, 3), (@qid, 'hijos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuántas personas hay en _____ familia ?',
+    'Tu = ta (adjectif possessif).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tu', 1, 1), (@qid, 'su', 0, 2), (@qid, 'mi', 0, 3), (@qid, 'vuestra', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ padres son muy amables. (Mes parents)',
+    'Mis = mes (pluriel).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Mi', 0, 1), (@qid, 'Mis', 1, 2), (@qid, 'Tus', 0, 3), (@qid, 'Sus', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ hermano se llama Pedro. (Son frère)',
+    'Su = son (à lui/elle).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Su', 1, 1), (@qid, 'Tu', 0, 2), (@qid, 'Mi', 0, 3), (@qid, 'Nuestro', 0, 4);
+
+-- ============================================
+-- QUIZ 7 : Phrases utiles, salutations, communication (15 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo te llamas ? – _____ llamo Juan.',
+    'Me = je m''appelle.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Te', 0, 1), (@qid, 'Me', 1, 2), (@qid, 'Se', 0, 3), (@qid, 'Le', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mucho _____. (Enchanté)',
+    'Mucho gusto = enchanté.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gusto', 1, 1), (@qid, 'gracias', 0, 2), (@qid, 'favor', 0, 3), (@qid, 'luego', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Por _____. (S''il vous plaît)',
+    'Por favor = s''il vous plaît.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gracias', 0, 1), (@qid, 'favor', 1, 2), (@qid, 'gusto', 0, 3), (@qid, 'nada', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'De _____. (De rien)',
+    'De nada = de rien.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gusto', 0, 1), (@qid, 'nada', 1, 2), (@qid, 'favor', 0, 3), (@qid, 'gracias', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Lo _____. (Je suis désolé)',
+    'Lo siento = je suis désolé.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gusto', 0, 1), (@qid, 'siento', 1, 2), (@qid, 'perdón', 0, 3), (@qid, 'favor', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo estás ? – Estoy _____.',
+    'Bien = bien (réponse à cómo estás).', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'bien', 1, 1), (@qid, 'bueno', 0, 2), (@qid, 'malo', 0, 3), (@qid, 'grande', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Hasta _____. (À bientôt)',
+    'Hasta luego = à bientôt/à plus tard.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vista', 0, 1), (@qid, 'luego', 1, 2), (@qid, 'mañana', 0, 3), (@qid, 'nunca', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Buenas _____. (Bonsoir)',
+    'Buenas noches = bonsoir/bonne nuit.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'días', 0, 1), (@qid, 'noches', 1, 2), (@qid, 'tardes', 0, 3), (@qid, 'horas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Buenos _____. (Bonjour)',
+    'Buenos días = bonjour (le matin).', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'días', 1, 1), (@qid, 'noches', 0, 2), (@qid, 'tardes', 0, 3), (@qid, 'horas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Qué hora es ? – _____ las dos.',
+    'Son = il est (pour les heures).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Es', 0, 1), (@qid, 'Son', 1, 2), (@qid, 'Está', 0, 3), (@qid, 'Están', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Es la _____. (Il est une heure)',
+    'Una = une (pour 1h).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'uno', 0, 1), (@qid, 'una', 1, 2), (@qid, 'dos', 0, 3), (@qid, 'tres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿De dónde _____ (tú) ?',
+    'Ser : tú eres.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'eres', 1, 1), (@qid, 'es', 0, 2), (@qid, 'soy', 0, 3), (@qid, 'somos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Soy _____ Haití.',
+    'De = de/du (origine).', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'en', 0, 1), (@qid, 'de', 1, 2), (@qid, 'a', 0, 3), (@qid, 'por', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Vivo _____ Puerto Príncipe.',
+    'En = à (pour les villes).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'en', 1, 1), (@qid, 'de', 0, 2), (@qid, 'a', 0, 3), (@qid, 'por', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Tengo _____ años. (J''ai 15 ans)',
+    'Quince = quinze.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'diez', 0, 1), (@qid, 'quince', 1, 2), (@qid, 'veinte', 0, 3), (@qid, 'cinco', 0, 4);
+
+-- ============================================
+-- QUIZ 8 : Accents et prononciation (10 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La sílaba tónica de "profesor" es :',
+    'Pro-fe-SOR : accent sur la dernière syllabe.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'pro', 0, 1), (@qid, 'fe', 0, 2), (@qid, 'sor', 1, 3), (@qid, 'Todas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La sílaba tónica de "lápiz" es :',
+    'LÁ-piz : accent écrit sur lá.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lá', 1, 1), (@qid, 'piz', 0, 2), (@qid, 'Ambas', 0, 3), (@qid, 'Ninguna', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál palabra está bien escrita ?',
+    'Jamón = jambon (accent sur la dernière).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'jamon', 0, 1), (@qid, 'jamón', 1, 2), (@qid, 'jámon', 0, 3), (@qid, 'jamonn', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál palabra está bien escrita ?',
+    'Fácil = facile (accent sur fá).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'facil', 0, 1), (@qid, 'fácil', 1, 2), (@qid, 'facíl', 0, 3), (@qid, 'facill', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El plural de "lápiz" es :',
+    'Lápiz → lápices.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lápizes', 0, 1), (@qid, 'lápices', 1, 2), (@qid, 'lapiz', 0, 3), (@qid, 'lápizs', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Qué letra no se pronuncia en "hola" ?',
+    'Le h est muet en espagnol.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'o', 0, 1), (@qid, 'l', 0, 2), (@qid, 'h', 1, 3), (@qid, 'a', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se pronuncia "ll" en "llamar" ?',
+    'Ll se prononce comme "y" (yamar).', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Como l', 0, 1), (@qid, 'Como y', 1, 2), (@qid, 'Como j', 0, 3), (@qid, 'Como ch', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se pronuncia "ñ" en "niño" ?',
+    'Ñ = gn (comme dans "Espagne").', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Como n', 0, 1), (@qid, 'Como gn (agneau)', 1, 2), (@qid, 'Como m', 0, 3), (@qid, 'Como l', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Dónde lleva el acento "teléfono" ?',
+    'Te-LÉ-fo-no : accent sur lé.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'te', 0, 1), (@qid, 'lé', 1, 2), (@qid, 'fo', 0, 3), (@qid, 'no', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Qué palabra es aguda (accent sur la dernière) ?',
+    'Canción = chanson (accent écrit sur la dernière syllabe).', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'árbol', 0, 1), (@qid, 'canción', 1, 2), (@qid, 'lápiz', 0, 3), (@qid, 'fácil', 0, 4);
+
+-- ============================================
+-- QUIZ 9 : Conjugaison au passé (Pretérito) (15 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ayer yo _____ (comer) arroz.',
+    'Comer : yo comí (pretérito).', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'comí', 1, 1), (@qid, 'comió', 0, 2), (@qid, 'comía', 0, 3), (@qid, 'como', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ (hablar) con su madre ayer.',
+    'Hablar : ella habló.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hablé', 0, 1), (@qid, 'habló', 1, 2), (@qid, 'hablaba', 0, 3), (@qid, 'habla', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ (vivir) en España el año pasado.',
+    'Vivir : nosotros vivimos (pretérito = présent).', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vivimos', 1, 1), (@qid, 'vivíamos', 0, 2), (@qid, 'viven', 0, 3), (@qid, 'vivió', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ellos _____ (beber) mucha agua.',
+    'Beber : ellos bebieron.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'bebieron', 1, 1), (@qid, 'bebían', 0, 2), (@qid, 'beben', 0, 3), (@qid, 'bebimos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (ir) al cine el sábado.',
+    'Ir : yo fui.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'fui', 1, 1), (@qid, 'iba', 0, 2), (@qid, 'voy', 0, 3), (@qid, 'iré', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Tú _____ (hacer) la tarea ayer.',
+    'Hacer : tú hiciste.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hiciste', 1, 1), (@qid, 'hizo', 0, 2), (@qid, 'hacías', 0, 3), (@qid, 'haces', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ (tener) un examen.',
+    'Tener : nosotros tuvimos.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tuvimos', 1, 1), (@qid, 'teníamos', 0, 2), (@qid, 'tenemos', 0, 3), (@qid, 'tienen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ (estar) enferma la semana pasada.',
+    'Estar : ella estuvo.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'estuvo', 1, 1), (@qid, 'estaba', 0, 2), (@qid, 'está', 0, 3), (@qid, 'estuve', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (ser) estudiante en 2020.',
+    'Ser : yo fui.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'fui', 1, 1), (@qid, 'era', 0, 2), (@qid, 'soy', 0, 3), (@qid, 'seré', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ellos _____ (venir) a la fiesta.',
+    'Venir : ellos vinieron.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vinieron', 1, 1), (@qid, 'venían', 0, 2), (@qid, 'vienen', 0, 3), (@qid, 'vengaron', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Qué _____ (decir) ella ?',
+    'Decir : ella dijo.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'dijo', 1, 1), (@qid, 'decía', 0, 2), (@qid, 'dice', 0, 3), (@qid, 'dijiste', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo te _____ (dar) un regalo.',
+    'Dar : yo di.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'di', 1, 1), (@qid, 'dio', 0, 2), (@qid, 'daba', 0, 3), (@qid, 'doy', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ (poner) la mesa.',
+    'Poner : nosotros pusimos.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'pusimos', 1, 1), (@qid, 'poníamos', 0, 2), (@qid, 'ponemos', 0, 3), (@qid, 'pusieron', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ayer _____ (ser) un buen día.',
+    'Ser : fue.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'fue', 1, 1), (@qid, 'era', 0, 2), (@qid, 'es', 0, 3), (@qid, 'fui', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Adónde _____ (ir) ustedes ayer ?',
+    'Ir : ustedes fueron.', 'Quiz Espagnol 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'fueron', 1, 1), (@qid, 'iban', 0, 2), (@qid, 'van', 0, 3), (@qid, 'irán', 0, 4);
+
+-- ============================================
+-- QUIZ 10 : Révision générale (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "lundi" en español ?',
+    'Lunes = lundi.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Martes', 0, 1), (@qid, 'Lunes', 1, 2), (@qid, 'Miércoles', 0, 3), (@qid, 'Jueves', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Buenos _____. (Bonjour)',
+    'Buenos días = bonjour.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'días', 1, 1), (@qid, 'noches', 0, 2), (@qid, 'tardes', 0, 3), (@qid, 'horas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo te llamas ? – _____ llamo María.',
+    'Me = je m''appelle.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Me', 1, 1), (@qid, 'Te', 0, 2), (@qid, 'Se', 0, 3), (@qid, 'Le', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ libro es mío.',
+    'El = article défini masculin singulier.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'El', 1, 1), (@qid, 'La', 0, 2), (@qid, 'Los', 0, 3), (@qid, 'Las', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ de Puerto Príncipe.',
+    'Ser : soy.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'soy', 1, 1), (@qid, 'eres', 0, 2), (@qid, 'es', 0, 3), (@qid, 'somos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Tú _____ muy inteligente.',
+    'Ser : eres.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'soy', 0, 1), (@qid, 'eres', 1, 2), (@qid, 'es', 0, 3), (@qid, 'somos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Gracias – De _____.',
+    'De nada = de rien.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gusto', 0, 1), (@qid, 'nada', 1, 2), (@qid, 'favor', 0, 3), (@qid, 'luego', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Qué hora es ? – _____ las tres.',
+    'Son = pour les heures (pluriel).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Es', 0, 1), (@qid, 'Son', 1, 2), (@qid, 'Está', 0, 3), (@qid, 'Están', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿De dónde _____ tú ?',
+    'Ser : eres.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'eres', 1, 1), (@qid, 'es', 0, 2), (@qid, 'soy', 0, 3), (@qid, 'somos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El padre de mi padre es mi _____.',
+    'Abuelo = grand-père.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'abuelo', 1, 1), (@qid, 'tío', 0, 2), (@qid, 'hermano', 0, 3), (@qid, 'primo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "frère" en español ?',
+    'Hermano = frère.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hermana', 0, 1), (@qid, 'Hermano', 1, 2), (@qid, 'Primo', 0, 3), (@qid, 'Padre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Tengo _____ años. (15)',
+    'Quince = quinze.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'cinco', 0, 1), (@qid, 'quince', 1, 2), (@qid, 'cincuenta', 0, 3), (@qid, 'diez', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "boire" en español ?',
+    'Beber = boire.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Comer', 0, 1), (@qid, 'Beber', 1, 2), (@qid, 'Dormir', 0, 3), (@qid, 'Vivir', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿De qué color es el cielo ?',
+    'Azul = bleu.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Verde', 0, 1), (@qid, 'Azul', 1, 2), (@qid, 'Rojo', 0, 3), (@qid, 'Blanco', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "hiver" en español ?',
+    'Invierno = hiver.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Verano', 0, 1), (@qid, 'Invierno', 1, 2), (@qid, 'Otoño', 0, 3), (@qid, 'Primavera', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El _____ es el primer mes del año.',
+    'Enero = janvier.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'diciembre', 0, 1), (@qid, 'enero', 1, 2), (@qid, 'marzo', 0, 3), (@qid, 'febrero', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cuál es el plural de "el profesor" ?',
+    'El profesor → los profesores.', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Los profesores', 1, 1), (@qid, 'Las profesores', 0, 2), (@qid, 'Los profesor', 0, 3), (@qid, 'El profesores', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mucho _____. (Enchanté)',
+    'Mucho gusto = enchanté.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gracias', 0, 1), (@qid, 'gusto', 1, 2), (@qid, 'favor', 0, 3), (@qid, 'nada', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mi _____ es doctora. (tante)',
+    'Tía = tante.', 'Quiz Espagnol 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tío', 0, 1), (@qid, 'tía', 1, 2), (@qid, 'abuela', 0, 3), (@qid, 'hermana', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Vivo _____ Haití.',
+    'En = à/dans (pour un pays).', 'Quiz Espagnol 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'en', 1, 1), (@qid, 'de', 0, 2), (@qid, 'a', 0, 3), (@qid, 'por', 0, 4);
+
+
+-- ============================================
+-- QCM ESPAGNOL SUPPLÉMENTAIRES - 9e AF
+-- Questions additionnelles style examens officiels
+-- ============================================
+
+-- ============================================
+-- LOT 1 : Conjugaison au présent - verbes réguliers et irréguliers (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (estudiar) todos los días.',
+    'Estudiar : yo estudio (régulier -AR).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'estudio', 1, 1), (@qid, 'estudias', 0, 2), (@qid, 'estudia', 0, 3), (@qid, 'estudian', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ (cocinar) muy bien.',
+    'Cocinar : ella cocina.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'cocino', 0, 1), (@qid, 'cocina', 1, 2), (@qid, 'cocinas', 0, 3), (@qid, 'cocinamos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ (aprender) español.',
+    'Aprender : nosotros aprendemos.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'aprendo', 0, 1), (@qid, 'aprendemos', 1, 2), (@qid, 'aprenden', 0, 3), (@qid, 'aprende', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Tú _____ (escribir) muy rápido.',
+    'Escribir : tú escribes.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'escribes', 1, 1), (@qid, 'escribe', 0, 2), (@qid, 'escribo', 0, 3), (@qid, 'escribimos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ellos _____ (correr) en el parque.',
+    'Correr : ellos corren.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'corre', 0, 1), (@qid, 'corremos', 0, 2), (@qid, 'corren', 1, 3), (@qid, 'corro', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (tener) hambre.',
+    'Tener : yo tengo (irrégulier).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tengo', 1, 1), (@qid, 'tiene', 0, 2), (@qid, 'tienes', 0, 3), (@qid, 'tienen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿_____ (venir) tú a la fiesta ?',
+    'Venir : tú vienes.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vienes', 1, 1), (@qid, 'Viene', 0, 2), (@qid, 'Vengo', 0, 3), (@qid, 'Vienen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ (decir) la respuesta.',
+    'Decir : ella dice.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'digo', 0, 1), (@qid, 'dice', 1, 2), (@qid, 'dices', 0, 3), (@qid, 'dicen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ (hacer) ejercicio.',
+    'Hacer : nosotros hacemos.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hago', 0, 1), (@qid, 'hacemos', 1, 2), (@qid, 'hacen', 0, 3), (@qid, 'hace', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (salir) los sábados.',
+    'Salir : yo salgo.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'salgo', 1, 1), (@qid, 'sale', 0, 2), (@qid, 'sales', 0, 3), (@qid, 'salen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Qué _____ (querer) tú ?',
+    'Querer : tú quieres.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'quiero', 0, 1), (@qid, 'quieres', 1, 2), (@qid, 'quiere', 0, 3), (@qid, 'quieren', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ellos _____ (jugar) al fútbol.',
+    'Jugar : ellos juegan (u→ue).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'juegan', 1, 1), (@qid, 'juega', 0, 2), (@qid, 'jugan', 0, 3), (@qid, 'jugamos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (dormir) ocho horas.',
+    'Dormir : yo duermo (o→ue).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'duermo', 1, 1), (@qid, 'duermes', 0, 2), (@qid, 'duerme', 0, 3), (@qid, 'dormimos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ (pedir) ayuda.',
+    'Pedir : ella pide (e→i).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'pide', 1, 1), (@qid, 'pido', 0, 2), (@qid, 'pides', 0, 3), (@qid, 'piden', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ (preferir) el verano.',
+    'Preferir : nosotros preferimos.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'prefiero', 0, 1), (@qid, 'preferimos', 1, 2), (@qid, 'prefieren', 0, 3), (@qid, 'prefiere', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Tú _____ (poder) venir conmigo.',
+    'Poder : tú puedes (o→ue).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'puedes', 1, 1), (@qid, 'puede', 0, 2), (@qid, 'puedo', 0, 3), (@qid, 'podemos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La señora no _____ en la reunión de ayer.',
+    'Participar : ella participó (passé simple).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'participa', 0, 1), (@qid, 'participó', 1, 2), (@qid, 'participaba', 0, 3), (@qid, 'participaste', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ayer nosotros _____ (ir) al mercado.',
+    'Ir : nosotros fuimos.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'fuimos', 1, 1), (@qid, 'íbamos', 0, 2), (@qid, 'vamos', 0, 3), (@qid, 'iremos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Yo _____ (estar) en casa todo el día.',
+    'Estar : yo estuve.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'estuve', 1, 1), (@qid, 'estaba', 0, 2), (@qid, 'estoy', 0, 3), (@qid, 'estará', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ellos _____ (tener) un accidente.',
+    'Tener : ellos tuvieron.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tuvieron', 1, 1), (@qid, 'tenían', 0, 2), (@qid, 'tienen', 0, 3), (@qid, 'tuvimos', 0, 4);
+
+-- ============================================
+-- LOT 2 : Ser/Estar, adjectifs, accords (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La casa _____ grande y bonita.',
+    'Caractéristique permanente → ser: es.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'es', 1, 1), (@qid, 'está', 0, 2), (@qid, 'estoy', 0, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mi hermana _____ enferma hoy.',
+    'État temporaire → estar: está.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'es', 0, 1), (@qid, 'está', 1, 2), (@qid, 'estoy', 0, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Los libros _____ sobre la mesa.',
+    'Position → estar: están.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'son', 0, 1), (@qid, 'están', 1, 2), (@qid, 'es', 0, 3), (@qid, 'está', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Nosotros _____ contentos hoy.',
+    'Humeur temporaire → estar: estamos.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'somos', 0, 1), (@qid, 'estamos', 1, 2), (@qid, 'están', 0, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ella _____ profesora.',
+    'Profession → ser: es.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'es', 1, 1), (@qid, 'está', 0, 2), (@qid, 'estoy', 0, 3), (@qid, 'eres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La sopa _____ caliente.',
+    'État du plat → estar: está.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'es', 0, 1), (@qid, 'está', 1, 2), (@qid, 'estoy', 0, 3), (@qid, 'son', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Las ventanas _____ abiertas.',
+    'État → estar: están.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'son', 0, 1), (@qid, 'están', 1, 2), (@qid, 'es', 0, 3), (@qid, 'está', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mi coche es _____. (rouge)',
+    'Rojo = rouge (masculin).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'roja', 0, 1), (@qid, 'rojo', 1, 2), (@qid, 'rojos', 0, 3), (@qid, 'rojas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mi casa es _____. (blanche)',
+    'Blanca = blanche (féminin).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'blanco', 0, 1), (@qid, 'blanca', 1, 2), (@qid, 'blancos', 0, 3), (@qid, 'blancas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Los niños son _____. (intelligents)',
+    'Inteligentes (pluriel, même forme m/f).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'inteligente', 0, 1), (@qid, 'inteligentes', 1, 2), (@qid, 'inteligenta', 0, 3), (@qid, 'inteligentos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Las chicas son _____. (jolies)',
+    'Bonitas = jolies (féminin pluriel).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'bonitos', 0, 1), (@qid, 'bonitas', 1, 2), (@qid, 'bonita', 0, 3), (@qid, 'bonito', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Un perro _____. (noir)',
+    'Negro = noir (masculin).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'negra', 0, 1), (@qid, 'negro', 1, 2), (@qid, 'negros', 0, 3), (@qid, 'negras', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El agua está _____. (froide)',
+    'Fría (eau = féminin, mais "el agua").', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'frío', 0, 1), (@qid, 'fría', 1, 2), (@qid, 'fríos', 0, 3), (@qid, 'frías', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Elena es _____ bonita como Lola.',
+    'Tan... como = aussi... que.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tanta', 0, 1), (@qid, 'menos', 0, 2), (@qid, 'tan', 1, 3), (@qid, 'más', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Este libro es _____ interesante que aquél.',
+    'Más... que = plus... que.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tan', 0, 1), (@qid, 'menos', 0, 2), (@qid, 'más', 1, 3), (@qid, 'como', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Pedro es el _____ alto de la clase.',
+    'Superlatif → más alto (le plus grand).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'más', 1, 1), (@qid, 'menos', 0, 2), (@qid, 'tan', 0, 3), (@qid, 'muy', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mi hermano es _____. (grand)',
+    'Grande = grand (même forme m/f).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'grande', 1, 1), (@qid, 'granda', 0, 2), (@qid, 'grando', 0, 3), (@qid, 'grandes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La comida está _____. (délicieuse)',
+    'Deliciosa = féminin singulier.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'delicioso', 0, 1), (@qid, 'deliciosa', 1, 2), (@qid, 'deliciosos', 0, 3), (@qid, 'deliciosas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Aquellos chicos son _____ Chile.',
+    'De + pays = origine.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'en', 0, 1), (@qid, 'de', 1, 2), (@qid, 'a', 0, 3), (@qid, 'por', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'La película fue _____. (ennuyeuse)',
+    'Aburrida = féminin (película = féminin).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'aburrido', 0, 1), (@qid, 'aburrida', 1, 2), (@qid, 'aburridos', 0, 3), (@qid, 'aburridas', 0, 4);
+
+-- ============================================
+-- LOT 3 : Pronoms compléments, prépositions, questions (20 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ gusta el helado. (À moi)',
+    'Gustar → me gusta.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Me', 1, 1), (@qid, 'Te', 0, 2), (@qid, 'Le', 0, 3), (@qid, 'Se', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿_____ gusta la música ? (À toi)',
+    'Gustar → te gusta.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Me', 0, 1), (@qid, 'Te', 1, 2), (@qid, 'Le', 0, 3), (@qid, 'Se', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'A él _____ gusta bailar.',
+    'Gustar → le gusta.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'me', 0, 1), (@qid, 'le', 1, 2), (@qid, 'te', 0, 3), (@qid, 'se', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Voy a llamar _____. (Je vais l''appeler - lui)',
+    'Llamar a él → lo (COD) / le (COI).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lo', 1, 1), (@qid, 'la', 0, 2), (@qid, 'le', 0, 3), (@qid, 'les', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Conoces a María ? – Sí, _____ conozco.',
+    'La = COD féminin.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lo', 0, 1), (@qid, 'la', 1, 2), (@qid, 'le', 0, 3), (@qid, 'las', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Compraste los libros ? – Sí, _____ compré.',
+    'Los = COD masculin pluriel.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lo', 0, 1), (@qid, 'los', 1, 2), (@qid, 'las', 0, 3), (@qid, 'les', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ di un regalo a mi madre.',
+    'Le = COI (à elle).', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le', 1, 1), (@qid, 'Lo', 0, 2), (@qid, 'La', 0, 3), (@qid, 'Les', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ dije la verdad a mis padres.',
+    'Les = COI pluriel.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le', 0, 1), (@qid, 'Les', 1, 2), (@qid, 'Lo', 0, 3), (@qid, 'Los', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El regalo es _____ ti. (pour toi)',
+    'Para = pour (destinataire).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'por', 0, 1), (@qid, 'para', 1, 2), (@qid, 'con', 0, 3), (@qid, 'de', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Gracias _____ tu ayuda.',
+    'Por = pour (cause, remerciement).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'por', 1, 1), (@qid, 'para', 0, 2), (@qid, 'con', 0, 3), (@qid, 'de', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Voy _____ la escuela.',
+    'A = à (direction).', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'en', 0, 1), (@qid, 'a', 1, 2), (@qid, 'de', 0, 3), (@qid, 'por', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Sueño _____ ser médico.',
+    'Con = de (rêver de).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'de', 0, 1), (@qid, 'con', 1, 2), (@qid, 'en', 0, 3), (@qid, 'por', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '_____ es tu libro ? – El rojo.',
+    'Lequel → Cuál (choix).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Qué', 0, 1), (@qid, 'Cuál', 1, 2), (@qid, 'Quién', 0, 3), (@qid, 'Cómo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿_____ personas hay ? – Cinco.',
+    'Quantité → Cuántas (féminin pluriel).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cuánto', 0, 1), (@qid, 'Cuántas', 1, 2), (@qid, 'Cuánta', 0, 3), (@qid, 'Cuántos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿_____ está la estación ? – Lejos.',
+    'Lieu → Dónde.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dónde', 1, 1), (@qid, 'Cuándo', 0, 2), (@qid, 'Cómo', 0, 3), (@qid, 'Cuánto', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿_____ se llama tu amigo ?',
+    'Nom → Cómo.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cuál', 0, 1), (@qid, 'Cómo', 1, 2), (@qid, 'Quién', 0, 3), (@qid, 'Dónde', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿_____ es la capital de España ?',
+    'Quelle est → Cuál es.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cuál', 1, 1), (@qid, 'Qué', 0, 2), (@qid, 'Quién', 0, 3), (@qid, 'Cómo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿_____ es tu número de teléfono ?',
+    'Quel est → Cuál es.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Quién', 0, 1), (@qid, 'Cuál', 1, 2), (@qid, 'Qué', 0, 3), (@qid, 'Cómo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿_____ hermanos tienes ?',
+    'Combien de → Cuántos (masculin pluriel).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cuántos', 1, 1), (@qid, 'Cuántas', 0, 2), (@qid, 'Cuánto', 0, 3), (@qid, 'Cuánta', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿_____ es la fecha de hoy ?',
+    'Quelle → Cuál (parmi les dates).', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Qué', 0, 1), (@qid, 'Cuál', 1, 2), (@qid, 'Cuándo', 0, 3), (@qid, 'Cuánto', 0, 4);
+
+-- ============================================
+-- LOT 4 : Vocabulaire thématique (25 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "chaise" en español ?',
+    'Silla = chaise.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Mesa', 0, 1), (@qid, 'Silla', 1, 2), (@qid, 'Cama', 0, 3), (@qid, 'Puerta', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "fenêtre" en español ?',
+    'Ventana = fenêtre.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Puerta', 0, 1), (@qid, 'Ventana', 1, 2), (@qid, 'Pared', 0, 3), (@qid, 'Tejado', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "porte" en español ?',
+    'Puerta = porte.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Puerta', 1, 1), (@qid, 'Ventana', 0, 2), (@qid, 'Silla', 0, 3), (@qid, 'Mesa', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "table" en español ?',
+    'Mesa = table.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Silla', 0, 1), (@qid, 'Mesa', 1, 2), (@qid, 'Cama', 0, 3), (@qid, 'Armario', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "pain" en español ?',
+    'Pan = pain.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pan', 1, 1), (@qid, 'Carne', 0, 2), (@qid, 'Leche', 0, 3), (@qid, 'Queso', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "fromage" en español ?',
+    'Queso = fromage.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pan', 0, 1), (@qid, 'Queso', 1, 2), (@qid, 'Huevo', 0, 3), (@qid, 'Pollo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "poulet" en español ?',
+    'Pollo = poulet.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Carne', 0, 1), (@qid, 'Pollo', 1, 2), (@qid, 'Pescado', 0, 3), (@qid, 'Cerdo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "riz" en español ?',
+    'Arroz = riz.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pan', 0, 1), (@qid, 'Arroz', 1, 2), (@qid, 'Frijol', 0, 3), (@qid, 'Maíz', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "oeuf" en español ?',
+    'Huevo = oeuf.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Huevo', 1, 1), (@qid, 'Queso', 0, 2), (@qid, 'Leche', 0, 3), (@qid, 'Pan', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "chien" en español ?',
+    'Perro = chien.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Gato', 0, 1), (@qid, 'Perro', 1, 2), (@qid, 'Pájaro', 0, 3), (@qid, 'Pez', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "chat" en español ?',
+    'Gato = chat.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Perro', 0, 1), (@qid, 'Gato', 1, 2), (@qid, 'Ratón', 0, 3), (@qid, 'Pájaro', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "cheval" en español ?',
+    'Caballo = cheval.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Perro', 0, 1), (@qid, 'Caballo', 1, 2), (@qid, 'Vaca', 0, 3), (@qid, 'Cerdo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "école" en español ?',
+    'Escuela = école.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Escuela', 1, 1), (@qid, 'Hospital', 0, 2), (@qid, 'Iglesia', 0, 3), (@qid, 'Mercado', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "hôpital" en español ?',
+    'Hospital = hôpital.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Escuela', 0, 1), (@qid, 'Hospital', 1, 2), (@qid, 'Farmacia', 0, 3), (@qid, 'Iglesia', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "cuisine" (pièce) en español ?',
+    'Cocina = cuisine.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Baño', 0, 1), (@qid, 'Cocina', 1, 2), (@qid, 'Sala', 0, 3), (@qid, 'Dormitorio', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "chambre" en español ?',
+    'Dormitorio / Cuarto = chambre.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sala', 0, 1), (@qid, 'Dormitorio', 1, 2), (@qid, 'Cocina', 0, 3), (@qid, 'Baño', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "tête" en español ?',
+    'Cabeza = tête.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Mano', 0, 1), (@qid, 'Cabeza', 1, 2), (@qid, 'Brazo', 0, 3), (@qid, 'Pierna', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "main" en español ?',
+    'Mano = main.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Brazo', 0, 1), (@qid, 'Mano', 1, 2), (@qid, 'Pie', 0, 3), (@qid, 'Dedo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "pied" en español ?',
+    'Pie = pied.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pie', 1, 1), (@qid, 'Mano', 0, 2), (@qid, 'Brazo', 0, 3), (@qid, 'Pierna', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "soleil" en español ?',
+    'Sol = soleil.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Luna', 0, 1), (@qid, 'Sol', 1, 2), (@qid, 'Estrella', 0, 3), (@qid, 'Nube', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "lune" en español ?',
+    'Luna = lune.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sol', 0, 1), (@qid, 'Luna', 1, 2), (@qid, 'Estrella', 0, 3), (@qid, 'Tierra', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "mer" en español ?',
+    'Mar = mer.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Río', 0, 1), (@qid, 'Mar', 1, 2), (@qid, 'Lago', 0, 3), (@qid, 'Océano', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, '¿Cómo se dice "arbre" en español ?',
+    'Árbol = arbre.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Flor', 0, 1), (@qid, 'Árbol', 1, 2), (@qid, 'Planta', 0, 3), (@qid, 'Hoja', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Hace _____. (Il fait chaud)',
+    'Calor = chaleur.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'frío', 0, 1), (@qid, 'calor', 1, 2), (@qid, 'sol', 0, 3), (@qid, 'viento', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Hace _____. (Il fait froid)',
+    'Frío = froid.', 'Examen 9e AF', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'frío', 1, 1), (@qid, 'calor', 0, 2), (@qid, 'viento', 0, 3), (@qid, 'nieve', 0, 4);
+
+-- ============================================
+-- LOT 5 : Révision avancée - Subjonctif, Futur, Conditionnel (15 questions)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Quiero que tú _____ (venir) conmigo.',
+    'Subjonctif présent → vengas.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vienes', 0, 1), (@qid, 'vengas', 1, 2), (@qid, 'viene', 0, 3), (@qid, 'viniste', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Es necesario que _____ (estudiar) más.',
+    'Subjonctif → estudies.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'estudias', 0, 1), (@qid, 'estudies', 1, 2), (@qid, 'estudia', 0, 3), (@qid, 'estudió', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Espero que ella _____ (estar) bien.',
+    'Subjonctif → esté.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'está', 0, 1), (@qid, 'esté', 1, 2), (@qid, 'estaba', 0, 3), (@qid, 'estuvo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Mañana yo _____ (ir) al médico.',
+    'Futur simple → iré.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'iré', 1, 1), (@qid, 'voy', 0, 2), (@qid, 'iba', 0, 3), (@qid, 'iría', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'El año que viene nosotros _____ (viajar) a España.',
+    'Futur → viajaremos.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'viajaremos', 1, 1), (@qid, 'viajamos', 0, 2), (@qid, 'viajábamos', 0, 3), (@qid, 'viajaríamos', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ellos _____ (comer) a las dos.',
+    'Futur → comerán.', 'Examen 9e AF', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'comen', 0, 1), (@qid, 'comerán', 1, 2), (@qid, 'comían', 0, 3), (@qid, 'comieron', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Si tuviera dinero, _____ (comprar) una casa.',
+    'Conditionnel → compraría.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'compraré', 0, 1), (@qid, 'compraría', 1, 2), (@qid, 'compro', 0, 3), (@qid, 'compró', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Me gustaría que _____ (venir) a la fiesta.',
+    'Subjonctif imparfait → vinieras.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'vienes', 0, 1), (@qid, 'vinieras', 1, 2), (@qid, 'vengas', 0, 3), (@qid, 'vendrías', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Cuando _____ (tener) tiempo, te llamo.',
+    'Subjonctif (futur incertain) → tenga.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tengo', 0, 1), (@qid, 'tenga', 1, 2), (@qid, 'tienes', 0, 3), (@qid, 'tendré', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Para que _____ (aprender), debes practicar.',
+    'Subjonctif → aprendas.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'aprendes', 0, 1), (@qid, 'aprendas', 1, 2), (@qid, 'aprende', 0, 3), (@qid, 'aprendió', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Tal vez ella no _____ (saber) la respuesta.',
+    'Subjonctif (doute) → sepa.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'sabe', 0, 1), (@qid, 'sepa', 1, 2), (@qid, 'sabes', 0, 3), (@qid, 'sabía', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Dudo que ellos _____ (llegar) a tiempo.',
+    'Subjonctif (doute) → lleguen.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'llegan', 0, 1), (@qid, 'lleguen', 1, 2), (@qid, 'llegaron', 0, 3), (@qid, 'llegarán', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Si yo fuera rico, _____ (viajar) por el mundo.',
+    'Conditionnel → viajaría.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'viajaré', 0, 1), (@qid, 'viajaría', 1, 2), (@qid, 'viajo', 0, 3), (@qid, 'viajé', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Ojalá que _____ (llover) mañana.',
+    'Subjonctif (souhait) → llueva.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'llueve', 0, 1), (@qid, 'llueva', 1, 2), (@qid, 'llovió', 0, 3), (@qid, 'lloverá', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(7, 2, 'Cuando yo _____ (ser) mayor, seré médico.',
+    'Subjonctif (futur) → sea.', 'Examen 9e AF', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'soy', 0, 1), (@qid, 'sea', 1, 2), (@qid, 'seré', 0, 3), (@qid, 'era', 0, 4);
 
 -- Espagnol complétion (type_id=1)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
