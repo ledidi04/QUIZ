@@ -8,15 +8,69 @@ require_once __DIR__ . '/includes/functions.php';
 $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
 // Exemple : si le site est dans /quiz, $basePath = "/quiz"
 //           si le site est à la racine, $basePath = ""
+
+// URL complète actuelle (pour JSON-LD et Open Graph)
+$currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $basePath;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="description" content="Plateforme de quiz éducatif pour les élèves de 9ème année et NS4 en Haïti">
+    <!-- Meta description optimisée avec mots-clés longue traîne -->
+    <meta name="description" content="Plateforme de quiz et QCM pour 9ème année, NS4, Philo, Université, Préfac en Haïti. Exercices interactifs, mode examen, corrigés détaillés basés sur les programmes officiels du MENFP.">
+    <meta name="keywords" content="quiz haiti, qcm 9eme annee, ns4 haiti, philo haiti, universite haiti, prefac, revision examen 9eme, education haiti, menfp, exercices interactifs haiti">
     <meta name="google-site-verification" content="ikYgHEBCKlQWimzFOnFPfwoOUqXJ41fPNc6nXbI1lng" />
-    <title>Quiz Ayiti - 9ème & NS4</title>
+    
+    <!-- Titre optimisé pour le SEO (environ 60 caractères) -->
+    <title>Quiz Ayiti | 9ème, NS4, Philo, Université, Préfac – QCM Haïti</title>
+    
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="Quiz Ayiti | 9ème, NS4, Philo, Université, Préfac – QCM Haïti">
+    <meta property="og:description" content="Plateforme de quiz et QCM pour élèves et étudiants haïtiens. 9ème, NS4, Philo, Université, Préfac. Exercices interactifs, annales, mode examen.">
+    <meta property="og:url" content="<?= $currentUrl ?>/index.php">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="<?= $currentUrl ?>/images/logo.png">
+    <meta property="og:image:alt" content="Logo Quiz Ayiti – Quiz éducatif Haïti">
+    <meta property="og:locale" content="fr_HT">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Quiz Ayiti | 9ème, NS4, Philo, Université, Préfac – QCM Haïti">
+    <meta name="twitter:description" content="Plateforme de quiz et QCM pour élèves et étudiants haïtiens. Exercices interactifs, annales, mode examen.">
+    <meta name="twitter:image" content="<?= $currentUrl ?>/images/logo.png">
+
+    <!-- Données structurées JSON-LD (Site Web et Organisation Éducative) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Quiz Ayiti",
+      "url": "<?= $currentUrl ?>",
+      "description": "Plateforme de quiz et QCM pour 9ème année, NS4, Philo, Université et classes Pré-Fac en Haïti.",
+      "logo": "<?= $currentUrl ?>/images/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "HT"
+      },
+      "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Quiz Ayiti",
+      "url": "<?= $currentUrl ?>",
+      "description": "Plateforme de quiz éducatif pour 9ème, NS4, Philo, Université, Préfac en Haïti.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "<?= $currentUrl ?>/recherche?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -426,6 +480,56 @@ $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
             font-weight: 500;
         }
 
+        /* ========== NIVEAUX SECTION (ajout SEO) ========== */
+        .levels-section {
+            max-width: 700px;
+            margin: 3rem auto 0;
+            text-align: center;
+        }
+
+        .levels-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1.5rem;
+        }
+
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+        }
+
+        .level-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 1.25rem 1rem;
+            border: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition);
+        }
+
+        .level-card.active {
+            border-left: 4px solid var(--blue);
+        }
+
+        .level-card.soon {
+            opacity: 0.6;
+            border-left: 4px solid var(--gold);
+        }
+
+        .level-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 0.4rem;
+        }
+
+        .level-card p {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+        }
+
         /* ========== FOOTER ========== */
         .footer {
             background: var(--white);
@@ -513,6 +617,10 @@ $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
             .stats-banner {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .levels-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 400px) {
@@ -533,13 +641,16 @@ $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
             .stat-item .stat-value {
                 font-size: 1.3rem;
             }
+            .levels-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <!-- ========== NAVIGATION ========== -->
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
-        <a href="<?= $basePath ?>/index.php" class="nav-brand">
+        <a href="<?= $basePath ?>/index.php" class="nav-brand" title="Quiz Ayiti – Accueil">
             <span class="brand-icon">Q</span>
             Quiz<span class="brand-dot">.</span>Ayiti
         </a>
@@ -549,9 +660,9 @@ $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
             <span class="bar"></span>
         </button>
         <ul class="nav-menu" id="navMenu">
-            <li><a href="<?= $basePath ?>/index.php" class="active">Accueil</a></li>
-            <li><a href="<?= $basePath ?>/9e/index.php">9ème AF</a></li>
-            <li><a href="<?= $basePath ?>/ns4/index.php">NS4</a></li>
+            <li><a href="<?= $basePath ?>/index.php" class="active" title="Accueil Quiz Ayiti">Accueil</a></li>
+            <li><a href="<?= $basePath ?>/9e/index.php" title="Quiz 9ème Année Fondamentale">9ème AF</a></li>
+            <li><a href="<?= $basePath ?>/ns4/index.php" title="Quiz NS4 Haïti">NS4</a></li>
         </ul>
     </nav>
 
@@ -631,13 +742,33 @@ $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
                 <div class="stat-label">Conforme MENFP</div>
             </div>
         </div>
+
+        <!-- Nouvelle section : niveaux disponibles et à venir (ciblage SEO Philo, Université, Préfac) -->
+        <section class="levels-section">
+            <h2>📚 Niveaux couverts et à venir</h2>
+            <div class="levels-grid">
+                <div class="level-card active">
+                    <h3>9ème Année Fondamentale</h3>
+                    <p>QCM, textes à trous, vrai/faux – préparation aux examens officiels</p>
+                </div>
+                <div class="level-card active">
+                    <h3>NS4 (Secondaire IV)</h3>
+                    <p>Exercices complets pour le baccalauréat et équivalences</p>
+                </div>
+                
+                <div class="level-card soon">
+                    <h3>Université / Pré-Fac</h3>
+                    <p>QCM et annales pour les premières années universitaires</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <p>
             &copy; <?= date('Y') ?> <strong>Quiz Ayiti</strong> &mdash; 
-            Basé sur les <a href="#">programmes officiels du MENFP</a>
+            Basé sur les <a href="#" title="Programmes officiels MENFP Haïti">programmes officiels du MENFP</a>
         </p>
     </footer>
 
