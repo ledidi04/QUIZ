@@ -683,11 +683,11 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
                 basée sur les programmes officiels et les examens des années antérieures.
             </p>
             <div class="hero-features">
-                <span class="feature-tag"><span class="tag-icon">✅</span> QCM</span>
-                <span class="feature-tag"><span class="tag-icon">📝</span> Textes à trous</span>
-                <span class="feature-tag"><span class="tag-icon">❓</span> Vrai / Faux</span>
-                <span class="feature-tag"><span class="tag-icon">🔗</span> Appariement</span>
-                <span class="feature-tag"><span class="tag-icon">⏱️</span> Mode Examen</span>
+                <span class="feature-tag"><span class="tag-icon"></span> QCM</span>
+                <span class="feature-tag"><span class="tag-icon"></span> Completer</span>
+                <span class="feature-tag"><span class="tag-icon"></span> Examen Passés</span>
+                <span class="feature-tag"><span class="tag-icon"></span> Cartes,Shema,Graphes...</span>
+                <span class="feature-tag"><span class="tag-icon">⏱</span> Mode Examen</span>
             </div>
         </section>
 
@@ -728,12 +728,12 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
         <div class="stats-banner">
             <div class="stat-item">
                 <div class="stat-icon">📖</div>
-                <div class="stat-value">8</div>
+                <div class="stat-value">20+</div>
                 <div class="stat-label">Matières couvertes</div>
             </div>
             <div class="stat-item">
                 <div class="stat-icon">📝</div>
-                <div class="stat-value">5</div>
+                <div class="stat-value">10+</div>
                 <div class="stat-label">Types d'exercices</div>
             </div>
             <div class="stat-item">
@@ -745,20 +745,19 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
 
         <!-- Nouvelle section : niveaux disponibles et à venir (ciblage SEO Philo, Université, Préfac) -->
         <section class="levels-section">
-            <h2>📚 Niveaux couverts et à venir</h2>
+            <h2> Niveaux couverts</h2>
             <div class="levels-grid">
                 <div class="level-card active">
                     <h3>9ème Année Fondamentale</h3>
-                    <p>QCM, textes à trous, vrai/faux – préparation aux examens officiels</p>
+                    
                 </div>
                 <div class="level-card active">
                     <h3>NS4 (Secondaire IV)</h3>
-                    <p>Exercices complets pour le baccalauréat et équivalences</p>
+                    
                 </div>
                 
                 <div class="level-card soon">
                     <h3>Université / Pré-Fac</h3>
-                    <p>QCM et annales pour les premières années universitaires</p>
                 </div>
             </div>
         </section>
