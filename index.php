@@ -699,7 +699,7 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             </div>
             <form action="<?= $basePath ?>/9e/index.php" method="post" class="start-form" novalidate>
                 <div class="form-group">
-                    <label for="studentName">👤 Ton prénom ou pseudo</label>
+                    <label for="studentName"> Ton prénom ou pseudo</label>
                     <input 
                         type="text" 
                         id="studentName" 
@@ -711,7 +711,7 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
                     >
                 </div>
                 <div class="form-group">
-                    <label for="classSelect">📚 Choisis ta classe</label>
+                    <label for="classSelect"> Choisis ta classe</label>
                     <select id="classSelect" name="student_class" required>
                         <option value="" disabled <?= !getStudentClass() ? 'selected' : '' ?>>-- Sélectionne ta classe --</option>
                         <option value="9e"  <?= getStudentClass() === '9e'  ? 'selected' : '' ?>>9ème Année Fondamentale</option>
