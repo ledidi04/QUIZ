@@ -111,7 +111,7 @@ if (!isset($basePath)) {
 
             <!-- Matières NS4 -->
             <div class="subject-grid" id="subjectGrid">
-                <button class="subject-btn" data-matiere="philosophie"><span class="subject-icon">📖</span><span class="subject-name">Français</span></button>
+                <button class="subject-btn" data-matiere="philosophie"><span class="subject-icon">📖</span><span class="subject-name">Philosophie</span></button>
                 <button class="subject-btn" data-matiere="maths"><span class="subject-icon">➗</span><span class="subject-name">Mathématiques</span></button>
                 <button class="subject-btn" data-matiere="physique"><span class="subject-icon">⚡</span><span class="subject-name">Physique</span></button>
                 <button class="subject-btn" data-matiere="chimie"><span class="subject-icon">🧪</span><span class="subject-name">Chimie</span></button>

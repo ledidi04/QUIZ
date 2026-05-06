@@ -748,7 +748,7 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             <h2> Niveaux couverts</h2>
             <div class="levels-grid">
                 <div class="level-card active">
-                    <h3>9ème Année Fondamentale</h3>
+                    <h3>9ème Année </h3>
                     
                 </div>
                 <div class="level-card active">

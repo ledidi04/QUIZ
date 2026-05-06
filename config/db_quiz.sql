@@ -132,7 +132,7 @@ INSERT INTO matieres (classe_id, nom) VALUES
 
 -- Matières NS4
 INSERT INTO matieres (classe_id, nom) VALUES
-  (2, 'francais'),
+  (2, 'philosophie'),
   (2, 'maths'),
   (2, 'physique'),
   (2, 'chimie'),
