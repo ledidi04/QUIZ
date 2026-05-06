@@ -207,14 +207,14 @@ $classe = getStudentClass();
                 <a href="<?= $basePath ?>/9e/examen.php" class="type-card card-past">
                     <div class="type-icon-wrapper">📁</div>
                     <span class="type-name">Examens Passés</span>
-                    <span class="type-desc">Épreuves officielles 2022-2024</span>
+                    <span class="type-desc">Épreuves officielles 2010-2025</span>
                 </a>
 
                 <!-- Cartes / Dessin -->
                 <a href="<?= $basePath ?>/9e/cartes.php" class="type-card card-maps">
                     <div class="type-icon-wrapper">🗺️</div>
                     <span class="type-name">Cartes & Dessin</span>
-                    <span class="type-desc">Cartes du monde, corps humain...</span>
+                    <span class="type-desc">Cartes du monde, Departement D'haiti...</span>
                 </a>
             </div>
         </div>
