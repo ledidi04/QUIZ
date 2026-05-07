@@ -15348,7 +15348,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(5, 2, 'Dans quel groupe de pays le Japon est-il classé du point de vue économique ?',
+(5, 2, 'Dans quel groupe de pays le Japon est-il classé du point de vue économique En 1985 ?',
  'Le Japon fait partie de la Triade (Europe, États-Unis, Japon), les économies les plus puissantes du monde.', 'Programme 9e AF', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
