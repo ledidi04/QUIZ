@@ -454,7 +454,7 @@ $programmes = [
                         <?php endforeach; ?>
                     </div>
                     
-                    <a href="<?= $basePath ?>/programmes/<?= $prog['fichier'] ?>" 
+                    <a href="<?= $basePath ?>/9e/programmes/<?= $prog['fichier'] ?>" 
                        class="download-btn" 
                        target="_blank" 
                        rel="noopener"
