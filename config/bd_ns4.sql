@@ -1,6 +1,6 @@
 -- =============================================
 -- Questions NS4 (Nouveaux Secondaires 4)
--- Matières : Français(8), Maths(9), Physique(10),
+-- Matières : Philosophie(8), Maths(9), Physique(10),
 --            Chimie(11), SVT(12), Histoire-Géo(13), Anglais(14)
 -- Conforme programmes MENFP Haïti
 -- =============================================
@@ -8,69 +8,1619 @@
 USE quiz_ayiti;
 
 -- =============================================
--- 8. FRANÇAIS NS4 (matiere_id = 8)
+-- 8. Philosophie NS4 (matiere_id = 8)
 -- =============================================
 
 -- QCM
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Quel est le mode utilisé dans la phrase : "Il faut que tu viennes." ?', 'Le subjonctif s''emploie après des expressions d''obligation comme "il faut que".', 'Programme NS4', 2);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'L''indicatif', 0, 1), (@qid, 'Le conditionnel', 0, 2), (@qid, 'Le subjonctif', 1, 3), (@qid, 'L''impératif', 0, 4);
+
+-- ============================================
+-- THÈME 1 : INTRODUCTION À LA PHILOSOPHIE
+-- ============================================
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Quelle figure de style est utilisée dans : "La vie est un combat." ?', 'Une métaphore établit une comparaison sans outil comparatif.', 'Programme NS4', 2);
+(8, 2, 'Quelle est la signification étymologique du mot "philosophie" ?', 'Le mot vient du grec "philo" (aimer) et "sophia" (sagesse).', 'Programme NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'La comparaison', 0, 1), (@qid, 'La métaphore', 1, 2), (@qid, 'La personnification', 0, 3), (@qid, 'L''hyperbole', 0, 4);
+(@qid, 'La science du savoir absolu', 0, 1),
+(@qid, 'L''amour de la sagesse', 1, 2),
+(@qid, 'La recherche du pouvoir', 0, 3),
+(@qid, 'L''art de bien parler', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Quel est le temps de la phrase : "Demain, nous partirons à l''aube." ?', 'Le futur simple exprime une action à venir.', 'Programme NS4', 1);
+(8, 2, 'Qu''est-ce qui caractérise avant tout la réflexion philosophique ?', 'Philosopher, c''est exercer un regard critique et rationnel sur le monde.', 'Programme NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Le présent', 0, 1), (@qid, 'Le futur simple', 1, 2), (@qid, 'Le conditionnel présent', 0, 3), (@qid, 'Le futur antérieur', 0, 4);
+(@qid, 'L''acceptation passive des traditions', 0, 1),
+(@qid, 'La croyance aveugle en une vérité révélée', 0, 2),
+(@qid, 'L''interrogation critique et la recherche de la vérité', 1, 3),
+(@qid, 'La simple accumulation de connaissances', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Qu''est-ce qu''un oxymore ?', 'Un oxymore associe deux termes de sens contraire.', 'Programme NS4', 3);
+(8, 2, 'Selon Descartes, pourquoi est-il nécessaire de philosopher ?', 'Descartes affirme que vivre sans philosopher, c''est avoir les yeux fermés.', 'Programme NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Une répétition de sons', 0, 1), (@qid, 'Une exagération', 0, 2), (@qid, 'Une association de termes contradictoires', 1, 3), (@qid, 'Une comparaison avec "comme"', 0, 4);
+(@qid, 'Pour obtenir un bon emploi', 0, 1),
+(@qid, 'Pour comprendre Dieu uniquement', 0, 2),
+(@qid, 'Pour régler nos mœurs et nous conduire en cette vie', 1, 3),
+(@qid, 'Pour accumuler des richesses', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Dans quelle phrase le verbe est-il au passé composé ?', 'Le passé composé = auxiliaire au présent + participe passé.', 'Programme NS4', 1);
+(8, 2, 'Quelle est la différence entre la philosophie et la science selon Cournot ?', 'La science est impersonnelle et se transmet identiquement, la philosophie conserve un caractère personnel.', 'Programme NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Il partait chaque matin.', 0, 1), (@qid, 'Il est parti ce matin.', 1, 2), (@qid, 'Il partira demain.', 0, 3), (@qid, 'Il partirait si possible.', 0, 4);
+(@qid, 'La philosophie est plus impersonnelle que la science', 0, 1),
+(@qid, 'La science est un produit de la même faculté que la philosophie', 0, 2),
+(@qid, 'La pensée philosophique conserve toujours un caractère de personnalité', 1, 3),
+(@qid, 'La philosophie et la science sont parfaitement identiques', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Quel est le genre du mot "épithète" ?', 'Épithète est un nom féminin.', 'Programme NS4', 2);
+(8, 2, 'La philosophie peut-elle être considérée comme une activité secondaire ?', 'La philosophie est une activité fondamentale qui interroge les principes mêmes de toutes les autres activités.', 'Programme NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Masculin', 0, 1), (@qid, 'Féminin', 1, 2), (@qid, 'Les deux selon le contexte', 0, 3), (@qid, 'Neutre', 0, 4);
+(@qid, 'Oui, car elle ne sert à rien de concret', 0, 1),
+(@qid, 'Oui, car elle est dépassée par la science', 0, 2),
+(@qid, 'Non, car elle est une réflexion fondamentale sur tous les aspects de la réalité', 1, 3),
+(@qid, 'Non, car elle est la seule discipline à parler de Dieu', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Laquelle de ces propositions est une subordonnée relative ?', 'Une subordonnée relative est introduite par un pronom relatif (qui, que, dont…).', 'Programme NS4', 2);
+(8, 2, 'Quel est le rapport entre la philosophie et le bonheur ?', 'Pour Épicure, la philosophie vise la vie heureuse par la prudence et le raisonnement.', 'Programme NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'parce qu''il pleuvait', 0, 1), (@qid, 'que tu viennes', 0, 2), (@qid, 'qui habite à côté', 1, 3), (@qid, 'quand il arriva', 0, 4);
+(@qid, 'La philosophie n''a aucun rapport avec le bonheur', 0, 1),
+(@qid, 'La philosophie garantit la richesse matérielle', 0, 2),
+(@qid, 'La philosophie est un moyen pour atteindre la vie heureuse', 1, 3),
+(@qid, 'La philosophie est un obstacle au bonheur', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Quel auteur haïtien a écrit "Gouverneurs de la rosée" ?', 'Jacques Roumain est l''auteur de ce roman majeur de la littérature haïtienne (1944).', 'Programme NS4', 2);
+(8, 2, 'Que signifie l''expression "la philosophie est anthropocentrique" ?', 'Cela signifie que la philosophie place l''homme au centre de ses interrogations.', 'Programme NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Frankétienne', 0, 1), (@qid, 'Dany Laferrière', 0, 2), (@qid, 'Jacques Roumain', 1, 3), (@qid, 'René Depestre', 0, 4);
+(@qid, 'La philosophie ne s''intéresse qu''à Dieu', 0, 1),
+(@qid, 'La philosophie place l''homme au centre de ses interrogations', 1, 2),
+(@qid, 'La philosophie étudie exclusivement la nature', 0, 3),
+(@qid, 'La philosophie rejette toute idée de centre', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Quelle est la fonction de "rapidement" dans : "Il court rapidement." ?', 'Rapidement est un adverbe modifiant le verbe : c''est un complément circonstanciel de manière.', 'Programme NS4', 2);
+(8, 2, 'Laquelle de ces propositions est une des exigences fondamentales de la philosophie ?', 'La philosophie exige une recherche personnelle du vrai et une quête des valeurs.', 'Programme NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Sujet', 0, 1), (@qid, 'Attribut du sujet', 0, 2), (@qid, 'Complément d''objet direct', 0, 3), (@qid, 'Complément circonstanciel de manière', 1, 4);
+(@qid, 'La recherche personnelle du vrai', 1, 1),
+(@qid, 'L''accumulation de données statistiques', 0, 2),
+(@qid, 'L''obéissance aveugle aux dogmes', 0, 3),
+(@qid, 'Le rejet de toute forme de sagesse', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Qu''est-ce que la synecdoque ?', 'La synecdoque désigne le tout par la partie ou inversement.', 'Programme NS4', 3);
+(8, 2, 'Qu''est-ce que philosopher selon la tradition ?', 'Philosopher, c''est exercer sa raison pour comprendre le monde et se comprendre soi-même.', 'Programme NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Une figure de répétition', 0, 1), (@qid, 'Désigner le tout par la partie ou vice versa', 1, 2), (@qid, 'Une exagération délibérée', 0, 3), (@qid, 'Une comparaison implicite', 0, 4);
+(@qid, 'C''est apprendre par cœur des citations', 0, 1),
+(@qid, 'C''est exercer sa raison pour comprendre et agir', 1, 2),
+(@qid, 'C''est renoncer à toute forme de pensée', 0, 3),
+(@qid, 'C''est accepter toutes les opinions sans examen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'La nécessité de la philosophie est-elle absolue ?', 'La philosophie est conditionnelle : elle apparaît quand l''homme s''affranchit de la contrainte du besoin.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, la philosophie est absolument nécessaire pour survivre', 0, 1),
+(@qid, 'Non, la nécessité de la philosophie est conditionnelle', 1, 2),
+(@qid, 'Oui, sans philosophie, la vie est impossible', 0, 3),
+(@qid, 'Non, la philosophie n''a jamais aucune nécessité', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quelle est la branche de la philosophie qui s''intéresse à l''étude des valeurs ?', 'L''axiologie est la branche de la philosophie qui étudie les valeurs (bien, beau, juste).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ontologie', 0, 1),
+(@qid, 'L''épistémologie', 0, 2),
+(@qid, 'L''axiologie', 1, 3),
+(@qid, 'La logique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Pourquoi ne faut-il pas avoir peur de la philosophie ?', 'La philosophie n''est pas une menace mais une activité qui nous pousse à réfléchir librement.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parce qu''elle ne parle que de choses abstraites sans intérêt', 0, 1),
+(@qid, 'Parce qu''elle est une activité qui pousse à réfléchir et non une menace', 1, 2),
+(@qid, 'Parce qu''elle interdit toute forme de critique', 0, 3),
+(@qid, 'Parce qu''elle est réservée à une élite', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui distingue le philosophe des autres hommes selon Dumarsais ?', 'Le philosophe agit après réflexion, là où les autres sont emportés par leurs passions.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le philosophe est plus riche que les autres hommes', 0, 1),
+(@qid, 'Le philosophe agit après réflexion, précédé d''un flambeau', 1, 2),
+(@qid, 'Le philosophe n''a jamais de passions', 0, 3),
+(@qid, 'Le philosophe refuse de vivre en société', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est l''objet de l''éthique en philosophie ?', 'L''éthique porte sur les règles de conduite et détermine ce qui est moralement nécessaire.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''étude de la nature', 0, 1),
+(@qid, 'L''étude des règles de conduite des actions humaines', 1, 2),
+(@qid, 'L''étude des mathématiques', 0, 3),
+(@qid, 'L''étude du langage', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Peut-on vivre sans philosopher ?', 'On peut survivre sans philosopher, mais une vie vraiment humaine exige la réflexion philosophique.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, et c''est même recommandé', 0, 1),
+(@qid, 'Oui, on peut survivre mais pas mener une vie vraiment humaine', 1, 2),
+(@qid, 'Non, c''est strictement impossible biologiquement', 0, 3),
+(@qid, 'Oui, car la philosophie n''apporte rien', 0, 4);
+
+-- ============================================
+-- THÈME 2 : NATURE ET CULTURE
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui définit la nature chez l''homme ?', 'La nature désigne ce qui est inné, héréditaire et universel chez l''être humain.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ce qui s''acquiert par l''éducation', 0, 1),
+(@qid, 'Ce qui est inné, héréditaire et universel', 1, 2),
+(@qid, 'Ce qui varie selon les sociétés', 0, 3),
+(@qid, 'Ce qui relève exclusivement de la technique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la culture ?', 'La culture est l''ensemble des valeurs, croyances et attitudes acquises et transmises par l''éducation.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ensemble des traits biologiques d''un individu', 0, 1),
+(@qid, 'Ce qui relève exclusivement de la nature', 0, 2),
+(@qid, 'L''ensemble des attitudes, croyances et valeurs acquises et transmises socialement', 1, 3),
+(@qid, 'La programmation génétique d''une population', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Comment se fait la transmission de la culture ?', 'La culture se transmet par héritage social et par l''éducation.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Par hérédité biologique uniquement', 0, 1),
+(@qid, 'Par héritage social et par l''éducation', 1, 2),
+(@qid, 'Par instinct naturel', 0, 3),
+(@qid, 'Par le seul contact avec la nature', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Comment se transmet la nature chez un être vivant ?', 'La nature se transmet par hérédité biologique.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Par l''éducation scolaire', 0, 1),
+(@qid, 'Par imitation sociale', 0, 2),
+(@qid, 'Par hérédité biologique', 1, 3),
+(@qid, 'Par la lecture des livres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Le comportement humain est-il déterminé uniquement par la nature ?', 'Le comportement humain résulte d''une interaction entre nature (inné) et culture (acquis).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, la nature détermine tout le comportement humain', 0, 1),
+(@qid, 'Non, le comportement est le produit de l''interaction entre nature et culture', 1, 2),
+(@qid, 'Oui, la culture n''a aucun rôle réel', 0, 3),
+(@qid, 'Non, seule la culture compte, la nature est négligeable', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Laquelle de ces propositions est une manifestation de la culture ?', 'La langue, la religion et les coutumes sont des manifestations culturelles.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La couleur naturelle des yeux', 0, 1),
+(@qid, 'Le rythme cardiaque', 0, 2),
+(@qid, 'La langue que l''on parle', 1, 3),
+(@qid, 'Le besoin de dormir', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'La diversité culturelle est-elle un obstacle à l''entente entre les peuples ?', 'La diversité culturelle n''est pas en soi un obstacle ; l''intolérance en est un.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, car les cultures sont trop différentes pour communiquer', 0, 1),
+(@qid, 'Non, ce n''est pas la diversité elle-même qui est un obstacle, mais l''intolérance', 1, 2),
+(@qid, 'Oui, car l''unité culturelle est indispensable à la paix', 0, 3),
+(@qid, 'Non, car il n''existe pas de différence culturelle réelle', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Peut-on parler d''une nature humaine en dehors de la culture ?', 'Il est difficile de penser l''homme sans culture, car celle-ci s''ajoute à sa nature.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, car la nature humaine est parfaitement autonome', 0, 1),
+(@qid, 'Non, il est difficile de penser une nature humaine en dehors de la culture', 1, 2),
+(@qid, 'Oui, car la culture n''est qu''une illusion', 0, 3),
+(@qid, 'Non, car il n''existe aucune nature humaine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Les besoins de l''homme relèvent-ils de la nature ou de la culture ?', 'Les besoins naturels (manger, boire) sont transformés par la culture (manières de table, cuisine).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Exclusivement de la nature', 0, 1),
+(@qid, 'Exclusivement de la culture', 0, 2),
+(@qid, 'De la nature pour les besoins fondamentaux, mais la culture les transforme', 1, 3),
+(@qid, 'Ni de la nature, ni de la culture', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quelle est l''institution principale qui participe à la socialisation selon les textes ?', 'La famille, la religion et les cadres éducatifs sont les principales institutions socialisatrices.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La seule institution scolaire', 0, 1),
+(@qid, 'La famille, la religion et les cadres éducatifs', 1, 2),
+(@qid, 'Le marché économique exclusivement', 0, 3),
+(@qid, 'Les réseaux sociaux numériques uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Selon Rousseau, qu''est-ce qui augmente l''inégalité naturelle entre les hommes ?', 'L''inégalité d''institution (sociale et éducative) augmente l''inégalité naturelle.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''égalité des chances', 0, 1),
+(@qid, 'L''inégalité d''institution et d''éducation', 1, 2),
+(@qid, 'La simplicité de la vie animale', 0, 3),
+(@qid, 'Le retour à l''état de nature', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'La culture peut-elle aliéner l''homme ?', 'La culture peut être aliénante quand elle impose des normes oppressives, mais elle peut aussi libérer.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, la culture libère toujours l''homme', 0, 1),
+(@qid, 'Oui, mais elle peut aussi être libération selon son usage', 1, 2),
+(@qid, 'Non, car la culture n''a aucun effet sur l''individu', 0, 3),
+(@qid, 'Oui, et elle est toujours aliénante sans exception', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui distingue fondamentalement l''homme de l''animal ?', 'L''homme se distingue de l''animal par la culture, la raison et le langage articulé.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La seule capacité de se nourrir', 0, 1),
+(@qid, 'La culture, la raison et le langage articulé', 1, 2),
+(@qid, 'La simple taille du cerveau', 0, 3),
+(@qid, 'L''instinct grégaire uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''entend-on par "culture haïtienne" selon Douyon ?', 'La culture haïtienne est un ensemble de perceptions et modes d''agir issus de modèles africains et européens.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une culture exclusivement européenne', 0, 1),
+(@qid, 'Une culture purement africaine sans mélange', 0, 2),
+(@qid, 'Un mélange issu de modèles africains et européens', 1, 3),
+(@qid, 'Une culture sans aucun fondement historique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui est le propre de la nature selon les textes ?', 'La nature se caractérise par l''universalité, la nécessité et l''hérédité.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La relativité et la diversité', 0, 1),
+(@qid, 'L''universalité, la nécessité et l''hérédité', 1, 2),
+(@qid, 'Le changement permanent et imprévisible', 0, 3),
+(@qid, 'L''acquisition par apprentissage', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui caractérise la culture par opposition à la nature ?', 'La culture se caractérise par la relativité, la diversité et l''acquis.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''universalité et la nécessité', 0, 1),
+(@qid, 'La relativité, la diversité et l''acquis', 1, 2),
+(@qid, 'L''innéité et l''hérédité biologique', 0, 3),
+(@qid, 'La fixité et l''immuabilité', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quelle est l''origine de la culture haïtienne actuelle ?', 'La culture haïtienne puise ses sources dans des systèmes africains et européens combinés.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Exclusivement des traditions amérindiennes', 0, 1),
+(@qid, 'Uniquement de la colonisation américaine', 0, 2),
+(@qid, 'Des modèles africains et européens combinés', 1, 3),
+(@qid, 'De la seule influence asiatique', 0, 4);
+
+-- ============================================
+-- THÈME 3 : LA MORALE ET LA LIBERTÉ
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Suffit-il de respecter les règles sociales pour être moral ?', 'Le respect des règles sociales ne suffit pas ; il faut aussi une adhésion libre de l''individu.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, le strict respect des règles garantit la moralité', 0, 1),
+(@qid, 'Non, il faut aussi l''adhésion libre et la conscience de l''individu', 1, 2),
+(@qid, 'Oui, car les règles sont toujours justes', 0, 3),
+(@qid, 'Non, car la moralité n''a rien à voir avec les règles sociales', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que le devoir ?', 'Le devoir est une obligation morale, une action prescrite par une règle.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une simple suggestion facultative', 0, 1),
+(@qid, 'Une action prescrite par une obligation morale', 1, 2),
+(@qid, 'Un désir personnel sans contrainte', 0, 3),
+(@qid, 'Une convention sans portée réelle', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui caractérise une action morale selon Durkheim ?', 'Une action morale est conforme à des règles préétablies et relève du domaine du devoir.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle est toujours spontanée et sans réflexion', 0, 1),
+(@qid, 'Elle est conforme à des règles préétablies et relève du devoir', 1, 2),
+(@qid, 'Elle vise exclusivement l''intérêt personnel', 0, 3),
+(@qid, 'Elle est dictée par la passion du moment', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qu''un impératif catégorique ?', 'C''est un commandement moral inconditionnel qui vaut pour tout être raisonnable.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un conseil pratique pour réussir dans la vie', 0, 1),
+(@qid, 'Un commandement moral inconditionnel valable universellement', 1, 2),
+(@qid, 'Une règle qui dépend des circonstances', 0, 3),
+(@qid, 'Une obligation uniquement légale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Peut-on fonder la morale sur les sentiments ?', 'Les sentiments peuvent motiver l''action morale mais sont trop instables pour la fonder solidement.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, les sentiments sont le seul fondement possible', 0, 1),
+(@qid, 'Non, les sentiments sont trop instables pour fonder solidement la morale', 1, 2),
+(@qid, 'Oui, car la raison n''a aucun rôle moral', 0, 3),
+(@qid, 'Non, car seuls les intérêts économiques comptent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la conscience morale ?', 'La conscience morale est la capacité de juger du bien et du mal et de se sentir responsable de ses actes.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La simple connaissance de son environnement', 0, 1),
+(@qid, 'La capacité de juger du bien et du mal et de se sentir responsable', 1, 2),
+(@qid, 'La mémoire des événements passés', 0, 3),
+(@qid, 'L''instinct de survie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la liberté selon Spinoza ?', 'Est libre celui qui vit sous la conduite de la raison, en comprenant les causes qui le déterminent.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Faire tout ce qui nous passe par la tête', 0, 1),
+(@qid, 'Vivre sous la conduite de la raison en comprenant les causes', 1, 2),
+(@qid, 'Être totalement indéterminé et imprévisible', 0, 3),
+(@qid, 'Obéir aveuglément à ses instincts', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Renoncer à sa liberté, est-ce renoncer à sa qualité d''homme ?', 'Pour Rousseau, renoncer à sa liberté, c''est renoncer à sa qualité d''homme.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, car l''homme peut exister sans liberté', 0, 1),
+(@qid, 'Oui, car la liberté est constitutive de l''humanité', 1, 2),
+(@qid, 'Non, car la liberté est secondaire', 0, 3),
+(@qid, 'Oui, mais seulement dans certaines cultures', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'La liberté est-elle l''absence de toute contrainte ?', 'La liberté n''est pas l''absence totale de contrainte ; la loi raisonnable peut libérer.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, la liberté c''est l''absence totale de règles', 0, 1),
+(@qid, 'Non, l''absence de contrainte n''est pas la seule condition de la liberté', 1, 2),
+(@qid, 'Oui, toute contrainte est une aliénation', 0, 3),
+(@qid, 'Non, la contrainte est toujours la liberté suprême', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Nier la liberté, est-ce renoncer à toute signification de la morale ?', 'Sans liberté, la morale n''a plus de sens car l''homme ne serait pas responsable de ses actes.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, la morale peut exister sans liberté', 0, 1),
+(@qid, 'Oui, car sans liberté, l''homme n''est pas responsable et la morale perd son sens', 1, 2),
+(@qid, 'Non, car la morale est indépendante de la liberté', 0, 3),
+(@qid, 'Oui, mais seulement dans les sociétés modernes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui distingue la vengeance de la punition ?', 'La vengeance est un acte de la partie lésée, la punition est l''œuvre d''un juge impartial.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La vengeance est plus juste que la punition', 0, 1),
+(@qid, 'La vengeance est un acte de la partie lésée, la punition est l''œuvre d''un juge', 1, 2),
+(@qid, 'Les deux sont strictement identiques', 0, 3),
+(@qid, 'La punition est toujours plus violente que la vengeance', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le rapport entre la conscience et la liberté ?', 'La conscience est synonyme d''invention et de liberté ; elle permet le choix.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La conscience est opposée à la liberté', 0, 1),
+(@qid, 'La conscience est synonyme d''invention et de liberté', 1, 2),
+(@qid, 'La conscience supprime toute liberté', 0, 3),
+(@qid, 'La conscience n''a aucun rapport avec la liberté', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Comment l''homme devient-il un être moral ?', 'L''homme devient moral lorsque sa raison s''élève aux concepts du devoir et de la loi.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'En naissant avec une bonté naturelle innée', 0, 1),
+(@qid, 'Lorsque sa raison s''élève aux concepts du devoir et de la loi', 1, 2),
+(@qid, 'En accumulant des richesses matérielles', 0, 3),
+(@qid, 'En ignorant toutes les règles sociales', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Peut-on avoir peur de la liberté ?', 'Oui, la liberté peut faire peur car elle implique la responsabilité de ses choix.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, personne n''a jamais peur de la liberté', 0, 1),
+(@qid, 'Oui, car la liberté implique la responsabilité de ses choix', 1, 2),
+(@qid, 'Non, car la liberté est toujours rassurante', 0, 3),
+(@qid, 'Oui, mais seulement les enfants', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Que signifie l''expression "la partie lésée" ?', 'La partie lésée est la personne qui a subi un dommage ou un préjudice.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le juge qui rend la sentence', 0, 1),
+(@qid, 'La personne qui a subi un dommage ou un préjudice', 1, 2),
+(@qid, 'L''avocat de la défense', 0, 3),
+(@qid, 'Le témoin d''un crime', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Suffit-il de calculer son intérêt pour être moral ?', 'Non, le calcul de l''intérêt risquerait de perdre la morale au lieu de la fonder.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, la morale est toujours un calcul d''intérêt', 0, 1),
+(@qid, 'Non, le calcul de l''intérêt risquerait de perdre la morale', 1, 2),
+(@qid, 'Oui, car l''intérêt personnel est le seul moteur moral', 0, 3),
+(@qid, 'Non, car l''intérêt n''a jamais rien à voir avec la morale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le rapport entre droits et devoirs ?', 'Les droits et les devoirs sont généralement liés : un droit implique souvent un devoir correspondant.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les droits existent toujours sans aucun devoir', 0, 1),
+(@qid, 'Les droits et les devoirs sont généralement liés et réciproques', 1, 2),
+(@qid, 'Les devoirs n''existent pas dans une société moderne', 0, 3),
+(@qid, 'Les droits annulent toujours les devoirs', 0, 4);
+
+-- ============================================
+-- THÈME 4 : L'ÉTAT ET LA POLITIQUE
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que l''État ?', 'L''État est l''ensemble des pouvoirs qui organisent une société et y font régner l''ordre.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une simple association d''amis', 0, 1),
+(@qid, 'L''ensemble des pouvoirs qui organisent une société et y font régner l''ordre', 1, 2),
+(@qid, 'Une entreprise commerciale', 0, 3),
+(@qid, 'Un groupe religieux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le fondement de l''État selon Hobbes ?', 'Selon Hobbes, l''État est fondé sur la force et la crainte qu''il inspire.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''amour universel entre les hommes', 0, 1),
+(@qid, 'La force et la crainte qu''il inspire', 1, 2),
+(@qid, 'La volonté divine uniquement', 0, 3),
+(@qid, 'Le seul consentement volontaire de tous', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quelles sont les missions de l''État selon Hobbes ?', 'L''État a une mission répressive à l''intérieur et défensive à l''extérieur.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Organiser des fêtes et des loisirs', 0, 1),
+(@qid, 'Une mission répressive à l''intérieur et défensive à l''extérieur', 1, 2),
+(@qid, 'Uniquement collecter des impôts', 0, 3),
+(@qid, 'Contrôler la météo du pays', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'La politique est-elle l''affaire de tous ?', 'La politique concerne tous les citoyens car elle organise la vie collective.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, la politique est réservée aux professionnels', 0, 1),
+(@qid, 'Oui, car elle organise la vie collective et concerne tous les citoyens', 1, 2),
+(@qid, 'Non, la politique ne concerne que les gouvernants', 0, 3),
+(@qid, 'Oui, mais seulement les jours d''élection', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'L''homme est-il par nature un animal politique ?', 'Pour Aristote, l''homme est un animal politique car il ne peut vivre pleinement qu''en société.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, l''homme est fondamentalement solitaire', 0, 1),
+(@qid, 'Oui, l''homme ne peut vivre pleinement qu''en société organisée', 1, 2),
+(@qid, 'Non, la politique est une invention récente', 0, 3),
+(@qid, 'Oui, mais seulement dans les démocraties', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que le droit selon Hobbes ?', 'Pour Hobbes, le droit est fondé sur la force de l''État.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le droit est fondé sur la seule volonté divine', 0, 1),
+(@qid, 'Le droit est fondé sur la force de l''État', 1, 2),
+(@qid, 'Le droit n''a aucun fondement réel', 0, 3),
+(@qid, 'Le droit est fondé sur la coutume uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Peut-on être homme sans être citoyen ?', 'La citoyenneté est une dimension de l''humanité en société, mais on peut être homme sans citoyenneté.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, l''humanité se réduit à la citoyenneté', 0, 1),
+(@qid, 'Oui, on peut être homme sans citoyenneté mais la citoyenneté enrichit l''humanité', 1, 2),
+(@qid, 'Non, car sans citoyenneté on n''est pas humain', 0, 3),
+(@qid, 'Oui, mais seulement dans les monarchies', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le grand devoir du gouvernement selon Rousseau ?', 'Le grand devoir du gouvernement est de protéger le pauvre contre la tyrannie du riche.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Accumuler le plus de richesses possible', 0, 1),
+(@qid, 'Protéger le pauvre contre la tyrannie du riche', 1, 2),
+(@qid, 'Favoriser les plus puissants', 0, 3),
+(@qid, 'Ignorer les inégalités sociales', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quels sont les trois grands pouvoirs de l''État ?', 'Les trois pouvoirs sont le pouvoir exécutif, le pouvoir législatif et le pouvoir judiciaire.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le pouvoir militaire, religieux et économique', 0, 1),
+(@qid, 'Le pouvoir exécutif, législatif et judiciaire', 1, 2),
+(@qid, 'Le pouvoir central, régional et local', 0, 3),
+(@qid, 'Le pouvoir éducatif, sanitaire et culturel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui caractérise l''État selon Max Weber ?', 'L''État revendique le monopole de la violence physique légitime sur un territoire.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le monopole de la violence physique légitime sur un territoire', 1, 1),
+(@qid, 'Le partage de la violence avec tous les citoyens', 0, 2),
+(@qid, 'L''absence totale de contrainte', 0, 3),
+(@qid, 'La gestion exclusive de l''économie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Une société juste est-elle possible ?', 'La justice parfaite est un idéal, mais les sociétés tendent vers elle par les lois et les institutions.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, c''est une utopie irréalisable', 0, 1),
+(@qid, 'Elle est un idéal vers lequel on peut tendre par les lois et institutions', 1, 2),
+(@qid, 'Oui, elle est déjà réalisée partout', 0, 3),
+(@qid, 'Non, car la justice n''existe pas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le rôle du droit dans la société ?', 'Le droit édicte les règles distinguant ce qui est permis, interdit et sanctionné.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Édicter des règles et distinguer ce qui est permis, interdit et sanctionné', 1, 1),
+(@qid, 'Favoriser les plus riches', 0, 2),
+(@qid, 'Remplacer totalement la morale', 0, 3),
+(@qid, 'Supprimer toute forme de liberté', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Les lois garantissent-elles effectivement la liberté humaine ?', 'Les lois garantissent certaines libertés, mais ne peuvent garantir la liberté sous tous ses aspects.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, les lois suffisent à garantir toute liberté', 0, 1),
+(@qid, 'Les lois garantissent certaines libertés mais ne couvrent pas tous les aspects de la liberté', 1, 2),
+(@qid, 'Non, les lois sont toujours contraires à la liberté', 0, 3),
+(@qid, 'Oui, car sans lois il n''y aurait aucune liberté', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Que signifie "l''État est fondé sur la force" ?', 'Cela signifie que l''État tire son pouvoir de sa capacité à imposer l''ordre par la contrainte.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''État n''a aucun pouvoir réel', 0, 1),
+(@qid, 'L''État tire son pouvoir de sa capacité à imposer l''ordre par la contrainte', 1, 2),
+(@qid, 'L''État est fondé sur l''amour des citoyens', 0, 3),
+(@qid, 'L''État ne repose que sur le consentement volontaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la politique en tant que science ?', 'La politique comme science étudie l''organisation rationnelle de la vie collective.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''art de manipuler les foules', 0, 1),
+(@qid, 'L''étude de l''organisation rationnelle de la vie collective', 1, 2),
+(@qid, 'Une simple lutte pour le pouvoir', 0, 3),
+(@qid, 'La gestion exclusive de l''économie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui rend légitime l''obéissance au souverain selon Spinoza ?', 'L''obéissance est légitime quand la loi suprême vise le salut du peuple tout entier.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Quand le souverain est le plus fort', 0, 1),
+(@qid, 'Quand la loi suprême vise le salut du peuple tout entier', 1, 2),
+(@qid, 'Quand l''obéissance est forcée par la violence', 0, 3),
+(@qid, 'Quand le peuple est ignorant de ses droits', 0, 4);
+
+-- ============================================
+-- THÈME 5 : LA SCIENCE ET LA TECHNIQUE
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui définit la connaissance scientifique ?', 'La connaissance scientifique vise des vérités universelles, vérifiables et fondées sur des preuves.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une simple opinion personnelle', 0, 1),
+(@qid, 'Des vérités universelles, vérifiables et fondées sur des preuves', 1, 2),
+(@qid, 'Une croyance sans fondement rationnel', 0, 3),
+(@qid, 'Un savoir réservé à une élite', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui distingue la science de l''opinion ?', 'La science est fondée sur la démonstration rationnelle et la vérification, l''opinion sur l''impression.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La science et l''opinion sont la même chose', 0, 1),
+(@qid, 'La science est fondée sur la démonstration, l''opinion sur l''impression personnelle', 1, 2),
+(@qid, 'L''opinion est plus fiable que la science', 0, 3),
+(@qid, 'La science est une simple opinion parmi d''autres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'L''opinion peut-elle fonder la science ?', 'L''opinion ne peut fonder la science car elle n''est ni vérifiée ni universelle.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, la science repose entièrement sur l''opinion', 0, 1),
+(@qid, 'Non, l''opinion n''est ni vérifiée ni universelle, elle ne peut fonder la science', 1, 2),
+(@qid, 'Oui, car toutes les opinions sont égales', 0, 3),
+(@qid, 'Non, car la science n''existe pas vraiment', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le rapport entre connaissance commune et connaissance scientifique ?', 'La connaissance commune peut être un point d''appui, mais la science doit la dépasser et la corriger.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La connaissance commune est toujours supérieure à la science', 0, 1),
+(@qid, 'La connaissance commune peut être un point de départ que la science doit dépasser', 1, 2),
+(@qid, 'Les deux sont parfaitement identiques', 0, 3),
+(@qid, 'La science doit ignorer totalement la connaissance commune', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le premier obstacle à l''esprit scientifique selon Bachelard ?', 'L''expérience première, placée avant et au-dessus de la critique, est le premier obstacle.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le manque de matériel de laboratoire', 0, 1),
+(@qid, 'L''expérience première placée avant et au-dessus de la critique', 1, 2),
+(@qid, 'L''absence de mathématiques', 0, 3),
+(@qid, 'Le manque d''imagination', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que l''esprit scientifique ?', 'L''esprit scientifique est un esprit d''observation, de critique et de recherche des causes.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un esprit qui accepte tout sans vérifier', 0, 1),
+(@qid, 'Un esprit d''observation, de critique et de recherche des causes', 1, 2),
+(@qid, 'Un esprit qui ne croit qu''aux miracles', 0, 3),
+(@qid, 'Un esprit qui refuse toute méthode', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui distingue la science de la technique ?', 'La science vise la connaissance théorique, la technique est au service des besoins pratiques.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La technique vise la connaissance, la science les besoins', 0, 1),
+(@qid, 'La science vise la connaissance, la technique est au service des besoins pratiques', 1, 2),
+(@qid, 'Les deux ont la même finalité', 0, 3),
+(@qid, 'La science est une forme de technique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Le développement technique peut-il faire le bonheur de l''homme ?', 'La technique améliore les conditions de vie mais ne garantit pas le bonheur intérieur.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, la technique garantit absolument le bonheur', 0, 1),
+(@qid, 'La technique améliore les conditions de vie mais ne garantit pas le bonheur intérieur', 1, 2),
+(@qid, 'Non, la technique n''apporte rien à l''homme', 0, 3),
+(@qid, 'Oui, car le bonheur se mesure uniquement au confort matériel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'La science peut-elle se substituer à la philosophie ?', 'La science et la philosophie sont deux disciplines différentes mais complémentaires.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, la science peut remplacer totalement la philosophie', 0, 1),
+(@qid, 'Non, la science et la philosophie sont deux disciplines différentes mais complémentaires', 1, 2),
+(@qid, 'Oui, car la philosophie est dépassée', 0, 3),
+(@qid, 'Non, car la philosophie est supérieure en tout à la science', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui caractérise la vérité scientifique ?', 'La vérité scientifique est universelle, vérifiable et reste valable une fois pour toutes.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle est subjective et varie selon les individus', 0, 1),
+(@qid, 'Elle est universelle, vérifiable et reste valable une fois pour toutes', 1, 2),
+(@qid, 'Elle est toujours provisoire et incertaine', 0, 3),
+(@qid, 'Elle ne repose sur aucune preuve', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Suffit-il de voir pour savoir ?', 'Non, voir (perception) ne suffit pas ; il faut aussi comprendre par l''intelligence et la raison.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, la perception visuelle donne tout le savoir', 0, 1),
+(@qid, 'Non, il faut aussi comprendre et raisonner au-delà de la simple perception', 1, 2),
+(@qid, 'Oui, car voir c''est nécessairement comprendre', 0, 3),
+(@qid, 'Non, car la vue n''apporte aucune connaissance', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la logique ?', 'La logique est la science des lois de la pensée et l''art de les appliquer à la recherche de la vérité.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La science des lois de la pensée pour la recherche de la vérité', 1, 1),
+(@qid, 'L''art de persuader par les sentiments', 0, 2),
+(@qid, 'Une simple opinion sur le monde', 0, 3),
+(@qid, 'L''étude des phénomènes naturels', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la logique formelle ?', 'La logique formelle s''intéresse à l''étude des formes du raisonnement, indépendamment de leur contenu.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''étude du contenu émotionnel du discours', 0, 1),
+(@qid, 'L''étude des formes du raisonnement indépendamment de leur contenu', 1, 2),
+(@qid, 'L''étude des phénomènes psychologiques', 0, 3),
+(@qid, 'L''étude de la nature et de ses lois', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'La science s''oppose-t-elle à la philosophie ?', 'La science et la philosophie ne s''opposent pas radicalement ; elles peuvent être complémentaires.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, elles sont totalement opposées', 0, 1),
+(@qid, 'Non, elles ne s''opposent pas radicalement et peuvent se compléter', 1, 2),
+(@qid, 'Oui, car la science a remplacé la philosophie', 0, 3),
+(@qid, 'Non, car elles sont parfaitement identiques', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le but de la logique ?', 'Le but de la logique est de déterminer les règles pour opérer avec ordre et sans erreur dans la recherche de la vérité.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Déterminer les règles pour raisonner avec ordre et sans erreur', 1, 1),
+(@qid, 'Persuader à tout prix, même par la manipulation', 0, 2),
+(@qid, 'Accumuler des connaissances sans les organiser', 0, 3),
+(@qid, 'Remplacer toutes les autres sciences', 0, 4);
+
+-- ============================================
+-- THÈME 6 : LE BONHEUR
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le but de la vie selon Aristote ?', 'Pour Aristote, le bonheur est le but ultime de la vie humaine.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''accumulation de richesses', 0, 1),
+(@qid, 'Le bonheur comme but ultime', 1, 2),
+(@qid, 'La domination des autres', 0, 3),
+(@qid, 'La simple survie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel philosophe fait du bonheur le souverain bien ?', 'Épicure et Aristote font du bonheur (eudaimonia) le souverain bien.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hobbes', 0, 1),
+(@qid, 'Aristote', 1, 2),
+(@qid, 'Descartes', 0, 3),
+(@qid, 'Cournot', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'En quoi consiste le bonheur selon Épicure ?', 'Pour Épicure, le bonheur consiste à ne pas souffrir dans le corps et à être sans trouble dans l''âme.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dans les plaisirs excessifs et la débauche', 0, 1),
+(@qid, 'Dans l''absence de souffrance du corps et la tranquillité de l''âme', 1, 2),
+(@qid, 'Dans l''accumulation de richesses matérielles', 0, 3),
+(@qid, 'Dans la quête de pouvoir et de gloire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le plus grand des biens selon Épicure ?', 'La prudence (le raisonnement vigilant) est le plus grand des biens pour Épicure.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La richesse', 0, 1),
+(@qid, 'La prudence et le raisonnement vigilant', 1, 2),
+(@qid, 'La puissance politique', 0, 3),
+(@qid, 'Le plaisir immédiat sans réflexion', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Le bonheur consiste-t-il dans l''amusement ?', 'Non, selon Aristote, il serait absurde que l''amusement fût le but de la vie.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, l''amusement est le but ultime de la vie', 0, 1),
+(@qid, 'Non, il serait absurde que l''amusement fût le but de la vie', 1, 2),
+(@qid, 'Oui, car tout le monde ne cherche qu''à s''amuser', 0, 3),
+(@qid, 'Non, car l''amusement n''existe pas vraiment', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'La richesse peut-elle mener au bonheur ?', 'La richesse seule ne suffit pas au bonheur ; elle peut même en éloigner si elle est mal utilisée.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, la richesse garantit absolument le bonheur', 0, 1),
+(@qid, 'Non, la richesse seule ne suffit pas et peut même éloigner du bonheur', 1, 2),
+(@qid, 'Oui, le bonheur et la richesse sont identiques', 0, 3),
+(@qid, 'Non, car les riches sont toujours malheureux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quelle est la doctrine qui fait du bonheur le souverain bien ?', 'L''eudémonisme est la doctrine philosophique qui fait du bonheur le souverain bien.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''hédonisme pur', 0, 1),
+(@qid, 'L''eudémonisme', 1, 2),
+(@qid, 'Le stoïcisme exclusivement', 0, 3),
+(@qid, 'Le nihilisme', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Selon Épicure, que faut-il pour être heureux ?', 'Il faut un raisonnement vigilant capable de trouver les motifs de ce qu''il faut choisir et éviter.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Seulement satisfaire tous ses désirs', 0, 1),
+(@qid, 'Un raisonnement vigilant qui distingue les bons choix des mauvais', 1, 2),
+(@qid, 'Accumuler le plus de plaisirs possible', 0, 3),
+(@qid, 'Vivre sans jamais réfléchir', 0, 4);
+
+-- ============================================
+-- THÈME 7 : LA CONNAISSANCE DE SOI ET LA MÉMOIRE
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que l''introspection ?', 'L''introspection est l''observation de soi-même par soi-même, sans intermédiaire.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''observation des autres', 0, 1),
+(@qid, 'L''observation de soi-même par soi-même sans intermédiaire', 1, 2),
+(@qid, 'L''étude scientifique du cerveau', 0, 3),
+(@qid, 'Une forme de méditation religieuse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Est-il possible de se connaître soi-même sans intermédiaire ?', 'La connaissance de soi est partielle sans intermédiaire ; autrui est un miroir nécessaire.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, l''introspection suffit amplement', 0, 1),
+(@qid, 'C''est difficile, car autrui et les méthodes objectives sont souvent nécessaires', 1, 2),
+(@qid, 'Oui, et c''est la seule méthode valable', 0, 3),
+(@qid, 'Non, c''est totalement impossible en toutes circonstances', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'La mémoire et l''oubli s''opposent-ils ?', 'La mémoire et l''oubli ne s''opposent pas toujours ; l''oubli peut être nécessaire à la mémoire.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, ils sont toujours en conflit', 0, 1),
+(@qid, 'Non, ils s''accordent généralement assez bien et l''oubli peut aider la mémoire', 1, 2),
+(@qid, 'Oui, et l''un doit détruire l''autre', 0, 3),
+(@qid, 'Non, ils sont parfaitement identiques', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'L''oubli est-il toujours l''ennemi de la mémoire ?', 'Non, l''oubli peut être nécessaire pour ne retenir que l''essentiel et avancer dans la vie.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, l''oubli est toujours nuisible à la mémoire', 0, 1),
+(@qid, 'Non, l''oubli peut être l''ami de la mémoire en permettant de ne retenir que l''essentiel', 1, 2),
+(@qid, 'Oui, car tout oubli est une défaillance', 0, 3),
+(@qid, 'Non, car l''oubli n''existe pas vraiment', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la conscience psychologique ?', 'La conscience psychologique est la reconnaissance de ce qui se passe en moi et en dehors de moi.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La simple capacité de juger le bien et le mal', 0, 1),
+(@qid, 'La reconnaissance de ce qui se passe en soi et hors de soi', 1, 2),
+(@qid, 'La mémoire des événements traumatiques', 0, 3),
+(@qid, 'L''inconscient collectif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui définit l''homme selon la conscience ?', 'La conscience est le caractère incontournable de l''humanité qui rend présent à soi-même et au monde.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La seule capacité de marcher debout', 0, 1),
+(@qid, 'La conscience comme caractère incontournable de l''humanité', 1, 2),
+(@qid, 'L''instinct animal dominant', 0, 3),
+(@qid, 'La simple vie en groupe', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Pour connaître l''autre, faut-il d''abord se connaître soi-même ?', 'Se connaître aide à comprendre autrui, mais ce n''est pas une condition absolue et suffisante.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, c''est une condition absolument nécessaire', 0, 1),
+(@qid, 'Se connaître aide à comprendre autrui, mais ce n''est pas une condition absolue', 1, 2),
+(@qid, 'Non, la connaissance de soi n''apporte rien à la connaissance d''autrui', 0, 3),
+(@qid, 'Oui, et cela suffit à connaître parfaitement l''autre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui distingue la conscience humaine de la conscience animale ?', 'La conscience humaine est synonyme d''invention et de liberté, capable de briser la chaîne de la routine.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il n''y a aucune différence significative', 0, 1),
+(@qid, 'La conscience humaine est synonyme d''invention et de liberté, elle brise la routine', 1, 2),
+(@qid, 'L''animal a une conscience supérieure à l''homme', 0, 3),
+(@qid, 'La conscience humaine est limitée à l''instinct', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la psychanalyse ?', 'La psychanalyse est une méthode d''exploration de l''inconscient fondée par Freud.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une simple introspection personnelle', 0, 1),
+(@qid, 'Une méthode d''exploration de l''inconscient fondée par Freud', 1, 2),
+(@qid, 'Une science exacte des comportements observables', 0, 3),
+(@qid, 'Une branche de la neurologie médicale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'L''introspection et la psychanalyse s''opposent-elles radicalement ?', 'Elles ne s''opposent pas radicalement ; l''introspection n''est pas sans intérêt pour la psychanalyse.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, elles sont totalement incompatibles', 0, 1),
+(@qid, 'Non, elles ne s''opposent pas radicalement et l''introspection peut servir la psychanalyse', 1, 2),
+(@qid, 'Oui, car l''une exclut totalement l''autre', 0, 3),
+(@qid, 'Non, car elles sont parfaitement identiques', 0, 4);
+
+-- ============================================
+-- THÈME 8 : L'ART ET L'ESTHÉTIQUE
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le but de l''art selon Hegel ?', 'L''art rend accessible à l''intuition ce qui existe dans l''esprit humain et éveille des sentiments.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Copier fidèlement la nature sans créativité', 0, 1),
+(@qid, 'Rendre accessible à l''intuition la vérité que l''homme abrite dans son esprit', 1, 2),
+(@qid, 'Produire des objets utiles pour la vie quotidienne', 0, 3),
+(@qid, 'Divertir sans aucune portée profonde', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Peut-on s''entendre tous sur la beauté d''une œuvre d''art ?', 'L''accord unanime sur la beauté est difficile car le jugement esthétique implique la subjectivité.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, la beauté est objective et universelle', 0, 1),
+(@qid, 'C''est difficile car le jugement esthétique implique la subjectivité du spectateur', 1, 2),
+(@qid, 'Oui, il existe un critère absolu de beauté', 0, 3),
+(@qid, 'Non, et cela signifie que l''art n''a aucune valeur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui distingue l''art de la nature selon Hegel ?', 'L''art est un artifice humain ; la nature nous réjouit par son imitation inconsciente de l''humain.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''art est toujours supérieur à la nature', 0, 1),
+(@qid, 'La nature nous réjouit par son imitation inconsciente de l''humain, l''art est un artifice', 1, 2),
+(@qid, 'L''art et la nature sont strictement identiques', 0, 3),
+(@qid, 'L''art n''a aucun rapport avec la nature', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quelles sont les principales manifestations de la culture ?', 'L''art, la religion, la morale, la langue et les coutumes sont des manifestations de la culture.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Uniquement les productions artistiques', 0, 1),
+(@qid, 'L''art, la religion, la morale, la langue et les coutumes', 1, 2),
+(@qid, 'Les seules inventions techniques', 0, 3),
+(@qid, 'Les lois physiques de la nature', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que l''esthétique en philosophie ?', 'L''esthétique est la branche de la philosophie qui s''intéresse à l''art et à la beauté.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''étude des sensations physiques', 0, 1),
+(@qid, 'La branche de la philosophie qui étudie l''art et la beauté', 1, 2),
+(@qid, 'L''étude de l''éthique et de la morale', 0, 3),
+(@qid, 'La science des comportements', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Selon Hegel, pourquoi le chant humain imitant le rossignol nous paraît-il insipide ?', 'Parce que nous percevons un artifice, non une libre production naturelle ou une véritable œuvre d''art.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parce que l''homme chante moins bien que l''oiseau', 0, 1),
+(@qid, 'Parce que nous y voyons un simple artifice et non une libre production', 1, 2),
+(@qid, 'Parce que le chant n''est pas une activité humaine', 0, 3),
+(@qid, 'Parce que l''oiseau est plus intelligent', 0, 4);
+
+-- ============================================
+-- THÈME 8 : LE TRAVAIL ET LA TECHNIQUE
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui distingue le travail humain de l''activité animale ?', 'Le travail humain actualise une volonté réfléchie, l''activité animale suit l''instinct aveugle.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''activité animale est toujours plus productive', 0, 1),
+(@qid, 'Le travail humain actualise une volonté réfléchie, l''animal suit son instinct', 1, 2),
+(@qid, 'Il n''y a aucune différence entre les deux', 0, 3),
+(@qid, 'Le travail humain est purement instinctif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Le travail est-il le propre de l''homme ?', 'Oui, selon Marx, le travail comme activité réfléchie et transformatrice est le propre de l''homme.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, les animaux travaillent tout autant que l''homme', 0, 1),
+(@qid, 'Oui, en tant qu''activité réfléchie et transformatrice, le travail est propre à l''homme', 1, 2),
+(@qid, 'Non, le travail n''existe pas vraiment', 0, 3),
+(@qid, 'Oui, mais seulement le travail manuel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Pourquoi dit-on que l''animal ne travaille pas ?', 'L''animal ne travaille pas car il n''actualise pas une volonté réfléchie et reste rivé à ses instincts.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parce que l''animal ne produit rien d''utile', 0, 1),
+(@qid, 'Parce que l''animal n''actualise pas une volonté réfléchie et suit ses instincts', 1, 2),
+(@qid, 'Parce que l''animal ne se fatigue jamais', 0, 3),
+(@qid, 'Parce que l''animal n''utilise jamais d''outils', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le rapport de l''homme avec la technique ?', 'La technique peut améliorer la vie, mais l''essentiel est une redéfinition des rapports de l''homme avec elle.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La technique doit dominer totalement l''homme', 0, 1),
+(@qid, 'La technique est un moyen ; l''essentiel est de redéfinir les rapports de l''homme avec elle', 1, 2),
+(@qid, 'L''homme doit rejeter toute technique', 0, 3),
+(@qid, 'La technique n''a aucun impact sur l''homme', 0, 4);
+
+-- ============================================
+-- THÈME 10 : LA VIOLENCE ET L'AGRESSIVITÉ
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'L''homme est-il naturellement violent selon Freud ?', 'Freud affirme que l''homme porte une bonne somme d''agressivité dans ses données instinctives.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, l''homme est naturellement bon et pacifique', 0, 1),
+(@qid, 'L''homme porte une bonne somme d''agressivité dans ses données instinctives', 1, 2),
+(@qid, 'Non, la violence humaine est exclusivement culturelle', 0, 3),
+(@qid, 'Oui, mais elle disparaît totalement en société', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Que signifie "Homo homini lupus" ?', 'Cela signifie "l''homme est un loup pour l''homme", exprimant la tendance à l''agression.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''homme est un ami pour l''homme', 0, 1),
+(@qid, 'L''homme est un loup pour l''homme', 1, 2),
+(@qid, 'L''homme est un dieu pour l''homme', 0, 3),
+(@qid, 'L''homme est un guide pour l''homme', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le principal facteur de perturbation dans les rapports humains selon Freud ?', 'La tendance à l''agression constitue le principal facteur de perturbation.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le manque de communication', 0, 1),
+(@qid, 'La tendance à l''agression', 1, 2),
+(@qid, 'La différence de langues', 0, 3),
+(@qid, 'Le manque de richesse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui menace constamment la société civilisée selon Freud ?', 'L''hostilité primaire qui dresse les hommes les uns contre les autres menace la civilisation.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le manque de technologie', 0, 1),
+(@qid, 'L''hostilité primaire qui dresse les hommes les uns contre les autres', 1, 2),
+(@qid, 'La surpopulation mondiale', 0, 3),
+(@qid, 'Le changement climatique', 0, 4);
+
+-- ============================================
+-- THÈME 11 : L'ÉDUCATION
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que l''éducation selon Kant ?', 'L''éducation polit la rudesse de l''homme en raison de son penchant pour la liberté.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un simple apprentissage technique', 0, 1),
+(@qid, 'L''action de polir la rudesse humaine en raison du penchant pour la liberté', 1, 2),
+(@qid, 'Une contrainte inutile sur l''enfant', 0, 3),
+(@qid, 'La transmission de connaissances sans formation morale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Pourquoi faut-il habituer l''homme jeune à se soumettre à la raison ?', 'Sans cela, il conserve une certaine sauvagerie toute sa vie et subira des échecs.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pour le rendre obéissant sans esprit critique', 0, 1),
+(@qid, 'Pour éviter qu''il conserve une certaine sauvagerie et subisse des échecs', 1, 2),
+(@qid, 'Pour l''empêcher de devenir autonome', 0, 3),
+(@qid, 'Pour le rendre dépendant des autres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le grand problème de l''éducation ?', 'Unir la soumission sous une contrainte légale avec la faculté de se servir de sa liberté.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Trouver les meilleurs manuels scolaires', 0, 1),
+(@qid, 'Unir la soumission sous contrainte légale avec la faculté de se servir de sa liberté', 1, 2),
+(@qid, 'Éviter toute forme de discipline', 0, 3),
+(@qid, 'Former des travailleurs productifs uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Pourquoi l''éducation des princes est-elle souvent fautive selon Kant ?', 'On ne leur oppose jamais de véritable résistance dans leur jeunesse, ce qui les rend faibles.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parce qu''ils reçoivent trop de discipline', 0, 1),
+(@qid, 'Parce qu''on ne leur oppose jamais de véritable résistance dans leur jeunesse', 1, 2),
+(@qid, 'Parce qu''ils n''ont pas accès à la philosophie', 0, 3),
+(@qid, 'Parce qu''ils sont naturellement inéducables', 0, 4);
+
+-- ============================================
+-- THÈME 12 : LA VÉRITÉ
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la vérité ?', 'La vérité est l''adéquation entre l''esprit et la réalité, entre ce qu''on dit et ce qui est.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ce que tout le monde croit', 0, 1),
+(@qid, 'L''adéquation entre l''esprit et la réalité', 1, 2),
+(@qid, 'Une simple opinion personnelle', 0, 3),
+(@qid, 'Ce qui est utile pour agir', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'La vérité peut-elle découler d''un accord unanime ?', 'Non, l''unanimité n''est pas un critère suffisant de vérité ; celle-ci exige des preuves.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, le consensus universel définit la vérité', 0, 1),
+(@qid, 'Non, l''unanimité n''est pas un critère suffisant, la vérité exige des preuves', 1, 2),
+(@qid, 'Oui, car la majorité a toujours raison', 0, 3),
+(@qid, 'Non, car la vérité n''existe pas du tout', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le rôle du doute dans la recherche de la vérité ?', 'Le doute méthodique, loin d''être un obstacle, peut être une condition de la vérité.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le doute empêche toujours de trouver la vérité', 0, 1),
+(@qid, 'Le doute méthodique peut être une condition pour atteindre la vérité', 1, 2),
+(@qid, 'Le doute n''a aucun rôle dans la recherche de la vérité', 0, 3),
+(@qid, 'Le doute est le contraire absolu de la vérité', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Que fait le philosophe face au doute selon Dumarsais ?', 'Il sait demeurer indéterminé lorsqu''il n''a point de motif pour juger.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il choisit toujours l''opinion la plus populaire', 0, 1),
+(@qid, 'Il sait demeurer indéterminé lorsqu''il n''a pas de motif pour juger', 1, 2),
+(@qid, 'Il ignore totalement le doute', 0, 3),
+(@qid, 'Il se fie à son intuition immédiate', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quels sont les principes qui régissent la vie de l''homme en société selon les textes ?', 'La morale, le droit et la politique sont les trois principes qui régissent la vie en société.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La science, l''art et la religion', 0, 1),
+(@qid, 'La morale, le droit et la politique', 1, 2),
+(@qid, 'L''économie, la technique et le sport', 0, 3),
+(@qid, 'La nature, la culture et l''éducation', 0, 4);
+
+-- ============================================
+-- THÈME 13 : LA JUSTICE ET LE DROIT
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le sens du mot "droit" en philosophie politique ?', 'Le droit est l''ensemble des règles qui régissent les rapports sociaux et sont garanties par l''État.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ce qui est permis par la morale uniquement', 0, 1),
+(@qid, 'L''ensemble des règles sociales garanties par l''État', 1, 2),
+(@qid, 'La simple volonté du plus fort', 0, 3),
+(@qid, 'Ce qui est techniquement possible', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le rapport entre le droit et la justice ?', 'Le droit vise à établir la justice, mais peut parfois s''en écarter si les lois sont injustes.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le droit et la justice sont toujours identiques', 0, 1),
+(@qid, 'Le droit vise la justice mais peut s''en écarter si les lois sont injustes', 1, 2),
+(@qid, 'Le droit n''a rien à voir avec la justice', 0, 3),
+(@qid, 'La justice est au-dessus du droit dans tous les cas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Que garantit l''égalité selon Condillac ?', 'L''égalité garantit que tous les citoyens sont protégés par la loi et jouissent de leurs biens.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Que tous les citoyens sont protégés par la loi et jouissent de leurs biens', 1, 1),
+(@qid, 'Que tous les citoyens ont la même fortune', 0, 2),
+(@qid, 'Que personne n''a de droits', 0, 3),
+(@qid, 'Que seul l''État peut posséder des biens', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Peut-on dire que l''égalité est une chimère ?', 'L''égalité parfaite peut être un idéal, mais les lois doivent tendre à la maintenir.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, l''égalité n''existe pas et ne sert à rien', 0, 1),
+(@qid, 'L''égalité parfaite est un idéal, mais les lois doivent tendre à la maintenir', 1, 2),
+(@qid, 'Non, l''égalité est déjà parfaite dans toutes les sociétés', 0, 3),
+(@qid, 'Oui, et il ne faut rien faire pour l''atteindre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Pourquoi la législation doit-elle tendre à maintenir l''égalité ?', 'Parce que la force des choses tend toujours à détruire l''égalité.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parce que l''égalité n''a aucune importance', 0, 1),
+(@qid, 'Parce que la force des choses tend toujours à détruire l''égalité', 1, 2),
+(@qid, 'Parce que les inégalités sont naturelles et souhaitables', 0, 3),
+(@qid, 'Parce que la loi doit favoriser les plus forts', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui rend une république heureuse selon Condillac ?', 'Une république est heureuse quand les citoyens obéissent aux magistrats et les magistrats aux lois.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''absence totale de lois', 0, 1),
+(@qid, 'Quand les citoyens obéissent aux magistrats et les magistrats respectent les lois', 1, 2),
+(@qid, 'Quand le peuple gouverne sans représentants', 0, 3),
+(@qid, 'Quand l''armée prend le pouvoir', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'D''où viennent les idées de justice et d''injustice ?', 'Elles viennent de la réflexion et de l''imagination morale des hommes en société.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'De la nature biologique uniquement', 0, 1),
+(@qid, 'De la réflexion et de l''imagination morale des hommes en société', 1, 2),
+(@qid, 'Des lois économiques', 0, 3),
+(@qid, 'De la volonté divine exclusivement', 0, 4);
+
+-- ============================================
+-- THÈME 14 : LA SOCIÉTÉ
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Pourquoi l''homme vit-il en société ?', 'Les nécessités de la vie et le bien-être obligent l''homme à vivre en société.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Par pur hasard et sans raison', 0, 1),
+(@qid, 'Parce que les nécessités de la vie et le bien-être l''y obligent', 1, 2),
+(@qid, 'Parce que c''est un choix arbitraire', 0, 3),
+(@qid, 'Uniquement pour se reproduire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui fonde la société civile selon les philosophes du contrat ?', 'Un contrat social par lequel les individus acceptent de limiter leur liberté naturelle.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La force brute des plus puissants', 0, 1),
+(@qid, 'Un contrat social où les individus limitent leur liberté naturelle', 1, 2),
+(@qid, 'La simple habitude de vivre ensemble', 0, 3),
+(@qid, 'La volonté divine sans participation humaine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le rôle des institutions politiques selon Spinoza ?', 'Les bonnes institutions visent la concorde et protègent la législation contre toute atteinte.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Accroître le pouvoir des gouvernants sans limites', 0, 1),
+(@qid, 'Visent la concorde et protègent la législation contre toute atteinte', 1, 2),
+(@qid, 'Maintenir les hommes dans l''obéissance aveugle', 0, 3),
+(@qid, 'Favoriser uniquement les intérêts économiques', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Les institutions politiques sont-elles responsables de la méchanceté des hommes ?', 'Pour Spinoza, les défauts des États sont plus responsables que la méchanceté des hommes.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, la méchanceté est entièrement naturelle', 0, 1),
+(@qid, 'Les défauts des États sont plus imputables que la méchanceté des hommes', 1, 2),
+(@qid, 'Non, les institutions n''ont aucune influence sur les hommes', 0, 3),
+(@qid, 'Oui, et c''est la seule cause de tous les maux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la socialisation ?', 'La socialisation est le processus par lequel un individu apprend et intériorise les normes sociales.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le simple fait de vivre en groupe', 0, 1),
+(@qid, 'Le processus d''apprentissage et d''intériorisation des normes sociales', 1, 2),
+(@qid, 'L''isolement volontaire de la société', 0, 3),
+(@qid, 'La transmission génétique des comportements', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quelles sont les principales institutions socialisatrices ?', 'La famille, l''école et la religion sont les principales institutions de socialisation.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La police, l''armée et la justice', 0, 1),
+(@qid, 'La famille, l''école et la religion', 1, 2),
+(@qid, 'Les médias, le marché et l''État', 0, 3),
+(@qid, 'La science, la technique et l''art', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'L''unité du genre humain oblige-t-elle à combattre la diversité culturelle ?', 'Non, l''unité du genre humain n''exige pas l''uniformité culturelle ; la diversité est une richesse.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, l''unité exige une seule culture mondiale', 0, 1),
+(@qid, 'Non, l''unité du genre humain n''exige pas l''uniformité culturelle', 1, 2),
+(@qid, 'Oui, il faut supprimer toutes les différences', 0, 3),
+(@qid, 'Non, car il n''y a pas d''unité du genre humain', 0, 4);
+
+-- ============================================
+-- THÈME 15 : LE LANGAGE ET LA PENSÉE
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la pensée selon Platon ?', 'La pensée est le dialogue de l''âme avec elle-même.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un simple reflet de la réalité matérielle', 0, 1),
+(@qid, 'Le dialogue de l''âme avec elle-même', 1, 2),
+(@qid, 'Une fonction biologique du cerveau uniquement', 0, 3),
+(@qid, 'L''accumulation passive de sensations', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui permet d''accéder au vrai selon Platon ?', 'Le dialogue, la parole et la maîtrise du discours permettent d''accéder au vrai.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La simple observation passive', 0, 1),
+(@qid, 'Le dialogue, la parole et la maîtrise du discours', 1, 2),
+(@qid, 'L''obéissance à l''autorité', 0, 3),
+(@qid, 'Le silence absolu et la méditation', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Que faut-il pour penser par soi-même ?', 'Il faut des concepts, c''est-à-dire des représentations permettant de construire le réel.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Simplement répéter ce que disent les autres', 0, 1),
+(@qid, 'Des concepts, représentations permettant de construire le réel', 1, 2),
+(@qid, 'Posséder beaucoup de livres', 0, 3),
+(@qid, 'Ne jamais remettre en question ses opinions', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que conceptualiser ?', 'Conceptualiser, c''est mettre en forme la diversité des choses pour mieux les comprendre.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Apprendre par cœur des définitions', 0, 1),
+(@qid, 'Mettre en forme la diversité des choses pour mieux les comprendre', 1, 2),
+(@qid, 'Refuser toute forme d''abstraction', 0, 3),
+(@qid, 'Se fier uniquement à ses sensations', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que philosopher selon les textes ?', 'Philosopher, c''est faire preuve d''audace et ne point déléguer à un autre la fonction de penser.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Faire preuve d''audace et ne point déléguer à un autre la fonction de penser', 1, 1),
+(@qid, 'Suivre aveuglément la pensée d''un maître', 0, 2),
+(@qid, 'Éviter toute réflexion personnelle', 0, 3),
+(@qid, 'Accumuler des citations sans les comprendre', 0, 4);
+
+-- ============================================
+-- THÈME 16 : AUTEURS CLÉS ET LEURS IDÉES
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qui a écrit "Le Léviathan" ?', 'Thomas Hobbes est l''auteur du Léviathan, œuvre majeure de philosophie politique.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Jean-Jacques Rousseau', 0, 1),
+(@qid, 'Thomas Hobbes', 1, 2),
+(@qid, 'René Descartes', 0, 3),
+(@qid, 'Platon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qui a écrit le "Contrat Social" ?', 'Jean-Jacques Rousseau est l''auteur du Contrat Social.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Thomas Hobbes', 0, 1),
+(@qid, 'Jean-Jacques Rousseau', 1, 2),
+(@qid, 'Voltaire', 0, 3),
+(@qid, 'Émile Chartier', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qui a participé à la rédaction de l''Encyclopédie ?', 'Dumarsais a participé à l''Encyclopédie de Diderot et d''Alembert au XVIIIe siècle.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Kant', 0, 1),
+(@qid, 'Dumarsais', 1, 2),
+(@qid, 'Freud', 0, 3),
+(@qid, 'Hegel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qui a écrit "Malaise dans la civilisation" ?', 'Sigmund Freud est l''auteur de Malaise dans la civilisation (1828).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Karl Marx', 0, 1),
+(@qid, 'Sigmund Freud', 1, 2),
+(@qid, 'Émile Durkheim', 0, 3),
+(@qid, 'Friedrich Hegel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qui affirme que "l''homme est un loup pour l''homme" ?', 'Cette formule, reprise par Hobbes et Freud, trouve son origine chez Plaute.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Aristote', 0, 1),
+(@qid, 'Hobbes / Plaute', 1, 2),
+(@qid, 'Kant', 0, 3),
+(@qid, 'Rousseau', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qui a écrit l''"Éthique à Nicomaque" ?', 'Aristote est l''auteur de l''Éthique à Nicomaque.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Platon', 0, 1),
+(@qid, 'Aristote', 1, 2),
+(@qid, 'Épicure', 0, 3),
+(@qid, 'Socrate', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'À qui doit-on la théorie de l''impératif catégorique ?', 'Emmanuel Kant a formulé la théorie de l''impératif catégorique en morale.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hegel', 0, 1),
+(@qid, 'Emmanuel Kant', 1, 2),
+(@qid, 'Rousseau', 0, 3),
+(@qid, 'Spinoza', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qui a développé la notion d''esprit scientifique avec l''idée d''obstacle épistémologique ?', 'Gaston Bachelard a développé la notion d''obstacle épistémologique.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Auguste Comte', 0, 1),
+(@qid, 'Gaston Bachelard', 1, 2),
+(@qid, 'René Descartes', 0, 3),
+(@qid, 'David Hume', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qui est l''auteur des "Principes de la philosophie" ?', 'René Descartes a écrit Les Principes de la philosophie en 1644.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Spinoza', 0, 1),
+(@qid, 'René Descartes', 1, 2),
+(@qid, 'Leibniz', 0, 3),
+(@qid, 'Pascal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qui a écrit l''"Esthétique" ?', 'Hegel a écrit l''Esthétique, œuvre majeure sur la philosophie de l''art.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Kant', 0, 1),
+(@qid, 'Hegel', 1, 2),
+(@qid, 'Aristote', 0, 3),
+(@qid, 'Schopenhauer', 0, 4);
+
+-- ============================================
+-- THÈME 17 : QUESTIONS DIVERSES
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui est commun à la morale, au droit et à la politique ?', 'Tous trois guident les actions humaines au sein de la société.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ils guident les actions humaines au sein de la société', 1, 1),
+(@qid, 'Ils sont tous fondés sur la force uniquement', 0, 2),
+(@qid, 'Ils n''ont aucun point commun', 0, 3),
+(@qid, 'Ils dépendent exclusivement de l''économie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qu''un mobile subjectif ?', 'Un mobile subjectif est une raison personnelle, intérieure, qui pousse un individu à agir.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une cause extérieure et objective', 0, 1),
+(@qid, 'Une raison personnelle intérieure qui pousse à agir', 1, 2),
+(@qid, 'Une obligation légale imposée de l''extérieur', 0, 3),
+(@qid, 'Un hasard sans signification', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que la prudence en philosophie ?', 'La prudence est la capacité de raisonner pour choisir ce qui est bon et éviter ce qui est nuisible.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La peur de tout risque', 0, 1),
+(@qid, 'La capacité de raisonner pour choisir le bon et éviter le nuisible', 1, 2),
+(@qid, 'L''inaction totale face au danger', 0, 3),
+(@qid, 'La simple ruse calculatrice', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui caractérise l''activité animale ?', 'L''activité animale suit l''instinct aveugle sans jamais progresser.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle est réfléchie et planifiée', 0, 1),
+(@qid, 'Elle suit l''instinct aveugle sans jamais progresser', 1, 2),
+(@qid, 'Elle est identique à l''activité humaine', 0, 3),
+(@qid, 'Elle est toujours supérieure à l''activité humaine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que le plébiscite ?', 'Le plébiscite est un vote direct du peuple sur une question précise.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un vote indirect par des représentants', 0, 1),
+(@qid, 'Un vote direct du peuple sur une question précise', 1, 2),
+(@qid, 'Un débat sans vote', 0, 3),
+(@qid, 'Une décision imposée par le chef de l''État', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Que signifie l''expression "renoncer à sa liberté" ?', 'Cela signifie abandonner sa capacité d''agir selon sa propre volonté.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Accepter toutes les contraintes sans réfléchir', 0, 1),
+(@qid, 'Abandonner sa capacité d''agir selon sa propre volonté', 1, 2),
+(@qid, 'Refuser d''obéir à toute loi', 0, 3),
+(@qid, 'Choisir librement ses dirigeants', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est l''intérêt de la philosophie pour l''homme d''aujourd''hui ?', 'La philosophie aide à donner un sens à la vie et à réfléchir sur les défis contemporains.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Aucun, elle est totalement dépassée', 0, 1),
+(@qid, 'Elle aide à donner un sens à la vie et à réfléchir sur les défis contemporains', 1, 2),
+(@qid, 'Seulement pour les spécialistes', 0, 3),
+(@qid, 'Elle ne sert qu''à réussir les examens', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quelle est la différence entre l''inné et l''acquis ?', 'L''inné est présent à la naissance (héréditaire), l''acquis est obtenu par l''expérience et l''éducation.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''inné vient de la culture, l''acquis de la nature', 0, 1),
+(@qid, 'L''inné est présent à la naissance, l''acquis vient de l''expérience et de l''éducation', 1, 2),
+(@qid, 'Les deux sont des synonymes parfaits', 0, 3),
+(@qid, 'L''acquis est biologique, l''inné est social', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le profil du juste selon les textes ?', 'Le juste est celui qui a réfléchi, capable de clémence, de pitié et de justice.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Celui qui ne réfléchit jamais', 0, 1),
+(@qid, 'Celui qui a réfléchi, capable de clémence, de pitié et de justice', 1, 2),
+(@qid, 'Celui qui applique la loi sans discernement', 0, 3),
+(@qid, 'Celui qui ne s''intéresse pas aux autres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui me rend pleinement auteur de mes actions ?', 'La conscience morale me rend pleinement auteur et responsable de mes actions.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''obéissance aux ordres', 0, 1),
+(@qid, 'La conscience morale qui me rend pleinement auteur et responsable', 1, 2),
+(@qid, 'La soumission aux instincts', 0, 3),
+(@qid, 'Le regard des autres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Selon Aristote, sur quoi porte le choix ?', 'Le choix porte sur les moyens pour parvenir à la fin, sur les choses qui dépendent de nous.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sur la fin elle-même, comme le bonheur', 0, 1),
+(@qid, 'Sur les moyens pour parvenir à la fin, sur ce qui dépend de nous', 1, 2),
+(@qid, 'Sur des choses impossibles à réaliser', 0, 3),
+(@qid, 'Sur ce que souhaitent les autres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui est le plus difficile dans le gouvernement selon Rousseau ?', 'Une intégrité sévère à rendre justice à tous, surtout protéger le pauvre contre le riche.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Collecter les impôts', 0, 1),
+(@qid, 'Rendre justice à tous et protéger le pauvre contre la tyrannie du riche', 1, 2),
+(@qid, 'Organiser des élections', 0, 3),
+(@qid, 'Gérer les relations internationales', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quelle est la fonction commune de l''État et de la société selon Hegel ?', 'Ils imposent des bornes aux instincts grossiers et permettent la réalisation de la liberté.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Opprimer les individus sans raison', 0, 1),
+(@qid, 'Limiter les instincts grossiers et permettre la réalisation de la liberté', 1, 2),
+(@qid, 'Favoriser l''égoïsme individuel', 0, 3),
+(@qid, 'Abolir toute forme de règle sociale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le rôle de la raison selon Spinoza ?', 'La raison détermine l''homme à agir pour des causes qu''il peut connaître adéquatement.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La raison est inutile pour agir', 0, 1),
+(@qid, 'La raison détermine l''homme à agir pour des causes connues adéquatement', 1, 2),
+(@qid, 'La raison empêche toute action', 0, 3),
+(@qid, 'La raison est l''ennemie de la liberté', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quelle est la grande obligation d''un gouvernement selon Rousseau ?', 'Protéger le pauvre contre la tyrannie du riche.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Protéger le riche contre le pauvre', 0, 1),
+(@qid, 'Protéger le pauvre contre la tyrannie du riche', 1, 2),
+(@qid, 'Maintenir les inégalités sociales', 0, 3),
+(@qid, 'Ignorer les problèmes de justice sociale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel enseignement nous apporte la philosophie pour la vie quotidienne ?', 'La philosophie sert à régler nos mœurs et nous conduire en cette vie.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Aucun, la philosophie est purement théorique', 0, 1),
+(@qid, 'Elle sert à régler nos mœurs et nous conduire dans la vie', 1, 2),
+(@qid, 'Elle ne sert qu''à enrichir notre vocabulaire', 0, 3),
+(@qid, 'Elle ne concerne que les problèmes abstraits', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que l''éthique indulgente selon Kant ?', 'L''éthique indulgente est la corruption de la mesure de perfection morale de l''humanité.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La vraie morale pure', 0, 1),
+(@qid, 'La corruption de la mesure de perfection morale de l''humanité', 1, 2),
+(@qid, 'La meilleure forme de morale', 0, 3),
+(@qid, 'Une morale réservée aux enfants', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce qui caractérise une bonne république selon Condillac ?', 'Une bonne république a pour fondement l''égalité.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''absence totale de lois', 0, 1),
+(@qid, 'L''égalité comme fondement', 1, 2),
+(@qid, 'La domination d''un seul', 0, 3),
+(@qid, 'La richesse de tous les citoyens', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Comment la philosophie définit-elle le concept de "travail" ?', 'Le travail est l''activité par laquelle l''homme transforme la nature et se réalise lui-même.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une simple dépense d''énergie physique', 0, 1),
+(@qid, 'L''activité par laquelle l''homme transforme la nature et se réalise', 1, 2),
+(@qid, 'Une punition divine', 0, 3),
+(@qid, 'Une activité exclusivement animale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Quel est le sens du mot "éthique" ?', 'L''éthique vient du grec "ethos" et désigne la science de la conduite et des mœurs.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La science de la nature', 0, 1),
+(@qid, 'La science de la conduite et des mœurs', 1, 2),
+(@qid, 'L''art de bien parler', 0, 3),
+(@qid, 'La recherche du pouvoir', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(8, 2, 'Qu''est-ce que l''esprit philosophique selon Dumarsais ?', 'C''est un esprit d''observation et de justesse qui rapporte tout à ses véritables principes.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un esprit qui accepte tout sans examen', 0, 1),
+(@qid, 'Un esprit d''observation et de justesse qui rapporte tout à ses véritables principes', 1, 2),
+(@qid, 'Un esprit confus et sans méthode', 0, 3),
+(@qid, 'Un esprit exclusivement mathématique', 0, 4);
+
+
 
 -- Complétion
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
@@ -2841,6 +4391,3867 @@ SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'mv', 0, 1), (@qid, 'mv²', 0, 2), (@qid, '½mv²', 1, 3), (@qid, '2mv²', 0, 4);
 
+
+-- Question 1 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité de la capacité électrique est :',
+    'La capacité électrique se mesure en Farad (F), en hommage à Michael Faraday.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Henry (H)', 0, 1), (@qid, 'Farad (F)', 1, 2), (@qid, 'Ohm (Ω)', 0, 3), (@qid, 'Tesla (T)', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité de mesure de la capacité d''un condensateur dans le SI est le :',
+    'Le Farad (F) est l''unité de capacité électrique dans le Système International.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Volt (V)', 0, 1), (@qid, 'Ampère (A)', 0, 2), (@qid, 'Farad (F)', 1, 3), (@qid, 'Coulomb (C)', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quel physicien a donné son nom à l''unité de capacité électrique ?',
+    'Michael Faraday a donné son nom au Farad, unité de capacité.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Georg Ohm', 0, 1), (@qid, 'André-Marie Ampère', 0, 2), (@qid, 'Michael Faraday', 1, 3), (@qid, 'Nikola Tesla', 0, 4);
+
+-- Question 2 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La relation fondamentale d''un condensateur est :',
+    'La charge Q stockée par un condensateur est proportionnelle à la tension U : Q = C × U.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'E = m·g·h', 0, 1), (@qid, 'U = R·I', 0, 2), (@qid, 'B = μ₀NI/L', 0, 3), (@qid, 'Q = C·U', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La charge électrique Q accumulée dans un condensateur de capacité C sous tension U se calcule par :',
+    'Formule fondamentale : Q = C × U.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Q = C / U', 0, 1), (@qid, 'Q = U / C', 0, 2), (@qid, 'Q = C × U', 1, 3), (@qid, 'Q = C + U', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on connaît la charge Q et la tension U d''un condensateur, sa capacité C est donnée par :',
+    'D''après Q = C·U, on isole C = Q / U.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C = Q × U', 0, 1), (@qid, 'C = U / Q', 0, 2), (@qid, 'C = Q / U', 1, 3), (@qid, 'C = Q + U', 0, 4);
+
+-- Question 3 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur de 5 µF sous 200 V porte une charge :',
+    'Q = C × U = 5×10⁻⁶ × 200 = 1000×10⁻⁶ = 1×10⁻³ C = 1 mC.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '5 mC', 0, 1), (@qid, '0,1 mC', 0, 2), (@qid, '10 mC', 0, 3), (@qid, '1 mC', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quelle charge porte un condensateur de 10 µF sous une tension de 100 V ?',
+    'Q = 10×10⁻⁶ × 100 = 1000×10⁻⁶ = 1×10⁻³ C = 1 mC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,1 mC', 0, 1), (@qid, '1 mC', 1, 2), (@qid, '10 mC', 0, 3), (@qid, '100 mC', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur de 2 µF est chargé sous 500 V. Sa charge vaut :',
+    'Q = 2×10⁻⁶ × 500 = 1000×10⁻⁶ = 1 mC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 mC', 0, 1), (@qid, '2,5 mC', 0, 2), (@qid, '1 mC', 1, 3), (@qid, '10 mC', 0, 4);
+
+-- Question 4 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie stockée par ce condensateur (5 µF, 200 V) vaut :',
+    'E = ½ × C × U² = ½ × 5×10⁻⁶ × (200)² = 0,1 J.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10 J', 0, 1), (@qid, '0,1 J', 1, 2), (@qid, '1 J', 0, 3), (@qid, '0,01 J', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur de 10 µF chargé sous 100 V emmagasine une énergie de :',
+    'E = ½ × 10×10⁻⁶ × 100² = ½ × 10⁻⁵ × 10⁴ = 0,05 J.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 J', 0, 1), (@qid, '0,05 J', 1, 2), (@qid, '5 J', 0, 3), (@qid, '0,005 J', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie stockée dans un condensateur de 4 µF sous 50 V est de :',
+    'E = ½ × 4×10⁻⁶ × 2500 = 5×10⁻³ J = 0,005 J.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 J', 0, 1), (@qid, '0,05 J', 0, 2), (@qid, '0,005 J', 1, 3), (@qid, '5 J', 0, 4);
+
+-- Question 5 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la tension double, l''énergie devient :',
+    'E ∝ U². Si U est doublée, E est multipliée par 4 (4E).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'E', 0, 1), (@qid, '4E', 1, 2), (@qid, 'E/2', 0, 3), (@qid, '2E', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on triple la tension aux bornes d''un condensateur, l''énergie stockée est multipliée par :',
+    'E ∝ U². Si U triple, E est multipliée par 9.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '3', 0, 1), (@qid, '6', 0, 2), (@qid, '9', 1, 3), (@qid, '12', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour doubler l''énergie stockée dans un condensateur, il faut multiplier la tension par :',
+    'E ∝ U². Pour doubler E, il faut multiplier U par √2.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2', 0, 1), (@qid, '4', 0, 2), (@qid, '√2', 1, 3), (@qid, '1/2', 0, 4);
+
+-- Question 6 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Deux condensateurs de 4 µF et 6 µF montés en parallèle ont une capacité équivalente :',
+    'En parallèle : C_eq = C₁ + C₂ = 4 + 6 = 10 µF.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2,4 µF', 0, 1), (@qid, '10 µF', 1, 2), (@qid, '24 µF', 0, 3), (@qid, '5 µF', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Trois condensateurs de 2 µF, 3 µF et 5 µF sont branchés en parallèle. La capacité équivalente est :',
+    'C_eq = 2 + 3 + 5 = 10 µF.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10 µF', 1, 1), (@qid, '1 µF', 0, 2), (@qid, '0,1 µF', 0, 3), (@qid, '30 µF', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un montage en parallèle, la capacité équivalente est toujours :',
+    'C_eq = Σ Cᵢ, donc elle est supérieure à la plus grande des capacités.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Inférieure à la plus petite', 0, 1), (@qid, 'Supérieure à la plus grande', 1, 2), (@qid, 'Égale à la moyenne', 0, 3), (@qid, 'Toujours nulle', 0, 4);
+
+-- Question 7 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Les mêmes (4 µF et 6 µF) montés en série donnent :',
+    'En série : 1/C_eq = 1/4 + 1/6 = 5/12 → C_eq = 12/5 = 2,4 µF.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10 µF', 0, 1), (@qid, '2,4 µF', 1, 2), (@qid, '1 µF', 0, 3), (@qid, '5 µF', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Deux condensateurs de 3 µF et 6 µF sont associés en série. La capacité équivalente est :',
+    '1/C_eq = 1/3 + 1/6 = 3/6 = 1/2 → C_eq = 2 µF.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '9 µF', 0, 1), (@qid, '2 µF', 1, 2), (@qid, '4,5 µF', 0, 3), (@qid, '18 µF', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un montage en série, la capacité équivalente est toujours :',
+    'En série, 1/C_eq = Σ 1/Cᵢ, donc C_eq est inférieure à la plus petite des capacités.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Supérieure à la plus grande', 0, 1), (@qid, 'Inférieure à la plus petite', 1, 2), (@qid, 'Égale à la somme', 0, 3), (@qid, 'Infinie', 0, 4);
+
+-- Question 8 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans une association en série, la grandeur identique est :',
+    'En série, chaque condensateur porte la même charge Q.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'énergie', 0, 1), (@qid, 'tension', 0, 2), (@qid, 'charge', 1, 3), (@qid, 'capacité', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans une association de condensateurs en parallèle, la grandeur commune est :',
+    'En parallèle, tous les condensateurs sont soumis à la même tension U.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'la charge Q', 0, 1), (@qid, 'la tension U', 1, 2), (@qid, 'l''énergie E', 0, 3), (@qid, 'la capacité C', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un circuit série, le courant I est identique dans tous les éléments. Pour les condensateurs en série, c''est :',
+    'En série, la charge Q est identique sur chaque condensateur.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'la tension U', 0, 1), (@qid, 'la charge Q', 1, 2), (@qid, 'l''énergie E', 0, 3), (@qid, 'le champ électrique', 0, 4);
+
+-- Question 9 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un circuit continu, un condensateur complètement chargé agit comme :',
+    'Une fois chargé, le condensateur ne laisse plus passer le courant continu → interrupteur ouvert.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'un aimant', 0, 1), (@qid, 'un fil conducteur', 0, 2), (@qid, 'une pile', 0, 3), (@qid, 'un interrupteur ouvert', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'En courant continu, un condensateur chargé bloque le passage du courant et se comporte comme :',
+    'Le diélectrique empêche le passage du courant continu une fois chargé → circuit ouvert.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un générateur', 0, 1), (@qid, 'Un récepteur actif', 0, 2), (@qid, 'Un interrupteur ouvert', 1, 3), (@qid, 'Une bobine', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'En régime alternatif sinusoïdal, un condensateur :',
+    'En alternatif, le condensateur se charge et se décharge périodiquement, laissant passer le courant.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Bloque tout courant', 0, 1), (@qid, 'Laisse passer le courant', 1, 2), (@qid, 'Produit un champ magnétique constant', 0, 3), (@qid, 'Se comporte comme une résistance pure', 0, 4);
+
+-- Question 10 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un courant de 10 mA circule pendant 5 s pour charger un condensateur. La charge reçue est :',
+    'Q = I × t = 10×10⁻³ × 5 = 50×10⁻³ C = 50 mC.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50 mC', 1, 1), (@qid, '0,5 C', 0, 2), (@qid, '5 mC', 0, 3), (@qid, '0,05 mC', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un courant constant de 2 mA charge un condensateur pendant 10 secondes. La charge accumulée est :',
+    'Q = I × t = 2×10⁻³ × 10 = 20×10⁻³ C = 20 mC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2 mC', 0, 1), (@qid, '20 mC', 1, 2), (@qid, '0,2 mC', 0, 3), (@qid, '200 mC', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour accumuler une charge de 100 mC en 4 secondes, il faut un courant constant de :',
+    'I = Q / t = 100×10⁻³ / 4 = 25×10⁻³ A = 25 mA.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '25 mA', 1, 1), (@qid, '400 mA', 0, 2), (@qid, '2,5 mA', 0, 3), (@qid, '250 mA', 0, 4);
+
+-- Question 11 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie d''un condensateur s''écrit :',
+    'L''énergie emmagasinée est E = ½ × C × U².', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'B I L', 0, 1), (@qid, 'R I²', 0, 2), (@qid, '½ C U²', 1, 3), (@qid, 'U²/R', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie emmagasinée dans un condensateur peut aussi s''écrire :',
+    'En utilisant Q = C·U, on a E = ½ × Q × U = Q² / (2C).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'E = Q × U', 0, 1), (@qid, 'E = Q² / (2C)', 1, 2), (@qid, 'E = C × U', 0, 3), (@qid, 'E = ½ × Q × C', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quelle expression n''est pas équivalente à l''énergie stockée dans un condensateur ?',
+    'Q × U correspond à 2E, pas à l''énergie E.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '½ C U²', 0, 1), (@qid, '½ Q U', 0, 2), (@qid, 'Q × U', 1, 3), (@qid, 'Q²/(2C)', 0, 4);
+
+-- Question 12 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on double la surface des armatures, la capacité :',
+    'C ∝ S (surface). Si S double, C double → augmente.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'reste constante', 0, 1), (@qid, 'augmente', 1, 2), (@qid, 'devient nulle', 0, 3), (@qid, 'diminue', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La capacité d''un condensateur plan est proportionnelle à :',
+    'C = ε × S / d. Elle est proportionnelle à la surface S des armatures.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La distance entre les plaques', 0, 1), (@qid, 'La surface des armatures', 1, 2), (@qid, 'La charge stockée', 0, 3), (@qid, 'La tension appliquée', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on triple la surface des armatures tout en gardant la même distance, la capacité est :',
+    'C ∝ S. Si S triple, C triple.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Triplée', 1, 1), (@qid, 'Divisée par 3', 0, 2), (@qid, 'Inchangée', 0, 3), (@qid, 'Divisée par 9', 0, 4);
+
+-- Question 13 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on double la distance entre plaques, la capacité :',
+    'C ∝ 1/d. Si d double, C est divisée par 2 → diminue.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'double', 0, 1), (@qid, 'reste constante', 0, 2), (@qid, 'diminue', 1, 3), (@qid, 'devient infinie', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La capacité d''un condensateur plan est inversement proportionnelle à :',
+    'C = ε × S / d. Elle est inversement proportionnelle à la distance d.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La surface des plaques', 0, 1), (@qid, 'La distance entre les plaques', 1, 2), (@qid, 'La charge accumulée', 0, 3), (@qid, 'L''énergie stockée', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour augmenter la capacité d''un condensateur plan, on peut :',
+    'Diminuer la distance entre les plaques augmente la capacité (C ∝ 1/d).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Augmenter la distance entre les plaques', 0, 1), (@qid, 'Diminuer la distance entre les plaques', 1, 2), (@qid, 'Diminuer la surface des plaques', 0, 3), (@qid, 'Utiliser une tension plus faible', 0, 4);
+
+-- Question 14 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur de 8 µF sous 300 V emmagasine :',
+    'E = ½ × 8×10⁻⁶ × (300)² = 4×10⁻⁶ × 90000 = 0,36 J.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '3,6 J', 0, 1), (@qid, '0,36 J', 1, 2), (@qid, '36 J', 0, 3), (@qid, '0,036 J', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur de 10 µF chargé sous 200 V emmagasine :',
+    'E = ½ × 10×10⁻⁶ × 40000 = 0,2 J.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,1 J', 0, 1), (@qid, '2 J', 0, 2), (@qid, '0,2 J', 1, 3), (@qid, '20 J', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur de 2 µF sous 1000 V stocke une énergie de :',
+    'E = ½ × 2×10⁻⁶ × (1000)² = 10⁻⁶ × 10⁶ = 1 J.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 J', 0, 1), (@qid, '1 J', 1, 2), (@qid, '2 J', 0, 3), (@qid, '0,1 J', 0, 4);
+
+-- Question 15 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le champ électrique entre deux plaques est donné par :',
+    'Pour un champ uniforme entre plaques parallèles : E = U / d.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'E = U/d', 1, 1), (@qid, 'E = C·U', 0, 2), (@qid, 'E = B·L', 0, 3), (@qid, 'E = R·I', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité du champ électrique E est le :',
+    'E = U/d s''exprime en Volts par mètre (V/m).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Volt (V)', 0, 1), (@qid, 'Volt par mètre (V/m)', 1, 2), (@qid, 'Newton par Coulomb (N/C)', 0, 3), (@qid, 'Tesla (T)', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un champ électrique de 1000 V/m entre des plaques distantes de 0,5 cm correspond à une tension de :',
+    'U = E × d = 1000 × 0,005 = 5 V.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '500 V', 0, 1), (@qid, '5 V', 1, 2), (@qid, '50 V', 0, 3), (@qid, '2000 V', 0, 4);
+
+-- Question 16 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Plaques séparées de 2 mm avec 100 V ⇒ E =',
+    'E = U/d = 100 / (2×10⁻³) = 50 000 V/m = 50 kV/m.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '500 V/m', 0, 1), (@qid, '5 kV/m', 0, 2), (@qid, '50 kV/m', 1, 3), (@qid, '200 kV/m', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Entre deux plaques distantes de 1 mm soumises à 200 V, le champ électrique est de :',
+    'E = 200 / 0,001 = 200 000 V/m = 200 kV/m.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '20 kV/m', 0, 1), (@qid, '200 kV/m', 1, 2), (@qid, '2 kV/m', 0, 3), (@qid, '2000 kV/m', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour obtenir un champ de 10 kV/m avec des plaques distantes de 5 mm, il faut une tension de :',
+    'U = E × d = 10000 × 0,005 = 50 V.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2000 V', 0, 1), (@qid, '50 V', 1, 2), (@qid, '500 V', 0, 3), (@qid, '2 V', 0, 4);
+
+-- Question 17 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Deux condensateurs identiques, l''un chargé et l''autre vide, sont reliés ensemble. La tension finale devient :',
+    'La charge se répartit : Q_totale = Q. C_totale = 2C. U_finale = Q_totale / C_totale = Q / 2C = U/2.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'U/2', 1, 1), (@qid, '2U', 0, 2), (@qid, '0', 0, 3), (@qid, 'U', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur chargé de capacité C sous tension U est connecté à un condensateur identique déchargé. La charge finale de chaque condensateur est :',
+    'La charge initiale Q = C·U se répartit également : chaque condensateur porte Q/2.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Q', 0, 1), (@qid, 'Q/2', 1, 2), (@qid, '2Q', 0, 3), (@qid, '0', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Après connexion de deux condensateurs identiques (un chargé, un vide), l''énergie totale du système :',
+    'Une partie de l''énergie est dissipée (effet Joule dans les fils). L''énergie finale est inférieure.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Reste constante', 0, 1), (@qid, 'Augmente', 0, 2), (@qid, 'Diminue', 1, 3), (@qid, 'Devient nulle', 0, 4);
+
+-- Question 18 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le rôle d''un condensateur dans une alimentation électrique est de :',
+    'Dans une alimentation, le condensateur de filtrage stabilise la tension en lissant les variations.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'chauffer le circuit', 0, 1), (@qid, 'augmenter la masse', 0, 2), (@qid, 'stabiliser la tension', 1, 3), (@qid, 'créer un champ magnétique', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un flash photographique, le condensateur sert à :',
+    'Le condensateur stocke de l''énergie puis la restitue brutalement pour produire un éclair lumineux.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Filtrer les parasites', 0, 1), (@qid, 'Stocker et libérer rapidement de l''énergie', 1, 2), (@qid, 'Réduire la tension', 0, 3), (@qid, 'Produire un courant continu', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur peut être utilisé comme :',
+    'Le condensateur est un réservoir d''énergie temporaire, utile pour les flashs, filtres, temporisations.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Source d''énergie permanente', 0, 1), (@qid, 'Réservoir temporaire d''énergie', 1, 2), (@qid, 'Générateur de champ magnétique', 0, 3), (@qid, 'Amplificateur de courant', 0, 4);
+
+-- Question 19 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un flash libère 0,2 J en 0,01 s. La puissance moyenne vaut :',
+    'P = E / t = 0,2 / 0,01 = 20 W.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '20 W', 1, 1), (@qid, '0,2 W', 0, 2), (@qid, '2 W', 0, 3), (@qid, '200 W', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur libère 1 J d''énergie en 0,05 seconde. La puissance moyenne est :',
+    'P = 1 / 0,05 = 20 W.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50 W', 0, 1), (@qid, '20 W', 1, 2), (@qid, '5 W', 0, 3), (@qid, '0,05 W', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un flash de 100 W libère son énergie en 0,002 s. L''énergie stockée était de :',
+    'E = P × t = 100 × 0,002 = 0,2 J.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50 J', 0, 1), (@qid, '0,2 J', 1, 2), (@qid, '200 J', 0, 3), (@qid, '2 J', 0, 4);
+
+-- Question 20 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''insertion d''un diélectrique entre les plaques fait :',
+    'Un diélectrique augmente la permittivité ε, donc la capacité C = ε·S/d augmente.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'augmenter la capacité', 1, 1), (@qid, 'diminuer la capacité', 0, 2), (@qid, 'bloquer toute charge', 0, 3), (@qid, 'annuler la tension', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La constante diélectrique relative εᵣ d''un matériau est toujours :',
+    'εᵣ = ε / ε₀ > 1 pour tout matériau diélectrique autre que le vide (où εᵣ = 1).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Inférieure à 1', 0, 1), (@qid, 'Supérieure ou égale à 1', 1, 2), (@qid, 'Égale à 0', 0, 3), (@qid, 'Négative', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Remplacer l''air entre les armatures par du mica (εᵣ ≈ 6) fait que la capacité :',
+    'C'' = εᵣ × C. La capacité est multipliée par 6 environ.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Reste inchangée', 0, 1), (@qid, 'Est multipliée par 6 environ', 1, 2), (@qid, 'Est divisée par 6', 0, 3), (@qid, 'Devient nulle', 0, 4);
+
+
+
+-- Question 1 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un circuit résistif pur, la relation fondamentale est :',
+    'La loi d''Ohm : U = R × I (tension = résistance × courant).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'U = RI', 1, 1), (@qid, 'Q = CU', 0, 2), (@qid, 'B = μ₀NI/L', 0, 3), (@qid, 'Φ = BS', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'D''après la loi d''Ohm, la tension U aux bornes d''une résistance R traversée par un courant I est :',
+    'U = R × I (loi d''Ohm fondamentale).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'U = R/I', 0, 1), (@qid, 'U = R × I', 1, 2), (@qid, 'U = I/R', 0, 3), (@qid, 'U = R + I', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on connaît la tension U et la résistance R, le courant I est donné par :',
+    'I = U/R (loi d''Ohm réarrangée).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'I = U × R', 0, 1), (@qid, 'I = U / R', 1, 2), (@qid, 'I = R / U', 0, 3), (@qid, 'I = U + R', 0, 4);
+
+-- Question 2 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité de la résistance est :',
+    'La résistance électrique se mesure en Ohm (Ω).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Farad', 0, 1), (@qid, 'Ohm', 1, 2), (@qid, 'Tesla', 0, 3), (@qid, 'Volt', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''Ohm (Ω) est l''unité de :',
+    'L''Ohm mesure la résistance électrique d''un conducteur.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La tension', 0, 1), (@qid, 'La résistance électrique', 1, 2), (@qid, 'Le courant', 0, 3), (@qid, 'La puissance', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le symbole de l''unité de résistance est :',
+    'La résistance se note R et son unité est le Ohm, symbolisé par Ω.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'V', 0, 1), (@qid, 'Ω', 1, 2), (@qid, 'A', 0, 3), (@qid, 'W', 0, 4);
+
+-- Question 3 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si R = 20 Ω et U = 100 V, le courant vaut :',
+    'I = U/R = 100/20 = 5 A.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10 A', 0, 1), (@qid, '5 A', 1, 2), (@qid, '0,2 A', 0, 3), (@qid, '2 A', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'R = 50 Ω, U = 200 V. Le courant I vaut :',
+    'I = 200/50 = 4 A.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '4 A', 1, 1), (@qid, '0,25 A', 0, 2), (@qid, '250 A', 0, 3), (@qid, '10 A', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si I = 2 A et R = 15 Ω, la tension U vaut :',
+    'U = R × I = 15 × 2 = 30 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '7,5 V', 0, 1), (@qid, '17 V', 0, 2), (@qid, '30 V', 1, 3), (@qid, '0,13 V', 0, 4);
+
+-- Question 4 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La puissance électrique s''exprime par :',
+    'P = U × I (puissance = tension × courant).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'P = CU', 0, 1), (@qid, 'P = BIL', 0, 2), (@qid, 'P = Φ/t', 0, 3), (@qid, 'P = UI', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité de la puissance électrique est le :',
+    'La puissance se mesure en Watt (W).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Joule (J)', 0, 1), (@qid, 'Watt (W)', 1, 2), (@qid, 'Volt (V)', 0, 3), (@qid, 'Ampère (A)', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'En utilisant la loi d''Ohm, la puissance peut aussi s''écrire :',
+    'P = U × I = R × I² = U²/R.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'P = R × I uniquement', 0, 1), (@qid, 'P = R × I² ou P = U²/R', 1, 2), (@qid, 'P = U + I', 0, 3), (@qid, 'P = R/I', 0, 4);
+
+-- Question 5 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si U = 120 V et I = 2 A, la puissance vaut :',
+    'P = 120 × 2 = 240 W.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '60 W', 0, 1), (@qid, '120 W', 0, 2), (@qid, '480 W', 0, 3), (@qid, '240 W', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'U = 220 V, I = 4 A. La puissance vaut :',
+    'P = 220 × 4 = 880 W.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '55 W', 0, 1), (@qid, '880 W', 1, 2), (@qid, '224 W', 0, 3), (@qid, '440 W', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'U = 12 V, I = 0,5 A. La puissance dissipée est :',
+    'P = 12 × 0,5 = 6 W.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '24 W', 0, 1), (@qid, '6 W', 1, 2), (@qid, '0,04 W', 0, 3), (@qid, '12,5 W', 0, 4);
+
+-- Question 6 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une résistance transforme l''énergie électrique en :',
+    'Par effet Joule, l''énergie électrique est dissipée sous forme de chaleur.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'flux magnétique', 0, 1), (@qid, 'champ magnétique', 0, 2), (@qid, 'énergie nucléaire', 0, 3), (@qid, 'énergie thermique', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un conducteur ohmique parcouru par un courant s''échauffe. C''est l''effet :',
+    'L''effet Joule est la dissipation de chaleur par une résistance parcourue par un courant.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Magnétique', 0, 1), (@qid, 'Joule', 1, 2), (@qid, 'Faraday', 0, 3), (@qid, 'Laplace', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un grille-pain, l''énergie électrique est convertie principalement en :',
+    'Le grille-pain utilise l''effet Joule pour produire de la chaleur.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Énergie mécanique', 0, 1), (@qid, 'Énergie thermique', 1, 2), (@qid, 'Énergie lumineuse uniquement', 0, 3), (@qid, 'Énergie chimique', 0, 4);
+
+-- Question 7 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ce phénomène (Q6) s''appelle :',
+    'L''effet Joule désigne la transformation d''énergie électrique en chaleur dans une résistance.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'effet Joule', 1, 1), (@qid, 'induction', 0, 2), (@qid, 'condensation', 0, 3), (@qid, 'résonance', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La puissance dissipée par effet Joule dans une résistance R est :',
+    'P = R × I² (loi de Joule).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'P = U × I', 0, 1), (@qid, 'P = R × I²', 1, 2), (@qid, 'P = C × U²', 0, 3), (@qid, 'P = B × I × L', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''effet Joule est utilisé dans les appareils de chauffage car il :',
+    'Il convertit efficacement l''énergie électrique en chaleur.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Produit un champ magnétique', 0, 1), (@qid, 'Transforme l''électricité en chaleur', 1, 2), (@qid, 'Stocke l''énergie', 0, 3), (@qid, 'Refroidit le circuit', 0, 4);
+
+-- Question 8 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si R double, pour une tension constante, le courant :',
+    'I = U/R. Si R double, I est divisé par 2 (diminue de moitié).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'devient nul', 0, 1), (@qid, 'reste constant', 0, 2), (@qid, 'diminue de moitié', 1, 3), (@qid, 'double', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si R triple et U constant, le courant I est :',
+    'I ∝ 1/R. Si R triple, I est divisé par 3.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Triplé', 0, 1), (@qid, 'Divisé par 3', 1, 2), (@qid, 'Inchangé', 0, 3), (@qid, 'Multiplié par 9', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour maintenir le même courant quand la résistance double, il faut :',
+    'Si R double, pour garder I constant, il faut doubler U (U = R × I).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Doubler la tension', 1, 1), (@qid, 'Diviser la tension par 2', 0, 2), (@qid, 'Garder la même tension', 0, 3), (@qid, 'Utiliser un fil plus fin', 0, 4);
+
+-- Question 9 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un circuit purement résistif en alternatif, tension et courant sont :',
+    'Dans une résistance pure, u(t) et i(t) sont en phase (φ = 0).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'déphasés de 90°', 0, 1), (@qid, 'inconnus', 0, 2), (@qid, 'en opposition', 0, 3), (@qid, 'en phase', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le déphasage entre u et i dans une résistance pure est :',
+    'φ = 0, donc cosφ = 1, la puissance active est maximale.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0°', 1, 1), (@qid, '90°', 0, 2), (@qid, '180°', 0, 3), (@qid, '45°', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un circuit résistif pur, le facteur de puissance cosφ vaut :',
+    'cos(0°) = 1.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0', 0, 1), (@qid, '1', 1, 2), (@qid, '0,5', 0, 3), (@qid, '-1', 0, 4);
+
+-- Question 10 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ieff = 5 A et R = 10 Ω. La puissance vaut :',
+    'P = R × I² = 10 × 25 = 250 W.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50 W', 0, 1), (@qid, '250 W', 1, 2), (@qid, '500 W', 0, 3), (@qid, '25 W', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'R = 20 Ω, Ieff = 3 A. La puissance dissipée est :',
+    'P = 20 × 3² = 20 × 9 = 180 W.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '60 W', 0, 1), (@qid, '180 W', 1, 2), (@qid, '90 W', 0, 3), (@qid, '120 W', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'R = 5 Ω, Ieff = 4 A. La puissance vaut :',
+    'P = 5 × 16 = 80 W.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '20 W', 0, 1), (@qid, '80 W', 1, 2), (@qid, '40 W', 0, 3), (@qid, '100 W', 0, 4);
+
+-- Question 11 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La formule P = RI² correspond à :',
+    'P = R × I² est la puissance dissipée par effet Joule dans une résistance.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'charge', 0, 1), (@qid, 'puissance dissipée', 1, 2), (@qid, 'énergie', 0, 3), (@qid, 'flux', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'P = U²/R est une autre expression de :',
+    'En utilisant I = U/R, P = U × I = U²/R.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La charge électrique', 0, 1), (@qid, 'La puissance dissipée', 1, 2), (@qid, 'L''énergie stockée', 0, 3), (@qid, 'Le flux magnétique', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La puissance dissipée dans une résistance est proportionnelle :',
+    'P = R × I², donc P ∝ I².', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Au courant I', 0, 1), (@qid, 'Au carré du courant I²', 1, 2), (@qid, 'À la racine de I', 0, 3), (@qid, 'À 1/I', 0, 4);
+
+-- Question 12 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une résistance de 50 Ω parcourue par 2 A dissipe :',
+    'P = 50 × 2² = 50 × 4 = 200 W.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '400 W', 0, 1), (@qid, '50 W', 0, 2), (@qid, '100 W', 0, 3), (@qid, '200 W', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'R = 100 Ω, I = 1 A. La puissance dissipée est :',
+    'P = 100 × 1² = 100 W.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10 W', 0, 1), (@qid, '100 W', 1, 2), (@qid, '1000 W', 0, 3), (@qid, '1 W', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'R = 25 Ω, I = 4 A. La puissance dissipée vaut :',
+    'P = 25 × 16 = 400 W.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '100 W', 0, 1), (@qid, '200 W', 0, 2), (@qid, '400 W', 1, 3), (@qid, '800 W', 0, 4);
+
+-- Question 13 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie consommée s''écrit :',
+    'E = P × t (énergie = puissance × temps).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'E = RI', 0, 1), (@qid, 'E = Pt', 1, 2), (@qid, 'E = CU', 0, 3), (@qid, 'E = BS', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité de l''énergie électrique est le :',
+    'L''énergie se mesure en Joules (J). 1 J = 1 W × 1 s.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Watt (W)', 0, 1), (@qid, 'Joule (J)', 1, 2), (@qid, 'Volt (V)', 0, 3), (@qid, 'Ampère (A)', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie consommée en 5 secondes par un appareil de 200 W est :',
+    'E = 200 × 5 = 1000 J.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '40 J', 0, 1), (@qid, '1000 J', 1, 2), (@qid, '200 J', 0, 3), (@qid, '5000 J', 0, 4);
+
+-- Question 14 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un appareil de 500 W fonctionne 10 s. Énergie consommée :',
+    'E = 500 × 10 = 5000 J.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50000 J', 0, 1), (@qid, '50 J', 0, 2), (@qid, '500 J', 0, 3), (@qid, '5000 J', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un appareil de 100 W fonctionne 30 s. L''énergie consommée est :',
+    'E = 100 × 30 = 3000 J.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '3,33 J', 0, 1), (@qid, '3000 J', 1, 2), (@qid, '130 J', 0, 3), (@qid, '30000 J', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un radiateur de 2000 W fonctionne 5 secondes. Énergie consommée :',
+    'E = 2000 × 5 = 10000 J = 10 kJ.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '400 J', 0, 1), (@qid, '10000 J', 1, 2), (@qid, '2005 J', 0, 3), (@qid, '500 J', 0, 4);
+
+-- Question 15 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la tension double, la puissance dissipée (R constant) :',
+    'P = U²/R ∝ U². Si U double, P quadruple.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'diminue', 0, 1), (@qid, 'reste constante', 0, 2), (@qid, 'quadruple', 1, 3), (@qid, 'double', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la tension est triplée (R constant), la puissance est multipliée par :',
+    'P ∝ U². Si U triple, P est multipliée par 9.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '3', 0, 1), (@qid, '9', 1, 2), (@qid, '6', 0, 3), (@qid, '1,5', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on divise la tension par 2 (R constant), la puissance est :',
+    'P ∝ U². Si U est divisée par 2, P est divisée par 4.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Divisée par 4', 1, 1), (@qid, 'Divisée par 2', 0, 2), (@qid, 'Inchangée', 0, 3), (@qid, 'Doublée', 0, 4);
+
+-- Question 16 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une résistance de 100 Ω sous 10 V consomme un courant de :',
+    'I = U/R = 10/100 = 0,1 A.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,01 A', 0, 1), (@qid, '1 A', 0, 2), (@qid, '0,1 A', 1, 3), (@qid, '10 A', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'R = 50 Ω, U = 5 V. Le courant I vaut :',
+    'I = 5/50 = 0,1 A.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,1 A', 1, 1), (@qid, '10 A', 0, 2), (@qid, '1 A', 0, 3), (@qid, '250 A', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'R = 200 Ω, U = 24 V. Le courant vaut :',
+    'I = 24/200 = 0,12 A.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,12 A', 1, 1), (@qid, '8,33 A', 0, 2), (@qid, '1,2 A', 0, 3), (@qid, '224 A', 0, 4);
+
+-- Question 17 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La puissance correspond à :',
+    'P = E/t : la puissance est l''énergie transférée par unité de temps.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tension maximale', 0, 1), (@qid, 'flux par seconde', 0, 2), (@qid, 'charge par seconde', 0, 3), (@qid, 'énergie par seconde', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une puissance de 1 Watt correspond à :',
+    '1 W = 1 J/s (un joule par seconde).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 J', 0, 1), (@qid, '1 J/s', 1, 2), (@qid, '1 N/m', 0, 3), (@qid, '1 V/A', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie E, la puissance P et le temps t sont liés par :',
+    'E = P × t, donc P = E/t.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'P = E × t', 0, 1), (@qid, 'P = E / t', 1, 2), (@qid, 'P = t / E', 0, 3), (@qid, 'P = E + t', 0, 4);
+
+-- Question 18 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un radiateur électrique fonctionne principalement grâce :',
+    'Le radiateur utilise l''effet Joule (résistance chauffante).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'au condensateur', 0, 1), (@qid, 'à l''effet Joule', 1, 2), (@qid, 'à l''induction', 0, 3), (@qid, 'au flux magnétique', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un chauffe-eau électrique transforme l''énergie électrique en chaleur par :',
+    'Il utilise une résistance chauffante (effet Joule).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Induction', 0, 1), (@qid, 'Effet Joule', 1, 2), (@qid, 'Condensation', 0, 3), (@qid, 'Évaporation', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans une plaque de cuisson électrique, l''élément chauffant est :',
+    'C''est une résistance qui chauffe par effet Joule.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un condensateur', 0, 1), (@qid, 'Une résistance (effet Joule)', 1, 2), (@qid, 'Une bobine', 0, 3), (@qid, 'Un aimant', 0, 4);
+
+-- Question 19 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ueff = 220 V et R = 44 Ω. Le courant efficace vaut :',
+    'Ieff = Ueff/R = 220/44 = 5 A.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '5 A', 1, 1), (@qid, '2 A', 0, 2), (@qid, '10 A', 0, 3), (@qid, '0,2 A', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ueff = 110 V, R = 55 Ω. Le courant efficace est :',
+    'Ieff = 110/55 = 2 A.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 A', 0, 1), (@qid, '2 A', 1, 2), (@qid, '5 A', 0, 3), (@qid, '1 A', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ieff = 3 A, R = 40 Ω. La tension efficace est :',
+    'Ueff = R × Ieff = 40 × 3 = 120 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '13,3 V', 0, 1), (@qid, '120 V', 1, 2), (@qid, '43 V', 0, 3), (@qid, '360 V', 0, 4);
+
+-- Question 20 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une lampe de 100 W allumée pendant 1 heure consomme environ :',
+    'E = 100 × 3600 = 360 000 J.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '360 J', 0, 1), (@qid, '100 J', 0, 2), (@qid, '360000 J', 1, 3), (@qid, '1000 J', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un téléviseur de 150 W fonctionne 2 heures. L''énergie consommée est :',
+    'E = 150 × 7200 = 1 080 000 J = 1,08 MJ.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '300 J', 0, 1), (@qid, '1 080 000 J', 1, 2), (@qid, '75 J', 0, 3), (@qid, '150 J', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un fer à repasser de 1000 W utilisé 30 minutes consomme :',
+    'E = 1000 × 1800 = 1 800 000 J = 1,8 MJ.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '30 000 J', 0, 1), (@qid, '1 800 000 J', 1, 2), (@qid, '1000 J', 0, 3), (@qid, '500 J', 0, 4);
+
+
+
+
+
+
+-- Question 1 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'En parallèle, la capacité équivalente est :',
+    'En parallèle, les capacités s''additionnent : C_eq = C₁ + C₂ + ... + C_n.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'plus petite que chaque capacité', 0, 1), (@qid, 'nulle', 0, 2), (@qid, 'la somme des capacités', 1, 3), (@qid, 'l''inverse de la somme', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quand on associe des condensateurs en parallèle, la capacité équivalente :',
+    'C_eq = ΣCᵢ, toujours supérieure à la plus grande capacité individuelle.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Est plus petite que la plus petite', 0, 1), (@qid, 'Est la somme de toutes les capacités', 1, 2), (@qid, 'Est égale à la moyenne', 0, 3), (@qid, 'Devient nulle', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La formule de la capacité équivalente pour n condensateurs en parallèle est :',
+    'C_eq = C₁ + C₂ + ... + C_n.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1/C_eq = 1/C₁ + 1/C₂ + ...', 0, 1), (@qid, 'C_eq = C₁ + C₂ + ...', 1, 2), (@qid, 'C_eq = C₁ × C₂ × ...', 0, 3), (@qid, 'C_eq = (C₁ + C₂)/2', 0, 4);
+
+-- Question 2 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Trois condensateurs de 2 µF en parallèle donnent :',
+    'C_eq = 2 + 2 + 2 = 6 µF.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '6 µF', 1, 1), (@qid, '3 µF', 0, 2), (@qid, '2 µF', 0, 3), (@qid, '0,67 µF', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Trois condensateurs de 5 µF branchés en parallèle ont une capacité équivalente de :',
+    'C_eq = 5 + 5 + 5 = 15 µF.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '15 µF', 1, 1), (@qid, '5 µF', 0, 2), (@qid, '1,67 µF', 0, 3), (@qid, '10 µF', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quatre condensateurs de 1 µF en parallèle donnent une capacité de :',
+    'C_eq = 1 + 1 + 1 + 1 = 4 µF.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,25 µF', 0, 1), (@qid, '1 µF', 0, 2), (@qid, '4 µF', 1, 3), (@qid, '8 µF', 0, 4);
+
+-- Question 3 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Trois condensateurs de 6 µF en série donnent :',
+    '1/C_eq = 1/6 + 1/6 + 1/6 = 3/6 = 1/2 → C_eq = 2 µF.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '18 µF', 0, 1), (@qid, '2 µF', 1, 2), (@qid, '3 µF', 0, 3), (@qid, '6 µF', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Trois condensateurs identiques de 3 µF en série ont une capacité équivalente de :',
+    'C_eq = 3/3 = 1 µF. (Pour n condensateurs identiques C en série : C_eq = C/n).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '9 µF', 0, 1), (@qid, '3 µF', 0, 2), (@qid, '1 µF', 1, 3), (@qid, '6 µF', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Deux condensateurs de 12 µF chacun sont montés en série. La capacité équivalente est :',
+    'Pour deux condensateurs identiques C en série : C_eq = C/2 = 6 µF.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '24 µF', 0, 1), (@qid, '6 µF', 1, 2), (@qid, '12 µF', 0, 3), (@qid, '3 µF', 0, 4);
+
+-- Question 4 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans une association en série, la tension totale est :',
+    'En série, les tensions s''additionnent : U_totale = U₁ + U₂ + ... + U_n.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'la somme des tensions', 1, 1), (@qid, 'identique sur chaque condensateur', 0, 2), (@qid, 'divisée par 2', 0, 3), (@qid, 'nulle', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un circuit série avec trois condensateurs, la tension d''alimentation est 12 V. Chaque condensateur :',
+    'En série, la tension se répartit : U = U₁ + U₂ + U₃.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Reçoit 12 V chacun', 0, 1), (@qid, 'Reçoit une fraction de 12 V dont la somme fait 12 V', 1, 2), (@qid, 'Reçoit 4 V chacun obligatoirement', 0, 3), (@qid, 'Ne reçoit aucune tension', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Lorsqu''on associe des condensateurs en série, la tension supportée par l''ensemble :',
+    'En série, la tension totale se répartit, ce qui permet de supporter une tension plus élevée.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Est la même que la tension maximale d''un seul', 0, 1), (@qid, 'Est plus élevée que la tension maximale d''un seul', 1, 2), (@qid, 'Est nulle', 0, 3), (@qid, 'Est toujours divisée par 2', 0, 4);
+
+-- Question 5 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans une association en parallèle, la grandeur identique est :',
+    'En parallèle, tous les condensateurs sont soumis à la même tension.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tension', 1, 1), (@qid, 'capacité', 0, 2), (@qid, 'énergie', 0, 3), (@qid, 'charge', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un montage parallèle, chaque condensateur reçoit :',
+    'En parallèle, U₁ = U₂ = ... = U_n = U_générateur.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une tension différente', 0, 1), (@qid, 'La même tension que le générateur', 1, 2), (@qid, 'Une tension nulle', 0, 3), (@qid, 'Une tension proportionnelle à sa capacité', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'En parallèle, si on a trois condensateurs sous 50 V, chaque condensateur est soumis à :',
+    'Tous les condensateurs en parallèle voient la même tension : 50 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '150 V', 0, 1), (@qid, '50 V', 1, 2), (@qid, '16,7 V', 0, 3), (@qid, '0 V', 0, 4);
+
+-- Question 6 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Deux condensateurs 4 µF et 6 µF en série ont une capacité équivalente :',
+    '1/C_eq = 1/4 + 1/6 = 5/12 → C_eq = 12/5 = 2,4 µF.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2,4 µF', 1, 1), (@qid, '10 µF', 0, 2), (@qid, '5 µF', 0, 3), (@qid, '1 µF', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur de 2 µF et un autre de 8 µF sont en série. La capacité équivalente est :',
+    '1/C_eq = 1/2 + 1/8 = 5/8 → C_eq = 8/5 = 1,6 µF.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10 µF', 0, 1), (@qid, '6 µF', 0, 2), (@qid, '1,6 µF', 1, 3), (@qid, '2,4 µF', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour deux condensateurs en série, la formule simplifiée C_eq = (C₁ × C₂)/(C₁ + C₂) donne pour C₁=3µF, C₂=6µF :',
+    'C_eq = (3×6)/(3+6) = 18/9 = 2 µF.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2 µF', 1, 1), (@qid, '9 µF', 0, 2), (@qid, '4,5 µF', 0, 3), (@qid, '1,5 µF', 0, 4);
+
+-- Question 7 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un montage parallèle est utilisé dans les alimentations pour :',
+    'Le montage parallèle augmente la capacité totale de filtrage pour mieux stabiliser la tension.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'augmenter la tension', 0, 1), (@qid, 'annuler le courant', 0, 2), (@qid, 'augmenter la capacité totale', 1, 3), (@qid, 'réduire la charge', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour obtenir une grande capacité de filtrage dans une alimentation, on place les condensateurs :',
+    'En parallèle, les capacités s''additionnent, ce qui donne une grande capacité totale.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'En série', 0, 1), (@qid, 'En parallèle', 1, 2), (@qid, 'En série et en parallèle mélangés', 0, 3), (@qid, 'Individuellement', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le principal avantage du montage en parallèle des condensateurs est :',
+    'L''augmentation de la capacité totale pour un encombrement réduit.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La diminution de la capacité', 0, 1), (@qid, 'L''augmentation de la tension supportée', 0, 2), (@qid, 'L''augmentation de la capacité totale', 1, 3), (@qid, 'La réduction du courant', 0, 4);
+
+-- Question 8 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Deux condensateurs identiques C sont en série. Leur capacité devient :',
+    'C_eq = C/2 pour deux condensateurs identiques en série.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C/2', 1, 1), (@qid, '2C', 0, 2), (@qid, 'C²', 0, 3), (@qid, 'C', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Trois condensateurs identiques de capacité C en série donnent une capacité équivalente de :',
+    'C_eq = C/3.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '3C', 0, 1), (@qid, 'C/3', 1, 2), (@qid, 'C', 0, 3), (@qid, '9C', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'n condensateurs identiques de capacité C montés en série donnent :',
+    'C_eq = C/n.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nC', 0, 1), (@qid, 'C/n', 1, 2), (@qid, 'C', 0, 3), (@qid, 'n²C', 0, 4);
+
+-- Question 9 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Deux condensateurs identiques C sont en parallèle. Leur capacité devient :',
+    'C_eq = C + C = 2C.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C/2', 0, 1), (@qid, '2C', 1, 2), (@qid, '4C', 0, 3), (@qid, 'C', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Trois condensateurs identiques de capacité C en parallèle donnent une capacité équivalente de :',
+    'C_eq = 3C.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C/3', 0, 1), (@qid, 'C', 0, 2), (@qid, '3C', 1, 3), (@qid, '9C', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'n condensateurs identiques de capacité C montés en parallèle donnent :',
+    'C_eq = nC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nC', 1, 1), (@qid, 'C/n', 0, 2), (@qid, 'C', 0, 3), (@qid, 'C^n', 0, 4);
+
+-- Question 10 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une batterie équivalente de 10 µF est sous 100 V. La charge totale vaut :',
+    'Q = C_eq × U = 10×10⁻⁶ × 100 = 1×10⁻³ C = 1 mC.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 mC', 1, 1), (@qid, '100 mC', 0, 2), (@qid, '10 mC', 0, 3), (@qid, '0,1 C', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur équivalent de 20 µF chargé sous 50 V porte une charge de :',
+    'Q = 20×10⁻⁶ × 50 = 1×10⁻³ C = 1 mC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 mC', 0, 1), (@qid, '1 mC', 1, 2), (@qid, '10 mC', 0, 3), (@qid, '100 mC', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une capacité équivalente de 5 µF est soumise à 200 V. La charge emmagasinée est :',
+    'Q = 5×10⁻⁶ × 200 = 1×10⁻³ C = 1 mC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 mC', 0, 1), (@qid, '2,5 mC', 0, 2), (@qid, '1 mC', 1, 3), (@qid, '10 mC', 0, 4);
+
+-- Question 11 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie stockée dans cette batterie (10 µF, 100 V) vaut :',
+    'E = ½ × C × U² = ½ × 10×10⁻⁶ × 10000 = 0,05 J.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 J', 0, 1), (@qid, '5 J', 0, 2), (@qid, '0,005 J', 0, 3), (@qid, '0,05 J', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur de 20 µF sous 50 V stocke une énergie de :',
+    'E = ½ × 20×10⁻⁶ × 2500 = 0,025 J.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,25 J', 0, 1), (@qid, '0,025 J', 1, 2), (@qid, '2,5 J', 0, 3), (@qid, '0,5 J', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur de 4 µF chargé sous 500 V emmagasine :',
+    'E = ½ × 4×10⁻⁶ × 250000 = 0,5 J.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 J', 1, 1), (@qid, '0,05 J', 0, 2), (@qid, '5 J', 0, 3), (@qid, '1 J', 0, 4);
+
+-- Question 12 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'On relie un condensateur chargé à 100 V avec un identique non chargé. La tension finale est :',
+    'Partage de charge : Q_initiale = C×100. Q_finale = 2C×U_f. U_f = C×100/2C = 50 V.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '25 V', 0, 1), (@qid, '0 V', 0, 2), (@qid, '100 V', 0, 3), (@qid, '50 V', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur chargé sous 200 V est connecté à un condensateur identique déchargé. La tension d''équilibre est :',
+    'U_f = 200/2 = 100 V.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '200 V', 0, 1), (@qid, '100 V', 1, 2), (@qid, '50 V', 0, 3), (@qid, '0 V', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur de 2 µF chargé à 60 V est relié à un condensateur de 4 µF déchargé. La tension finale est :',
+    'Q_init = 2×60 = 120 µC. C_tot = 6 µF. U_f = 120/6 = 20 V.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '30 V', 0, 1), (@qid, '20 V', 1, 2), (@qid, '60 V', 0, 3), (@qid, '15 V', 0, 4);
+
+-- Question 13 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ce phénomène (Q12) s''appelle :',
+    'Lorsqu''on relie deux condensateurs, la charge se répartit entre eux : c''est le partage de charge.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'partage de charge', 1, 1), (@qid, 'court-circuit', 0, 2), (@qid, 'résonance', 0, 3), (@qid, 'induction', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le partage de charge entre condensateurs se fait à :',
+    'Le partage se fait à charge totale constante (si le système est isolé).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Énergie totale constante', 0, 1), (@qid, 'Charge totale constante', 1, 2), (@qid, 'Tension constante', 0, 3), (@qid, 'Capacité constante', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Lors du partage de charge entre deux condensateurs, l''énergie totale du système :',
+    'Une partie de l''énergie est dissipée lors de la connexion, donc l''énergie totale diminue.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Se conserve intégralement', 0, 1), (@qid, 'Diminue', 1, 2), (@qid, 'Augmente', 0, 3), (@qid, 'Reste constante', 0, 4);
+
+-- Question 14 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si deux condensateurs en parallèle sont sous 200 V, chacun porte :',
+    'En parallèle, tous les condensateurs voient la même tension que la source.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'une tension double', 0, 1), (@qid, 'la moitié de la tension', 0, 2), (@qid, 'une tension nulle', 0, 3), (@qid, 'la même tension', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un montage parallèle, la tension aux bornes de chaque condensateur :',
+    'U₁ = U₂ = ... = U_générateur.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dépend de sa capacité', 0, 1), (@qid, 'Est strictement identique à la tension de la source', 1, 2), (@qid, 'Est toujours nulle', 0, 3), (@qid, 'Est la somme des tensions individuelles', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'En parallèle sous 120 V, un condensateur de 1 µF et un de 3 µF voient respectivement :',
+    'Les deux voient 120 V chacun.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '120 V et 360 V', 0, 1), (@qid, '120 V et 120 V', 1, 2), (@qid, '40 V et 120 V', 0, 3), (@qid, '360 V et 120 V', 0, 4);
+
+-- Question 15 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un montage série permet surtout :',
+    'En série, la tension se répartit, ce qui permet de supporter une tension plus élevée sans claquage.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'de diminuer la résistance', 0, 1), (@qid, 'de produire du champ magnétique', 0, 2), (@qid, 'd''augmenter la tension supportée', 1, 3), (@qid, 'd''augmenter la capacité', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le principal avantage du montage en série des condensateurs est :',
+    'La tension totale se répartit sur chaque condensateur, augmentant la tension maximale admissible.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''augmentation de la capacité', 0, 1), (@qid, 'L''augmentation de la tension supportée', 1, 2), (@qid, 'La diminution du courant', 0, 3), (@qid, 'L''augmentation de l''énergie', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'On utilise le montage série des condensateurs quand :',
+    'Quand la tension d''alimentation dépasse la tension nominale d''un seul condensateur.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'On veut une grande capacité', 0, 1), (@qid, 'La tension d''alimentation est supérieure à la tension nominale d''un condensateur', 1, 2), (@qid, 'On veut réduire l''énergie stockée', 0, 3), (@qid, 'On veut annuler la charge', 0, 4);
+
+-- Question 16 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'C₁ = 3 µF et C₂ = 6 µF en parallèle sous 100 V. La charge totale vaut :',
+    'C_eq = 9 µF. Q_tot = 9×10⁻⁶ × 100 = 0,9×10⁻³ C = 0,9 mC.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,3 mC', 0, 1), (@qid, '9 mC', 0, 2), (@qid, '90 mC', 0, 3), (@qid, '0,9 mC', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Deux condensateurs de 2 µF et 4 µF en parallèle sous 50 V donnent une charge totale de :',
+    'C_eq = 6 µF. Q_tot = 6×10⁻⁶ × 50 = 0,3×10⁻³ C = 0,3 mC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,3 mC', 1, 1), (@qid, '3 mC', 0, 2), (@qid, '0,6 mC', 0, 3), (@qid, '1 mC', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'En parallèle, C₁=5 µF, C₂=5 µF, U=200 V. La charge totale est :',
+    'C_eq = 10 µF. Q_tot = 10×10⁻⁶ × 200 = 2×10⁻³ C = 2 mC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 mC', 0, 1), (@qid, '2 mC', 1, 2), (@qid, '0,5 mC', 0, 3), (@qid, '5 mC', 0, 4);
+
+-- Question 17 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Les mêmes (3 µF et 6 µF) en série sous 100 V. La capacité équivalente vaut :',
+    '1/C_eq = 1/3 + 1/6 = 3/6 = 1/2 → C_eq = 2 µF.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '6 µF', 0, 1), (@qid, '3 µF', 0, 2), (@qid, '2 µF', 1, 3), (@qid, '9 µF', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'C₁ = 4 µF et C₂ = 12 µF en série. La capacité équivalente est :',
+    '1/C_eq = 1/4 + 1/12 = 4/12 = 1/3 → C_eq = 3 µF.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '16 µF', 0, 1), (@qid, '3 µF', 1, 2), (@qid, '8 µF', 0, 3), (@qid, '4 µF', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Deux condensateurs de 5 µF et 20 µF en série donnent une capacité de :',
+    '1/C_eq = 1/5 + 1/20 = 5/20 = 1/4 → C_eq = 4 µF.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '25 µF', 0, 1), (@qid, '4 µF', 1, 2), (@qid, '12,5 µF', 0, 3), (@qid, '6,25 µF', 0, 4);
+
+-- Question 18 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie stockée augmente quand :',
+    'E = ½ C U². E augmente si C augmente (à U constant) ou si U augmente.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'la capacité augmente', 1, 1), (@qid, 'la distance augmente', 0, 2), (@qid, 'la tension diminue', 0, 3), (@qid, 'la surface diminue', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'À capacité constante, si la tension est triplée, l''énergie stockée est :',
+    'E ∝ U². Si U triple, E est multipliée par 9.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Triplée', 0, 1), (@qid, 'Multipliée par 9', 1, 2), (@qid, 'Divisée par 3', 0, 3), (@qid, 'Inchangée', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie emmagasinée dans un condensateur est proportionnelle :',
+    'E = ½ C U². E ∝ C et E ∝ U².', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'À la tension U', 0, 1), (@qid, 'Au carré de la tension U²', 1, 2), (@qid, 'À la racine de U', 0, 3), (@qid, 'Uniquement à la charge', 0, 4);
+
+-- Question 19 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un flash d''appareil photo, plusieurs condensateurs sont souvent montés en parallèle pour :',
+    'En parallèle, les capacités s''additionnent pour stocker plus d''énergie.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'augmenter l''énergie stockée', 1, 1), (@qid, 'augmenter la tension', 0, 2), (@qid, 'diminuer la charge', 0, 3), (@qid, 'bloquer le courant', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un flash, on associe les condensateurs en parallèle car :',
+    'L''énergie E = ½ C U² est proportionnelle à C. Une grande capacité stocke plus d''énergie.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La tension augmente', 0, 1), (@qid, 'L''énergie totale stockée est plus grande', 1, 2), (@qid, 'Le courant diminue', 0, 3), (@qid, 'La charge est nulle', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour augmenter l''énergie disponible dans une batterie de condensateurs, on les branche :',
+    'Le montage parallèle additionne les capacités, donc l''énergie totale (à tension égale) est plus grande.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'En série pour diviser la tension', 0, 1), (@qid, 'En parallèle pour additionner les capacités', 1, 2), (@qid, 'En série pour additionner les capacités', 0, 3), (@qid, 'Individuellement sans connexion', 0, 4);
+
+-- Question 20 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la capacité totale double à tension constante, l''énergie totale :',
+    'E = ½ C U². Si C double et U constant, E double.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'diminue de moitié', 0, 1), (@qid, 'double', 1, 2), (@qid, 'reste constante', 0, 3), (@qid, 'devient nulle', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la capacité totale est divisée par 2 et la tension doublée, l''énergie totale :',
+    'E = ½ (C/2) × (2U)² = ½ × C/2 × 4U² = C U² = 2E_initiale. L''énergie double.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Double', 1, 1), (@qid, 'Reste constante', 0, 2), (@qid, 'Est divisée par 2', 0, 3), (@qid, 'Est divisée par 4', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie stockée dans un condensateur double si :',
+    'E ∝ C. Si C double (à U constant), E double.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La capacité double à tension constante', 1, 1), (@qid, 'La tension est divisée par 2', 0, 2), (@qid, 'La distance entre plaques double', 0, 3), (@qid, 'Le diélectrique est retiré', 0, 4);
+
+
+-- Question 1 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité du champ magnétique B est :',
+    'Le champ magnétique B se mesure en Tesla (T) dans le Système International.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Tesla (T)', 1, 1), (@qid, 'Henry (H)', 0, 2), (@qid, 'Volt (V)', 0, 3), (@qid, 'Weber (Wb)', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le Tesla est l''unité de mesure de :',
+    'Le Tesla (T) mesure le champ magnétique B (induction magnétique).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La capacité électrique', 0, 1), (@qid, 'Le champ magnétique', 1, 2), (@qid, 'Le flux magnétique', 0, 3), (@qid, 'La tension électrique', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quel physicien a donné son nom à l''unité de champ magnétique ?',
+    'Nikola Tesla, inventeur et ingénieur, a donné son nom au Tesla.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Michael Faraday', 0, 1), (@qid, 'Nikola Tesla', 1, 2), (@qid, 'James Maxwell', 0, 3), (@qid, 'André Ampère', 0, 4);
+
+-- Question 2 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un solénoïde long, les lignes de champ au centre sont :',
+    'À l''intérieur d''un solénoïde long, le champ est uniforme : les lignes sont parallèles à l''axe.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'aléatoires', 0, 1), (@qid, 'radiales', 0, 2), (@qid, 'parallèles', 1, 3), (@qid, 'circulaires', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le champ magnétique à l''intérieur d''un solénoïde est :',
+    'Le champ y est uniforme (même norme, direction et sens partout).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Uniforme', 1, 1), (@qid, 'Variable', 0, 2), (@qid, 'Nul', 0, 3), (@qid, 'Radial', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'À l''extérieur d''un solénoïde, le champ magnétique est :',
+    'Le champ extérieur est quasi nul pour un solénoïde idéal, très faible pour un solénoïde réel.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Plus fort qu''à l''intérieur', 0, 1), (@qid, 'Uniforme et intense', 0, 2), (@qid, 'Quasi nul', 1, 3), (@qid, 'Circulaire uniquement', 0, 4);
+
+-- Question 3 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La formule du champ dans un solénoïde long est :',
+    'B = μ₀ × N × I / L, où N = nombre de spires, I = courant, L = longueur.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'B = ½LI²', 0, 1), (@qid, 'B = U/d', 0, 2), (@qid, 'B = RI', 0, 3), (@qid, 'B = μ₀NI/L', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La constante μ₀ dans la formule B = μ₀NI/L est :',
+    'μ₀ = 4π × 10⁻⁷ T·m/A, c''est la perméabilité magnétique du vide.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La permittivité du vide', 0, 1), (@qid, 'La perméabilité magnétique du vide', 1, 2), (@qid, 'La constante de Coulomb', 0, 3), (@qid, 'La constante de Planck', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans la formule B = μ₀NI/L, N/L représente :',
+    'N/L est le nombre de spires par unité de longueur (densité linéique de spires).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La longueur totale du fil', 0, 1), (@qid, 'La densité linéique de spires', 1, 2), (@qid, 'Le diamètre des spires', 0, 3), (@qid, 'La résistance de la bobine', 0, 4);
+
+-- Question 4 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le courant double, le champ magnétique :',
+    'B ∝ I. Si I double, B double.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'devient nul', 0, 1), (@qid, 'reste constant', 0, 2), (@qid, 'diminue', 0, 3), (@qid, 'double', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un solénoïde, le champ magnétique B est proportionnel à :',
+    'B ∝ I (courant) et B ∝ N/L (densité de spires).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La résistance de la bobine', 0, 1), (@qid, 'L''intensité du courant I', 1, 2), (@qid, 'Le carré du courant I²', 0, 3), (@qid, 'La température de la bobine', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le courant est divisé par 3, le champ magnétique B est :',
+    'B ∝ I. Si I est divisée par 3, B est divisé par 3.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Multiplié par 3', 0, 1), (@qid, 'Divisé par 3', 1, 2), (@qid, 'Inchangé', 0, 3), (@qid, 'Multiplié par 9', 0, 4);
+
+-- Question 5 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'N = 1000 spires, L = 0,5 m, I = 2 A. B vaut environ :',
+    'B = 4π×10⁻⁷ × 1000 × 2 / 0,5 = 4π×10⁻⁷ × 2000 / 0,5 ≈ 5,03×10⁻³ T = 5 mT.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 mT', 0, 1), (@qid, '0,05 mT', 0, 2), (@qid, '5 mT', 1, 3), (@qid, '50 T', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'N = 500 spires, L = 0,2 m, I = 3 A. Le champ B vaut environ :',
+    'B = 4π×10⁻⁷ × 500 × 3 / 0,2 = 4π×10⁻⁷ × 7500 ≈ 9,4 mT.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '9,4 mT', 1, 1), (@qid, '94 mT', 0, 2), (@qid, '0,94 mT', 0, 3), (@qid, '940 mT', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un solénoïde de 200 spires, 10 cm de long, parcouru par 1 A produit un champ d''environ :',
+    'B = 4π×10⁻⁷ × 200 × 1 / 0,1 = 4π×10⁻⁷ × 2000 ≈ 2,5 mT.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,25 mT', 0, 1), (@qid, '25 mT', 0, 2), (@qid, '2,5 mT', 1, 3), (@qid, '250 mT', 0, 4);
+
+-- Question 6 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on double le nombre de spires, le champ B :',
+    'B ∝ N. Si N double, B double.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'est divisé par 2', 0, 1), (@qid, 'double', 1, 2), (@qid, 'devient nul', 0, 3), (@qid, 'reste constant', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on triple le nombre de spires par unité de longueur, le champ B est :',
+    'B ∝ n (densité de spires). Si n triple, B triple.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Triplé', 1, 1), (@qid, 'Divisé par 3', 0, 2), (@qid, 'Inchangé', 0, 3), (@qid, 'Multiplié par 9', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour augmenter le champ magnétique d''un solénoïde sans changer ses dimensions, on peut :',
+    'Augmenter N (plus de spires) ou augmenter I (plus de courant).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Augmenter la longueur du solénoïde', 0, 1), (@qid, 'Augmenter le nombre de spires N', 1, 2), (@qid, 'Diminuer le courant I', 0, 3), (@qid, 'Utiliser un fil plus fin', 0, 4);
+
+-- Question 7 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le flux magnétique s''écrit :',
+    'Φ = B × S × cos(θ), où θ est l''angle entre B et la normale à la surface.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Φ = B·S·cosθ', 1, 1), (@qid, 'Φ = C·U', 0, 2), (@qid, 'Φ = RI', 0, 3), (@qid, 'Φ = L·I', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le champ B est perpendiculaire à la surface S, le flux magnétique vaut :',
+    'cos(0°) = 1. Φ = B × S.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Φ = B × S', 1, 1), (@qid, 'Φ = 0', 0, 2), (@qid, 'Φ = B / S', 0, 3), (@qid, 'Φ = S / B', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le champ B est parallèle à la surface S, le flux magnétique vaut :',
+    'cos(90°) = 0. Φ = 0 (aucune ligne de champ ne traverse la surface).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Φ = B × S', 0, 1), (@qid, 'Φ = 0', 1, 2), (@qid, 'Φ = B / S', 0, 3), (@qid, 'Φ = S / B', 0, 4);
+
+-- Question 8 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Surface S = 0,01 m² et B = 0,2 T. Le flux vaut :',
+    'Φ = B × S = 0,2 × 0,01 = 0,002 Wb (si B ⟂ S).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2 Wb', 0, 1), (@qid, '0,002 Wb', 1, 2), (@qid, '0,2 Wb', 0, 3), (@qid, '0,02 Wb', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'B = 0,5 T et S = 200 cm². Le flux (B ⟂ S) vaut :',
+    'S = 0,02 m². Φ = 0,5 × 0,02 = 0,01 Wb = 10 mWb.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '100 Wb', 0, 1), (@qid, '0,01 Wb', 1, 2), (@qid, '1 Wb', 0, 3), (@qid, '0,1 Wb', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un champ de 0,1 T traverse perpendiculairement une surface de 50 cm². Le flux est :',
+    'S = 50×10⁻⁴ = 5×10⁻³ m². Φ = 0,1 × 5×10⁻³ = 5×10⁻⁴ Wb.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '5×10⁻⁴ Wb', 1, 1), (@qid, '5×10⁻² Wb', 0, 2), (@qid, '5 Wb', 0, 3), (@qid, '5×10⁻⁶ Wb', 0, 4);
+
+-- Question 9 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité du flux magnétique est :',
+    'Le flux magnétique se mesure en Weber (Wb).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Tesla', 0, 1), (@qid, 'Ampère', 0, 2), (@qid, 'Weber', 1, 3), (@qid, 'Henry', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le Weber (Wb) est équivalent à :',
+    '1 Wb = 1 T × 1 m².', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'T × m', 0, 1), (@qid, 'T × m²', 1, 2), (@qid, 'T / m', 0, 3), (@qid, 'T / m²', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quel physicien a donné son nom à l''unité de flux magnétique ?',
+    'Wilhelm Weber, physicien allemand, a donné son nom au Weber.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nikola Tesla', 0, 1), (@qid, 'Wilhelm Weber', 1, 2), (@qid, 'Joseph Henry', 0, 3), (@qid, 'Michael Faraday', 0, 4);
+
+-- Question 10 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''insertion d''un noyau de fer dans une bobine fait :',
+    'Le fer a une grande perméabilité magnétique, ce qui multiplie le champ B.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'diminuer B', 0, 1), (@qid, 'augmenter B', 1, 2), (@qid, 'bloquer le courant', 0, 3), (@qid, 'annuler B', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un noyau de fer doux dans un solénoïde augmente le champ magnétique car :',
+    'Le fer a une perméabilité magnétique relative μᵣ très élevée (≈ 1000 à 5000).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il diminue la résistance', 0, 1), (@qid, 'Sa perméabilité magnétique est très élevée', 1, 2), (@qid, 'Il augmente le courant', 0, 3), (@qid, 'Il crée des charges électriques', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Sans noyau de fer, le champ dans un solénoïde est B₀. Avec un noyau de perméabilité relative μᵣ = 500, le champ devient :',
+    'B = μᵣ × B₀ = 500 B₀.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'B₀', 0, 1), (@qid, '500 B₀', 1, 2), (@qid, 'B₀/500', 0, 3), (@qid, '250 B₀', 0, 4);
+
+-- Question 11 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ce phénomène (Q10) est dû à l''augmentation de :',
+    'L''augmentation de B est due à la perméabilité magnétique élevée du fer.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'perméabilité magnétique', 1, 1), (@qid, 'tension', 0, 2), (@qid, 'résistance', 0, 3), (@qid, 'capacité', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La perméabilité magnétique μ d''un matériau ferromagnétique est :',
+    'μ = μᵣ × μ₀, avec μᵣ très grand (>>1) pour les matériaux ferromagnétiques.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Égale à μ₀', 0, 1), (@qid, 'Très supérieure à μ₀', 1, 2), (@qid, 'Très inférieure à μ₀', 0, 3), (@qid, 'Toujours nulle', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Les matériaux utilisés pour les noyaux des électro-aimants sont :',
+    'Ce sont des matériaux ferromagnétiques (fer doux, acier...) à forte perméabilité.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des isolants électriques', 0, 1), (@qid, 'Des matériaux ferromagnétiques', 1, 2), (@qid, 'Des semi-conducteurs', 0, 3), (@qid, 'Des diélectriques', 0, 4);
+
+-- Question 12 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un électro-aimant sans courant devient :',
+    'Sans courant, le champ magnétique s''annule (sauf aimantation rémanente éventuelle).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'radioactif', 0, 1), (@qid, 'sans champ magnétique', 1, 2), (@qid, 'un aimant permanent', 0, 3), (@qid, 'plus fort', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un électro-aimant diffère d''un aimant permanent car :',
+    'L''électro-aimant ne produit un champ que lorsqu''il est parcouru par un courant.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il est toujours aimanté', 0, 1), (@qid, 'Son champ disparaît quand le courant s''annule', 1, 2), (@qid, 'Il est fait uniquement d''acier trempé', 0, 3), (@qid, 'Il ne contient pas de bobine', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''avantage d''un électro-aimant sur un aimant permanent est :',
+    'On peut contrôler son champ (l''allumer/l''éteindre, moduler sa force).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il est plus léger', 0, 1), (@qid, 'Son champ magnétique est contrôlable', 1, 2), (@qid, 'Il est toujours plus puissant', 0, 3), (@qid, 'Il ne consomme pas d''énergie', 0, 4);
+
+-- Question 13 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une bobine de 500 spires parcourue par 3 A crée un champ proportionnel à :',
+    'B ∝ N × I = 500 × 3 = 1500 (ampères-tours).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '500×3', 1, 1), (@qid, '3/500', 0, 2), (@qid, 'indépendant du courant', 0, 3), (@qid, '500/3', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le produit N×I est appelé :',
+    'N×I est la force magnétomotrice, exprimée en ampères-tours (A·tr).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Flux magnétique', 0, 1), (@qid, 'Force magnétomotrice (ampères-tours)', 1, 2), (@qid, 'Puissance magnétique', 0, 3), (@qid, 'Énergie magnétique', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour un même nombre d''ampères-tours (NI), si on réduit la longueur L, le champ B :',
+    'B = μ₀NI/L. Si L diminue, B augmente.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Diminue', 0, 1), (@qid, 'Augmente', 1, 2), (@qid, 'Reste constant', 0, 3), (@qid, 'S''annule', 0, 4);
+
+-- Question 14 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le champ créé par un long fil rectiligne est :',
+    'Les lignes de champ forment des cercles concentriques autour du fil.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'radial', 0, 1), (@qid, 'circulaire autour du fil', 1, 2), (@qid, 'uniforme', 0, 3), (@qid, 'nul', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le champ magnétique autour d''un fil rectiligne diminue quand :',
+    'B = μ₀I/(2πr). B diminue quand la distance r au fil augmente.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le courant augmente', 0, 1), (@qid, 'La distance au fil augmente', 1, 2), (@qid, 'Le fil est plus long', 0, 3), (@qid, 'La température augmente', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La formule du champ magnétique à une distance r d''un fil rectiligne est :',
+    'B = μ₀ × I / (2π × r).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'B = μ₀ × I × 2π × r', 0, 1), (@qid, 'B = μ₀ × I / (2π × r)', 1, 2), (@qid, 'B = μ₀ × I × r / 2π', 0, 3), (@qid, 'B = 2π × r / (μ₀ × I)', 0, 4);
+
+-- Question 15 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la longueur du solénoïde double, B :',
+    'B = μ₀NI/L. Si L double, B est divisé par 2 (diminue de moitié).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'devient infini', 0, 1), (@qid, 'double', 0, 2), (@qid, 'diminue de moitié', 1, 3), (@qid, 'reste constant', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour maintenir le même champ B en doublant la longueur du solénoïde, il faut :',
+    'Si L double, il faut doubler N (à I constant) pour garder N/L constant.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Doubler le courant', 0, 1), (@qid, 'Doubler le nombre de spires', 1, 2), (@qid, 'Réduire le courant de moitié', 0, 3), (@qid, 'Raccourcir le fil', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la longueur est divisée par 3 et le courant inchangé, le champ B :',
+    'B ∝ 1/L. Si L est divisée par 3, B est multiplié par 3.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Est divisé par 3', 0, 1), (@qid, 'Est multiplié par 3', 1, 2), (@qid, 'Reste constant', 0, 3), (@qid, 'S''annule', 0, 4);
+
+-- Question 16 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'B = 0,1 T et S = 20 cm². Le flux vaut :',
+    'S = 20×10⁻⁴ = 2×10⁻³ m². Φ = 0,1 × 2×10⁻³ = 2×10⁻⁴ Wb.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2×10⁻⁴ Wb', 1, 1), (@qid, '2 Wb', 0, 2), (@qid, '0,002 Wb', 0, 3), (@qid, '0,02 Wb', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'B = 0,05 T et S = 100 cm² (perpendiculaire). Le flux est :',
+    'S = 0,01 m². Φ = 0,05 × 0,01 = 5×10⁻⁴ Wb.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '5×10⁻² Wb', 0, 1), (@qid, '5×10⁻⁴ Wb', 1, 2), (@qid, '5 Wb', 0, 3), (@qid, '0,5 Wb', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un flux de 3×10⁻³ Wb traverse une surface de 30 cm². Le champ B perpendiculaire vaut :',
+    'S = 3×10⁻³ m². B = Φ/S = 3×10⁻³ / 3×10⁻³ = 1 T.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,1 T', 0, 1), (@qid, '1 T', 1, 2), (@qid, '10 T', 0, 3), (@qid, '0,01 T', 0, 4);
+
+-- Question 17 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une grue électromagnétique fonctionne grâce à :',
+    'Elle utilise le champ magnétique créé par un courant dans une bobine pour soulever des charges.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'charge électrique statique', 0, 1), (@qid, 'champ magnétique créé par courant', 1, 2), (@qid, 'effet lumineux', 0, 3), (@qid, 'effet thermique', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans une grue électromagnétique, le champ magnétique sert à :',
+    'Il aimante le noyau de fer qui attire les objets métalliques.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Chauffer les objets', 0, 1), (@qid, 'Attirer les objets ferromagnétiques', 1, 2), (@qid, 'Produire de la lumière', 0, 3), (@qid, 'Mesurer la masse', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une grue électromagnétique peut soulever des charges car :',
+    'Le fer (ou acier) de la charge est attiré par l''électro-aimant.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La charge est légère', 0, 1), (@qid, 'La charge contient des matériaux ferromagnétiques', 1, 2), (@qid, 'La charge est en aluminium', 0, 3), (@qid, 'La charge est en bois', 0, 4);
+
+-- Question 18 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le sens du champ dans une bobine se détermine avec :',
+    'La règle de la main droite : les doigts suivent le courant, le pouce donne le sens de B.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'règle de la main droite', 1, 1), (@qid, 'loi d''Ohm', 0, 2), (@qid, 'principe d''Archimède', 0, 3), (@qid, 'théorème de Pythagore', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour un solénoïde, la règle de la main droite permet de trouver :',
+    'Le pouce indique le pôle Nord (sens de B) quand les doigts suivent le courant.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La valeur du champ', 0, 1), (@qid, 'Le sens du champ magnétique', 1, 2), (@qid, 'La résistance de la bobine', 0, 3), (@qid, 'La tension aux bornes', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on inverse le sens du courant dans une bobine, le champ magnétique :',
+    'Le sens de B s''inverse aussi (le pôle Nord devient Sud et vice versa).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Reste identique', 0, 1), (@qid, 'S''inverse', 1, 2), (@qid, 'S''annule définitivement', 0, 3), (@qid, 'Double d''intensité', 0, 4);
+
+-- Question 19 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le courant s''annule brusquement, le champ magnétique :',
+    'Le champ magnétique disparaît avec le courant (pour un électro-aimant idéal).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 's''annule', 1, 1), (@qid, 'augmente', 0, 2), (@qid, 'devient électrique', 0, 3), (@qid, 'devient infini', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Lorsqu''on coupe le courant dans un électro-aimant, la charge soulevée :',
+    'Le champ disparaît, l''attraction cesse, la charge tombe.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Reste suspendue', 0, 1), (@qid, 'Tombe car le champ s''annule', 1, 2), (@qid, 'Est attirée plus fort', 0, 3), (@qid, 'Devient aimantée', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La coupure du courant dans une bobine peut produire une surtension à cause de :',
+    'La bobine s''oppose à la variation brusque du courant (loi de Lenz), créant une f.é.m. induite.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''effet Joule', 0, 1), (@qid, 'L''auto-induction (f.é.m. induite)', 1, 2), (@qid, 'La loi d''Ohm', 0, 3), (@qid, 'L''effet capacitif', 0, 4);
+
+-- Question 20 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un solénoïde de 1000 spires, 0,25 m, 1 A produit environ :',
+    'B = 4π×10⁻⁷ × 1000 × 1 / 0,25 = 4π×10⁻⁷ × 4000 ≈ 5,03×10⁻³ T = 5 mT.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '5 mT', 1, 1), (@qid, '50 mT', 0, 2), (@qid, '5 T', 0, 3), (@qid, '0,5 T', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un solénoïde de 500 spires, 0,5 m, 2 A produit un champ d''environ :',
+    'B = 4π×10⁻⁷ × 500 × 2 / 0,5 = 4π×10⁻⁷ × 2000 ≈ 2,5 mT.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,25 mT', 0, 1), (@qid, '2,5 mT', 1, 2), (@qid, '25 mT', 0, 3), (@qid, '250 mT', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un solénoïde de 2000 spires, 0,4 m, 0,5 A produit un champ de :',
+    'B = 4π×10⁻⁷ × 2000 × 0,5 / 0,4 = 4π×10⁻⁷ × 2500 ≈ 3,14 mT.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '31,4 mT', 0, 1), (@qid, '3,14 mT', 1, 2), (@qid, '0,314 mT', 0, 3), (@qid, '314 mT', 0, 4);
+
+
+
+-- Question 1 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité du flux magnétique est :',
+    'Le flux magnétique Φ se mesure en Weber (Wb) dans le Système International.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Tesla', 0, 1), (@qid, 'Volt', 0, 2), (@qid, 'Henry', 0, 3), (@qid, 'Weber', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le Weber est l''unité de :',
+    'Le Weber (Wb) mesure le flux magnétique à travers une surface.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Champ magnétique', 0, 1), (@qid, 'Flux magnétique', 1, 2), (@qid, 'Inductance', 0, 3), (@qid, 'Force électromotrice', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, '1 Weber est équivalent à :',
+    'Φ = B·S, donc 1 Wb = 1 T × 1 m².', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 T × 1 m', 0, 1), (@qid, '1 T × 1 m²', 1, 2), (@qid, '1 T / 1 m²', 0, 3), (@qid, '1 T × 1 m³', 0, 4);
+
+-- Question 2 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le flux magnétique à travers une surface s''écrit :',
+    'Φ = B × S × cos(θ), où θ est l''angle entre B et la normale à la surface.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Φ = C·U', 0, 1), (@qid, 'Φ = B·S·cosθ', 1, 2), (@qid, 'Φ = R·I', 0, 3), (@qid, 'Φ = L·I²', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le champ B est perpendiculaire à la surface S, le flux s''écrit :',
+    'cos(0) = 1, donc Φ = B × S.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Φ = B × S', 1, 1), (@qid, 'Φ = B / S', 0, 2), (@qid, 'Φ = 0', 0, 3), (@qid, 'Φ = S / B', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le flux magnétique dépend de :',
+    'Φ = B·S·cosθ dépend du champ B, de la surface S et de l''orientation θ.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Uniquement du champ B', 0, 1), (@qid, 'Du champ B, de la surface S et de l''angle θ', 1, 2), (@qid, 'Uniquement de la surface S', 0, 3), (@qid, 'De la température', 0, 4);
+
+-- Question 3 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''induction électromagnétique apparaît lorsqu''il y a :',
+    'La loi de Faraday : une f.é.m. induite apparaît quand le flux magnétique varie.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'courant constant', 0, 1), (@qid, 'résistance nulle', 0, 2), (@qid, 'variation de flux magnétique', 1, 3), (@qid, 'charge fixe', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour qu''une f.é.m. soit induite dans un circuit, il faut que :',
+    'Il faut une variation du flux magnétique à travers le circuit (aimant en mouvement, champ variable...).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le flux magnétique soit constant', 0, 1), (@qid, 'Le flux magnétique varie dans le temps', 1, 2), (@qid, 'Le circuit soit ouvert', 0, 3), (@qid, 'La température soit élevée', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on maintient un aimant immobile près d''une bobine, la f.é.m. induite est :',
+    'Pas de variation de flux → pas de f.é.m. induite.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Maximale', 0, 1), (@qid, 'Constante', 0, 2), (@qid, 'Nulle', 1, 3), (@qid, 'Alternative', 0, 4);
+
+-- Question 4 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La loi de Faraday s''écrit :',
+    'e = -N × dΦ/dt : la f.é.m. induite est proportionnelle au nombre de spires et à la vitesse de variation du flux.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'P = UI', 0, 1), (@qid, 'e = −N dΦ/dt', 1, 2), (@qid, 'U = RI', 0, 3), (@qid, 'B = μ₀NI/L', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans la loi de Faraday, la f.é.m. induite est proportionnelle à :',
+    'e ∝ N (nombre de spires) et e ∝ dΦ/dt (vitesse de variation du flux).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La valeur du flux uniquement', 0, 1), (@qid, 'La variation du flux par rapport au temps', 1, 2), (@qid, 'Le carré du flux', 0, 3), (@qid, 'La température', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité de la f.é.m. induite e est :',
+    'La f.é.m. est une tension, elle se mesure en Volts (V).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ampère (A)', 0, 1), (@qid, 'Volt (V)', 1, 2), (@qid, 'Weber (Wb)', 0, 3), (@qid, 'Tesla (T)', 0, 4);
+
+-- Question 5 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le signe (–) dans la loi de Faraday traduit :',
+    'Le signe négatif exprime la loi de Lenz : le courant induit s''oppose à la variation de flux.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'la puissance', 0, 1), (@qid, 'la résistance', 0, 2), (@qid, 'la loi de Lenz', 1, 3), (@qid, 'la tension maximale', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Selon la loi de Lenz, le courant induit crée un flux qui :',
+    'Le flux créé par le courant induit s''oppose à la variation du flux initial.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Renforce la variation du flux', 0, 1), (@qid, 'S''oppose à la variation du flux', 1, 2), (@qid, 'Est toujours nul', 0, 3), (@qid, 'Est indépendant du flux', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La loi de Lenz est une conséquence du principe de :',
+    'La loi de Lenz découle de la conservation de l''énergie.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La conservation de la charge', 0, 1), (@qid, 'La conservation de l''énergie', 1, 2), (@qid, 'La conservation de la masse', 0, 3), (@qid, 'L''inertie', 0, 4);
+
+-- Question 6 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le flux est constant, la f.é.m. induite est :',
+    'e ∝ dΦ/dt. Si Φ est constant, dΦ/dt = 0, donc e = 0.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'maximale', 0, 1), (@qid, 'alternative', 0, 2), (@qid, 'infinie', 0, 3), (@qid, 'nulle', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour obtenir une f.é.m. induite constante non nulle, il faut que le flux varie :',
+    'Si dΦ/dt est constant, e est constante (variation uniforme du flux).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'De façon quelconque', 0, 1), (@qid, 'Linéairement (proportionnellement au temps)', 1, 2), (@qid, 'Aléatoirement', 0, 3), (@qid, 'Sans variation', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le flux magnétique diminue, la f.é.m. induite :',
+    'e = -dΦ/dt. Si Φ diminue, dΦ/dt < 0, donc e > 0 (non nulle).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Est toujours nulle', 0, 1), (@qid, 'Est non nulle (positive si dΦ/dt < 0)', 1, 2), (@qid, 'Est toujours négative', 0, 3), (@qid, 'Est infinie', 0, 4);
+
+-- Question 7 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une bobine de 200 spires subit une variation de flux de 0,01 Wb en 0,1 s. La f.é.m. vaut :',
+    '|e| = N × ΔΦ/Δt = 200 × 0,01/0,1 = 200 × 0,1 = 20 V.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '20 V', 1, 1), (@qid, '200 V', 0, 2), (@qid, '2 V', 0, 3), (@qid, '0,2 V', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'N = 100 spires, ΔΦ = 0,005 Wb, Δt = 0,05 s. La f.é.m. moyenne vaut :',
+    '|e| = 100 × 0,005/0,05 = 100 × 0,1 = 10 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 V', 0, 1), (@qid, '10 V', 1, 2), (@qid, '100 V', 0, 3), (@qid, '0,1 V', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'N = 50 spires, ΔΦ = 0,02 Wb en 0,2 s. La f.é.m. induite est de :',
+    '|e| = 50 × 0,02/0,2 = 50 × 0,1 = 5 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 V', 0, 1), (@qid, '5 V', 1, 2), (@qid, '50 V', 0, 3), (@qid, '500 V', 0, 4);
+
+-- Question 8 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on double le nombre de spires, la f.é.m. induite :',
+    'e ∝ N. Si N double, e double.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'reste constante', 0, 1), (@qid, 'devient nulle', 0, 2), (@qid, 'double', 1, 3), (@qid, 'diminue', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour doubler la f.é.m. induite sans changer la bobine, on peut :',
+    'e ∝ dΦ/dt. Pour doubler e, il faut doubler la vitesse de variation du flux.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Doubler le nombre de spires', 0, 1), (@qid, 'Doubler la vitesse de variation du flux', 1, 2), (@qid, 'Augmenter la résistance', 0, 3), (@qid, 'Diminuer le courant', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on divise le nombre de spires par 2, la f.é.m. induite :',
+    'e ∝ N. Si N est divisé par 2, e est divisée par 2.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Double', 0, 1), (@qid, 'Reste la même', 0, 2), (@qid, 'Est divisée par 2', 1, 3), (@qid, 'S''annule', 0, 4);
+
+-- Question 9 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un aimant qu''on approche d''une bobine produit un courant car :',
+    'Le mouvement de l''aimant fait varier le flux à travers la bobine, induisant une f.é.m.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'la tension disparaît', 0, 1), (@qid, 'la résistance change', 0, 2), (@qid, 'le flux varie', 1, 3), (@qid, 'la bobine chauffe', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Lorsqu''on éloigne rapidement un aimant d''une bobine, le galvanomètre :',
+    'La variation de flux induit une f.é.m. et un courant, détecté par le galvanomètre.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ne dévie pas', 0, 1), (@qid, 'Dévie dans un sens', 1, 2), (@qid, 'Dévie puis revient toujours au même sens', 0, 3), (@qid, 'Affiche toujours zéro', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si l''aimant est immobile au centre de la bobine, le courant induit est :',
+    'Pas de mouvement → flux constant → pas de f.é.m. induite.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Maximal', 0, 1), (@qid, 'Continu', 0, 2), (@qid, 'Nul', 1, 3), (@qid, 'Alternatif', 0, 4);
+
+-- Question 10 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le sens du courant induit s''oppose à :',
+    'Loi de Lenz : le courant induit s''oppose à la cause qui le produit (variation de flux).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'la surface', 0, 1), (@qid, 'la tension', 0, 2), (@qid, 'la cause qui le produit', 1, 3), (@qid, 'la résistance', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quand on approche le pôle Nord d''un aimant d''une bobine, la face de la bobine qui lui fait face devient :',
+    'Par la loi de Lenz, la bobine crée un pôle Nord pour s''opposer à l''approche du Nord.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un pôle Sud', 0, 1), (@qid, 'Un pôle Nord', 1, 2), (@qid, 'Neutre', 0, 3), (@qid, 'Un conducteur', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quand on éloigne le pôle Nord d''un aimant d''une bobine, la face de la bobine devient :',
+    'La bobine crée un pôle Sud pour s''opposer à l''éloignement du Nord (attirer).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un pôle Sud', 1, 1), (@qid, 'Un pôle Nord', 0, 2), (@qid, 'Neutre', 0, 3), (@qid, 'Un isolant', 0, 4);
+
+-- Question 11 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ce principe (Q10) est appelé :',
+    'La loi de Lenz régit le sens du courant induit.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'loi de Lenz', 1, 1), (@qid, 'principe d''Archimède', 0, 2), (@qid, 'loi d''Ohm', 0, 3), (@qid, 'effet Joule', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La loi de Lenz complète la loi de Faraday en précisant :',
+    'La loi de Lenz donne le sens de la f.é.m. induite.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La valeur de la f.é.m.', 0, 1), (@qid, 'Le sens de la f.é.m. induite', 1, 2), (@qid, 'La résistance du circuit', 0, 3), (@qid, 'La puissance dissipée', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La loi de Faraday et la loi de Lenz sont réunies dans la formule :',
+    'e = -N × dΦ/dt : Faraday pour la valeur, Lenz pour le signe négatif.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'U = RI', 0, 1), (@qid, 'e = -N × dΦ/dt', 1, 2), (@qid, 'P = UI', 0, 3), (@qid, 'B = μ₀NI/L', 0, 4);
+
+-- Question 12 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si Φ passe de 0 à 0,02 Wb en 0,5 s dans une spire unique, e vaut :',
+    '|e| = 1 × (0,02 - 0)/0,5 = 0,02/0,5 = 0,04 V.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,04 V', 1, 1), (@qid, '0,01 V', 0, 2), (@qid, '0,4 V', 0, 3), (@qid, '4 V', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans une spire, Φ passe de 0 à 0,01 Wb en 0,2 s. La f.é.m. vaut :',
+    '|e| = 0,01/0,2 = 0,05 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,005 V', 0, 1), (@qid, '0,05 V', 1, 2), (@qid, '0,5 V', 0, 3), (@qid, '5 V', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une spire subit une variation de flux de 0,005 Wb en 0,01 s. La f.é.m. est de :',
+    '|e| = 0,005/0,01 = 0,5 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,05 V', 0, 1), (@qid, '5 V', 0, 2), (@qid, '0,5 V', 1, 3), (@qid, '50 V', 0, 4);
+
+-- Question 13 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une dynamo de vélo fonctionne grâce à :',
+    'La dynamo utilise l''induction électromagnétique : un aimant tourne devant une bobine.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'résistance', 0, 1), (@qid, 'induction électromagnétique', 1, 2), (@qid, 'électrostatique', 0, 3), (@qid, 'effet thermique', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans une dynamo, l''énergie mécanique est convertie en énergie électrique grâce à :',
+    'C''est le principe de l''induction électromagnétique.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''effet Joule', 0, 1), (@qid, 'L''induction électromagnétique', 1, 2), (@qid, 'L''effet photoélectrique', 0, 3), (@qid, 'La conduction thermique', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un alternateur produit du courant électrique par :',
+    'Un alternateur fait tourner un aimant (rotor) devant des bobines fixes (stator) → induction.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Frottement', 0, 1), (@qid, 'Induction électromagnétique', 1, 2), (@qid, 'Effet chimique', 0, 3), (@qid, 'Effet piézoélectrique', 0, 4);
+
+-- Question 14 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quand la vitesse de variation du flux augmente, la f.é.m. :',
+    'e ∝ dΦ/dt. Si dΦ/dt augmente, e augmente.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'reste constante', 0, 1), (@qid, 'augmente', 1, 2), (@qid, 'devient nulle', 0, 3), (@qid, 'diminue', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour augmenter la f.é.m. induite dans une dynamo, on peut :',
+    'Faire tourner l''aimant plus vite augmente dΦ/dt, donc e augmente.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ralentir la rotation', 0, 1), (@qid, 'Augmenter la vitesse de rotation', 1, 2), (@qid, 'Diminuer le nombre d''aimants', 0, 3), (@qid, 'Utiliser un noyau de bois', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La f.é.m. induite est maximale quand le flux varie :',
+    'Plus la variation est rapide, plus e est grande. e est maximale quand dΦ/dt est maximal.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Lentement', 0, 1), (@qid, 'Rapidement', 1, 2), (@qid, 'De façon constante', 0, 3), (@qid, 'Sans variation', 0, 4);
+
+-- Question 15 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si l''angle θ = 90°, le flux est :',
+    'Φ = B·S·cosθ. cos(90°) = 0, donc Φ = 0.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'maximal', 0, 1), (@qid, 'infini', 0, 2), (@qid, 'constant', 0, 3), (@qid, 'nul', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quand le champ B est parallèle à la surface (θ = 90° entre B et la normale) :',
+    'Aucune ligne de champ ne traverse la surface → flux nul.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le flux est maximal', 0, 1), (@qid, 'Le flux est nul', 1, 2), (@qid, 'Le flux est moyen', 0, 3), (@qid, 'Le flux est infini', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour qu''une spire capte le maximum de flux, elle doit être :',
+    'Φ maximal quand cosθ = 1, donc θ = 0° (normale parallèle à B, spire perpendiculaire à B).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parallèle au champ B', 0, 1), (@qid, 'Perpendiculaire au champ B', 1, 2), (@qid, 'Inclinée à 45°', 0, 3), (@qid, 'Quelconque', 0, 4);
+
+-- Question 16 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si θ = 0°, le flux est :',
+    'cos(0°) = 1. Φ = B × S (flux maximal).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'négatif seulement', 0, 1), (@qid, 'maximal', 1, 2), (@qid, 'minimal', 0, 3), (@qid, 'nul', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si B = 0,2 T, S = 0,05 m² et θ = 0°, le flux vaut :',
+    'Φ = 0,2 × 0,05 × 1 = 0,01 Wb.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,001 Wb', 0, 1), (@qid, '0,01 Wb', 1, 2), (@qid, '0,1 Wb', 0, 3), (@qid, '1 Wb', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le flux maximal à travers une surface S dans un champ B est :',
+    'Φ_max = B × S (quand θ = 0°, cosθ = 1).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Φ = B / S', 0, 1), (@qid, 'Φ = B × S', 1, 2), (@qid, 'Φ = 0', 0, 3), (@qid, 'Φ = B × S²', 0, 4);
+
+-- Question 17 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une bobine tourne dans un champ magnétique. Le courant produit est :',
+    'Le flux varie sinusoïdalement, donc le courant induit est alternatif.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'continu', 0, 1), (@qid, 'nul', 0, 2), (@qid, 'alternatif', 1, 3), (@qid, 'constant', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un alternateur, le courant produit est alternatif car :',
+    'Le flux varie sinusoïdalement (la bobine tourne), la f.é.m. induite est sinusoïdale.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le champ est constant', 0, 1), (@qid, 'Le flux varie sinusoïdalement', 1, 2), (@qid, 'La bobine est fixe', 0, 3), (@qid, 'Il n''y a pas d''aimant', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour obtenir un courant continu à partir d''un alternateur, on utilise :',
+    'Un collecteur (redresseur mécanique) ou des diodes (redressement électronique).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un condensateur', 0, 1), (@qid, 'Un collecteur (ou redresseur)', 1, 2), (@qid, 'Une bobine supplémentaire', 0, 3), (@qid, 'Un noyau de fer', 0, 4);
+
+-- Question 18 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un transformateur fonctionne grâce à :',
+    'Deux bobines couplées par induction électromagnétique via un noyau de fer.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'induction entre deux bobines', 1, 1), (@qid, 'effet Joule', 0, 2), (@qid, 'charge électrostatique', 0, 3), (@qid, 'condensateur', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le primaire d''un transformateur crée un flux variable qui :',
+    'Par induction, le flux variable induit une tension au secondaire.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Est bloqué par le noyau', 0, 1), (@qid, 'Induit une tension au secondaire', 1, 2), (@qid, 'Chauffe le secondaire', 0, 3), (@qid, 'Est sans effet', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un transformateur ne fonctionne qu''en :',
+    'Il faut un flux variable → courant alternatif (ou courant continu variable).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Courant continu constant', 0, 1), (@qid, 'Courant alternatif (ou variable)', 1, 2), (@qid, 'Courant nul', 0, 3), (@qid, 'Courant uniquement thermique', 0, 4);
+
+-- Question 19 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si 500 spires subissent une variation de flux de 0,002 Wb en 0,02 s, la f.é.m. vaut :',
+    '|e| = 500 × 0,002/0,02 = 500 × 0,1 = 50 V.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 V', 0, 1), (@qid, '500 V', 0, 2), (@qid, '50 V', 1, 3), (@qid, '5 V', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'N = 100 spires, ΔΦ = 0,004 Wb, Δt = 0,01 s. La f.é.m. vaut :',
+    '|e| = 100 × 0,004/0,01 = 100 × 0,4 = 40 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '4 V', 0, 1), (@qid, '40 V', 1, 2), (@qid, '400 V', 0, 3), (@qid, '0,4 V', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'N = 250 spires, f.é.m. = 25 V, Δt = 0,1 s. La variation de flux est :',
+    'ΔΦ = e × Δt / N = 25 × 0,1 / 250 = 2,5/250 = 0,01 Wb.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,1 Wb', 0, 1), (@qid, '0,01 Wb', 1, 2), (@qid, '1 Wb', 0, 3), (@qid, '10 Wb', 0, 4);
+
+-- Question 20 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour augmenter la tension induite, on peut :',
+    'e ∝ dΦ/dt. Augmenter la variation de flux (aimant plus fort ou plus rapide) augmente e.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'réduire N', 0, 1), (@qid, 'réduire la variation de flux', 0, 2), (@qid, 'augmenter la variation de flux', 1, 3), (@qid, 'annuler le champ', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour augmenter la f.é.m. induite, on peut aussi :',
+    'Augmenter le nombre de spires N augmente proportionnellement e.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Diminuer le nombre de spires', 0, 1), (@qid, 'Augmenter le nombre de spires', 1, 2), (@qid, 'Diminuer le champ magnétique', 0, 3), (@qid, 'Ralentir le mouvement', 0, 4);
+
+
+
+-- Question 1 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La force de Laplace s''exprime par :',
+    'F = B × I × L × sin(θ), où θ est l''angle entre le fil et le champ B.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'F = R·I', 0, 1), (@qid, 'F = B·I·L·sinθ', 1, 2), (@qid, 'F = C·U', 0, 3), (@qid, 'F = μ₀NI/L', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La force de Laplace dépend de :',
+    'F dépend du champ B, du courant I, de la longueur L et de l''angle θ.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Uniquement de I', 0, 1), (@qid, 'De B, I, L et de l''angle θ', 1, 2), (@qid, 'Uniquement de B', 0, 3), (@qid, 'De la température', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La force de Laplace est une force :',
+    'Cette force s''exerce sur un conducteur parcouru par un courant placé dans un champ magnétique.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Électrostatique', 0, 1), (@qid, 'Électromagnétique', 1, 2), (@qid, 'Gravitationnelle', 0, 3), (@qid, 'Nucléaire', 0, 4);
+
+-- Question 2 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité de la force magnétique est :',
+    'La force, quelle que soit son origine, se mesure en Newton (N).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Weber', 0, 1), (@qid, 'Tesla', 0, 2), (@qid, 'Henry', 0, 3), (@qid, 'Newton', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le Newton est l''unité de :',
+    'Le Newton (N) mesure une force.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La puissance', 0, 1), (@qid, 'La force', 1, 2), (@qid, 'L''énergie', 0, 3), (@qid, 'La pression', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La force de Laplace étant une force, son unité est le :',
+    'Toutes les forces ont pour unité le Newton (N).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Joule (J)', 0, 1), (@qid, 'Newton (N)', 1, 2), (@qid, 'Pascal (Pa)', 0, 3), (@qid, 'Watt (W)', 0, 4);
+
+-- Question 3 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le fil est parallèle au champ (θ = 0°), la force vaut :',
+    'sin(0°) = 0, donc F = 0.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'maximale', 0, 1), (@qid, 'nulle', 1, 2), (@qid, 'double', 0, 3), (@qid, 'infinie', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quand un conducteur est parallèle aux lignes de champ magnétique, la force de Laplace est :',
+    'Le courant est parallèle à B, donc sinθ = 0 → F = 0.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Maximale', 0, 1), (@qid, 'Nulle', 1, 2), (@qid, 'Égale à BIL', 0, 3), (@qid, 'Infinie', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour qu''un conducteur ne subisse aucune force de Laplace, il doit être :',
+    'θ = 0° ou θ = 180° (conducteur parallèle aux lignes de champ).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Perpendiculaire au champ', 0, 1), (@qid, 'Parallèle au champ', 1, 2), (@qid, 'Incliné à 45°', 0, 3), (@qid, 'Enroulé en bobine', 0, 4);
+
+-- Question 4 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le fil est perpendiculaire au champ, la force est :',
+    'sin(90°) = 1. F = B × I × L (force maximale).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'aléatoire', 0, 1), (@qid, 'maximale', 1, 2), (@qid, 'nulle', 0, 3), (@qid, 'minimale', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La force de Laplace est maximale quand le conducteur est :',
+    'θ = 90° → sin(90°) = 1 → F_max = B × I × L.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parallèle à B', 0, 1), (@qid, 'Perpendiculaire à B', 1, 2), (@qid, 'À 45° de B', 0, 3), (@qid, 'Hors du champ', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un moteur électrique, pour maximiser la force de rotation, le champ et le courant sont disposés :',
+    'Pour maximiser F, le fil doit être perpendiculaire au champ (θ = 90°).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parallèlement', 0, 1), (@qid, 'Perpendiculairement', 1, 2), (@qid, 'À 45°', 0, 3), (@qid, 'Peu importe', 0, 4);
+
+-- Question 5 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'B = 0,5 T, I = 2 A, L = 0,2 m, θ = 90°. La force vaut :',
+    'F = 0,5 × 2 × 0,2 × 1 = 0,2 N.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,02 N', 0, 1), (@qid, '0,2 N', 1, 2), (@qid, '2 N', 0, 3), (@qid, '5 N', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'B = 0,1 T, I = 5 A, L = 0,5 m, θ = 90°. La force vaut :',
+    'F = 0,1 × 5 × 0,5 × 1 = 0,25 N.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,25 N', 1, 1), (@qid, '2,5 N', 0, 2), (@qid, '0,025 N', 0, 3), (@qid, '25 N', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'B = 0,4 T, I = 3 A, L = 0,1 m, θ = 90°. F =',
+    'F = 0,4 × 3 × 0,1 = 0,12 N.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1,2 N', 0, 1), (@qid, '0,12 N', 1, 2), (@qid, '12 N', 0, 3), (@qid, '0,012 N', 0, 4);
+
+-- Question 6 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on double le courant, la force :',
+    'F ∝ I. Si I double, F double.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'double', 1, 1), (@qid, 'reste constante', 0, 2), (@qid, 'diminue', 0, 3), (@qid, 's''annule', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on triple l''intensité du courant, la force de Laplace est :',
+    'F ∝ I. Si I triple, F triple.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Triplée', 1, 1), (@qid, 'Divisée par 3', 0, 2), (@qid, 'Inchangée', 0, 3), (@qid, 'Multipliée par 9', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour doubler la force de Laplace sans changer le conducteur ni le champ, il faut :',
+    'F ∝ I. Pour doubler F, il faut doubler le courant I.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Doubler la longueur', 0, 1), (@qid, 'Doubler le courant', 1, 2), (@qid, 'Incliner le conducteur de 45°', 0, 3), (@qid, 'Utiliser un fil plus fin', 0, 4);
+
+-- Question 7 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on double la longueur du fil, la force :',
+    'F ∝ L. Si L double, F double.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'double', 1, 1), (@qid, 'reste constante', 0, 2), (@qid, 'devient nulle', 0, 3), (@qid, 'diminue', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on triple la longueur du conducteur dans le champ, la force de Laplace est :',
+    'F ∝ L. Si L triple, F triple.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Triplée', 1, 1), (@qid, 'Divisée par 3', 0, 2), (@qid, 'Inchangée', 0, 3), (@qid, 'Divisée par 9', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La force de Laplace est proportionnelle à la longueur L du conducteur parce que :',
+    'Plus le fil est long, plus il y a de charges en mouvement dans le champ, donc plus la force totale est grande.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La résistance augmente', 0, 1), (@qid, 'Plus de charges mobiles interagissent avec B', 1, 2), (@qid, 'Le courant diminue', 0, 3), (@qid, 'Le champ augmente', 0, 4);
+
+-- Question 8 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le sens de la force de Laplace se détermine avec :',
+    'La règle de la main droite (ou règle des trois doigts de la main droite).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'loi de Lenz', 0, 1), (@qid, 'règle de la main droite', 1, 2), (@qid, 'loi d''Ohm', 0, 3), (@qid, 'principe d''Archimède', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La règle des trois doigts (main droite) pour la force de Laplace utilise :',
+    'Pouce = sens de F (force), Index = sens de B (champ), Majeur = sens de I (courant).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pouce = I, Index = F, Majeur = B', 0, 1), (@qid, 'Pouce = F, Index = B, Majeur = I', 1, 2), (@qid, 'Pouce = B, Index = I, Majeur = F', 0, 3), (@qid, 'Pouce = I, Index = F, Majeur = B', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on inverse le sens du courant, la force de Laplace :',
+    'La force change de sens (elle est proportionnelle à I, donc si I s''inverse, F s''inverse).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Reste la même', 0, 1), (@qid, 'S''inverse', 1, 2), (@qid, 'S''annule', 0, 3), (@qid, 'Double', 0, 4);
+
+-- Question 9 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un conducteur parcouru par courant placé dans un champ subit :',
+    'Il subit la force de Laplace, qui est une force mécanique.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'une force mécanique', 1, 1), (@qid, 'une charge électrique', 0, 2), (@qid, 'une tension', 0, 3), (@qid, 'un flux', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''effet de la force de Laplace sur un conducteur mobile peut provoquer :',
+    'La force peut mettre le conducteur en mouvement (moteur, déplacement...).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Uniquement un échauffement', 0, 1), (@qid, 'Un déplacement mécanique', 1, 2), (@qid, 'Une variation de charge', 0, 3), (@qid, 'Une émission lumineuse', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La force de Laplace transforme l''énergie électrique en :',
+    'Cette force produit un mouvement → énergie mécanique.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Énergie thermique uniquement', 0, 1), (@qid, 'Énergie mécanique', 1, 2), (@qid, 'Énergie chimique', 0, 3), (@qid, 'Énergie lumineuse', 0, 4);
+
+-- Question 10 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'B = 0,2 T, I = 5 A, L = 0,1 m. F vaut (θ=90°) :',
+    'F = 0,2 × 5 × 0,1 × 1 = 0,1 N.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10 N', 0, 1), (@qid, '1 N', 0, 2), (@qid, '0,01 N', 0, 3), (@qid, '0,1 N', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'B = 0,3 T, I = 2 A, L = 0,15 m, θ = 90°. F =',
+    'F = 0,3 × 2 × 0,15 = 0,09 N.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,9 N', 0, 1), (@qid, '0,09 N', 1, 2), (@qid, '9 N', 0, 3), (@qid, '0,009 N', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un fil de 5 cm parcouru par 10 A dans un champ de 0,4 T (θ=90°) subit une force de :',
+    'F = 0,4 × 10 × 0,05 = 0,2 N.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,02 N', 0, 1), (@qid, '2 N', 0, 2), (@qid, '0,2 N', 1, 3), (@qid, '20 N', 0, 4);
+
+-- Question 11 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le travail d''une force constante s''écrit :',
+    'W = F × d (si la force est parallèle au déplacement).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'W = F·d', 1, 1), (@qid, 'W = Φ/t', 0, 2), (@qid, 'W = C·U', 0, 3), (@qid, 'W = RI', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le travail mécanique se mesure en :',
+    'L''unité du travail (et de l''énergie) est le Joule (J).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Newton (N)', 0, 1), (@qid, 'Joule (J)', 1, 2), (@qid, 'Watt (W)', 0, 3), (@qid, 'Pascal (Pa)', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la force est perpendiculaire au déplacement, le travail est :',
+    'W = F × d × cos(90°) = 0.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Maximal', 0, 1), (@qid, 'Nul', 1, 2), (@qid, 'Égal à F × d', 0, 3), (@qid, 'Négatif', 0, 4);
+
+-- Question 12 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une force de 0,5 N déplace un fil de 10 cm. Travail =',
+    'W = 0,5 × 0,1 = 0,05 J.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,005 J', 0, 1), (@qid, '5 J', 0, 2), (@qid, '0,05 J', 1, 3), (@qid, '0,5 J', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une force de 2 N déplace un objet de 25 cm. Travail =',
+    'W = 2 × 0,25 = 0,5 J.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '5 J', 0, 1), (@qid, '0,5 J', 1, 2), (@qid, '50 J', 0, 3), (@qid, '0,05 J', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un travail de 0,2 J est effectué par une force de 0,4 N. Le déplacement est de :',
+    'd = W/F = 0,2/0,4 = 0,5 m = 50 cm.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '5 cm', 0, 1), (@qid, '50 cm', 1, 2), (@qid, '2 m', 0, 3), (@qid, '0,8 m', 0, 4);
+
+-- Question 13 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le principe du moteur électrique repose sur :',
+    'Le moteur utilise la force de Laplace pour créer un mouvement de rotation.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'induction seule', 0, 1), (@qid, 'effet thermique', 0, 2), (@qid, 'charge statique', 0, 3), (@qid, 'force de Laplace', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un moteur électrique, la rotation est produite par :',
+    'La force de Laplace sur les conducteurs du rotor dans le champ du stator crée un couple moteur.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La dilatation thermique', 0, 1), (@qid, 'La force de Laplace', 1, 2), (@qid, 'L''induction électrostatique', 0, 3), (@qid, 'L''effet photoélectrique', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un moteur à courant continu convertit l''énergie électrique en :',
+    'Le moteur transforme l''énergie électrique en énergie mécanique de rotation.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Énergie thermique uniquement', 0, 1), (@qid, 'Énergie mécanique', 1, 2), (@qid, 'Énergie chimique', 0, 3), (@qid, 'Énergie lumineuse uniquement', 0, 4);
+
+-- Question 14 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un moteur, la force de Laplace provoque :',
+    'La force de Laplace crée un couple qui fait tourner le rotor.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'charge électrique', 0, 1), (@qid, 'rotation', 1, 2), (@qid, 'résistance', 0, 3), (@qid, 'échauffement', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le rotor d''un moteur électrique tourne grâce :',
+    'La force de Laplace sur les spires du rotor crée un mouvement de rotation.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'À la gravité', 0, 1), (@qid, 'À la force de Laplace', 1, 2), (@qid, 'À la chaleur', 0, 3), (@qid, 'Au frottement', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le collecteur dans un moteur à courant continu sert à :',
+    'Il inverse le sens du courant à chaque demi-tour pour maintenir le couple dans le même sens.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Augmenter la résistance', 0, 1), (@qid, 'Inverser le courant pour maintenir la rotation', 1, 2), (@qid, 'Refroidir le moteur', 0, 3), (@qid, 'Stocker l''énergie', 0, 4);
+
+-- Question 15 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si θ = 30°, la force devient :',
+    'F = B × I × L × sin(30°) = 0,5 × BIL.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nulle', 0, 1), (@qid, 'plus grande', 0, 2), (@qid, 'F·sin30°', 1, 3), (@qid, 'double', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si θ = 30°, sinθ = 0,5. La force de Laplace est alors :',
+    'F = BIL × 0,5 = la moitié de la force maximale.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Égale à la force maximale', 0, 1), (@qid, 'Égale à la moitié de la force maximale', 1, 2), (@qid, 'Nulle', 0, 3), (@qid, 'Double de la force maximale', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour un angle θ quelconque, la force de Laplace est :',
+    'F = B × I × L × sinθ, où θ est l''angle entre le fil et le champ B.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'F = B × I × L', 0, 1), (@qid, 'F = B × I × L × sinθ', 1, 2), (@qid, 'F = B × I × L × cosθ', 0, 3), (@qid, 'F = B × I × L × tanθ', 0, 4);
+
+-- Question 16 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'sin30° vaut :',
+    'sin(30°) = 1/2 = 0,5.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2', 0, 1), (@qid, '0', 0, 2), (@qid, '0,5', 1, 3), (@qid, '1', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'sin(60°) vaut :',
+    'sin(60°) = √3/2 ≈ 0,866.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5', 0, 1), (@qid, '√3/2', 1, 2), (@qid, '1', 0, 3), (@qid, '0', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'sin(45°) vaut :',
+    'sin(45°) = √2/2 ≈ 0,707.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5', 0, 1), (@qid, '√2/2', 1, 2), (@qid, '1', 0, 3), (@qid, '√3/2', 0, 4);
+
+-- Question 17 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un fil de 0,4 m porte 3 A dans un champ 0,5 T (θ=90°). F =',
+    'F = 0,5 × 3 × 0,4 = 0,6 N.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '6 N', 0, 1), (@qid, '1,5 N', 0, 2), (@qid, '0,6 N', 1, 3), (@qid, '0,06 N', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L = 0,3 m, I = 4 A, B = 0,25 T, θ = 90°. La force vaut :',
+    'F = 0,25 × 4 × 0,3 = 0,3 N.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,3 N', 1, 1), (@qid, '3 N', 0, 2), (@qid, '0,03 N', 0, 3), (@qid, '30 N', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L = 0,5 m, I = 2 A, B = 0,8 T, θ = 90°. F =',
+    'F = 0,8 × 2 × 0,5 = 0,8 N.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '8 N', 0, 1), (@qid, '0,08 N', 0, 2), (@qid, '0,8 N', 1, 3), (@qid, '1,6 N', 0, 4);
+
+-- Question 18 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un galvanomètre fonctionne grâce :',
+    'Le galvanomètre utilise la force de Laplace sur une bobine mobile pour mesurer le courant.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'à la gravité', 0, 1), (@qid, 'à la résistance', 0, 2), (@qid, 'au champ électrique', 0, 3), (@qid, 'à la force de Laplace sur une bobine', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un galvanomètre à cadre mobile, l''aiguille dévie grâce à :',
+    'La force de Laplace fait tourner le cadre dans le champ d''un aimant permanent.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La dilatation du fil', 0, 1), (@qid, 'La force de Laplace sur la bobine', 1, 2), (@qid, 'L''effet Joule', 0, 3), (@qid, 'L''électrolyse', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un haut-parleur électrodynamique utilise le principe de :',
+    'La bobine mobile dans l''entrefer d''un aimant subit la force de Laplace et fait vibrer la membrane.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''induction électromagnétique', 0, 1), (@qid, 'La force de Laplace', 1, 2), (@qid, 'L''effet piézoélectrique', 0, 3), (@qid, 'La charge électrostatique', 0, 4);
+
+-- Question 19 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le champ magnétique s''annule, la force devient :',
+    'Si B = 0, alors F = 0.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'nulle', 1, 1), (@qid, 'alternative', 0, 2), (@qid, 'double', 0, 3), (@qid, 'maximale', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si le courant dans le conducteur s''annule, la force de Laplace :',
+    'Si I = 0, alors F = 0.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Devient maximale', 0, 1), (@qid, 'S''annule', 1, 2), (@qid, 'Reste constante', 0, 3), (@qid, 'S''inverse', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour annuler la force de Laplace sur un conducteur sans couper le courant, on peut :',
+    'Orienter le conducteur parallèlement au champ (θ = 0°).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Augmenter le courant', 0, 1), (@qid, 'Placer le fil parallèlement à B', 1, 2), (@qid, 'Augmenter la longueur du fil', 0, 3), (@qid, 'Utiliser un noyau de fer', 0, 4);
+
+-- Question 20 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Augmenter B permet de :',
+    'F ∝ B. Si B augmente, F augmente.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'diminuer la force', 0, 1), (@qid, 'réduire la longueur', 0, 2), (@qid, 'annuler le courant', 0, 3), (@qid, 'augmenter la force', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour augmenter la force d''un électro-aimant sur un conducteur, on peut :',
+    'Augmenter B (plus de courant dans l''électro-aimant) augmente la force de Laplace.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Diminuer le champ B', 0, 1), (@qid, 'Augmenter le champ B', 1, 2), (@qid, 'Raccourcir le conducteur', 0, 3), (@qid, 'Incliner le conducteur', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La force de Laplace est proportionnelle au champ B. Si B triple, la force :',
+    'F ∝ B. Si B triple, F triple.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Triple', 1, 1), (@qid, 'Est divisée par 3', 0, 2), (@qid, 'Reste constante', 0, 3), (@qid, 'Est multipliée par 9', 0, 4);
+
+
+
+-- Question 1 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un courant alternatif sinusoïdal change de signe :',
+    'En une période, le courant passe par zéro deux fois (alternance positive puis négative).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'une fois par période', 0, 1), (@qid, 'deux fois par période', 1, 2), (@qid, 'jamais', 0, 3), (@qid, 'quatre fois par période', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une tension sinusoïdale u(t) = Um sin(ωt) passe par zéro :',
+    'Elle s''annule au début, au milieu et à la fin de chaque période → 2 fois par période.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 fois par période', 0, 1), (@qid, '2 fois par période', 1, 2), (@qid, '3 fois par période', 0, 3), (@qid, 'Jamais', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une alternance positive et une alternance négative constituent :',
+    'L''ensemble des deux alternances forme une période complète.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une alternance', 0, 1), (@qid, 'Une période', 1, 2), (@qid, 'Une fréquence', 0, 3), (@qid, 'Une phase', 0, 4);
+
+-- Question 2 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La relation entre période et fréquence est :',
+    'La période T est l''inverse de la fréquence f : T = 1/f.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'T = 1/f', 1, 1), (@qid, 'f = T', 0, 2), (@qid, 'T = f', 0, 3), (@qid, 'f = 1/T²', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La fréquence f et la période T sont liées par :',
+    'f = 1/T et T = 1/f : elles sont inversement proportionnelles.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'f = T²', 0, 1), (@qid, 'f = 1/T', 1, 2), (@qid, 'f = T', 0, 3), (@qid, 'f = T/2', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la fréquence augmente, la période :',
+    'T = 1/f. Si f augmente, T diminue.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Augmente', 0, 1), (@qid, 'Reste constante', 0, 2), (@qid, 'Diminue', 1, 3), (@qid, 'Devient nulle', 0, 4);
+
+-- Question 3 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si f = 50 Hz, la période vaut :',
+    'T = 1/50 = 0,02 s = 20 ms.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,002 s', 0, 1), (@qid, '0,02 s', 1, 2), (@qid, '0,2 s', 0, 3), (@qid, '2 s', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si f = 60 Hz, la période T vaut environ :',
+    'T = 1/60 ≈ 0,0167 s ≈ 16,7 ms.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,06 s', 0, 1), (@qid, '0,0167 s', 1, 2), (@qid, '60 s', 0, 3), (@qid, '0,6 s', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une période de 0,01 s correspond à une fréquence de :',
+    'f = 1/0,01 = 100 Hz.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10 Hz', 0, 1), (@qid, '100 Hz', 1, 2), (@qid, '1000 Hz', 0, 3), (@qid, '1 Hz', 0, 4);
+
+-- Question 4 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La pulsation ω est donnée par :',
+    'ω = 2π × f (en radians par seconde).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ω = πf', 0, 1), (@qid, 'ω = 1/f', 0, 2), (@qid, 'ω = f/2π', 0, 3), (@qid, 'ω = 2πf', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La pulsation ω est reliée à la période T par :',
+    'ω = 2π/T (car f = 1/T).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ω = T/2π', 0, 1), (@qid, 'ω = 2π/T', 1, 2), (@qid, 'ω = T', 0, 3), (@qid, 'ω = 1/T', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité de la pulsation ω est :',
+    'ω = 2πf s''exprime en radians par seconde (rad/s).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hertz (Hz)', 0, 1), (@qid, 'Radian par seconde (rad/s)', 1, 2), (@qid, 'Seconde (s)', 0, 3), (@qid, 'Mètre par seconde (m/s)', 0, 4);
+
+-- Question 5 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour f = 50 Hz, ω ≈ :',
+    'ω = 2π × 50 = 100π ≈ 314 rad/s.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50 rad/s', 0, 1), (@qid, '100 rad/s', 0, 2), (@qid, '628 rad/s', 0, 3), (@qid, '314 rad/s', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour f = 60 Hz, ω ≈ :',
+    'ω = 2π × 60 = 120π ≈ 377 rad/s.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '60 rad/s', 0, 1), (@qid, '377 rad/s', 1, 2), (@qid, '120 rad/s', 0, 3), (@qid, '314 rad/s', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si ω = 628 rad/s, la fréquence f vaut environ :',
+    'f = ω/(2π) = 628/(2π) ≈ 100 Hz.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50 Hz', 0, 1), (@qid, '100 Hz', 1, 2), (@qid, '200 Hz', 0, 3), (@qid, '314 Hz', 0, 4);
+
+-- Question 6 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La tension efficace est :',
+    'Ueff = Um/√2. Elle produit le même effet thermique qu''une tension continue de même valeur.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'la tension moyenne', 0, 1), (@qid, 'la moitié de Um', 0, 2), (@qid, 'la tension équivalente en continu pour même effet thermique', 1, 3), (@qid, 'la tension maximale', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La valeur efficace d''une tension alternative est :',
+    'Ueff = Um/√2, c''est la valeur lue par un voltmètre en mode AC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La valeur maximale', 0, 1), (@qid, 'La valeur crête divisée par √2', 1, 2), (@qid, 'La valeur moyenne', 0, 3), (@qid, 'La valeur crête multipliée par √2', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans le secteur domestique, la tension de 110 V est une valeur :',
+    'Le 110 V (ou 220 V) du secteur est la tension efficace.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Maximale (crête)', 0, 1), (@qid, 'Efficace', 1, 2), (@qid, 'Moyenne', 0, 3), (@qid, 'Instantanée', 0, 4);
+
+-- Question 7 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La relation entre Ueff et Um est :',
+    'Ueff = Um / √2 ≈ Um × 0,707.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ueff = Um/√2', 1, 1), (@qid, 'Ueff = Um/2', 0, 2), (@qid, 'Ueff = Um', 0, 3), (@qid, 'Ueff = 2Um', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La tension maximale Um s''exprime en fonction de Ueff par :',
+    'Um = Ueff × √2 ≈ 1,414 × Ueff.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Um = Ueff/√2', 0, 1), (@qid, 'Um = Ueff × √2', 1, 2), (@qid, 'Um = Ueff', 0, 3), (@qid, 'Um = Ueff/2', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La même relation Ueff = Im/√2 s''applique aussi :',
+    'Pour un courant sinusoïdal, Ieff = Im/√2.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Au champ magnétique', 0, 1), (@qid, 'Au courant efficace Ieff', 1, 2), (@qid, 'À la puissance', 0, 3), (@qid, 'À la fréquence', 0, 4);
+
+-- Question 8 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si Um = 220√2 V, alors Ueff =',
+    'Ueff = Um/√2 = 220√2/√2 = 220 V.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '220 V', 1, 1), (@qid, '110 V', 0, 2), (@qid, '311 V', 0, 3), (@qid, '440 V', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si Ueff = 110 V, la tension maximale Um vaut environ :',
+    'Um = 110 × √2 ≈ 110 × 1,414 = 155,6 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '110 V', 0, 1), (@qid, '155,6 V', 1, 2), (@qid, '220 V', 0, 3), (@qid, '78 V', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une tension sinusoïdale a une amplitude Um = 311 V. Sa valeur efficace est :',
+    'Ueff = 311/√2 = 311/1,414 ≈ 220 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '110 V', 0, 1), (@qid, '220 V', 1, 2), (@qid, '311 V', 0, 3), (@qid, '440 V', 0, 4);
+
+-- Question 9 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité de la fréquence est :',
+    'La fréquence se mesure en Hertz (Hz). 1 Hz = 1 oscillation par seconde.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Seconde', 0, 1), (@qid, 'Volt', 0, 2), (@qid, 'Hertz', 1, 3), (@qid, 'Weber', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le Hertz (Hz) est équivalent à :',
+    '1 Hz = 1 s⁻¹ (une oscillation par seconde).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 's', 0, 1), (@qid, 's⁻¹', 1, 2), (@qid, 'm/s', 0, 3), (@qid, 'rad/s', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La fréquence de 60 Hz signifie :',
+    '60 Hz = 60 oscillations complètes par seconde.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '60 oscillations par minute', 0, 1), (@qid, '60 périodes par seconde', 1, 2), (@qid, 'Une période de 60 s', 0, 3), (@qid, '60 volts', 0, 4);
+
+-- Question 10 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''expression générale d''une tension alternative est :',
+    'u(t) = Um × sin(ωt + φ), où Um est l''amplitude, ω la pulsation et φ la phase initiale.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'u = Um sin(ωt + φ)', 1, 1), (@qid, 'u = C U', 0, 2), (@qid, 'u = LI²', 0, 3), (@qid, 'u = RI', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans u(t) = Um sin(ωt + φ), φ représente :',
+    'φ est la phase à l''origine (déphasage initial).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La fréquence', 0, 1), (@qid, 'La phase à l''origine', 1, 2), (@qid, 'La tension maximale', 0, 3), (@qid, 'La période', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si φ = 0, la tension u(t) à l''instant t = 0 vaut :',
+    'u(0) = Um × sin(0) = 0.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Um', 0, 1), (@qid, '0', 1, 2), (@qid, 'Um/2', 0, 3), (@qid, 'Um/√2', 0, 4);
+
+-- Question 11 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si Ieff = 2 A et Ueff = 100 V, la puissance vaut :',
+    'P = Ueff × Ieff = 100 × 2 = 200 W (pour un circuit purement résistif).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '100 W', 0, 1), (@qid, '400 W', 0, 2), (@qid, '50 W', 0, 3), (@qid, '200 W', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si Ueff = 220 V et Ieff = 5 A, la puissance vaut :',
+    'P = 220 × 5 = 1100 W.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '44 W', 0, 1), (@qid, '1100 W', 1, 2), (@qid, '225 W', 0, 3), (@qid, '110 W', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La puissance active en courant alternatif (circuit résistif) s''écrit :',
+    'P = Ueff × Ieff (pour cosφ = 1).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'P = Um × Im', 0, 1), (@qid, 'P = Ueff × Ieff', 1, 2), (@qid, 'P = Ueff × Ieff/2', 0, 3), (@qid, 'P = Ueff²/R²', 0, 4);
+
+-- Question 12 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une lampe résistive transforme l''énergie électrique en :',
+    'Une lampe à incandescence produit de la chaleur (thermique) et de la lumière.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'énergie thermique et lumineuse', 1, 1), (@qid, 'flux', 0, 2), (@qid, 'champ magnétique', 0, 3), (@qid, 'charge', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''effet Joule dans une résistance transforme l''énergie électrique en :',
+    'L''effet Joule dégage de la chaleur (énergie thermique).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Énergie mécanique', 0, 1), (@qid, 'Énergie thermique', 1, 2), (@qid, 'Énergie magnétique', 0, 3), (@qid, 'Énergie chimique', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un fer à repasser utilise principalement :',
+    'Le fer à repasser chauffe grâce à l''effet Joule (résistance chauffante).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''effet magnétique', 0, 1), (@qid, 'L''effet Joule (thermique)', 1, 2), (@qid, 'L''effet chimique', 0, 3), (@qid, 'L''effet photoélectrique', 0, 4);
+
+-- Question 13 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la fréquence double, la période :',
+    'T = 1/f. Si f double, T est divisée par 2 (diminue de moitié).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'double', 0, 1), (@qid, 'reste constante', 0, 2), (@qid, 'devient nulle', 0, 3), (@qid, 'diminue de moitié', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si la fréquence est divisée par 3, la période est :',
+    'T ∝ 1/f. Si f est divisée par 3, T est multipliée par 3.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Divisée par 3', 0, 1), (@qid, 'Multipliée par 3', 1, 2), (@qid, 'Inchangée', 0, 3), (@qid, 'Divisée par 9', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si T = 0,04 s, la fréquence vaut :',
+    'f = 1/0,04 = 25 Hz.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '25 Hz', 1, 1), (@qid, '40 Hz', 0, 2), (@qid, '4 Hz', 0, 3), (@qid, '0,04 Hz', 0, 4);
+
+-- Question 14 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un courant domestique standard en Haïti/Canada est environ :',
+    'La fréquence standard est 60 Hz en Haïti/Canada, 50 Hz en Europe.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50–60 Hz', 1, 1), (@qid, '5 Hz', 0, 2), (@qid, '500 Hz', 0, 3), (@qid, '25 Hz', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'En Haïti, la fréquence du courant domestique est de :',
+    'Le réseau électrique haïtien fonctionne à 60 Hz.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50 Hz', 0, 1), (@qid, '60 Hz', 1, 2), (@qid, '100 Hz', 0, 3), (@qid, '120 Hz', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La tension domestique standard en Haïti est d''environ :',
+    'La tension efficace est de 110 V (ou 220 V selon l''installation).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '12 V', 0, 1), (@qid, '110 V', 1, 2), (@qid, '1000 V', 0, 3), (@qid, '5 V', 0, 4);
+
+-- Question 15 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Um = 100 V. Ueff vaut :',
+    'Ueff = 100/√2 = 100/1,414 ≈ 70,7 V.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '100 V', 0, 1), (@qid, '70,7 V', 1, 2), (@qid, '50 V', 0, 3), (@qid, '141 V', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Um = 50 V. La valeur efficace est environ :',
+    'Ueff = 50/√2 ≈ 35,4 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '25 V', 0, 1), (@qid, '35,4 V', 1, 2), (@qid, '70,7 V', 0, 3), (@qid, '50 V', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Um = 200 V. Ueff =',
+    'Ueff = 200/√2 = 200/1,414 ≈ 141,4 V.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '141,4 V', 1, 1), (@qid, '200 V', 0, 2), (@qid, '100 V', 0, 3), (@qid, '282,8 V', 0, 4);
+
+-- Question 16 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ieff = 5 A. Im vaut environ :',
+    'Im = Ieff × √2 = 5 × 1,414 ≈ 7,1 A.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '3,5 A', 0, 1), (@qid, '10 A', 0, 2), (@qid, '5 A', 0, 3), (@qid, '7,1 A', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ieff = 10 A. Le courant maximal Im vaut :',
+    'Im = 10 × √2 ≈ 14,1 A.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '7,1 A', 0, 1), (@qid, '14,1 A', 1, 2), (@qid, '20 A', 0, 3), (@qid, '10 A', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si Im = 2,82 A, le courant efficace vaut environ :',
+    'Ieff = 2,82/√2 = 2,82/1,414 = 2 A.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '4 A', 0, 1), (@qid, '2 A', 1, 2), (@qid, '1 A', 0, 3), (@qid, '2,82 A', 0, 4);
+
+-- Question 17 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si T = 0,01 s, la fréquence vaut :',
+    'f = 1/T = 1/0,01 = 100 Hz.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50 Hz', 0, 1), (@qid, '200 Hz', 0, 2), (@qid, '10 Hz', 0, 3), (@qid, '100 Hz', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si T = 0,002 s, la fréquence est de :',
+    'f = 1/0,002 = 500 Hz.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '200 Hz', 0, 1), (@qid, '500 Hz', 1, 2), (@qid, '50 Hz', 0, 3), (@qid, '1000 Hz', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une fréquence de 1000 Hz correspond à une période de :',
+    'T = 1/1000 = 0,001 s = 1 ms.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 s', 0, 1), (@qid, '0,001 s', 1, 2), (@qid, '0,1 s', 0, 3), (@qid, '0,01 s', 0, 4);
+
+-- Question 18 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une tension sinusoïdale est dite alternative car :',
+    'Elle change périodiquement de signe (positive puis négative).', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'elle augmente toujours', 0, 1), (@qid, 'elle est continue', 0, 2), (@qid, 'elle change de signe périodiquement', 1, 3), (@qid, 'elle reste constante', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La différence entre tension continue et tension alternative est que :',
+    'La tension continue garde un signe constant, l''alternative change de signe périodiquement.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La continue change de signe', 0, 1), (@qid, 'L''alternative change périodiquement de signe', 1, 2), (@qid, 'Elles sont identiques', 0, 3), (@qid, 'La continue est toujours sinusoïdale', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''oscilloscope permet de visualiser une tension alternative sous forme de :',
+    'On observe une sinusoïde sur l''écran de l''oscilloscope.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une droite horizontale', 0, 1), (@qid, 'Une sinusoïde', 1, 2), (@qid, 'Un point fixe', 0, 3), (@qid, 'Une parabole', 0, 4);
+
+-- Question 19 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une résistance pure en alternatif a une tension et un courant :',
+    'Dans une résistance pure, u et i sont en phase (φ = 0).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'en phase', 1, 1), (@qid, 'en opposition', 0, 2), (@qid, 'inconnus', 0, 3), (@qid, 'déphasés de 90°', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour une résistance R, la loi d''Ohm en alternatif s''écrit :',
+    'Ueff = R × Ieff (même forme qu''en continu avec les valeurs efficaces).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ueff = R/Ieff', 0, 1), (@qid, 'Ueff = R × Ieff', 1, 2), (@qid, 'Ueff = R × Ieff²', 0, 3), (@qid, 'Ueff = R + Ieff', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si u et i sont en phase dans un circuit alternatif, alors le circuit est :',
+    'C''est le cas d''un circuit purement résistif.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Purement inductif', 0, 1), (@qid, 'Purement résistif', 1, 2), (@qid, 'Purement capacitif', 0, 3), (@qid, 'Oscillant', 0, 4);
+
+-- Question 20 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si Ueff = 120 V et Ieff = 0,5 A, la puissance consommée est :',
+    'P = 120 × 0,5 = 60 W.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '60 W', 1, 1), (@qid, '24 W', 0, 2), (@qid, '120 W', 0, 3), (@qid, '240 W', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Ueff = 220 V, Ieff = 3 A, la puissance dissipée dans une résistance est :',
+    'P = 220 × 3 = 660 W.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '660 W', 1, 1), (@qid, '73,3 W', 0, 2), (@qid, '220 W', 0, 3), (@qid, '110 W', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Une ampoule de 100 W branchée sur 110 V est parcourue par un courant efficace de :',
+    'Ieff = P/Ueff = 100/110 ≈ 0,91 A.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,91 A', 1, 1), (@qid, '1,1 A', 0, 2), (@qid, '11 A', 0, 3), (@qid, '0,11 A', 0, 4);
+
+
+
+-- ============================================
+-- QCM PHYSIQUE NS4 - HAÏTI
+-- Quiz 8 : Circuit RC – Charge, décharge et constante de temps
+-- 20 questions originales + 2 variantes par question = 60 questions
+-- ============================================
+
+-- Question 1 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un circuit RC contient :',
+    'Le circuit RC est composé d''une résistance R et d''un condensateur C en série.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'résistance et bobine', 0, 1), (@qid, 'bobine et pile', 0, 2), (@qid, 'résistance et condensateur', 1, 3), (@qid, 'condensateur seul', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un circuit contenant une résistance et un condensateur en série est appelé :',
+    'Par convention, ce type de circuit est désigné par RC (Résistance-Condensateur).', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Circuit RL', 0, 1), (@qid, 'Circuit RC', 1, 2), (@qid, 'Circuit LC', 0, 3), (@qid, 'Circuit RLC', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Quel composant stocke l''énergie dans un circuit RC ?',
+    'Le condensateur C stocke l''énergie sous forme électrostatique.', 'Examen NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La résistance', 0, 1), (@qid, 'Le condensateur', 1, 2), (@qid, 'Les fils', 0, 3), (@qid, 'La pile uniquement', 0, 4);
+
+-- Question 2 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La constante de temps d''un circuit RC est :',
+    'τ = R × C (produit de la résistance par la capacité).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'τ = RC', 1, 1), (@qid, 'τ = R/C', 0, 2), (@qid, 'τ = R + C', 0, 3), (@qid, 'τ = C/R', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La constante de temps τ caractérise :',
+    'τ = RC indique la rapidité de charge ou de décharge du condensateur.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La tension maximale', 0, 1), (@qid, 'La vitesse de charge/décharge', 1, 2), (@qid, 'La puissance dissipée', 0, 3), (@qid, 'La fréquence', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si R = 2 kΩ et C = 500 µF, τ vaut :',
+    'τ = 2000 × 500×10⁻⁶ = 1 s.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 s', 1, 1), (@qid, '0,001 s', 0, 2), (@qid, '1000 s', 0, 3), (@qid, '0,25 s', 0, 4);
+
+-- Question 3 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''unité de τ est :',
+    'τ = R (Ω) × C (F) = Ω × F = V/A × C/V = C/A = s. La constante de temps se mesure en secondes.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Seconde', 1, 1), (@qid, 'Ohm', 0, 2), (@qid, 'Volt', 0, 3), (@qid, 'Farad', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La constante de temps τ d''un circuit RC est homogène à :',
+    'L''analyse dimensionnelle montre que R × C a la dimension d''un temps (secondes).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une fréquence', 0, 1), (@qid, 'Un temps', 1, 2), (@qid, 'Une tension', 0, 3), (@qid, 'Une charge', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, '1 Ω × 1 F est équivalent à :',
+    'Ω × F = (V/A) × (C/V) = C/A = C/(C/s) = 1 s.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 Hz', 0, 1), (@qid, '1 s', 1, 2), (@qid, '1 V', 0, 3), (@qid, '1 W', 0, 4);
+
+-- Question 4 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si R = 1000 Ω et C = 200 µF, τ vaut :',
+    'τ = 1000 × 200×10⁻⁶ = 0,2 s.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '20 s', 0, 1), (@qid, '0,02 s', 0, 2), (@qid, '0,2 s', 1, 3), (@qid, '2 s', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'R = 500 Ω, C = 100 µF. τ =',
+    'τ = 500 × 100×10⁻⁶ = 0,05 s.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '5 s', 0, 1), (@qid, '0,05 s', 1, 2), (@qid, '0,5 s', 0, 3), (@qid, '50 s', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'R = 10 kΩ, C = 50 µF. τ =',
+    'τ = 10000 × 50×10⁻⁶ = 0,5 s.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,05 s', 0, 1), (@qid, '0,5 s', 1, 2), (@qid, '5 s', 0, 3), (@qid, '500 s', 0, 4);
+
+-- Question 5 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Lors de la charge, la tension aux bornes du condensateur :',
+    'La tension suit une loi exponentielle croissante : Uc(t) = E(1 - e^(-t/τ)).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'reste nulle', 0, 1), (@qid, 'augmente progressivement', 1, 2), (@qid, 'devient alternative', 0, 3), (@qid, 'diminue', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La courbe de charge d''un condensateur est :',
+    'C''est une exponentielle croissante tendant vers la tension E du générateur.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une droite', 0, 1), (@qid, 'Une exponentielle croissante', 1, 2), (@qid, 'Une sinusoïde', 0, 3), (@qid, 'Une exponentielle décroissante', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Après une durée très longue (t >> τ), la tension aux bornes du condensateur chargé vaut :',
+    'Quand t → ∞, Uc → E (tension du générateur).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0 V', 0, 1), (@qid, 'E (tension du générateur)', 1, 2), (@qid, 'E/2', 0, 3), (@qid, '37% de E', 0, 4);
+
+-- Question 6 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Au moment t = 0, un condensateur déchargé se comporte comme :',
+    'À l''instant initial, Uc(0) = 0, donc le condensateur déchargé est équivalent à un court-circuit.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'un aimant', 0, 1), (@qid, 'un interrupteur ouvert', 0, 2), (@qid, 'un court-circuit', 1, 3), (@qid, 'un générateur', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Au début de la charge (t=0), le courant dans le circuit RC est :',
+    'Uc(0)=0, toute la tension est aux bornes de R. I(0) = E/R, valeur maximale.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Nul', 0, 1), (@qid, 'Maximal', 1, 2), (@qid, 'Égal à la moitié du max', 0, 3), (@qid, 'Infini', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur déchargé initialement n''offre aucune opposition au passage du courant : on dit qu''il se comporte comme :',
+    'Uc = 0, donc sa résistance apparente est nulle = court-circuit.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une résistance infinie', 0, 1), (@qid, 'Un court-circuit', 1, 2), (@qid, 'Une bobine', 0, 3), (@qid, 'Un générateur', 0, 4);
+
+-- Question 7 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Après un long temps de charge, le condensateur se comporte comme :',
+    'Quand Uc atteint E, le courant s''annule : le condensateur chargé = interrupteur ouvert.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'bobine', 0, 1), (@qid, 'court-circuit', 0, 2), (@qid, 'résistance nulle', 0, 3), (@qid, 'interrupteur ouvert', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'En régime permanent continu, le courant dans un circuit RC est :',
+    'Le condensateur complètement chargé bloque le courant continu. I = 0.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Maximal', 0, 1), (@qid, 'Nul', 1, 2), (@qid, 'Égal à E/R', 0, 3), (@qid, 'Sinusoïdal', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un condensateur chargé bloque le courant continu car :',
+    'Le diélectrique entre les armatures empêche le passage du courant continu. Il se comporte comme un circuit ouvert.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il est rempli d''air', 0, 1), (@qid, 'Le diélectrique isole les armatures', 1, 2), (@qid, 'Il a une résistance nulle', 0, 3), (@qid, 'Il génère un champ magnétique', 0, 4);
+
+-- Question 8 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'À t = τ, la tension de charge atteint environ :',
+    'Uc(τ) = E(1 - e⁻¹) ≈ E(1 - 0,37) = 0,63E = 63% de E.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '37%', 0, 1), (@qid, '50%', 0, 2), (@qid, '63%', 1, 3), (@qid, '100%', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Au bout d''une constante de temps τ, le condensateur est chargé à environ :',
+    'Uc/E ≈ 63%. Il faut 5τ pour atteindre >99%.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '37%', 0, 1), (@qid, '63%', 1, 2), (@qid, '50%', 0, 3), (@qid, '100%', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour qu''un condensateur soit considéré comme chargé à plus de 99%, il faut un temps d''environ :',
+    'On considère la charge complète après 5τ (99,3%).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'τ', 0, 1), (@qid, '3τ', 0, 2), (@qid, '5τ', 1, 3), (@qid, '10τ', 0, 4);
+
+-- Question 9 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'À t = τ, le courant de décharge vaut environ :',
+    'I(τ) = I₀ × e⁻¹ ≈ I₀ × 0,37 = 37% du courant initial.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '100%', 0, 1), (@qid, '63% du max', 0, 2), (@qid, '0%', 0, 3), (@qid, '37% du max', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pendant la décharge, le courant diminue :',
+    'I(t) = I₀ × e^(-t/τ), décroissance exponentielle.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Linéairement', 0, 1), (@qid, 'Exponentiellement', 1, 2), (@qid, 'De façon constante', 0, 3), (@qid, 'En augmentant', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Après une constante de temps τ de décharge, la tension restante est d''environ :',
+    'Uc(τ) = U₀ × e⁻¹ ≈ 37% de U₀.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '63% de U₀', 0, 1), (@qid, '37% de U₀', 1, 2), (@qid, '0%', 0, 3), (@qid, '50% de U₀', 0, 4);
+
+-- Question 10 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on double R, la constante de temps :',
+    'τ = RC ∝ R. Si R double, τ double.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'reste constante', 0, 1), (@qid, 'devient nulle', 0, 2), (@qid, 'double', 1, 3), (@qid, 'diminue', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si R triple et C inchangé, τ est :',
+    'τ ∝ R. Si R triple, τ triple.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Triplé', 1, 1), (@qid, 'Divisé par 3', 0, 2), (@qid, 'Inchangé', 0, 3), (@qid, 'Multiplié par 9', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour doubler τ sans changer C, il faut :',
+    'τ = RC. Pour doubler τ, il faut doubler R.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Doubler C', 0, 1), (@qid, 'Doubler R', 1, 2), (@qid, 'Diviser R par 2', 0, 3), (@qid, 'Diviser C par 2', 0, 4);
+
+-- Question 11 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si on double C, τ :',
+    'τ ∝ C. Si C double, τ double.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'devient nulle', 0, 1), (@qid, 'diminue', 0, 2), (@qid, 'reste constante', 0, 3), (@qid, 'double', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si C triple et R inchangé, la charge du condensateur est :',
+    'τ triple, donc la charge est plus lente (3 fois plus de temps).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Plus rapide', 0, 1), (@qid, 'Plus lente', 1, 2), (@qid, 'Inchangée', 0, 3), (@qid, 'Impossible', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pour réduire la constante de temps τ, on peut :',
+    'τ = RC. On peut diminuer R ou diminuer C.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Augmenter R', 0, 1), (@qid, 'Diminuer R ou diminuer C', 1, 2), (@qid, 'Augmenter C', 0, 3), (@qid, 'Augmenter R et C', 0, 4);
+
+-- Question 12 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un flash d''appareil photo, le condensateur sert à :',
+    'Le condensateur stocke de l''énergie puis la restitue très rapidement pour produire un éclair.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'stocker l''énergie puis la libérer rapidement', 1, 1), (@qid, 'augmenter la résistance', 0, 2), (@qid, 'stabiliser la fréquence', 0, 3), (@qid, 'créer un champ magnétique', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le flash d''un appareil photo utilise la décharge d''un condensateur pour :',
+    'La décharge rapide produit un courant intense et bref qui alimente le tube flash.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Charger la batterie', 0, 1), (@qid, 'Produire un éclair lumineux intense et bref', 1, 2), (@qid, 'Stabiliser la tension', 0, 3), (@qid, 'Mesurer la lumière', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans un flash, la résistance R doit être faible pour :',
+    'τ = RC faible permet une décharge rapide, donc un éclair bref et intense.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Augmenter τ', 0, 1), (@qid, 'Diminuer τ pour une décharge rapide', 1, 2), (@qid, 'Bloquer le courant', 0, 3), (@qid, 'Charger lentement', 0, 4);
+
+-- Question 13 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pendant la décharge, la tension :',
+    'Uc(t) = U₀ × e^(-t/τ). Elle diminue exponentiellement.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'augmente', 0, 1), (@qid, 'reste constante', 0, 2), (@qid, 'devient alternative', 0, 3), (@qid, 'diminue exponentiellement', 1, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'La courbe de décharge d''un condensateur est :',
+    'C''est une exponentielle décroissante tendant vers zéro.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une droite', 0, 1), (@qid, 'Une exponentielle décroissante', 1, 2), (@qid, 'Une sinusoïde', 0, 3), (@qid, 'Une parabole', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Après 5τ de décharge, la tension résiduelle aux bornes du condensateur est :',
+    'e⁻⁵ ≈ 0,0067, soit moins de 1% de la tension initiale.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Environ 50%', 0, 1), (@qid, 'Moins de 1%', 1, 2), (@qid, 'Environ 37%', 0, 3), (@qid, 'Environ 63%', 0, 4);
+
+-- Question 14 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un circuit RC peut servir de :',
+    'Selon la constante de temps, un circuit RC peut filtrer ou créer un retard (temporisateur).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'filtre/temporisateur', 1, 1), (@qid, 'transformateur', 0, 2), (@qid, 'moteur', 0, 3), (@qid, 'générateur nucléaire', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un temporisateur utilise un circuit RC pour :',
+    'La charge/décharge lente du condensateur crée un délai (temporisation).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Amplifier le signal', 0, 1), (@qid, 'Créer un retard (délai)', 1, 2), (@qid, 'Produire de la chaleur', 0, 3), (@qid, 'Stocker l''énergie indéfiniment', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un circuit RC peut filtrer les signaux en :',
+    'Il atténue les variations rapides (filtre passe-bas).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Amplifiant toutes les fréquences', 0, 1), (@qid, 'Atténuant les hautes fréquences (passe-bas)', 1, 2), (@qid, 'Bloquant toutes les fréquences', 0, 3), (@qid, 'Générant des ondes radio', 0, 4);
+
+-- Question 15 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'C = 100 µF, U = 50 V. La charge maximale vaut :',
+    'Q = C × U = 100×10⁻⁶ × 50 = 5×10⁻³ C = 5 mC.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 mC', 0, 1), (@qid, '5 mC', 1, 2), (@qid, '500 mC', 0, 3), (@qid, '50 mC', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'C = 200 µF, U = 25 V. La charge maximale est :',
+    'Q = 200×10⁻⁶ × 25 = 5×10⁻³ C = 5 mC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2,5 mC', 0, 1), (@qid, '5 mC', 1, 2), (@qid, '50 mC', 0, 3), (@qid, '0,5 mC', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'C = 500 µF, U = 12 V. Q_max =',
+    'Q = 500×10⁻⁶ × 12 = 6×10⁻³ C = 6 mC.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '60 mC', 0, 1), (@qid, '6 mC', 1, 2), (@qid, '0,6 mC', 0, 3), (@qid, '600 mC', 0, 4);
+
+-- Question 16 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si τ = 2 s, après 4 s (≈ 2τ), le condensateur est :',
+    'À t = 2τ, Uc = E(1 - e⁻²) ≈ E(1 - 0,135) = 0,865E, soit environ 86,5%. Donc plus de 80%.', 'Quiz Physique NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'chargé à plus de 80%', 1, 1), (@qid, 'déchargé', 0, 2), (@qid, 'nul', 0, 3), (@qid, 'peu chargé', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'À t = 3τ, la charge du condensateur atteint environ :',
+    '1 - e⁻³ ≈ 1 - 0,05 = 0,95 = 95%.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '63%', 0, 1), (@qid, '95%', 1, 2), (@qid, '86,5%', 0, 3), (@qid, '50%', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'À t = 0,5τ lors de la charge, Uc atteint environ :',
+    '1 - e^(-0,5) ≈ 1 - 0,607 = 0,393 ≈ 39%.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50%', 0, 1), (@qid, '39%', 1, 2), (@qid, '63%', 0, 3), (@qid, '86,5%', 0, 4);
+
+-- Question 17 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le courant dans le circuit RC est maximal :',
+    'I(0) = E/R est maximal au tout début de la charge (condensateur déchargé).', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'toujours constant', 0, 1), (@qid, 'à la fin', 0, 2), (@qid, 'au début', 1, 3), (@qid, 'au milieu', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le courant de charge d''un condensateur :',
+    'Il décroît exponentiellement de I₀ = E/R jusqu''à 0.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Croît exponentiellement', 0, 1), (@qid, 'Décroît exponentiellement', 1, 2), (@qid, 'Reste constant', 0, 3), (@qid, 'Est sinusoïdal', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'À la fin de la charge d''un condensateur, le courant dans le circuit RC est :',
+    'Le condensateur chargé bloque le courant : I(∞) = 0.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Maximal', 0, 1), (@qid, 'Nul', 1, 2), (@qid, 'Égal à E/R', 0, 3), (@qid, 'La moitié du max', 0, 4);
+
+-- Question 18 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie stockée par un condensateur est :',
+    'E = ½ × C × U².', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '½ C U²', 1, 1), (@qid, 'U/R', 0, 2), (@qid, 'BIL', 0, 3), (@qid, 'RI²', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'L''énergie maximale stockée dans un circuit RC dépend de :',
+    'E_max = ½ × C × E² (E est la tension du générateur).', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'De R uniquement', 0, 1), (@qid, 'De C et de la tension de charge', 1, 2), (@qid, 'Du courant uniquement', 0, 3), (@qid, 'Du temps de charge uniquement', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Pendant la charge, l''énergie fournie par le générateur se répartit entre :',
+    'Une moitié est stockée dans le condensateur (½CE²), l''autre moitié est dissipée dans R (effet Joule).', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le condensateur uniquement', 0, 1), (@qid, 'Le condensateur et la résistance (moitié chacun)', 1, 2), (@qid, 'La résistance uniquement', 0, 3), (@qid, 'Les fils de connexion', 0, 4);
+
+-- Question 19 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Un circuit RC est dit "transitoire" car :',
+    'Les grandeurs (Uc, I) varient dans le temps avant d''atteindre un régime permanent.', 'Quiz Physique NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'il est toujours constant', 0, 1), (@qid, 'il produit du courant alternatif', 0, 2), (@qid, 'les grandeurs varient avec le temps', 1, 3), (@qid, 'il n''a pas de tension', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Le régime transitoire dans un circuit RC correspond à :',
+    'La période pendant laquelle Uc et I évoluent avant d''atteindre leur valeur finale.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La période après stabilisation', 0, 1), (@qid, 'L''évolution temporelle vers l''état final', 1, 2), (@qid, 'Un court-circuit permanent', 0, 3), (@qid, 'Une oscillation continue', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Après le régime transitoire, le circuit RC atteint un régime :',
+    'En continu, le régime permanent est atteint : Uc = E (constant), I = 0.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oscillatoire', 0, 1), (@qid, 'Permanent (constant)', 1, 2), (@qid, 'Transitoire permanent', 0, 3), (@qid, 'Indéfini', 0, 4);
+
+-- Question 20 (Originale)
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si τ est très petite, le circuit charge :',
+    'τ petit = charge et décharge rapides.', 'Quiz Physique NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lentement', 0, 1), (@qid, 'jamais', 0, 2), (@qid, 'rapidement', 1, 3), (@qid, 'en alternatif', 0, 4);
+
+-- Variante 1
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Si τ est très grande, le circuit RC met :',
+    'Plus τ est grand, plus la charge (et la décharge) est lente.', 'Examen NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Peu de temps à charger', 0, 1), (@qid, 'Beaucoup de temps à charger', 1, 2), (@qid, 'Un temps nul', 0, 3), (@qid, 'Toujours le même temps', 0, 4);
+
+-- Variante 2
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(10, 2, 'Dans quelle situation utilise-t-on un grand τ dans un circuit RC ?',
+    'Un grand τ donne une charge/décharge lente, utile pour les temporisations longues.', 'Examen NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pour un flash rapide', 0, 1), (@qid, 'Pour une temporisation longue', 1, 2), (@qid, 'Pour un filtrage haute fréquence', 0, 3), (@qid, 'Pour une décharge instantanée', 0, 4);
+
+
+
+
+
+
+
 -- Complétion
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
 (10, 1, 'L''unité d''intensité électrique est l''________.', NULL, 'Programme NS4', 1, 'ampère|Ampère');
@@ -2850,6 +8261,8 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
 (10, 1, 'La fréquence se mesure en ________.', NULL, 'Programme NS4', 1, 'hertz|Hz');
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
 (10, 1, 'La relation entre vitesse, distance et temps est v = d / ________.', NULL, 'Programme NS4', 1, 't|temps');
+
+
 
 
 -- =============================================
@@ -8325,48 +13738,1883 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
 -- 13. HISTOIRE-GÉOGRAPHIE NS4 (matiere_id = 13)
 -- =============================================
 
--- QCM
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(13, 2, 'En quelle année Haïti a-t-elle déclaré son indépendance ?', 'L''indépendance d''Haïti a été proclamée le 1er janvier 1804.', 'Programme NS4', 1);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, '1791', 0, 1), (@qid, '1804', 1, 2), (@qid, '1820', 0, 3), (@qid, '1844', 0, 4);
+-- ============================================
+-- THÈME 1 : HISTOIRE NATIONALE D'HAÏTI
+-- ============================================
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(13, 2, 'Qui a proclamé l''indépendance d''Haïti ?', 'Jean-Jacques Dessalines a proclamé l''indépendance d''Haïti à Gonaïves.', 'Programme NS4', 1);
+(13, 2, 'En quelle année débute l''occupation américaine d''Haïti ?', 'L''occupation américaine commence en 1915 sous prétexte de rétablir l''ordre.', 'Programme NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Toussaint Louverture', 0, 1), (@qid, 'Alexandre Pétion', 0, 2), (@qid, 'Jean-Jacques Dessalines', 1, 3), (@qid, 'Henri Christophe', 0, 4);
+(@qid, '1910', 0, 1), (@qid, '1915', 1, 2), (@qid, '1920', 0, 3), (@qid, '1934', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(13, 2, 'Quelle est la superficie d''Haïti ?', 'Haïti couvre environ 27 750 km².', 'Programme NS4', 2);
+(13, 2, 'En quelle année prend fin l''occupation américaine d''Haïti ?', 'Les troupes américaines quittent Haïti en 1934.', 'Programme NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, '21 000 km²', 0, 1), (@qid, '27 750 km²', 1, 2), (@qid, '35 000 km²', 0, 3), (@qid, '48 000 km²', 0, 4);
+(@qid, '1930', 0, 1), (@qid, '1934', 1, 2), (@qid, '1941', 0, 3), (@qid, '1946', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(13, 2, 'Combien de départements compte Haïti ?', 'Haïti est divisée en 10 départements depuis 1995.', 'Programme NS4', 1);
+(13, 2, 'Qui était président d''Haïti au moment du massacre des Haïtiens en République dominicaine en 1937 ?', 'Sténio Vincent était président lors du massacre ordonné par Trujillo.', 'Programme NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, '8', 0, 1), (@qid, '9', 0, 2), (@qid, '10', 1, 3), (@qid, '12', 0, 4);
+(@qid, 'Dumarsais Estimé', 0, 1), (@qid, 'Sténio Vincent', 1, 2), (@qid, 'Élie Lescot', 0, 3), (@qid, 'Paul Magloire', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(13, 2, 'Quelle est la capitale d''Haïti ?', 'Port-au-Prince est la capitale et la plus grande ville d''Haïti.', 'Programme NS4', 1);
+(13, 2, 'Le massacre de 1937 en République dominicaine visait principalement :', 'Les travailleurs haïtiens vivant dans les zones frontalières furent tués sur ordre de Trujillo.', 'Programme NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Cap-Haïtien', 0, 1), (@qid, 'Gonaïves', 0, 2), (@qid, 'Port-au-Prince', 1, 3), (@qid, 'Jacmel', 0, 4);
+(@qid, 'Les soldats haïtiens', 0, 1), (@qid, 'Les commerçants dominicains', 0, 2), (@qid, 'Les travailleurs haïtiens', 1, 3), (@qid, 'Les religieux français', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(13, 2, 'La Révolution française a éclaté en :', 'La Révolution française a commencé en 1789 avec la prise de la Bastille.', 'Programme NS4', 1);
+(13, 2, 'Quel dictateur dominait la République dominicaine en 1937 ?', 'Rafael Leonidas Trujillo dirigeait la République dominicaine d''une main de fer.', 'Programme NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, '1776', 0, 1), (@qid, '1789', 1, 2), (@qid, '1799', 0, 3), (@qid, '1804', 0, 4);
+(@qid, 'Juan Bosch', 0, 1), (@qid, 'Rafael Trujillo', 1, 2), (@qid, 'Fidel Castro', 0, 3), (@qid, 'Anastasio Somoza', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(13, 2, 'Quelle mer borde la côte nord d''Haïti ?', 'La mer Atlantique (océan Atlantique) borde la côte nord d''Haïti.', 'Programme NS4', 2);
+(13, 2, 'Comment s''appelait l''accord signé le 31 janvier 1938 entre Haïti et la République dominicaine après le massacre ?', 'Un arrangement fut conclu avec une indemnisation de 750 000 dollars.', 'Programme NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Mer des Caraïbes', 0, 1), (@qid, 'Mer Méditerranée', 0, 2), (@qid, 'Océan Atlantique', 1, 3), (@qid, 'Mer du Pacifique', 0, 4);
+(@qid, 'Le traité de Bâle', 0, 1), (@qid, 'L''accord du 31 janvier 1938', 1, 2), (@qid, 'La convention de Washington', 0, 3), (@qid, 'Le pacte de Rio', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel président haïtien a œuvré pour la désoccupation du pays ?', 'Sténio Vincent a mené le combat nationaliste pour la fin de l''occupation américaine.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Élie Lescot', 0, 1), (@qid, 'Dumarsais Estimé', 0, 2), (@qid, 'Sténio Vincent', 1, 3), (@qid, 'Paul Magloire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qui succède à Sténio Vincent à la présidence d''Haïti en 1941 ?', 'Élie Lescot est élu président en 1941 après le refus de Vincent de briguer un troisième mandat.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Paul Magloire', 0, 1), (@qid, 'Dumarsais Estimé', 0, 2), (@qid, 'Élie Lescot', 1, 3), (@qid, 'Franck Lavaud', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel mouvement sociopolitique a provoqué la chute d''Élie Lescot en 1946 ?', 'Le mouvement de janvier 1946, appelé "les cinq glorieuses", a chassé Lescot du pouvoir.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La révolution de 1948', 0, 1), (@qid, 'Le mouvement de 1946', 1, 2), (@qid, 'La guerre civile de 1950', 0, 3), (@qid, 'L''invasion de 1957', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel Comité a pris le pouvoir après la chute de Lescot en 1946 ?', 'Le Comité Exécutif Militaire, dirigé par le colonel Franck Lavaud, assure la transition.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le Comité de salut public', 0, 1), (@qid, 'Le Comité Exécutif Militaire', 1, 2), (@qid, 'Le Conseil des ministres', 0, 3), (@qid, 'Le Haut État-major', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qui a été élu président d''Haïti le 16 août 1946 ?', 'Dumarsais Estimé est élu président par l''Assemblée nationale.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Paul Magloire', 0, 1), (@qid, 'Dumarsais Estimé', 1, 2), (@qid, 'François Duvalier', 0, 3), (@qid, 'Louis Déjoie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle exposition a marqué le gouvernement d''Estimé en 1949 ?', 'L''Exposition internationale du bicentenaire de Port-au-Prince a eu lieu en décembre 1949.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''Exposition universelle de Paris', 0, 1), (@qid, 'L''Exposition du bicentenaire de Port-au-Prince', 1, 2), (@qid, 'La Foire de New York', 0, 3), (@qid, 'L''Exposition coloniale de 1931', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle réalisation majeure Dumarsais Estimé a-t-il accomplie dans le domaine de l''éducation ?', 'Il a créé l''École normale supérieure, des lycées et lancé une campagne d''alphabétisation.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La fermeture des universités', 0, 1), (@qid, 'La création de l''École normale supérieure et de lycées', 1, 2), (@qid, 'La suppression des bourses d''études', 0, 3), (@qid, 'L''interdiction des livres', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Comment Dumarsais Estimé a-t-il été renversé ?', 'Estimé a été destitué par un coup d''État militaire le 10 mai 1950.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Par une défaite électorale', 0, 1), (@qid, 'Par un coup d''État militaire le 10 mai 1950', 1, 2), (@qid, 'Par une invasion étrangère', 0, 3), (@qid, 'Par une révolution populaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qui devient président d''Haïti après le coup d''État de 1950 ?', 'Paul Eugène Magloire est élu président en octobre 1950 après la junte militaire.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'François Duvalier', 0, 1), (@qid, 'Paul Eugène Magloire', 1, 2), (@qid, 'Daniel Fignolé', 0, 3), (@qid, 'Louis Déjoie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel plan de développement Magloire a-t-il mis en place ?', 'Il a élaboré un plan quinquennal (1951-1956) axé sur les grands travaux d''infrastructure.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le plan Marshall', 0, 1), (@qid, 'Le plan quinquennal', 1, 2), (@qid, 'Le plan de redressement national', 0, 3), (@qid, 'Le plan décennal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle était la politique de Magloire vis-à-vis des élites noires et mulâtres ?', 'Il pratiquait une politique d''équilibre entre les élites noire et mulâtre, dite "balance égale".', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il excluait les mulâtres du pouvoir', 0, 1), (@qid, 'Il pratiquait une politique d''équilibre entre noirs et mulâtres', 1, 2), (@qid, 'Il favorisait exclusivement les noirs', 0, 3), (@qid, 'Il ignorait totalement les questions de couleur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année Paul Magloire quitte-t-il le pouvoir ?', 'Magloire démissionne en décembre 1956 après une grève générale et des manifestations.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1954', 0, 1), (@qid, '1956', 1, 2), (@qid, '1957', 0, 3), (@qid, '1958', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel candidat noiriste accède au pouvoir en 1957 ?', 'François Duvalier, médecin et ancien ministre, remporte les élections de 1957.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Daniel Fignolé', 0, 1), (@qid, 'Louis Déjoie', 0, 2), (@qid, 'François Duvalier', 1, 3), (@qid, 'Clément Jumelle', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Comment s''appelle la milice créée par François Duvalier ?', 'Les Volontaires de la Sécurité Nationale (VSN), surnommés "Tontons Macoutes".', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Garde présidentielle', 0, 1), (@qid, 'Les Volontaires de la Sécurité Nationale', 1, 2), (@qid, 'L''Armée indigène', 0, 3), (@qid, 'La Police nationale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel événement pousse François Duvalier à durcir son régime en 1958 ?', 'Une tentative d''invasion depuis les États-Unis en juillet 1958 renforce la dictature.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un tremblement de terre', 0, 1), (@qid, 'Une tentative d''invasion en juillet 1958', 1, 2), (@qid, 'Une grève générale', 0, 3), (@qid, 'Un accord de paix avec la République dominicaine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'François Duvalier s''est proclamé président à vie en :', 'Il organise un référendum en 1964 qui le consacre président à vie.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1961', 0, 1), (@qid, '1964', 1, 2), (@qid, '1967', 0, 3), (@qid, '1971', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays a apporté un appui diplomatique à Duvalier face aux menaces d''invasion américaine ?', 'La France, sous Charles de Gaulle, a promis un appui diplomatique à Duvalier.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le Canada', 0, 1), (@qid, 'La France', 1, 2), (@qid, 'L''Espagne', 0, 3), (@qid, 'Le Mexique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Comment s''appelle la doctrine de politique extérieure américaine qui vise à contenir le communisme pendant la guerre froide ?', 'La doctrine Truman (1947) vise l''endiguement du communisme.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La doctrine Monroe', 0, 1), (@qid, 'La doctrine Truman', 1, 2), (@qid, 'La doctrine Eisenhower', 0, 3), (@qid, 'La doctrine Carter', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qui succède à François Duvalier en 1971 ?', 'Son fils Jean-Claude Duvalier devient président à vie à 19 ans.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Franck Lavaud', 0, 1), (@qid, 'Jean-Claude Duvalier', 1, 2), (@qid, 'Henri Namphy', 0, 3), (@qid, 'Leslie Manigat', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel événement marque la fin du régime des Duvalier ?', 'Jean-Claude Duvalier quitte le pouvoir le 7 février 1986 suite à un soulèvement populaire.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un coup d''État militaire', 0, 1), (@qid, 'Le départ de Jean-Claude Duvalier le 7 février 1986', 1, 2), (@qid, 'Une invasion américaine', 0, 3), (@qid, 'La mort naturelle de François Duvalier', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel général de l''armée haïtienne a joué un rôle clé dans l''élection de François Duvalier en 1957 ?', 'Le général Antonio Kébreau, chef d''état-major, a facilité l''élection de Duvalier.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Franck Lavaud', 0, 1), (@qid, 'Antonio Kébreau', 1, 2), (@qid, 'Paul Magloire', 0, 3), (@qid, 'Antoine Levelt', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle était la particularité de la "Campagne des rejetés" sous Lescot ?', 'C''était une campagne anti-vaudou menée par l''Église catholique avec l''appui de l''État.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une campagne d''alphabétisation', 0, 1), (@qid, 'Une campagne anti-vaudou', 1, 2), (@qid, 'Une campagne de vaccination', 0, 3), (@qid, 'Une campagne de reboisement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays a le plus influencé la politique étrangère de Lescot ?', 'Les États-Unis étaient le principal allié de Lescot, qui alignait sa diplomatie sur Washington.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La France', 0, 1), (@qid, 'Les États-Unis', 1, 2), (@qid, 'Le Canada', 0, 3), (@qid, 'L''Allemagne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel motif a été utilisé par Lescot pour renforcer son autorité ?', 'La déclaration de guerre aux forces de l''Axe en 1941 lui a permis de légiférer par décrets.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La crise économique', 0, 1), (@qid, 'La déclaration de guerre aux forces de l''Axe', 1, 2), (@qid, 'Le tremblement de terre de 1946', 0, 3), (@qid, 'La menace d''invasion dominicaine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle constitution a été adoptée par référendum en 1918 ?', 'Sous l''occupation américaine, une nouvelle constitution favorable aux étrangers a été votée.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La constitution de 1889', 0, 1), (@qid, 'La constitution de 1918', 1, 2), (@qid, 'La constitution de 1935', 0, 3), (@qid, 'La constitution de 1946', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel chef de la résistance anti-américaine a mené une guerre de guérilla ?', 'Charlemagne Péralte a conduit la résistance armée contre l''occupation américaine.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Toussaint Louverture', 0, 1), (@qid, 'Charlemagne Péralte', 1, 2), (@qid, 'Jean-Jacques Dessalines', 0, 3), (@qid, 'Henri Christophe', 0, 4);
+
+-- ============================================
+-- THÈME 2 : HISTOIRE UNIVERSELLE
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année a débuté la Première Guerre mondiale ?', 'La Première Guerre mondiale commence le 28 juillet 1914.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1912', 0, 1), (@qid, '1914', 1, 2), (@qid, '1916', 0, 3), (@qid, '1918', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel événement a été l''élément déclencheur de la Première Guerre mondiale ?', 'L''assassinat de l''archiduc François-Ferdinand à Sarajevo le 28 juin 1914.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le naufrage du Titanic', 0, 1), (@qid, 'L''assassinat de François-Ferdinand', 1, 2), (@qid, 'L''invasion de la Pologne', 0, 3), (@qid, 'La crise de la Ruhr', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle alliance regroupait la France, le Royaume-Uni et la Russie en 1914 ?', 'La Triple-Entente unissait ces trois puissances face à la Triple-Alliance.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Triple-Alliance', 0, 1), (@qid, 'La Triple-Entente', 1, 2), (@qid, 'L''Axe', 0, 3), (@qid, 'Le Pacte de Varsovie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel traité met fin à la Première Guerre mondiale ?', 'Le traité de Versailles, signé le 28 juin 1919, conclut la guerre avec l''Allemagne.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le traité de Maastricht', 0, 1), (@qid, 'Le traité de Versailles', 1, 2), (@qid, 'Le traité de Rome', 0, 3), (@qid, 'Le traité de Paris', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle organisation internationale est créée après la Première Guerre mondiale pour maintenir la paix ?', 'La Société des Nations (SDN) est créée en 1919 à l''initiative du président Wilson.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ONU', 0, 1), (@qid, 'La Société des Nations', 1, 2), (@qid, 'L''OTAN', 0, 3), (@qid, 'Le FMI', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quels empires ont disparu après la Première Guerre mondiale ?', 'Les empires austro-hongrois, ottoman, russe et allemand s''effondrent.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''empire britannique uniquement', 0, 1), (@qid, 'Les empires austro-hongrois, ottoman, russe et allemand', 1, 2), (@qid, 'L''empire français et italien', 0, 3), (@qid, 'Seul l''empire allemand', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle crise économique majeure éclate en 1929 ?', 'La crise de 1929, partie des États-Unis avec le krach de Wall Street, devient mondiale.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La crise du pétrole', 0, 1), (@qid, 'La crise de 1929', 1, 2), (@qid, 'La crise des subprimes', 0, 3), (@qid, 'La crise de la dette', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel événement marque le début de la Seconde Guerre mondiale ?', 'L''invasion de la Pologne par l''Allemagne le 1er septembre 1939.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''attaque de Pearl Harbor', 0, 1), (@qid, 'L''invasion de la Pologne', 1, 2), (@qid, 'La prise de Paris', 0, 3), (@qid, 'Le débarquement de Normandie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelles étaient les principales puissances de l''Axe ?', 'L''Allemagne nazie, l''Italie fasciste et le Japon formaient les forces de l''Axe.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Allemagne, France, Japon', 0, 1), (@qid, 'Allemagne, Italie, Japon', 1, 2), (@qid, 'URSS, Allemagne, Italie', 0, 3), (@qid, 'États-Unis, Royaume-Uni, France', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle conférence réunit les Alliés en février 1945 pour organiser l''après-guerre ?', 'La conférence de Yalta réunit Roosevelt, Churchill et Staline.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La conférence de Berlin', 0, 1), (@qid, 'La conférence de Yalta', 1, 2), (@qid, 'La conférence de Genève', 0, 3), (@qid, 'La conférence de Vienne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel événement met fin à la Seconde Guerre mondiale en Asie ?', 'Les bombardements atomiques d''Hiroshima et Nagasaki en août 1945 entraînent la capitulation du Japon.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La bataille d''Iwo Jima', 0, 1), (@qid, 'Les bombardements d''Hiroshima et Nagasaki', 1, 2), (@qid, 'La bataille de Midway', 0, 3), (@qid, 'Le siège de Stalingrad', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel organisme international est créé en 1945 pour maintenir la paix ?', 'L''Organisation des Nations Unies (ONU) remplace la SDN.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Société des Nations', 0, 1), (@qid, 'L''Organisation des Nations Unies', 1, 2), (@qid, 'Le Pacte de Varsovie', 0, 3), (@qid, 'Le Conseil de l''Europe', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quels sont les principaux vainqueurs de la Seconde Guerre mondiale ?', 'Les États-Unis, l''URSS, le Royaume-Uni et la France sont les grands vainqueurs.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Allemagne, Italie, Japon', 0, 1), (@qid, 'États-Unis, URSS, Royaume-Uni, France', 1, 2), (@qid, 'Chine, Inde, Brésil', 0, 3), (@qid, 'URSS, Allemagne, Italie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que la guerre froide ?', 'C''est la période d''affrontement idéologique et de tension entre les États-Unis et l''URSS de 1947 à 1991.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un conflit armé direct entre les États-Unis et l''URSS', 0, 1), (@qid, 'Une période de tension idéologique entre les États-Unis et l''URSS', 1, 2), (@qid, 'Une guerre entre la Chine et le Japon', 0, 3), (@qid, 'Une guerre en Antarctique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle doctrine américaine visait à endiguer le communisme ?', 'La doctrine Truman (1947) promet l''aide des États-Unis aux pays menacés par le communisme.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La doctrine Monroe', 0, 1), (@qid, 'La doctrine Truman', 1, 2), (@qid, 'La doctrine Brejnev', 0, 3), (@qid, 'La doctrine Eisenhower', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel plan américain a aidé à la reconstruction de l''Europe après 1945 ?', 'Le plan Marshall (1947) fournit une aide économique massive à l''Europe occidentale.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le plan Dawes', 0, 1), (@qid, 'Le plan Marshall', 1, 2), (@qid, 'Le plan Young', 0, 3), (@qid, 'Le plan Schuman', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel événement symbolise la fin de la guerre froide ?', 'La chute du mur de Berlin le 9 novembre 1989 est l''événement emblématique.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La crise de Cuba', 0, 1), (@qid, 'La chute du mur de Berlin', 1, 2), (@qid, 'La guerre de Corée', 0, 3), (@qid, 'La conférence de Yalta', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel leader soviétique a lancé la perestroïka ?', 'Mikhaïl Gorbatchev lance la perestroïka (restructuration) en URSS en 1985.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Lénine', 0, 1), (@qid, 'Staline', 0, 2), (@qid, 'Mikhaïl Gorbatchev', 1, 3), (@qid, 'Nikita Khrouchtchev', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien de morts environ la Seconde Guerre mondiale a-t-elle causés ?', 'On estime entre 40 et 50 millions de morts, dont une majorité de civils.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10 millions', 0, 1), (@qid, '20 millions', 0, 2), (@qid, '40 à 50 millions', 1, 3), (@qid, '100 millions', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays a été divisé en deux après la Seconde Guerre mondiale ?', 'L''Allemagne est divisée en RFA (Ouest) et RDA (Est) jusqu''en 1990.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La France', 0, 1), (@qid, 'L''Italie', 0, 2), (@qid, 'L''Allemagne', 1, 3), (@qid, 'Le Japon', 0, 4);
+
+-- ============================================
+-- THÈME 3 : GÉOGRAPHIE ÉCONOMIQUE ET HUMAINE
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que la mondialisation ?', 'C''est l''intégration croissante des économies et des sociétés à l''échelle planétaire.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La fermeture des frontières nationales', 0, 1), (@qid, 'L''intégration croissante des économies et des sociétés à l''échelle mondiale', 1, 2), (@qid, 'Le retour au protectionnisme', 0, 3), (@qid, 'La division du monde en deux blocs', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le rôle de l''OMC dans la mondialisation ?', 'L''Organisation mondiale du commerce œuvre à la libéralisation des échanges.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Financer les pays pauvres', 0, 1), (@qid, 'Libéraliser le commerce international', 1, 2), (@qid, 'Gérer les conflits militaires', 0, 3), (@qid, 'Contrôler les émissions de CO2', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quels sont les trois pôles de la Triade ?', 'La Triade regroupe l''Amérique du Nord, l''Europe occidentale et l''Asie orientale (Japon).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Amérique du Sud, Afrique, Asie', 0, 1), (@qid, 'Amérique du Nord, Europe occidentale, Asie orientale', 1, 2), (@qid, 'Europe, Afrique, Océanie', 0, 3), (@qid, 'Amérique du Nord, Russie, Chine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays est le premier producteur agricole mondial ?', 'Les États-Unis sont la première puissance agricole par l''importance et la diversité de leur production.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Chine', 0, 1), (@qid, 'Les États-Unis', 1, 2), (@qid, 'Le Brésil', 0, 3), (@qid, 'L''Inde', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le premier exportateur mondial de produits culturels ?', 'Les États-Unis dominent les exportations de films, séries et programmes télévisés.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Chine', 0, 1), (@qid, 'Les États-Unis', 1, 2), (@qid, 'La France', 0, 3), (@qid, 'Le Japon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel terme désigne la fuite des cerveaux vers les pays développés ?', 'Le "brain drain" est l''émigration des personnes qualifiées vers des pays offrant de meilleures conditions.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le brain drain', 1, 1), (@qid, 'Le shopping', 0, 2), (@qid, 'Le tourisme', 0, 3), (@qid, 'Le commerce équitable', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel espace permet la libre circulation des personnes dans plusieurs pays européens ?', 'L''espace Schengen abolit les contrôles aux frontières intérieures entre les États membres.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La zone euro', 0, 1), (@qid, 'L''espace Schengen', 1, 2), (@qid, 'Le marché commun', 0, 3), (@qid, 'L''Union douanière', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année le traité de Maastricht a-t-il été signé ?', 'Le traité de Maastricht est signé le 7 février 1992 et institue l''Union européenne.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1957', 0, 1), (@qid, '1973', 0, 2), (@qid, '1992', 1, 3), (@qid, '2004', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays n''est pas membre de l''Union européenne ?', 'La Suisse n''est pas membre de l''UE, bien qu''elle entretienne des accords bilatéraux.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''Allemagne', 0, 1), (@qid, 'La Suisse', 1, 2), (@qid, 'La France', 0, 3), (@qid, 'L''Italie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle est la monnaie unique de l''Union européenne ?', 'L''euro est la monnaie officielle de 20 des 27 États membres de l''UE.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le dollar', 0, 1), (@qid, 'L''euro', 1, 2), (@qid, 'Le franc', 0, 3), (@qid, 'La livre sterling', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle organisation régionale est née de la CECA en 1957 ?', 'La Communauté économique européenne (CEE) est créée par le traité de Rome en 1957.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ONU', 0, 1), (@qid, 'La CEE', 1, 2), (@qid, 'L''OTAN', 0, 3), (@qid, 'Le FMI', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le principal concurrent commercial des États-Unis dans le monde ?', 'L''Union européenne est souvent le premier partenaire ou concurrent des États-Unis.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''Union européenne', 1, 1), (@qid, 'Le Japon seulement', 0, 2), (@qid, 'L''Afrique', 0, 3), (@qid, 'L''Australie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce qu''une firme transnationale ?', 'C''est une entreprise qui possède des filiales dans plusieurs pays et opère à l''échelle mondiale.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une entreprise qui n''opère que dans un seul pays', 0, 1), (@qid, 'Une entreprise présente dans plusieurs pays', 1, 2), (@qid, 'Une société d''État', 0, 3), (@qid, 'Une organisation humanitaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est l''un des effets négatifs souvent attribués à la mondialisation ?', 'L''accroissement des inégalités entre pays riches et pays pauvres est souvent critiqué.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La réduction des échanges', 0, 1), (@qid, 'L''accroissement des inégalités', 1, 2), (@qid, 'La diminution des flux financiers', 0, 3), (@qid, 'L''isolement des économies nationales', 0, 4);
+
+-- ============================================
+-- THÈME 4 : AUTRES QUESTIONS (Guerre froide, URSS, Japon, etc.)
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays est devenu la première puissance mondiale après 1945 ?', 'Les États-Unis sortent renforcés de la guerre et deviennent la première puissance économique et militaire.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''URSS', 0, 1), (@qid, 'Les États-Unis', 1, 2), (@qid, 'La Chine', 0, 3), (@qid, 'L''Allemagne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel terme désigne la division de l''Europe en deux blocs après 1945 ?', 'Le "rideau de fer" séparait l''Europe de l''Ouest de l''Europe de l''Est.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le mur de l''Atlantique', 0, 1), (@qid, 'Le rideau de fer', 1, 2), (@qid, 'La ligne Maginot', 0, 3), (@qid, 'Le mur d''Hadrien', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays a lancé le premier satellite artificiel en 1957 ?', 'L''URSS lance Spoutnik, marquant le début de la conquête spatiale.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les États-Unis', 0, 1), (@qid, 'L''URSS', 1, 2), (@qid, 'La France', 0, 3), (@qid, 'Le Japon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le système économique de l''URSS ?', 'L''URSS fonctionnait avec une économie planifiée et collectivisée sous le communisme.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le capitalisme libéral', 0, 1), (@qid, 'L''économie planifiée socialiste', 1, 2), (@qid, 'Le féodalisme', 0, 3), (@qid, 'L''économie de marché mixte', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays a connu une "révolution économique" rapide après 1945 ?', 'Le Japon a connu une croissance économique exceptionnelle après la guerre.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le Brésil', 0, 1), (@qid, 'Le Japon', 1, 2), (@qid, 'L''Italie', 0, 3), (@qid, 'L''Égypte', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel facteur a contribué à la puissance économique du Japon ?', 'Le haut niveau d''instruction de la main-d''œuvre et les investissements en technologie.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La faiblesse de l''éducation', 0, 1), (@qid, 'La main-d''œuvre très qualifiée', 1, 2), (@qid, 'L''absence de recherche', 0, 3), (@qid, 'Les ressources naturelles abondantes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le principal client commercial du Japon ?', 'Les États-Unis restent le premier partenaire commercial, mais l''Asie progresse.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''Union européenne uniquement', 0, 1), (@qid, 'Les États-Unis', 1, 2), (@qid, 'L''Amérique du Sud', 0, 3), (@qid, 'L''Afrique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle est la capitale du Japon ?', 'Tokyo est la capitale et la plus grande métropole du Japon.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Osaka', 0, 1), (@qid, 'Kyoto', 0, 2), (@qid, 'Tokyo', 1, 3), (@qid, 'Hiroshima', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel organisme accorde des prêts aux pays en développement ?', 'Le FMI et la Banque mondiale fournissent des prêts conditionnés à des réformes.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''OTAN', 0, 1), (@qid, 'La Banque mondiale et le FMI', 1, 2), (@qid, 'L''UNESCO', 0, 3), (@qid, 'La Croix-Rouge', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que le développement durable ?', 'Un développement qui répond aux besoins présents sans compromettre ceux des générations futures.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La croissance économique sans limites', 0, 1), (@qid, 'Un développement respectueux de l''environnement et des générations futures', 1, 2), (@qid, 'L''exploitation intensive des ressources', 0, 3), (@qid, 'Le développement exclusif des villes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle conférence a jeté les bases de l''Union européenne en 1951 ?', 'La CECA est créée en 1951 par le traité de Paris, rassemblant six pays.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La conférence de Yalta', 0, 1), (@qid, 'Le traité de Paris instituant la CECA', 1, 2), (@qid, 'Le traité de Versailles', 0, 3), (@qid, 'La conférence de Bandung', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien de pays ont fondé la CEE en 1957 ?', 'Six pays (France, RFA, Italie, Belgique, Pays-Bas, Luxembourg) fondent la CEE.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '4', 0, 1), (@qid, '6', 1, 2), (@qid, '9', 0, 3), (@qid, '12', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle ville est le siège de la Commission européenne ?', 'Bruxelles est la principale capitale institutionnelle de l''UE.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Strasbourg', 0, 1), (@qid, 'Bruxelles', 1, 2), (@qid, 'Luxembourg', 0, 3), (@qid, 'Francfort', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle est la plus grande île des Caraïbes ?', 'Cuba est la plus grande île des Caraïbes par sa superficie.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hispaniola', 0, 1), (@qid, 'Cuba', 1, 2), (@qid, 'Jamaïque', 0, 3), (@qid, 'Porto Rico', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Haïti partage l''île d''Hispaniola avec :', 'La République dominicaine occupe les deux tiers orientaux de l''île.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cuba', 0, 1), (@qid, 'La République dominicaine', 1, 2), (@qid, 'La Jamaïque', 0, 3), (@qid, 'Porto Rico', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle est la monnaie officielle d''Haïti ?', 'La gourde (HTG) est la monnaie nationale d''Haïti.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le dollar américain', 0, 1), (@qid, 'La gourde', 1, 2), (@qid, 'L''euro', 0, 3), (@qid, 'Le peso', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel climat domine en Haïti ?', 'Haïti a un climat tropical, avec une saison des pluies et une saison sèche.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Climat tempéré', 0, 1), (@qid, 'Climat tropical', 1, 2), (@qid, 'Climat méditerranéen', 0, 3), (@qid, 'Climat polaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le principal produit d''exportation agricole d''Haïti cité dans les années 1940-1950 ?', 'Le café représentait 75 à 80 % des exportations haïtiennes à cette époque.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le sucre', 0, 1), (@qid, 'Le café', 1, 2), (@qid, 'Le coton', 0, 3), (@qid, 'Le cacao', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est l''hymne national d''Haïti ?', '« La Dessalinienne » est l''hymne national haïtien depuis 1904.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Marseillaise', 0, 1), (@qid, 'La Dessalinienne', 1, 2), (@qid, 'Haïti Chérie', 0, 3), (@qid, 'Quand nos Aïeux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le plus grand département d''Haïti en superficie ?', 'Le département de l''Artibonite est le plus vaste en superficie.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ouest', 0, 1), (@qid, 'Artibonite', 1, 2), (@qid, 'Nord', 0, 3), (@qid, 'Sud', 0, 4);
+
+
+-- ============================================
+-- THÈME 5 : ÉCONOMIE MONDIALE
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel indicateur mesure la richesse produite par un pays ?', 'Le PIB (Produit Intérieur Brut) mesure la production de richesses d''un pays.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''IDH', 0, 1), (@qid, 'Le PIB', 1, 2), (@qid, 'Le taux de natalité', 0, 3), (@qid, 'L''indice de Gini', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le principal marché commun sud-américain ?', 'Le Mercosur est le marché commun du Sud, regroupant Brésil, Argentine, Uruguay, etc.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ALENA', 0, 1), (@qid, 'Le Mercosur', 1, 2), (@qid, 'L''ASEAN', 0, 3), (@qid, 'L''UE', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays est le premier exportateur mondial ?', 'La Chine est devenue le premier exportateur mondial de marchandises.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les États-Unis', 0, 1), (@qid, 'La Chine', 1, 2), (@qid, 'L''Allemagne', 0, 3), (@qid, 'Le Japon', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel type d''agriculture domine aux États-Unis ?', 'L''agriculture productiviste, mécanisée et intensive domine largement.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''agriculture de subsistance', 0, 1), (@qid, 'L''agriculture productiviste', 1, 2), (@qid, 'L''agriculture biologique uniquement', 0, 3), (@qid, 'L''agriculture vivrière', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que le FMI ?', 'Le Fonds monétaire international assure la stabilité financière mondiale et aide les pays en crise.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une banque d''affaires', 0, 1), (@qid, 'Le Fonds monétaire international', 1, 2), (@qid, 'Une organisation militaire', 0, 3), (@qid, 'Un syndicat mondial', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Où se trouve le siège de l''ONU ?', 'Le siège de l''Organisation des Nations Unies est à New York, aux États-Unis.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Genève', 0, 1), (@qid, 'New York', 1, 2), (@qid, 'Paris', 0, 3), (@qid, 'Bruxelles', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le but du développement durable ?', 'Concilier croissance économique, équité sociale et protection de l''environnement.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Maximiser les profits', 0, 1), (@qid, 'Concilier économie, social et environnement', 1, 2), (@qid, 'Accélérer l''urbanisation', 0, 3), (@qid, 'Épuiser les ressources naturelles', 0, 4);
+
+-- ============================================
+-- THÈME 6 : DATES CLÉS
+-- ============================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quand la Première Guerre mondiale s''est-elle terminée ?', 'L''armistice est signé le 11 novembre 1918.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '11 novembre 1918', 1, 1), (@qid, '8 mai 1945', 0, 2), (@qid, '28 juin 1919', 0, 3), (@qid, '1er septembre 1939', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quand le mur de Berlin est-il tombé ?', 'Le mur est tombé le 9 novembre 1989, permettant la réunification allemande.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1985', 0, 1), (@qid, '1989', 1, 2), (@qid, '1991', 0, 3), (@qid, '1993', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quand l''URSS a-t-elle été dissoute ?', 'L''Union soviétique est officiellement dissoute le 26 décembre 1991.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1989', 0, 1), (@qid, '1991', 1, 2), (@qid, '1993', 0, 3), (@qid, '1995', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quand le traité de Rome a-t-il été signé ?', 'Le traité de Rome, fondant la CEE, est signé le 25 mars 1957.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1945', 0, 1), (@qid, '1957', 1, 2), (@qid, '1965', 0, 3), (@qid, '1973', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année Haïti a-t-elle retrouvé son indépendance financière selon le texte ?', 'Le gouvernement d''Estimé a remboursé la dette à la First National City Bank, contractée en 1922.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1946', 0, 1), (@qid, '1949', 1, 2), (@qid, '1950', 0, 3), (@qid, '1945', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quand le massacre de 1937 a-t-il eu lieu ?', 'Les 2 et 4 octobre 1937, des milliers d''Haïtiens furent massacrés en République dominicaine.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1934', 0, 1), (@qid, '1937', 1, 2), (@qid, '1941', 0, 3), (@qid, '1946', 0, 4);
+
+
+-- ============================================================
+-- QCM Histoire-Géographie NS4 Haïti
+-- Basé sur le programme officiel et les examens 2022
+-- Plus de 500 questions à choix multiples
+-- matiere_id = 13, type_id = 2
+-- ============================================================
+
+-- ============================================================
+-- BLOC 1 : L'OCCUPATION ET LA DÉSOCCUPATION AMÉRICAINES (1915-1934)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année les États-Unis ont-ils occupé militairement Haïti ?', 'L''occupation américaine d''Haïti a débuté en 1915 et dura dix-neuf ans.', 'Programme NS4 - Occupation américaine', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1898', 0, 1), (@qid, '1905', 0, 2), (@qid, '1915', 1, 3), (@qid, '1920', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien d''années a duré l''occupation américaine d''Haïti ?', 'L''occupation américaine d''Haïti a duré dix-neuf ans, de 1915 à 1934.', 'Programme NS4 - Occupation américaine', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dix ans', 0, 1), (@qid, 'Quinze ans', 0, 2), (@qid, 'Dix-neuf ans', 1, 3), (@qid, 'Vingt-cinq ans', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année les troupes américaines ont-elles quitté Haïti ?', 'La désoccupation américaine a eu lieu en 1934, sous la présidence de Sténio Vincent.', 'Programme NS4 - Occupation américaine', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1930', 0, 1), (@qid, '1932', 0, 2), (@qid, '1934', 1, 3), (@qid, '1937', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle caractéristique principale l''économie haïtienne acquit-elle sous l''occupation américaine ?', 'L''économie haïtienne est devenue complètement dépendante des États-Unis durant cette période.', 'Programme NS4 - Occupation américaine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle devint autosuffisante', 0, 1), (@qid, 'Elle devint complètement dépendante des États-Unis', 1, 2), (@qid, 'Elle se diversifia vers l''Europe', 0, 3), (@qid, 'Elle s''industrialisa fortement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel type d''investissements les États-Unis ont-ils réalisés en Haïti durant l''occupation ?', 'Les investissements américains en Haïti étaient de types coloniaux, dans les plantations et les services publics.', 'Programme NS4 - Occupation américaine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des investissements industriels modernes', 0, 1), (@qid, 'Des investissements de types coloniaux dans les plantations', 1, 2), (@qid, 'Des investissements dans l''éducation publique', 0, 3), (@qid, 'Des investissements dans la défense nationale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel auteur a écrit sur « L''occupation américaine d''Haïti » ?', 'Suzy Castor est l''auteure de l''ouvrage « L''Occupation Américaine d''Haïti ».', 'Programme NS4 - Occupation américaine', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dr Ernst Bernardin', 0, 1), (@qid, 'Leslie Manigat', 0, 2), (@qid, 'Suzy Castor', 1, 3), (@qid, 'Jean Fouchard', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle politique nord-américaine a favorisé la lutte de Sténio Vincent pour la désoccupation ?', 'La politique du « bon voisin » des États-Unis a facilité la désoccupation d''Haïti.', 'Programme NS4 - Occupation américaine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La politique du « grand bâton »', 0, 1), (@qid, 'La doctrine Monroe', 0, 2), (@qid, 'La politique du « bon voisin »', 1, 3), (@qid, 'La doctrine Truman', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel a été l''un des effets majeurs de l''occupation américaine sur le système politique haïtien ?', 'L''occupation a renforcé la dépendance économique et perturbé durablement les bases de la nation haïtienne.', 'Programme NS4 - Occupation américaine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le renforcement de la démocratie haïtienne', 0, 1), (@qid, 'La perturbation durable des bases de la nation', 1, 2), (@qid, 'L''élimination de l''instabilité politique', 0, 3), (@qid, 'L''indépendance économique totale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Que contrôlaient les trusts étrangers durant l''occupation américaine d''Haïti ?', 'Les trusts étrangers ont assumé le contrôle des finances haïtiennes et américanisé sa monnaie.', 'Programme NS4 - Occupation américaine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''armée haïtienne', 0, 1), (@qid, 'Les finances et la monnaie', 1, 2), (@qid, 'L''éducation nationale', 0, 3), (@qid, 'Le parlement haïtien', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Vers quel marché le commerce haïtien fut-il orienté sous l''occupation américaine ?', 'Sous l''occupation, le commerce haïtien fut orienté de façon fondamentale vers le marché américain.', 'Programme NS4 - Occupation américaine', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le marché européen', 0, 1), (@qid, 'Le marché américain', 1, 2), (@qid, 'Le marché caribéen', 0, 3), (@qid, 'Le marché asiatique', 0, 4);
+
+-- ============================================================
+-- BLOC 2 : LE GOUVERNEMENT DE STÉNIO VINCENT (1930-1941)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel président haïtien a mené la lutte pour la désoccupation américaine ?', 'Sténio Vincent a conduit la lutte pour la désoccupation et obtenu le départ des troupes américaines en 1934.', 'Programme NS4 - Gouvernement Vincent', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dumarsais Estimé', 0, 1), (@qid, 'Elie Lescot', 0, 2), (@qid, 'Sténio Vincent', 1, 3), (@qid, 'Paul Magloire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel qualificatif décrit le mieux la politique de Sténio Vincent face aux États-Unis ?', 'Vincent adoptait une posture pragmatique, pliant sans rompre (comme le roseau de La Fontaine) face aux Américains.', 'Programme NS4 - Gouvernement Vincent', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ouvertement hostile', 0, 1), (@qid, 'Pragmatique, pliant sans rompre', 1, 2), (@qid, 'Totalement soumis', 0, 3), (@qid, 'Indifférent', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle tentative de Sténio Vincent a causé sa perte politique ?', 'La tentative de se faire réélire pour un troisième mandat, bloquée par Washington, a causé la fin politique de Vincent.', 'Programme NS4 - Gouvernement Vincent', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La révision du code rural', 0, 1), (@qid, 'La déclaration de guerre à l''Allemagne', 0, 2), (@qid, 'La tentative d''un troisième mandat présidentiel', 1, 3), (@qid, 'L''alliance avec Trujillo', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qui a refusé à Vincent de briguer un nouveau mandat présidentiel ?', 'Washington (les États-Unis) a refusé de se prêter au continuisme du président Vincent.', 'Programme NS4 - Gouvernement Vincent', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le parlement haïtien', 0, 1), (@qid, 'L''armée haïtienne', 0, 2), (@qid, 'Washington / les États-Unis', 1, 3), (@qid, 'La France', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année Sténio Vincent a-t-il quitté le pouvoir ?', 'Vincent a quitté le pouvoir en 1941, après l''échec de sa tentative d''un troisième mandat.', 'Programme NS4 - Gouvernement Vincent', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1934', 0, 1), (@qid, '1938', 0, 2), (@qid, '1941', 1, 3), (@qid, '1946', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel fut le caractère du régime de Sténio Vincent  ?', 'Le régime de Sténio Vincent est décrit comme nationaliste et autocratique.', 'Programme NS4 - Gouvernement Vincent', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Démocratique et libéral', 0, 1), (@qid, 'Nationaliste et autocratique', 1, 2), (@qid, 'Socialiste et populaire', 0, 3), (@qid, 'Militaire et expansionniste', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel massacre de Haïtiens eut lieu sous le régime de Sténio Vincent ?', 'Le massacre de 1937, ordonné par le dictateur dominicain Trujillo, fit entre 15 000 et 40 000 victimes haïtiennes.', 'Programme NS4 - Gouvernement Vincent', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le massacre de 1929', 0, 1), (@qid, 'Le massacre de 1937', 1, 2), (@qid, 'Le massacre de 1941', 0, 3), (@qid, 'Le massacre de 1946', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel dictateur dominicain a orchestré le massacre des Haïtiens en 1937 ?', 'Raphael Leonidas Trujillo Molina a ordonné le massacre des Haïtiens à la frontière en 1937.', 'Programme NS4 - Relations haïtiano-dominicaines', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Joaquín Balaguer', 0, 1), (@qid, 'Rafael Leonidas Trujillo', 1, 2), (@qid, 'Juan Bosch', 0, 3), (@qid, 'Pedro Santana', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien de victimes haïtiennes estime-t-on lors du massacre de 1937 ?', 'Les estimations varient entre 15 000 et 40 000 personnes exterminées par les forces dominicaines.', 'Programme NS4 - Relations haïtiano-dominicaines', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Entre 1 000 et 2 000', 0, 1), (@qid, 'Entre 5 000 et 8 000', 0, 2), (@qid, 'Entre 15 000 et 40 000', 1, 3), (@qid, 'Plus de 100 000', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que la « révision de la constitution de 1935 » a permis à Sténio Vincent ?', 'La révision de 1935 lui a permis la prolongation de son mandat présidentiel de cinq ans.', 'Programme NS4 - Gouvernement Vincent', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'D''abolir l''armée haïtienne', 0, 1), (@qid, 'De prolonger son mandat présidentiel', 1, 2), (@qid, 'D''accorder le droit de vote aux femmes', 0, 3), (@qid, 'De déclarer la guerre à la République Dominicaine', 0, 4);
+
+-- ============================================================
+-- BLOC 3 : LE GOUVERNEMENT D'ÉLIE LESCOT (1941-1946)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Par qui Élie Lescot a-t-il été élu à la présidence d''Haïti ?', 'Élie Lescot a été élu par l''Assemblée Nationale pour un mandat de cinq ans.', 'Programme NS4 - Gouvernement Lescot', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Par suffrage universel direct', 0, 1), (@qid, 'Par l''armée haïtienne', 0, 2), (@qid, 'Par l''Assemblée Nationale', 1, 3), (@qid, 'Par les États-Unis', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle politique discriminatoire Élie Lescot a-t-il appliquée sur le plan social ?', 'Lescot a pratiqué une politique sectaire favorisant la majorité mulâtre pour l''accès aux fonctions publiques.', 'Programme NS4 - Gouvernement Lescot', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le noirisme exclusif', 0, 1), (@qid, 'Le mulatrisme, favorisant les mulâtres aux fonctions publiques', 1, 2), (@qid, 'L''égalité totale entre les couleurs', 0, 3), (@qid, 'La valorisation de la culture populaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pourcentage de la population haïtienne représentait l''élément noir sous Lescot ?', 'L''élément noir représentait environ 95% de la population haïtienne sous Lescot.', 'Programme NS4 - Gouvernement Lescot', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50%', 0, 1), (@qid, '75%', 0, 2), (@qid, '85%', 0, 3), (@qid, '95%', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle idéologie a émergé en réaction au mulatrisme de Lescot ?', 'Le noirisme a émergé comme réaction idéologique au mulatrisme pratiqué par le régime Lescot.', 'Programme NS4 - Gouvernement Lescot', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le communisme', 0, 1), (@qid, 'Le nationalisme', 0, 2), (@qid, 'Le noirisme', 1, 3), (@qid, 'Le libéralisme', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année Elie Lescot a-t-il été renversé ?', 'Lescot a été renversé le 11 janvier 1946, contraint de démissionner face aux événements.', 'Programme NS4 - Gouvernement Lescot', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1944', 0, 1), (@qid, '1945', 0, 2), (@qid, '1946', 1, 3), (@qid, '1948', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle campagne religieuse Lescot a-t-il soutenue contre le vaudou ?', 'La « Campagne des rejetés » (1941-1943) visait à éradiquer le vaudou des mœurs haïtiennes.', 'Programme NS4 - Gouvernement Lescot', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Campagne de conversion', 0, 1), (@qid, 'La Campagne des rejetés', 1, 2), (@qid, 'La Campagne anti-superstition', 0, 3), (@qid, 'La Campagne de civilisation', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'De quelle période date la Campagne anti-vaudou sous Lescot ?', 'La campagne anti-vaudou dénommée « Campagne des rejetés » s''est déroulée de 1941 à 1943.', 'Programme NS4 - Gouvernement Lescot', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'De 1930 à 1934', 0, 1), (@qid, 'De 1941 à 1943', 1, 2), (@qid, 'De 1946 à 1948', 0, 3), (@qid, 'De 1950 à 1952', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle institution soutint Lescot dans sa campagne anti-vaudou ?', 'L''Église catholique appuya le régime de Lescot dans sa campagne anti-vaudou.', 'Programme NS4 - Gouvernement Lescot', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''armée haïtienne', 0, 1), (@qid, 'L''Église catholique', 1, 2), (@qid, 'Les partis politiques', 0, 3), (@qid, 'Les syndicats ouvriers', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel groupe militaire prit le pouvoir après la chute de Lescot ?', 'Un Comité Exécutif Militaire composé de Franck Lavaud, Antoine Levelt et Paul E. Magloire prit le pouvoir.', 'Programme NS4 - Révolution de 1946', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un conseil de ministres civil', 0, 1), (@qid, 'Un Comité Exécutif Militaire', 1, 2), (@qid, 'L''Assemblée nationale', 0, 3), (@qid, 'Une junte populaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qui présidait le Comité Exécutif Militaire formé après la chute de Lescot ?', 'Le colonel Franck Lavaud présidait le Comité Exécutif Militaire.', 'Programme NS4 - Révolution de 1946', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Antoine Levelt', 0, 1), (@qid, 'Paul E. Magloire', 0, 2), (@qid, 'Franck Lavaud', 1, 3), (@qid, 'Dumarsais Estimé', 0, 4);
+
+-- ============================================================
+-- BLOC 4 : LA RÉVOLUTION DE 1946
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Que symbolisent les événements de 1946 dans l''histoire haïtienne ?', 'Les événements de 1946 représentent un tournant décisif et un nouveau départ dans l''histoire d''Haïti.', 'Programme NS4 - Révolution de 1946', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une simple alternance politique ordinaire', 0, 1), (@qid, 'Un tournant décisif et un nouveau départ', 1, 2), (@qid, 'La fin de la démocratie haïtienne', 0, 3), (@qid, 'Le début de l''occupation américaine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel espace le mouvement de 1946 a-t-il ouvert selon les historiens ?', 'Le mouvement de 1946 a ouvert un espace démocratique réel avec de nouvelles perspectives.', 'Programme NS4 - Révolution de 1946', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un espace militaire dominant', 0, 1), (@qid, 'Un espace démocratique réel', 1, 2), (@qid, 'Un espace colonial dominé', 0, 3), (@qid, 'Un espace économique fermé', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel mouvement le ressentiment de la classe noire a-t-il alimenté en 1946 ?', 'Le ressentiment noir et la prise de conscience nationale ont alimenté la révolution de 1946.', 'Programme NS4 - Révolution de 1946', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le mouvement mulâtre', 0, 1), (@qid, 'La révolution de 1946 et le noirisme', 1, 2), (@qid, 'Le mouvement syndicaliste', 0, 3), (@qid, 'Le mouvement séparatiste', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que le mouvement de 1946 a favorisé sur le plan politique ?', 'Le mouvement de 1946 a favorisé l''émergence des partis politiques et des syndicats.', 'Programme NS4 - Révolution de 1946', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La suppression des partis politiques', 0, 1), (@qid, 'L''émergence des partis politiques et des syndicats', 1, 2), (@qid, 'La domination exclusive de l''armée', 0, 3), (@qid, 'La censure de la presse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Selon l''historien Ernst Bernardin, quel était le principal problème du mouvement de 1946 ?', 'Le mouvement n''avait pas changé la mentalité de la nouvelle classe dirigeante, permettant aux nantis de s''enrichir.', 'Programme NS4 - Révolution de 1946', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il avait été insuffisamment violent', 0, 1), (@qid, 'Il n''avait pas changé la mentalité de la classe dirigeante', 1, 2), (@qid, 'Il avait favorisé le retour des Américains', 0, 3), (@qid, 'Il avait supprimé l''armée', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'À quelle date eurent lieu les élections législatives organisées par le Comité Exécutif Militaire en 1946 ?', 'Les élections législatives ont eu lieu le 12 mai 1946.', 'Programme NS4 - Révolution de 1946', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le 11 janvier 1946', 0, 1), (@qid, 'Le 12 mai 1946', 1, 2), (@qid, 'Le 16 août 1946', 0, 3), (@qid, 'Le 10 mai 1946', 0, 4);
+
+-- ============================================================
+-- BLOC 5 : LE GOUVERNEMENT DE DUMARSAIS ESTIMÉ (1946-1950)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel président haïtien succéda au Comité Exécutif Militaire en 1946 ?', 'Dumarsais Estimé fut élu président en 1946 après les élections organisées par le CEM.', 'Programme NS4 - Gouvernement Estimé', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Paul Magloire', 0, 1), (@qid, 'Élie Lescot', 0, 2), (@qid, 'Dumarsais Estimé', 1, 3), (@qid, 'François Duvalier', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle loi importante le gouvernement Estimé a-t-il fait voter pour les travailleurs ?', 'Estimé a fait voter la loi sur le salaire minimum pour protéger les travailleurs.', 'Programme NS4 - Gouvernement Estimé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La loi sur le droit de grève', 0, 1), (@qid, 'La loi sur le salaire minimum', 1, 2), (@qid, 'La loi sur la retraite', 0, 3), (@qid, 'La loi sur les coopératives', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle exposition internationale Estimé a-t-il organisée pour le bicentenaire de Port-au-Prince ?', 'Estimé a organisé une exposition internationale qui a mis Haïti sur la carte du tourisme mondial.', 'Programme NS4 - Gouvernement Estimé', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''Exposition coloniale', 0, 1), (@qid, 'L''Exposition internationale du bicentenaire de Port-au-Prince', 1, 2), (@qid, 'L''Exposition agricole nationale', 0, 3), (@qid, 'La Foire internationale de l''indépendance', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien de touristes l''exposition de 1949 a-t-elle attirés en Haïti comparé aux 2 000 visiteurs antérieurs ?', 'Le nombre de visiteurs est passé de 2 000 à 240 000 après l''exposition.', 'Programme NS4 - Gouvernement Estimé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '20 000', 0, 1), (@qid, '80 000', 0, 2), (@qid, '150 000', 0, 3), (@qid, '240 000', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle ville frontalière Estimé a-t-il aménagée comme signe d''orgueil face aux réalisations dominicaines ?', 'Estimé a aménagé la ville de Belladère à la frontière haïtiano-dominicaine.', 'Programme NS4 - Gouvernement Estimé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ouanaminthe', 0, 1), (@qid, 'Belladère', 1, 2), (@qid, 'Thomazeau', 0, 3), (@qid, 'Malpasse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pont Estimé a-t-il fait construire pour faciliter la circulation des populations ?', 'Estimé a fait construire le pont de la Grand''Anse, utile lors de la saison pluvieuse.', 'Programme NS4 - Gouvernement Estimé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le pont de l''Artibonite', 0, 1), (@qid, 'Le pont de la Grand''Anse', 1, 2), (@qid, 'Le pont du Sud', 0, 3), (@qid, 'Le pont de Péligre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Dans quel domaine agricole Estimé a-t-il réalisé un grand projet d''irrigation ?', 'Estimé a conçu un grand projet d''irrigation de la vallée de l''Artibonite.', 'Programme NS4 - Gouvernement Estimé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La vallée du Cul-de-Sac', 0, 1), (@qid, 'La plaine du Nord', 0, 2), (@qid, 'La vallée de l''Artibonite', 1, 3), (@qid, 'La plaine des Cayes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quand le gouvernement d''Estimé a-t-il été renversé par un coup d''état militaire ?', 'Le coup d''état militaire qui a renversé Estimé a eu lieu le 10 mai 1950.', 'Programme NS4 - Gouvernement Estimé', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le 15 mars 1949', 0, 1), (@qid, 'Le 10 mai 1950', 1, 2), (@qid, 'Le 6 décembre 1956', 0, 3), (@qid, 'Le 22 septembre 1957', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle réforme sociale importante Estimé a-t-il initiée pour les travailleurs ?', 'Estimé a initié une législation pour accorder la sécurité sociale et la protection des travailleurs.', 'Programme NS4 - Gouvernement Estimé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La réforme agraire totale', 0, 1), (@qid, 'La sécurité sociale et la protection des travailleurs', 1, 2), (@qid, 'La suppression des impôts fonciers', 0, 3), (@qid, 'La nationalisation des industries', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien de temps a duré le règne d''Estimé ?', 'Le gouvernement d''Estimé a duré approximativement 3 ans et 9 mois (1946-1950).', 'Programme NS4 - Gouvernement Estimé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Deux ans', 0, 1), (@qid, 'Trois ans et neuf mois', 1, 2), (@qid, 'Cinq ans', 0, 3), (@qid, 'Sept ans', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle qualité du tourisme haïtien l''exposition de 1949 a-t-elle renforcée ?', 'L''exposition internationale a mis Haïti sur la carte du tourisme mondial, multipliant les visiteurs.', 'Programme NS4 - Gouvernement Estimé', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''artisanat local', 0, 1), (@qid, 'Le rayonnement touristique mondial d''Haïti', 1, 2), (@qid, 'Les exportations agricoles', 0, 3), (@qid, 'L''industrie textile', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce qu''Estimé a stimulé en faisant appel à l''investissement étranger ?', 'Estimé a stimulé l''établissement de nouvelles industries en Haïti.', 'Programme NS4 - Gouvernement Estimé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La création de nouvelles écoles', 0, 1), (@qid, 'L''établissement de nouvelles industries', 1, 2), (@qid, 'La construction de routes rurales', 0, 3), (@qid, 'Le développement de l''agriculture d''exportation', 0, 4);
+
+-- ============================================================
+-- BLOC 6 : LE GOUVERNEMENT DE PAUL E. MAGLOIRE (1950-1956)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel surnom Paul E. Magloire s''était-il donné ?', 'Magloire aimait se faire appeler « Kanson Fe » (Pantalon de Fer).', 'Programme NS4 - Gouvernement Magloire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le Lion du Nord', 0, 1), (@qid, 'Kanson Fe (Pantalon de Fer)', 1, 2), (@qid, 'Le Père de la nation', 0, 3), (@qid, 'Le Libérateur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'À quelle date Magloire a-t-il remis le pouvoir au président de la Cour de Cassation ?', 'Le 12 décembre 1956, Magloire a accepté de remettre le pouvoir à Me Nemours Pierre-Louis.', 'Programme NS4 - Gouvernement Magloire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le 10 mai 1950', 0, 1), (@qid, 'Le 15 septembre 1954', 0, 2), (@qid, 'Le 12 décembre 1956', 1, 3), (@qid, 'Le 22 septembre 1957', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'À qui Magloire a-t-il remis le pouvoir en décembre 1956 ?', 'Magloire a remis le pouvoir à Me Nemours Pierre-Louis, président de la Cour de Cassation.', 'Programme NS4 - Gouvernement Magloire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'À François Duvalier', 0, 1), (@qid, 'À Louis Déjoie', 0, 2), (@qid, 'À Me Nemours Pierre-Louis', 1, 3), (@qid, 'À Daniel Fignolé', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel régime Magloire prétendait-il établir entre les couleurs et les classes ?', 'Magloire prétendait établir un régime d''équilibre entre les couleurs et les classes.', 'Programme NS4 - Gouvernement Magloire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un régime de suprématie noire', 0, 1), (@qid, 'Un régime d''équilibre entre les couleurs et les classes', 1, 2), (@qid, 'Un régime mulâtre exclusif', 0, 3), (@qid, 'Une dictature militaire assumée', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle alliance diplomatique controversée Magloire a-t-il conclue ?', 'Magloire a conclu une alliance avec Trujillo, le dictateur dominicain.', 'Programme NS4 - Gouvernement Magloire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une alliance avec Cuba', 0, 1), (@qid, 'Une alliance avec la France', 0, 2), (@qid, 'Une alliance avec Trujillo', 1, 3), (@qid, 'Une alliance avec l''URSS', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle grève générale a précipité la chute de Magloire en 1956 ?', 'Une grève générale des commerçants, qui espéraient la candidature de Louis Déjoie, a précipité la chute de Magloire.', 'Programme NS4 - Gouvernement Magloire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une grève des paysans', 0, 1), (@qid, 'Une grève des enseignants', 0, 2), (@qid, 'Une grève générale des grands commerçants', 1, 3), (@qid, 'Une grève de l''armée', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel impact la chute de Magloire a-t-elle eu sur l''armée haïtienne selon l''historien Bernardin ?', 'La chute de Magloire marqua le début du déclin de l''omnipotence de l''armée haïtienne.', 'Programme NS4 - Gouvernement Magloire', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le renforcement du pouvoir militaire', 0, 1), (@qid, 'Le début du déclin de l''omnipotence de l''armée', 1, 2), (@qid, 'La création d''une nouvelle armée moderne', 0, 3), (@qid, 'L''alliance de l''armée avec les civils', 0, 4);
+
+-- ============================================================
+-- BLOC 7 : L'ÈRE DUVALIÉRIENNE (1957-1986)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qui étaient les principaux adversaires de Duvalier lors des élections de 1957 ?', 'Les adversaires de Duvalier dans la course électorale étaient Daniel Fignolé et Louis Déjoie.', 'Programme NS4 - Ère Duvaliérienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sténio Vincent et Dumarsais Estimé', 0, 1), (@qid, 'Daniel Fignolé et Louis Déjoie', 1, 2), (@qid, 'Paul Magloire et Elie Lescot', 0, 3), (@qid, 'Jean-Claude Duvalier et Nemours Pierre-Louis', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien d''années environ a duré la dictature des Duvalier, père et fils ?', 'La dictature duvaliérienne a duré environ 30 ans (1957-1986).', 'Programme NS4 - Ère Duvaliérienne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dix ans', 0, 1), (@qid, 'Vingt ans', 0, 2), (@qid, 'Trente ans', 1, 3), (@qid, 'Quarante ans', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Comment se nomme la milice créée par François Duvalier pour maintenir son régime ?', 'Les Tontons Macoutes (VSN - Volontaires de la Sécurité Nationale) étaient la milice de Duvalier.', 'Programme NS4 - Ère Duvaliérienne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les Cacos', 0, 1), (@qid, 'Les Tontons Macoutes (VSN)', 1, 2), (@qid, 'Les Zinglin', 0, 3), (@qid, 'Les Chimères', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel qualificatif idéologique caractérise le régime de François Duvalier  ?', 'Le régime de Duvalier est qualifié de fasciste dans les documents historiques.', 'Programme NS4 - Ère Duvaliérienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Communiste', 0, 1), (@qid, 'Fasciste', 1, 2), (@qid, 'Social-démocrate', 0, 3), (@qid, 'Libéral', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel grand projet infrastructurel des années précédentes a été réalisé sous Duvalier en 1971 ?', 'Le barrage de Péligre, projet de l''ancien régime, a finalement été réalisé en 1971 sous Duvalier.', 'Programme NS4 - Ère Duvaliérienne', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le barrage de l''Artibonite', 0, 1), (@qid, 'Le barrage de Péligre', 1, 2), (@qid, 'L''aéroport international', 0, 3), (@qid, 'L''autoroute du Nord', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Comment s''appelait le président à vie qui succéda à François Duvalier ?', 'Jean-Claude Duvalier (Baby Doc) succéda à son père François Duvalier à la présidence à vie.', 'Programme NS4 - Ère Duvaliérienne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Marc-André Duvalier', 0, 1), (@qid, 'Jean-Claude Duvalier', 1, 2), (@qid, 'Simone Duvalier', 0, 3), (@qid, 'Roger Duvalier', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année Jean-Claude Duvalier a-t-il été renversé ?', 'Jean-Claude Duvalier a été renversé le 7 février 1986.', 'Programme NS4 - Ère Duvaliérienne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1983', 0, 1), (@qid, '1984', 0, 2), (@qid, '1986', 1, 3), (@qid, '1988', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle institution François Duvalier a-t-il demolie pour consolider son pouvoir ?', 'Duvalier a démoli le pouvoir du clergé et neutralisé l''armée pour consolider son régime.', 'Programme NS4 - Ère Duvaliérienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le pouvoir judiciaire seulement', 0, 1), (@qid, 'Le pouvoir du clergé et de l''armée', 1, 2), (@qid, 'Le parlement seulement', 0, 3), (@qid, 'Les universités seulement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel terme désigne la notion de Duvalier au pouvoir comme un chef absolu héréditaire ?', 'Le terme « papadocratie » désigne le régime héréditaire et absolu de Duvalier.', 'Programme NS4 - Ère Duvaliérienne', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La théocratie', 0, 1), (@qid, 'La monarchie', 0, 2), (@qid, 'La papadocratie', 1, 3), (@qid, 'L''oligarchie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel programme américain Duvalier utilisait-il comme levier diplomatique contre les États-Unis ?', 'Duvalier exploitait la menace d''une ouverture vers l''Est (communiste) pour obtenir des concessions des États-Unis.', 'Programme NS4 - Ère Duvaliérienne', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La menace de nationalisation des entreprises', 0, 1), (@qid, 'Le chantage d''une ouverture possible vers l''URSS', 1, 2), (@qid, 'La menace de retrait de l''OEA', 0, 3), (@qid, 'La fermeture de l''ambassade américaine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle crise agraire majeure a caractérisé le déclin du régime duvaliérien ?', 'La crise agraire et le phénomène des « boat people » fuirent Haïti massivement sous les Duvalier.', 'Programme NS4 - Ère Duvaliérienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une réforme agraire réussie', 0, 1), (@qid, 'La crise agraire et la tragédie des boat people', 1, 2), (@qid, 'Une nationalisation des terres', 0, 3), (@qid, 'Un boom agricole', 0, 4);
+
+-- ============================================================
+-- BLOC 8 : LA PÉRIODE DE TRANSITION (1986-1991)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel sigle désigne le gouvernement militaire qui prit le pouvoir après la chute de Jean-Claude Duvalier ?', 'Le CNG (Conseil National de Gouvernement) a pris le pouvoir après la chute des Duvalier en 1986.', 'Programme NS4 - Transition 1986-1991', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CEM', 0, 1), (@qid, 'CNG', 1, 2), (@qid, 'CEP', 0, 3), (@qid, 'CSD', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année la constitution haïtienne consacrant la démocratie a-t-elle été adoptée ?', 'La constitution du 29 mars 1987 a été adoptée pour encadrer la transition démocratique d''Haïti.', 'Programme NS4 - Transition 1986-1991', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1985', 0, 1), (@qid, '1986', 0, 2), (@qid, '1987', 1, 3), (@qid, '1990', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle organisation a été dissoute par le CNG après la chute de Duvalier ?', 'Le CNG a dissous les VSN (Volontaires de la Sécurité Nationale / Tontons Macoutes).', 'Programme NS4 - Transition 1986-1991', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''armée haïtienne', 0, 1), (@qid, 'Les VSN (Tontons Macoutes)', 1, 2), (@qid, 'Le Sénat haïtien', 0, 3), (@qid, 'La police nationale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année eurent lieu les premières élections démocratiques d''Haïti conduisant à l''élection d''Aristide ?', 'Les premières élections démocratiques ont eu lieu en 1990, conduisant à l''élection de Jean-Bertrand Aristide.', 'Programme NS4 - Transition 1986-1991', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1987', 0, 1), (@qid, '1988', 0, 2), (@qid, '1990', 1, 3), (@qid, '1994', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel président haïtien a été renversé en 1991 après sa première élection démocratique ?', 'Jean-Bertrand Aristide a été élu puis renversé par un coup d''état militaire en 1991.', 'Programme NS4 - Transition 1986-1991', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Henri Namphy', 0, 1), (@qid, 'Leslie Manigat', 0, 2), (@qid, 'Jean-Bertrand Aristide', 1, 3), (@qid, 'Prosper Avril', 0, 4);
+
+-- ============================================================
+-- BLOC 9 : PREMIÈRE GUERRE MONDIALE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle est la cause immédiate (occasionnelle) de la Première Guerre mondiale ?', 'L''assassinat de l''archiduc François-Ferdinand à Sarajevo le 28 juin 1914 est la cause occasionnelle.', 'Programme NS4 - Première Guerre mondiale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''invasion de la Belgique par l''Allemagne', 0, 1), (@qid, 'L''assassinat de l''archiduc François-Ferdinand', 1, 2), (@qid, 'La mobilisation de l''armée russe', 0, 3), (@qid, 'La déclaration de guerre de la France', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Où l''attentat qui déclencha la Première Guerre mondiale fut-il commis ?', 'L''attentat a été commis à Sarajevo, en Bosnie-Herzégovine.', 'Programme NS4 - Première Guerre mondiale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'À Vienne', 0, 1), (@qid, 'À Belgrade', 0, 2), (@qid, 'À Sarajevo', 1, 3), (@qid, 'À Berlin', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qui a assassiné l''archiduc François-Ferdinand en 1914 ?', 'Gavrilo Princip, membre de la société secrète « La Main Noire », a assassiné l''archiduc.', 'Programme NS4 - Première Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un agent russe', 0, 1), (@qid, 'Gavrilo Princip', 1, 2), (@qid, 'Un officier français', 0, 3), (@qid, 'Un nationaliste hongrois', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelles sont les années de la Première Guerre mondiale ?', 'La Première Guerre mondiale s''est déroulée de 1914 à 1918.', 'Programme NS4 - Première Guerre mondiale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'De 1910 à 1915', 0, 1), (@qid, 'De 1914 à 1918', 1, 2), (@qid, 'De 1912 à 1916', 0, 3), (@qid, 'De 1916 à 1920', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quels pays formaient la Triple Entente lors de la Première Guerre mondiale ?', 'La Triple Entente regroupait la Russie, la France et la Grande-Bretagne.', 'Programme NS4 - Première Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''Allemagne, l''Autriche-Hongrie et la Turquie', 0, 1), (@qid, 'La Russie, la France et la Grande-Bretagne', 1, 2), (@qid, 'L''Italie, la Serbie et la Grèce', 0, 3), (@qid, 'Les États-Unis, la France et la Belgique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quels pays formaient la Triple Alliance (les forces de l''Axe) lors de la Première Guerre mondiale ?', 'L''Allemagne, l''Autriche-Hongrie et l''Empire ottoman formaient les puissances centrales.', 'Programme NS4 - Première Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La France, la Russie et la Grande-Bretagne', 0, 1), (@qid, 'L''Allemagne, l''Autriche-Hongrie et l''Empire ottoman', 1, 2), (@qid, 'L''Italie, l''Espagne et la Bulgarie', 0, 3), (@qid, 'Les États-Unis, le Canada et l''Australie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien de morts la Première Guerre mondiale a-t-elle causé en Europe environ ?', 'La Première Guerre mondiale a tué près de 10 millions de personnes en Europe.', 'Programme NS4 - Première Guerre mondiale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2 millions', 0, 1), (@qid, '5 millions', 0, 2), (@qid, '10 millions', 1, 3), (@qid, '20 millions', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle organisation internationale fut créée après la Première Guerre mondiale pour maintenir la paix ?', 'La Société des Nations (SDN) fut créée après la Première Guerre mondiale pour maintenir la paix.', 'Programme NS4 - Première Guerre mondiale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ONU', 0, 1), (@qid, 'La Société des Nations (SDN)', 1, 2), (@qid, 'L''OTAN', 0, 3), (@qid, 'La Cour internationale de justice', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel était le principal problème de la SDN pour faire appliquer ses décisions ?', 'La SDN n''avait pas de police internationale pour faire appliquer ses décisions.', 'Programme NS4 - Première Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle manquait de membres fondateurs', 0, 1), (@qid, 'Elle n''avait pas de police internationale pour appliquer ses décisions', 1, 2), (@qid, 'Elle était dominée par l''Allemagne', 0, 3), (@qid, 'Elle n''avait pas de budget', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien d''empires ont disparu à la suite de la Première Guerre mondiale ?', 'Quatre empires ont disparu : l''Autriche-Hongrie, la Russie, l''Empire ottoman et l''Empire allemand.', 'Programme NS4 - Première Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Deux empires', 0, 1), (@qid, 'Trois empires', 0, 2), (@qid, 'Quatre empires', 1, 3), (@qid, 'Six empires', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle ville américaine supplanta Londres comme première place financière mondiale après la guerre ?', 'New York a supplanté Londres comme première place financière du monde après la Première Guerre mondiale.', 'Programme NS4 - Première Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Chicago', 0, 1), (@qid, 'Boston', 0, 2), (@qid, 'New York', 1, 3), (@qid, 'Washington D.C.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel nouveau pays fit partie des États créés après la Première Guerre mondiale dans les Balkans ?', 'La Yougoslavie fut créée après la Première Guerre mondiale à partir des États slaves des Balkans.', 'Programme NS4 - Première Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Turquie', 0, 1), (@qid, 'La Yougoslavie', 1, 2), (@qid, 'L''Albanie', 0, 3), (@qid, 'La Bulgarie', 0, 4);
+
+-- ============================================================
+-- BLOC 10 : DEUXIÈME GUERRE MONDIALE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année la Seconde Guerre mondiale a-t-elle commencé en Europe ?', 'La Seconde Guerre mondiale a commencé en Europe en 1939.', 'Programme NS4 - Seconde Guerre mondiale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1936', 0, 1), (@qid, '1937', 0, 2), (@qid, '1939', 1, 3), (@qid, '1941', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année la Seconde Guerre mondiale a-t-elle pris fin ?', 'La Seconde Guerre mondiale s''est terminée en 1945.', 'Programme NS4 - Seconde Guerre mondiale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1943', 0, 1), (@qid, '1944', 0, 2), (@qid, '1945', 1, 3), (@qid, '1946', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quels pays formaient les forces de l''Axe durant la Seconde Guerre mondiale ?', 'L''Axe regroupait principalement l''Allemagne nazie, l''Italie fasciste et le Japon.', 'Programme NS4 - Seconde Guerre mondiale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La France, la Grande-Bretagne et les États-Unis', 0, 1), (@qid, 'L''Allemagne, l''Italie et le Japon', 1, 2), (@qid, 'L''URSS, la Chine et la Turquie', 0, 3), (@qid, 'L''Espagne, le Portugal et la Grèce', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien de morts environ la Seconde Guerre mondiale a-t-elle causés ?', 'On estime entre 40 et 50 millions de morts lors de la Seconde Guerre mondiale.', 'Programme NS4 - Seconde Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10 millions', 0, 1), (@qid, '20 millions', 0, 2), (@qid, '40 à 50 millions', 1, 3), (@qid, '100 millions', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Combien de fois plus meurtrière est la Seconde Guerre mondiale par rapport à la Première ?', 'La Seconde Guerre mondiale est quatre fois plus meurtrière que la guerre de 1914-1918.', 'Programme NS4 - Seconde Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Deux fois', 0, 1), (@qid, 'Trois fois', 0, 2), (@qid, 'Quatre fois', 1, 3), (@qid, 'Cinq fois', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel régime Adolf Hitler a-t-il établi en Allemagne à partir de 1933 ?', 'Hitler a établi le Troisième Reich, un régime totalitaire et nazi en Allemagne.', 'Programme NS4 - Seconde Guerre mondiale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La République de Weimar', 0, 1), (@qid, 'Le Premier Reich', 0, 2), (@qid, 'Le Troisième Reich', 1, 3), (@qid, 'La IVe République', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année Hitler est-il arrivé au pouvoir en Allemagne ?', 'Hitler est arrivé au pouvoir le 30 janvier 1933 en Allemagne.', 'Programme NS4 - Seconde Guerre mondiale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1930', 0, 1), (@qid, '1931', 0, 2), (@qid, '1933', 1, 3), (@qid, '1935', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année Mussolini a-t-il pris le pouvoir en Italie par la « Marche sur Rome » ?', 'Mussolini a réalisé un coup de force lors de la marche sur Rome du 27 octobre 1922.', 'Programme NS4 - Fascisme', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1919', 0, 1), (@qid, '1921', 0, 2), (@qid, '1922', 1, 3), (@qid, '1925', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année les Bolcheviques ont-ils pris le pouvoir en Russie ?', 'Les Bolcheviques ont accédé au pouvoir en Russie lors de la révolution d''octobre 1917.', 'Programme NS4 - Révolution russe', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1905', 0, 1), (@qid, '1914', 0, 2), (@qid, '1917', 1, 3), (@qid, '1921', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel continent a le plus souffert de la Seconde Guerre mondiale, notamment à l''Est ?', 'L''Europe est le continent le plus atteint, particulièrement à l''Est, où l''occupation allemande fut la plus dure.', 'Programme NS4 - Seconde Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''Asie', 0, 1), (@qid, 'L''Afrique', 0, 2), (@qid, 'L''Europe', 1, 3), (@qid, 'L''Amérique', 0, 4);
+
+-- ============================================================
+-- BLOC 11 : LA CRISE DE 1929 ET LE NEW DEAL
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année a eu lieu le krach boursier de Wall Street qui déclencha la Grande Dépression ?', 'Le krach boursier (Octobre noir) a eu lieu en 1929, déclenchant la Grande Dépression.', 'Programme NS4 - Crise de 1929', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1925', 0, 1), (@qid, '1927', 0, 2), (@qid, '1929', 1, 3), (@qid, '1931', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Comment s''appelle le programme américain pour combattre la Grande Dépression des années 1930 ?', 'Le « New Deal » était le programme du président Roosevelt pour relancer l''économie américaine.', 'Programme NS4 - Crise de 1929', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le Fair Deal', 0, 1), (@qid, 'Le New Deal', 1, 2), (@qid, 'Le Great Society', 0, 3), (@qid, 'Le Marshall Plan', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel président américain a mis en place le New Deal ?', 'Franklin D. Roosevelt a mis en place le New Deal pour combattre la Grande Dépression.', 'Programme NS4 - Crise de 1929', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Herbert Hoover', 0, 1), (@qid, 'Franklin D. Roosevelt', 1, 2), (@qid, 'Harry Truman', 0, 3), (@qid, 'Woodrow Wilson', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Que visait le New Deal en matière de prix agricoles ?', 'Le New Deal visait à empêcher la baisse excessive des prix agricoles pour relancer l''économie.', 'Programme NS4 - Crise de 1929', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Augmenter massivement les exportations', 0, 1), (@qid, 'Empêcher la baisse excessive des prix agricoles', 1, 2), (@qid, 'Nationaliser toutes les fermes', 0, 3), (@qid, 'Supprimer les subventions agricoles', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle était la principale caractéristique de l''économie d''avant 1929 qui favorisa la crise ?', 'La surproduction dans de nombreux secteurs de l''économie a favorisé la crise de 1929.', 'Programme NS4 - Crise de 1929', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La sous-production', 0, 1), (@qid, 'La surproduction', 1, 2), (@qid, 'L''inflation incontrôlée', 0, 3), (@qid, 'L''excès d''importations', 0, 4);
+
+-- ============================================================
+-- BLOC 12 : LA GUERRE FROIDE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que la guerre froide ?', 'C''est la période d''affrontement idéologique et de tension entre les États-Unis et l''URSS de 1947 à 1991.', 'Programme NS4 - Guerre froide', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un conflit armé direct entre les États-Unis et l''URSS', 0, 1), (@qid, 'Une période de tension idéologique entre les États-Unis et l''URSS', 1, 2), (@qid, 'Une guerre entre la Chine et le Japon', 0, 3), (@qid, 'Un conflit militaire en Antarctique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel événement symbolise la fin de la guerre froide en 1989 ?', 'La chute du mur de Berlin le 9 novembre 1989 est l''événement emblématique de la fin de la guerre froide.', 'Programme NS4 - Guerre froide', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La crise des missiles de Cuba', 0, 1), (@qid, 'La chute du mur de Berlin', 1, 2), (@qid, 'La guerre de Corée', 0, 3), (@qid, 'La conférence de Yalta', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle date marque l''ouverture du mur de Berlin ?', 'Le mur de Berlin a été ouvert le 9 novembre 1989.', 'Programme NS4 - Guerre froide', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le 13 août 1961', 0, 1), (@qid, 'Le 9 novembre 1989', 1, 2), (@qid, 'Le 25 décembre 1991', 0, 3), (@qid, 'Le 3 octobre 1990', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel « rideau » symbolisait la division de l''Europe en deux blocs durant la guerre froide ?', 'Le « rideau de fer » symbolisait la séparation entre l''Europe occidentale et orientale.', 'Programme NS4 - Guerre froide', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le rideau de velours', 0, 1), (@qid, 'Le rideau de bambou', 0, 2), (@qid, 'Le rideau de fer', 1, 3), (@qid, 'Le rideau d''acier', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel événement la chute du mur de Berlin a-t-elle permis en Allemagne ?', 'La chute du mur de Berlin a permis la réunification de l''Allemagne (RFA + RDA).', 'Programme NS4 - Guerre froide', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La division de l''Allemagne en quatre zones', 0, 1), (@qid, 'La réunification de l''Allemagne', 1, 2), (@qid, 'La création d''un État neutre', 0, 3), (@qid, 'L''élection d''un gouvernement militaire', 0, 4);
+
+-- ============================================================
+-- BLOC 13 : L'UNION EUROPÉENNE ET LA CONSTRUCTION EUROPÉENNE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel traité a fondé la Communauté Économique Européenne (CEE) en 1957 ?', 'Le Traité de Rome, signé le 25 mars 1957, a fondé la CEE.', 'Programme NS4 - Construction européenne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le Traité de Maastricht', 0, 1), (@qid, 'Le Traité de Rome', 1, 2), (@qid, 'Le Traité de Paris', 0, 3), (@qid, 'Le Traité de Lisbonne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année le Traité de Rome a-t-il été signé ?', 'Le Traité de Rome a été signé le 25 mars 1957.', 'Programme NS4 - Construction européenne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1951', 0, 1), (@qid, '1955', 0, 2), (@qid, '1957', 1, 3), (@qid, '1963', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle organisation a précédé la CEE et portait sur le charbon et l''acier ?', 'La CECA (Communauté Européenne du Charbon et de l''Acier) a précédé la CEE, fondée en 1951.', 'Programme NS4 - Construction européenne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''OTAN', 0, 1), (@qid, 'La CECA', 1, 2), (@qid, 'L''OCDE', 0, 3), (@qid, 'L''ONU', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel traité a transformé la CEE en Union Européenne en 1992 ?', 'Le Traité de Maastricht, signé le 7 février 1992, a transformé la CEE en Union Européenne.', 'Programme NS4 - Construction européenne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le Traité de Rome', 0, 1), (@qid, 'Le Traité de Maastricht', 1, 2), (@qid, 'Le Traité de Paris', 0, 3), (@qid, 'Le Traité de Lisbonne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année le Traité de Maastricht est-il entré en vigueur ?', 'Le Traité de Maastricht est entré en vigueur le 1er novembre 1993.', 'Programme NS4 - Construction européenne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1992', 0, 1), (@qid, '1993', 1, 2), (@qid, '1995', 0, 3), (@qid, '1999', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est l''objectif économique majeur de l''Union Européenne selon le Traité de Maastricht ?', 'L''objectif est d''établir une union économique et monétaire avec une monnaie unique et stable.', 'Programme NS4 - Construction européenne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La suppression des taxes nationales', 0, 1), (@qid, 'Une union économique et monétaire avec une monnaie unique', 1, 2), (@qid, 'La création d''une armée européenne unique', 0, 3), (@qid, 'L''unification des systèmes éducatifs', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quels sont les six pays fondateurs de la CECA et de la CEE ?', 'Les six fondateurs sont la France, l''Allemagne (RFA), l''Italie, la Belgique, les Pays-Bas et le Luxembourg.', 'Programme NS4 - Construction européenne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'France, Allemagne, Angleterre, Espagne, Italie, Portugal', 0, 1), (@qid, 'France, Allemagne, Italie, Belgique, Pays-Bas, Luxembourg', 1, 2), (@qid, 'France, Allemagne, Pologne, Grèce, Belgique, Danemark', 0, 3), (@qid, 'France, Italie, Espagne, Portugal, Grèce, Irlande', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Autour de quel axe géographique s''organise la nouvelle géographie mondiale selon les textes du programme ?', 'La nouvelle géographie du monde s''articule autour de la Triade : Amérique du Nord, Europe Occidentale et Asie Orientale.', 'Programme NS4 - Géographie mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''Amérique du Sud, l''Afrique et l''Asie du Sud', 0, 1), (@qid, 'L''Amérique du Nord, l''Europe Occidentale et l''Asie Orientale', 1, 2), (@qid, 'L''Europe, l''Amérique Latine et l''Asie du Sud-Est', 0, 3), (@qid, 'La Russie, la Chine et les États-Unis', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle monnaie unique a été créée dans le cadre de l''Union Européenne ?', 'L''euro est la monnaie unique créée dans le cadre de l''Union Européenne.', 'Programme NS4 - Construction européenne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le franc européen', 0, 1), (@qid, 'L''ecu', 0, 2), (@qid, 'L''euro', 1, 3), (@qid, 'Le mark européen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel accord régit les relations commerciales entre l''UE et les pays ACP ?', 'L''accord de partenariat UE-ACP de Cotonou régit ces relations commerciales.', 'Programme NS4 - Construction européenne', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''accord de Genève', 0, 1), (@qid, 'L''accord de partenariat de Cotonou', 1, 2), (@qid, 'L''accord de Washington', 0, 3), (@qid, 'L''accord de Barcelone', 0, 4);
+
+-- ============================================================
+-- BLOC 14 : LA PUISSANCE AMÉRICAINE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle expression désigne la domination culturelle américaine dans le monde ?', 'L''expression « Hyperpuissance » ou soft power américain désigne cette domination culturelle mondiale.', 'Programme NS4 - Puissance américaine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''eurocentrisme', 0, 1), (@qid, 'L''hyperpuissance américaine', 1, 2), (@qid, 'Le panaméricanisme', 0, 3), (@qid, 'L''impérialisme soviétique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle est la première puissance mondiale au niveau économique après la Première Guerre mondiale ?', 'Les États-Unis sont devenus la première puissance économique mondiale après la Première Guerre mondiale.', 'Programme NS4 - Puissance américaine', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Grande-Bretagne', 0, 1), (@qid, 'La France', 0, 2), (@qid, 'Les États-Unis', 1, 3), (@qid, 'L''Allemagne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle monnaie américaine concurrence la livre sterling après 1918 ?', 'Le dollar américain concurrence la livre sterling comme monnaie de change internationale.', 'Programme NS4 - Puissance américaine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le franc', 0, 1), (@qid, 'Le mark', 0, 2), (@qid, 'Le dollar', 1, 3), (@qid, 'Le yen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel secteur économique représente plus de 20% de l''industrie mondiale pour les États-Unis ?', 'Les États-Unis représentent plus de 20% de l''industrie mondiale.', 'Programme NS4 - Puissance américaine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''agriculture', 0, 1), (@qid, 'L''industrie', 1, 2), (@qid, 'Les services financiers', 0, 3), (@qid, 'L''armement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel groupe détermine l''ordre économique mondial selon le programme de géographie NS4 ?', 'Le Groupe des Huit (G8) détermine l''ordre économique mondial.', 'Programme NS4 - Géographie mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le Groupe des Deux (G2)', 0, 1), (@qid, 'Le Groupe des Huit (G8)', 1, 2), (@qid, 'Le Groupe des Vingt (G20)', 0, 3), (@qid, 'Le Conseil de Sécurité de l''ONU', 0, 4);
+
+-- ============================================================
+-- BLOC 15 : LA NOTION DE PUISSANCE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Comment Max Weber définit-il la puissance dans « Économie et Société » (1921) ?', 'Pour Weber, la puissance est la capacité de faire triompher sa propre volonté contre des résistances.', 'Programme NS4 - Notion de puissance', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La capacité militaire d''un État', 0, 1), (@qid, 'La capacité de faire triompher sa volonté contre des résistances', 1, 2), (@qid, 'Le PIB d''un pays', 0, 3), (@qid, 'La superficie d''un territoire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel facteur culturel est inclus parmi les critères de puissance dans le programme NS4 ?', 'Le rayonnement idéologique et culturel est un critère de puissance dans le programme NS4.', 'Programme NS4 - Notion de puissance', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le tourisme uniquement', 0, 1), (@qid, 'Le rayonnement idéologique et culturel', 1, 2), (@qid, 'Le nombre d''universités', 0, 3), (@qid, 'La production cinématographique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel facteur lié aux ressources naturelles contribue à la puissance d''un État ?', 'L''abondance des ressources naturelles est un facteur de puissance important.', 'Programme NS4 - Notion de puissance', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La rareté des ressources', 0, 1), (@qid, 'L''abondance des ressources naturelles', 1, 2), (@qid, 'L''importation de ressources', 0, 3), (@qid, 'La gestion des déchets', 0, 4);
+
+-- ============================================================
+-- BLOC 16 : LA MONDIALISATION
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que la mondialisation  ?', 'La mondialisation est le processus par lequel les marchés nationaux tendent à s''intégrer en un seul marché mondial.', 'Programme NS4 - Mondialisation', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La domination économique d''un seul pays', 0, 1), (@qid, 'L''intégration des marchés nationaux en un seul marché mondial', 1, 2), (@qid, 'L''uniformisation des cultures', 0, 3), (@qid, 'La disparition des frontières nationales', 0, 4);
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel secteur stratégique est mentionné comme mondialisé dans le programme NS4 ?', 'Le pétrole et l''énergie sont cités parmi les secteurs stratégiques mondialisés.', 'Programme NS4 - Mondialisation', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''agriculture vivrière', 0, 1), (@qid, 'Le pétrole et l''énergie', 1, 2), (@qid, 'L''artisanat local', 0, 3), (@qid, 'La pêche artisanale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que la « division internationale du travail » dans le contexte de la mondialisation ?', 'La DIT est fondée sur les avantages économiques de chaque État, déterminant leurs spécialisations.', 'Programme NS4 - Mondialisation', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La répartition du travail au sein d''une usine', 0, 1), (@qid, 'La spécialisation économique des pays selon leurs avantages comparatifs', 1, 2), (@qid, 'La réduction du temps de travail dans les pays développés', 0, 3), (@qid, 'L''organisation syndicale internationale', 0, 4);
+
+-- ============================================================
+-- BLOC 17 : L'ONU ET LES INSTITUTIONS INTERNATIONALES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle organisation internationale a été créée après la Seconde Guerre mondiale pour remplacer la SDN ?', 'L''ONU (Organisation des Nations Unies) a remplacé la SDN après la Seconde Guerre mondiale.', 'Programme NS4 - ONU', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Société des Nations', 0, 1), (@qid, 'L''ONU', 1, 2), (@qid, 'L''OTAN', 0, 3), (@qid, 'L''OMC', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est l''organe principal de sécurité de l''ONU ?', 'Le Conseil de Sécurité est l''organe principal de l''ONU chargé du maintien de la paix et de la sécurité.', 'Programme NS4 - ONU', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''Assemblée Générale', 0, 1), (@qid, 'Le Conseil de Sécurité', 1, 2), (@qid, 'La Cour internationale de Justice', 0, 3), (@qid, 'Le Secrétariat général', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quels sont les principaux objectifs de l''ONU ?', 'L''ONU vise à maintenir la paix, le progrès économique et social, et la promotion des droits de l''homme.', 'Programme NS4 - ONU', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Contrôler l''économie mondiale uniquement', 0, 1), (@qid, 'Maintenir la paix, le progrès économique, social et les droits humains', 1, 2), (@qid, 'Gérer les conflits armés uniquement', 0, 3), (@qid, 'Promouvoir le commerce international uniquement', 0, 4);
+
+
+-- ============================================================
+-- BLOC 19 : RELATIONS DIPLOMATIQUES D'HAÏTI
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année Elie Lescot a-t-il déclaré la guerre à l''Allemagne aux côtés des États-Unis ?', 'Lescot a déclaré la guerre à l''Allemagne en 1941, aux côtés des États-Unis.', 'Programme NS4 - Relations diplomatiques Haïti', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1939', 0, 1), (@qid, '1941', 1, 2), (@qid, '1943', 0, 3), (@qid, '1945', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel accord régit les relations entre l''Union Européenne et les pays Afrique-Caraïbe-Pacifique ?', 'L''accord de partenariat UE-ACP de Cotonou régit ces relations.', 'Programme NS4 - Relations internationales', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''accord de Lomé uniquement', 0, 1), (@qid, 'L''accord de partenariat de Cotonou', 1, 2), (@qid, 'L''accord de Montego Bay', 0, 3), (@qid, 'L''accord de Nassau', 0, 4);
+
+-- ============================================================
+-- BLOC 20 : HISTOIRE ÉCONOMIQUE ET SOCIALE D'HAÏTI
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel ouvrage de référence est fréquemment cité dans les examens NS4 haïtiens d''histoire ?', 'L''« Histoire Économique et Sociale d''Haïti, de 1804 à nos jours » du Dr Ernst Bernardin est régulièrement cité.', 'Programme NS4 - Sources historiques', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Histoire d''Haïti de Jean Price-Mars', 0, 1), (@qid, 'Histoire Économique et Sociale d''Haïti du Dr Ernst Bernardin', 1, 2), (@qid, 'Haïti libre de Dantès Bellegarde', 0, 3), (@qid, 'Le Nègre masqué de Louis Diaquoi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel historien haïtien a écrit « Eventail d''Histoire vivante d''Haïti » ?', 'Leslie F. Manigat a écrit l''« Eventail d''Histoire vivante d''Haïti ».', 'Programme NS4 - Sources historiques', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Jean Fouchard', 0, 1), (@qid, 'Ernst Bernardin', 0, 2), (@qid, 'Leslie F. Manigat', 1, 3), (@qid, 'Geneviève Auguste', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle institution haïtienne avait le pouvoir de « faire et défaire » les chefs d''État selon certains historiens ?', 'La bourgeoisie traditionnelle et sa clientèle politique avaient ce pouvoir selon certains historiens haïtiens.', 'Programme NS4 - Système politique haïtien', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''Église catholique', 0, 1), (@qid, 'La bourgeoisie traditionnelle et sa clientèle politique', 1, 2), (@qid, 'Les syndicats ouvriers', 0, 3), (@qid, 'La paysannerie haïtienne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle élite haïtienne a investi dans le commerce et l''agro-industrie après 1946 ?', 'L''élite mulâtre, après son éviction des centres de pouvoir en 1946, s''est transformée en bourgeoisie d''affaires.', 'Programme NS4 - Révolution de 1946', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''élite noire', 0, 1), (@qid, 'L''élite mulâtre transformée en bourgeoisie d''affaires', 1, 2), (@qid, 'La paysannerie haïtienne', 0, 3), (@qid, 'Les militaires à la retraite', 0, 4);
+
+-- ============================================================
+-- BLOC 21 : COMPLÉMENT - HISTOIRE NATIONALE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel rôle jouait l''armée haïtienne dans la vie politique entre 1804 et 1957 ?', 'L''armée haïtienne était la maîtresse des vies et des biens depuis l''indépendance et arbitrait le pouvoir.', 'Programme NS4 - Armée haïtienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle était complètement soumise au pouvoir civil', 0, 1), (@qid, 'Elle était maîtresse des vies et des biens et arbitrait le pouvoir politique', 1, 2), (@qid, 'Elle se consacrait uniquement à la défense nationale', 0, 3), (@qid, 'Elle était sous contrôle américain permanent', 0, 4);
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel type de gouvernements très courts se sont succédé après la chute de Magloire ?', 'Des gouvernements éphémères se sont succédé après la chute de Magloire jusqu''à l''élection de Duvalier.', 'Programme NS4 - Gouvernements éphémères', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des gouvernements militaires stables', 0, 1), (@qid, 'Des gouvernements éphémères', 1, 2), (@qid, 'Des gouvernements de coalition durables', 0, 3), (@qid, 'Des gouvernements civils démocratiques', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quels droits politiques ont été accordés aux femmes haïtiennes lors de la période des gouvernements éphémères ?', 'Le droit de vote a été accordé aux femmes haïtiennes durant cette période.', 'Programme NS4 - Droits politiques', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le droit d''être nommées au gouvernement', 0, 1), (@qid, 'Le droit de vote', 1, 2), (@qid, 'Le droit d''être candidates à la présidence', 0, 3), (@qid, 'Le droit de créer des partis politiques', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel aspect du gouvernement de Vincent a-t-il marqué la vie économique ?', 'Vincent a pris d''importantes lois sur le travail des ouvriers, les coopératives et les biens ruraux de la famille.', 'Programme NS4 - Gouvernement Vincent', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La nationalisation des entreprises étrangères', 0, 1), (@qid, 'Des lois sur le travail, les coopératives et le bien rural', 1, 2), (@qid, 'La dévaluation de la gourde', 0, 3), (@qid, 'L''interdiction des syndicats', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Comment s''appelle la période d''Haïti allant de 1886 à 1934 caractérisée par l''instabilité ?', 'Cette période est caractérisée par une crise générale du système politique haïtien.', 'Programme NS4 - Crise politique haïtienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La période de l''indépendance', 0, 1), (@qid, 'La crise générale du système politique (1888-1934)', 1, 2), (@qid, 'La période dorée de la démocratie', 0, 3), (@qid, 'La période d''hégémonie mulâtre', 0, 4);
+
+-- ============================================================
+-- BLOC 22 : COMPLÉMENT - HISTOIRE UNIVERSELLE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle était la nature principale de la Révolution bolchevique de 1917 en Russie ?', 'La révolution bolchevique de 1917 était une révolution socialiste qui renversa le régime tsariste.', 'Programme NS4 - Révolution russe', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une révolution monarchiste', 0, 1), (@qid, 'Une révolution démocrate libérale', 0, 2), (@qid, 'Une révolution socialiste bolchevique', 1, 3), (@qid, 'Une révolution nationaliste', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel était le programme économique de Lénine pour relancer l''économie soviétique après la guerre civile ?', 'La NEP (Nouvelle Politique Économique) de Lénine permettait une certaine liberté économique pour relancer la production.', 'Programme NS4 - Révolution russe', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le communisme de guerre', 0, 1), (@qid, 'La NEP (Nouvelle Politique Économique)', 1, 2), (@qid, 'La collectivisation forcée', 0, 3), (@qid, 'Le capitalisme d''État', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle politique économique Staline a-t-il appliquée en URSS à partir de 1928 ?', 'Staline a appliqué la collectivisation des terres et les plans quinquennaux à partir de 1928.', 'Programme NS4 - Révolution russe', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La NEP libérale', 0, 1), (@qid, 'La collectivisation des terres et les plans quinquennaux', 1, 2), (@qid, 'Le capitalisme pur', 0, 3), (@qid, 'La privatisation des industries', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel mouvement nationaliste serbe visait à unifier la Serbie en 1914 ?', 'Le mouvement de la « Main Noire » visait à unifier la Serbie et les États slaves austro-hongrois.', 'Programme NS4 - Première Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le mouvement panslave général', 0, 1), (@qid, 'La société de la Main Noire', 1, 2), (@qid, 'Le mouvement des Jeunes Turcs', 0, 3), (@qid, 'L''Alliance des Balkans', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que le fascisme comme idéologie politique ?', 'Le fascisme est un régime dictatorial, totalitaire, ultranationaliste qui supprime les libertés individuelles.', 'Programme NS4 - Fascisme', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une démocratie directe', 0, 1), (@qid, 'Un régime dictatorial totalitaire et ultranationaliste', 1, 2), (@qid, 'Un régime socialiste modéré', 0, 3), (@qid, 'Une monarchie constitutionnelle', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle est la cause principale de la montée du fascisme en Europe dans les années 1920-1930 ?', 'La crise économique, les séquelles de la Première Guerre mondiale et l''instabilité sociale ont favorisé la montée du fascisme.', 'Programme NS4 - Fascisme', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''expansion coloniale européenne', 0, 1), (@qid, 'La crise économique et les séquelles de la Première Guerre mondiale', 1, 2), (@qid, 'L''influence soviétique', 0, 3), (@qid, 'La surpopulation en Europe', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le nom donné à la période d''affrontement entre les blocs de 1953 à 1962 ?', 'Cette période est appelée la « coexistence pacifique », marquée par un certain dégel des relations Est-Ouest.', 'Programme NS4 - Guerre froide', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La détente absolue', 0, 1), (@qid, 'La coexistence pacifique', 1, 2), (@qid, 'La guerre permanente', 0, 3), (@qid, 'L''alliance stratégique', 0, 4);
+
+
+-- ============================================================
+-- BLOC 24 : QUESTIONS SUPPLÉMENTAIRES - HAÏTI
+-- ============================================================
+
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel groupe social représentait « l''élite à peau claire » dans la vie politique haïtienne d''après 1934 ?', 'L''élite mulâtre représentait l''élite à peau claire dans le système politique haïtien d''après 1934.', 'Programme NS4 - Système politique haïtien', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les Américains résidant en Haïti', 0, 1), (@qid, 'L''élite mulâtre haïtienne', 1, 2), (@qid, 'Les Français descendants de colons', 0, 3), (@qid, 'Les militaires haïtiens', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que le « boom économique et technique » sous Magloire représentait pour Haïti ?', 'Le boom économique sous Magloire représentait une période de relative stabilité et prospérité avant le déclin.', 'Programme NS4 - Gouvernement Magloire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un développement économique durable', 0, 1), (@qid, 'Une période de stabilité relative avant le déclin dû à la corruption', 1, 2), (@qid, 'Une révolution industrielle haïtienne', 0, 3), (@qid, 'Le début d''une économie socialiste', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel aspect culturel la politique de Jean-Claude Duvalier a-t-elle modifié par rapport à son père ?', 'Jean-Claude Duvalier a introduit une ouverture relative (la prise de loi sur le divorce, la formation d''un cabinet libéral).', 'Programme NS4 - Ère Duvaliérienne', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''abolition du vaudou', 0, 1), (@qid, 'Une ouverture insincère et contrôlée incluant la loi sur le divorce', 1, 2), (@qid, 'La démocratisation totale', 0, 3), (@qid, 'La fin de la répression politique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Que représentent les « coopératives » dans la politique sociale haïtienne sous Vincent et Estimé ?', 'Les coopératives représentaient des structures d''organisation économique collective pour améliorer la vie des paysans.', 'Programme NS4 - Politique sociale haïtienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des entreprises militaires', 0, 1), (@qid, 'Des structures d''organisation économique collective pour les paysans', 1, 2), (@qid, 'Des banques d''État uniquement', 0, 3), (@qid, 'Des associations politiques', 0, 4);
+
+-- ============================================================
+-- BLOC 25 : COMPLÉMENT - GÉOGRAPHIE GÉNÉRALE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que la « transition démographique » en géographie des populations ?', 'La transition démographique est le passage d''une forte natalité/mortalité à une faible natalité/mortalité.', 'Programme NS4 - Géographie des populations', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une migration massive de populations', 0, 1), (@qid, 'Le passage d''une forte à une faible natalité et mortalité', 1, 2), (@qid, 'Une explosion démographique incontrôlée', 0, 3), (@qid, 'La disparition d''une population', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce qu''une carte topographique ?', 'Une carte topographique offre une image fidèle du terrain montrant le relief et les caractéristiques du sol.', 'Programme NS4 - Géographie/cartographie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une carte des frontières politiques uniquement', 0, 1), (@qid, 'Une carte offrant une image fidèle du terrain et du relief', 1, 2), (@qid, 'Une carte des ressources minières', 0, 3), (@qid, 'Une carte des courants marins', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel concept géographique désigne les zones à forte densité urbaine concentrant richesse et population ?', 'Le concept de « foyers de peuplement » ou de « régions riches d''hommes » désigne ces zones.', 'Programme NS4 - Géographie des populations', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les zones désertiques', 0, 1), (@qid, 'Les foyers de peuplement / régions de forte densité', 1, 2), (@qid, 'Les zones de conflits', 0, 3), (@qid, 'Les zones franches industrielles', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel accord géographique régit les migrations dans l''espace européen ?', 'Les Accords de Schengen régissent la libre circulation dans l''espace européen sans frontières intérieures.', 'Programme NS4 - Union Européenne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les Accords de Rome', 0, 1), (@qid, 'Les Accords de Schengen', 1, 2), (@qid, 'Les Accords de Dublin', 0, 3), (@qid, 'Les Accords de Barcelone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel type de politique agricole l''Union Européenne a-t-elle mise en place ?', 'L''UE a mis en place la PAC (Politique Agricole Commune) pour soutenir et réguler l''agriculture européenne.', 'Programme NS4 - Union Européenne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Politique de Libéralisation Agricole', 0, 1), (@qid, 'La PAC (Politique Agricole Commune)', 1, 2), (@qid, 'La Politique de Nationalisation des terres', 0, 3), (@qid, 'La Politique d''Exportation Agricole', 0, 4);
+
+-- ============================================================
+-- BLOC 26 : RÉVOLUTION HAÏTIENNE ET INDÉPENDANCE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'En quelle année Haïti a-t-il proclamé son indépendance ?', 'Haïti a proclamé son indépendance le 1er janvier 1804.', 'Programme NS4 - Histoire haïtienne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1791', 0, 1), (@qid, '1800', 0, 2), (@qid, '1804', 1, 3), (@qid, '1815', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel événement haïtien s''est produit en août 1791 et a déclenché la révolution haïtienne ?', 'La cérémonie du Bois Caïman en août 1791 est considérée comme le déclencheur symbolique de la révolution haïtienne.', 'Programme NS4 - Histoire haïtienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La bataille de Vertières', 0, 1), (@qid, 'La cérémonie du Bois Caïman', 1, 2), (@qid, 'La proclamation de Dessalines', 0, 3), (@qid, 'La révolte de Ogé', 0, 4);
+
+-- ============================================================
+-- BLOC 27 : QUESTIONS DIVERSES NS4
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelles sont les composantes des Tontons Macoutes  ?', 'Les Tontons Macoutes se composaient d''antisociaux, d''aigris assoiffés de revanche sociale, et de la milice populaire.', 'Programme NS4 - Ère Duvaliérienne', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des militaires professionnels uniquement', 0, 1), (@qid, 'Des antisociaux, aigris et miliciens populaires', 1, 2), (@qid, 'Des policiers réguliers reconvertis', 0, 3), (@qid, 'Des agents étrangers infiltrés', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel terme décrit la politique d''Estimé d''investir les ressources nationales sans aide étrangère ?', 'Estimé a réalisé son programme de réformes à partir des ressources propres haïtiennes sans recours à l''aide étrangère.', 'Programme NS4 - Gouvernement Estimé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le développement assisté', 0, 1), (@qid, 'L''autofinancement national', 1, 2), (@qid, 'L''endettement extérieur', 0, 3), (@qid, 'La coopération internationale massive', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel phénomène social décrit la migration massive des Haïtiens par bateau sous les Duvalier ?', 'Le phénomène des « boat people » décrit cette migration désespérée des Haïtiens fuyant le régime.', 'Programme NS4 - Ère Duvaliérienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le mouvement des travailleurs saisonniers', 0, 1), (@qid, 'Le phénomène des « boat people »', 1, 2), (@qid, 'La diaspora organisée', 0, 3), (@qid, 'L''exil diplomatique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle institution a financé la construction d''hôtels sous Estimé pour développer le tourisme ?', 'Le gouvernement d''Estimé a financé directement la construction des hôtels pour développer le tourisme.', 'Programme NS4 - Gouvernement Estimé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des investisseurs privés étrangers', 0, 1), (@qid, 'Le gouvernement haïtien directement', 1, 2), (@qid, 'La Banque mondiale', 0, 3), (@qid, 'L''Église catholique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Comment s''appelle la salle du trésor de l''État haïtien construite sous Estimé ?', 'Estimé a fait construire le somptueux local abritant la Banque Nationale d''Haïti.', 'Programme NS4 - Gouvernement Estimé', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Chambre des Comptes nationale', 0, 1), (@qid, 'Le local abritant la Banque Nationale', 1, 2), (@qid, 'La Trésorerie Publique nationale', 0, 3), (@qid, 'La Maison du Peuple', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle relation existait entre la corruption et la récession sous Magloire  ?', 'La corruption sous Magloire a contribué à la récession socioéconomique du pays.', 'Programme NS4 - Gouvernement Magloire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La corruption a stimulé la croissance économique', 0, 1), (@qid, 'La corruption a contribué à la récession socioéconomique', 1, 2), (@qid, 'Il n''y avait aucune relation entre les deux', 0, 3), (@qid, 'La récession a causé la corruption', 0, 4);
+
+-- ============================================================
+-- BLOC 28 : QUESTIONS COMPLÉMENTAIRES HISTOIRE UNIVERSELLE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Que signifie l''acronyme CECA ?', 'CECA signifie Communauté Européenne du Charbon et de l''Acier, créée en 1951.', 'Programme NS4 - Construction européenne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Coopération Économique des Chefs d''Armée', 0, 1), (@qid, 'Communauté Européenne du Charbon et de l''Acier', 1, 2), (@qid, 'Commission Européenne du Commerce et des Affaires', 0, 3), (@qid, 'Conseil Européen des Chefs d''État et Administrateurs', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays n''était PAS membre fondateur de la CEE en 1957 ?', 'L''Espagne n''était pas membre fondateur de la CEE. Elle n''a rejoint la CEE qu''en 1986.', 'Programme NS4 - Construction européenne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La France', 0, 1), (@qid, 'L''Italie', 0, 2), (@qid, 'L''Espagne', 1, 3), (@qid, 'La Belgique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle guerre civile européenne des années 1930 a été un prélude à la Seconde Guerre mondiale ?', 'La guerre civile en Espagne (1936-1939) fut un premier affrontement entre démocraties et dictatures.', 'Programme NS4 - Seconde Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La guerre civile en Grèce', 0, 1), (@qid, 'La guerre civile en Espagne', 1, 2), (@qid, 'La guerre civile en Hongrie', 0, 3), (@qid, 'La guerre civile en Yougoslavie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel document fondamental a défini les droits des travailleurs dans le traité fondateur de la CEE ?', 'Le Traité de Rome prévoyait notamment la libre circulation des personnes et des travailleurs entre États membres.', 'Programme NS4 - Construction européenne', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La Charte sociale européenne uniquement', 0, 1), (@qid, 'Le Traité de Rome garantissant la libre circulation', 1, 2), (@qid, 'La Constitution de l''OIT', 0, 3), (@qid, 'La Déclaration universelle des droits de l''homme', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel bilan humain la Seconde Guerre mondiale a-t-elle eu par rapport aux civils et militaires ?', 'La Seconde Guerre mondiale a fait autant de victimes civiles que de victimes militaires.', 'Programme NS4 - Seconde Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Beaucoup plus de militaires que de civils', 0, 1), (@qid, 'Autant de civils que de militaires', 1, 2), (@qid, 'Beaucoup plus de civils que de militaires', 0, 3), (@qid, 'Uniquement des militaires', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que la Politique Agricole Commune (PAC) de l''UE visait à faire initialement ?', 'La PAC visait d''abord à assurer la sécurité alimentaire européenne par une politique des prix.', 'Programme NS4 - Union Européenne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'À exporter toute la production agricole', 0, 1), (@qid, 'À assurer la sécurité alimentaire par une politique des prix', 1, 2), (@qid, 'À interdire les importations agricoles', 0, 3), (@qid, 'À privatiser l''agriculture européenne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel est le rôle de la Banque Européenne d''Investissement créée par le Traité de Rome ?', 'La BEI est destinée à faciliter l''expansion économique de la communauté par la création de ressources nouvelles.', 'Programme NS4 - Construction européenne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Contrôler les budgets nationaux', 0, 1), (@qid, 'Faciliter l''expansion économique par la création de ressources nouvelles', 1, 2), (@qid, 'Gérer la monnaie unique européenne', 0, 3), (@qid, 'Financer les armées nationales européennes', 0, 4);
+
+-- ============================================================
+-- BLOC 29 : QUESTIONS SUPPLÉMENTAIRES HAÏTI ET MONDE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel qualificatif Estimé mérite-t-il  pour ses actions économiques ?', 'Estimé mérite les qualificatifs de « réformiste et progressiste » pour ses actions économiques et sociales.', 'Programme NS4 - Gouvernement Estimé', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dictateur et conservateur', 0, 1), (@qid, 'Réformiste et progressiste', 1, 2), (@qid, 'Monarchiste et traditionnaliste', 0, 3), (@qid, 'Militariste et expansionniste', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle décision de Magloire en décembre 1956 a ouvert la brèche de la division politique ?', 'La tentative de coup d''État du 6 décembre 1956 et son discours à la nation ont créé la division politique.', 'Programme NS4 - Gouvernement Magloire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Son alliance avec la République Dominicaine', 0, 1), (@qid, 'Sa tentative de coup d''État du 6 décembre et son discours', 1, 2), (@qid, 'Son refus de démissionner en 1954', 0, 3), (@qid, 'Sa décision d''expulser les diplomates américains', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel type d''économie les États-Unis cherchaient-ils à instaurer en Haïti durant l''occupation ?', 'Les États-Unis ont instauré une économie néo-coloniale, orientée vers leur marché et dépendante de leur capital.', 'Programme NS4 - Occupation américaine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une économie socialiste', 0, 1), (@qid, 'Une économie néo-coloniale dépendante', 1, 2), (@qid, 'Une économie autarcique', 0, 3), (@qid, 'Une économie de marché libre indépendant', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel caractère l''idéologie nazie avait-elle vis-à-vis des autres peuples ?', 'L''idéologie nazie était raciste, affirmant la supériorité de la « race aryenne » et persécutant les autres peuples.', 'Programme NS4 - Nazisme', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Universaliste et égalitaire', 0, 1), (@qid, 'Raciste affirmant la supériorité aryenne', 1, 2), (@qid, 'Socialiste et internationaliste', 0, 3), (@qid, 'Libéral et démocrate', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que le Plan Marshall américain a fourni à l''Europe après 1947 ?', 'Le Plan Marshall a fourni une aide économique massive à l''Europe occidentale pour sa reconstruction.', 'Programme NS4 - Guerre froide', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une aide militaire exclusive', 0, 1), (@qid, 'Une aide économique massive pour la reconstruction', 1, 2), (@qid, 'Des troupes militaires américaines', 0, 3), (@qid, 'Une nouvelle constitution démocratique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle doctrine américaine de 1947 visait à endiguer l''expansion du communisme ?', 'La Doctrine Truman (1947) promettait l''aide des États-Unis aux pays menacés par le communisme.', 'Programme NS4 - Guerre froide', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La doctrine Monroe', 0, 1), (@qid, 'La doctrine Truman', 1, 2), (@qid, 'La doctrine Brejnev', 0, 3), (@qid, 'La doctrine Eisenhower', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel dirigeant soviétique a lancé la politique de perestroïka (restructuration) ?', 'Mikhaïl Gorbatchev a lancé la perestroïka et la glasnost en URSS à partir de 1985.', 'Programme NS4 - Guerre froide', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Léonid Brejnev', 0, 1), (@qid, 'Youri Andropov', 0, 2), (@qid, 'Mikhaïl Gorbatchev', 1, 3), (@qid, 'Nikita Khrouchtchev', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel pays a été partagé en deux blocs (Est et Ouest) emblématiques de la guerre froide ?', 'L''Allemagne a été partagée en RFA (Ouest) et RDA (Est) après la Seconde Guerre mondiale.', 'Programme NS4 - Guerre froide', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La France', 0, 1), (@qid, 'L''Italie', 0, 2), (@qid, 'L''Allemagne', 1, 3), (@qid, 'La Pologne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle crise de 1962 a failli déclencher une guerre nucléaire entre les États-Unis et l''URSS ?', 'La crise des missiles de Cuba (1962) a failli déclencher une guerre nucléaire.', 'Programme NS4 - Guerre froide', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La crise de Berlin (1961)', 0, 1), (@qid, 'La crise des missiles de Cuba (1962)', 1, 2), (@qid, 'La guerre de Corée (1950-1953)', 0, 3), (@qid, 'La guerre du Vietnam', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle organisation internationale regroupe les pays ACP  ?', 'Le groupe ACP regroupe 69 États d''Afrique-Caraïbe-Pacifique dans leurs relations avec l''UE.', 'Programme NS4 - Relations internationales', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ONU', 0, 1), (@qid, 'Le groupe des 77', 0, 2), (@qid, 'Le groupe ACP (Afrique-Caraïbe-Pacifique)', 1, 3), (@qid, 'La Francophonie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Qu''est-ce que le « système concentrationnaire » mentionné dans les sources de la Seconde Guerre mondiale ?', 'Le système concentrationnaire désigne les camps de concentration et d''extermination nazis.', 'Programme NS4 - Seconde Guerre mondiale', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un système d''urbanisation forcée', 0, 1), (@qid, 'Les camps de concentration et d''extermination nazis', 1, 2), (@qid, 'Un système économique de concentration industrielle', 0, 3), (@qid, 'Une politique de colonisation massive', 0, 4);
+
+
+-- ============================================================
+-- BLOC 30 : QUESTIONS FINALES DE SYNTHÈSE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel lien existe entre la Première et la Seconde Guerre mondiale  ?', 'La Seconde Guerre mondiale est en partie le fruit de la « paix boiteuse » de 1919 qui était une trêve, pas une paix durable.', 'Programme NS4 - Guerres mondiales', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elles n''ont aucun lien', 0, 1), (@qid, 'La Seconde est la suite de la Première, la paix de 1919 étant une simple trêve', 1, 2), (@qid, 'La Première Guerre a été causée par la Seconde', 0, 3), (@qid, 'Ce sont deux guerres totalement indépendantes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle période de l''histoire haïtienne s''étend de 1934 à 1957 ?', 'La période de 1934 à 1957 est celle allant de la désoccupation américaine à l''avènement de Paul Eugène Magloire au pouvoir.', 'Programme NS4 - Histoire haïtienne', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ère de l''indépendance nationale', 0, 1), (@qid, 'De la désoccupation américaine à l''avènement de Magloire', 1, 2), (@qid, 'La période duvaliérienne', 0, 3), (@qid, 'La période de transition démocratique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel concept géopolitique désigne l''organisation du monde selon centres dominants et périphéries dépendantes ?', 'Le concept de « système-monde » avec centres et périphéries décrit cette organisation géopolitique mondiale.', 'Programme NS4 - Géographie mondiale', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La mondialisation libérale', 0, 1), (@qid, 'Le système-monde avec centres et périphéries', 1, 2), (@qid, 'La bipolarisation Est-Ouest', 0, 3), (@qid, 'La fragmentation géopolitique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel problème haïtien des années 1970-1980 est lié à la crise agraire sous les Duvalier ?', 'La crise agraire a engendré la massification urbaine et le phénomène des boat people sous les Duvalier.', 'Programme NS4 - Ère Duvaliérienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le renforcement de l''agriculture rurale', 0, 1), (@qid, 'La massification urbaine et le phénomène des boat people', 1, 2), (@qid, 'Le boom agro-industriel', 0, 3), (@qid, 'L''autosuffisance alimentaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Comment la Constitution de 1987 est-elle considérée dans l''histoire politique haïtienne ?', 'La Constitution du 29 mars 1987 est considérée comme un instrument clé des luttes pour la démocratie et l''État de droit.', 'Programme NS4 - Transition 1986-1991', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une constitution antinationale', 0, 1), (@qid, 'Un instrument clé des luttes pour la démocratie et l''État de droit', 1, 2), (@qid, 'Une constitution imposée par les États-Unis', 0, 3), (@qid, 'Une constitution temporaire sans importance', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quelle révolution haïtienne a marqué le ressentiment de la classe noire contre les élites mulâtres ?', 'La révolution de 1946 exprime le ressentiment noir et les aspirations de la classe moyenne noire haïtienne.', 'Programme NS4 - Révolution de 1946', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La révolution de 1804', 0, 1), (@qid, 'La révolution de 1946', 1, 2), (@qid, 'La révolution de 1957', 0, 3), (@qid, 'La révolution de 1986', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel terme qualifie la politique économique de Magloire qui favorisait l''oligarchie traditionnelle ?', 'Malgré ses prétentions à l''équilibre, le régime de Magloire a favorisé l''oligarchie traditionnelle exaltante.', 'Programme NS4 - Gouvernement Magloire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une politique de justice sociale', 0, 1), (@qid, 'Une politique favorisant l''oligarchie traditionnelle', 1, 2), (@qid, 'Une politique de redistribution des richesses', 0, 3), (@qid, 'Une politique nationaliste authentique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(13, 2, 'Quel rôle l''ONU joue-t-elle dans la résolution des conflits modernes  ?', 'L''ONU revient sur le devant de la scène politique à la fin du XXe siècle pour gérer les conflits internationaux.', 'Programme NS4 - ONU', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle est totalement inefficace', 0, 1), (@qid, 'Elle revient sur le devant de la scène politique mondiale', 1, 2), (@qid, 'Elle a disparu après la guerre froide', 0, 3), (@qid, 'Elle est dominée exclusivement par les États-Unis', 0, 4);
+
+
+
+
+
 
 -- Complétion
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
@@ -8431,6 +15679,1830 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'I saw an dog.', 0, 1), (@qid, 'She is a engineer.', 0, 2), (@qid, 'He bought a book.', 1, 3), (@qid, 'They have the apple.', 0, 4);
+
+
+-- ============================================================
+-- QCM ANGLAIS – NS4 HAITI – 400+ Questions
+-- matiere_id = 14 | type_id = 2
+-- ============================================================
+
+-- ============================================================
+-- SECTION 1 : CONDITIONALS (Types 0, 1, 2, 3)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If you ___ water to 100°C, it boils. (Zero conditional)', 'Zero conditional: If + present simple, present simple. Used for general truths.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will heat', 0, 1), (@qid, 'heated', 0, 2), (@qid, 'heat', 1, 3), (@qid, 'would heat', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If it ___ tomorrow, we will cancel the trip. (First conditional)', 'First conditional: If + present simple, will + infinitive. Real future possibility.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'rained', 0, 1), (@qid, 'rains', 1, 2), (@qid, 'will rain', 0, 3), (@qid, 'would rain', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If I ___ more time, I would learn another language. (Second conditional)', 'Second conditional: If + past simple, would + infinitive. Unreal present situation.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'have', 0, 1), (@qid, 'will have', 0, 2), (@qid, 'had', 1, 3), (@qid, 'have had', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She would have passed if she ___ harder. (Third conditional)', 'Third conditional: If + past perfect, would have + past participle. Unreal past situation.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'studied', 0, 1), (@qid, 'had studied', 1, 2), (@qid, 'has studied', 0, 3), (@qid, 'would study', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If you put oil in water, it ___. (Zero conditional)', 'Zero conditional expresses a scientific fact. Present simple in both clauses.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'floated', 0, 1), (@qid, 'will float', 0, 2), (@qid, 'floats', 1, 3), (@qid, 'would float', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'He will be late if he ___ soon. (First conditional – negative)', 'First conditional with negative: does not hurry = won''t hurry. Use present simple in the if-clause.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'doesn''t hurry', 1, 1), (@qid, 'didn''t hurry', 0, 2), (@qid, 'won''t hurry', 0, 3), (@qid, 'hadn''t hurried', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If Bob ___ you, he would tell you the truth. (Second conditional)', 'Second conditional: If + past simple, would + base verb.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'is', 0, 1), (@qid, 'were', 1, 2), (@qid, 'has been', 0, 3), (@qid, 'will be', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'You would have won if you ___ part in the contest. (Third conditional)', 'Third conditional: If + past perfect, would have + past participle.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'took', 0, 1), (@qid, 'take', 0, 2), (@qid, 'had taken', 1, 3), (@qid, 'have taken', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If she hadn''t gone out in the rain, she ___ a cold. (Third conditional)', 'Third conditional negative: If + past perfect negative, would not have + past participle.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'wouldn''t catch', 0, 1), (@qid, 'wouldn''t have caught', 1, 2), (@qid, 'didn''t catch', 0, 3), (@qid, 'hadn''t caught', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'As soon as she ___ home, I will call you. (Time clause)', 'Time clauses (as soon as, when, after) use present simple for future reference.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will get', 0, 1), (@qid, 'gets', 1, 2), (@qid, 'got', 0, 3), (@qid, 'would get', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'They would have changed plans if they ___ the weather forecast. (Third conditional)', 'Third conditional: If + past perfect, would have + past participle.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'heard', 0, 1), (@qid, 'had heard', 1, 2), (@qid, 'have heard', 0, 3), (@qid, 'were hearing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If you ___ your money in your wallet, you wouldn''t lose it. (Second conditional)', 'Second conditional: If + past simple, would + base verb.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'put', 1, 1), (@qid, 'puts', 0, 2), (@qid, 'had put', 0, 3), (@qid, 'will put', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'You would have succeeded if you ___ on trying. (Third conditional)', 'Third conditional: If + past perfect, would have + past participle.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'kept', 0, 1), (@qid, 'had kept', 1, 2), (@qid, 'keep', 0, 3), (@qid, 'have kept', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is a correct first conditional?', 'First conditional: If + present simple, will + base verb.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'If she would come, I will be happy.', 0, 1), (@qid, 'If she comes, I will be happy.', 1, 2), (@qid, 'If she came, I will be happy.', 0, 3), (@qid, 'If she has come, I will be happy.', 0, 4);
+
+-- ============================================================
+-- SECTION 2 : PASSIVE VOICE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Choose the correct passive form: "They teach History at this school."', 'Passive: object + to be (present) + past participle. Subject becomes agent.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'History is teaching at this school.', 0, 1), (@qid, 'History is taught at this school.', 1, 2), (@qid, 'History was taught at this school.', 0, 3), (@qid, 'History has taught at this school.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Passive form of: "My grandfather built two houses in 1943."', 'Past simple passive: was/were + past participle.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Two houses are built by my grandfather in 1943.', 0, 1), (@qid, 'Two houses were built by my grandfather in 1943.', 1, 2), (@qid, 'Two houses have been built by my grandfather in 1943.', 0, 3), (@qid, 'Two houses was built by my grandfather in 1943.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Passive form of: "People speak Portuguese in Brazil."', 'Present simple passive: is/are + past participle.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Portuguese is spoke in Brazil.', 0, 1), (@qid, 'Portuguese is spoken in Brazil.', 1, 2), (@qid, 'Portuguese was spoken in Brazil.', 0, 3), (@qid, 'Portuguese has been speaking in Brazil.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Passive form of: "They would take the opportunity."', 'Modal passive: modal + be + past participle.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'The opportunity would been taken.', 0, 1), (@qid, 'The opportunity would be taken.', 1, 2), (@qid, 'The opportunity would have taken.', 0, 3), (@qid, 'The opportunity is taken.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Active form of: "This room was decorated by my mother."', 'Active: subject + past simple + object.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'My mother is decorating this room.', 0, 1), (@qid, 'My mother decorated this room.', 1, 2), (@qid, 'My mother has decorated this room.', 0, 3), (@qid, 'My mother decorates this room.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Active form of: "I was told the joke by my sister."', 'Active: subject (agent) + past simple + indirect object + direct object.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'My sister is telling me the joke.', 0, 1), (@qid, 'My sister told me the joke.', 1, 2), (@qid, 'My sister has told me the joke.', 0, 3), (@qid, 'My sister was telling me the joke.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Passive form of: "My brother gives me three dollars every day."', 'Present simple passive with indirect object becoming subject.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'I am given three dollars by my brother every day.', 1, 1), (@qid, 'I was given three dollars by my brother every day.', 0, 2), (@qid, 'Three dollars are giving to me every day.', 0, 3), (@qid, 'Three dollars gave by my brother every day.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Passive form of: "They will have built the new bridge by the end of the year."', 'Future perfect passive: will have been + past participle.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'The new bridge will be built by the end of the year.', 0, 1), (@qid, 'The new bridge will have been built by the end of the year.', 1, 2), (@qid, 'The new bridge has been built by the end of the year.', 0, 3), (@qid, 'The new bridge would have been built by the end of the year.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is in the passive voice?', 'Passive voice uses: to be + past participle.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She writes a letter every day.', 0, 1), (@qid, 'The letter is written by her every day.', 1, 2), (@qid, 'She is writing a letter.', 0, 3), (@qid, 'She wrote a letter yesterday.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Passive form of: "The boss fired him last week."', 'Past simple passive: was/were + past participle.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'He was fired by the boss last week.', 1, 1), (@qid, 'He is fired by the boss last week.', 0, 2), (@qid, 'He has been fired by the boss last week.', 0, 3), (@qid, 'He had been fired by the boss last week.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Passive form of: "The police have arrested three suspects."', 'Present perfect passive: have/has been + past participle.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Three suspects are arrested by the police.', 0, 1), (@qid, 'Three suspects were arrested by the police.', 0, 2), (@qid, 'Three suspects have been arrested by the police.', 1, 3), (@qid, 'Three suspects had been arrested by the police.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Active form of: "The bill can''t be paid by Sue."', 'Modal passive becomes: modal + base verb in active.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sue doesn''t pay the bill.', 0, 1), (@qid, 'Sue can''t pay the bill.', 1, 2), (@qid, 'Sue won''t pay the bill.', 0, 3), (@qid, 'Sue couldn''t pay the bill.', 0, 4);
+
+-- ============================================================
+-- SECTION 3 : COMPARATIVE & SUPERLATIVE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The weather in Haiti is ___ the weather in Canada. (hot)', 'Comparative of "hot" (short adj): hotter than.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'more hot than', 0, 1), (@qid, 'hotter than', 1, 2), (@qid, 'the hottest than', 0, 3), (@qid, 'hoter than', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Prague is one of the ___ tourist destinations in Europe. (popular)', 'Superlative of "popular" (long adj): the most popular.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'most popular', 1, 1), (@qid, 'more popular', 0, 2), (@qid, 'popularest', 0, 3), (@qid, 'the more popular', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'This is the ___ holiday I''ve ever enjoyed. (good)', 'Irregular superlative: good → the best.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'better', 0, 1), (@qid, 'most good', 0, 2), (@qid, 'best', 1, 3), (@qid, 'goodest', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Peter is tall. John is tall too. Peter is ___ John. (tall)', 'Equal comparison: as tall as.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'taller than', 0, 1), (@qid, 'the tallest of', 0, 2), (@qid, 'as tall as', 1, 3), (@qid, 'tall like', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Among all the natural disasters, this one is ___. (bad)', 'Irregular superlative: bad → the worst.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'baddest', 0, 1), (@qid, 'more bad', 0, 2), (@qid, 'the worst', 1, 3), (@qid, 'worse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The new system is more productive and ___. (cheap)', 'Parallel structure with comparative: more productive and cheaper.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'cheap', 0, 1), (@qid, 'cheaper', 1, 2), (@qid, 'the cheapest', 0, 3), (@qid, 'more cheap', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Benny lives on the 20th floor. His apartment is ___ of all three. (high)', 'Superlative of high: the highest.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'higher', 0, 1), (@qid, 'the highest', 1, 2), (@qid, 'the most high', 0, 3), (@qid, 'most highest', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Albert''s lease is for one year. His lease is ___ than mine (3 years). (short)', 'Comparative of short (one syllable): shorter than.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'the shortest', 0, 1), (@qid, 'more short', 0, 2), (@qid, 'shorter', 1, 3), (@qid, 'shortest', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Steve''s apartment is ___ than mine. (expensive)', 'Comparative of expensive (long adj): less expensive.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'more expensive', 0, 1), (@qid, 'expensiver', 0, 2), (@qid, 'less expensive', 1, 3), (@qid, 'the least expensive', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which is the correct comparative of "far"?', 'Irregular comparative: far → farther / further.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'farer', 0, 1), (@qid, 'more far', 0, 2), (@qid, 'farther', 1, 3), (@qid, 'farest', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She is ___ student in the class. (intelligent)', 'Superlative of intelligent (long adj): the most intelligent.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'more intelligent', 0, 1), (@qid, 'the most intelligent', 1, 2), (@qid, 'intelligenter', 0, 3), (@qid, 'the intelligentist', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'This book is ___ than the movie. (interesting)', 'Comparative of interesting (3 syllables): more interesting than.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'interestinger', 0, 1), (@qid, 'most interesting', 0, 2), (@qid, 'more interesting', 1, 3), (@qid, 'the most interesting', 0, 4);
+
+-- ============================================================
+-- SECTION 4 : TAG QUESTIONS
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Roberto wasn''t in class today, ___?', 'Negative statement → positive tag. Was not → was he?', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'was he', 1, 1), (@qid, 'did he', 0, 2), (@qid, 'wasn''t he', 0, 3), (@qid, 'has he', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'You didn''t damage my car, ___?', 'Negative statement (did not) → positive tag: did you?', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'did you', 1, 1), (@qid, 'has you', 0, 2), (@qid, 'didn''t you', 0, 3), (@qid, 'were you', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'You haven''t seen Paul today, ___?', 'Negative present perfect → positive tag: have you?', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'have you', 1, 1), (@qid, 'haven''t you', 0, 2), (@qid, 'did you', 0, 3), (@qid, 'do you', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She can swim very well, ___?', 'Positive statement with modal "can" → negative tag: can''t she?', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'can she', 0, 1), (@qid, 'can''t she', 1, 2), (@qid, 'doesn''t she', 0, 3), (@qid, 'isn''t she', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'They have finished their homework, ___?', 'Positive present perfect → negative tag: haven''t they?', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'have they', 0, 1), (@qid, 'didn''t they', 0, 2), (@qid, 'haven''t they', 1, 3), (@qid, 'don''t they', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'He is your brother, ___?', 'Positive statement with "is" → negative tag: isn''t he?', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'is he', 0, 1), (@qid, 'isn''t he', 1, 2), (@qid, 'wasn''t he', 0, 3), (@qid, 'does he', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Let''s go to the cinema, ___?', '"Let''s" suggestions use: shall we? as the tag.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will we', 0, 1), (@qid, 'don''t we', 0, 2), (@qid, 'shall we', 1, 3), (@qid, 'won''t we', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Nothing went wrong, ___?', 'Negative pronoun "nothing" → positive tag with "did it".', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'did it', 1, 1), (@qid, 'didn''t it', 0, 2), (@qid, 'was it', 0, 3), (@qid, 'does it', 0, 4);
+
+-- ============================================================
+-- SECTION 5 : GERUND vs INFINITIVE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Edmond enjoys hiking and ___. (Parallel structure)', 'Enjoy + gerund. Parallel structure requires matching forms: enjoys hiking and fishing.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to camp', 0, 1), (@qid, 'fishing', 1, 2), (@qid, 'to fish', 0, 3), (@qid, 'to climb', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The boss is tired of ___ to complaints all day. (listen)', 'Preposition + gerund: tired of + gerund.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to listen', 0, 1), (@qid, 'listen', 0, 2), (@qid, 'listening', 1, 3), (@qid, 'listened', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Many candidates aren''t used to ___ exams regularly. (take)', '"Be used to" is followed by a gerund.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'take', 0, 1), (@qid, 'to take', 0, 2), (@qid, 'taking', 1, 3), (@qid, 'taken', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Most candidates were prepared ___ the questions properly. (answer)', '"Prepared to" is followed by an infinitive.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'answering', 0, 1), (@qid, 'to answer', 1, 2), (@qid, 'answer', 0, 3), (@qid, 'answered', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'You must not plan on ___ from them before August. (hear)', '"Plan on" + gerund.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to hear', 0, 1), (@qid, 'hear', 0, 2), (@qid, 'hearing', 1, 3), (@qid, 'heard', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'How can parents get their children ___ more? (read)', '"Get someone to do something": get + object + infinitive.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'reading', 0, 1), (@qid, 'to read', 1, 2), (@qid, 'read', 0, 3), (@qid, 'reads', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She decided ___ a new car. (buy)', '"Decide" is followed by an infinitive.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'buying', 0, 1), (@qid, 'to buy', 1, 2), (@qid, 'buy', 0, 3), (@qid, 'bought', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I suggest that you don''t take the job without ___ the salary. (renegotiate)', '"Without" (preposition) is followed by a gerund.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to renegotiate', 0, 1), (@qid, 'renegotiate', 0, 2), (@qid, 'renegotiating', 1, 3), (@qid, 'renegotiated', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She avoided ___ the question. (answer)', '"Avoid" is followed by a gerund.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to answer', 0, 1), (@qid, 'answering', 1, 2), (@qid, 'answer', 0, 3), (@qid, 'answered', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'He is looking forward to ___ you again. (see)', '"Look forward to" + gerund (not infinitive).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'see', 0, 1), (@qid, 'to see', 0, 2), (@qid, 'seeing', 1, 3), (@qid, 'seen', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'That fellow is too undependable to ___ him totally. (trust)', '"Too + adjective + infinitive" structure.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'trusting', 0, 1), (@qid, 'trusted', 0, 2), (@qid, 'trust', 1, 3), (@qid, 'to trust', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I miss ___ with my old friends. (hang out)', '"Miss" is followed by a gerund.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to hang out', 0, 1), (@qid, 'hanging out', 1, 2), (@qid, 'hang out', 0, 3), (@qid, 'hung out', 0, 4);
+
+-- ============================================================
+-- SECTION 6 : TENSES – Present Perfect / Past Simple
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Thomas ___ his vacation for several months.', 'Present perfect continuous: have/has been + -ing. Ongoing action from the past.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'is planning', 0, 1), (@qid, 'planned', 0, 2), (@qid, 'has been planning', 1, 3), (@qid, 'plans', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Ben looks tired. He ___ hard all day long.', 'Present perfect continuous: has been working = action still relevant now.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'is working', 0, 1), (@qid, 'had been working', 0, 2), (@qid, 'has been working', 1, 3), (@qid, 'worked', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'They have been learning English and Spanish ___ 2 years.', '"For" is used with a duration of time. "Since" is used with a point in time.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ago', 0, 1), (@qid, 'for', 1, 2), (@qid, 'since', 0, 3), (@qid, 'during', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Jason ___ home before the storm broke out.', '"Before the storm broke out" implies a past action completed prior to another: past perfect.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'returned', 0, 1), (@qid, 'has returned', 0, 2), (@qid, 'had returned', 1, 3), (@qid, 'was returning', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I think my sister ___ a dancer one day.', 'Prediction about the future: will + base verb.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'become', 0, 1), (@qid, 'is becoming', 0, 2), (@qid, 'will become', 1, 3), (@qid, 'has become', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She was lying on her bed ___ about the party.', 'Past continuous: was + -ing. "Thinking" is the correct gerund form here.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to think', 0, 1), (@qid, 'think', 0, 2), (@qid, 'thinking', 1, 3), (@qid, 'thought', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Tony was making lunch ___ I was cutting the grass.', '"While" introduces two simultaneous past continuous actions.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'when', 0, 1), (@qid, 'while', 1, 2), (@qid, 'afterwards', 0, 3), (@qid, 'because', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'He went to bed ___ he had brushed his teeth.', '"After" introduces a past action completed before another past action.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'hence', 0, 1), (@qid, 'after', 1, 2), (@qid, 'while', 0, 3), (@qid, 'since', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'An insomniac ___ at night. (sleep, not)', 'Habitual fact: does not sleep. Third person singular + does not + base.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'doesn''t sleep', 1, 1), (@qid, 'isn''t sleeping', 0, 2), (@qid, 'didn''t sleep', 0, 3), (@qid, 'won''t sleep', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I won''t know the answer, but I wish I ___ it. (know)', '"Wish" + past simple expresses an unreal present desire.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'know', 0, 1), (@qid, 'will know', 0, 2), (@qid, 'knew', 1, 3), (@qid, 'have known', 0, 4);
+
+-- ============================================================
+-- SECTION 7 : MODAL VERBS
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I ___ water the plants. It has rained this morning.', '"Don''t have to" = no obligation. It rained, so watering is unnecessary.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'should', 0, 1), (@qid, 'don''t have to', 1, 2), (@qid, 'might', 0, 3), (@qid, 'must', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'You ___ be quiet in the library. It''s a rule.', '"Must" expresses strong obligation or a rule.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'might', 0, 1), (@qid, 'could', 0, 2), (@qid, 'must', 1, 3), (@qid, 'would', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She ___ be at home; her car is in the driveway.', '"Must" expresses logical deduction/certainty.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'should', 0, 1), (@qid, 'must', 1, 2), (@qid, 'can', 0, 3), (@qid, 'will', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'You ___ smoke in here. It is strictly forbidden.', '"Must not" = prohibition (not allowed).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'don''t have to', 0, 1), (@qid, 'mustn''t', 1, 2), (@qid, 'couldn''t', 0, 3), (@qid, 'needn''t', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, '___ I borrow your pen for a moment?', '"Can/Could I" is used to ask for permission politely.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Must', 0, 1), (@qid, 'Should', 0, 2), (@qid, 'Could', 1, 3), (@qid, 'Would', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'You look pale. You ___ see a doctor.', '"Should" gives advice or a recommendation.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'must', 0, 1), (@qid, 'should', 1, 2), (@qid, 'can', 0, 3), (@qid, 'might', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Is it important that we ___ there? (be)', 'Subjunctive mood after "important that": base form of verb.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'are', 0, 1), (@qid, 'were', 0, 2), (@qid, 'be', 1, 3), (@qid, 'will be', 0, 4);
+
+-- ============================================================
+-- SECTION 8 : ADJECTIVES (Participle adjectives -ing/-ed)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I was ___ by the movie. I had expected it to be more interesting.', '-ed adjectives describe how a person feels. The movie caused disappointment.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'disappointing', 0, 1), (@qid, 'disappointed', 1, 2), (@qid, 'disappoint', 0, 3), (@qid, 'to disappoint', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Are you ___ in soccer?', '-ed adjective: the person feels the emotion (interested in).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'interesting', 0, 1), (@qid, 'interested', 1, 2), (@qid, 'interest', 0, 3), (@qid, 'to interest', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'It''s sometimes ___ when you have to ask people for money.', '-ing adjective describes a situation or thing that causes a feeling.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'embarrassed', 0, 1), (@qid, 'embarrassing', 1, 2), (@qid, 'embarrass', 0, 3), (@qid, 'to embarrass', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I was really ___ when the job was offered to me.', '-ed adjective: the person feels surprise. The event caused the emotion.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'surprising', 0, 1), (@qid, 'surprised', 1, 2), (@qid, 'to surprise', 0, 3), (@qid, 'surprises', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'We were all ___ by the play.', '-ed adjective: the audience felt the fascination caused by the play.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'fascinating', 0, 1), (@qid, 'fascinated', 1, 2), (@qid, 'fascinate', 0, 3), (@qid, 'to fascinate', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If something makes you very funny, you are ___ by it.', '-ed adjective: amused = the person feels amusement.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'amusing', 0, 1), (@qid, 'amused', 1, 2), (@qid, 'amuse', 0, 3), (@qid, 'to amuse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'When you feel tired and impatient because you have nothing to do, you are ___.',  '-ed adjective: bored = the person feels boredom.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'boring', 0, 1), (@qid, 'bored', 1, 2), (@qid, 'to bore', 0, 3), (@qid, 'bore', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If something makes you sad and unhappy, you feel ___.',  '-ed adjective: depressed = feeling sadness.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'depressing', 0, 1), (@qid, 'depressed', 1, 2), (@qid, 'depress', 0, 3), (@qid, 'to depress', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The population is ___ by this political turmoil.',  '-ed adjective: alarmed = the population feels alarm.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'alarming', 0, 1), (@qid, 'alarmed', 1, 2), (@qid, 'alarm', 0, 3), (@qid, 'to alarm', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I''m ___ with the result, it''s exactly what I wanted.',  '-ed adjective: delighted = very pleased.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'delighting', 0, 1), (@qid, 'delighted', 1, 2), (@qid, 'to delight', 0, 3), (@qid, 'delight', 0, 4);
+
+-- ============================================================
+-- SECTION 9 : VOCABULARY (Definitions & Word Choice)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'A condition that causes people to lose their memory is called ___.',  'Amnesia = loss of memory.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'insomnia', 0, 1), (@qid, 'amnesia', 1, 2), (@qid, 'anarchy', 0, 3), (@qid, 'anemia', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'An article expressing the opinion of the editor or publisher is called ___.',  'Editorial = opinion article written by the editor.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'castle', 0, 1), (@qid, 'crutches', 0, 2), (@qid, 'editorial', 1, 3), (@qid, 'flood', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'A large amount of water covering an area that is usually dry is called ___.',  'Flood = overflow of water onto normally dry land.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'drought', 0, 1), (@qid, 'flood', 1, 2), (@qid, 'amnesia', 0, 3), (@qid, 'castle', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Going from the lifestyle of your own culture to another culture is called ___.',  'Acculturation = adopting elements of another culture.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'xenophobia', 0, 1), (@qid, 'anarchy', 0, 2), (@qid, 'acculturation', 1, 3), (@qid, 'smuggling', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The illegal import and export of goods is called ___.',  'Smuggling = illegal trade across borders.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'stereotypes', 0, 1), (@qid, 'smuggling', 1, 2), (@qid, 'anarchy', 0, 3), (@qid, 'cultural shock', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'An extreme fear or dislike of people from other countries is called ___.',  'Xenophobia = fear or hatred of foreigners.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'anarchy', 0, 1), (@qid, 'acculturation', 0, 2), (@qid, 'xenophobia', 1, 3), (@qid, 'stereotypes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Fixed ideas that people have about what someone or something is like are called ___.',  'Stereotypes = oversimplified generalizations about groups.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'xenophobia', 0, 1), (@qid, 'stereotypes', 1, 2), (@qid, 'anarchy', 0, 3), (@qid, 'acculturation', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The absence of any governmental authority is called ___.',  'Anarchy = absence of government or law.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'cultural shock', 0, 1), (@qid, 'smuggling', 0, 2), (@qid, 'anarchy', 1, 3), (@qid, 'stereotypes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'A book of maps that travelers often carry on trips is called ___.',  'Atlas = a collection of maps in book form.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'an ocean', 0, 1), (@qid, 'an atlas', 1, 2), (@qid, 'a cliff', 0, 3), (@qid, 'a mountain', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'My sister-in-law works at a bank. She has a degree in ___.', '"Accounting" is the noun for the field of study; "accountant" is the person.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'accountant', 0, 1), (@qid, 'accounting', 1, 2), (@qid, 'account', 0, 3), (@qid, 'accountable', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I''m not going to the ___ this evening. (rehearse/rehearsal)', '"Rehearsal" is the noun form. You go to a rehearsal, not to a verb.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'rehearse', 0, 1), (@qid, 'rehearsal', 1, 2), (@qid, 'rehearsing', 0, 3), (@qid, 'rehearsed', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If you can''t get along with George, I''m sure there is a good ___. (reasonable/reason)', '"Reason" is the noun. "Reasonable" is an adjective.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'reasonable', 0, 1), (@qid, 'reason', 1, 2), (@qid, 'reasoning', 0, 3), (@qid, 'reasonably', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Have the ___ been made for the meeting yet? (arranges/arrangements)', '"Arrangements" is the noun meaning organized plans.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'arranges', 0, 1), (@qid, 'arrangements', 1, 2), (@qid, 'arranged', 0, 3), (@qid, 'arranging', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Jim would like to take ___ in this dire situation. (actress/action)', '"Action" is the correct noun. "Actress" refers to a person.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'actress', 0, 1), (@qid, 'action', 1, 2), (@qid, 'act', 0, 3), (@qid, 'acting', 0, 4);
+
+-- ============================================================
+-- SECTION 10 : PREPOSITIONS
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I have got an interview ___ Monday afternoon.', '"On" is used with days of the week.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'at', 0, 1), (@qid, 'on', 1, 2), (@qid, 'in', 0, 3), (@qid, 'by', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Don''t take that money from the table. It''s ___.',  'Possessive pronoun "mine" replaces "my money".', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'my', 0, 1), (@qid, 'me', 0, 2), (@qid, 'mine', 1, 3), (@qid, 'myself', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Our friends live in this house. It''s our ___.', '"Friends'' house" = plural possessive (apostrophe after s).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'friend''s house', 0, 1), (@qid, 'friends'' house', 1, 2), (@qid, 'house of friends', 0, 3), (@qid, 'house for friends', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'We still have ___ work to do.', '"A great deal of" is used with uncountable nouns like "work".', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'several', 0, 1), (@qid, 'many', 0, 2), (@qid, 'a great deal of', 1, 3), (@qid, 'a few', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I hardly ___ watch TV.', '"Hardly ever" = almost never. "Ever" follows "hardly".', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'never', 0, 1), (@qid, 'yet', 0, 2), (@qid, 'already', 0, 3), (@qid, 'ever', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Mary is an old friend of mine. I''m very ___ of her.',  '"Fond of" = to like someone/something very much.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'responsible', 0, 1), (@qid, 'fond', 1, 2), (@qid, 'superior', 0, 3), (@qid, 'bored', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'In the army, a sergeant is ___ to a corporal.',  '"Superior to" = having a higher rank than.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'responsible', 0, 1), (@qid, 'fond', 0, 2), (@qid, 'superior', 1, 3), (@qid, 'bored', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Who is ___ for this mess?',  '"Responsible for" = accountable for something.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'fond', 0, 1), (@qid, 'superior', 0, 2), (@qid, 'responsible', 1, 3), (@qid, 'delighted', 0, 4);
+
+-- ============================================================
+-- SECTION 11 : QUESTION FORMATION
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Those people left for the Dominican Republic last year. What is the correct question?', 'Question about destination: Where did they go? (past simple)', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Where do those people leave?', 0, 1), (@qid, 'Where did those people leave for?', 1, 2), (@qid, 'Where those people left for?', 0, 3), (@qid, 'When those people left?', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Most of you have been learning English for at least seven years. What is the correct question?', 'Question about duration: How long have you been learning? (present perfect cont.)', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'How long you have been learning English?', 0, 1), (@qid, 'How long have you been learning English?', 1, 2), (@qid, 'Since when are you learning English?', 0, 3), (@qid, 'How long did you learn English?', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'My younger sister turned twelve years old last month. What is the correct question?', 'Question about age: How old did she turn last month?', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'How old is your sister?', 0, 1), (@qid, 'How old did your sister turn last month?', 1, 2), (@qid, 'What age your sister has?', 0, 3), (@qid, 'When did your sister turn old?', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'That employee often meets his colleagues at the cafeteria. What is the correct question?', 'Question about place: Where does he often meet his colleagues?', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Where does that employee often meet his colleagues?', 1, 1), (@qid, 'Where that employee often meets?', 0, 2), (@qid, 'Who does meet at the cafeteria?', 0, 3), (@qid, 'When that employee meets?', 0, 4);
+
+-- ============================================================
+-- SECTION 12 : ARTICLES (a / an / the)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses the correct article?', '"A" before consonant sounds. "An" before vowel sounds.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She is a engineer.', 0, 1), (@qid, 'I saw an dog.', 0, 2), (@qid, 'He bought a book.', 1, 3), (@qid, 'They have an cat.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She is ___ engineer.', '"An" is used before vowel sounds. "Engineer" starts with a vowel sound.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'a', 0, 1), (@qid, 'an', 1, 2), (@qid, 'the', 0, 3), (@qid, 'Ø (no article)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'He is ___ honest man.', '"Honest" starts with a silent H, so the sound is a vowel → use "an".', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'a', 0, 1), (@qid, 'an', 1, 2), (@qid, 'the', 0, 3), (@qid, 'some', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'John behaves as if he ___ a baby.', '"As if" + past simple (subjunctive-like) to express unreality.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'is', 0, 1), (@qid, 'were', 1, 2), (@qid, 'be', 0, 3), (@qid, 'will be', 0, 4);
+
+-- ============================================================
+-- SECTION 13 : PRONOUNS & POSSESSIVES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'That book is ___. Nobody else owns it. (I)', 'Possessive pronoun for I = mine (no noun follows).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'my', 0, 1), (@qid, 'me', 0, 2), (@qid, 'mine', 1, 3), (@qid, 'myself', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'These are our books. They are ___.',  'Possessive pronoun for we/our = ours.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'our', 0, 1), (@qid, 'ours', 1, 2), (@qid, 'us', 0, 3), (@qid, 'ourselves', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She hurt ___ during the game.',  'Reflexive pronoun for she = herself.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'her', 0, 1), (@qid, 'hers', 0, 2), (@qid, 'herself', 1, 3), (@qid, 'she', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, '___ is the car? It belongs to Paul.',  'Possessive pronoun to ask about ownership: Whose?', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Who', 0, 1), (@qid, 'Which', 0, 2), (@qid, 'Whose', 1, 3), (@qid, 'What', 0, 4);
+
+-- ============================================================
+-- SECTION 14 : CONJUNCTIONS & CONNECTORS
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, '___ most people care about the planet, others don''t.', '"Although/Even though" introduces a contrast between two ideas.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Because', 0, 1), (@qid, 'Although', 1, 2), (@qid, 'So', 0, 3), (@qid, 'Unless', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'He studied hard; ___, he failed the exam.',  '"Nevertheless" / "However" = despite this. Contrast connector.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'therefore', 0, 1), (@qid, 'however', 1, 2), (@qid, 'moreover', 0, 3), (@qid, 'furthermore', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She was tired, ___ she kept working.',  '"Yet" = but/however. Introduces contrast in the same sentence.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'so', 0, 1), (@qid, 'because', 0, 2), (@qid, 'yet', 1, 3), (@qid, 'for', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I will call you ___ I arrive.',  '"When" introduces a time clause with future reference using present simple.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'while', 0, 1), (@qid, 'when', 1, 2), (@qid, 'if', 0, 3), (@qid, 'because', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'You can borrow my car ___ you return it tomorrow.',  '"As long as" = on the condition that.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'unless', 0, 1), (@qid, 'although', 0, 2), (@qid, 'as long as', 1, 3), (@qid, 'in case', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'He was late ___ the traffic jam.',  '"Because of" + noun phrase (not a clause).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'because', 0, 1), (@qid, 'because of', 1, 2), (@qid, 'due', 0, 3), (@qid, 'despite', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, '___ the rain, they decided to go for a walk.',  '"Despite/In spite of" + noun = contrast without a full clause.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Although', 0, 1), (@qid, 'Because of', 0, 2), (@qid, 'Despite', 1, 3), (@qid, 'Since', 0, 4);
+
+-- ============================================================
+-- SECTION 15 : REPORTED SPEECH
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She said, "I am tired." → She said that she ___ tired.',  'Reported speech: present simple → past simple.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'is', 0, 1), (@qid, 'was', 1, 2), (@qid, 'has been', 0, 3), (@qid, 'would be', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'He said, "I will call you." → He said that he ___ me.',  'Reported speech: will → would.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will call', 0, 1), (@qid, 'would call', 1, 2), (@qid, 'calls', 0, 3), (@qid, 'has called', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, '"Don''t open the door," she told me. → She told me ___ the door.',  'Reported imperative negative: told me not to + infinitive.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to not open', 0, 1), (@qid, 'not opening', 0, 2), (@qid, 'not to open', 1, 3), (@qid, 'don''t open', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, '"Can you help me?" she asked. → She asked if I ___ help her.',  'Reported question with "can": can → could. Yes/No question → if clause.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'can', 0, 1), (@qid, 'could', 1, 2), (@qid, 'will', 0, 3), (@qid, 'would', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, '"We have finished the project," they said. → They said that they ___ the project.',  'Reported speech: present perfect → past perfect.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'have finished', 0, 1), (@qid, 'had finished', 1, 2), (@qid, 'finished', 0, 3), (@qid, 'were finishing', 0, 4);
+
+-- ============================================================
+-- SECTION 16 : RELATIVE CLAUSES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The man ___ called yesterday is my uncle.',  '"Who" introduces a relative clause for people (subject).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'which', 0, 1), (@qid, 'who', 1, 2), (@qid, 'whose', 0, 3), (@qid, 'whom', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The book ___ I read last week was fascinating.',  '"Which/That" introduces a relative clause for things.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'who', 0, 1), (@qid, 'whose', 0, 2), (@qid, 'which', 1, 3), (@qid, 'whom', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The student ___ backpack was stolen reported it to the principal.',  '"Whose" is used to show possession in a relative clause.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'who', 0, 1), (@qid, 'which', 0, 2), (@qid, 'whose', 1, 3), (@qid, 'whom', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The city ___ I was born is beautiful.',  '"Where" is used for places in relative clauses.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'which', 0, 1), (@qid, 'where', 1, 2), (@qid, 'when', 0, 3), (@qid, 'that', 0, 4);
+
+-- ============================================================
+-- SECTION 17 : WORD FORMATION & SUFFIXES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She is a very ___ person. She always does what she says. (rely)', 'Reliable = adjective from "rely" + -able. Means trustworthy.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'relying', 0, 1), (@qid, 'reliance', 0, 2), (@qid, 'reliable', 1, 3), (@qid, 'relied', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The ___ of the new policy was announced yesterday. (implement)', '"Implementation" is the noun form of "implement".', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'implement', 0, 1), (@qid, 'implementing', 0, 2), (@qid, 'implementation', 1, 3), (@qid, 'implementable', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'His speech was truly ___. Everyone applauded. (inspire)', '"Inspirational" = adjective meaning causing inspiration.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'inspiration', 0, 1), (@qid, 'inspiring', 1, 2), (@qid, 'inspired', 0, 3), (@qid, 'inspiringly', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She showed great ___ when facing the challenge. (brave)', '"Bravery" is the noun form of the adjective "brave".', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'brave', 0, 1), (@qid, 'braver', 0, 2), (@qid, 'bravely', 0, 3), (@qid, 'bravery', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'They made a ___ decision. (care + less)', '"Careless" = without care/attention. Suffix -less = without.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'careful', 0, 1), (@qid, 'careless', 1, 2), (@qid, 'carelessness', 0, 3), (@qid, 'carelessly', 0, 4);
+
+-- ============================================================
+-- SECTION 18 : SENTENCE STRUCTURE & GRAMMAR
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Everyone considers her to be the best student. → Passive?',  'Passive with "consider": She is considered (by everyone) to be the best student.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She is considered to be the best student.', 1, 1), (@qid, 'She is considering to be the best student.', 0, 2), (@qid, 'She has been considered the best student.', 0, 3), (@qid, 'The best student is considered by everyone.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is grammatically correct?',  'Subject-verb agreement and tense consistency.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She don''t like coffee.', 0, 1), (@qid, 'He doesn''t likes coffee.', 0, 2), (@qid, 'They doesn''t drink coffee.', 0, 3), (@qid, 'She doesn''t like coffee.', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence correctly uses the present perfect?',  'Present perfect: have/has + past participle. Used for recent/relevant past actions.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'I have went to the market.', 0, 1), (@qid, 'She has eaten breakfast already.', 1, 2), (@qid, 'They have saw the movie.', 0, 3), (@qid, 'He has wrote three books.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I ___ (not know) the answer, but I wish I knew it.',  '"Won''t know" = future negative. Correct formal future negative of "will".', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'don''t know', 0, 1), (@qid, 'didn''t know', 0, 2), (@qid, 'won''t know', 1, 3), (@qid, 'wouldn''t know', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses "since" correctly?',  '"Since" + point in time. "For" + duration.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'I have lived here since five years.', 0, 1), (@qid, 'I have lived here since 2010.', 1, 2), (@qid, 'I lived here since a long time.', 0, 3), (@qid, 'I have been here since many months.', 0, 4);
+
+-- ============================================================
+-- SECTION 19 : READING SKILLS / COMPREHENSION STRATEGIES (no text needed)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does the word "renewable" mean in the context of energy?', '"Renewable" = can be naturally replenished; describes energy sources like sun, wind, water.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Expensive and rare', 0, 1), (@qid, 'That can be naturally replenished', 1, 2), (@qid, 'Made from fossil fuels', 0, 3), (@qid, 'Created in factories', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "carbon neutral" mean?',  'Carbon neutral = producing no net carbon dioxide emissions.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Producing a lot of carbon dioxide', 0, 1), (@qid, 'Using only nuclear energy', 0, 2), (@qid, 'Producing no net carbon dioxide emissions', 1, 3), (@qid, 'Burning coal efficiently', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "drop-out" mean in the context of education?',  'Drop-out = to leave school before completing education.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'To graduate with honors', 0, 1), (@qid, 'To fall asleep in class', 0, 2), (@qid, 'To quit school before finishing', 1, 3), (@qid, 'To transfer to another school', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "organic" food mean?',  'Organic food = grown without artificial chemicals like pesticides.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Food made in a factory', 0, 1), (@qid, 'Food grown with many pesticides', 0, 2), (@qid, 'Food grown without artificial chemicals', 1, 3), (@qid, 'Very expensive imported food', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "medicinal" mean?',  'Medicinal = having healing or medical properties.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Related to food preparation', 0, 1), (@qid, 'Having healing properties', 1, 2), (@qid, 'Very poisonous', 0, 3), (@qid, 'Related to farming', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "parole" mean in a legal context?',  'Parole = early release from prison under certain conditions.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Permanent imprisonment', 0, 1), (@qid, 'Early conditional release from prison', 1, 2), (@qid, 'A type of legal fine', 0, 3), (@qid, 'A confession in court', 0, 4);
+
+-- ============================================================
+-- SECTION 20 : MISCELLANEOUS GRAMMAR
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the plural of "child"?',  'Irregular plural: child → children.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'childs', 0, 1), (@qid, 'childes', 0, 2), (@qid, 'children', 1, 3), (@qid, 'child''s', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the past tense of "confess"?',  'Confess is a regular verb: confessed.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'confest', 0, 1), (@qid, 'confesst', 0, 2), (@qid, 'confessed', 1, 3), (@qid, 'confess', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the past participle of "steal"?',  'Irregular verb: steal – stole – stolen.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'stealed', 0, 1), (@qid, 'stole', 0, 2), (@qid, 'stolen', 1, 3), (@qid, 'stelt', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the past participle of "build"?',  'Irregular verb: build – built – built.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'builded', 0, 1), (@qid, 'built', 1, 2), (@qid, 'bilt', 0, 3), (@qid, 'buit', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the past participle of "write"?',  'Irregular verb: write – wrote – written.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'writed', 0, 1), (@qid, 'wrote', 0, 2), (@qid, 'written', 1, 3), (@qid, 'wrotten', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the past participle of "speak"?',  'Irregular verb: speak – spoke – spoken.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'speaked', 0, 1), (@qid, 'spoke', 0, 2), (@qid, 'spoken', 1, 3), (@qid, 'spaken', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the past participle of "know"?',  'Irregular verb: know – knew – known.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'knowed', 0, 1), (@qid, 'knew', 0, 2), (@qid, 'known', 1, 3), (@qid, 'knoown', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the past participle of "take"?',  'Irregular verb: take – took – taken.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'taked', 0, 1), (@qid, 'took', 0, 2), (@qid, 'taken', 1, 3), (@qid, 'tooken', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the past participle of "give"?',  'Irregular verb: give – gave – given.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gived', 0, 1), (@qid, 'gave', 0, 2), (@qid, 'given', 1, 3), (@qid, 'goven', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the past participle of "see"?',  'Irregular verb: see – saw – seen.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'seed', 0, 1), (@qid, 'saw', 0, 2), (@qid, 'seen', 1, 3), (@qid, 'seened', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the past participle of "go"?',  'Irregular verb: go – went – gone.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'went', 0, 1), (@qid, 'goed', 0, 2), (@qid, 'gone', 1, 3), (@qid, 'go', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the comparative of "good"?',  'Irregular comparative: good → better.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'gooder', 0, 1), (@qid, 'more good', 0, 2), (@qid, 'better', 1, 3), (@qid, 'best', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the comparative of "bad"?',  'Irregular comparative: bad → worse.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'badder', 0, 1), (@qid, 'more bad', 0, 2), (@qid, 'worse', 1, 3), (@qid, 'worst', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the superlative of "many"?',  'Irregular superlative: many → the most.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'more', 0, 1), (@qid, 'the maniest', 0, 2), (@qid, 'the most', 1, 3), (@qid, 'most many', 0, 4);
+
+-- ============================================================
+-- SECTION 21 : ENVIRONMENT & SOCIETY VOCABULARY
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Measures to protect and restore the natural world are called ___.',  'Conservation efforts = actions to protect nature.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ecosystem', 0, 1), (@qid, 'food chain', 0, 2), (@qid, 'conservation efforts', 1, 3), (@qid, 'global warming', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The ongoing relationship between living things and their environment is called ___.',  'Ecosystem = community of organisms and their physical environment.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'food chain', 0, 1), (@qid, 'ecosystem', 1, 2), (@qid, 'wildlife', 0, 3), (@qid, 'global warming', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The gradual increase in temperature on Earth is called ___.',  'Global warming = increase in Earth''s average temperature.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ecosystem', 0, 1), (@qid, 'conservation efforts', 0, 2), (@qid, 'food chain', 0, 3), (@qid, 'global warming', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'A group of organisms that feed off of each other is called ___.',  'Food chain = sequence of organisms where each feeds on the previous one.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'wildlife', 0, 1), (@qid, 'ecosystem', 0, 2), (@qid, 'food chain', 1, 3), (@qid, 'global warming', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Plants and animals living in a natural environment are called ___.',  'Wildlife = animals and plants in their natural habitat.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'food chain', 0, 1), (@qid, 'wildlife', 1, 2), (@qid, 'ecosystem', 0, 3), (@qid, 'conservation efforts', 0, 4);
+
+-- ============================================================
+-- SECTION 22 : SENTENCE COMPLETION (Mixed Grammar)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'I have got an interview ___ Monday afternoon.',  '"On" + day of the week.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'at', 0, 1), (@qid, 'in', 0, 2), (@qid, 'on', 1, 3), (@qid, 'by', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Jack is ___ with school. He wants to leave as soon as possible.',  '"Bored with" = feeling boredom about something.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'delighted', 0, 1), (@qid, 'superior', 0, 2), (@qid, 'bored', 1, 3), (@qid, 'responsible', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She has broken her leg and needs ___.',  'Crutches = supports used to help a person walk when they have a leg injury.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'castle', 0, 1), (@qid, 'editorial', 0, 2), (@qid, 'crutches', 1, 3), (@qid, 'amnesia', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If you are ___, you feel very surprised.',  'Astonished = extremely surprised.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'bored', 0, 1), (@qid, 'alarmed', 0, 2), (@qid, 'satisfied', 0, 3), (@qid, 'astonished', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'If you are ___, you feel pleased because things went well.',  'Satisfied = content because expectations have been met.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'depressed', 0, 1), (@qid, 'alarmed', 0, 2), (@qid, 'satisfied', 1, 3), (@qid, 'bored', 0, 4);
+
+-- ============================================================
+-- SECTION 23 : ADDITIONAL TENSES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'By the time she arrived, they ___ dinner. (finish)',  'Past perfect: action completed before another past action. Had finished.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'finished', 0, 1), (@qid, 'have finished', 0, 2), (@qid, 'had finished', 1, 3), (@qid, 'were finishing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She ___ in this company for ten years when she retired. (work)',  'Past perfect continuous: had been working = ongoing action up to a past point.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'was working', 0, 1), (@qid, 'had been working', 1, 2), (@qid, 'has been working', 0, 3), (@qid, 'worked', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'This time next year, I ___ in Canada. (live)',  'Future continuous: will be + -ing = action in progress at a future time.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will live', 0, 1), (@qid, 'am living', 0, 2), (@qid, 'will be living', 1, 3), (@qid, 'would live', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'They ___ on the project for hours when the power went out. (work)',  'Past continuous: was/were + -ing = ongoing action interrupted.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'worked', 0, 1), (@qid, 'have worked', 0, 2), (@qid, 'were working', 1, 3), (@qid, 'had work', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'By 2030, scientists ___ a cure for the disease. (discover)',  'Future perfect: will have + past participle = action completed before a future time.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'will discover', 0, 1), (@qid, 'will be discovering', 0, 2), (@qid, 'will have discovered', 1, 3), (@qid, 'discover', 0, 4);
+
+-- ============================================================
+-- SECTION 24 : TRAVEL & TRANSPORT VOCABULARY
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The fastest way of traveling is ___.',  'Airplanes are the fastest means of transport.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'traveling by ship', 0, 1), (@qid, 'traveling by train', 0, 2), (@qid, 'traveling by plane', 1, 3), (@qid, 'traveling on foot', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The most comfortable way of traveling is ___.',  'Ship travel is traditionally considered the most comfortable.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'traveling by plane', 0, 1), (@qid, 'traveling by ship', 1, 2), (@qid, 'traveling by bus', 0, 3), (@qid, 'traveling on foot', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The cheapest way of traveling is ___.',  'Walking (on foot) costs nothing.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'traveling by car', 0, 1), (@qid, 'traveling by plane', 0, 2), (@qid, 'traveling on foot', 1, 3), (@qid, 'traveling by ship', 0, 4);
+
+-- ============================================================
+-- SECTION 25 : EXPRESSING OPINIONS & DISCOURSE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which expression is used to introduce an opinion?',  'Opinion markers: In my opinion, I think, I believe, As far as I''m concerned.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'In conclusion', 0, 1), (@qid, 'In my opinion', 1, 2), (@qid, 'On the other hand', 0, 3), (@qid, 'For example', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which expression is used to give an example?',  '"For example" / "For instance" introduce examples.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'As a result', 0, 1), (@qid, 'In my opinion', 0, 2), (@qid, 'For example', 1, 3), (@qid, 'However', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which expression shows contrast between two ideas?',  '"On the other hand" introduces a contrasting point.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Furthermore', 0, 1), (@qid, 'On the other hand', 1, 2), (@qid, 'As a result', 0, 3), (@qid, 'In addition', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which expression indicates a conclusion?',  '"In conclusion" / "To sum up" signal the end of an argument.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'For example', 0, 1), (@qid, 'On the other hand', 0, 2), (@qid, 'In conclusion', 1, 3), (@qid, 'In spite of', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which expression adds more information to a point?',  '"Furthermore" / "Moreover" / "In addition" add supporting points.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'However', 0, 1), (@qid, 'In conclusion', 0, 2), (@qid, 'Furthermore', 1, 3), (@qid, 'Despite', 0, 4);
+
+-- ============================================================
+-- SECTION 26 : HEALTH & LIFESTYLE VOCABULARY
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'A health problem caused by an immune system reaction to a substance is called ___.',  'Allergy = hypersensitive immune response to a normally harmless substance.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'insomnia', 0, 1), (@qid, 'amnesia', 0, 2), (@qid, 'allergy', 1, 3), (@qid, 'rheumatism', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'A condition making it hard to sleep at night is called ___.',  'Insomnia = inability to get enough sleep.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'amnesia', 0, 1), (@qid, 'insomnia', 1, 2), (@qid, 'allergy', 0, 3), (@qid, 'rheumatism', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'A disease affecting the joints and causing pain is called ___.',  'Rheumatism = a disease causing pain in joints and muscles.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'allergy', 0, 1), (@qid, 'insomnia', 0, 2), (@qid, 'rheumatism', 1, 3), (@qid, 'amnesia', 0, 4);
+
+-- ============================================================
+-- SECTION 27 : EXTRA GRAMMAR – MIXED REVIEW
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, '"I made this pie with onions and cheese." → Passive voice?',  'Active→Passive: object becomes subject. Past simple passive: was made.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'This pie is made with onions and cheese by me.', 0, 1), (@qid, 'This pie was made with onions and cheese by me.', 1, 2), (@qid, 'This pie has been made with onions and cheese.', 0, 3), (@qid, 'This pie made with onions and cheese.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence correctly uses the past continuous?',  'Past continuous: was/were + -ing. Used for ongoing actions in the past.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She was cook dinner when he arrived.', 0, 1), (@qid, 'She were cooking dinner when he arrived.', 0, 2), (@qid, 'She was cooking dinner when he arrived.', 1, 3), (@qid, 'She cooked dinner when he was arrive.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which is the correct negative form of "They were playing"?',  'Negative past continuous: were not (weren''t) + -ing.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'They didn''t playing.', 0, 1), (@qid, 'They weren''t playing.', 1, 2), (@qid, 'They not were playing.', 0, 3), (@qid, 'They wasn''t playing.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence correctly uses "used to"?',  '"Used to" + base verb describes a past habit that no longer exists.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'He used to played football every weekend.', 0, 1), (@qid, 'She used to living in Paris.', 0, 2), (@qid, 'They used to go fishing every Sunday.', 1, 3), (@qid, 'I am used to wake up early.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Did he write three books last year? → Passive?',  'Question passive: Were + three books + written + by him + last year?', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Were three books written by him last year?', 1, 1), (@qid, 'Were three books write by him last year?', 0, 2), (@qid, 'Was three books written by him last year?', 0, 3), (@qid, 'Are three books written by him last year?', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is an example of reported speech?',  'Reported speech changes pronouns and tenses; no quotation marks used.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She said, "I am happy."', 0, 1), (@qid, 'She said that she was happy.', 1, 2), (@qid, 'She says she is happy now.', 0, 3), (@qid, 'She told, I am happy.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'They were carrying the injured players off the field. → Active to Passive?',  'Present continuous passive would be: The injured players were being carried off the field.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'The injured players are being carried off the field.', 0, 1), (@qid, 'The injured players were being carried off the field.', 1, 2), (@qid, 'The injured players have been carried off the field.', 0, 3), (@qid, 'The injured players were carried off the field.', 0, 4);
+
+-- ============================================================
+-- SECTION 28 : COMPOUND SENTENCES & PUNCTUATION
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word correctly joins two independent clauses?',  'Coordinating conjunctions (FANBOYS): for, and, nor, but, or, yet, so.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'although', 0, 1), (@qid, 'because', 0, 2), (@qid, 'but', 1, 3), (@qid, 'when', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses "unless" correctly?',  '"Unless" = if not. Used in first conditional.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Unless you don''t hurry, you''ll be late.', 0, 1), (@qid, 'Unless you hurry, you''ll be late.', 1, 2), (@qid, 'Unless you will hurry, you''ll be late.', 0, 3), (@qid, 'Unless you hurry, you would be late.', 0, 4);
+
+-- ============================================================
+-- SECTION 29 : DIRECT SPEECH PUNCTUATION
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses direct speech correctly?',  'Direct speech requires quotation marks and correct punctuation before/after.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She said "I am ready".', 0, 1), (@qid, 'She said, "I am ready."', 1, 2), (@qid, 'She said I am ready.', 0, 3), (@qid, 'She said; "I am ready."', 0, 4);
+
+-- ============================================================
+-- SECTION 30 : FINAL MIXED REVIEW
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is grammatically correct? (Present continuous)',  'Present continuous: am/is/are + -ing.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She is study right now.', 0, 1), (@qid, 'She studying right now.', 0, 2), (@qid, 'She is studying right now.', 1, 3), (@qid, 'She are studying right now.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which is the correct plural form of "analysis"?',  'Analysis is a Greek-origin word. Its plural is analyses.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'analysises', 0, 1), (@qid, 'analysiss', 0, 2), (@qid, 'analyses', 1, 3), (@qid, 'analysis''s', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence correctly uses "neither...nor"?',  '"Neither...nor" = used with two negative alternatives.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Neither she nor he are coming.', 0, 1), (@qid, 'Neither she nor he is coming.', 1, 2), (@qid, 'Neither she and he is coming.', 0, 3), (@qid, 'Neither she or he is coming.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'She is looking forward to ___ you at the conference. (meet)',  '"Look forward to" + gerund (the "to" here is a preposition, not infinitive marker).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'meet', 0, 1), (@qid, 'met', 0, 2), (@qid, 'meeting', 1, 3), (@qid, 'to meet', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'He ___ his key. He can''t open the door. (lose)',  'Present perfect: has lost = recent action with present consequence.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lost', 0, 1), (@qid, 'loses', 0, 2), (@qid, 'has lost', 1, 3), (@qid, 'had lost', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'They ___ in Haiti since they were born. (live)',  'Present perfect: have lived + since = action from a specific past time to now.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'lived', 0, 1), (@qid, 'are living', 0, 2), (@qid, 'have lived', 1, 3), (@qid, 'were living', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'The teacher asked us ___ quiet during the exam.',  '"Ask someone to do something": ask + object + infinitive.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to be', 1, 1), (@qid, 'being', 0, 2), (@qid, 'be', 0, 3), (@qid, 'to being', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word means "to officially accuse someone of a crime"?',  'To charge (someone with a crime) = to formally accuse them.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'to confess', 0, 1), (@qid, 'to plead', 0, 2), (@qid, 'to charge', 1, 3), (@qid, 'to sentence', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'To officially declare someone guilty and set a punishment is to ___.',  'To sentence = to give a judicial punishment to a convicted person.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'charge', 0, 1), (@qid, 'confess', 0, 2), (@qid, 'sentence', 1, 3), (@qid, 'parole', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses the correct possessive apostrophe?',  'Singular possessive: person''s. Plural (ending in s) possessive: persons''.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'The teachers book is on the desk.', 0, 1), (@qid, 'The teacher''s book is on the desk.', 1, 2), (@qid, 'The teacher''s books is on the desk.', 0, 3), (@qid, 'The teachers'' book is on the desk.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence correctly uses "few" vs "little"?',  '"Few" = with countable nouns. "Little" = with uncountable nouns.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'I have few water left.', 0, 1), (@qid, 'I have little friends here.', 0, 2), (@qid, 'I have little time left.', 1, 3), (@qid, 'There is few furniture in this room.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is correct? (much / many)',  '"Much" = uncountable. "Many" = countable.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'There are much students in the class.', 0, 1), (@qid, 'There is many water in the bottle.', 0, 2), (@qid, 'There are many students in the class.', 1, 3), (@qid, 'There is much books on the shelf.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word is the synonym of "enormous"?',  'Enormous = very large. Synonyms: huge, gigantic, vast.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'tiny', 0, 1), (@qid, 'gigantic', 1, 2), (@qid, 'average', 0, 3), (@qid, 'small', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word is the antonym of "ancient"?',  'Ancient = very old. Antonym: modern/contemporary.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'old', 0, 1), (@qid, 'historic', 0, 2), (@qid, 'modern', 1, 3), (@qid, 'primitive', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word is the synonym of "withdraw" (from school)?',  'Withdraw from school = drop out / quit school.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'enroll', 0, 1), (@qid, 'graduate', 0, 2), (@qid, 'drop out', 1, 3), (@qid, 'excel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word best completes this sentence: "The farmers ___ about the new policy."',  '"Complained" = expressed dissatisfaction. Fits context of farmers opposing something.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'celebrated', 0, 1), (@qid, 'complained', 1, 2), (@qid, 'ignored', 0, 3), (@qid, 'applauded', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "illiterate" mean?',  'Illiterate = unable to read or write.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Very well-educated', 0, 1), (@qid, 'Unable to read or write', 1, 2), (@qid, 'Able to speak many languages', 0, 3), (@qid, 'Uninterested in school', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which of the following is a natural renewable energy source?',  'Renewable sources: sun, wind, water, waves. Coal and oil are non-renewable.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Coal', 0, 1), (@qid, 'Oil', 0, 2), (@qid, 'Wind', 1, 3), (@qid, 'Natural gas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the correct question for: "Students and teachers will be on vacation after the exams."',  'Question about time: When will students and teachers be on vacation?', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Where will students and teachers be on vacation?', 0, 1), (@qid, 'Who will be on vacation after the exams?', 0, 2), (@qid, 'When will students and teachers be on vacation?', 1, 3), (@qid, 'Why will students and teachers be on vacation?', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is an example of a second conditional?',  'Second conditional: If + past simple, would + base verb.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'If it rains, we will stay inside.', 0, 1), (@qid, 'If I had money, I would travel.', 1, 2), (@qid, 'If she had studied, she would have passed.', 0, 3), (@qid, 'If you heat ice, it melts.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is an example of a third conditional?',  'Third conditional: If + past perfect, would have + past participle.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'If it rains, we will stay inside.', 0, 1), (@qid, 'If I had money, I would travel.', 0, 2), (@qid, 'If she had studied, she would have passed.', 1, 3), (@qid, 'If you heat ice, it melts.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is an example of a zero conditional?',  'Zero conditional: If + present simple, present simple. Scientific facts.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'If it rains, we will stay inside.', 0, 1), (@qid, 'If I had money, I would travel.', 0, 2), (@qid, 'If she had studied, she would have passed.', 0, 3), (@qid, 'If you heat ice, it melts.', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word can replace "frightened" in the sentence: "She was frightened of losing"?',  'Frightened = afraid. Both mean experiencing fear.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'bored', 0, 1), (@qid, 'delighted', 0, 2), (@qid, 'afraid', 1, 3), (@qid, 'satisfied', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which of these is an example of an adjective used correctly?',  'Adjectives describe nouns. "Picturesque" correctly modifies "place".', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She walks beautiful.', 0, 1), (@qid, 'He runs quick.', 0, 2), (@qid, 'It is a picturesque place.', 1, 3), (@qid, 'They speak loud.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which of these is an adverb used correctly?',  'Adverbs modify verbs/adjectives/other adverbs. "Quickly" modifies "runs".', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She is a quick runner.', 0, 1), (@qid, 'He runs quickly.', 1, 2), (@qid, 'It was a loud party.', 0, 3), (@qid, 'The food is delicious.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses "yet" correctly?',  '"Yet" in questions/negatives means "up to now". In positive sentences it means "but".', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'I already haven''t finished yet.', 0, 1), (@qid, 'Have you finished your homework yet?', 1, 2), (@qid, 'I yet finished my work.', 0, 3), (@qid, 'She finished yet her dinner.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses "already" correctly?',  '"Already" = sooner than expected. Used in affirmative sentences with perfect tenses.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Have you already eaten? No, not yet.', 1, 1), (@qid, 'I haven''t already eaten.', 0, 2), (@qid, 'Did you already eat yesterday?', 0, 3), (@qid, 'She already goes to school tomorrow.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the correct way to express a polite request?',  'Polite requests use: Could you...? / Would you mind...?', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Give me water!', 0, 1), (@qid, 'I want water now.', 0, 2), (@qid, 'Could you give me some water, please?', 1, 3), (@qid, 'You must give me water.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence correctly expresses a habitual action in the past?',  '"Used to" + base verb describes a past habit no longer practised.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'He was used to walk to school every day.', 0, 1), (@qid, 'He used to walking to school every day.', 0, 2), (@qid, 'He used to walk to school every day.', 1, 3), (@qid, 'He is used to walk to school every day.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which suffix forms an adjective meaning "full of"?',  'Suffix -ful means "full of": careful, beautiful, powerful.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '-tion', 0, 1), (@qid, '-ment', 0, 2), (@qid, '-ful', 1, 3), (@qid, '-ness', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which suffix forms a noun from a verb (meaning the act of)?',  'Suffix -tion/-ation converts verbs to nouns: education, investigation, action.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '-ful', 0, 1), (@qid, '-less', 0, 2), (@qid, '-tion', 1, 3), (@qid, '-ly', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which suffix creates an adverb from an adjective?',  'Suffix -ly converts adjectives to adverbs: quickly, beautifully, carefully.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '-ful', 0, 1), (@qid, '-tion', 0, 2), (@qid, '-ness', 0, 3), (@qid, '-ly', 1, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the noun form of "happy"?',  'Noun form of happy: happiness (adjective + -ness).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'happily', 0, 1), (@qid, 'happier', 0, 2), (@qid, 'happiness', 1, 3), (@qid, 'happy', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the adjective form of "beauty"?',  'Adjective form of beauty: beautiful.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'beautifully', 0, 1), (@qid, 'beautify', 0, 2), (@qid, 'beautiful', 1, 3), (@qid, 'beautiness', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses the correct question word?',  '"How long" asks about duration. "How far" asks about distance. "How often" asks about frequency.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'How long is it from here to the market? (distance)', 0, 1), (@qid, 'How far do you exercise? (frequency)', 0, 2), (@qid, 'How often do you exercise? (frequency)', 1, 3), (@qid, 'How much brothers do you have?', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word correctly completes: "She is ___ of snakes." (extremely afraid)',  'Terrified = extremely afraid. Stronger than "afraid" or "scared".', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'boring', 0, 1), (@qid, 'satisfied', 0, 2), (@qid, 'terrified', 1, 3), (@qid, 'amusing', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which verb pattern is correct with "suggest"?',  '"Suggest" + gerund OR "suggest that" + subject + base verb (subjunctive).', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'I suggest to go now.', 0, 1), (@qid, 'I suggest going now.', 1, 2), (@qid, 'I suggest you to go now.', 0, 3), (@qid, 'I suggest go now.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which of these correctly uses "make" + object + infinitive?',  '"Make" + object + base infinitive (no "to"): She made him do it.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She made him to do it.', 0, 1), (@qid, 'She made him doing it.', 0, 2), (@qid, 'She made him do it.', 1, 3), (@qid, 'She made him done it.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence correctly uses "let" + object + infinitive?',  '"Let" + object + base infinitive (no "to"): Let him go.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Let him to go.', 0, 1), (@qid, 'Let him going.', 0, 2), (@qid, 'Let him go.', 1, 3), (@qid, 'Lets him go.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses "wish" correctly?',  '"Wish" + past simple = unreal present. "Wish" + past perfect = regret about the past.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'I wish I can speak French.', 0, 1), (@qid, 'I wish I could speak French.', 1, 2), (@qid, 'I wish I will speak French.', 0, 3), (@qid, 'I wish I am speaking French.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word correctly fills: "It was ___ a beautiful day that we stayed at the beach all day."',  '"Such a + adjective + noun" or "so + adjective": It was such a beautiful day...', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'so', 0, 1), (@qid, 'such', 1, 2), (@qid, 'too', 0, 3), (@qid, 'very', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word correctly fills: "The weather was ___ hot that we couldn''t go outside."',  '"So + adjective + that" clause structure.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'such', 0, 1), (@qid, 'too', 0, 2), (@qid, 'so', 1, 3), (@qid, 'very', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence correctly uses "both...and"?',  '"Both...and" links two parallel elements.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Both she or her sister will come.', 0, 1), (@qid, 'Both she and her sister will come.', 1, 2), (@qid, 'Both she but her sister will come.', 0, 3), (@qid, 'Both she nor her sister will come.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word is a synonym of "permanent"?',  'Permanent = lasting indefinitely. Synonym: lasting / durable / enduring.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'temporary', 0, 1), (@qid, 'brief', 0, 2), (@qid, 'lasting', 1, 3), (@qid, 'quick', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the meaning of the idiom "to strike a balance"?',  '"Strike a balance" = to find a fair middle point between two extremes.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'To hit something', 0, 1), (@qid, 'To find a fair middle point', 1, 2), (@qid, 'To give money', 0, 3), (@qid, 'To cause an accident', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "penalty" mean?',  'Penalty = punishment for breaking a rule or law.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'A reward', 0, 1), (@qid, 'A celebration', 0, 2), (@qid, 'A punishment for breaking a rule', 1, 3), (@qid, 'A type of game', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the correct passive form of "She teaches the students"?',  'Present simple passive: The students are taught by her.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'The students are teach by her.', 0, 1), (@qid, 'The students were taught by her.', 0, 2), (@qid, 'The students are taught by her.', 1, 3), (@qid, 'The students have been teach by her.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is grammatically correct? (subject-verb agreement)',  'With "neither...nor", the verb agrees with the nearest subject.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'The news are bad today.', 0, 1), (@qid, 'Mathematics are my favorite subject.', 0, 2), (@qid, 'The committee has reached a decision.', 1, 3), (@qid, 'My family are very large.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which tense is used to describe an action that was in progress when another action happened?',  'Past continuous describes an ongoing action interrupted by a sudden event (past simple).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Past simple', 0, 1), (@qid, 'Past perfect', 0, 2), (@qid, 'Past continuous', 1, 3), (@qid, 'Present perfect', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "confess" mean?',  'Confess = to admit that you have done something wrong.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'To deny a crime', 0, 1), (@qid, 'To admit doing something wrong', 1, 2), (@qid, 'To accuse someone else', 0, 3), (@qid, 'To escape from prison', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "implement" mean?',  'Implement = to put a plan or decision into action.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'To delay a plan', 0, 1), (@qid, 'To cancel a decision', 0, 2), (@qid, 'To put a plan into action', 1, 3), (@qid, 'To question a rule', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses "in spite of" correctly?',  '"In spite of" + noun/gerund = despite. Introduces contrast.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'In spite of he was tired, he kept working.', 0, 1), (@qid, 'In spite of his tiredness, he kept working.', 1, 2), (@qid, 'In spite of that he was tired.', 0, 3), (@qid, 'In spite he was tired.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence expresses an obligation that is NOT necessary?',  '"Don''t have to / needn''t" = there is no obligation. "Must not" = prohibition.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'You mustn''t talk in the library.', 0, 1), (@qid, 'You must finish your homework.', 0, 2), (@qid, 'You don''t have to wear a uniform here.', 1, 3), (@qid, 'You should see a doctor.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "awareness campaign" mean?',  'Awareness campaign = a planned series of activities to inform the public about an issue.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'A military operation', 0, 1), (@qid, 'A public information effort to educate people', 1, 2), (@qid, 'A fundraising event for charities', 0, 3), (@qid, 'A political election campaign', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which is the correct plural of "criterion"?',  'Greek-origin word: criterion → criteria.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'criterions', 0, 1), (@qid, 'criterias', 0, 2), (@qid, 'criteria', 1, 3), (@qid, 'criterium', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word correctly completes: "We need to ___ a compromise."',  '"Reach a compromise" is the standard collocation.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'do', 0, 1), (@qid, 'make', 0, 2), (@qid, 'reach', 1, 3), (@qid, 'take', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word correctly completes: "She ___ a mistake in her report."',  '"Make a mistake" is the standard collocation.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'did', 0, 1), (@qid, 'made', 1, 2), (@qid, 'took', 0, 3), (@qid, 'had', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word correctly completes: "She ___ a decision to leave."',  '"Make a decision" is the standard collocation.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'did', 0, 1), (@qid, 'took', 0, 2), (@qid, 'made', 1, 3), (@qid, 'had', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word correctly completes: "The students ___ an exam tomorrow."',  '"Take an exam" is the standard collocation in English.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'make', 0, 1), (@qid, 'do', 0, 2), (@qid, 'take', 1, 3), (@qid, 'pass', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word correctly completes: "He ___ a speech at the conference."',  '"Give a speech" is the standard collocation.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'made', 0, 1), (@qid, 'gave', 1, 2), (@qid, 'did', 0, 3), (@qid, 'said', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "exhilaration" mean?',  'Exhilaration = a feeling of extreme happiness and excitement.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Deep sadness', 0, 1), (@qid, 'Extreme tiredness', 0, 2), (@qid, 'Intense happiness and excitement', 1, 3), (@qid, 'Strong anger', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "abundant" mean?',  'Abundant = existing in large quantities; more than enough.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Very rare', 0, 1), (@qid, 'Available in large quantities', 1, 2), (@qid, 'Extremely expensive', 0, 3), (@qid, 'Difficult to find', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Choose the sentence that uses "although" correctly.',  '"Although" introduces a subordinate clause showing contrast; the main clause follows.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Although she is tired. She keeps working.', 0, 1), (@qid, 'Although she is tired, she keeps working.', 1, 2), (@qid, 'She keeps working. Although she is tired.', 0, 3), (@qid, 'She keeps working although, she is tired.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the meaning of "concealed"?',  'Concealed = hidden from view.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Displayed openly', 0, 1), (@qid, 'Hidden from view', 1, 2), (@qid, 'Destroyed completely', 0, 3), (@qid, 'Recovered safely', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses "by the time" correctly?',  '"By the time" + present simple OR past simple introduces a time clause.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'By the time he will arrive, we will have finished.', 0, 1), (@qid, 'By the time he arrives, we will have finished.', 1, 2), (@qid, 'By the time he arrived, we finished.', 0, 3), (@qid, 'By the time he arrive, we will finish.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which of the following is NOT a linking word showing addition?',  'Addition linkers: furthermore, moreover, in addition, also. "However" shows contrast.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Furthermore', 0, 1), (@qid, 'Moreover', 0, 2), (@qid, 'However', 1, 3), (@qid, 'In addition', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence is grammatically correct?',  'Double negatives are incorrect in standard English. Only one negative per clause.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'I don''t know nobody here.', 0, 1), (@qid, 'I don''t know anybody here.', 1, 2), (@qid, 'I know nobody not here.', 0, 3), (@qid, 'I don''t know nothing here.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence correctly uses the word "despite"?',  '"Despite" + noun or gerund phrase. Cannot be followed by a full clause directly.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Despite he was tired, he continued.', 0, 1), (@qid, 'Despite being tired, he continued.', 1, 2), (@qid, 'Despite that he was tired.', 0, 3), (@qid, 'Despite of his tiredness.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What is the meaning of "catastrophe"?',  'Catastrophe = a sudden disaster causing great damage or suffering.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'A great achievement', 0, 1), (@qid, 'A minor inconvenience', 0, 2), (@qid, 'A sudden major disaster', 1, 3), (@qid, 'A scientific breakthrough', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word means to officially make a law or rule effective?',  '"Implement" or "enforce" = to put into effect.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'cancel', 0, 1), (@qid, 'suggest', 0, 2), (@qid, 'enforce', 1, 3), (@qid, 'ignore', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which sentence uses the present simple correctly for a habitual action?',  'Present simple + adverbs of frequency (always, often, sometimes) for habits.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'She is always coming to class late.', 0, 1), (@qid, 'She always come to class on time.', 0, 2), (@qid, 'She always comes to class on time.', 1, 3), (@qid, 'She always came to class on time.', 0, 4);
+
+-- ============================================================
+-- SECTION 28: ADDITIONAL VOCABULARY IN CONTEXT
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "plea" mean in a legal context?',  'A plea = a statement of guilty or not guilty made by the accused in court.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'A type of fine', 0, 1), (@qid, 'A formal statement of guilt or innocence in court', 1, 2), (@qid, 'A prison sentence', 0, 3), (@qid, 'A witness testimony', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "prosecute" mean?',  'Prosecute = to officially charge and try someone for a crime in court.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'To defend someone in court', 0, 1), (@qid, 'To release someone from custody', 0, 2), (@qid, 'To officially try someone for a crime', 1, 3), (@qid, 'To investigate a crime', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word means the opposite of "guilty"?',  'The antonym of guilty is innocent = not having committed a crime.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'criminal', 0, 1), (@qid, 'convicted', 0, 2), (@qid, 'innocent', 1, 3), (@qid, 'sentenced', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "initiative" mean?',  'Initiative = a new plan or action to solve a problem or improve a situation.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'A type of punishment', 0, 1), (@qid, 'A new plan or action to improve a situation', 1, 2), (@qid, 'A formal complaint', 0, 3), (@qid, 'A government election', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "distraught" mean?',  'Distraught = very worried and upset; deeply distressed.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Very happy and excited', 0, 1), (@qid, 'Deeply worried and upset', 1, 2), (@qid, 'Completely relaxed', 0, 3), (@qid, 'Mildly surprised', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Choose the correct sentence using "either...or".',  '"Either...or" presents two positive alternatives.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Either she and her brother will come.', 0, 1), (@qid, 'Either she or her brother will come.', 1, 2), (@qid, 'Either she nor her brother will come.', 0, 3), (@qid, 'Either she but her brother will come.', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which word can replace "hence" in the sentence "He worked hard; hence he succeeded"?',  '"Hence" = therefore / as a result. All three are cause-and-effect connectors.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'however', 0, 1), (@qid, 'therefore', 1, 2), (@qid, 'although', 0, 3), (@qid, 'despite', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What type of sentence is "If I were you, I would study harder"?',  'This is a second conditional sentence expressing unreal/hypothetical advice.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'First conditional', 0, 1), (@qid, 'Zero conditional', 0, 2), (@qid, 'Second conditional', 1, 3), (@qid, 'Third conditional', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'What does "emission" mean in the context of climate change?',  'Emission = the production and release of substances (especially greenhouse gases) into the atmosphere.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'The absorption of sunlight', 0, 1), (@qid, 'The release of gases into the atmosphere', 1, 2), (@qid, 'The cooling of the Earth', 0, 3), (@qid, 'The production of solar panels', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(14, 2, 'Which phrase expresses "as a consequence"?',  '"As a result" = because of this / therefore. Used to introduce a consequence.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'In spite of', 0, 1), (@qid, 'On the other hand', 0, 2), (@qid, 'As a result', 1, 3), (@qid, 'In my opinion', 0, 4);
+
+
 
 -- Complétion
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES

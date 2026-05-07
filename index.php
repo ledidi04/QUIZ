@@ -36,7 +36,7 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Quiz Ayiti | 9ème, NS4, Philo, Université, Préfac – QCM Haïti">
+    <meta name="twitter:title" content="Quiz Ayiti, Quiz Haiti | 9ème, NS4, Philo, Université, Préfac – QCM Haïti">
     <meta name="twitter:description" content="Plateforme de quiz et QCM pour élèves et étudiants haïtiens. Exercices interactifs, annales, mode examen.">
     <meta name="twitter:image" content="<?= $currentUrl ?>/images/logo.png">
 
