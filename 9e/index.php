@@ -1,5 +1,12 @@
 <?php
-$pageTitle = 'Quiz 9ème AF';
+/**
+ * Page d'accueil 9ème Année Fondamentale
+ * Quiz Ayiti - Plateforme éducative interactive
+ * 
+ * SEO optimisé pour : quiz 9eme, qcm 9eme, exercices 9eme af, 
+ * révision 9eme, examen 9eme, programme 9eme, éducation Haïti
+ */
+$pageTitle = 'Quiz 9ème AF - Exercices Interactifs';
 $classeActive = '9e';
 require_once __DIR__ . '/../includes/functions.php';
 
@@ -18,9 +25,71 @@ $classe = getStudentClass();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Quiz 9ème AF - Quiz Ayiti</title>
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon>
+    
+    <!-- SEO Meta Tags -->
+    <title>Quiz 9ème AF - Exercices Interactifs QCM | Quiz Ayiti</title>
+    <meta name="description" content="Quiz et QCM interactifs pour la 9ème Année Fondamentale. Exercices de Français, Maths, Créole, Sciences, Anglais, Espagnol. Conforme MENFP. Gratuit.">
+    <meta name="keywords" content="quiz 9eme af, qcm 9eme, exercices 9eme, révision 9eme, examen 9eme, programme 9eme, quiz haiti, éducation haïti, MENFP, 9ème année fondamentale, quiz éducatif, qcm interactif, quiz scolaire, révision examen 9eme">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Quiz Ayiti">
+    <link rel="canonical" href="https://quizayiti.com/9e/index.php">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Quiz 9ème AF - Exercices Interactifs | Quiz Ayiti">
+    <meta property="og:description" content="Plateforme de quiz et QCM interactifs pour la 9ème AF. 2000+ questions, 7 matières, 100% conforme MENFP. Préparez vos examens !">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quizayiti.com/9e/index.php">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Quiz 9ème AF - Quiz Ayiti">
+    <meta name="twitter:description" content="2000+ questions interactives pour la 9ème AF. Conforme MENFP. Gratuit.">
+    
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Quiz Ayiti - 9ème Année Fondamentale",
+        "description": "Plateforme de quiz et QCM interactifs pour la 9ème AF. Exercices conformes au programme MENFP.",
+        "url": "https://quizayiti.com/9e/index.php",
+        "educationalLevel": "9ème Année Fondamentale",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Types d'exercices 9ème AF",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "EducationalOccupationalProgram",
+                        "name": "QCM 9ème AF",
+                        "description": "Questions à choix multiples pour la 9ème AF"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "EducationalOccupationalProgram",
+                        "name": "Mode Examen 9ème AF",
+                        "description": "Simulation d'examen officiel 9ème AF"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "EducationalOccupationalProgram",
+                        "name": "Programmes Officiels 9ème AF",
+                        "description": "Documents MENFP pour la 9ème AF"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
     <style>
         :root {
             --blue: #002395; --red: #d21034; --gold: #f1c40f; --green: #10b981;
@@ -115,12 +184,57 @@ $classe = getStudentClass();
         .card-maps .type-icon-wrapper { background: #ddd6fe; }
         .card-maps .type-name { color: #6d28d9; }
         
+        /* Programmes - Nouveau style distinctif */
+        .card-programmes { background: #fff7ed; border-color: #fed7aa; }
+        .card-programmes:hover { border-color: #f97316; background: #fff7ed; }
+        .card-programmes .type-icon-wrapper { background: #fed7aa; }
+        .card-programmes .type-name { color: #c2410c; }
+        
         /* Info section */
         .info-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin-top: 1.5rem; }
         .info-item { background: var(--gray-50); border-radius: var(--radius); padding: 1rem; text-align: center; border: 1px solid var(--gray-100); }
         .info-item .info-icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
         .info-item .info-value { font-weight: 700; color: var(--gray-800); font-size: 1.1rem; }
         .info-item .info-label { font-size: 0.75rem; color: var(--gray-400); }
+        
+        /* SEO Section */
+        .seo-section {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin-top: 2rem;
+            border: 1px solid var(--gray-100);
+        }
+        .seo-section h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        .seo-section p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+        .seo-section .keyword-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .seo-section .keyword-tag {
+            background: var(--gray-100);
+            color: var(--gray-600);
+            font-size: 0.8rem;
+            padding: 0.3rem 0.7rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all var(--transition);
+        }
+        .seo-section .keyword-tag:hover {
+            background: var(--blue);
+            color: var(--white);
+        }
         
         .footer { background: var(--white); border-top: 1px solid var(--gray-200); padding: 1.5rem; text-align: center; color: var(--gray-400); font-size: 0.85rem; margin-top: auto; }
         
@@ -183,45 +297,45 @@ $classe = getStudentClass();
             </div>
             <div class="type-grid">
                 <!-- QCM -->
-                <a href="<?= $basePath ?>/9e/qcm.php" class="type-card card-qcm">
+                <a href="<?= $basePath ?>/9e/qcm.php" class="type-card card-qcm" title="QCM 9ème AF - Questions à choix multiples">
                     <div class="type-icon-wrapper">📋</div>
                     <span class="type-name">QCM</span>
                     <span class="type-desc">Questions à choix multiples</span>
                 </a>
 
                 <!-- Compléter -->
-                <a href="<?= $basePath ?>/9e/completer.php" class="type-card card-completer">
+                <a href="<?= $basePath ?>/9e/completer.php" class="type-card card-completer" title="Exercices à trous 9ème AF">
                     <div class="type-icon-wrapper">✍️</div>
                     <span class="type-name">Compléter</span>
                     <span class="type-desc">Textes à trous interactifs</span>
                 </a>
 
                 <!-- Mode Examen -->
-                <a href="<?= $basePath ?>/9e/exam.php" class="type-card card-exam">
+                <a href="<?= $basePath ?>/9e/exam.php" class="type-card card-exam" title="Mode Examen 9ème AF - 60 questions chronométrées">
                     <div class="type-icon-wrapper">⏱️</div>
                     <span class="type-name">Mode Examen</span>
                     <span class="type-desc">60 questions chronométrées</span>
                 </a>
 
                 <!-- Examens Passés -->
-                <a href="<?= $basePath ?>/9e/examen.php" class="type-card card-past">
+                <a href="<?= $basePath ?>/9e/examen.php" class="type-card card-past" title="Examens officiels 9ème AF 2010-2025">
                     <div class="type-icon-wrapper">📁</div>
                     <span class="type-name">Examens Passés</span>
                     <span class="type-desc">Épreuves officielles 2010-2025</span>
                 </a>
 
                 <!-- Cartes / Dessin -->
-                <a href="<?= $basePath ?>/9e/cartes.php" class="type-card card-maps">
+                <a href="<?= $basePath ?>/9e/cartes.php" class="type-card card-maps" title="Cartes géographiques 9ème AF">
                     <div class="type-icon-wrapper">🗺️</div>
                     <span class="type-name">Cartes & Dessin</span>
-                    <span class="type-desc">Cartes du monde, Departement D'haiti...</span>
+                    <span class="type-desc">Cartes du monde, Départements d'Haïti...</span>
                 </a>
 
-                <!-- Cartes / Dessin -->
-                <a href="<?= $basePath ?>/9e/programmes.php" class="type-card card-maps">
-                    <div class="type-icon-wrapper">🗺️</div>
-                    <span class="type-name"> Les Programmes de 9eme</span>
-                    <span class="type-desc">Francais,Maths,Creole...</span>
+                <!-- Programmes Officiels -->
+                <a href="<?= $basePath ?>/9e/programmes.php" class="type-card card-programmes" title="Programmes officiels MENFP 9ème AF">
+                    <div class="type-icon-wrapper">📚</div>
+                    <span class="type-name">Programmes Officiels</span>
+                    <span class="type-desc">Français, Maths, Créole, Sciences...</span>
                 </a>
             </div>
         </div>
@@ -244,11 +358,29 @@ $classe = getStudentClass();
                 <div class="info-label">Conforme MENFP</div>
             </div>
         </div>
+        
+        <!-- Section SEO - Contenu optimisé pour les moteurs de recherche -->
+        <div class="seo-section">
+            
+            <div class="keyword-tags">
+                <a href="<?= $basePath ?>/9e/qcm.php" class="keyword-tag">QCM 9ème</a>
+                <a href="<?= $basePath ?>/9e/exam.php" class="keyword-tag">Examen 9ème AF</a>
+                <a href="<?= $basePath ?>/9e/programmes.php" class="keyword-tag">Programmes MENFP</a>
+                <a href="<?= $basePath ?>/9e/completer.php" class="keyword-tag">Exercices 9ème</a>
+                <a href="<?= $basePath ?>/9e/examen.php" class="keyword-tag">Examens passés</a>
+                <span class="keyword-tag">Quiz Haïti</span>
+                <span class="keyword-tag">Révision 9ème</span>
+                <span class="keyword-tag">Éducation Haïti</span>
+            </div>
+        </div>
     </main>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
-        <p>&copy; <?= date('Y') ?> <strong>Quiz Ayiti</strong> &mdash; 9ème Année Fondamentale &mdash; Programmes officiels MENFP</p>
+        <p>&copy; <?= date('Y') ?> <strong>Quiz Ayiti</strong> &mdash; 
+        9ème Année Fondamentale &mdash; 
+        Programmes officiels MENFP &mdash; 
+        <a href="<?= $basePath ?>/9e/programmes.php" style="color: var(--gray-400);">Documents pédagogiques</a></p>
     </footer>
 
     <script>
