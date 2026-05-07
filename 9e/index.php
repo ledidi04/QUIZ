@@ -216,6 +216,13 @@ $classe = getStudentClass();
                     <span class="type-name">Cartes & Dessin</span>
                     <span class="type-desc">Cartes du monde, Departement D'haiti...</span>
                 </a>
+
+                <!-- Cartes / Dessin -->
+                <a href="<?= $basePath ?>/9e/programmes.php" class="type-card card-maps">
+                    <div class="type-icon-wrapper">🗺️</div>
+                    <span class="type-name"> Les Programmes de 9eme</span>
+                    <span class="type-desc">Francais,Maths,Creole...</span>
+                </a>
             </div>
         </div>
 
