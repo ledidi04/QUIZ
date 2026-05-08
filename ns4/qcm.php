@@ -9,16 +9,72 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['student_name'])) {
 $name = $_SESSION['student_name'] ?? null;
 
 $basePath = rtrim(dirname(dirname($_SERVER['SCRIPT_NAME'])), '/');
+$pageTitle = 'QCM NS4 — Quiz Philo, Maths, Français | Quiz Ayiti Haïti';
 
-$pageTitle = 'QCM - NS4';
+$siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title><?= $pageTitle ?> - Quiz Ayiti</title>
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon>
+
+    <!-- ===== SEO PRIMARY ===== -->
+    <title>QCM NS4 Haïti — Quiz Philo, Maths, Français, Physique | Entraînement Terminale MENFP | Quiz Ayiti</title>
+    <meta name="description" content="QCM NS4 Haïti — Jeux et entraînement interactif pour préparer tes examens. Quiz de Philosophie (kwiz philo, quiz filo), Mathématiques, Français, Physique, Chimie, SVT, Anglais, Histoire-Géo. Toutes les matières du programme NS4 MENFP. Kwiz NS4, Qwiz NS4, Kwix NS4. Gratuit, sans inscription.">
+    <meta name="keywords" content="qcm ns4, quiz ns4, kwiz ns4, qwiz ns4, kwix ns4, quiz philo ns4, qcm philosophie terminale haiti, kwiz philo, quiz philo haiti, kwiz filo, qwiz philo, filo haiti, quiz terminale haiti, entrainement ns4, jeu quiz ns4, jeu preparation examen haiti, divertissement educatif ns4, quiz maths ns4, qcm maths terminale, quiz francais ns4, qcm francais terminale, quiz physique ns4, qcm chimie ns4, quiz svt ns4, quiz histoire geo ns4, quiz anglais ns4, se preparer examen ns4 haiti, menfp ns4, bac haiti 2025, programme ns4, nouveaux secondaires 4 quiz, quiz interactif ns4, entrainement bac haiti">
+    <meta name="author" content="Quiz Ayiti">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="<?= htmlspecialchars($siteUrl) ?>">
+
+    <!-- ===== Open Graph ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="QCM NS4 Haïti — Entraînement Quiz Philo, Maths, Français & toutes les matières">
+    <meta property="og:description" content="Jeux et quiz interactifs pour préparer les examens NS4 en Haïti. 8 matières disponibles : Philosophie, Maths, Français, Physique, Chimie, SVT, Anglais, Histoire-Géo. 100% conforme MENFP.">
+    <meta property="og:url" content="<?= htmlspecialchars($siteUrl) ?>">
+    <meta property="og:site_name" content="Quiz Ayiti">
+    <meta property="og:locale" content="fr_HT">
+    <meta property="og:image" content="../images/logo.png">
+
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="QCM NS4 Haïti — Quiz Philo, Maths, Français">
+    <meta name="twitter:description" content="Entraîne-toi avec des QCM interactifs pour préparer tes examens NS4 en Haïti. Gratuit.">
+
+    <!-- ===== Schema.org ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "QCM NS4 Haïti — Quiz Philo, Maths, Français, Physique, Chimie, SVT, Anglais, Histoire-Géo",
+      "description": "Questions à choix multiples pour préparer les examens officiels NS4 (Nouveaux Secondaires 4) en Haïti. Couvre toutes les matières du programme MENFP : Philosophie, Mathématiques, Français, Physique, Chimie, SVT, Histoire-Géographie, Anglais.",
+      "url": "<?= htmlspecialchars($siteUrl) ?>",
+      "inLanguage": "fr",
+      "educationalLevel": "Terminale (NS4)",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "audienceType": "Élèves NS4 Terminale Haïti"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "HTG"
+      },
+      "about": [
+        {"@type": "Thing", "name": "Philosophie NS4"},
+        {"@type": "Thing", "name": "Mathématiques NS4"},
+        {"@type": "Thing", "name": "Français NS4"},
+        {"@type": "Thing", "name": "Physique NS4"},
+        {"@type": "Thing", "name": "Chimie NS4"},
+        {"@type": "Thing", "name": "SVT NS4"},
+        {"@type": "Thing", "name": "Histoire-Géographie NS4"},
+        {"@type": "Thing", "name": "Anglais NS4"}
+      ]
+    }
+    </script>
+
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -77,7 +133,7 @@ $pageTitle = 'QCM - NS4';
         .nav-toggle .bar { width: 26px; height: 2.5px; background: var(--gray-700); border-radius: 2px; }
 
         /* ========== CONTAINER ========== */
-        .container { flex: 1; width: 100%; max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .container { flex: 1; width: 100%; max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
 
         /* ========== PAGE HEADER ========== */
         .page-header { text-align: center; margin-bottom: 2rem; }
@@ -85,6 +141,10 @@ $pageTitle = 'QCM - NS4';
         .page-header h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; color: var(--gray-900); }
         .page-header h1 .highlight { background: linear-gradient(135deg, var(--purple), #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .page-header .subtitle { color: var(--gray-500); font-size: 0.95rem; margin-top: 0.4rem; }
+
+        /* SEO tags strip */
+        .seo-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin: 0.6rem 0 0; }
+        .seo-tag { background: var(--gray-100); color: var(--gray-500); font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 50px; border: 1px solid var(--gray-200); }
 
         /* ========== CARDS ========== */
         .card { background: var(--white); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-lg); margin-bottom: 1.5rem; border: 1px solid var(--gray-100); transition: var(--transition); }
@@ -94,7 +154,7 @@ $pageTitle = 'QCM - NS4';
         .card-header h2 { font-size: 1.3rem; font-weight: 700; color: var(--gray-900); margin: 0; }
         .card-header p { color: var(--gray-400); font-size: 0.85rem; margin: 0; }
 
-        /* ========== GRILLE MATIÈRES NS4 ========== */
+        /* ========== GRILLE MATIÈRES ========== */
         .subject-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.85rem; }
         .subject-btn {
             display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
@@ -106,6 +166,20 @@ $pageTitle = 'QCM - NS4';
         .subject-btn.active { border-color: var(--purple); background: linear-gradient(135deg, #fdf4ff, #ede9fe); }
         .subject-btn .subject-icon { font-size: 2rem; }
         .subject-btn .subject-name { font-weight: 600; font-size: 0.9rem; color: var(--gray-700); }
+        .subject-btn .subject-hint { font-size: 0.72rem; color: var(--gray-400); line-height: 1.3; }
+
+        /* ========== BANNER AUTRES OPTIONS ========== */
+        .other-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 2px solid var(--gray-100); }
+        .other-btn { display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1rem; border-radius: var(--radius); text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: all var(--transition); border: 2px solid transparent; }
+        .other-btn:hover { transform: translateY(-2px); }
+        .other-btn.exam { background: #fff1f2; color: #be123c; border-color: #fecdd3; }
+        .other-btn.exam:hover { border-color: #e11d48; }
+        .other-btn.past { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
+        .other-btn.past:hover { border-color: #22c55e; }
+        .other-btn.fill { background: #fefce8; color: #a16207; border-color: #fef08a; }
+        .other-btn.fill:hover { border-color: #eab308; }
+        .other-btn.formules { background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe; }
+        .other-btn.formules:hover { border-color: #8b5cf6; }
 
         /* ========== QUIZ AREA ========== */
         #quizContainer { min-height: 100px; }
@@ -137,7 +211,15 @@ $pageTitle = 'QCM - NS4';
         .summary-table .row-correct { background: #d4edda; }
         .summary-table .row-wrong { background: #f8d7da; }
 
+        /* ========== SEO BLOCK ========== */
+        .seo-block { background: var(--white); border-radius: var(--radius-xl); padding: 1.5rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100); margin-bottom: 1.5rem; }
+        .seo-block h2 { font-size: 1.05rem; font-weight: 700; color: var(--gray-800); margin-bottom: 0.6rem; }
+        .seo-block p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.7; }
+        .seo-block p + p { margin-top: 0.4rem; }
+        .seo-block strong { color: var(--gray-700); }
+
         .footer { background: var(--white); border-top: 1px solid var(--gray-200); padding: 1.5rem; text-align: center; color: var(--gray-400); font-size: 0.85rem; margin-top: auto; }
+        .footer-keywords { margin-top: 0.5rem; font-size: 0.72rem; color: var(--gray-300); }
 
         @media (max-width: 768px) {
             .navbar { padding: 0 1.25rem; height: 60px; }
@@ -149,6 +231,7 @@ $pageTitle = 'QCM - NS4';
             .container { padding: 1.25rem 1rem; }
             .card { padding: 1.25rem; }
             .subject-grid { grid-template-columns: repeat(3, 1fr); }
+            .seo-block { padding: 1.25rem; }
         }
         @media (max-width: 400px) {
             .subject-grid { grid-template-columns: repeat(2, 1fr); }
@@ -173,9 +256,19 @@ $pageTitle = 'QCM - NS4';
     <main class="container">
         <!-- Header -->
         <div class="page-header">
-            <div class="class-badge">🎓 NS4 — Nouveaux Secondaires 4</div>
-            <h1>QCM <span class="highlight">NS4</span></h1>
-            <p class="subtitle">Choisis une matière et commence à t'entraîner</p>
+            <div class="class-badge">🎮 Entraînement interactif — NS4 Terminale Haïti — Jeux & Révisions</div>
+            <h1>QCM <span class="highlight">NS4</span> Haïti</h1>
+            <p class="subtitle">Choisis ta matière et entraîne-toi avec des questions officielles MENFP</p>
+            <div class="seo-tags">
+                <span class="seo-tag">Quiz NS4</span>
+                <span class="seo-tag">Kwiz NS4</span>
+                <span class="seo-tag">QCM Philo</span>
+                <span class="seo-tag">Quiz Philo Haïti</span>
+                <span class="seo-tag">Kwiz Filo</span>
+                <span class="seo-tag">QCM Maths</span>
+                <span class="seo-tag">Jeu Révision NS4</span>
+                <span class="seo-tag">Entraînement Bac</span>
+            </div>
         </div>
 
         <!-- Choix de matière -->
@@ -183,40 +276,54 @@ $pageTitle = 'QCM - NS4';
             <div class="card-header">
                 <div class="card-icon">📚</div>
                 <div>
-                    <h2>Choisir une matière</h2>
-                    <p>7 matières du programme NS4</p>
+                    <h2>Choisir une matière — QCM NS4</h2>
+                    <p>8 matières du programme officiel NS4 · MENFP Haïti</p>
                 </div>
             </div>
             <div class="subject-grid" id="subjectGrid">
                 <button class="subject-btn" data-matiere="philosophie">
                     <span class="subject-icon">🧠</span>
                     <span class="subject-name">Philosophie</span>
+                    <span class="subject-hint">Kwiz Philo · Quiz Filo</span>
                 </button>
                 <button class="subject-btn" data-matiere="maths">
                     <span class="subject-icon">➗</span>
                     <span class="subject-name">Mathématiques</span>
+                    <span class="subject-hint">Algèbre · Géométrie</span>
+                </button>
+                <button class="subject-btn" data-matiere="francais">
+                    <span class="subject-icon">📖</span>
+                    <span class="subject-name">Français</span>
+                    <span class="subject-hint">Grammaire · Littérature</span>
                 </button>
                 <button class="subject-btn" data-matiere="physique">
                     <span class="subject-icon">⚡</span>
                     <span class="subject-name">Physique</span>
+                    <span class="subject-hint">Mécanique · Électricité</span>
                 </button>
                 <button class="subject-btn" data-matiere="chimie">
                     <span class="subject-icon">🧪</span>
                     <span class="subject-name">Chimie</span>
+                    <span class="subject-hint">Réactions · Molécules</span>
                 </button>
                 <button class="subject-btn" data-matiere="svt">
                     <span class="subject-icon">🌿</span>
                     <span class="subject-name">SVT</span>
+                    <span class="subject-hint">Biologie · Géologie</span>
                 </button>
                 <button class="subject-btn" data-matiere="histoire_geo">
                     <span class="subject-icon">🗺️</span>
                     <span class="subject-name">Histoire-Géo</span>
+                    <span class="subject-hint">Haïti · Monde</span>
                 </button>
                 <button class="subject-btn" data-matiere="anglais">
                     <span class="subject-icon">🇬🇧</span>
                     <span class="subject-name">Anglais</span>
+                    <span class="subject-hint">Grammar · Reading</span>
                 </button>
             </div>
+
+           
         </div>
 
         <!-- Zone de quiz -->
@@ -225,19 +332,29 @@ $pageTitle = 'QCM - NS4';
                 <div class="card-icon">📋</div>
                 <div>
                     <h2 id="quizTitle">QCM</h2>
-                    <p id="quizSubtitle">Questions à choix multiples</p>
+                    <p id="quizSubtitle">Questions à choix multiples — Programme NS4 MENFP Haïti</p>
                 </div>
             </div>
             <div id="quizContainer"></div>
         </div>
 
-        <a href="<?= $basePath ?>/ns4/index.php" class="btn-back" style="max-width:800px;display:block;text-align:center;padding:0.75rem;background:var(--gray-100);color:var(--gray-600);border-radius:var(--radius);text-decoration:none;font-weight:500;margin-top:0.5rem;">
+        <a href="<?= $basePath ?>/ns4/index.php" class="btn-back" style="max-width:860px;display:block;text-align:center;padding:0.75rem;background:var(--gray-100);color:var(--gray-600);border-radius:var(--radius);text-decoration:none;font-weight:500;margin-top:0.5rem;">
             ⬅️ Retour aux exercices NS4
         </a>
+
+        <!-- SEO text block -->
+        <div class="seo-block" style="margin-top:1.5rem;">
+            <h2>Quiz NS4 Haïti — Jeux et entraînement pour la Terminale</h2>
+            <p>
+                <strong>Quiz Ayiti QCM NS4</strong> est l'endroit idéal pour s'entraîner, réviser et se divertir en préparant les examens officiels de <strong>Terminale (NS4)</strong> en Haïti. Que tu cherches un <strong>kwiz NS4</strong>, un <strong>qwiz NS4</strong>, un <strong>quiz philo</strong>, un <strong>kwiz filo</strong> ou tout simplement un moyen ludique et efficace de réviser, notre plateforme offre tout ça gratuitement.
+            </p>
+            
+        </div>
     </main>
 
     <footer class="footer">
-        <p>&copy; <?= date('Y') ?> <strong>Quiz Ayiti</strong> &mdash; NS4 — Programmes officiels MENFP</p>
+        <p>&copy; <?= date('Y') ?> <strong>Quiz Ayiti</strong> &mdash; QCM NS4 — Programmes officiels MENFP — Haïti</p>
+        <p class="footer-keywords">QCM NS4 · Quiz Philo · Kwiz NS4 · Qwiz NS4 · Kwix NS4 · Quiz Filo · Kwiz Philo · Entraînement NS4 · Jeux Révision Terminale Haiti · Maths · Français · Physique · Chimie · SVT · Anglais · Histoire-Géo · Bac Haïti 2025</p>
     </footer>
 
     <script>
@@ -245,95 +362,40 @@ $pageTitle = 'QCM - NS4';
         const CLASSE  = 'ns4';
         const QUIZ_TYPE = 'qcm';
 
-        /**
-         * Convertit les caractères Unicode exposants/indices
-         * en vraies balises HTML <sup> et <sub> pour un affichage correct.
-         */
-        /**
-         * Convertit les caractères mathématiques Unicode en HTML lisible.
-         * Utilise un remplacement char par char (pas de regex sur classe Unicode)
-         * pour éviter les bugs sur tous les navigateurs/appareils.
-         */
 function formatMath(text) {
     if (!text) return text;
 
     const REPLACEMENTS = [
-        // === Symboles mathématiques ===
-        ['√', '&radic;'],   // racine carrée
-        ['∫', '&int;'],     // intégrale
-        ['∞', '&infin;'],   // infini
-        ['≈', '&asymp;'],   // environ égal
-        ['≠', '&ne;'],      // différent
-        ['≤', '&le;'],      // inférieur ou égal
-        ['≥', '&ge;'],      // supérieur ou égal
-        ['×', '&times;'],   // multiplication
-        ['·', '&middot;'],  // point médian
-        ['°', '&deg;'],     // degré
-        ['→', '&rarr;'],    // flèche droite
-        ['←', '&larr;'],    // flèche gauche
-        ['↔', '&harr;'],    // flèche double
-        ['⇒', '&rArr;'],    // flèche double droite
-        ['⇔', '&hArr;'],    // flèche double
-        // === Lettres grecques ===
-        ['Δ', '&Delta;'],   // Delta
-        ['π', '&pi;'],      // pi
-        ['Π', '&Pi;'],      // Pi majuscule
-        ['σ', '&sigma;'],   // sigma
-        ['Σ', '&Sigma;'],   // Sigma
-        ['ε', '&epsilon;'], // epsilon
-        ['α', '&alpha;'],   // alpha
-        ['β', '&beta;'],    // beta
-        ['γ', '&gamma;'],   // gamma
-        ['θ', '&theta;'],   // theta
-        ['λ', '&lambda;'],  // lambda
-        ['μ', '&mu;'],      // mu
-        ['ω', '&omega;'],   // omega
-        ['Ω', '&Omega;'],   // Omega
-        ['ρ', '&rho;'],     // rho
-        ['φ', '&phi;'],     // phi
-        ['δ', '&delta;'],   // delta minuscule
-        // === Ensembles ===
-        ['ℝ', '&#8477;'],   // R ensemble réel
-        ['ℕ', '&#8469;'],   // N ensemble naturel
-        ['ℤ', '&#8484;'],   // Z ensemble entier
-        ['ℚ', '&#8474;'],   // Q ensemble rationnel
-        ['ℂ', '&#8450;'],   // C ensemble complexe
-        ['∅', '&empty;'],   // ensemble vide
-        ['∈', '&isin;'],    // appartient
-        ['∉', '&notin;'],   // n'appartient pas
-        ['⊂', '&sub;'],     // sous-ensemble
-        ['⊆', '&sube;'],    // sous-ensemble ou égal
-        ['∪', '&cup;'],     // union
-        ['∩', '&cap;'],     // intersection
-        ['∀', '&forall;'],  // pour tout
-        ['∃', '&exist;'],   // il existe
-        // === Exposants → <sup> ===
+        ['√', '&radic;'], ['∫', '&int;'], ['∞', '&infin;'], ['≈', '&asymp;'],
+        ['≠', '&ne;'], ['≤', '&le;'], ['≥', '&ge;'], ['×', '&times;'],
+        ['·', '&middot;'], ['°', '&deg;'], ['→', '&rarr;'], ['←', '&larr;'],
+        ['↔', '&harr;'], ['⇒', '&rArr;'], ['⇔', '&hArr;'],
+        ['Δ', '&Delta;'], ['π', '&pi;'], ['Π', '&Pi;'], ['σ', '&sigma;'],
+        ['Σ', '&Sigma;'], ['ε', '&epsilon;'], ['α', '&alpha;'], ['β', '&beta;'],
+        ['γ', '&gamma;'], ['θ', '&theta;'], ['λ', '&lambda;'], ['μ', '&mu;'],
+        ['ω', '&omega;'], ['Ω', '&Omega;'], ['ρ', '&rho;'], ['φ', '&phi;'],
+        ['δ', '&delta;'], ['ℝ', '&#8477;'], ['ℕ', '&#8469;'], ['ℤ', '&#8484;'],
+        ['ℚ', '&#8474;'], ['ℂ', '&#8450;'], ['∅', '&empty;'], ['∈', '&isin;'],
+        ['∉', '&notin;'], ['⊂', '&sub;'], ['⊆', '&sube;'], ['∪', '&cup;'],
+        ['∩', '&cap;'], ['∀', '&forall;'], ['∃', '&exist;'],
         ['⁰', '<sup>0</sup>'], ['¹', '<sup>1</sup>'], ['²', '<sup>2</sup>'],
         ['³', '<sup>3</sup>'], ['⁴', '<sup>4</sup>'], ['⁵', '<sup>5</sup>'],
         ['⁶', '<sup>6</sup>'], ['⁷', '<sup>7</sup>'], ['⁸', '<sup>8</sup>'],
         ['⁹', '<sup>9</sup>'], ['ⁿ', '<sup>n</sup>'], ['⁺', '<sup>+</sup>'],
         ['⁻', '<sup>-</sup>'], ['ˣ', '<sup>x</sup>'],
-        // === Indices → <sub> ===
         ['₀', '<sub>0</sub>'], ['₁', '<sub>1</sub>'], ['₂', '<sub>2</sub>'],
         ['₃', '<sub>3</sub>'], ['₄', '<sub>4</sub>'], ['₅', '<sub>5</sub>'],
         ['₆', '<sub>6</sub>'], ['₇', '<sub>7</sub>'], ['₈', '<sub>8</sub>'],
         ['₉', '<sub>9</sub>'], ['ₙ', '<sub>n</sub>'], ['ₓ', '<sub>x</sub>'],
         ['₊', '<sub>+</sub>'], ['₋', '<sub>-</sub>'],
-        // === Fractions ===
-        ['½', '&frac12;'], ['⅓', '&frac13;'], ['¼', '&frac14;'],
-        ['¾', '&frac34;'],
-        // === Flèches réaction chimique ===
-        ['→', '&rarr;'],
+        ['½', '&frac12;'], ['⅓', '&frac13;'], ['¼', '&frac14;'], ['¾', '&frac34;'],
     ];
 
     for (const [from, to] of REPLACEMENTS) {
         text = text.split(from).join(to);
     }
-
-    // Fusionner les balises sup/sub consécutives
     text = text.replace(/<\/sup><sup>/g, '');
     text = text.replace(/<\/sub><sub>/g, '');
-
     return text;
 }
 
@@ -362,7 +424,7 @@ function formatMath(text) {
                 this.classList.add('active');
                 const matiere = this.dataset.matiere;
                 const matiereLabel = this.querySelector('.subject-name').textContent;
-                document.getElementById('quizTitle').textContent = 'QCM — ' + matiereLabel;
+                document.getElementById('quizTitle').textContent = 'QCM — ' + matiereLabel + ' NS4';
                 quizCard.style.display = 'block';
                 loadQuiz(matiere);
                 quizCard.scrollIntoView({ behavior: 'smooth', block: 'start' });

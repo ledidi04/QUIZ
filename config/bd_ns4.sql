@@ -1012,14 +1012,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Parce que l''animal ne se fatigue jamais', 0, 3),
 (@qid, 'Parce que l''animal n''utilise jamais d''outils', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(8, 2, 'Quel est le rapport de l''homme avec la technique ?', 'La technique peut améliorer la vie, mais l''essentiel est une redéfinition des rapports de l''homme avec elle.', 'Programme NS4', 2);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'La technique doit dominer totalement l''homme', 0, 1),
-(@qid, 'La technique est un moyen ; l''essentiel est de redéfinir les rapports de l''homme avec elle', 1, 2),
-(@qid, 'L''homme doit rejeter toute technique', 0, 3),
-(@qid, 'La technique n''a aucun impact sur l''homme', 0, 4);
+
 
 -- ============================================
 -- THÈME 10 : LA VIOLENCE ET L'AGRESSIVITÉ
@@ -3821,7 +3814,7 @@ INSERT FROM reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'a', 0, 1),
 (@qid, '|a|', 1, 2),
 (@qid, '|b|', 0, 3),
-(@qid, 'arg(a)', 0, 4);
+(@qid, 'a+b', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (9, 2, 'L''angle de rotation d''une similitude directe f(z) = az + b est :', 'L''angle de rotation est arg(a), l''argument du coefficient a.', 'Programme NS4', 2);

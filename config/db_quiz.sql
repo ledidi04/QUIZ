@@ -5004,7 +5004,7 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '9/4', 0, 1),
-(@qid, '3/2', 0, 2),
+(@qid, '3/11', 1, 2),
 (@qid, '2/3', 0, 3),
 (@qid, '4/9', 0, 4);
 
@@ -10307,15 +10307,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '0,6 %', 0, 3),
 (@qid, '0,06 %', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(4, 2, 'La guillotine est un levier du... genre. Le point d''application de la force se trouve entre...',
-    'La guillotine est du 2e genre (résistance entre appui et puissance).', 'Examen 9e AF', 2);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Premier / appui et résistance', 0, 1),
-(@qid, 'Deuxième / appui et puissance', 0, 2),
-(@qid, 'Troisième / la résistance et la puissance', 0, 3),
-(@qid, 'Premier / l''appui et la puissance', 0, 4);
+
 
 -- ============================================
 -- EXAMEN 16 : Suite
@@ -11619,15 +11611,6 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Le Nord-Est', 1, 3),
 (@qid, 'L''Artibonite', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(5, 2, 'Que signifie FAO ?',
-    'Organisation pour l''Alimentation et l''Agriculture.', 'Examen 9e AF', 2);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Organisation mondiale de la santé', 0, 1),
-(@qid, 'Organisation pour l''Alimentation et l''Agriculture', 1, 2),
-(@qid, 'Fonds monétaire international', 0, 3),
-(@qid, 'Organisation des États Américains', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (5, 2, 'Quel est le principal produit agricole d''exportation historique d''Haïti ?',
@@ -16486,12 +16469,6 @@ SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Santiago de Cuba', 0, 1), (@qid, 'La Havane', 1, 2), (@qid, 'Trinidad', 0, 3), (@qid, 'Camagüey', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(5, 2, 'Quelle est la capitale de la République Dominicaine ?',
- 'Saint-Domingue (Santo Domingo) est la capitale de la République Dominicaine.', 'Programme 9e AF', 1);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Santiago', 0, 1), (@qid, 'Saint-Domingue', 1, 2), (@qid, 'Puerto Plata', 0, 3), (@qid, 'La Romana', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (5, 2, 'Quel est le nom de la mer qui borde Haïti au sud ?',

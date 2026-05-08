@@ -161,7 +161,6 @@ $fichiers_par_matiere = [
         'Anglais_2022_SES-SMP-SVT_Fresno.pdf',
         'Anglais_2022_SES-SMP-SVT_Indianapolis.pdf',
         'Anglais_2022_SES-SMP-SVT_Jacksonville.pdf',
-        'Anglais_2022_SES-SMP-SVT_KansasCity.pdf',
         'Anglais_2022_SES-SMP-SVT_Nashville.pdf',
         'Anglais_2022_SES-SMP-SVT_OptimisticSR.docx',
         'Anglais_2022_SES-SMP-SVT_Pittsburgh.pdf',
