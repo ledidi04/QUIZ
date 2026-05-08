@@ -23,7 +23,7 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
     <meta name="google-site-verification" content="ikYgHEBCKlQWimzFOnFPfwoOUqXJ41fPNc6nXbI1lng" />
     
     <!-- Titre optimisé pour le SEO (environ 60 caractères) -->
-    <title>Quiz Ayiti | 9ème, NS4, Philo, Université, Préfac – QCM Haïti</title>
+    <title>Quiz Ayiti , Quiz Haïti | 9ème, NS4, Philo, Université, Préfac – QCM Haïti</title>
     
     <!-- Open Graph pour les réseaux sociaux -->
     <meta property="og:title" content="Quiz Ayiti | 9ème, NS4, Philo, Université, Préfac – QCM Haïti">
