@@ -102,23 +102,43 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
             display: flex; flex-direction: column; min-height: 100vh;
         }
 
-        /* ===== NAVBAR ===== */
+        /* ===== NAVBAR UNIFIÉE ===== */
         .navbar {
             display: flex; justify-content: space-between; align-items: center;
             background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
-            padding: 0 2rem; height: 70px; position: sticky; top: 0; z-index: 1000;
+            padding: 0 1.5rem;
+            height: 70px; position: sticky; top: 0; z-index: 1000;
             border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-sm);
         }
-        .nav-brand { display: flex; align-items: center; gap: 0.75rem; font-size: 1.4rem; font-weight: 800; color: var(--gray-900); text-decoration: none; }
-        .nav-brand:hover { transform: scale(1.02); }
-        .nav-brand .brand-icon { width: 42px; height: 42px; background: linear-gradient(135deg, var(--blue), #1e40af); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.3rem; font-weight: 800; box-shadow: 0 4px 12px rgba(0,35,149,0.25); }
-        .nav-brand .brand-dot { color: var(--red); }
-        .nav-menu { display: flex; list-style: none; gap: 0.5rem; align-items: center; }
-        .nav-menu a { color: var(--gray-600); text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 0.6rem 1.1rem; border-radius: var(--radius); transition: all var(--transition); }
+        .nav-brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+        .nav-brand img { height: 44px; width: 44px; object-fit: contain; border-radius: var(--radius); }
+        .nav-brand-text { font-size: 1.35rem; font-weight: 800; color: var(--gray-900); }
+        .nav-brand-text span { color: var(--red); }
+        .nav-brand:hover .nav-brand-text { color: var(--blue); }
+
+        .nav-menu {
+            display: flex; list-style: none;
+            gap: 0.35rem;
+            align-items: center;
+        }
+        .nav-menu a {
+            color: var(--gray-600); text-decoration: none; font-weight: 500; font-size: .9rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: var(--radius); transition: all var(--transition);
+            white-space: nowrap;
+        }
         .nav-menu a:hover { color: var(--blue); background: #eff6ff; }
-        .nav-menu a.active { color: var(--white); background: var(--blue); font-weight: 600; }
+        .nav-menu a.active { color: var(--white); background: var(--purple); font-weight: 600; }
+        .nav-menu a.btn-apk {
+            background: linear-gradient(135deg, var(--green), #059669); color: var(--white);
+            font-weight: 600; box-shadow: 0 3px 10px rgba(16,185,129,.3);
+            padding: 0.5rem 0.9rem;
+        }
+        .nav-menu a.btn-apk:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(16,185,129,.4); }
+
         .nav-toggle { display: none; flex-direction: column; background: none; border: none; cursor: pointer; gap: 5px; }
         .nav-toggle .bar { width: 26px; height: 2.5px; background: var(--gray-700); border-radius: 2px; }
+
         .container { flex: 1; width: 100%; max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
 
         /* ===== HEADER ===== */
@@ -200,13 +220,24 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
         .footer { background: var(--white); border-top: 1px solid var(--gray-200); padding: 1.5rem; text-align: center; color: var(--gray-400); font-size: 0.85rem; margin-top: auto; }
         .footer-keywords { margin-top: 0.5rem; font-size: 0.72rem; color: var(--gray-300); }
 
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .navbar { padding: 0 1.25rem; height: 60px; }
             .nav-brand { font-size: 1.2rem; }
-            .nav-brand .brand-icon { width: 34px; height: 34px; font-size: 1rem; }
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: var(--white); padding: 1rem; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); z-index: 999; }
+            .nav-menu {
+                display: none; flex-direction: column;
+                position: absolute; top: 60px; left: 0; width: 100%;
+                background: var(--white); padding: 1rem;
+                border-bottom: 1px solid var(--gray-200);
+                box-shadow: var(--shadow-lg); z-index: 999;
+                gap: 0.5rem;
+            }
             .nav-menu.show { display: flex; }
-            .nav-menu a { padding: 0.8rem 1rem; }
+            .nav-menu a {
+                padding: 0.75rem 1rem;
+                font-size: 0.95rem;
+                width: 100%;
+            }
             .nav-toggle { display: flex; }
             .container { padding: 1.25rem 1rem; }
             .type-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
@@ -216,6 +247,10 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
             .card { padding: 1.25rem; }
             .seo-block { padding: 1.25rem; }
         }
+        @media (min-width: 641px) and (max-width: 900px) {
+            .nav-menu a { padding: 0.5rem 0.7rem; font-size: 0.85rem; }
+            .nav-menu { gap: 0.25rem; }
+        }
         @media (max-width: 400px) {
             .type-grid { grid-template-columns: 1fr; }
             .info-section { grid-template-columns: repeat(2, 1fr); }
@@ -223,10 +258,11 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
     </style>
 </head>
 <body>
-    <!-- ========== NAVIGATION ========== -->
+    <!-- ========== NAVIGATION UNIFIÉE ========== -->
     <nav class="navbar">
         <a href="<?= $basePath ?>/index.php" class="nav-brand">
-            <span class="brand-icon">Q</span>Quiz<span class="brand-dot">.</span>Ayiti
+            <img src="<?= $basePath ?>/images/logo.png" alt="Quiz Ayiti">
+            <span class="nav-brand-text">Quiz Ayiti</span>
         </a>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
             <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -234,7 +270,9 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
         <ul class="nav-menu" id="navMenu">
             <li><a href="<?= $basePath ?>/index.php">Accueil</a></li>
             <li><a href="<?= $basePath ?>/9e/index.php">9ème AF</a></li>
-            <li><a href="<?= $basePath ?>/ns4/index.php" class="active">NS4</a></li>
+            <li><a href="<?= $basePath ?>/ns4/index.php">NS4</a></li>
+            <li><a href="<?= $basePath ?>/about/index.php">À propos</a></li>
+            <li><a href="<?= $basePath ?>/download.php" >Télécharger l'app</a></li>
         </ul>
     </nav>
 
@@ -346,7 +384,7 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <p>&copy; <?= date('Y') ?> <strong>Quiz Ayiti</strong> &mdash; NS4 — Nouveaux Secondaires 4 &mdash; Programmes officiels MENFP &mdash; Haïti</p>
-        <p class="footer-keywords">Quiz NS4 · Kwiz NS4 · QCM Philo · Quiz Philo Haïti · Kwiz Filo · Examen MENFP · Bac Haïti · Terminale Haïti · Maths · Français · Physique · Chimie · SVT · Anglais · Histoire-Géo · Examens passés 2022 2023 2024</p>
+        <p class="footer-keywords">Quiz NS4 · Kwiz NS4 · QCM Philo · Quiz Philo Haïti · Kwiz Filo · Examen MENFP · Bac Haïti · Terminale Haïti · Maths · Français · Physique · Chimie · SVT · Anglais · Histoire-Géo · Examens passés </p>
     </footer>
 
     <script>

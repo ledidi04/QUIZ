@@ -188,7 +188,7 @@ $apkSize = file_exists($apkFile) ? round(filesize($apkFile) / 1048576, 1) . ' Mo
 <nav class="navbar">
     <a href="<?= $basePath ?>/index.php" class="nav-brand">
         <img src="<?= $basePath ?>/images/logo.png" alt="Quiz Ayiti">
-        <span class="nav-brand-text">Quiz<span>.</span>Ayiti</span>
+        <span class="nav-brand-text">Quiz Ayiti</span>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>

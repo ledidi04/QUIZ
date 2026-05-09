@@ -110,7 +110,7 @@ krsort($examens);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <title><?= $pageTitle ?> - Quiz Ayiti</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -118,7 +118,8 @@ krsort($examens);
            VARIABLES & RESET
         ══════════════════════════════════════ */
         :root {
-            --blue: #002395; --red: #d21034; --gold: #f1c40f;
+            --blue: #002395; --red: #d21034; --gold: #f1c40f; --green: #10b981;
+            --purple: #7c3aed; --orange: #f59e0b;
             --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
             --gray-300: #cbd5e1; --gray-400: #94a3b8; --gray-500: #64748b;
             --gray-600: #475569; --gray-700: #334155; --gray-800: #1e293b;
@@ -141,22 +142,41 @@ krsort($examens);
         }
 
         /* ══════════════════════════════════════
-           NAVBAR — identique au reste du site
+           NAVBAR — UNIFIÉE avec index.php
         ══════════════════════════════════════ */
         .navbar {
             display: flex; justify-content: space-between; align-items: center;
-            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
-            padding: 0 2rem; height: 70px;
-            position: sticky; top: 0; z-index: 1000;
+            background: rgba(255,255,255,.95); backdrop-filter: blur(10px);
+            padding: 0 1.5rem;
+            height: 70px; position: sticky; top: 0; z-index: 1000;
             border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-sm);
         }
-        .nav-brand { display: flex; align-items: center; gap: .75rem; font-size: 1.4rem; font-weight: 800; color: var(--gray-900); text-decoration: none; }
-        .nav-brand .brand-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--blue), #1e40af); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.2rem; font-weight: 800; box-shadow: 0 4px 12px rgba(0,35,149,.25); }
-        .nav-brand .brand-dot { color: var(--red); }
-        .nav-menu { display: flex; list-style: none; gap: .5rem; align-items: center; }
-        .nav-menu a { color: var(--gray-600); text-decoration: none; font-weight: 500; font-size: .95rem; padding: .6rem 1.1rem; border-radius: var(--radius); transition: all var(--transition); }
+        .nav-brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+        .nav-brand img { height: 44px; width: 44px; object-fit: contain; border-radius: var(--radius); }
+        .nav-brand-text { font-size: 1.35rem; font-weight: 800; color: var(--gray-900); }
+        .nav-brand-text span { color: var(--red); }
+        .nav-brand:hover .nav-brand-text { color: var(--blue); }
+
+        .nav-menu {
+            display: flex; list-style: none;
+            gap: 0.35rem;
+            align-items: center;
+        }
+        .nav-menu a {
+            color: var(--gray-600); text-decoration: none; font-weight: 500; font-size: .9rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: var(--radius); transition: all var(--transition);
+            white-space: nowrap;
+        }
         .nav-menu a:hover { color: var(--blue); background: #eff6ff; }
         .nav-menu a.active { color: var(--white); background: var(--blue); font-weight: 600; }
+        .nav-menu a.btn-apk {
+            background: linear-gradient(135deg, var(--green), #059669); color: var(--white);
+            font-weight: 600; box-shadow: 0 3px 10px rgba(16,185,129,.3);
+            padding: 0.5rem 0.9rem;
+        }
+        .nav-menu a.btn-apk:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(16,185,129,.4); }
+
         .nav-toggle { display: none; flex-direction: column; background: none; border: none; cursor: pointer; gap: 5px; padding: 4px; }
         .nav-toggle .bar { width: 26px; height: 2.5px; background: var(--gray-700); border-radius: 2px; transition: all .3s; }
 
@@ -300,7 +320,7 @@ krsort($examens);
         .btn-back:hover { background: var(--gray-300); transform: translateX(-3px); }
 
         /* ══════════════════════════════════════
-           FOOTER — identique au reste du site
+           FOOTER
         ══════════════════════════════════════ */
         .footer { background: var(--white); border-top: 1px solid var(--gray-200); padding: 1.5rem; text-align: center; color: var(--gray-400); font-size: .85rem; margin-top: auto; }
 
@@ -308,21 +328,23 @@ krsort($examens);
            RESPONSIVE
         ══════════════════════════════════════ */
         @media (max-width: 768px) {
-            /* Navbar */
             .navbar { padding: 0 1.25rem; height: 60px; }
             .nav-brand { font-size: 1.2rem; }
-            .nav-brand .brand-icon { width: 34px; height: 34px; font-size: 1rem; }
             .nav-menu {
                 display: none; flex-direction: column;
                 position: absolute; top: 60px; left: 0; width: 100%;
                 background: var(--white); padding: 1rem;
                 border-bottom: 1px solid var(--gray-200);
                 box-shadow: var(--shadow-lg); z-index: 999;
+                gap: 0.5rem;
             }
             .nav-menu.show { display: flex; }
-            .nav-menu a { padding: .8rem 1rem; }
+            .nav-menu a {
+                padding: 0.75rem 1rem;
+                font-size: 0.95rem;
+                width: 100%;
+            }
             .nav-toggle { display: flex; }
-            /* Layout */
             .container { padding: 1.5rem 1rem; }
             .file-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: .55rem; }
             .yr-badge { width: 44px; height: 44px; font-size: .85rem; }
@@ -342,18 +364,21 @@ krsort($examens);
 </head>
 <body>
 
-<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<!-- ═══════════════════════ NAVBAR UNIFIÉE ═══════════════════════ -->
 <nav class="navbar">
     <a href="<?= $basePath ?>/index.php" class="nav-brand">
-        <span class="brand-icon">Q</span>Quiz<span class="brand-dot">.</span>Ayiti
+        <img src="<?= $basePath ?>/images/logo.png" alt="Quiz Ayiti">
+        <span class="nav-brand-text">Quiz Ayiti</span>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </button>
     <ul class="nav-menu" id="navMenu">
         <li><a href="<?= $basePath ?>/index.php">Accueil</a></li>
-        <li><a href="<?= $basePath ?>/9e/index.php" class="active">9ème AF</a></li>
+        <li><a href="<?= $basePath ?>/9e/index.php" >9ème AF</a></li>
         <li><a href="<?= $basePath ?>/ns4/index.php">NS4</a></li>
+        <li><a href="<?= $basePath ?>/about/index.php">À propos</a></li>
+        <li><a href="<?= $basePath ?>/download.php" >Télécharger l'app</a></li>
     </ul>
 </nav>
 
@@ -407,7 +432,6 @@ krsort($examens);
                     <?php foreach ($fichiers as $fichier):
                         $ext        = strtolower(pathinfo($fichier, PATHINFO_EXTENSION));
                         $affichage  = nomAffichage($fichier);
-                        // urlencode gère les espaces et accents → %20, %C3%A9 etc.
                         $urlFichier = $basePath . '/9e/Examen/' . $annee . '/' . rawurlencode($fichier);
                         $extClass   = in_array($ext, ['jpg','jpeg']) ? 'ext-jpg' : 'ext-pdf';
                     ?>
@@ -459,7 +483,6 @@ function toggleYear(btn) {
         panel.classList.add('show');
         btn.classList.add('open');
         btn.setAttribute('aria-expanded','true');
-        // Scroll doux vers le bloc
         setTimeout(() => btn.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
     }
 }
@@ -474,7 +497,6 @@ document.getElementById('searchInput').addEventListener('input', function() {
     document.querySelectorAll('.year-block').forEach(block => {
         if (!q) { block.classList.remove('hidden'); return; }
         const year = block.dataset.year;
-        // Chercher dans l'année et dans les noms de fichiers
         const names = [...block.querySelectorAll('.file-name')].map(n => n.textContent.toLowerCase()).join(' ');
         block.classList.toggle('hidden', !year.includes(q) && !names.includes(q));
     });
