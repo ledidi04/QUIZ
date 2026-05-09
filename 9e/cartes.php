@@ -12,7 +12,7 @@ $name = getStudentName();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title><?= $pageTitle ?> - Quiz Ayiti</title>
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon> <!-- Typo corrigée -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -144,72 +144,72 @@ $name = getStudentName();
 
     <script>
         // ═══════════════════════════════════════
-        // BASE DE DONNÉES — PAYS DU MONDE
-        // ═══════════════════════════════════════
-        const countriesData = [
-            // Afrique
-            { name: 'Afrique du Sud', category: 'pays', neighbors: ['Namibie', 'Botswana', 'Zimbabwe', 'Mozambique', 'Lesotho'] },
-            { name: 'Algérie', category: 'pays', neighbors: ['Maroc', 'Tunisie', 'Libye', 'Mauritanie', 'Mali', 'Niger'] },
-            { name: 'Nigeria', category: 'pays', neighbors: ['Cameroun', 'Tchad', 'Bénin', 'Niger', 'Ghana'] },
-            { name: 'Égypte', category: 'pays', neighbors: ['Libye', 'Soudan', 'Israël', 'Arabie Saoudite', 'Jordanie'] },
-            
-            // Europe
-            { name: 'France', category: 'pays', neighbors: ['Espagne', 'Italie', 'Allemagne', 'Belgique', 'Suisse', 'Royaume-Uni'] },
-            { name: 'Allemagne', category: 'pays', neighbors: ['France', 'Pologne', 'Autriche', 'Pays-Bas', 'Danemark', 'Suisse'] },
-            { name: 'Italie', category: 'pays', neighbors: ['France', 'Espagne', 'Grèce', 'Suisse', 'Autriche', 'Slovénie'] },
-            { name: 'Espagne', category: 'pays', image: 'Espagne.png', neighbors: ['France', 'Portugal', 'Italie', 'Maroc', 'Andorre'] },
-            { name: 'Ukraine', category: 'pays', neighbors: ['Pologne', 'Turquie', 'Roumanie', 'Biélorussie', 'Russie', 'Moldavie'] },
-            { name: 'Turquie', category: 'pays', neighbors: ['Ukraine', 'Irak', 'Iran', 'Grèce', 'Bulgarie', 'Syrie'] },
-            { name: 'Russie', category: 'pays', neighbors: ['Ukraine', 'Chine', 'Mongolie', 'Kazakhstan', 'Finlande', 'Pologne'] },
-            
-            // Amériques
-            { name: 'Canada', category: 'pays', neighbors: ['USA', 'Mexique', 'Groenland', 'Russie'] },
-            { name: 'USA', category: 'pays', neighbors: ['Canada', 'Mexique', 'Cuba', 'Bahamas', 'Jamaïque'] },
-            { name: 'Mexique', category: 'pays', neighbors: ['USA', 'Cuba', 'Guatemala', 'Belize', 'Honduras'] },
-            { name: 'Brésil', category: 'pays', neighbors: ['Argentine', 'Colombie', 'Pérou', 'Venezuela', 'Uruguay', 'Paraguay'] },
-            { name: 'Argentine', category: 'pays', neighbors: ['Chili', 'Brésil', 'Uruguay', 'Paraguay', 'Bolivie'] },
-            { name: 'Chili', category: 'pays', neighbors: ['Argentine', 'Pérou', 'Bolivie', 'Équateur'] },
-            { name: 'Colombie', category: 'pays', neighbors: ['Venezuela', 'Brésil', 'Pérou', 'Panama', 'Équateur'] },
-            { name: 'Pérou', category: 'pays', neighbors: ['Chili', 'Brésil', 'Colombie', 'Équateur', 'Bolivie'] },
-            { name: 'Venezuela', category: 'pays', neighbors: ['Colombie', 'Brésil', 'Guyana', 'Trinidad'] },
-            
-            // Moyen-Orient
-            { name: 'Arabie Saoudite', category: 'pays', neighbors: ['Irak', 'Iran', 'Israël', 'Égypte', 'Yémen', 'Émirats'] },
-            { name: 'Irak', category: 'pays', neighbors: ['Iran', 'Turquie', 'Arabie Saoudite', 'Syrie', 'Jordanie', 'Koweït'] },
-            { name: 'Iran', category: 'pays', neighbors: ['Irak', 'Turquie', 'Afghanistan', 'Pakistan', 'Turkménistan', 'Azerbaïdjan'] },
-            { name: 'Israël', category: 'pays', neighbors: ['Égypte', 'Arabie Saoudite', 'Liban', 'Syrie', 'Jordanie', 'Irak'] },
-            
-            // Asie
-            { name: 'Chine', category: 'pays', neighbors: ['Inde', 'Russie', 'Japon', 'Corée du Nord', 'Vietnam', 'Mongolie'] },
-            { name: 'Inde', category: 'pays', neighbors: ['Chine', 'Pakistan', 'Bangladesh', 'Népal', 'Birmanie', 'Sri Lanka'] },
-            { name: 'Japon', category: 'pays', neighbors: ['Chine', 'Corée du Sud', 'Corée du Nord', 'Russie', 'Taïwan'] },
-            { name: 'Coree du Sud', category: 'pays', neighbors: ['Corée du Nord', 'Japon', 'Chine', 'Russie'] },
-            { name: 'Coree du Nord', category: 'pays', neighbors: ['Corée du Sud', 'Chine', 'Russie', 'Japon'] },
-            
-            // Océanie
-            { name: 'Australie', category: 'pays', neighbors: ['Nouvelle-Zélande', 'Indonésie', 'Papouasie', 'Timor'] },
-            
-            // Caraïbes
-            { name: 'Cuba', category: 'pays', neighbors: ['USA', 'Mexique', 'Haïti', 'Jamaïque', 'Bahamas'] },
-            { name: 'Haïti', category: 'pays', neighbors: ['République Dominicaine', 'Cuba', 'Jamaïque', 'USA'] },
-            { name: 'République Dominicaine', category: 'pays', neighbors: ['Haïti', 'Cuba', 'Porto Rico', 'USA'] }
-        ];
+// BASE DE DONNÉES — PAYS DU MONDE
+// ═══════════════════════════════════════
+const countriesData = [
+    // Afrique
+    { name: 'Afrique du Sud', category: 'pays', imageFile: 'afrique_du_sud.png', neighbors: ['Namibie', 'Botswana', 'Zimbabwe', 'Mozambique', 'Lesotho'] },
+    { name: 'Algérie', category: 'pays', imageFile: 'algerie.png', neighbors: ['Maroc', 'Tunisie', 'Libye', 'Mauritanie', 'Mali', 'Niger'] },
+    { name: 'Nigeria', category: 'pays', imageFile: 'nigeria.png', neighbors: ['Cameroun', 'Tchad', 'Bénin', 'Niger', 'Ghana'] },
+    { name: 'Égypte', category: 'pays', imageFile: 'egypte.png', neighbors: ['Libye', 'Soudan', 'Israël', 'Arabie Saoudite', 'Jordanie'] },
+    
+    // Europe
+    { name: 'France', category: 'pays', imageFile: 'france.png', neighbors: ['Espagne', 'Italie', 'Allemagne', 'Belgique', 'Suisse', 'Royaume-Uni'] },
+    { name: 'Allemagne', category: 'pays', imageFile: 'allemagne.png', neighbors: ['France', 'Pologne', 'Autriche', 'Pays-Bas', 'Danemark', 'Suisse'] },
+    { name: 'Italie', category: 'pays', imageFile: 'italie.png', neighbors: ['France', 'Espagne', 'Grèce', 'Suisse', 'Autriche', 'Slovénie'] },
+    { name: 'Espagne', category: 'pays', imageFile: 'espagne.png', neighbors: ['France', 'Portugal', 'Italie', 'Maroc', 'Andorre'] },
+    { name: 'Ukraine', category: 'pays', imageFile: 'ukraine.png', neighbors: ['Pologne', 'Turquie', 'Roumanie', 'Biélorussie', 'Russie', 'Moldavie'] },
+    { name: 'Turquie', category: 'pays', imageFile: 'turquie.png', neighbors: ['Ukraine', 'Irak', 'Iran', 'Grèce', 'Bulgarie', 'Syrie'] },
+    { name: 'Russie', category: 'pays', imageFile: 'russie.png', neighbors: ['Ukraine', 'Chine', 'Mongolie', 'Kazakhstan', 'Finlande', 'Pologne'] },
+    
+    // Amériques
+    { name: 'Canada', category: 'pays', imageFile: 'canada.png', neighbors: ['USA', 'Mexique', 'Groenland', 'Russie'] },
+    { name: 'USA', category: 'pays', imageFile: 'usa.png', neighbors: ['Canada', 'Mexique', 'Cuba', 'Bahamas', 'Jamaïque'] },
+    { name: 'Mexique', category: 'pays', imageFile: 'mexique.png', neighbors: ['USA', 'Cuba', 'Guatemala', 'Belize', 'Honduras'] },
+    { name: 'Brésil', category: 'pays', imageFile: 'bresil.png', neighbors: ['Argentine', 'Colombie', 'Pérou', 'Venezuela', 'Uruguay', 'Paraguay'] },
+    { name: 'Argentine', category: 'pays', imageFile: 'argentine.png', neighbors: ['Chili', 'Brésil', 'Uruguay', 'Paraguay', 'Bolivie'] },
+    { name: 'Chili', category: 'pays', imageFile: 'chili.png', neighbors: ['Argentine', 'Pérou', 'Bolivie', 'Équateur'] },
+    { name: 'Colombie', category: 'pays', imageFile: 'colombie.png', neighbors: ['Venezuela', 'Brésil', 'Pérou', 'Panama', 'Équateur'] },
+    { name: 'Pérou', category: 'pays', imageFile: 'perou.png', neighbors: ['Chili', 'Brésil', 'Colombie', 'Équateur', 'Bolivie'] },
+    { name: 'Venezuela', category: 'pays', imageFile: 'venezuela.png', neighbors: ['Colombie', 'Brésil', 'Guyana', 'Trinidad'] },
+    
+    // Moyen-Orient
+    { name: 'Arabie Saoudite', category: 'pays', imageFile: 'arabie_saoudite.png', neighbors: ['Irak', 'Iran', 'Israël', 'Égypte', 'Yémen', 'Émirats'] },
+    { name: 'Irak', category: 'pays', imageFile: 'irak.png', neighbors: ['Iran', 'Turquie', 'Arabie Saoudite', 'Syrie', 'Jordanie', 'Koweït'] },
+    { name: 'Iran', category: 'pays', imageFile: 'iran.png', neighbors: ['Irak', 'Turquie', 'Afghanistan', 'Pakistan', 'Turkménistan', 'Azerbaïdjan'] },
+    { name: 'Israël', category: 'pays', imageFile: 'israel.png', neighbors: ['Égypte', 'Arabie Saoudite', 'Liban', 'Syrie', 'Jordanie', 'Irak'] },
+    
+    // Asie
+    { name: 'Chine', category: 'pays', imageFile: 'chine.png', neighbors: ['Inde', 'Russie', 'Japon', 'Corée du Nord', 'Vietnam', 'Mongolie'] },
+    { name: 'Inde', category: 'pays', imageFile: 'inde.png', neighbors: ['Chine', 'Pakistan', 'Bangladesh', 'Népal', 'Birmanie', 'Sri Lanka'] },
+    { name: 'Japon', category: 'pays', imageFile: 'japon.png', neighbors: ['Chine', 'Corée du Sud', 'Corée du Nord', 'Russie', 'Taïwan'] },
+    { name: 'Corée du Sud', category: 'pays', imageFile: 'coree_du_sud.png', neighbors: ['Corée du Nord', 'Japon', 'Chine', 'Russie'] },
+    { name: 'Corée du Nord', category: 'pays', imageFile: 'coree_du_nord.png', neighbors: ['Corée du Sud', 'Chine', 'Russie', 'Japon'] },
+    
+    // Océanie
+    { name: 'Australie', category: 'pays', imageFile: 'australie.png', neighbors: ['Nouvelle-Zélande', 'Indonésie', 'Papouasie', 'Timor'] },
+    
+    // Caraïbes
+    { name: 'Cuba', category: 'pays', imageFile: 'cuba.png', neighbors: ['USA', 'Mexique', 'Haïti', 'Jamaïque', 'Bahamas'] },
+    { name: 'Haïti', category: 'pays', imageFile: 'haiti.png', neighbors: ['République Dominicaine', 'Cuba', 'Jamaïque', 'USA'] },
+    { name: 'République Dominicaine', category: 'pays', imageFile: 'republique_dominicaine.png', neighbors: ['Haïti', 'Cuba', 'Porto Rico', 'USA'] }
+];
 
-        // ═══════════════════════════════════════
-        // BASE DE DONNÉES — DÉPARTEMENTS D'HAÏTI
-        // ═══════════════════════════════════════
-        const haitiDepts = [
-            { name: 'Artibonite', category: 'haiti', image: 'artibonite.png', neighbors: ['Nord', 'Centre', 'Ouest', 'Nord-Ouest'] },
-            { name: 'Centre', category: 'haiti', image: 'centre.png', neighbors: ['Artibonite', 'Ouest', 'Nord-Est', 'Nord'] },
-            { name: 'Grand Anse', category: 'haiti', image: 'grand_anse.png', neighbors: ['Sud', 'Nippes', 'Nord-Ouest'] },
-            { name: 'Nippes', category: 'haiti', image: 'nippes.png', neighbors: ['Grand-Anse', 'Sud', 'Ouest', 'Artibonite'] },
-            { name: 'Nord', category: 'haiti', image: 'nord.png', neighbors: ['Nord-Est', 'Nord-Ouest', 'Artibonite', 'Centre'] },
-            { name: 'Nord-Est', category: 'haiti', image: 'nord-est.png', neighbors: ['Nord', 'Centre'] },
-            { name: 'Nord-Ouest', category: 'haiti', image: 'nord-ouest.png', neighbors: ['Nord', 'Artibonite'] },
-            { name: 'Ouest', category: 'haiti', image: 'ouest.png', neighbors: ['Artibonite', 'Centre', 'Sud-Est', 'Nippes'] },
-            { name: 'Sud', category: 'haiti', image: 'sud.png', neighbors: ['Grand-Anse', 'Nippes', 'Sud-Est'] },
-            { name: 'Sud-Est', category: 'haiti', image: 'sud-est.png', neighbors: ['Sud', 'Nippes', 'Ouest'] }
-        ];
+// ═══════════════════════════════════════
+// BASE DE DONNÉES — DÉPARTEMENTS D'HAÏTI
+// ═══════════════════════════════════════
+const haitiDepts = [
+    { name: 'Artibonite', category: 'haiti', imageFile: 'artibonite.png', neighbors: ['Nord', 'Centre', 'Ouest', 'Nord-Ouest'] },
+    { name: 'Centre', category: 'haiti', imageFile: 'centre.png', neighbors: ['Artibonite', 'Ouest', 'Nord-Est', 'Nord'] },
+    { name: 'Grand Anse', category: 'haiti', imageFile: 'grand_anse.png', neighbors: ['Sud', 'Nippes', 'Nord-Ouest'] },
+    { name: 'Nippes', category: 'haiti', imageFile: 'nippes.png', neighbors: ['Grand-Anse', 'Sud', 'Ouest', 'Artibonite'] },
+    { name: 'Nord', category: 'haiti', imageFile: 'nord.png', neighbors: ['Nord-Est', 'Nord-Ouest', 'Artibonite', 'Centre'] },
+    { name: 'Nord-Est', category: 'haiti', imageFile: 'nord-est.png', neighbors: ['Nord', 'Centre'] },
+    { name: 'Nord-Ouest', category: 'haiti', imageFile: 'nord-ouest.png', neighbors: ['Nord', 'Artibonite'] },
+    { name: 'Ouest', category: 'haiti', imageFile: 'ouest.png', neighbors: ['Artibonite', 'Centre', 'Sud-Est', 'Nippes'] },
+    { name: 'Sud', category: 'haiti', imageFile: 'sud.png', neighbors: ['Grand-Anse', 'Nippes', 'Sud-Est'] },
+    { name: 'Sud-Est', category: 'haiti', imageFile: 'sud-est.png', neighbors: ['Sud', 'Nippes', 'Ouest'] }
+];
 
         let currentQuestions = [], currentIndex = 0, score = 0;
         let userAnswers = [];
@@ -242,13 +242,8 @@ $name = getStudentName();
 
         function getImagePath(item) {
             const base = '<?= $basePath ?>/9e/cartes/';
-            if (item.category === 'haiti') return base + item.image;
-            // Pays : nom normalisé
-            return base + item.name.toLowerCase()
-                .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-                .replace(/[^a-z0-9]/g, ' ')
-                .trim()
-                .replace(/\s+/g, '-') + '.png';
+            // Utilise directement le nom de fichier défini dans les données
+            return base + item.imageFile;
         }
 
         // ═══════════════════════════════════════

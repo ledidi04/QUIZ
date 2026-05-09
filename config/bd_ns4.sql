@@ -4508,7 +4508,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 6 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Deux condensateurs de 4 µF et 6 µF montés en parallèle ont une capacité équivalente :',
-    'En parallèle : C_eq = C₁ + C₂ = 4 + 6 = 10 µF.', 'Quiz Physique NS4', 2);
+    'En parallèle : Ceq = C₁ + C₂ = 4 + 6 = 10 µF.', 'Quiz Physique NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '2,4 µF', 0, 1), (@qid, '10 µF', 1, 2), (@qid, '24 µF', 0, 3), (@qid, '5 µF', 0, 4);
@@ -4516,7 +4516,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 1
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Trois condensateurs de 2 µF, 3 µF et 5 µF sont branchés en parallèle. La capacité équivalente est :',
-    'C_eq = 2 + 3 + 5 = 10 µF.', 'Examen NS4', 2);
+    'Ceq = 2 + 3 + 5 = 10 µF.', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '10 µF', 1, 1), (@qid, '1 µF', 0, 2), (@qid, '0,1 µF', 0, 3), (@qid, '30 µF', 0, 4);
@@ -4524,7 +4524,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Dans un montage en parallèle, la capacité équivalente est toujours :',
-    'C_eq = Σ Cᵢ, donc elle est supérieure à la plus grande des capacités.', 'Examen NS4', 2);
+    'Ceq = Σ Cᵢ, donc elle est supérieure à la plus grande des capacités.', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Inférieure à la plus petite', 0, 1), (@qid, 'Supérieure à la plus grande', 1, 2), (@qid, 'Égale à la moyenne', 0, 3), (@qid, 'Toujours nulle', 0, 4);
@@ -4532,7 +4532,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 7 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Les mêmes (4 µF et 6 µF) montés en série donnent :',
-    'En série : 1/C_eq = 1/4 + 1/6 = 5/12 → C_eq = 12/5 = 2,4 µF.', 'Quiz Physique NS4', 3);
+    'En série : 1/Ceq = 1/4 + 1/6 = 5/12 → Ceq = 12/5 = 2,4 µF.', 'Quiz Physique NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '10 µF', 0, 1), (@qid, '2,4 µF', 1, 2), (@qid, '1 µF', 0, 3), (@qid, '5 µF', 0, 4);
@@ -4540,7 +4540,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 1
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Deux condensateurs de 3 µF et 6 µF sont associés en série. La capacité équivalente est :',
-    '1/C_eq = 1/3 + 1/6 = 3/6 = 1/2 → C_eq = 2 µF.', 'Examen NS4', 3);
+    '1/Ceq = 1/3 + 1/6 = 3/6 = 1/2 → Ceq = 2 µF.', 'Examen NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '9 µF', 0, 1), (@qid, '2 µF', 1, 2), (@qid, '4,5 µF', 0, 3), (@qid, '18 µF', 0, 4);
@@ -4548,7 +4548,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Dans un montage en série, la capacité équivalente est toujours :',
-    'En série, 1/C_eq = Σ 1/Cᵢ, donc C_eq est inférieure à la plus petite des capacités.', 'Examen NS4', 2);
+    'En série, 1/Ceq = Σ 1/Cᵢ, donc Ceq est inférieure à la plus petite des capacités.', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Supérieure à la plus grande', 0, 1), (@qid, 'Inférieure à la plus petite', 1, 2), (@qid, 'Égale à la somme', 0, 3), (@qid, 'Infinie', 0, 4);
@@ -4772,7 +4772,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 17 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Deux condensateurs identiques, l''un chargé et l''autre vide, sont reliés ensemble. La tension finale devient :',
-    'La charge se répartit : Q_totale = Q. C_totale = 2C. U_finale = Q_totale / C_totale = Q / 2C = U/2.', 'Quiz Physique NS4', 3);
+    'La charge se répartit : Q(totale) = Q. C(totale) = 2C. U_finale = Q(totale) / C(totale) = Q / 2C = U/2.', 'Quiz Physique NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'U/2', 1, 1), (@qid, '2U', 0, 2), (@qid, '0', 0, 3), (@qid, 'U', 0, 4);
@@ -5355,7 +5355,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 1 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'En parallèle, la capacité équivalente est :',
-    'En parallèle, les capacités s''additionnent : C_eq = C₁ + C₂ + ... + C_n.', 'Quiz Physique NS4', 1);
+    'En parallèle, les capacités s''additionnent : Ceq = C₁ + C₂ + ... + Cn.', 'Quiz Physique NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'plus petite que chaque capacité', 0, 1), (@qid, 'nulle', 0, 2), (@qid, 'la somme des capacités', 1, 3), (@qid, 'l''inverse de la somme', 0, 4);
@@ -5363,7 +5363,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 1
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Quand on associe des condensateurs en parallèle, la capacité équivalente :',
-    'C_eq = ΣCᵢ, toujours supérieure à la plus grande capacité individuelle.', 'Examen NS4', 1);
+    'Ceq = ΣCᵢ, toujours supérieure à la plus grande capacité individuelle.', 'Examen NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Est plus petite que la plus petite', 0, 1), (@qid, 'Est la somme de toutes les capacités', 1, 2), (@qid, 'Est égale à la moyenne', 0, 3), (@qid, 'Devient nulle', 0, 4);
@@ -5371,15 +5371,15 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'La formule de la capacité équivalente pour n condensateurs en parallèle est :',
-    'C_eq = C₁ + C₂ + ... + C_n.', 'Examen NS4', 2);
+    'Ceq = C₁ + C₂ + ... + Cn.', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, '1/C_eq = 1/C₁ + 1/C₂ + ...', 0, 1), (@qid, 'C_eq = C₁ + C₂ + ...', 1, 2), (@qid, 'C_eq = C₁ × C₂ × ...', 0, 3), (@qid, 'C_eq = (C₁ + C₂)/2', 0, 4);
+(@qid, '1/Ceq = 1/C₁ + 1/C₂ + ...', 0, 1), (@qid, 'Ceq = C₁ + C₂ + ...', 1, 2), (@qid, 'Ceq = C₁ × C₂ × ...', 0, 3), (@qid, 'Ceq = (C₁ + C₂)/2', 0, 4);
 
 -- Question 2 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Trois condensateurs de 2 µF en parallèle donnent :',
-    'C_eq = 2 + 2 + 2 = 6 µF.', 'Quiz Physique NS4', 1);
+    'Ceq = 2 + 2 + 2 = 6 µF.', 'Quiz Physique NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '6 µF', 1, 1), (@qid, '3 µF', 0, 2), (@qid, '2 µF', 0, 3), (@qid, '0,67 µF', 0, 4);
@@ -5387,7 +5387,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 1
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Trois condensateurs de 5 µF branchés en parallèle ont une capacité équivalente de :',
-    'C_eq = 5 + 5 + 5 = 15 µF.', 'Examen NS4', 1);
+    'Ceq = 5 + 5 + 5 = 15 µF.', 'Examen NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '15 µF', 1, 1), (@qid, '5 µF', 0, 2), (@qid, '1,67 µF', 0, 3), (@qid, '10 µF', 0, 4);
@@ -5395,7 +5395,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Quatre condensateurs de 1 µF en parallèle donnent une capacité de :',
-    'C_eq = 1 + 1 + 1 + 1 = 4 µF.', 'Examen NS4', 1);
+    'Ceq = 1 + 1 + 1 + 1 = 4 µF.', 'Examen NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '0,25 µF', 0, 1), (@qid, '1 µF', 0, 2), (@qid, '4 µF', 1, 3), (@qid, '8 µF', 0, 4);
@@ -5403,7 +5403,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 3 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Trois condensateurs de 6 µF en série donnent :',
-    '1/C_eq = 1/6 + 1/6 + 1/6 = 3/6 = 1/2 → C_eq = 2 µF.', 'Quiz Physique NS4', 2);
+    '1/Ceq = 1/6 + 1/6 + 1/6 = 3/6 = 1/2 → Ceq = 2 µF.', 'Quiz Physique NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '18 µF', 0, 1), (@qid, '2 µF', 1, 2), (@qid, '3 µF', 0, 3), (@qid, '6 µF', 0, 4);
@@ -5411,7 +5411,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 1
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Trois condensateurs identiques de 3 µF en série ont une capacité équivalente de :',
-    'C_eq = 3/3 = 1 µF. (Pour n condensateurs identiques C en série : C_eq = C/n).', 'Examen NS4', 2);
+    'Ceq = 3/3 = 1 µF. (Pour n condensateurs identiques C en série : Ceq = C/n).', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '9 µF', 0, 1), (@qid, '3 µF', 0, 2), (@qid, '1 µF', 1, 3), (@qid, '6 µF', 0, 4);
@@ -5419,7 +5419,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Deux condensateurs de 12 µF chacun sont montés en série. La capacité équivalente est :',
-    'Pour deux condensateurs identiques C en série : C_eq = C/2 = 6 µF.', 'Examen NS4', 3);
+    'Pour deux condensateurs identiques C en série : Ceq = C/2 = 6 µF.', 'Examen NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '24 µF', 0, 1), (@qid, '6 µF', 1, 2), (@qid, '12 µF', 0, 3), (@qid, '3 µF', 0, 4);
@@ -5475,7 +5475,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 6 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Deux condensateurs 4 µF et 6 µF en série ont une capacité équivalente :',
-    '1/C_eq = 1/4 + 1/6 = 5/12 → C_eq = 12/5 = 2,4 µF.', 'Quiz Physique NS4', 2);
+    '1/Ceq = 1/4 + 1/6 = 5/12 → Ceq = 12/5 = 2,4 µF.', 'Quiz Physique NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '2,4 µF', 1, 1), (@qid, '10 µF', 0, 2), (@qid, '5 µF', 0, 3), (@qid, '1 µF', 0, 4);
@@ -5483,15 +5483,15 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 1
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Un condensateur de 2 µF et un autre de 8 µF sont en série. La capacité équivalente est :',
-    '1/C_eq = 1/2 + 1/8 = 5/8 → C_eq = 8/5 = 1,6 µF.', 'Examen NS4', 3);
+    '1/Ceq = 1/2 + 1/8 = 5/8 → Ceq = 8/5 = 1,6 µF.', 'Examen NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '10 µF', 0, 1), (@qid, '6 µF', 0, 2), (@qid, '1,6 µF', 1, 3), (@qid, '2,4 µF', 0, 4);
 
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(10, 2, 'Pour deux condensateurs en série, la formule simplifiée C_eq = (C₁ × C₂)/(C₁ + C₂) donne pour C₁=3µF, C₂=6µF :',
-    'C_eq = (3×6)/(3+6) = 18/9 = 2 µF.', 'Examen NS4', 3);
+(10, 2, 'Pour deux condensateurs en série, la formule simplifiée Ceq = (C₁ × C₂)/(C₁ + C₂) donne pour C₁=3µF, C₂=6µF :',
+    'Ceq = (3×6)/(3+6) = 18/9 = 2 µF.', 'Examen NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '2 µF', 1, 1), (@qid, '9 µF', 0, 2), (@qid, '4,5 µF', 0, 3), (@qid, '1,5 µF', 0, 4);
@@ -5523,7 +5523,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 8 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Deux condensateurs identiques C sont en série. Leur capacité devient :',
-    'C_eq = C/2 pour deux condensateurs identiques en série.', 'Quiz Physique NS4', 2);
+    'Ceq = C/2 pour deux condensateurs identiques en série.', 'Quiz Physique NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'C/2', 1, 1), (@qid, '2C', 0, 2), (@qid, 'C²', 0, 3), (@qid, 'C', 0, 4);
@@ -5531,7 +5531,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 1
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Trois condensateurs identiques de capacité C en série donnent une capacité équivalente de :',
-    'C_eq = C/3.', 'Examen NS4', 3);
+    'Ceq = C/3.', 'Examen NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '3C', 0, 1), (@qid, 'C/3', 1, 2), (@qid, 'C', 0, 3), (@qid, '9C', 0, 4);
@@ -5539,7 +5539,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'n condensateurs identiques de capacité C montés en série donnent :',
-    'C_eq = C/n.', 'Examen NS4', 3);
+    'Ceq = C/n.', 'Examen NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'nC', 0, 1), (@qid, 'C/n', 1, 2), (@qid, 'C', 0, 3), (@qid, 'n²C', 0, 4);
@@ -5547,7 +5547,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 9 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Deux condensateurs identiques C sont en parallèle. Leur capacité devient :',
-    'C_eq = C + C = 2C.', 'Quiz Physique NS4', 1);
+    'Ceq = C + C = 2C.', 'Quiz Physique NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'C/2', 0, 1), (@qid, '2C', 1, 2), (@qid, '4C', 0, 3), (@qid, 'C', 0, 4);
@@ -5555,7 +5555,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 1
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Trois condensateurs identiques de capacité C en parallèle donnent une capacité équivalente de :',
-    'C_eq = 3C.', 'Examen NS4', 2);
+    'Ceq = 3C.', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'C/3', 0, 1), (@qid, 'C', 0, 2), (@qid, '3C', 1, 3), (@qid, '9C', 0, 4);
@@ -5563,7 +5563,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'n condensateurs identiques de capacité C montés en parallèle donnent :',
-    'C_eq = nC.', 'Examen NS4', 2);
+    'Ceq = nC.', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'nC', 1, 1), (@qid, 'C/n', 0, 2), (@qid, 'C', 0, 3), (@qid, 'C^n', 0, 4);
@@ -5571,7 +5571,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 10 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Une batterie équivalente de 10 µF est sous 100 V. La charge totale vaut :',
-    'Q = C_eq × U = 10×10⁻⁶ × 100 = 1×10⁻³ C = 1 mC.', 'Quiz Physique NS4', 2);
+    'Q = Ceq × U = 10×10⁻⁶ × 100 = 1×10⁻³ C = 1 mC.', 'Quiz Physique NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '1 mC', 1, 1), (@qid, '100 mC', 0, 2), (@qid, '10 mC', 0, 3), (@qid, '0,1 C', 0, 4);
@@ -5635,7 +5635,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Un condensateur de 2 µF chargé à 60 V est relié à un condensateur de 4 µF déchargé. La tension finale est :',
-    'Q_init = 2×60 = 120 µC. C_tot = 6 µF. U_f = 120/6 = 20 V.', 'Examen NS4', 3);
+    'Q_init = 2×60 = 120 µC. C(tot) = 6 µF. U_f = 120/6 = 20 V.', 'Examen NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '30 V', 0, 1), (@qid, '20 V', 1, 2), (@qid, '60 V', 0, 3), (@qid, '15 V', 0, 4);
@@ -5715,7 +5715,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 16 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'C₁ = 3 µF et C₂ = 6 µF en parallèle sous 100 V. La charge totale vaut :',
-    'C_eq = 9 µF. Q_tot = 9×10⁻⁶ × 100 = 0,9×10⁻³ C = 0,9 mC.', 'Quiz Physique NS4', 2);
+    'Ceq = 9 µF. Q_tot = 9×10⁻⁶ × 100 = 0,9×10⁻³ C = 0,9 mC.', 'Quiz Physique NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '0,3 mC', 0, 1), (@qid, '9 mC', 0, 2), (@qid, '90 mC', 0, 3), (@qid, '0,9 mC', 1, 4);
@@ -5723,7 +5723,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 1
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Deux condensateurs de 2 µF et 4 µF en parallèle sous 50 V donnent une charge totale de :',
-    'C_eq = 6 µF. Q_tot = 6×10⁻⁶ × 50 = 0,3×10⁻³ C = 0,3 mC.', 'Examen NS4', 2);
+    'Ceq = 6 µF. Q_tot = 6×10⁻⁶ × 50 = 0,3×10⁻³ C = 0,3 mC.', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '0,3 mC', 1, 1), (@qid, '3 mC', 0, 2), (@qid, '0,6 mC', 0, 3), (@qid, '1 mC', 0, 4);
@@ -5731,7 +5731,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'En parallèle, C₁=5 µF, C₂=5 µF, U=200 V. La charge totale est :',
-    'C_eq = 10 µF. Q_tot = 10×10⁻⁶ × 200 = 2×10⁻³ C = 2 mC.', 'Examen NS4', 2);
+    'Ceq = 10 µF. Q_tot = 10×10⁻⁶ × 200 = 2×10⁻³ C = 2 mC.', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '1 mC', 0, 1), (@qid, '2 mC', 1, 2), (@qid, '0,5 mC', 0, 3), (@qid, '5 mC', 0, 4);
@@ -5739,7 +5739,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Question 17 (Originale)
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Les mêmes (3 µF et 6 µF) en série sous 100 V. La capacité équivalente vaut :',
-    '1/C_eq = 1/3 + 1/6 = 3/6 = 1/2 → C_eq = 2 µF.', 'Quiz Physique NS4', 3);
+    '1/Ceq = 1/3 + 1/6 = 3/6 = 1/2 → Ceq = 2 µF.', 'Quiz Physique NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '6 µF', 0, 1), (@qid, '3 µF', 0, 2), (@qid, '2 µF', 1, 3), (@qid, '9 µF', 0, 4);
@@ -5747,7 +5747,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 1
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'C₁ = 4 µF et C₂ = 12 µF en série. La capacité équivalente est :',
-    '1/C_eq = 1/4 + 1/12 = 4/12 = 1/3 → C_eq = 3 µF.', 'Examen NS4', 3);
+    '1/Ceq = 1/4 + 1/12 = 4/12 = 1/3 → Ceq = 3 µF.', 'Examen NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '16 µF', 0, 1), (@qid, '3 µF', 1, 2), (@qid, '8 µF', 0, 3), (@qid, '4 µF', 0, 4);
@@ -5755,7 +5755,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- Variante 2
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (10, 2, 'Deux condensateurs de 5 µF et 20 µF en série donnent une capacité de :',
-    '1/C_eq = 1/5 + 1/20 = 5/20 = 1/4 → C_eq = 4 µF.', 'Examen NS4', 3);
+    '1/Ceq = 1/5 + 1/20 = 5/20 = 1/4 → Ceq = 4 µF.', 'Examen NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '25 µF', 0, 1), (@qid, '4 µF', 1, 2), (@qid, '12,5 µF', 0, 3), (@qid, '6,25 µF', 0, 4);
@@ -9330,10 +9330,10 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (11, 2, 'La relation à l''équivalence lors du dosage HCl par NaOH est :',
-    'CₐVₐ = C_bV_b (monoacide fort / monobase forte).', 'Examen NS4', 2);
+    'Ca.Va = Cb.Vb (monoacide fort / monobase forte).', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'CₐVₐ = C_bV_b', 1, 1), (@qid, 'CₐVₐ = 2 C_bV_b', 0, 2), (@qid, '2 CₐVₐ = C_bV_b', 0, 3), (@qid, 'Cₐ = C_b', 0, 4);
+(@qid, 'Ca.Va = Cb.Vb', 1, 1), (@qid, 'Ca.Va = 2 Cb.Vb', 0, 2), (@qid, '2 Ca.Va = Cb.Vb', 0, 3), (@qid, 'Ca = Cb', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (11, 2, 'L''indicateur coloré approprié pour le titrage acide fort/base forte est :',
@@ -9343,7 +9343,7 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Phénolphtaléine uniquement', 0, 1), (@qid, 'Hélianthine uniquement', 0, 2), (@qid, 'Bleu de bromothymol (BBT)', 1, 3), (@qid, 'Tout indicateur convient', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(11, 2, 'On titre 20 mL de HCl par NaOH 0,1 mol/L. V_eq = 15 mL. C_HCl = ?',
+(11, 2, 'On titre 20 mL de HCl par NaOH 0,1 mol/L. V(eq) = 15 mL. [HCl] = ?',
     'C₁V₁ = C₂V₂ → C₁ × 20 = 0,1 × 15 → C₁ = 0,075 mol/L.', 'Examen NS4', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
@@ -10830,8 +10830,8 @@ INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 -- ============================================
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(11, 2, 'On titre 25 mL de NaOH par HCl 0,2 M. V_eq = 12,5 mL. C_NaOH = ?',
-    'C_b = CₐVₐ/V_b = 0,2×12,5/25 = 0,1 mol/L.', 'Examen NS4', 3);
+(11, 2, 'On titre 25 mL de NaOH par HCl 0,2 M. V(eq) = 12,5 mL. [NaOH] = ?',
+    'Cb = CaVa/Vb = 0,2×12,5/25 = 0,1 mol/L.', 'Examen NS4', 3);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, '0,05 mol/L', 0, 1), (@qid, '0,1 mol/L', 1, 2), (@qid, '0,2 mol/L', 0, 3), (@qid, '0,4 mol/L', 0, 4);
@@ -10966,33 +10966,1610 @@ SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'n_i × n_total', 0, 1), (@qid, 'n_i / n_total', 1, 2), (@qid, 'm_i / m_total', 0, 3), (@qid, 'V_i / V_total', 0, 4);
 
-INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(11, 2, 'La loi de Beer-Lambert relie :',
-    'L''absorbance à la concentration (A = εℓC).', 'Programme NS4', 3);
-SET @qid = LAST_INSERT_ID();
-INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'La masse et le volume', 0, 1), (@qid, 'L''absorbance et la concentration', 1, 2), (@qid, 'Le pH et la concentration', 0, 3), (@qid, 'La température et la pression', 0, 4);
+
+
+
+-- ============================================================
+-- THÈME 1 : ALCOOLS
+-- ============================================================
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(11, 2, 'Qu''est-ce que la chromatographie ?',
-    'Technique de séparation des constituants d''un mélange.', 'Programme NS4', 3);
+(11, 2, 'Quel groupement fonctionnel caractérise les alcools ?',
+ 'Les alcools possèdent le groupement hydroxyle -OH lié à un carbone tétragonal (sp³).', 'Programme NS4', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Une méthode de chauffage', 0, 1), (@qid, 'Une technique de séparation', 1, 2), (@qid, 'Une réaction chimique', 0, 3), (@qid, 'Un type de titrage', 0, 4);
+(@qid, '-COOH', 0, 1), (@qid, '-OH', 1, 2), (@qid, '-CHO', 0, 3), (@qid, '-CO-', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(11, 2, 'La distillation permet de séparer des liquides basée sur :',
-    'La différence de températures d''ébullition.', 'Programme NS4', 2);
+(11, 2, 'La géométrie du carbone portant le groupe -OH dans un alcool est :',
+ 'Le carbone fonctionnel des alcools est de géométrie tétraédrique (sp³).', 'Examen Bartlett 2022', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'La couleur', 0, 1), (@qid, 'La différence de points d''ébullition', 1, 2), (@qid, 'La densité uniquement', 0, 3), (@qid, 'Le pH', 0, 4);
+(@qid, 'Trigonale plane', 0, 1), (@qid, 'Linéaire', 0, 2), (@qid, 'Tétraédrique', 1, 3), (@qid, 'Pyramidale', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
-(11, 2, 'Le sulfate de cuivre hydraté est utilisé pour détecter :',
-    'La présence d''eau (il devient bleu).', 'Examen NS4', 2);
+(11, 2, 'L''oxydation ménagée d''un alcool primaire donne d''abord :',
+ 'Alcool primaire → aldéhyde (oxydation ménagée). Ex: éthanol → éthanal.', 'Examen Balandine 2022', 1);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'L''oxygène', 0, 1), (@qid, 'L''eau', 1, 2), (@qid, 'Le CO₂', 0, 3), (@qid, 'L''azote', 0, 4);
+(@qid, 'Une cétone', 0, 1), (@qid, 'Un aldéhyde', 1, 2), (@qid, 'Un acide carboxylique', 0, 3), (@qid, 'Un ester', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''oxydation ménagée d''un alcool secondaire donne :',
+ 'Alcool secondaire → cétone par oxydation ménagée.', 'Examen Bartlett 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un aldéhyde', 0, 1), (@qid, 'Une cétone', 1, 2), (@qid, 'Un acide carboxylique', 0, 3), (@qid, 'Un alcène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un alcool tertiaire soumis à l''oxydation ménagée :',
+ 'Les alcools tertiaires résistent à l''oxydation ménagée car le carbone fonctionnel ne porte pas d''hydrogène.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Donne une cétone', 0, 1), (@qid, 'Donne un aldéhyde', 0, 2), (@qid, 'Ne s''oxyde pas', 1, 3), (@qid, 'Donne un acide', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Quel est le produit de l''oxydation ménagée du propan-2-ol ?',
+ 'Alcool secondaire → cétone = propanone (acétone).', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propanal', 0, 1), (@qid, 'Propanone', 1, 2), (@qid, 'Acide propanoïque', 0, 3), (@qid, 'Propène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La déshydrogénation du propan-2-ol produit :',
+ 'Déshydrogénation d''un alcool secondaire → cétone (propanone).', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propanal', 0, 1), (@qid, 'Propanone', 1, 2), (@qid, 'Propanol', 0, 3), (@qid, 'Propène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La déshydrogénation catalytique d''un alcool primaire donne :',
+ 'Alcool primaire → aldéhyde par déshydrogénation catalytique.', 'Examen Barbier 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une cétone', 0, 1), (@qid, 'Un alcène', 0, 2), (@qid, 'Un aldéhyde', 1, 3), (@qid, 'Un acide', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Quelle est la formule brute du propan-1-ol et du propan-2-ol ?',
+ 'Ce sont des isomères de position : C₃H₈O.', 'Examen Propanone NS 2020', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C₂H₆O', 0, 1), (@qid, 'C₃H₈O', 1, 2), (@qid, 'C₄H₁₀O', 0, 3), (@qid, 'C₃H₆O', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''alcool contenu dans le vin se nomme :',
+ 'L''éthanol (alcool éthylique) est produit par fermentation du glucose.', 'Examen Bartlett 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Méthanol', 0, 1), (@qid, 'Éthanol', 1, 2), (@qid, 'Propanol', 0, 3), (@qid, 'Butanol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule semi-développée de l''éthanol est :',
+ 'L''éthanol est CH₃-CH₂-OH.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₃-OH', 0, 1), (@qid, 'CH₃-CH₂-OH', 1, 2), (@qid, 'CH₃-CH₂-CH₂-OH', 0, 3), (@qid, 'CH₃-CHO', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un vin titre 13°. Quel volume d''éthanol y a-t-il dans 2 L de ce vin ?',
+ '13° signifie 13 mL d''éthanol pour 100 mL de vin. Dans 2 L : (13/100)×2000 = 260 mL.', 'Examen Barbier 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '130 mL', 0, 1), (@qid, '260 mL', 1, 2), (@qid, '200 mL', 0, 3), (@qid, '26 mL', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse volumique de l''éthanol est :',
+ 'La masse volumique de l''éthanol est 0,8 g/cm³ (donnée dans les examens NS4).', 'Examen NS4 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1,0 g/cm³', 0, 1), (@qid, '0,8 g/cm³', 1, 2), (@qid, '0,9 g/cm³', 0, 3), (@qid, '0,7 g/cm³', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydratation des alcènes donne toujours :',
+ 'L''addition d''eau sur un alcène produit un alcool selon la règle de Markovnikov.', 'Examen Barton 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des acides', 0, 1), (@qid, 'Des éthers', 0, 2), (@qid, 'Des alcools', 1, 3), (@qid, 'Des cétones', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydratation du propène en milieu acide donne majoritairement :',
+ 'Selon Markovnikov, le OH se fixe sur le carbone le plus substitué : propan-2-ol.', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propan-1-ol', 0, 1), (@qid, 'Propan-2-ol', 1, 2), (@qid, 'Propanal', 0, 3), (@qid, 'Propanone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydratation du but-1-ène donne majoritairement :',
+ 'Règle de Markovnikov : OH sur C2 → butan-2-ol.', 'Examen Barbier 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Butan-1-ol', 0, 1), (@qid, 'Butan-2-ol', 1, 2), (@qid, 'Butanal', 0, 3), (@qid, 'Butanone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'On peut obtenir une cétone à partir d''un alcool secondaire par :',
+ 'Un alcool secondaire donne une cétone par oxydation ménagée ou déshydrogénation.', 'Examen Darcet 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hydratation ou hydrogénation', 0, 1), (@qid, 'Oxydation ou déshydrogénation', 1, 2), (@qid, 'Hydrolyse ou fermentation', 0, 3), (@qid, 'Combustion ou pyrolyse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La déshydratation poussée de l''éthanol produit :',
+ 'La déshydratation poussée (inter-moléculaire) de l''éthanol donne l''éthylène (éthène).', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'De l''éthanal', 0, 1), (@qid, 'De l''éthylène', 1, 2), (@qid, 'De l''éther', 0, 3), (@qid, 'De l''éthane', 0, 4);
+
+-- ============================================================
+-- THÈME 2 : ALDÉHYDES ET CÉTONES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le groupement fonctionnel des aldéhydes est :',
+ 'Les aldéhydes portent le groupe -CHO (carbonyle en bout de chaîne).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '-CO-', 0, 1), (@qid, '-CHO', 1, 2), (@qid, '-COOH', 0, 3), (@qid, '-OH', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le plus simple des cétones se nomme :',
+ 'La propanone (acétone) CH₃-CO-CH₃ est la plus simple des cétones.', 'Examen Bartlett 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthanone', 0, 1), (@qid, 'Propanone', 1, 2), (@qid, 'Butanone', 0, 3), (@qid, 'Méthanone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule semi-développée de la propanone est :',
+ 'Propanone = acétone : CH₃-CO-CH₃.', 'Examen Bartlett 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₃-CHO', 0, 1), (@qid, 'CH₃-CO-CH₃', 1, 2), (@qid, 'CH₃-CH₂-CHO', 0, 3), (@qid, 'C₂H₅-CHO', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Lequel de ces composés donne un test positif à la liqueur de Fehling ?',
+ 'La liqueur de Fehling oxyde les aldéhydes (test positif = précipité rouge brique Cu₂O).', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propanone', 0, 1), (@qid, 'Éthanal', 1, 2), (@qid, 'Éthanol', 0, 3), (@qid, 'Éthane', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le réactif de Tollens permet de distinguer :',
+ 'Le réactif de Tollens (miroir d''argent) est positif avec les aldéhydes, négatif avec les cétones.', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les alcools des acides', 0, 1), (@qid, 'Les aldéhydes des cétones', 1, 2), (@qid, 'Les alcènes des alcanes', 0, 3), (@qid, 'Les esters des éthers', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Avec le réactif de Schiff on peut distinguer :',
+ 'Le réactif de Schiff colore les aldéhydes en rose/violet, mais pas les cétones.', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les acides des bases', 0, 1), (@qid, 'Les aldéhydes des cétones', 1, 2), (@qid, 'Les alcènes des alcanes', 0, 3), (@qid, 'Les esters des alcools', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La 2,4-DNPH réagit avec :',
+ 'La 2,4-DNPH (2,4-dinitrophénylhydrazine) réagit avec les composés carbonylés (aldéhydes et cétones).', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les alcools seulement', 0, 1), (@qid, 'Les aldéhydes et les cétones', 1, 2), (@qid, 'Les acides carboxyliques', 0, 3), (@qid, 'Les alcènes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le méthanal (formaldéhyde) a pour formule développée :',
+ 'Méthanal = HCHO, carbone de géométrie trigonale plane.', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₃-CHO', 0, 1), (@qid, 'H-CHO', 1, 2), (@qid, 'CH₃-CO-CH₃', 0, 3), (@qid, 'HCOOH', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La géométrie du carbone fonctionnel dans un aldéhyde ou une cétone est :',
+ 'Le carbone du groupe carbonyle C=O est de géométrie trigonale plane (sp²).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Tétraédrique', 0, 1), (@qid, 'Trigonale plane', 1, 2), (@qid, 'Linéaire', 0, 3), (@qid, 'Pyramidale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''éthanal peut s''oxyder pour donner :',
+ 'L''éthanal (aldéhyde) s''oxyde en acide éthanoïque (acide acétique).', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthanol', 0, 1), (@qid, 'Acide éthanoïque', 1, 2), (@qid, 'Propanone', 0, 3), (@qid, 'Éthylène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un cétol est un composé qui contient à la fois :',
+ 'Un cétol possède à la fois une fonction cétone (C=O) et une fonction alcool (-OH).', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une fonction acide et alcool', 0, 1), (@qid, 'Une fonction cétone et alcool', 1, 2), (@qid, 'Une fonction aldéhyde et ester', 0, 3), (@qid, 'Une fonction amine et acide', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le propanal a pour formule semi-développée :',
+ 'Propanal = CH₃-CH₂-CHO (aldéhyde à 3 carbones).', 'Examen Propanone NS 2020', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₃-CO-CH₃', 0, 1), (@qid, 'CH₃-CH₂-CHO', 1, 2), (@qid, 'CH₃-CHO', 0, 3), (@qid, 'CH₃-CH₂-CO-CH₃', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La dimérisation de l''éthanal est une réaction de :',
+ 'La dimérisation de l''éthanal est une réaction d''addition aldolique (condensation).', 'Examen Barbier 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Substitution', 0, 1), (@qid, 'Élimination', 0, 2), (@qid, 'Addition aldolique', 1, 3), (@qid, 'Polymérisation', 0, 4);
+
+-- ============================================================
+-- THÈME 3 : ACIDES CARBOXYLIQUES ET ESTERS
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le groupement fonctionnel des acides carboxyliques est :',
+ 'Le groupe carboxyle -COOH est le groupement fonctionnel des acides carboxyliques.', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '-CHO', 0, 1), (@qid, '-COOH', 1, 2), (@qid, '-CO-', 0, 3), (@qid, '-OH', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le groupement fonctionnel des esters carboxyliques est :',
+ 'Les esters possèdent le groupe -COO- (ou -COOR).', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '-COOH', 0, 1), (@qid, '-COO-', 1, 2), (@qid, '-CO-', 0, 3), (@qid, '-CHO', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réaction entre un acide carboxylique et un alcool se nomme :',
+ 'L''estérification est la réaction entre un acide carboxylique et un alcool produisant un ester et de l''eau.', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hydrolyse', 0, 1), (@qid, 'Estérification', 1, 2), (@qid, 'Saponification', 0, 3), (@qid, 'Fermentation', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réaction inverse de l''estérification est :',
+ 'L''hydrolyse d''un ester donne un acide et un alcool, c''est l''inverse de l''estérification.', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Saponification', 0, 1), (@qid, 'Hydrolyse', 1, 2), (@qid, 'Oxydation', 0, 3), (@qid, 'Réduction', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydrolyse de l''acétate de méthyle produit :',
+ 'Acétate de méthyle + eau → acide acétique + méthanol.', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acide éthanoïque et éthanol', 0, 1), (@qid, 'Acide éthanoïque et méthanol', 1, 2), (@qid, 'Acide méthanoïque et méthanol', 0, 3), (@qid, 'Acide acétique et propanol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''acide contenu dans le vinaigre est :',
+ 'Le vinaigre contient de l''acide acétique (acide éthanoïque) CH₃-COOH.', 'Examen Darcet 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acide chlorhydrique', 0, 1), (@qid, 'Acide éthanoïque (acétique)', 1, 2), (@qid, 'Acide méthanoïque', 0, 3), (@qid, 'Acide sulfurique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le pH du vinaigre est :',
+ 'Le vinaigre est acide donc son pH est inférieur à 7.', 'Examen Barton 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Supérieur à 7', 0, 1), (@qid, 'Égal à 7', 0, 2), (@qid, 'Inférieur à 7', 1, 3), (@qid, 'Égal à 14', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule semi-développée de l''acide acétique est :',
+ 'Acide acétique = acide éthanoïque : CH₃-COOH.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₃-CHO', 0, 1), (@qid, 'CH₃-COOH', 1, 2), (@qid, 'HCOOH', 0, 3), (@qid, 'C₂H₅-COOH', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La fermentation acétique transforme :',
+ 'La fermentation acétique oxyde l''éthanol en acide acétique en présence d''oxygène et de bactéries.', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le glucose en éthanol', 0, 1), (@qid, 'L''éthanol en acide acétique', 1, 2), (@qid, 'L''acide acétique en éthanol', 0, 3), (@qid, 'L''amidon en glucose', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La neutralisation de l''acide acétique par la potasse (KOH) produit :',
+ 'Acide acétique + KOH → acétate de potassium + eau.', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acétate de sodium', 0, 1), (@qid, 'Acétate de potassium', 1, 2), (@qid, 'Chlorure de potassium', 0, 3), (@qid, 'Acétate de calcium', 0, 4);
+
+-- ============================================================
+-- THÈME 4 : HYDROCARBURES (ALCANES, ALCÈNES, ALCYNES)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule générale des alcanes est :',
+ 'La formule générale des alcanes est CₙH₂ₙ₊₂.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CₙH₂ₙ', 0, 1), (@qid, 'CₙH₂ₙ₊₂', 1, 2), (@qid, 'CₙH₂ₙ₋₂', 0, 3), (@qid, 'CₙHₙ', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule générale des alcènes est :',
+ 'La formule générale des alcènes est CₙH₂ₙ (une double liaison).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CₙH₂ₙ₊₂', 0, 1), (@qid, 'CₙH₂ₙ', 1, 2), (@qid, 'CₙH₂ₙ₋₂', 0, 3), (@qid, 'CₙH₂ₙ₋₄', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule générale des alcynes est :',
+ 'La formule générale des alcynes est CₙH₂ₙ₋₂ (une triple liaison).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CₙH₂ₙ', 0, 1), (@qid, 'CₙH₂ₙ₋₂', 1, 2), (@qid, 'CₙH₂ₙ₊₂', 0, 3), (@qid, 'CₙHₙ', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Les alcanes donnent principalement des réactions de :',
+ 'Les alcanes sont saturés donc ils donnent des réactions de substitution (halogénation), jamais d''addition.', 'Examen Barbier 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Addition', 0, 1), (@qid, 'Substitution', 1, 2), (@qid, 'Élimination', 0, 3), (@qid, 'Polymérisation', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Les alcènes et alcynes donnent des réactions d''addition parce qu''ils sont :',
+ 'Les alcènes et alcynes sont insaturés (possèdent des liaisons multiples) → réactions d''addition.', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Saturés', 0, 1), (@qid, 'Insaturés', 1, 2), (@qid, 'Aromatiques', 0, 3), (@qid, 'Cycliques', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans une combustion complète des alcanes, les produits formés sont :',
+ 'Combustion complète : CₙH₂ₙ₊₂ + O₂ → CO₂ + H₂O.', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CO et H₂O', 0, 1), (@qid, 'CO₂ et H₂O', 1, 2), (@qid, 'C et H₂O', 0, 3), (@qid, 'CO₂ et H₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La combustion incomplète du benzène produit :',
+ 'Combustion incomplète → noir de fumée (carbone) et eau.', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CO₂ et H₂O', 0, 1), (@qid, 'C (noir de fumée) et H₂O', 1, 2), (@qid, 'CO et H₂', 0, 3), (@qid, 'CO₂ et CO', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le butane et le méthylpropane sont des isomères de :',
+ 'Butane (C₄H₁₀) et méthylpropane (C₄H₁₀) : même formule brute mais structure différente → isomères de chaîne.', 'Examen Barbier 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Position', 0, 1), (@qid, 'Chaîne', 1, 2), (@qid, 'Fonction', 0, 3), (@qid, 'Géométrie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydrogénation de l''acétylène avec un catalyseur approprié peut donner :',
+ 'L''acétylène + H₂ → éthylène (addition partielle) ou éthane (addition totale) selon le catalyseur.', 'Examen Barbier 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthanol ou méthane', 0, 1), (@qid, 'Éthylène ou éthane', 1, 2), (@qid, 'Propane ou propène', 0, 3), (@qid, 'Acétone ou méthanol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le chlorure de vinyle est obtenu par addition de :',
+ 'Addition de HCl (chlorure d''hydrogène) sur l''acétylène (éthyne) → chlorure de vinyle.', 'Examen Barbier 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cl₂ sur l''éthylène', 0, 1), (@qid, 'HCl sur l''acétylène', 1, 2), (@qid, 'HCl sur le méthane', 0, 3), (@qid, 'Cl₂ sur l''éthane', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydrolyse du carbure de calcium produit :',
+ 'CaC₂ + 2H₂O → C₂H₂ (acétylène) + Ca(OH)₂.', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthylène et chaux', 0, 1), (@qid, 'Acétylène et chaux', 1, 2), (@qid, 'Méthane et chaux', 0, 3), (@qid, 'Éthane et chaux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans le composé CH₂=CH-C≡CH, le nombre de liaisons sigma (σ) est :',
+ 'Liaisons σ : toutes les liaisons simples + 1 par double/triple liaison. Total = 8σ et 3π.', 'Examen Bartlett 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '6', 0, 1), (@qid, '8', 1, 2), (@qid, '5', 0, 3), (@qid, '10', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydratation de l''acétylène (acide, eau, chaleur) donne comme produit stable :',
+ 'L''hydratation de l''acétylène produit d''abord l''alcool vinylique (instable) qui se transforme en éthanal.', 'Examen Barton 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthanol', 0, 1), (@qid, 'Éthanal', 1, 2), (@qid, 'Acide acétique', 0, 3), (@qid, 'Éthylène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La dimérisation de l''acétylène produit :',
+ '2 HC≡CH → CH₂=CH-C≡CH (vinylacétylène).', 'Examen Darcet 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Benzène', 0, 1), (@qid, 'Vinylacétylène (but-1-én-3-yne)', 1, 2), (@qid, 'Éthylène', 0, 3), (@qid, 'Butadiène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La trimérisation cyclique de l''acétylène produit :',
+ '3 HC≡CH → C₆H₆ (benzène), réaction de Berthelot.', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthylène', 0, 1), (@qid, 'Benzène', 1, 2), (@qid, 'Cyclohexane', 0, 3), (@qid, 'Naphtalène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le propène + eau en milieu acide donne majoritairement :',
+ 'Règle de Markovnikov : OH se fixe sur le carbone le plus substitué → propan-2-ol.', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propan-1-ol', 0, 1), (@qid, 'Propan-2-ol', 1, 2), (@qid, 'Propanal', 0, 3), (@qid, 'Propanone', 0, 4);
+
+-- ============================================================
+-- THÈME 5 : HYDROCARBURES AROMATIQUES (BENZÈNE)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le benzène a pour formule brute :',
+ 'Le benzène est C₆H₆, l''hydrocarbure aromatique le plus simple.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C₅H₅', 0, 1), (@qid, 'C₆H₆', 1, 2), (@qid, 'C₆H₁₂', 0, 3), (@qid, 'C₆H₁₄', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Les hydrocarbures aromatiques sont connus sous le nom d''arènes. Le plus simple est :',
+ 'Le benzène (C₆H₆) est le plus simple des arènes.', 'Examen Barbier 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Toluène', 0, 1), (@qid, 'Benzène', 1, 2), (@qid, 'Naphtalène', 0, 3), (@qid, 'Anthracène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le benzène avec le dichlore en présence d''un catalyseur donne :',
+ 'Benzène + Cl₂ → chlorobenzène + HCl (substitution électrophile aromatique).', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Addition de Cl₂', 0, 1), (@qid, 'Substitution : chlorobenzène', 1, 2), (@qid, 'Combustion', 0, 3), (@qid, 'Aucune réaction', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La mononitration du benzène produit :',
+ 'Benzène + HNO₃ → nitrobenzène + H₂O.', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dinitrobenzène', 0, 1), (@qid, 'Nitrobenzène', 1, 2), (@qid, 'Aniline', 0, 3), (@qid, 'Phénol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La destruction du benzène dans le dichlore à la lumière vive produit :',
+ 'Benzène + 3Cl₂ (lumière vive) → hexachlorocyclohexane (lindane).', 'Examen Barbier 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Chlorobenzène', 0, 1), (@qid, 'Hexachlorocyclohexane', 1, 2), (@qid, 'Trichlorobenzène', 0, 3), (@qid, 'Dichlorobenzène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse volumique du benzène est :',
+ 'La masse volumique du benzène est 0,9 g/cm³ (donnée dans les examens NS4).', 'Examen NS4 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,8 g/cm³', 0, 1), (@qid, '0,9 g/cm³', 1, 2), (@qid, '1,0 g/cm³', 0, 3), (@qid, '1,2 g/cm³', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''alkylation du benzène par le chlorure de méthyle produit :',
+ 'Benzène + CH₃Cl → toluène (méthylbenzène) + HCl (réaction de Friedel-Crafts).', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Phénol', 0, 1), (@qid, 'Toluène (méthylbenzène)', 1, 2), (@qid, 'Chlorobenzène', 0, 3), (@qid, 'Aniline', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Parmi les 3 sources d''hydrocarbures polycycliques aromatiques cancérigènes :',
+ 'Sources : goudron de houille, suie, fumée de cigarette, viande grillée au barbecue.', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Eau, air, fruits', 0, 1), (@qid, 'Goudron, suie, fumée de cigarette', 1, 2), (@qid, 'Lait, sel, sucre', 0, 3), (@qid, 'Pétrole, alcool, benzène pur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le toluène est :',
+ 'Le toluène (méthylbenzène) est un hydrocarbure aromatique, moins toxique que le benzène.', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C₆H₅-OH', 0, 1), (@qid, 'C₆H₅-CH₃', 1, 2), (@qid, 'C₆H₅-NO₂', 0, 3), (@qid, 'C₆H₅-Cl', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le reforming permet de transformer l''heptane en :',
+ 'Le reforming réarrange les chaînes carbonées sans perdre de carbones. Ex : heptane → 2,4-diméthylpentane.', 'Examen Bartlett 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hexane et méthane', 0, 1), (@qid, '2,4-diméthylpentane', 1, 2), (@qid, 'Octane', 0, 3), (@qid, 'Éthylène et pentane', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le cracking transforme l''hexane en :',
+ 'Le cracking coupe les grandes chaînes en molécules plus petites. Ex : hexane → butane + éthylène.', 'Examen Bartlett 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2-méthylpentane', 0, 1), (@qid, 'Butane + éthylène', 1, 2), (@qid, 'Benzène', 0, 3), (@qid, 'Heptane', 0, 4);
+
+-- ============================================================
+-- THÈME 6 : pH ET SOLUTIONS ACIDO-BASIQUES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Une solution a un pH = 2 à 25°C. Elle est de nature :',
+ 'pH < 7 → solution acide.', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Basique', 0, 1), (@qid, 'Acide', 1, 2), (@qid, 'Neutre', 0, 3), (@qid, 'Amphotère', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La concentration en H₃O⁺ d''une solution de pH = 2 est :',
+ 'pH = -log[H₃O⁺] → pH=2 → [H₃O⁺] = 10⁻² = 0,01 mol/L.', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10⁻⁷ mol/L', 0, 1), (@qid, '10⁻² mol/L', 1, 2), (@qid, '10⁻¹² mol/L', 0, 3), (@qid, '2 mol/L', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le pH d''une solution aqueuse est égal à 10 à 25°C. La solution est :',
+ 'pH = 10 > 7 → solution basique, elle fait virer la phénolphtaléine au rose.', 'Examen Barton 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acide', 0, 1), (@qid, 'Neutre', 0, 2), (@qid, 'Basique', 1, 3), (@qid, 'Saline', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Si [H₃O⁺] = 10⁻⁸ mol/L à 25°C, la concentration en OH⁻ est :',
+ 'Ke = [H₃O⁺][OH⁻] = 10⁻¹⁴ → [OH⁻] = 10⁻¹⁴/10⁻⁸ = 10⁻⁶ mol/L.', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '10⁻⁸ mol/L', 0, 1), (@qid, '10⁻⁶ mol/L', 1, 2), (@qid, '10⁻¹⁴ mol/L', 0, 3), (@qid, '10⁻² mol/L', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''espèce chimique capable de capter un proton H⁺ est appelée :',
+ 'Définition de Brønsted : une base capte un proton H⁺.', 'Examen Bartlett 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acide', 0, 1), (@qid, 'Base', 1, 2), (@qid, 'Oxydant', 0, 3), (@qid, 'Réducteur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''espèce chimique qui libère un proton H⁺ est appelée :',
+ 'Définition de Brønsted : un acide est un donneur de proton H⁺.', 'Examen Bartlett 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Base', 0, 1), (@qid, 'Acide', 1, 2), (@qid, 'Oxydant', 0, 3), (@qid, 'Réducteur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''acide chlorhydrique réagit avec le calcaire (CaCO₃) pour produire :',
+ '2HCl + CaCO₃ → CaCl₂ + H₂O + CO₂. Le sel formé est le chlorure de calcium.', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Chlorure de sodium, eau, O₂', 0, 1), (@qid, 'Chlorure de calcium, eau, CO₂', 1, 2), (@qid, 'Carbonate de sodium, H₂', 0, 3), (@qid, 'Oxyde de calcium, HCl', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La solution aqueuse de l''ion carbonate CO₃²⁻ fait rosir la phénolphtaléine car :',
+ 'L''ion carbonate est basique (pH > 7), et la phénolphtaléine vire au rose en milieu basique.', 'Examen Darcet 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle est acide', 0, 1), (@qid, 'Elle est basique', 1, 2), (@qid, 'Elle est neutre', 0, 3), (@qid, 'Elle est oxydante', 0, 4);
+
+-- ============================================================
+-- THÈME 7 : OXYDORÉDUCTION ET PILES ÉLECTROCHIMIQUES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Lors d''une réaction d''oxydoréduction, l''espèce chimique qui gagne des électrons est :',
+ 'L''oxydant gagne des électrons (il est réduit). Le réducteur perd des électrons.', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le réducteur', 0, 1), (@qid, 'L''oxydant', 1, 2), (@qid, 'L''acide', 0, 3), (@qid, 'La base', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans une réaction d''oxydoréduction, l''espèce qui perd des électrons est :',
+ 'Le réducteur cède des électrons (il est oxydé).', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''oxydant', 0, 1), (@qid, 'Le réducteur', 1, 2), (@qid, 'Le catalyseur', 0, 3), (@qid, 'Le solvant', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans la réaction Cu(s) + 2Ag⁺(aq) → 2Ag(s) + Cu²⁺(aq), l''oxydant est :',
+ 'L''ion Ag⁺ gagne des électrons (se réduit) → c''est l''oxydant.', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cu', 0, 1), (@qid, 'Ag⁺', 1, 2), (@qid, 'Cu²⁺', 0, 3), (@qid, 'Ag', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans la pile Cu²⁺/Cu et Zn²⁺/Zn, les potentiels normaux sont +0,34 V et -0,76 V. La f.é.m est :',
+ 'f.é.m = E°(+) - E°(-) = 0,34 - (-0,76) = 1,10 V.', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,42 V', 0, 1), (@qid, '1,10 V', 1, 2), (@qid, '0,76 V', 0, 3), (@qid, '0,34 V', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans la pile Ag⁺/Ag (E°=+0,80V) et Zn²⁺/Zn (E°=-0,76V), la f.é.m est :',
+ 'f.é.m = 0,80 - (-0,76) = 1,56 V.', 'Examen Barbier 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,04 V', 0, 1), (@qid, '1,56 V', 1, 2), (@qid, '0,80 V', 0, 3), (@qid, '0,76 V', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans une pile électrochimique, le pôle négatif est :',
+ 'Le pôle négatif (anode) est le siège de l''oxydation : le métal le moins noble (plus faible potentiel).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le métal de potentiel le plus élevé', 0, 1), (@qid, 'Le métal de potentiel le plus faible (anode)', 1, 2), (@qid, 'Le métal le plus lourd', 0, 3), (@qid, 'La cathode', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans la pile Zn/Zn²⁺ // Cu²⁺/Cu, le zinc est :',
+ 'Le zinc est l''anode (pôle -) : Zn → Zn²⁺ + 2e⁻ (oxydation).', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La cathode (pôle +)', 0, 1), (@qid, 'L''anode (pôle -)', 1, 2), (@qid, 'L''oxydant', 0, 3), (@qid, 'Neutre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Les électrons dans un circuit extérieur d''une pile se déplacent :',
+ 'Les électrons vont de l''anode (pôle -) vers la cathode (pôle +) dans le circuit extérieur.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Du pôle + vers le pôle -', 0, 1), (@qid, 'Du pôle - vers le pôle +', 1, 2), (@qid, 'Dans les deux sens', 0, 3), (@qid, 'Ils ne se déplacent pas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''oxydation de l''éthanol par les ions dichromate Cr₂O₇²⁻ en excès et en milieu acide produit :',
+ 'Oxydation poussée de l''éthanol → acide acétique. Les Cr₂O₇²⁻ (orange) passent à Cr³⁺ (vert).', 'Examen Propanone NS 2020', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthanal seulement', 0, 1), (@qid, 'Acide acétique (acide éthanoïque)', 1, 2), (@qid, 'Éthylène', 0, 3), (@qid, 'Éther éthylique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le couple rédox Cu²⁺/Cu a un potentiel normal de :',
+ 'E°(Cu²⁺/Cu) = +0,34 V (donné dans les examens NS4).', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '-0,76 V', 0, 1), (@qid, '+0,34 V', 1, 2), (@qid, '+0,80 V', 0, 3), (@qid, '-0,34 V', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le couple rédox Zn²⁺/Zn a un potentiel normal de :',
+ 'E°(Zn²⁺/Zn) = -0,76 V (donné dans les examens NS4).', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '+0,76 V', 0, 1), (@qid, '-0,76 V', 1, 2), (@qid, '-0,34 V', 0, 3), (@qid, '+0,34 V', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans le couple Cu²⁺/Cu, le réducteur est :',
+ 'Dans tout couple oxydant/réducteur, la forme réduite est le réducteur → Cu.', 'Examen Bartlett 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cu²⁺', 0, 1), (@qid, 'Cu', 1, 2), (@qid, 'CuO', 0, 3), (@qid, 'Cu₂O', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Une pile est un générateur électrochimique qui convertit :',
+ 'Une pile convertit l''énergie chimique en énergie électrique.', 'Examen Welsbach 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Énergie électrique → chimique', 0, 1), (@qid, 'Énergie chimique → électrique', 1, 2), (@qid, 'Énergie thermique → mécanique', 0, 3), (@qid, 'Énergie lumineuse → chimique', 0, 4);
+
+-- ============================================================
+-- THÈME 8 : POLYMÈRES ET MACROMOLÉCULES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''addition de nombreuses molécules identiques appelées monomères donne des :',
+ 'La polymérisation par addition de monomères produit des macromolécules appelées polymères.', 'Examen Welsbach 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Isomères', 0, 1), (@qid, 'Polymères (macromolécules)', 1, 2), (@qid, 'Monomères', 0, 3), (@qid, 'Dimères', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un polymère a une masse molaire de 93 750 g/mol pour un indice de polymérisation de 1500. La masse molaire du monomère est :',
+ 'M(monomère) = M(polymère) / n = 93750 / 1500 = 62,5 g/mol.', 'Examen Barbier 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '125 g/mol', 0, 1), (@qid, '62,5 g/mol', 1, 2), (@qid, '31,25 g/mol', 0, 3), (@qid, '93,75 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un monomère contient 38,4% C, 4,8% H, 56,8% Cl et a M = 62,5 g/mol. Sa formule brute est :',
+ 'C: 62,5×0,384/12 = 2 ; H: 62,5×0,048/1 = 3 ; Cl: 62,5×0,568/35,5 = 1 → C₂H₃Cl (chlorure de vinyle).', 'Examen Barbier 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₂Cl₂', 0, 1), (@qid, 'C₂H₃Cl', 1, 2), (@qid, 'C₂H₄Cl₂', 0, 3), (@qid, 'CH₃Cl', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le monomère C₂H₃Cl (chlorure de vinyle) donne par polymérisation :',
+ 'La polymérisation du chlorure de vinyle (CH₂=CHCl) donne le PVC (polychlorure de vinyle).', 'Examen Barbier 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Polyéthylène', 0, 1), (@qid, 'PVC (polychlorure de vinyle)', 1, 2), (@qid, 'Polystyrène', 0, 3), (@qid, 'Polypropylène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La polymérisation de l''éthylène (CH₂=CH₂) produit :',
+ 'La polymérisation de l''éthylène donne le polyéthylène (-CH₂-CH₂-)ₙ.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'PVC', 0, 1), (@qid, 'Polyéthylène', 1, 2), (@qid, 'Polypropylène', 0, 3), (@qid, 'Polystyrène', 0, 4);
+
+-- ============================================================
+-- THÈME 9 : FERMENTATION ET GLUCIDES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La fermentation alcoolique du glucose produit :',
+ 'C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ (levures, anaérobie).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acide acétique et CO₂', 0, 1), (@qid, 'Éthanol et CO₂', 1, 2), (@qid, 'Éthanol et O₂', 0, 3), (@qid, 'Acide lactique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule brute du glucose est :',
+ 'Le glucose est un hexose de formule C₆H₁₂O₆.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C₅H₁₀O₅', 0, 1), (@qid, 'C₆H₁₂O₆', 1, 2), (@qid, 'C₁₂H₂₂O₁₁', 0, 3), (@qid, 'C₆H₁₀O₅', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire du glucose est :',
+ 'M(glucose) = 6×12 + 12×1 + 6×16 = 72 + 12 + 96 = 180 g/mol.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '160 g/mol', 0, 1), (@qid, '180 g/mol', 1, 2), (@qid, '150 g/mol', 0, 3), (@qid, '200 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le rendement de 70% dans la fermentation du glucose signifie que :',
+ 'Un rendement de 70% signifie que seulement 70% de la quantité théorique d''éthanol est obtenue.', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '70% du glucose est utilisé', 0, 1), (@qid, '70% du rendement théorique est obtenu', 1, 2), (@qid, '70% d''éthanol pur', 0, 3), (@qid, '70% de CO₂ est produit', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La photosynthèse est la réaction par laquelle les végétaux transforment :',
+ 'Photosynthèse : CO₂ + H₂O → (CH₂O)ₙ + O₂ (chlorophylle, lumière).', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''O₂ en CO₂', 0, 1), (@qid, 'CO₂ et H₂O en glucides et O₂', 1, 2), (@qid, 'Les glucides en CO₂', 0, 3), (@qid, 'La lumière en chaleur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule brute du saccharose (sucre de table) est :',
+ 'Le saccharose est un diholoside de formule C₁₂H₂₂O₁₁.', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C₆H₁₂O₆', 0, 1), (@qid, 'C₁₂H₂₂O₁₁', 1, 2), (@qid, 'C₆H₁₀O₅', 0, 3), (@qid, 'C₁₂H₂₄O₁₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydrolyse du saccharose produit :',
+ 'Saccharose + H₂O → glucose + fructose.', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Amidon et eau', 0, 1), (@qid, 'Glucose et fructose', 1, 2), (@qid, 'Cellulose et eau', 0, 3), (@qid, 'Éthanol et CO₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'On fermente 1200 g de glucose avec un rendement de 70%. La masse d''éthanol obtenue est :',
+ 'Théorie : 1200/180 × 2 × 46 = 613,3 g. Avec 70% : 613,3 × 0,7 ≈ 429,3 g.', 'Examen Balandine 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '307 g', 0, 1), (@qid, '429,3 g', 1, 2), (@qid, '613 g', 0, 3), (@qid, '560 g', 0, 4);
+
+-- ============================================================
+-- THÈME 10 : CARBURE D'ALUMINIUM ET CARBURE DE CALCIUM
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydrolyse du carbure d''aluminium (Al₄C₃) produit :',
+ 'Al₄C₃ + 12H₂O → 4Al(OH)₃ + 3CH₄ (méthane).', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acétylène', 0, 1), (@qid, 'Méthane', 1, 2), (@qid, 'Éthylène', 0, 3), (@qid, 'Propane', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire du carbure d''aluminium Al₄C₃ est :',
+ 'M = 4×27 + 3×12 = 108 + 36 = 144 g/mol.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '108 g/mol', 0, 1), (@qid, '144 g/mol', 1, 2), (@qid, '120 g/mol', 0, 3), (@qid, '132 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire du carbure de calcium CaC₂ est :',
+ 'M(CaC₂) = 40 + 2×12 = 64 g/mol.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '52 g/mol', 0, 1), (@qid, '64 g/mol', 1, 2), (@qid, '76 g/mol', 0, 3), (@qid, '56 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le gaz produit par l''hydrolyse du carbure de calcium est :',
+ 'CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂. Le gaz est l''acétylène (éthyne).', 'Examen Bartlett 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Méthane', 0, 1), (@qid, 'Acétylène', 1, 2), (@qid, 'Éthylène', 0, 3), (@qid, 'Propane', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le volume molaire d''un gaz à TPN (conditions normales) est :',
+ 'À TPN (0°C, 1 atm) : Vm = 22,4 L/mol.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '24 L/mol', 0, 1), (@qid, '22,4 L/mol', 1, 2), (@qid, '22,7 L/mol', 0, 3), (@qid, '20 L/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''eau de chaux est une solution de :',
+ 'L''eau de chaux est une solution aqueuse d''hydroxyde de calcium Ca(OH)₂.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CaCO₃', 0, 1), (@qid, 'Ca(OH)₂', 1, 2), (@qid, 'CaO', 0, 3), (@qid, 'CaCl₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le CO₂ barbotant dans l''eau de chaux donne :',
+ 'CO₂ + Ca(OH)₂ → CaCO₃ (précipité blanc) + H₂O. L''eau de chaux se trouble.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CaO', 0, 1), (@qid, 'CaCO₃ (précipité blanc)', 1, 2), (@qid, 'Ca(HCO₃)₂', 0, 3), (@qid, 'CaCl₂', 0, 4);
+
+-- ============================================================
+-- THÈME 11 : STÉRÉOCHIMIE ET OPTIQUE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Une substance chimique qui dévie la lumière polarisée à droite est dite :',
+ 'Une substance dextrogyre (+) fait dévier la lumière polarisée vers la droite.', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Lévogyre', 0, 1), (@qid, 'Dextrogyre', 1, 2), (@qid, 'Racémique', 0, 3), (@qid, 'Méso', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Une substance qui dévie la lumière polarisée à gauche est dite :',
+ 'Une substance lévogyre (-) fait dévier la lumière polarisée vers la gauche.', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dextrogyre', 0, 1), (@qid, 'Lévogyre', 1, 2), (@qid, 'Optiquement inactive', 0, 3), (@qid, 'Aromatique', 0, 4);
+
+-- ============================================================
+-- THÈME 12 : REACTIONS DIVERSES ET ÉQUATIONS
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''addition de HCl sur l''éthylène donne :',
+ 'CH₂=CH₂ + HCl → CH₃-CH₂Cl (chloroéthane).', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthane', 0, 1), (@qid, 'Chloroéthane (CH₃CH₂Cl)', 1, 2), (@qid, 'Dichloroéthane', 0, 3), (@qid, 'Alcool éthylique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réduction de l''oxyde de cuivre I (Cu₂O) par le dihydrogène donne :',
+ 'Cu₂O + H₂ → 2Cu + H₂O.', 'Examen Darcet 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CuO et H₂O', 0, 1), (@qid, 'Cu et H₂O', 1, 2), (@qid, 'CuH et O₂', 0, 3), (@qid, 'Cu(OH)₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réaction du méthane avec le dichlore à la lumière donne (monosubstitution) :',
+ 'CH₄ + Cl₂ → CH₃Cl + HCl (monosubstitution radicalaire à la lumière diffuse).', 'Examen Darcet 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₂Cl₂ + H₂', 0, 1), (@qid, 'CH₃Cl + HCl', 1, 2), (@qid, 'CCl₄ + HCl', 0, 3), (@qid, 'C + HCl', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La combustion complète de l''éthylène donne :',
+ 'C₂H₄ + 3O₂ → 2CO₂ + 2H₂O.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CO + H₂O', 0, 1), (@qid, '2CO₂ + 2H₂O', 1, 2), (@qid, 'C₂H₄O + CO₂', 0, 3), (@qid, '4CO₂ + 2H₂O', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La combustion complète du benzène donne :',
+ 'C₆H₆ + 15/2 O₂ → 6CO₂ + 3H₂O (combustion complète).', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '6CO + 3H₂O', 0, 1), (@qid, '6CO₂ + 3H₂O', 1, 2), (@qid, '6CO₂ + H₂', 0, 3), (@qid, 'C₆H₆O + CO₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La calcination du carbonate de calcium (CaCO₃) donne :',
+ 'CaCO₃ → CaO + CO₂ (décomposition thermique).', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ca + CO₂ + O₂', 0, 1), (@qid, 'CaO + CO₂', 1, 2), (@qid, 'Ca(OH)₂ + C', 0, 3), (@qid, 'CaCl₂ + CO₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydratation de l''éthylène produit :',
+ 'CH₂=CH₂ + H₂O → CH₃-CH₂-OH (éthanol) en milieu acide.', 'Examen Barbier 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthanal', 0, 1), (@qid, 'Éthanol', 1, 2), (@qid, 'Éther diéthylique', 0, 3), (@qid, 'Acide acétique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''addition de H₂ sur l''éthanal donne :',
+ 'CH₃CHO + H₂ → CH₃CH₂OH (réduction de l''éthanal en éthanol).', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propanol', 0, 1), (@qid, 'Éthanol', 1, 2), (@qid, 'Éthylène', 0, 3), (@qid, 'Propanone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''acide sulfurique réagit avec l''hydroxyde de calcium selon :',
+ 'H₂SO₄ + Ca(OH)₂ → CaSO₄ + 2H₂O (neutralisation).', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CaSO₃ + H₂O', 0, 1), (@qid, 'CaSO₄ + 2H₂O', 1, 2), (@qid, 'Ca(HSO₄)₂', 0, 3), (@qid, 'CaO + H₂SO₄', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le fer réagit avec le nitrate de cuivre II Cu(NO₃)₂ selon :',
+ 'Fe + Cu(NO₃)₂ → Fe(NO₃)₂ + Cu. Le fer déplace le cuivre.', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Fe + Cu → FeCu', 0, 1), (@qid, 'Fe + Cu²⁺ → Fe²⁺ + Cu', 1, 2), (@qid, 'Fe₂O₃ + Cu', 0, 3), (@qid, 'Pas de réaction', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydrogénation de l''éthanal donne :',
+ 'CH₃CHO + H₂ → CH₃CH₂OH (réduction aldéhyde → alcool primaire).', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propanol', 0, 1), (@qid, 'Éthanol', 1, 2), (@qid, 'Propanone', 0, 3), (@qid, 'Acide acétique', 0, 4);
+
+-- ============================================================
+-- THÈME 13 : MASSES MOLAIRES ET CALCULS
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire de l''éthanol (C₂H₅OH) est :',
+ 'M = 2×12 + 6×1 + 16 = 24 + 6 + 16 = 46 g/mol.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '44 g/mol', 0, 1), (@qid, '46 g/mol', 1, 2), (@qid, '48 g/mol', 0, 3), (@qid, '42 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire du benzène (C₆H₆) est :',
+ 'M(C₆H₆) = 6×12 + 6×1 = 78 g/mol.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '72 g/mol', 0, 1), (@qid, '78 g/mol', 1, 2), (@qid, '84 g/mol', 0, 3), (@qid, '76 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire de l''acide acétique (CH₃COOH) est :',
+ 'M = 2×12 + 4×1 + 2×16 = 24 + 4 + 32 = 60 g/mol.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '58 g/mol', 0, 1), (@qid, '60 g/mol', 1, 2), (@qid, '62 g/mol', 0, 3), (@qid, '56 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire de l''acétylène (C₂H₂) est :',
+ 'M(C₂H₂) = 2×12 + 2×1 = 26 g/mol.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '24 g/mol', 0, 1), (@qid, '26 g/mol', 1, 2), (@qid, '28 g/mol', 0, 3), (@qid, '30 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire de l''éthylène (C₂H₄) est :',
+ 'M(C₂H₄) = 2×12 + 4×1 = 28 g/mol.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '26 g/mol', 0, 1), (@qid, '28 g/mol', 1, 2), (@qid, '30 g/mol', 0, 3), (@qid, '24 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire de l''acide chlorhydrique (HCl) est :',
+ 'M(HCl) = 1 + 35,5 = 36,5 g/mol.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '35,5 g/mol', 0, 1), (@qid, '36,5 g/mol', 1, 2), (@qid, '37 g/mol', 0, 3), (@qid, '38 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Pour brûler complètement 1 mol de méthane CH₄, il faut :',
+ 'CH₄ + 2O₂ → CO₂ + 2H₂O. Il faut 2 mol d''O₂.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 mol d''O₂', 0, 1), (@qid, '2 mol d''O₂', 1, 2), (@qid, '3 mol d''O₂', 0, 3), (@qid, '0,5 mol d''O₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La combustion complète du butane (C₄H₁₀) nécessite par molécule :',
+ 'C₄H₁₀ + 13/2 O₂ → 4CO₂ + 5H₂O. Soit 6,5 mol d''O₂ par mol de butane.', 'Examen Barbier 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '4 mol O₂', 0, 1), (@qid, '6,5 mol O₂', 1, 2), (@qid, '8 mol O₂', 0, 3), (@qid, '5 mol O₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''air est composé approximativement de :',
+ 'L''air contient environ 1/5 (20%) de dioxygène et 4/5 (80%) de diazote en volume.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '50% O₂ et 50% N₂', 0, 1), (@qid, '20% O₂ et 80% N₂', 1, 2), (@qid, '30% O₂ et 70% N₂', 0, 3), (@qid, '10% O₂ et 90% N₂', 0, 4);
+
+-- ============================================================
+-- THÈME 14 : ISOMÈRES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule C₃H₈O correspond à combien d''alcools isomères ?',
+ 'Propan-1-ol, propan-2-ol, et méthyléthanol (2-méthyl-1-propanol n''est pas C₃). 2 alcools isomères à chaîne droite.', 'Examen Barbier 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1', 0, 1), (@qid, '2', 1, 2), (@qid, '3', 0, 3), (@qid, '4', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Deux composés sont isomères s''ils ont :',
+ 'Les isomères ont la même formule brute mais des structures différentes.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les mêmes propriétés physiques', 0, 1), (@qid, 'La même formule brute mais des structures différentes', 1, 2), (@qid, 'Le même nombre d''atomes de carbone seulement', 0, 3), (@qid, 'La même formule développée', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le propan-1-ol et le propan-2-ol sont des isomères de :',
+ 'Même formule brute C₃H₈O, même groupe fonctionnel (-OH), différence = position du OH → isomères de position.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Chaîne', 0, 1), (@qid, 'Position', 1, 2), (@qid, 'Fonction', 0, 3), (@qid, 'Géométrie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un alcool et un éther-oxyde de même formule brute sont des isomères de :',
+ 'Même formule brute mais groupes fonctionnels différents → isomères de fonction.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Position', 0, 1), (@qid, 'Chaîne', 0, 2), (@qid, 'Fonction', 1, 3), (@qid, 'Optique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule C₅H₈ correspond à des alcynes. Combien d''isomères linéaires existe-t-il ?',
+ 'Pent-1-yne (HC≡C-CH₂-CH₂-CH₃), pent-2-yne (CH₃-C≡C-CH₂-CH₃), 3-méthylbut-1-yne → 3 isomères.', 'Examen Bartlett 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2', 0, 1), (@qid, '3', 1, 2), (@qid, '4', 0, 3), (@qid, '1', 0, 4);
+
+-- ============================================================
+-- THÈME 15 : AMIDES ET AMINES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La butanamide a pour formule semi-développée :',
+ 'Butanamide = CH₃-CH₂-CH₂-CO-NH₂.', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₃-CO-NH₂', 0, 1), (@qid, 'CH₃-CH₂-CH₂-CO-NH₂', 1, 2), (@qid, 'CH₃-CH₂-CO-NH₂', 0, 3), (@qid, 'CH₃-NH₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le propanamide a pour formule semi-développée :',
+ 'Propanamide = CH₃-CH₂-CO-NH₂.', 'Examen Darcet 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₃-CO-NH₂', 0, 1), (@qid, 'CH₃-CH₂-CO-NH₂', 1, 2), (@qid, 'CH₃-NH₂', 0, 3), (@qid, 'C₂H₅-NH₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''aniline (C₆H₅-NH₂) appartient à la famille des :',
+ 'L''aniline est une amine aromatique (groupe -NH₂ sur le cycle benzénique).', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Alcools', 0, 1), (@qid, 'Amines aromatiques', 1, 2), (@qid, 'Aldéhydes', 0, 3), (@qid, 'Acides carboxyliques', 0, 4);
+
+-- ============================================================
+-- THÈME 16 : CALCULS STŒCHIOMÉTRIQUES AVANCÉS
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'On brûle 50 cm³ de benzène. La masse de benzène est (ρ=0,9 g/cm³) :',
+ 'm = ρ × V = 0,9 × 50 = 45 g de benzène.', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '40 g', 0, 1), (@qid, '45 g', 1, 2), (@qid, '50 g', 0, 3), (@qid, '54 g', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La quantité de matière de 45 g de benzène (M=78 g/mol) est :',
+ 'n = m/M = 45/78 ≈ 0,577 mol.', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 mol', 0, 1), (@qid, '0,577 mol', 1, 2), (@qid, '1 mol', 0, 3), (@qid, '0,78 mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'On réalise la combustion complète de 0,12 mol d''éthanol dans 0,48 mol d''O₂. L''équation est :',
+ 'C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O. Pour 0,12 mol d''éthanol, il faut 0,36 mol d''O₂.', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C₂H₅OH + 2O₂ → 2CO₂ + H₂O', 0, 1), (@qid, 'C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O', 1, 2), (@qid, 'C₂H₅OH + O₂ → CO₂ + H₂O', 0, 3), (@qid, '2C₂H₅OH + 5O₂ → 4CO₂ + 3H₂O', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans la réaction éthanol + 3O₂ → 2CO₂ + 3H₂O, le réactif limitant quand on a 0,12 mol éthanol et 0,48 mol O₂ est :',
+ 'Besoin : 0,12 × 3 = 0,36 mol O₂ ; disponible 0,48 mol O₂. O₂ en excès → éthanol est limitant.', 'Examen Welsbach 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''oxygène', 0, 1), (@qid, 'L''éthanol', 1, 2), (@qid, 'Les deux à la fois', 0, 3), (@qid, 'Aucun des deux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'On fermente 2 kg de glucose (rendement 60%). La masse d''éthanol produite est :',
+ 'n(glucose) = 2000/180. n(éthanol) théo = 2×n(glucose). m(éthanol) = (2000/180)×2×46×0,60 ≈ 613 g.', 'Examen Barton 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '400 g', 0, 1), (@qid, '613 g', 1, 2), (@qid, '920 g', 0, 3), (@qid, '1022 g', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'On réalise l''hydrolyse de 250 g de carbure d''aluminium ayant 30% d''impuretés. La masse de Al₄C₃ pur est :',
+ 'm(pur) = 250 × (1 - 0,30) = 250 × 0,70 = 175 g.', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '250 g', 0, 1), (@qid, '175 g', 1, 2), (@qid, '75 g', 0, 3), (@qid, '200 g', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réaction de la combustion complète de l''acétylène (C₂H₂) est :',
+ '2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O.', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C₂H₂ + O₂ → 2CO + H₂O', 0, 1), (@qid, '2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O', 1, 2), (@qid, 'C₂H₂ + 2O₂ → 2CO₂ + H₂O', 0, 3), (@qid, 'C₂H₂ + O₂ → CO₂ + H₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''hydratation de 250 L d''éthylène (TPN) donne un volume d''éthanol (rendement 90%) de :',
+ 'n(éthylène) = 250/22,4. n(éthanol) = même. m = (250/22,4)×46×0,9 ≈ 463 g. V = 463/0,8 ≈ 579 cm³.', 'Examen Darcet 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '250 cm³', 0, 1), (@qid, '≈ 579 cm³', 1, 2), (@qid, '450 cm³', 0, 3), (@qid, '720 cm³', 0, 4);
+
+-- ============================================================
+-- THÈME 17 : LOI DES GAZ ET CONDITIONS
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La loi des gaz parfaits s''énonce :',
+ 'PV = nRT où P est la pression, V le volume, n le nombre de moles, R la constante, T la température en K.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'PV = nT', 0, 1), (@qid, 'PV = nRT', 1, 2), (@qid, 'P/V = nR/T', 0, 3), (@qid, 'PV = RT', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La constante des gaz parfaits R vaut :',
+ 'R = 8,314 J/(mol·K) = 0,0821 L·atm/(mol·K).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '6,022 J/(mol·K)', 0, 1), (@qid, '8,314 J/(mol·K)', 1, 2), (@qid, '0,082 J/(mol·K)', 0, 3), (@qid, '22,4 J/(mol·K)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Pour convertir une température de 27°C en Kelvin :',
+ 'T(K) = T(°C) + 273. Donc 27°C = 300 K.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '246 K', 0, 1), (@qid, '300 K', 1, 2), (@qid, '327 K', 0, 3), (@qid, '27 K', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le volume molaire d''un gaz dans les CNTP (25°C, 1 atm) est approximativement :',
+ 'Dans les CNTP (25°C = 298K, 1 atm) : Vm ≈ 24,5 L/mol (souvent arrondi à 24 L/mol).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '22,4 L/mol', 0, 1), (@qid, '24 L/mol', 1, 2), (@qid, '20 L/mol', 0, 3), (@qid, '28 L/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Si un gaz occupe V₁ = 4 L à T₁ = 0°C et P₁ = 1 atm, son volume à T₂ = 60°C et P₂ = 1,5 atm est :',
+ 'V₂ = V₁×T₂/T₁×P₁/P₂ = 4×333/273×1/1,5 ≈ 3,25 L.', 'Examen Balandine 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '4,8 L', 0, 1), (@qid, '3,25 L', 1, 2), (@qid, '6 L', 0, 3), (@qid, '2,67 L', 0, 4);
+
+-- ============================================================
+-- THÈME 18 : DÉTERMINATION DE FORMULES (ANALYSE ÉLÉMENTAIRE)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un composé contient 52,2% C, 13% H et 34,8% O. Sa formule empirique est :',
+ 'C: 52,2/12=4,35 ; H: 13/1=13 ; O: 34,8/16=2,175. Rapport 2:6:1 → C₂H₆O.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₄O', 0, 1), (@qid, 'C₂H₆O', 1, 2), (@qid, 'C₃H₈O', 0, 3), (@qid, 'CH₂O', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un composé organique a pour formule brute CH₂O et masse molaire 30 g/mol. C''est :',
+ 'CH₂O = méthanal (formaldéhyde) : M = 12+2+16 = 30 g/mol. Formule développée : H₂C=O.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthanol', 0, 1), (@qid, 'Méthanal (formaldéhyde)', 1, 2), (@qid, 'Acide méthanoïque', 0, 3), (@qid, 'Méthanol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule brute d''un alcyne C₅H₈ correspond à un hydrocarbure :',
+ 'CₙH₂ₙ₋₂ avec n=5 → C₅H₈ est bien un alcyne.', 'Examen Bartlett 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Alcane', 0, 1), (@qid, 'Alcyne', 1, 2), (@qid, 'Alcène', 0, 3), (@qid, 'Arène', 0, 4);
+
+-- ============================================================
+-- THÈME 19 : RÉACTIONS D'IDENTIFICATION
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le réactif des ions sulfate SO₄²⁻ en solution est :',
+ 'Les ions Ba²⁺ précipitent les ions sulfate : Ba²⁺ + SO₄²⁻ → BaSO₄ (précipité blanc insoluble).', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cu²⁺', 0, 1), (@qid, 'Ba²⁺ (ions baryum)', 1, 2), (@qid, 'Ag⁺', 0, 3), (@qid, 'Fe³⁺', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le réactif des ions chlorure Cl⁻ en solution est :',
+ 'Les ions Ag⁺ précipitent les ions chlorure : Ag⁺ + Cl⁻ → AgCl (précipité blanc).', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ba²⁺', 0, 1), (@qid, 'Ag⁺ (ions argent)', 1, 2), (@qid, 'Cu²⁺', 0, 3), (@qid, 'Fe²⁺', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le dibrome en solution permet d''identifier :',
+ 'Le dibrome (brun) décolore en présence d''alcènes ou d''alcynes (réaction d''addition).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les alcanes', 0, 1), (@qid, 'Les alcènes et alcynes', 1, 2), (@qid, 'Les alcools', 0, 3), (@qid, 'Les acides', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La phénolphtaléine vire au rose en milieu :',
+ 'La phénolphtaléine est incolore en milieu acide et rose en milieu basique (pH > 8,2).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acide', 0, 1), (@qid, 'Basique', 1, 2), (@qid, 'Neutre', 0, 3), (@qid, 'Oxydant', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''eau de chaux se trouble en présence de :',
+ 'Le CO₂ réagit avec Ca(OH)₂ pour donner CaCO₃ (précipité blanc) → l''eau de chaux se trouble.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Diazote N₂', 0, 1), (@qid, 'Dioxyde de carbone CO₂', 1, 2), (@qid, 'Dioxygène O₂', 0, 3), (@qid, 'Vapeur d''eau', 0, 4);
+
+-- ============================================================
+-- THÈME 20 : QUESTIONS SUPPLÉMENTAIRES (RÉVISION COMPLÈTE)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un alcool est dit primaire quand le carbone portant le groupe OH est lié à :',
+ 'Alcool primaire : le C-OH est lié à 1 seul autre carbone (ou zéro dans le méthanol).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '3 autres carbones', 0, 1), (@qid, '1 seul autre carbone', 1, 2), (@qid, '2 autres carbones', 0, 3), (@qid, 'Aucun autre carbone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un alcool est dit secondaire quand le carbone portant le groupe OH est lié à :',
+ 'Alcool secondaire : le C-OH est lié à exactement 2 autres carbones.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 autre carbone', 0, 1), (@qid, '2 autres carbones', 1, 2), (@qid, '3 autres carbones', 0, 3), (@qid, 'Aucun autre carbone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un alcool est dit tertiaire quand le carbone portant le groupe OH est lié à :',
+ 'Alcool tertiaire : le C-OH est lié à 3 autres carbones.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 autre carbone', 0, 1), (@qid, '2 autres carbones', 0, 2), (@qid, '3 autres carbones', 1, 3), (@qid, '4 autres carbones', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réaction de l''éthylène avec l''éthylène est une réaction de :',
+ 'La polymérisation de l''éthylène sur lui-même est une réaction d''addition (polymérisation).', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Substitution', 0, 1), (@qid, 'Addition (polymérisation)', 1, 2), (@qid, 'Élimination', 0, 3), (@qid, 'Oxydoréduction', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''acide chlorhydrique réagit avec le zinc selon :',
+ 'Zn + 2HCl → ZnCl₂ + H₂ (déplacement de l''hydrogène par le zinc).', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Zn + HCl → ZnCl + H', 0, 1), (@qid, 'Zn + 2HCl → ZnCl₂ + H₂', 1, 2), (@qid, 'Zn + 3HCl → ZnCl₃ + H₂', 0, 3), (@qid, 'Zn + HCl → ZnH + Cl₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''acétylène + dibrome sous lumière vive donne :',
+ 'HC≡CH + 2Br₂ → CHBr₂-CHBr₂ (tétrabromure de 1,1,2,2-éthane) — destruction.', 'Examen Balandine 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₂Br-CH₂Br', 0, 1), (@qid, 'CHBr₂-CHBr₂ (addition de 2 Br₂)', 1, 2), (@qid, 'Carbone + HBr', 0, 3), (@qid, 'C₂Br₂ + H₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''oxydation du cuivre par l''acide nitrique (solution de nitrate d''argent) suit :',
+ 'Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag. Le cuivre déplace l''argent.', 'Examen Darcet 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cu + AgNO₃ → CuNO₃ + Ag', 0, 1), (@qid, 'Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag', 1, 2), (@qid, 'Cu + AgNO₃ → CuAg + NO₃', 0, 3), (@qid, 'Pas de réaction', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Quel composé produit une réaction de Friedel-Crafts avec le benzène ?',
+ 'La réaction de Friedel-Crafts utilise un halogénure d''alkyle (ex: CH₃Cl) avec un catalyseur AlCl₃.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Eau', 0, 1), (@qid, 'Chlorure de méthyle (CH₃Cl)', 1, 2), (@qid, 'Dioxygène', 0, 3), (@qid, 'Méthanol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La destruction du propène dans le dichlore donne :',
+ 'CH₃-CH=CH₂ + Cl₂ → CH₃-CHCl-CH₂Cl (1,2-dichloropropane) par addition.', 'Examen Darcet 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propane + HCl', 0, 1), (@qid, '1,2-dichloropropane', 1, 2), (@qid, 'Propène + Cl₂ → 3C + HCl', 0, 3), (@qid, 'Chloropropène + HCl', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réduction du phénol par le zinc donne :',
+ 'C₆H₅OH + Zn → C₆H₆ + ZnO (réduction du phénol en benzène).', 'Examen Propanone NS 2020', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cyclohexanol', 0, 1), (@qid, 'Benzène + ZnO', 1, 2), (@qid, 'Toluène + ZnO', 0, 3), (@qid, 'Aniline + ZnO', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le sulfure de zinc ZnS réagit avec l''acide chlorhydrique selon :',
+ 'ZnS + 2HCl → ZnCl₂ + H₂S (dégagement de sulfure d''hydrogène).', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ZnS + HCl → ZnHCl + S', 0, 1), (@qid, 'ZnS + 2HCl → ZnCl₂ + H₂S', 1, 2), (@qid, 'ZnS + HCl → ZnCl + SH₂', 0, 3), (@qid, 'ZnS + 2HCl → ZnH₂ + SCl₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''isoflurane (CF₃-CHCl-O-CHF₂) contient comme fonction oxygénée :',
+ 'Le groupe -O- entre deux chaînes carbonées → fonction éther-oxyde.', 'Examen Barbier 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Alcool (-OH)', 0, 1), (@qid, 'Éther (-O-)', 1, 2), (@qid, 'Ester (-COO-)', 0, 3), (@qid, 'Aldéhyde (-CHO)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule brute de l''isoflurane CF₃-CHCl-O-CHF₂ est :',
+ 'CF₃ = C, F₃ ; CHCl = C, H, Cl ; O ; CHF₂ = C, H, F₂ → C₃H₂ClF₅O.', 'Examen Barbier 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C₃H₂ClF₄O', 0, 1), (@qid, 'C₃H₂ClF₅O', 1, 2), (@qid, 'C₂H₂ClF₃O', 0, 3), (@qid, 'C₃H₃ClF₄O', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire de l''aluminium Al est :',
+ 'La masse molaire de l''aluminium est 27 g/mol.', 'Données examens NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '24 g/mol', 0, 1), (@qid, '27 g/mol', 1, 2), (@qid, '40 g/mol', 0, 3), (@qid, '23 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire du calcium Ca est :',
+ 'La masse molaire du calcium est 40 g/mol.', 'Données examens NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '27 g/mol', 0, 1), (@qid, '40 g/mol', 1, 2), (@qid, '48 g/mol', 0, 3), (@qid, '35,5 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire du chlore Cl est :',
+ 'La masse molaire du chlore est 35,5 g/mol.', 'Données examens NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '32 g/mol', 0, 1), (@qid, '35,5 g/mol', 1, 2), (@qid, '37 g/mol', 0, 3), (@qid, '40 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire du sodium Na est :',
+ 'La masse molaire du sodium est 23 g/mol.', 'Données examens NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '20 g/mol', 0, 1), (@qid, '23 g/mol', 1, 2), (@qid, '24 g/mol', 0, 3), (@qid, '27 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire du cuivre Cu est :',
+ 'La masse molaire du cuivre est 63,5 g/mol.', 'Données examens NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '58 g/mol', 0, 1), (@qid, '63,5 g/mol', 1, 2), (@qid, '65 g/mol', 0, 3), (@qid, '60 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le degré de pureté d''un carbure est calculé comme :',
+ 'Degré de pureté = (masse de substance pure / masse totale de l''échantillon) × 100%.', 'Examen Balandine 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'masse totale / masse pure × 100%', 0, 1), (@qid, 'masse pure / masse totale × 100%', 1, 2), (@qid, 'masse impuretés / masse pure × 100%', 0, 3), (@qid, 'volume / masse × 100%', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le formol (formaline) est une solution aqueuse de :',
+ 'Le formol est une solution à environ 37% de méthanal (formaldéhyde, HCHO).', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Méthanol', 0, 1), (@qid, 'Méthanal (formaldéhyde)', 1, 2), (@qid, 'Acide formique', 0, 3), (@qid, 'Éthanol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La géométrie du carbone dans le méthanal H₂C=O est :',
+ 'Le carbone C=O du méthanal est de géométrie trigonale plane (sp²).', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Tétraédrique', 0, 1), (@qid, 'Trigonale plane', 1, 2), (@qid, 'Linéaire', 0, 3), (@qid, 'Pyramidale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''acide acétique réagit avec l''aluminium selon :',
+ '2Al + 6CH₃COOH → 2(CH₃COO)₃Al + 3H₂ (acétate d''aluminium + dihydrogène).', 'Examen Welsbach 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Al + CH₃COOH → AlCH₃COO + H', 0, 1), (@qid, '2Al + 6CH₃COOH → 2Al(CH₃COO)₃ + 3H₂', 1, 2), (@qid, 'Al + 2CH₃COOH → Al(CH₃COO)₂ + H₂', 0, 3), (@qid, 'Al + 3CH₃COOH → Al(OH)₃ + acétone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans la réaction de combustion complète du propane : C₃H₈ + 5O₂ → 3CO₂ + 4H₂O, le coefficient de O₂ est :',
+ 'C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. Coefficient de O₂ = 5.', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '3', 0, 1), (@qid, '5', 1, 2), (@qid, '4', 0, 3), (@qid, '8', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un vinaigre titre 7°. Cela signifie qu''il contient :',
+ '7° signifie 7 mL d''acide acétique pur pour 100 mL de vinaigre.', 'Examen Propanone NS 2020', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '7 g d''acide pour 100 mL', 0, 1), (@qid, '7 mL d''acide pour 100 mL de vinaigre', 1, 2), (@qid, '7 mol d''acide par litre', 0, 3), (@qid, '7% en masse d''alcool', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La combustion complète de 0,25 mol d''acétylène nécessite :',
+ '2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O. Pour 0,25 mol C₂H₂ : besoin de 0,25 × 5/2 = 0,625 mol O₂.', 'Examen Propanone NS 2020', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 mol O₂', 0, 1), (@qid, '0,625 mol O₂', 1, 2), (@qid, '1,25 mol O₂', 0, 3), (@qid, '0,25 mol O₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le nombre de moles dans 46 g d''éthanol (M=46 g/mol) est :',
+ 'n = m/M = 46/46 = 1 mol.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,5 mol', 0, 1), (@qid, '1 mol', 1, 2), (@qid, '2 mol', 0, 3), (@qid, '0,1 mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Pour une réaction à rendement de 65%, la quantité de produit réellement obtenue est :',
+ 'Quantité réelle = quantité théorique × (65/100) = 0,65 × quantité théorique.', 'Examen Barbier 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '65% de moins que la théorie', 0, 1), (@qid, '65% de la quantité théorique', 1, 2), (@qid, '135% de la théorie', 0, 3), (@qid, 'La même que la théorie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse d''acide acétique dans 1 L d''un vin titrant 15° (fermentation acétique) est (ρ éthanol = 0,8) :',
+ 'V(éthanol) = 150 mL. m(éthanol) = 150×0,8 = 120 g. n = 120/46 mol. n(acide acétique)=n(éthanol). m(acide) = (120/46)×60 ≈ 156,5 g.', 'Examen Propanone NS 2020', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '120 g', 0, 1), (@qid, '≈ 156,5 g', 1, 2), (@qid, '60 g', 0, 3), (@qid, '200 g', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réaction de neutralisation de NH₃ + HCl fait intervenir les couples acide/base :',
+ 'NH₄⁺/NH₃ et H₃O⁺/H₂O (ou HCl/Cl⁻).', 'Examen Propanone NS 2020', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'NH₃/NH₂⁻ et Cl⁻/HCl', 0, 1), (@qid, 'NH₄⁺/NH₃ et HCl/Cl⁻', 1, 2), (@qid, 'NH₄OH/NH₃ et H⁺/H₂', 0, 3), (@qid, 'Cl₂/HCl et NH₃/N₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réaction d''hydrolyse du carbure d''aluminium est équilibrée comme suit :',
+ 'Al₄C₃ + 12H₂O → 4Al(OH)₃ + 3CH₄.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Al₄C₃ + 6H₂O → 4AlOH + 3CH₄', 0, 1), (@qid, 'Al₄C₃ + 12H₂O → 4Al(OH)₃ + 3CH₄', 1, 2), (@qid, 'AlC₃ + 6H₂O → Al(OH)₃ + 3CH₄', 0, 3), (@qid, '2Al₄C₃ + 12H₂O → 8AlOH + 3CH₄', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Les composés organiques formés de carbone et d''hydrogène sont appelés :',
+ 'Les hydrocarbures sont des composés organiques contenant uniquement des atomes de carbone et d''hydrogène.', 'Examen Barbier 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Glucides', 0, 1), (@qid, 'Hydrocarbures', 1, 2), (@qid, 'Lipides', 0, 3), (@qid, 'Alcools', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un hydrocarbure à chaîne carbonée ouverte est dit :',
+ 'Chaîne ouverte (non cyclique) = hydrocarbure aliphatique.', 'Examen Barbier 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Aromatique', 0, 1), (@qid, 'Aliphatique (acyclique)', 1, 2), (@qid, 'Cyclique', 0, 3), (@qid, 'Hétérocyclique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''oxydation de l''aluminium par le dichlore donne :',
+ '2Al + 3Cl₂ → 2AlCl₃ (chlorure d''aluminium).', 'Examen Welsbach 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'AlCl + Cl', 0, 1), (@qid, '2AlCl₃', 1, 2), (@qid, 'Al₂Cl₃', 0, 3), (@qid, 'AlCl₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réduction de 1 kg de Cu₂O par H₂ donne comme masse de cuivre :',
+ 'Cu₂O + H₂ → 2Cu + H₂O. M(Cu₂O) = 2×63,5 + 16 = 143 g/mol. n = 1000/143. m(Cu) = (1000/143)×2×63,5 ≈ 888 g.', 'Examen Darcet 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '635 g', 0, 1), (@qid, '≈ 888 g', 1, 2), (@qid, '1000 g', 0, 3), (@qid, '444 g', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La mononitration du toluène (C₆H₅CH₃ + HNO₃ + H₂SO₄) produit principalement :',
+ 'Le méthyle est ortho-para directeur → produit ortho et para nitrotoluène.', 'Examen Barton 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Méta-nitrotoluène', 0, 1), (@qid, 'Ortho et para nitrotoluène', 1, 2), (@qid, 'Nitrobenzène', 0, 3), (@qid, 'Dinitrotoluène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La loi de Markovnikov stipule que lors de l''addition de HX sur un alcène, le H se fixe sur :',
+ 'Markovnikov : H se fixe sur le carbone déjà le plus riche en H (le moins substitué).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le carbone le plus substitué', 0, 1), (@qid, 'Le carbone le plus riche en H (le moins substitué)', 1, 2), (@qid, 'N''importe quel carbone', 0, 3), (@qid, 'Le carbone central', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La masse molaire de l''acétate de sodium CH₃COONa est :',
+ 'M = 2×12 + 3×1 + 2×16 + 23 = 82 g/mol.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '60 g/mol', 0, 1), (@qid, '82 g/mol', 1, 2), (@qid, '76 g/mol', 0, 3), (@qid, '96 g/mol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La normalité d''une solution acide est liée à sa concentration molaire par :',
+ 'Pour les acides monoprotiques (acide acétique), normalité = molarité. Pour H₂SO₄ : N = 2×C.', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'N = C toujours', 0, 1), (@qid, 'N = n × C (n = nombre de protons échangés)', 1, 2), (@qid, 'N = C/2 toujours', 0, 3), (@qid, 'N et C n''ont aucun lien', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''addition de dibrome sur l''éthylène produit :',
+ 'CH₂=CH₂ + Br₂ → CH₂Br-CH₂Br (1,2-dibromoéthane).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CH₃Br + HBr', 0, 1), (@qid, 'CH₂Br-CH₂Br', 1, 2), (@qid, 'CH₂=CHBr + HBr', 0, 3), (@qid, 'CHBr₂-CHBr₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Quand le dichlore réagit en présence d''un alcane à la lumière diffuse, il se forme du HCl qui peut :',
+ 'HCl (acide chlorhydrique) est un acide qui fait virer l''hélianthine du jaune à l''orange/rouge.', 'Examen Darcet 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Rosir la phénolphtaléine', 0, 1), (@qid, 'Faire virer l''hélianthine', 1, 2), (@qid, 'Décolorer le dibrome', 0, 3), (@qid, 'Troubler l''eau de chaux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réaction entre un ester et l''eau (hydrolyse) est :',
+ 'L''hydrolyse d''un ester est une réaction lente, limitée et réversible (inverse de l''estérification).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Rapide et totale', 0, 1), (@qid, 'Lente, limitée et réversible', 1, 2), (@qid, 'Rapide et réversible', 0, 3), (@qid, 'Totale et irréversible', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réaction d''estérification est :',
+ 'L''estérification est lente, limitée, réversible et exothermique. Elle nécessite un catalyseur acide.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Rapide et totale', 0, 1), (@qid, 'Lente, limitée et réversible', 1, 2), (@qid, 'Irréversible uniquement', 0, 3), (@qid, 'Instantanée', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Parmi ces composés, lequel est un alcane ?',
+ 'L''hexane C₆H₁₄ est un alcane saturé (CₙH₂ₙ₊₂, n=6).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'C₆H₁₂', 0, 1), (@qid, 'C₆H₁₄', 1, 2), (@qid, 'C₆H₁₀', 0, 3), (@qid, 'C₆H₆', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''acétylène est le nom commun de :',
+ 'L''acétylène = éthyne = HC≡CH (alcyne à 2 carbones).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthène', 0, 1), (@qid, 'Éthyne', 1, 2), (@qid, 'Éthane', 0, 3), (@qid, 'Méthyne', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''éthylène est le nom commun de :',
+ 'L''éthylène = éthène = CH₂=CH₂ (alcène à 2 carbones).', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Éthyne', 0, 1), (@qid, 'Éthène', 1, 2), (@qid, 'Éthane', 0, 3), (@qid, 'Propène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le plus simple des alcènes est :',
+ 'L''éthylène (éthène CH₂=CH₂) est le plus simple des alcènes.', 'Examen Welsbach 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propène', 0, 1), (@qid, 'Éthylène (éthène)', 1, 2), (@qid, 'Butène', 0, 3), (@qid, 'Méthylène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La réaction de l''éthylène avec lui-même par addition est :',
+ 'CH₂=CH₂ + CH₂=CH₂ → CH₃-CH₂-CH=CH₂ (ou polymérisation). En NS4 : dimérisation → but-1-ène.', 'Examen Balandine 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cyclohexane', 0, 1), (@qid, 'But-1-ène (dimérisation)', 1, 2), (@qid, 'Éthane', 0, 3), (@qid, 'Propène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''oxydation ménagée de l''éthanol par l''oxyde de cuivre (ou dichromate) donne d''abord :',
+ 'Éthanol (alcool primaire) → éthanal (aldéhyde) par oxydation ménagée.', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propanone', 0, 1), (@qid, 'Éthanal', 1, 2), (@qid, 'Éthylène', 0, 3), (@qid, 'Acide acétique directement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le phénol peut être préparé à partir du benzène. La réaction du phénol avec le zinc donne :',
+ 'C₆H₅OH + Zn → C₆H₆ + ZnO. On peut ainsi obtenir le benzène à partir du phénol.', 'Examen Barton 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Toluène', 0, 1), (@qid, 'Benzène', 1, 2), (@qid, 'Cyclohexane', 0, 3), (@qid, 'Aniline', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Dans un excès de dioxygène, les hydrocarbures brûlent suivant une combustion :',
+ 'En excès de O₂ : combustion complète produisant CO₂ et H₂O.', 'Examen Balandine 2022', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Incomplète', 0, 1), (@qid, 'Complète', 1, 2), (@qid, 'Partielle', 0, 3), (@qid, 'Lente', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le carbure de zinc ZnS + 2HCl → ZnCl₂ + H₂S. La formule du gaz dégagé est :',
+ 'H₂S = sulfure d''hydrogène (gaz à odeur d''œuf pourri).', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'SO₂', 0, 1), (@qid, 'H₂S', 1, 2), (@qid, 'H₂SO₄', 0, 3), (@qid, 'S₂H', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Un mélange équimolaire d''énantiomères s''appelle :',
+ 'Un mélange à parts égales des deux énantiomères est un mélange racémique (optiquement inactif).', 'Programme NS4', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Composé méso', 0, 1), (@qid, 'Mélange racémique', 1, 2), (@qid, 'Diastéréoisomère', 0, 3), (@qid, 'Composé dextrogyre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Lequel de ces acides est présent dans le vin ?',
+ 'L''acide tartrique est naturellement présent dans le vin. L''acide acétique vient de la fermentation acétique (vinaigre).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acide sulfurique', 0, 1), (@qid, 'Acide tartrique', 1, 2), (@qid, 'Acide chlorhydrique', 0, 3), (@qid, 'Acide citrique seul', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Le monomère de polymérisation du polyéthylène est :',
+ 'Le polyéthylène (-CH₂-CH₂-)ₙ est obtenu par polymérisation de l''éthylène CH₂=CH₂.', 'Programme NS4', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Propylène', 0, 1), (@qid, 'Éthylène', 1, 2), (@qid, 'Acétylène', 0, 3), (@qid, 'Styrène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'L''oxydation ménagée d''un alcool primaire puis l''oxydation de l''aldéhyde formé donne :',
+ 'Alcool primaire → aldéhyde → acide carboxylique (oxydation ménagée double).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une cétone', 0, 1), (@qid, 'Un acide carboxylique', 1, 2), (@qid, 'Un ester', 0, 3), (@qid, 'Un alcène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'La formule topologique du toluène représente :',
+ 'Le toluène (méthylbenzène) est un cycle benzénique avec un groupe -CH₃.', 'Examen Barton 2022', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un cycle avec -OH', 0, 1), (@qid, 'Un cycle benzénique avec -CH₃', 1, 2), (@qid, 'Un cycle avec -NO₂', 0, 3), (@qid, 'Un cycle avec -NH₂', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(11, 2, 'Pour une combustion complète, la proportion d''air nécessaire (en volume) par rapport à O₂ est :',
+ 'L''air contient 1/5 d''O₂ en volume, donc V(air) = 5 × V(O₂).', 'Programme NS4', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'V(air) = 2 × V(O₂)', 0, 1), (@qid, 'V(air) = 5 × V(O₂)', 1, 2), (@qid, 'V(air) = 10 × V(O₂)', 0, 3), (@qid, 'V(air) = V(O₂)', 0, 4);
+
+
+
 
 -- Complétion
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte, reponse_attendue) VALUES
@@ -12493,6 +14070,2019 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
 (@qid, 'Le mélange des sangs', 0, 1), (@qid, 'Les échanges mère-foetus sans mélange', 1, 2), (@qid, 'La digestion', 0, 3), (@qid, 'La respiration foetale uniquement', 0, 4);
+
+
+-- ============================================================
+-- QCM BIOLOGIE - EXAMENS OFFICIELS NS4 HAÏTI (MENFP) 2022
+-- Plus de 400 questions / réponses
+-- matiere_id = 12 (Biologie SVT), type_id = 2 (QCM)
+-- Difficulté : 1 (facile) à 5 (très difficile)
+-- ============================================================
+
+-- ============================================================
+-- SECTION 1 : GÉNÉTIQUE ET HÉRÉDITÉ
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La drépanocytose est causée par une mutation sur :',
+ 'La drépanocytose résulte d''une mutation ponctuelle sur la chaîne bêta de l''hémoglobine, en position 6.', 'Examen NS4 SVT 2022 - Glucogène/Morphologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La chaîne alpha de l''hémoglobine, position 1', 0, 1),
+(@qid, 'La chaîne bêta de l''hémoglobine, position 6', 1, 2),
+(@qid, 'La chaîne gamma de l''hémoglobine, position 3', 0, 3),
+(@qid, 'Le chromosome X, position 12', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Dans la drépanocytose, quel acide aminé remplace la glutamine sur la chaîne bêta ?',
+ 'La valine remplace l''acide glutamique en position 6 de la chaîne bêta, due à une mutation ponctuelle (substitution).', 'Programme NS4 - Génétique moléculaire', 4);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Alanine', 0, 1),
+(@qid, 'Leucine', 0, 2),
+(@qid, 'Valine', 1, 3),
+(@qid, 'Proline', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le génotype d''un individu atteint de drépanocytose s''écrit :',
+ 'L''individu malade est homozygote pour l''allèle drépanocytaire : HbS/HbS (ou ss selon la notation utilisée).', 'Examen NS4 SVT 2022', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'HbA/HbA', 0, 1),
+(@qid, 'HbA/HbS', 0, 2),
+(@qid, 'HbS/HbS', 1, 3),
+(@qid, 'HbA/HbC', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel type de mutation est mis en évidence dans la drépanocytose ?',
+ 'C''est une mutation ponctuelle de type substitution : un nucléotide est remplacé par un autre, entraînant le remplacement de l''acide glutamique par la valine.', 'Examen NS4 SVT 2022 - Biologie moléculaire', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Délétion', 0, 1),
+(@qid, 'Insertion', 0, 2),
+(@qid, 'Substitution (mutation ponctuelle)', 1, 3),
+(@qid, 'Translocation chromosomique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'L''hémoglobine est appelée pigment respiratoire car :',
+ 'L''hémoglobine fixe et transporte le dioxygène (O₂) grâce à son groupement hème contenant le fer.', 'Examen NS4 SVT 2022 - Glucogène', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle donne la couleur rouge à la peau', 0, 1),
+(@qid, 'Elle fixe et transporte le dioxygène dans le sang', 1, 2),
+(@qid, 'Elle produit de l''énergie lors de la respiration', 0, 3),
+(@qid, 'Elle est présente dans les poumons', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle vitamine peut-on prendre pour stimuler l''hématopoïèse ?',
+ 'La vitamine B12 (cyanocobalamine) est indispensable à la formation des globules rouges (hématopoïèse).', 'Examen NS4 SVT 2022 - Morphologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamine C', 0, 1),
+(@qid, 'Vitamine D', 0, 2),
+(@qid, 'Vitamine B12', 1, 3),
+(@qid, 'Vitamine A', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La drépanocytose est-elle liée aux hétérochromosomes ?',
+ 'Non, la drépanocytose est une maladie autosomale : le gène HBB est situé sur le chromosome 11 (autosome), pas sur les chromosomes sexuels.', 'Examen NS4 SVT 2022 - Morphologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, elle est liée au chromosome X', 0, 1),
+(@qid, 'Oui, elle est liée au chromosome Y', 0, 2),
+(@qid, 'Non, elle est autosomale (chromosome 11)', 1, 3),
+(@qid, 'Oui, elle est liée aux deux chromosomes sexuels', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La forme normale des globules rouges chez un individu sain est :',
+ 'Les globules rouges normaux ont une forme de disque biconcave. Dans la drépanocytose, ils prennent une forme de faucille.', 'Examen NS4 SVT 2022 - Paléontologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sphérique', 0, 1),
+(@qid, 'En faucille (falciforme)', 0, 2),
+(@qid, 'Disque biconcave', 1, 3),
+(@qid, 'Ovale allongée', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle est la durée de vie moyenne d''un globule rouge ?',
+ 'Un globule rouge vit environ 120 jours. Dans la drépanocytose, cette durée est réduite à 10-20 jours.', 'Examen NS4 SVT 2022 - Paléontologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '30 jours', 0, 1),
+(@qid, '60 jours', 0, 2),
+(@qid, '120 jours', 1, 3),
+(@qid, '200 jours', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le syndrome de Down est aussi appelé :',
+ 'La trisomie 21 est aussi connue sous le nom de syndrome de Down. Elle est due à la présence d''un chromosome 21 surnuméraire.', 'Examen NS4 SVT 2022 - Glucogène', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Trisomie 18', 0, 1),
+(@qid, 'Trisomie 21', 1, 2),
+(@qid, 'Monosomie X', 0, 3),
+(@qid, 'Syndrome de Turner', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le caryotype d''une femme atteinte du syndrome de Down est :',
+ '47, XX + 21 : la personne possède 47 chromosomes avec trois chromosomes 21.', 'Examen NS4 SVT 2022 - Glucogène', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '46, XX', 0, 1),
+(@qid, '47, XX + 21', 1, 2),
+(@qid, '47, XY + 21', 0, 3),
+(@qid, '45, XO', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Pourquoi la trisomie 21 est-elle dite autosomale ?',
+ 'Elle est autosomale car le chromosome en excès (chromosome 21) est un autosome, c''est-à-dire un chromosome non sexuel.', 'Examen NS4 SVT 2022 - Glucogène', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle touche uniquement les femmes', 0, 1),
+(@qid, 'Le chromosome en excès est un chromosome sexuel', 0, 2),
+(@qid, 'Le chromosome en excès (chr 21) est un autosome', 1, 3),
+(@qid, 'Elle n''affecte pas le caryotype', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'L''âge de la mère est-il un facteur de risque pour la trisomie 21 ?',
+ 'Oui, le risque de trisomie 21 augmente significativement avec l''âge de la mère, surtout après 35 ans, en raison du vieillissement ovocytaire.', 'Examen NS4 SVT 2022 - Glucogène', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, l''âge maternel n''a aucune influence', 0, 1),
+(@qid, 'Oui, le risque augmente avec l''âge maternel (surtout après 35 ans)', 1, 2),
+(@qid, 'Seul l''âge du père compte', 0, 3),
+(@qid, 'Le risque diminue avec l''âge maternel', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Parmi les propositions suivantes, laquelle est une anomalie chromosomique de nombre concernant les gonosomes ?',
+ 'Le syndrome de Klinefelter (47, XXY) et le syndrome de Turner (45, X0) sont des anomalies numériques des chromosomes sexuels (gonosomes).', 'Examen NS4 SVT 2022 - Glucogène', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Trisomie 21', 0, 1),
+(@qid, 'Syndrome de Klinefelter (47, XXY)', 1, 2),
+(@qid, 'Trisomie 18', 0, 3),
+(@qid, 'Syndrome du cri du chat', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le caryotype d''un homme atteint du syndrome de Klinefelter est :',
+ 'Le syndrome de Klinefelter se caractérise par 47 chromosomes avec deux chromosomes X et un chromosome Y : 47, XXY.', 'Examen NS4 SVT 2022 - Microbiologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '46, XY', 0, 1),
+(@qid, '45, XO', 0, 2),
+(@qid, '47, XXY', 1, 3),
+(@qid, '47, XYY', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le daltonisme est une maladie :',
+ 'Le daltonisme est récessif et lié au chromosome X (gonosomal). Le gène muté est porté sur le chromosome X.', 'Examen NS4 SVT 2022 - Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Autosomale dominante', 0, 1),
+(@qid, 'Autosomale récessive', 0, 2),
+(@qid, 'Gonosomale récessive liée au chromosome X', 1, 3),
+(@qid, 'Gonosomale liée au chromosome Y', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Pourquoi un père daltonien ne transmet-il jamais cette tare à ses fils ?',
+ 'Le père daltonien (X^d Y) transmet son X^d à ses filles et son Y à ses fils. Les fils reçoivent donc le Y du père et ne peuvent pas hériter du gène du daltonisme par lui.', 'Examen NS4 SVT 2022 - Physiologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Parce que le daltonisme ne touche pas les hommes', 0, 1),
+(@qid, 'Parce que le père transmet son chromosome Y (et non X) à ses fils', 1, 2),
+(@qid, 'Parce que le gène est sur le chromosome Y', 0, 3),
+(@qid, 'Parce que le daltonisme est récessif chez l''homme', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le gène responsable de la myopathie de Duchenne est situé sur :',
+ 'La myopathie de Duchenne est une maladie récessive liée au chromosome X. Le gène de la dystrophine est sur le chromosome X.', 'Examen NS4 SVT 2022 - Histologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le chromosome 1', 0, 1),
+(@qid, 'Le chromosome Y', 0, 2),
+(@qid, 'Le chromosome X', 1, 3),
+(@qid, 'Le chromosome 21', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Une femme conductrice de la myopathie possède le génotype :',
+ 'Une femme conductrice (vectrice) est hétérozygote pour le gène de la myopathie : X^M X^m. Elle ne manifeste pas la maladie mais peut la transmettre.', 'Examen NS4 SVT 2022 - Histologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'X^m X^m (homozygote malade)', 0, 1),
+(@qid, 'X^M X^M (homozygote saine)', 0, 2),
+(@qid, 'X^M X^m (hétérozygote conductrice)', 1, 3),
+(@qid, 'X^m Y (impossible pour une femme)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le syndrome du cri du chat est causé par :',
+ 'Le syndrome du cri du chat (5p-) est dû à une délétion du bras court du chromosome 5. C''est une anomalie de structure, non de nombre.', 'Examen NS4 SVT 2022 - Morphologie_B', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une anomalie de nombre (trisomie)', 0, 1),
+(@qid, 'Une délétion du bras court du chromosome 5 (anomalie de structure)', 1, 2),
+(@qid, 'Une mutation ponctuelle sur le chromosome X', 0, 3),
+(@qid, 'Une translocation entre chromosomes 5 et 21', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce que le crossing-over ?',
+ 'Le crossing-over est un échange de fragments entre deux chromatides non-sœurs de chromosomes homologues, survenant pendant la méiose I (prophase I). Il augmente la variabilité génétique.', 'Examen NS4 SVT 2022 - Glucogène', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La duplication de l''ADN avant la mitose', 0, 1),
+(@qid, 'Un échange de fragments entre chromatides non-sœurs de chromosomes homologues', 1, 2),
+(@qid, 'La séparation des chromosomes homologues en méiose II', 0, 3),
+(@qid, 'La transcription de l''ARNm à partir de l''ADN', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''un individu homozygote ?',
+ 'Un individu homozygote possède deux allèles identiques pour un gène donné (AA ou aa). Un hétérozygote a deux allèles différents (Aa).', 'Examen NS4 SVT 2022 - Histologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Qui possède deux allèles différents pour un gène', 0, 1),
+(@qid, 'Qui possède deux allèles identiques pour un gène', 1, 2),
+(@qid, 'Qui est porteur d''une maladie génétique', 0, 3),
+(@qid, 'Qui a subi une mutation génétique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''appelle-t-on allèles ?',
+ 'Les allèles sont les différentes formes que peut prendre un même gène. Ils occupent le même locus sur les chromosomes homologues.', 'Examen NS4 SVT 2022 - Zoologie/Vitamines', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les deux brins d''une molécule d''ADN', 0, 1),
+(@qid, 'Les différentes formes d''un même gène sur les chromosomes homologues', 1, 2),
+(@qid, 'Les gènes situés sur des chromosomes différents', 0, 3),
+(@qid, 'Les protéines codées par un même gène', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quand dit-on qu''un caractère est récessif ?',
+ 'Un caractère est récessif lorsqu''il ne s''exprime phénotypiquement que chez les individus homozygotes pour cet allèle (aa). Il est masqué chez les hétérozygotes (Aa).', 'Examen NS4 SVT 2022 - Histologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Quand il s''exprime chez tous les individus qui le possèdent', 0, 1),
+(@qid, 'Quand il s''exprime seulement chez les individus homozygotes', 1, 2),
+(@qid, 'Quand il est lié au chromosome X', 0, 3),
+(@qid, 'Quand il est présent chez les deux parents', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Dans un croisement entre deux variétés de lignée pure donnant des hybrides uniformes en F1, quelle loi de Mendel est vérifiée ?',
+ 'La 1ère loi de Mendel (loi d''uniformité des hybrides de la 1ère génération) : tous les hybrides F1 issus du croisement de deux lignées pures sont phénotypiquement identiques.', 'Examen NS4 SVT 2022 - Morphologie_B', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '3ème loi (ségrégation indépendante)', 0, 1),
+(@qid, '1ère loi (uniformité des hybrides de F1)', 1, 2),
+(@qid, 'Loi de codominance', 0, 3),
+(@qid, '2ème loi (disjonction des allèles)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Lors d''un croisement entre deux haricots géants et nains (lignées pures), on obtient uniquement des haricots nains en F1. Lequel est dominant ?',
+ 'Si la F1 ne donne que des haricots nains alors que les parents étaient l''un géant, l''autre nain, c''est le caractère nain qui est dominant.', 'Examen NS4 SVT 2022 - Morphologie_B', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le caractère géant est dominant', 0, 1),
+(@qid, 'Les deux caractères sont codominants', 0, 2),
+(@qid, 'Le caractère nain est dominant', 1, 3),
+(@qid, 'Il y a dominance intermédiaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Dans quel cas fait-on appel au test cross (croisement test) ?',
+ 'Le test cross est utilisé pour déterminer le génotype d''un individu au phénotype dominant mais dont on ne sait pas s''il est homozygote (AA) ou hétérozygote (Aa). On le croise avec un individu homozygote récessif (aa).', 'Examen NS4 SVT 2022 - Morphologie_B', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pour obtenir des individus de lignée pure', 0, 1),
+(@qid, 'Pour déterminer si un individu dominant est homo- ou hétérozygote', 1, 2),
+(@qid, 'Pour étudier la transmission liée au sexe', 0, 3),
+(@qid, 'Pour créer des OGM en laboratoire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Lors d''un croisement de deux individus F1 hétérozygotes (Aa x Aa), le rapport phénotypique attendu en F2 est :',
+ 'Le rapport 3/4 dominant : 1/4 récessif est attendu en F2, ce qui correspond à une proportion de 3 : 1 en phénotype.', 'Programme NS4 - Génétique mendélienne', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1/2 dominant : 1/2 récessif', 0, 1),
+(@qid, '3/4 dominant : 1/4 récessif', 1, 2),
+(@qid, 'Tous dominants', 0, 3),
+(@qid, '1/4 dominant : 3/4 récessif', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''une mutation somatique ?',
+ 'Une mutation somatique survient dans une cellule somatique (non reproductrice). Elle n''est pas transmise à la descendance mais peut se propager aux cellules filles par mitose.', 'Examen NS4 SVT 2022 - Paléontologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une mutation qui affecte les cellules reproductrices', 0, 1),
+(@qid, 'Une mutation transmissible à la descendance', 0, 2),
+(@qid, 'Une mutation affectant les cellules du corps non reproductrices', 1, 3),
+(@qid, 'Une mutation survenant uniquement dans le noyau', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'L''albinisme est une maladie :',
+ 'L''albinisme est autosomale récessive : le gène affecté est sur un autosome. L''individu atteint est homozygote récessif. Les parents à peau normale peuvent être conducteurs.', 'Examen NS4 SVT 2022 - Neurone', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Autosomale dominante', 0, 1),
+(@qid, 'Autosomale récessive', 1, 2),
+(@qid, 'Liée au chromosome X', 0, 3),
+(@qid, 'Liée au chromosome Y', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La mélanine est la substance qui, au niveau de l''épiderme, intervient dans la protection naturelle contre les UV. Elle est produite par :',
+ 'La mélanine est produite par les mélanocytes, cellules situées dans la couche basale de l''épiderme.', 'Examen NS4 SVT 2022 - Neurone', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les kératinocytes', 0, 1),
+(@qid, 'Les mélanocytes', 1, 2),
+(@qid, 'Les fibroblastes', 0, 3),
+(@qid, 'Les lymphocytes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Dans un croisement de haricots rouges et haricots blancs (lignées pures), on obtient des haricots roses en F1. Ce résultat indique :',
+ 'L''obtention d''un phénotype intermédiaire en F1 indique une dominance intermédiaire (codominance partielle), où aucun des deux allèles n''est complètement dominant sur l''autre.', 'Examen NS4 SVT 2022 - Neurone', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le rouge est dominant sur le blanc', 0, 1),
+(@qid, 'Le blanc est dominant sur le rouge', 0, 2),
+(@qid, 'Il y a dominance intermédiaire (codominance partielle)', 1, 3),
+(@qid, 'Les deux couleurs sont indépendantes', 0, 4);
+
+-- ============================================================
+-- SECTION 2 : BIOLOGIE MOLÉCULAIRE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle enzyme est responsable de la transcription de l''ADN en ARN ?',
+ 'L''ARN polymérase est l''enzyme qui catalyse la synthèse de l''ARNm à partir du brin matrice de l''ADN lors de la transcription.', 'Examen NS4 SVT 2022 - Glucogène', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ADN polymérase', 0, 1),
+(@qid, 'ARN polymérase', 1, 2),
+(@qid, 'Hélicase', 0, 3),
+(@qid, 'Ligase', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les bases azotées de l''ADN sont appariées selon la règle de Chargaff. Quels sont les couples de bases complémentaires ?',
+ 'Dans l''ADN : Adénine (A) s''apparie avec Thymine (T), et Guanine (G) s''apparie avec Cytosine (C). Dans l''ARN, la Thymine est remplacée par l''Uracile.', 'Examen NS4 SVT 2022 - Histologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'A-C et G-T', 0, 1),
+(@qid, 'A-T et G-C', 1, 2),
+(@qid, 'A-G et T-C', 0, 3),
+(@qid, 'A-U et G-C', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les bases azotées de l''ARN ribonucléique (ARNr) sont :',
+ 'L''ARN contient 4 bases azotées : Adénine (A), Uracile (U), Guanine (G) et Cytosine (C). La Thymine est spécifique à l''ADN et remplacée par l''Uracile dans l''ARN.', 'Examen NS4 SVT 2022 - Microbiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'A, T, G, C', 0, 1),
+(@qid, 'A, U, G, C', 1, 2),
+(@qid, 'A, T, U, C', 0, 3),
+(@qid, 'A, G, C seulement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''appelle-t-on transcription ?',
+ 'La transcription est le processus par lequel l''information génétique portée par l''ADN est copiée en ARNm (ARN messager) dans le noyau cellulaire.', 'Examen NS4 SVT 2022 - Paléontologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La synthèse d''une protéine à partir de l''ARNm', 0, 1),
+(@qid, 'La duplication de l''ADN avant la division cellulaire', 0, 2),
+(@qid, 'La synthèse d''ARNm à partir de l''ADN dans le noyau', 1, 3),
+(@qid, 'Le transport des acides aminés par l''ARNt', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel est le rôle de l''ARNm (ARN messager) ?',
+ 'L''ARNm transporte l''information génétique du noyau vers les ribosomes dans le cytoplasme, où elle sera traduite en protéines.', 'Examen NS4 SVT 2022 - Morphologie_B', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Transporter les acides aminés vers les ribosomes', 0, 1),
+(@qid, 'Former la structure des ribosomes', 0, 2),
+(@qid, 'Transporter l''information génétique du noyau aux ribosomes pour la traduction', 1, 3),
+(@qid, 'Répliquer l''ADN lors de la division cellulaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les acteurs de la traduction sont :',
+ 'La traduction nécessite : les ribosomes (lieu de synthèse), l''ARNm (matrice), les ARNt (transportent les acides aminés) et les enzymes (aminoacyl-ARNt synthétases).', 'Examen NS4 SVT 2022 - Zoologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'ADN polymérase, noyau, chromosomes', 0, 1),
+(@qid, 'Ribosomes, ARNm, ARNt et acides aminés', 1, 2),
+(@qid, 'ARN polymérase, ADN, noyau', 0, 3),
+(@qid, 'Mitochondries, ADN, ARNm', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''un OGM (Organisme Génétiquement Modifié) ?',
+ 'Un OGM est un organisme dont le génome a été modifié par les techniques de génie génétique, notamment par l''introduction d''un ou plusieurs gènes exogènes.', 'Examen NS4 SVT 2022 - Histologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un organisme né par reproduction asexuée', 0, 1),
+(@qid, 'Un organisme dont le génome a été modifié par génie génétique', 1, 2),
+(@qid, 'Un organisme qui présente une mutation naturelle', 0, 3),
+(@qid, 'Un organisme hybride issu de croisement entre espèces proches', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'En quoi consiste la transgénèse ?',
+ 'La transgénèse consiste à introduire un gène étranger (transgène) dans le génome d''un organisme receveur, lui conférant de nouvelles caractéristiques héréditaires.', 'Examen NS4 SVT 2022 - Physiologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La délétion de gènes dans un génome', 0, 1),
+(@qid, 'L''introduction d''un gène étranger (transgène) dans le génome d''un organisme', 1, 2),
+(@qid, 'Le croisement entre deux espèces différentes', 0, 3),
+(@qid, 'La duplication d''un chromosome entier', 0, 4);
+
+-- ============================================================
+-- SECTION 3 : CELLULE - HISTOLOGIE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel organite est responsable de la digestion intracellulaire ?',
+ 'Les lysosomes contiennent des enzymes hydrolytiques permettant la digestion intracellulaire des macromolécules et des organites usés.', 'Examen NS4 SVT 2022 - Histologie/Microbiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Mitochondrie', 0, 1),
+(@qid, 'Ribosome', 0, 2),
+(@qid, 'Lysosome', 1, 3),
+(@qid, 'Vacuole', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel organite est responsable des oxydations cellulaires (respiration cellulaire) ?',
+ 'Les mitochondries sont le siège des réactions d''oxydation cellulaire (cycle de Krebs, phosphorylation oxydative) permettant la production d''ATP.', 'Examen NS4 SVT 2022 - Zoologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Lysosome', 0, 1),
+(@qid, 'Chloroplaste', 0, 2),
+(@qid, 'Mitochondrie', 1, 3),
+(@qid, 'Appareil de Golgi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Un eucaryote est un organisme :',
+ 'Un eucaryote est un organisme dont les cellules possèdent un noyau véritable délimité par une membrane nucléaire. Cela s''oppose aux procaryotes (bactéries) sans noyau membranaire.', 'Examen NS4 SVT 2022 - Histologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sans noyau défini dans ses cellules', 0, 1),
+(@qid, 'Dont les cellules ont un noyau véritable délimité par une membrane', 1, 2),
+(@qid, 'Qui se reproduit uniquement de façon asexuée', 0, 3),
+(@qid, 'Qui possède une paroi cellulaire rigide', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel est le caryotype d''une cellule humaine issue de la spermatogenèse (spermatozoïde) ?',
+ 'Les spermatozoïdes sont des cellules haploïdes (n=23 chromosomes) issues de la méiose. Leur caryotype est soit 23, X soit 23, Y.', 'Examen NS4 SVT 2022 - Vitamines', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '46, XY', 0, 1),
+(@qid, '46, XX', 0, 2),
+(@qid, '23, X ou 23, Y', 1, 3),
+(@qid, '47, XYY', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le caryotype d''une gonie humaine (cellule germinale diploïde) est :',
+ 'Les gonies sont diploïdes : 46 chromosomes chez l''homme (46, XY) et chez la femme (46, XX). Elles sont à l''origine des gamètes après méiose.', 'Examen NS4 SVT 2022 - Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '23 chromosomes', 0, 1),
+(@qid, '46 chromosomes (46, XX ou 46, XY)', 1, 2),
+(@qid, '47 chromosomes', 0, 3),
+(@qid, '92 chromosomes', 0, 4);
+
+-- ============================================================
+-- SECTION 4 : MICROBIOLOGIE - VIROLOGIE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''un bactériophage ?',
+ 'Un bactériophage est un virus qui infecte et se multiplie dans les bactéries. Il est aussi appelé phage.', 'Examen NS4 SVT 2022 - Glucogène', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une bactérie qui détruit les virus', 0, 1),
+(@qid, 'Un virus qui infecte les bactéries', 1, 2),
+(@qid, 'Un antibiotique produit par les bactéries', 0, 3),
+(@qid, 'Une enzyme dégradant les bactéries', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les virus peuvent-ils se multiplier en dehors des cellules hôtes ?',
+ 'Non, les virus sont des parasites intracellulaires obligatoires. Ils ne possèdent pas les enzymes nécessaires à leur propre réplication ; ils ont besoin de la machinerie cellulaire d''une cellule hôte.', 'Examen NS4 SVT 2022 - Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, dans des milieux nutritifs appropriés', 0, 1),
+(@qid, 'Non, ils sont des parasites intracellulaires obligatoires', 1, 2),
+(@qid, 'Oui, comme les bactéries', 0, 3),
+(@qid, 'Oui, mais uniquement à basse température', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''appelle-t-on rétrovirus ?',
+ 'Un rétrovirus est un virus à ARN qui possède une enzyme (transcriptase inverse) permettant de transcrire son ARN en ADN. Le VIH est le rétrovirus le plus connu.', 'Examen NS4 SVT 2022 - Zoologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un virus qui infecte les bactéries', 0, 1),
+(@qid, 'Un virus à ARN capable de transcrire son ARN en ADN (transcriptase inverse)', 1, 2),
+(@qid, 'Un virus qui ne peut infecter que les vertébrés', 0, 3),
+(@qid, 'Un virus à ADN double brin', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle bactérie se présente au microscope en forme de grappe ou en amas ?',
+ 'Le Staphylocoque (Staphylococcus) se présente en amas ou en grappes de raisins. Le Streptocoque se présente en chaînes.', 'Examen NS4 SVT 2022 - Neurone', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Streptocoque', 0, 1),
+(@qid, 'Staphylocoque', 1, 2),
+(@qid, 'Pneumocoque', 0, 3),
+(@qid, 'Méningocoque', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Parmi les bactéries suivantes, laquelle est de forme allongée (bacille) ?',
+ 'Les bacilles sont des bactéries de forme allongée (bâtonnet) : Bacillus anthracis, Mycobacterium tuberculosis, Escherichia coli, Clostridium tetani…', 'Examen NS4 SVT 2022 - Zoologie/Morphologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Staphylococcus aureus', 0, 1),
+(@qid, 'Streptococcus pneumoniae', 0, 2),
+(@qid, 'Mycobacterium tuberculosis (bacille)', 1, 3),
+(@qid, 'Neisseria gonorrhoeae', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle condition est obligatoire pour que les virus se multiplient ?',
+ 'Les virus ne peuvent se multiplier qu''à l''intérieur d''une cellule vivante (cellule hôte). Ils utilisent la machinerie cellulaire de l''hôte pour leur réplication.', 'Examen NS4 SVT 2022 - Zoologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Présence d''un milieu nutritif riche', 0, 1),
+(@qid, 'Être à l''intérieur d''une cellule hôte vivante', 1, 2),
+(@qid, 'Présence d''oxygène', 0, 3),
+(@qid, 'Température supérieure à 37°C', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Sur quel chromosome retrouve-t-on le gène responsable de la drépanocytose ?',
+ 'Le gène de la bêta-globine (HBB) responsable de la drépanocytose est situé sur le chromosome 11 (autosome).', 'Examen NS4 SVT 2022 - Physiologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Chromosome X', 0, 1),
+(@qid, 'Chromosome Y', 0, 2),
+(@qid, 'Chromosome 11', 1, 3),
+(@qid, 'Chromosome 21', 0, 4);
+
+-- ============================================================
+-- SECTION 5 : VITAMINES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelles sont les deux grandes classes de vitamines ?',
+ 'Les vitamines sont classées en : vitamines liposolubles (A, D, E, K) solubles dans les lipides, et vitamines hydrosolubles (C, groupe B) solubles dans l''eau.', 'Examen NS4 SVT 2022 - Microbiologie/Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamines organiques et vitamines minérales', 0, 1),
+(@qid, 'Vitamines liposolubles et vitamines hydrosolubles', 1, 2),
+(@qid, 'Vitamines essentielles et vitamines non essentielles', 0, 3),
+(@qid, 'Vitamines animales et vitamines végétales', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''une provitamine ?',
+ 'Une provitamine est un précurseur d''une vitamine, c''est-à-dire une substance qui, sous l''action de certains facteurs (lumière, enzymes), se transforme en vitamine active. Ex : le bêta-carotène (provitamine A).', 'Examen NS4 SVT 2022 - Microbiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une vitamine synthétique produite en laboratoire', 0, 1),
+(@qid, 'Un précurseur qui se transforme en vitamine active dans l''organisme', 1, 2),
+(@qid, 'Une vitamine en excès dans l''organisme', 0, 3),
+(@qid, 'Une vitamine dégradée par la chaleur', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle vitamine est synthétisée par la flore intestinale ?',
+ 'La vitamine K est synthétisée par les bactéries de la flore intestinale. Elle joue un rôle dans la coagulation sanguine.', 'Examen NS4 SVT 2022 - Microbiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamine C', 0, 1),
+(@qid, 'Vitamine D', 0, 2),
+(@qid, 'Vitamine K', 1, 3),
+(@qid, 'Vitamine E', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel autre nom est donné à la vitamine B9 ?',
+ 'La vitamine B9 est aussi appelée acide folique ou folate. Elle est indispensable à la division cellulaire et à la prévention des malformations du tube neural.', 'Examen NS4 SVT 2022 - Microbiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cyanocobalamine', 0, 1),
+(@qid, 'Acide folique', 1, 2),
+(@qid, 'Niacine', 0, 3),
+(@qid, 'Thiamine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La vitamine B12 est également connue sous le nom de :',
+ 'La vitamine B12 est la cyanocobalamine. Elle est nécessaire à la formation des globules rouges et au fonctionnement du système nerveux.', 'Examen NS4 SVT 2022 - Morphologie_B', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acide folique', 0, 1),
+(@qid, 'Cyanocobalamine', 1, 2),
+(@qid, 'Riboflavine', 0, 3),
+(@qid, 'Calciférol', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle avitaminose est causée par une carence en vitamine C ?',
+ 'La carence en vitamine C provoque le scorbut, caractérisé par des hémorragies gingivales, la fragilité des vaisseaux sanguins et la fatigue.', 'Examen NS4 SVT 2022 - Vitamines', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Rachitisme', 0, 1),
+(@qid, 'Scorbut', 1, 2),
+(@qid, 'Béribéri', 0, 3),
+(@qid, 'Pellagre', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La xérophtalmie est causée par une carence en :',
+ 'La xérophtalmie (sécheresse oculaire pouvant mener à la cécité) est causée par une carence en vitamine A (rétinol).', 'Examen NS4 SVT 2022 - Vitamines', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamine B12', 0, 1),
+(@qid, 'Vitamine C', 0, 2),
+(@qid, 'Vitamine A', 1, 3),
+(@qid, 'Vitamine D', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le béribéri est provoqué par une carence en :',
+ 'Le béribéri est une maladie due à la carence en vitamine B1 (thiamine). Elle se manifeste par des troubles nerveux et cardiaques.', 'Examen NS4 SVT 2022 - Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamine B6', 0, 1),
+(@qid, 'Vitamine B1 (thiamine)', 1, 2),
+(@qid, 'Vitamine B3 (niacine)', 0, 3),
+(@qid, 'Vitamine B9', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La pellagre est causée par une carence en :',
+ 'La pellagre est due à la carence en vitamine B3 (niacine ou PP). Elle se manifeste par les 3 D : Dermatite, Diarrhée, Démence.', 'Examen NS4 SVT 2022 - Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamine B1', 0, 1),
+(@qid, 'Vitamine B3 (niacine)', 1, 2),
+(@qid, 'Vitamine B12', 0, 3),
+(@qid, 'Vitamine C', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Une carence en vitamine D chez l''enfant provoque :',
+ 'La carence en vitamine D chez l''enfant provoque le rachitisme : ramollissement et déformation des os par défaut de minéralisation.', 'Examen NS4 SVT 2022 - Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le scorbut', 0, 1),
+(@qid, 'Le rachitisme', 1, 2),
+(@qid, 'La pellagre', 0, 3),
+(@qid, 'Le béribéri', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Une carence en vitamine D chez l''adulte provoque :',
+ 'Chez l''adulte, la carence en vitamine D provoque l''ostéomalacie (ramollissement des os) et contribue à l''ostéoporose.', 'Examen NS4 SVT 2022 - Physiologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le scorbut', 0, 1),
+(@qid, 'L''ostéomalacie', 1, 2),
+(@qid, 'La pellagre', 0, 3),
+(@qid, 'Le béribéri', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La vitamine ajoutée à la B12 pour combattre l''anémie de Biermer est :',
+ 'L''anémie de Biermer (anémie pernicieuse) est traitée par l''association vitamine B12 + acide folique (B9). Le facteur intrinsèque est nécessaire à l''absorption de la B12.', 'Examen NS4 SVT 2022 - Physiologie', 4);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamine B1', 0, 1),
+(@qid, 'Vitamine B9 (acide folique)', 1, 2),
+(@qid, 'Vitamine C', 0, 3),
+(@qid, 'Vitamine D', 0, 4);
+
+-- ============================================================
+-- SECTION 6 : ENDOCRINOLOGIE - HORMONES
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'L''hypophyse est une glande :',
+ 'L''hypophyse (ou glande pituitaire) est une petite glande endocrine située à la base du cerveau. Elle est souvent appelée la "glande maîtresse" car elle contrôle de nombreuses autres glandes endocrines.', 'Examen NS4 SVT 2022 - Histologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Digestive', 0, 1),
+(@qid, 'Endocrine située à la base du cerveau', 1, 2),
+(@qid, 'Exocrine située dans l''abdomen', 0, 3),
+(@qid, 'Amphicrine située dans le pancréas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''une stimuline ?',
+ 'Les stimulines sont des hormones hypophysaires (produites par l''adénohypophyse) qui stimulent d''autres glandes endocrines à produire leurs propres hormones. Exemples : TSH, FSH, LH, ACTH.', 'Examen NS4 SVT 2022 - Glucogène/Histologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hormone produite par la thyroïde pour stimuler le métabolisme', 0, 1),
+(@qid, 'Hormone hypophysaire qui stimule une autre glande endocrine', 1, 2),
+(@qid, 'Hormone produite par les surrénales en réponse au stress', 0, 3),
+(@qid, 'Neurotransmetteur du système nerveux sympathique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle est la différence entre l''adénohypophyse et la neurohypophyse ?',
+ 'L''adénohypophyse (lobe antérieur) est un tissu glandulaire qui produit des hormones comme les stimulines, la GH, la prolactine. La neurohypophyse (lobe postérieur) est du tissu nerveux qui libère l''ADH et l''ocytocine, synthétisées par l''hypothalamus.', 'Examen NS4 SVT 2022 - Histologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''adénohypophyse est postérieure ; la neurohypophyse est antérieure', 0, 1),
+(@qid, 'L''adénohypophyse est un tissu glandulaire (sécrétant stimulines, GH) ; la neurohypophyse est du tissu nerveux (libérant ADH, ocytocine)', 1, 2),
+(@qid, 'Elles sont identiques, le nom change selon les auteurs', 0, 3),
+(@qid, 'L''adénohypophyse régule la pression artérielle et la neurohypophyse régule la glycémie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''une neurohormone ? En donner un exemple.',
+ 'Une neurohormone est une substance chimique sécrétée par des cellules nerveuses (neurones) et libérée dans le sang pour agir à distance. Exemples : ADH (hormone antidiurétique), ocytocine, adrénaline.', 'Examen NS4 SVT 2022 - Histologie/Neurone', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Hormone sécrétée par les glandes endocrines classiques ; ex. : insuline', 0, 1),
+(@qid, 'Substance chimique sécrétée par des neurones et libérée dans le sang ; ex. : ADH', 1, 2),
+(@qid, 'Hormone qui régule l''activité nerveuse ; ex. : dopamine', 0, 3),
+(@qid, 'Enzyme digestive produite par le pancréas ; ex. : lipase', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'L''ADH (hormone antidiurétique) a-t-elle pour origine la neurohypophyse ?',
+ 'L''ADH est synthétisée par l''hypothalamus mais stockée et libérée par la neurohypophyse. Donc sa libération se fait au niveau de la neurohypophyse.', 'Examen NS4 SVT 2022 - Histologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Non, elle est produite par les reins', 0, 1),
+(@qid, 'Non, elle est produite par l''adénohypophyse', 0, 2),
+(@qid, 'Oui, elle est libérée par la neurohypophyse (synthétisée par l''hypothalamus)', 1, 3),
+(@qid, 'Non, elle est produite par les surrénales', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le pancréas est dit glande amphicrine (mixte) car :',
+ 'Le pancréas est amphicrine car il possède à la fois une fonction exocrine (sécrétion du suc pancréatique dans le duodénum) et une fonction endocrine (sécrétion d''insuline et de glucagon dans le sang par les îlots de Langerhans).', 'Examen NS4 SVT 2022 - Vitamines/Microbiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il sécrète deux types de sucs digestifs', 0, 1),
+(@qid, 'Il possède à la fois une fonction exocrine (suc pancréatique) et endocrine (insuline, glucagon)', 1, 2),
+(@qid, 'Il agit à la fois sur la digestion et sur la respiration', 0, 3),
+(@qid, 'Il est situé entre l''estomac et l''intestin', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel est le nom des îlots de cellules endocrines du pancréas ?',
+ 'Les cellules endocrines du pancréas sont regroupées en îlots appelés îlots de Langerhans. Ils comprennent les cellules alpha (glucagon), bêta (insuline) et delta (somatostatine).', 'Examen NS4 SVT 2022 - Microbiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Îlots de Cajal', 0, 1),
+(@qid, 'Îlots de Langerhans', 1, 2),
+(@qid, 'Acini pancréatiques', 0, 3),
+(@qid, 'Corpuscules de Malpighi', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle cellule des îlots de Langerhans sécrète l''insuline ?',
+ 'Les cellules bêta (β) des îlots de Langerhans sécrètent l''insuline, hormone hypoglycémiante qui favorise l''entrée du glucose dans les cellules et sa mise en réserve sous forme de glycogène.', 'Examen NS4 SVT 2022 - Microbiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cellules alpha (α)', 0, 1),
+(@qid, 'Cellules bêta (β)', 1, 2),
+(@qid, 'Cellules delta (δ)', 0, 3),
+(@qid, 'Cellules acineuses', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle cellule des îlots de Langerhans sécrète le glucagon ?',
+ 'Les cellules alpha (α) sécrètent le glucagon, hormone hyperglycémiante qui favorise la glycogénolyse hépatique pour augmenter la glycémie.', 'Examen NS4 SVT 2022 - Microbiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cellules bêta (β)', 0, 1),
+(@qid, 'Cellules alpha (α)', 1, 2),
+(@qid, 'Cellules delta (δ)', 0, 3),
+(@qid, 'Cellules F (PP)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le diabète de type 1 se distingue du diabète de type 2 en ce que :',
+ 'Le diabète de type 1 (insulino-dépendant) est dû à la destruction auto-immune des cellules bêta (absence d''insuline). Le type 2 est caractérisé par une résistance à l''insuline et une production insuffisante d''insuline (non auto-immune).', 'Examen NS4 SVT 2022 - Microbiologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le type 1 touche les adultes obèses ; le type 2 touche les enfants', 0, 1),
+(@qid, 'Le type 1 est dû à la destruction des cellules bêta (absence d''insuline) ; le type 2 est dû à une résistance à l''insuline', 1, 2),
+(@qid, 'Le type 1 se soigne par régime ; le type 2 nécessite des injections d''insuline', 0, 3),
+(@qid, 'Il n''y a pas de différence causale', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les sécrétions thyroïdiennes sont :',
+ 'La thyroïde produit la thyroxine (T4) et la triiodothyronine (T3), qui régulent le métabolisme, et la calcitonine, qui régule la calcémie.', 'Examen NS4 SVT 2022 - Morphologie_B', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Insuline et glucagon', 0, 1),
+(@qid, 'Thyroxine (T4), triiodothyronine (T3) et calcitonine', 1, 2),
+(@qid, 'Adrénaline et noradrénaline', 0, 3),
+(@qid, 'Cortisol et aldostérone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quels sont deux signes retrouvés en cas d''hyperthyroïdie ?',
+ 'L''hyperthyroïdie se manifeste par : tachycardie, perte de poids, nervosité/anxiété, hypersudation, tremblements, exophtalmie (dans le cas de la maladie de Basedow).', 'Examen NS4 SVT 2022 - Microbiologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Bradycardie et prise de poids', 0, 1),
+(@qid, 'Tachycardie et perte de poids', 1, 2),
+(@qid, 'Hypothermie et somnolence', 0, 3),
+(@qid, 'Peau sèche et constipation', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les hormones qui régulent la calcémie sont :',
+ 'La calcémie est régulée par la calcitonine (thyroïde - hypocalcémiante) et la parathormone PTH (parathyroïdes - hypercalcémiante). La vitamine D joue aussi un rôle important.', 'Examen NS4 SVT 2022 - Vitamines', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Insuline et glucagon', 0, 1),
+(@qid, 'Calcitonine (thyroïde) et parathormone - PTH (parathyroïdes)', 1, 2),
+(@qid, 'Adrénaline et cortisol', 0, 3),
+(@qid, 'Estrogènes et testostérone', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelles sont les deux hormones qui agissent sur la glande mammaire ?',
+ 'La prolactine (adénohypophyse) stimule la production de lait, et l''ocytocine (neurohypophyse) provoque l''éjection du lait lors de la tétée.', 'Examen NS4 SVT 2022 - Histologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'FSH et LH', 0, 1),
+(@qid, 'Prolactine et ocytocine', 1, 2),
+(@qid, 'Estrogènes et progestérone uniquement', 0, 3),
+(@qid, 'GH et TSH', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les rôles de l''hormone ocytocine sont :',
+ 'L''ocytocine stimule les contractions utérines lors de l''accouchement et provoque l''éjection du lait lors de l''allaitement. Elle joue aussi un rôle dans les comportements d''attachement.', 'Examen NS4 SVT 2022 - Physiologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Régule la glycémie et stimule la croissance', 0, 1),
+(@qid, 'Stimule les contractions utérines et provoque l''éjection du lait', 1, 2),
+(@qid, 'Stimule la production des spermatozoïdes', 0, 3),
+(@qid, 'Régule la pression artérielle uniquement', 0, 4);
+
+-- ============================================================
+-- SECTION 7 : SYSTÈME NERVEUX
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''un réflexe inné ?',
+ 'Un réflexe inné (ou réflexe non conditionné) est une réponse automatique, involontaire et non apprise à un stimulus. Il est présent dès la naissance et identique pour tous les individus de l''espèce. Ex : retirer la main d''une flamme, réflexe rotulien.', 'Examen NS4 SVT 2022 - Glucogène', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un réflexe acquis par l''expérience et l''apprentissage', 0, 1),
+(@qid, 'Une réponse automatique, involontaire et innée à un stimulus', 1, 2),
+(@qid, 'Une réponse volontaire du cerveau à un stimulus', 0, 3),
+(@qid, 'Un comportement appris en réponse à un stimulus conditionné', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle est une caractéristique du réflexe conditionné ?',
+ 'Un réflexe conditionné (pavlovien) est acquis par apprentissage/conditionnement. Il résulte de l''association répétée d''un stimulus naturel et d''un stimulus neutre. Il est réversible.', 'Examen NS4 SVT 2022 - Neurone', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il est inné et non modifiable', 0, 1),
+(@qid, 'Il est acquis par conditionnement (apprentissage) et réversible', 1, 2),
+(@qid, 'Il ne passe pas par le système nerveux central', 0, 3),
+(@qid, 'Il est présent dès la naissance', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Comment peut-on diviser le système nerveux ?',
+ 'Le système nerveux se divise en : système nerveux central (SNC = encéphale + moelle épinière) et système nerveux périphérique (SNP = nerfs crâniens et rachidiens). Le SNP comprend le système nerveux somatique et végétatif (autonome).', 'Examen NS4 SVT 2022 - Paléontologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Système nerveux sensitif et système nerveux moteur uniquement', 0, 1),
+(@qid, 'Système nerveux central (SNC) et système nerveux périphérique (SNP)', 1, 2),
+(@qid, 'Système nerveux volontaire et système nerveux cérébral', 0, 3),
+(@qid, 'Système nerveux osseux et système nerveux musculaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La synapse neuromusculaire utilise quel neurotransmetteur ?',
+ 'À la jonction neuromusculaire, le neurotransmetteur libéré est l''acétylcholine. Elle se fixe sur les récepteurs de la membrane musculaire pour déclencher la contraction.', 'Programme NS4 - Système nerveux', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La dopamine', 0, 1),
+(@qid, 'La sérotonine', 0, 2),
+(@qid, 'L''acétylcholine', 1, 3),
+(@qid, 'L''adrénaline', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La structure d''une cellule nerveuse (neurone) comprend :',
+ 'Un neurone comprend : le corps cellulaire (soma) avec le noyau, les dendrites (prolongements récepteurs), et l''axone (prolongement efférent souvent myélinisé) qui se termine par des boutons synaptiques.', 'Examen NS4 SVT 2022 - Paléontologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Noyau, cytoplasme et paroi cellulaire', 0, 1),
+(@qid, 'Corps cellulaire (soma), dendrites et axone', 1, 2),
+(@qid, 'Membrane, flagelle et vacuoles', 0, 3),
+(@qid, 'Ribosome, mitochondrie et chloroplaste', 0, 4);
+
+-- ============================================================
+-- SECTION 8 : IMMUNOLOGIE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''appelle-t-on immunoglobuline ?',
+ 'Les immunoglobulines (Ig) sont des protéines produites par les lymphocytes B (plasmocytes) en réponse à un antigène. Elles sont aussi appelées anticorps et sont spécifiques d''un antigène.', 'Examen NS4 SVT 2022 - Neurone', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des globules blancs qui phagocytent les bactéries', 0, 1),
+(@qid, 'Des protéines (anticorps) produites par les lymphocytes B contre des antigènes', 1, 2),
+(@qid, 'Des globules rouges transportant l''oxygène', 0, 3),
+(@qid, 'Des enzymes digestives du système gastro-intestinal', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les agglutinogènes du système ABO sont portés par :',
+ 'Les agglutinogènes (antigènes A et/ou B) sont portés à la surface des globules rouges (hématies). Les agglutinines (anticorps) correspondants sont dans le plasma.', 'Examen NS4 SVT 2022 - Neurone', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les globules blancs', 0, 1),
+(@qid, 'Les plaquettes sanguines', 0, 2),
+(@qid, 'La surface des globules rouges', 1, 3),
+(@qid, 'Le plasma sanguin', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quels sont les deux agglutinogènes du système ABO ?',
+ 'Les deux agglutinogènes du système ABO sont l''agglutinogène A et l''agglutinogène B. Selon leur présence, on détermine le groupe sanguin (A, B, AB ou O).', 'Examen NS4 SVT 2022 - Neurone', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Agglutinogène C et agglutinogène D', 0, 1),
+(@qid, 'Agglutinogène A et agglutinogène B', 1, 2),
+(@qid, 'Agglutinine alpha et agglutinine bêta', 0, 3),
+(@qid, 'Antigène Rh+ et antigène Rh-', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Deux éléments de défense naturelle de l''organisme sont :',
+ 'Les défenses naturelles comprennent les barrières physiques (peau, muqueuses), les cellules phagocytaires (macrophages, neutrophiles), les protéines du complément, les cellules NK, et les interférons.', 'Examen NS4 SVT 2022 - Zoologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les vaccins et les antibiotiques', 0, 1),
+(@qid, 'La peau (barrière physique) et les macrophages (phagocytose)', 1, 2),
+(@qid, 'Les vitamines et les minéraux', 0, 3),
+(@qid, 'Les hormones et les neurotransmetteurs', 0, 4);
+
+-- ============================================================
+-- SECTION 9 : ANATOMIE ET PHYSIOLOGIE GÉNÉRALE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les cellules du tissu exocrine du pancréas sont appelées :',
+ 'Les cellules acineuses (ou acini pancréatiques) forment le tissu exocrine du pancréas. Elles sécrètent le suc pancréatique contenant des enzymes digestives (amylase, lipase, protéases).', 'Examen NS4 SVT 2022 - Microbiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cellules de Langerhans', 0, 1),
+(@qid, 'Cellules acineuses', 1, 2),
+(@qid, 'Cellules alpha', 0, 3),
+(@qid, 'Hépatocytes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les hormones pancréatiques insuline et glucagon peuvent-elles être libérées simultanément ?',
+ 'Non, l''insuline et le glucagon exercent des effets antagonistes et leur libération est mutuellement exclusive. Quand la glycémie est élevée, l''insuline est libérée par les cellules β ; quand elle est basse, le glucagon est libéré par les cellules α.', 'Examen NS4 SVT 2022 - Microbiologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Oui, elles sont libérées ensemble en permanence', 0, 1),
+(@qid, 'Non, elles sont antagonistes et libérées en alternance selon la glycémie', 1, 2),
+(@qid, 'Oui, mais seulement pendant les repas', 0, 3),
+(@qid, 'Non, car elles proviennent du même type cellulaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Où se trouve l''épicentre d''un séisme ?',
+ 'L''épicentre est le point à la surface terrestre situé à la verticale du foyer (hypocentre), c''est-à-dire l''endroit en surface directement au-dessus du lieu de rupture.', 'Examen NS4 SVT 2022 - Morphologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le lieu dans le plan de faille où se produit réellement le séisme', 0, 1),
+(@qid, 'Le point à la surface terrestre à la verticale du foyer', 1, 2),
+(@qid, 'Le centre de la Terre', 0, 3),
+(@qid, 'La zone de subduction', 0, 4);
+
+-- ============================================================
+-- SECTION 10 : REPRODUCTION ET DEVELOPPEMENT
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Alice est daltonienne. Quel est le génotype de sa mère Rose ?',
+ 'Alice (daltonienne) a le génotype X^d X^d. Elle a reçu un X^d de son père (qui est donc daltonien) et un X^d de sa mère. Rose doit donc être au moins conductrice X^D X^d, voire daltonienne X^d X^d.', 'Examen NS4 SVT 2022 - Paléontologie', 4);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'X^D X^D (saine homozygote)', 0, 1),
+(@qid, 'X^D X^d (conductrice/vectrice)', 1, 2),
+(@qid, 'X^d Y (impossible pour une femme)', 0, 3),
+(@qid, 'X^D Y (homme sain)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le daltonisme se caractérise principalement par :',
+ 'Le daltonisme est une anomalie de la vision des couleurs. La forme la plus courante est la confusion rouge-vert (deutéranopie ou protanopie), due à un déficit de certains cônes rétiniens.', 'Examen NS4 SVT 2022 - Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Une cécité totale (vue nulle)', 0, 1),
+(@qid, 'Une confusion ou absence de perception de certaines couleurs (surtout rouge-vert)', 1, 2),
+(@qid, 'Une myopie sévère', 0, 3),
+(@qid, 'Un déficit en bâtonnets rétiniens', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les chromosomes sexuels sont aussi appelés :',
+ 'Les chromosomes sexuels (X et Y) sont aussi désignés sous le terme hétérochromosomes ou gonosomes. Les chromosomes non sexuels sont les autosomes.', 'Examen NS4 SVT 2022 - Histologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Autosomes', 0, 1),
+(@qid, 'Hétérochromosomes (gonosomes)', 1, 2),
+(@qid, 'Chromosomes homologues', 0, 3),
+(@qid, 'Chromosomes diploïdes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les autosomes se différencient des hétérochromosomes par :',
+ 'Les autosomes (paires 1 à 22 chez l''humain) sont les chromosomes non sexuels, présents en paires identiques chez les deux sexes. Les hétérochromosomes (X et Y) déterminent le sexe.', 'Examen NS4 SVT 2022 - Histologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les autosomes sont plus grands que les hétérochromosomes', 0, 1),
+(@qid, 'Les autosomes ne déterminent pas le sexe ; les hétérochromosomes (X, Y) déterminent le sexe', 1, 2),
+(@qid, 'Les autosomes ne portent pas de gènes', 0, 3),
+(@qid, 'Les autosomes sont présents en nombre impair', 0, 4);
+
+-- ============================================================
+-- SECTION 11 : EVOLUTION - PHYLOGENESE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce que la phylogenèse ?',
+ 'La phylogenèse (ou phylogénie) est l''étude de l''histoire évolutive et des relations de parenté entre les organismes vivants à travers le temps géologique.', 'Examen NS4 SVT 2022 - Vitamines/Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''étude du développement embryonnaire d''un organisme', 0, 1),
+(@qid, 'L''étude de l''histoire évolutive et des relations de parenté entre organismes', 1, 2),
+(@qid, 'La classification morphologique des êtres vivants actuels', 0, 3),
+(@qid, 'L''étude de la reproduction chez les vertébrés', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce que la biodiversité ?',
+ 'La biodiversité désigne la diversité du vivant à tous ses niveaux : diversité des écosystèmes, des espèces (diversité spécifique) et diversité génétique au sein de chaque espèce.', 'Examen NS4 SVT 2022 - Neurone', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La diversité des espèces animales uniquement', 0, 1),
+(@qid, 'La diversité de la vie à tous niveaux : écosystèmes, espèces, gènes', 1, 2),
+(@qid, 'La classification des espèces par ordre alphabétique', 0, 3),
+(@qid, 'Le nombre d''espèces dans un écosystème donné', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''étaient les Australopithèques ?',
+ 'Les Australopithèques sont des hominidés bipèdes fossiles ayant vécu en Afrique il y a environ 4 à 2 millions d''années. Ils constituent un groupe proche des ancêtres du genre Homo.', 'Examen NS4 SVT 2022 - Neurone', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des dinosaures bipèdes de l''ère secondaire', 0, 1),
+(@qid, 'Des primates modernes vivant en Australie', 0, 2),
+(@qid, 'Des hominidés bipèdes fossiles africains, précurseurs du genre Homo', 1, 3),
+(@qid, 'Des mammifères aquatiques de l''ère tertiaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Homo habilis est caractérisé par :',
+ 'Homo habilis (l''Homme habile) est apparu il y a environ 2,8 millions d''années en Afrique. Il est le premier représentant du genre Homo, caractérisé par l''utilisation d''outils en pierre (industrie oldowayenne) et un cerveau plus volumineux que les Australopithèques.', 'Examen NS4 SVT 2022 - Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''utilisation du feu et l''art rupestre', 0, 1),
+(@qid, 'L''utilisation des premiers outils taillés en pierre (Oldowayen) et un cerveau plus grand que l''Australopithèque', 1, 2),
+(@qid, 'La migration hors d''Afrique vers l''Europe', 0, 3),
+(@qid, 'Le langage articulé développé', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La théorie de Darwin sur l''évolution est fondée sur :',
+ 'Darwin a proposé la théorie de la sélection naturelle : les individus ayant des variations avantageuses ont une meilleure survie et reproduction. Ces variations héréditaires favorables sont transmises et s''accumulent dans la population au fil des générations.', 'Examen NS4 SVT 2022 - Zoologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La transmission des caractères acquis (Lamarck)', 0, 1),
+(@qid, 'La sélection naturelle : survie différentielle des individus les mieux adaptés', 1, 2),
+(@qid, 'La création simultanée de toutes les espèces (créationnisme)', 0, 3),
+(@qid, 'Les mutations seules comme moteur de l''évolution', 0, 4);
+
+-- ============================================================
+-- SECTION 12 : GEOLOGIE / STRATIGRAPHIE (BIOLOGIE-GEOLOGIE CONNEXES)
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''un microfossile ?',
+ 'Un microfossile est un fossile de petite taille (généralement < 1 mm) visible seulement au microscope. Exemples : foraminifères, diatomées, conodontes, pollens fossiles.', 'Examen NS4 SVT 2022 - Glucogène', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un fossile de grande taille visible à l''œil nu', 0, 1),
+(@qid, 'Un fossile très petit visible uniquement au microscope', 1, 2),
+(@qid, 'Un fragment de roche volcanique', 0, 3),
+(@qid, 'Un fossile récent de moins de 10 000 ans', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''un fossile de faciès ?',
+ 'Un fossile de faciès est un fossile caractéristique d''un milieu de sédimentation particulier (faciès sédimentaire). Il indique les conditions environnementales de dépôt mais pas forcément l''âge de la roche.', 'Examen NS4 SVT 2022 - Glucogène', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un fossile permettant de dater précisément une roche', 0, 1),
+(@qid, 'Un fossile caractéristique d''un milieu de sédimentation particulier', 1, 2),
+(@qid, 'Un fossile trouvé uniquement dans les roches métamorphiques', 0, 3),
+(@qid, 'Un fossile d''espèce vivant encore aujourd''hui', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Un bon fossile stratigraphique doit :',
+ 'Un bon fossile stratigraphique doit : être abondant, avoir une large répartition géographique (ubiquiste), avoir une courte durée d''existence, être facilement identifiable et avoir une bonne fossilisation.', 'Examen NS4 SVT 2022 - Microbiologie/Morphologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Être rare et avoir une longue durée d''existence', 0, 1),
+(@qid, 'Être abondant, ubiquiste, à courte durée d''existence et facilement identifiable', 1, 2),
+(@qid, 'N''exister que dans un seul continent', 0, 3),
+(@qid, 'Provenir uniquement des roches sédimentaires marines', 0, 4);
+
+-- ============================================================
+-- SECTION 13 : QUESTIONS SUPPLEMENTAIRES - BIOLOGIE GENERALE
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle est la formule chimique de l''azurite (minerai de cuivre) ?',
+ 'L''azurite est un carbonate de cuivre basique de formule Cu₃(CO₃)₂(OH)₂ ou parfois notée 2CuCO₃·Cu(OH)₂. C''est un minéral bleu utilisé comme minerai de cuivre.', 'Examen NS4 SVT 2022 - Microbiologie/Morphologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CuSO₄', 0, 1),
+(@qid, 'Cu₃(CO₃)₂(OH)₂', 1, 2),
+(@qid, 'Cu₂S', 0, 3),
+(@qid, 'CuO', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La blende est le principal minerai de quel métal ?',
+ 'La blende (sphalérite) est un sulfure de zinc (ZnS), principal minerai industriel de zinc.', 'Examen NS4 SVT 2022 - Glucogène', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Plomb', 0, 1),
+(@qid, 'Cuivre', 0, 2),
+(@qid, 'Zinc', 1, 3),
+(@qid, 'Fer', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Dans le cadre de la dihybridie avec dominance totale, le rapport phénotypique observé à la F2 est :',
+ 'En dihybridie avec dominance totale et disjonction indépendante (loi de Mendel), le rapport phénotypique en F2 est 9 : 3 : 3 : 1 (neuf double dominants, trois d''un dominant, trois de l''autre, un double récessif).', 'Examen NS4 SVT 2022 - Zoologie', 4);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '1 : 2 : 1', 0, 1),
+(@qid, '3 : 1', 0, 2),
+(@qid, '9 : 3 : 3 : 1', 1, 3),
+(@qid, '1 : 1 : 1 : 1', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'En dihybridie, combien de types de gamètes produit un hybride F1 (AaBb) en cas de disjonction indépendante ?',
+ 'Un hybride AaBb produit 4 types de gamètes : AB, Ab, aB, ab. La règle générale : 2^n types de gamètes pour n paires de gènes hétérozygotes.', 'Examen NS4 SVT 2022 - Zoologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '2 types de gamètes', 0, 1),
+(@qid, '4 types de gamètes (AB, Ab, aB, ab)', 1, 2),
+(@qid, '8 types de gamètes', 0, 3),
+(@qid, '1 seul type de gamète', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le gène responsable de la couleur des yeux est un exemple de gène :',
+ 'Les gènes qui codent pour des caractères phénotypiques continus ou discontinus sont portés par les autosomes (sauf exceptions liées au sexe). La couleur des yeux est un caractère polygénique complexe.', 'Programme NS4 - Génétique', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Lié au chromosome Y uniquement', 0, 1),
+(@qid, 'Porté par un autosome (polygénique)', 1, 2),
+(@qid, 'Uniquement lié au chromosome X', 0, 3),
+(@qid, 'Mitochondrial uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle est la principale cause de la diversité génétique lors de la méiose ?',
+ 'La diversité génétique lors de la méiose est due à : le crossing-over (brassage intra-chromosomique), la disjonction indépendante des chromosomes homologues (brassage interchromosomique) et la fécondation aléatoire.', 'Programme NS4 - Génétique', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La mitose uniquement', 0, 1),
+(@qid, 'Le crossing-over et la disjonction indépendante des chromosomes', 1, 2),
+(@qid, 'La réplication de l''ADN avant la division', 0, 3),
+(@qid, 'La transcription de nouveaux gènes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel est le nombre diploïde de chromosomes chez l''être humain ?',
+ 'L''être humain possède 46 chromosomes (2n = 46), soit 23 paires de chromosomes homologues : 22 paires d''autosomes et 1 paire de chromosomes sexuels.', 'Programme NS4 - Cytologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '23 chromosomes', 0, 1),
+(@qid, '46 chromosomes', 1, 2),
+(@qid, '48 chromosomes', 0, 3),
+(@qid, '92 chromosomes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La méiose est la division cellulaire qui permet de :',
+ 'La méiose est une division cellulaire réductionnelle qui produit des cellules haploïdes (gamètes ou spores) à partir d''une cellule diploïde. Elle assure la diversité génétique.', 'Programme NS4 - Division cellulaire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Produire deux cellules diploïdes identiques', 0, 1),
+(@qid, 'Produire des cellules haploïdes (gamètes) à partir d''une cellule diploïde', 1, 2),
+(@qid, 'Réparer les tissus endommagés', 0, 3),
+(@qid, 'Dupliquer les chromosomes sans division cellulaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La mitose est la division cellulaire qui permet de :',
+ 'La mitose est une division cellulaire équationnelle qui produit deux cellules filles diploïdes identiques à la cellule mère. Elle est responsable de la croissance et du renouvellement cellulaire.', 'Programme NS4 - Division cellulaire', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Produire des gamètes haploïdes', 0, 1),
+(@qid, 'Produire deux cellules filles diploïdes identiques à la cellule mère', 1, 2),
+(@qid, 'Permettre la fécondation', 0, 3),
+(@qid, 'Réduire le nombre de chromosomes de moitié', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La spermatogenèse se déroule dans :',
+ 'La spermatogenèse est le processus de formation des spermatozoïdes. Elle se déroule dans les tubes séminifères des testicules, sous l''influence de la FSH et de la testostérone.', 'Programme NS4 - Reproduction', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''épididyme', 0, 1),
+(@qid, 'Les tubes séminifères des testicules', 1, 2),
+(@qid, 'La prostate', 0, 3),
+(@qid, 'Les vésicules séminales', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'L''ovogenèse se déroule principalement dans :',
+ 'L''ovogenèse est le processus de formation des ovocytes et ovules. Elle se déroule dans les ovaires, sous l''influence de la FSH et des estrogènes.', 'Programme NS4 - Reproduction', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''utérus', 0, 1),
+(@qid, 'Les trompes de Fallope', 0, 2),
+(@qid, 'Les ovaires', 1, 3),
+(@qid, 'Le col de l''utérus', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel est le nom donné à la première division de la méiose ?',
+ 'La première division de la méiose est la division réductionnelle (méiose I). Elle sépare les chromosomes homologues, réduisant le nombre de chromosomes de 2n à n. La méiose II est la division équationnelle.', 'Programme NS4 - Division cellulaire', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Division équationnelle', 0, 1),
+(@qid, 'Division réductionnelle', 1, 2),
+(@qid, 'Division mitotique', 0, 3),
+(@qid, 'Division cytokinétique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La FSH (hormone folliculo-stimulante) agit sur :',
+ 'La FSH est une stimuline hypophysaire qui agit sur les gonades : chez la femme, elle stimule la maturation des follicules ovariens ; chez l''homme, elle stimule la spermatogenèse dans les tubes séminifères.', 'Programme NS4 - Endocrinologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La thyroïde', 0, 1),
+(@qid, 'Les gonades (ovaires/testicules)', 1, 2),
+(@qid, 'Les surrénales', 0, 3),
+(@qid, 'Le pancréas', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le cycle menstruel dure en moyenne :',
+ 'Le cycle menstruel dure en moyenne 28 jours. Il est divisé en phase folliculaire (J1-J14), ovulation (vers J14), et phase lutéale (J14-J28).', 'Programme NS4 - Reproduction', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '21 jours', 0, 1),
+(@qid, '28 jours', 1, 2),
+(@qid, '35 jours', 0, 3),
+(@qid, '14 jours', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La progestérone est principalement produite par :',
+ 'Après l''ovulation, le follicule se transforme en corps jaune (corpus luteum) qui sécrète la progestérone. Cette hormone prépare l''endomètre utérin pour l''implantation embryonnaire.', 'Programme NS4 - Reproduction', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''hypophyse (adénohypophyse)', 0, 1),
+(@qid, 'Le corps jaune (post-ovulation)', 1, 2),
+(@qid, 'Le follicule ovarien avant ovulation', 0, 3),
+(@qid, 'Les glandes surrénales uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle est la structure principale de défense de l''organisme contre les agents pathogènes extracellulaires ?',
+ 'Les anticorps (immunoglobulines) produits par les plasmocytes (issus des lymphocytes B) constituent la principale défense humorale contre les agents pathogènes extracellulaires.', 'Programme NS4 - Immunologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les lymphocytes T cytotoxiques', 0, 1),
+(@qid, 'Les anticorps (immunoglobulines) produits par les lymphocytes B', 1, 2),
+(@qid, 'Les plaquettes sanguines', 0, 3),
+(@qid, 'Les globules rouges', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle est la composition de l''atmosphère terrestre actuelle ?',
+ 'L''atmosphère terrestre actuelle est composée principalement de : diazote N₂ (~78%), dioxygène O₂ (~21%), argon Ar (~0,9%), et dioxyde de carbone CO₂ (~0,04%) plus d''autres gaz en traces.', 'Examen NS4 SVT 2022 - Paléontologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'O₂ (78%) et N₂ (21%)', 0, 1),
+(@qid, 'N₂ (~78%), O₂ (~21%), Ar (~0,9%) et CO₂ (~0,04%)', 1, 2),
+(@qid, 'CO₂ (50%) et O₂ (50%)', 0, 3),
+(@qid, 'H₂ (50%), N₂ (30%) et O₂ (20%)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce qu''un agent pathogène ?',
+ 'Un agent pathogène est un organisme (bactérie, virus, champignon, parasite) ou une substance capable de provoquer une maladie chez un hôte. Exemples : Mycobacterium tuberculosis, VIH, Plasmodium.', 'Examen NS4 SVT 2022 - Zoologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un organisme bénéfique pour la santé', 0, 1),
+(@qid, 'Un organisme ou substance capable de provoquer une maladie chez un hôte', 1, 2),
+(@qid, 'Un médicament utilisé contre les infections', 0, 3),
+(@qid, 'Une cellule du système immunitaire', 0, 4);
+
+-- ============================================================
+-- SECTION 14 : BIOCHIMIE ET METABOLISME
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le glycogène est la forme de réserve du glucose dans :',
+ 'Le glycogène est la forme de réserve du glucose chez les animaux, principalement stocké dans le foie (glycogène hépatique) et les muscles (glycogène musculaire).', 'Programme NS4 - Biochimie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les plantes (sous forme d''amidon)', 0, 1),
+(@qid, 'Le foie et les muscles chez les animaux', 1, 2),
+(@qid, 'Les globules rouges uniquement', 0, 3),
+(@qid, 'Le cerveau uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle hormone favorise la glycogénolyse (dégradation du glycogène) ?',
+ 'Le glucagon (sécrété par les cellules α du pancréas) stimule la glycogénolyse hépatique, libérant du glucose dans le sang pour augmenter la glycémie (effet hyperglycémiant).', 'Programme NS4 - Endocrinologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''insuline', 0, 1),
+(@qid, 'Le glucagon', 1, 2),
+(@qid, 'La thyroxine', 0, 3),
+(@qid, 'La prolactine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La glycémie normale à jeun est d''environ :',
+ 'La glycémie normale à jeun est d''environ 0,8 à 1,1 g/L (soit environ 4,4 à 6,1 mmol/L). Une valeur supérieure à 1,26 g/L à deux reprises indique un diabète.', 'Programme NS4 - Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '0,3 à 0,5 g/L', 0, 1),
+(@qid, '0,8 à 1,1 g/L', 1, 2),
+(@qid, '2,0 à 2,5 g/L', 0, 3),
+(@qid, '5,0 à 6,0 g/L', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'L''ATP (adénosine triphosphate) est :',
+ 'L''ATP est la principale molécule énergétique des cellules vivantes. Elle est produite par la respiration cellulaire (mitochondries) et la glycolyse. Son hydrolyse libère de l''énergie utilisable pour les processus cellulaires.', 'Programme NS4 - Biochimie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un acide aminé essentiel', 0, 1),
+(@qid, 'La principale molécule énergétique de la cellule', 1, 2),
+(@qid, 'Un acide nucléique comme l''ADN', 0, 3),
+(@qid, 'Une vitamine du groupe B', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La photosynthèse se déroule dans :',
+ 'La photosynthèse se déroule dans les chloroplastes des cellules végétales et des algues. Plus précisément, les réactions lumineuses se font dans les thylakoïdes et le cycle de Calvin dans le stroma.', 'Programme NS4 - Biologie végétale', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les mitochondries', 0, 1),
+(@qid, 'Les chloroplastes', 1, 2),
+(@qid, 'Les ribosomes', 0, 3),
+(@qid, 'Le noyau cellulaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Parmi les substances suivantes, laquelle est une protéine ?',
+ 'L''hémoglobine est une protéine (métalloprotéine) constituée de 4 chaînes polypeptidiques et de 4 groupements hème contenant le fer. Elle transporte l''O₂ dans le sang.', 'Programme NS4 - Biochimie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''ADN', 0, 1),
+(@qid, 'L''hémoglobine', 1, 2),
+(@qid, 'Le glycogène', 0, 3),
+(@qid, 'La phosphatidylcholine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les acides aminés sont les monomères des :',
+ 'Les acides aminés sont les unités de base (monomères) des protéines. Ils sont reliés entre eux par des liaisons peptidiques pour former des chaînes polypeptidiques.', 'Programme NS4 - Biochimie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Acides nucléiques (ADN, ARN)', 0, 1),
+(@qid, 'Glucides complexes (amidon, glycogène)', 0, 2),
+(@qid, 'Protéines', 1, 3),
+(@qid, 'Lipides (graisses)', 0, 4);
+
+-- ============================================================
+-- SECTION 15 : COMPLEMENTAIRES - SUJETS FREQUENTS NS4
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le syndrome de Turner est caractérisé par le caryotype :',
+ 'Le syndrome de Turner touche les femmes avec un seul chromosome X (45, X0). Il se manifeste par une petite taille, un infantilisme sexuel, un cou palmé et une stérilité.', 'Programme NS4 - Génétique', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '47, XXX', 0, 1),
+(@qid, '45, X0', 1, 2),
+(@qid, '47, XXY', 0, 3),
+(@qid, '46, XY', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel est le lien entre la structure d''un ARNm et la protéine qu''il code ?',
+ 'La séquence des codons (triplets de 3 nucléotides) sur l''ARNm détermine la séquence des acides aminés dans la protéine selon le code génétique. C''est le principe de la traduction.', 'Programme NS4 - Biologie moléculaire', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La longueur de l''ARNm détermine la masse de la protéine uniquement', 0, 1),
+(@qid, 'La séquence des codons de l''ARNm détermine la séquence des acides aminés de la protéine', 1, 2),
+(@qid, 'L''ARNm est directement transformé en protéine sans code', 0, 3),
+(@qid, 'La protéine est identique à l''ARNm qui la code', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel est le chromosome portant le gène SRY déterminant le sexe masculin ?',
+ 'Le gène SRY (Sex-determining Region Y) est situé sur le chromosome Y. Il induit la différenciation des gonades en testicules et oriente le développement vers le phénotype masculin.', 'Programme NS4 - Génétique', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le chromosome 1', 0, 1),
+(@qid, 'Le chromosome X', 0, 2),
+(@qid, 'Le chromosome Y', 1, 3),
+(@qid, 'Le chromosome 21', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La sélection naturelle agit sur :',
+ 'La sélection naturelle agit sur le phénotype des individus, éliminant ceux qui sont moins bien adaptés à leur environnement et favorisant la reproduction des mieux adaptés.', 'Programme NS4 - Evolution', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Directement sur le génotype', 0, 1),
+(@qid, 'Sur le phénotype (caractères exprimés) des individus', 1, 2),
+(@qid, 'Sur les gènes récessifs uniquement', 0, 3),
+(@qid, 'Sur les mutations létales uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce que la dérive génétique ?',
+ 'La dérive génétique est un changement aléatoire de la fréquence des allèles dans une population, dû au hasard de la reproduction. Elle est particulièrement importante dans les petites populations.', 'Programme NS4 - Génétique des populations', 4);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La sélection des individus les mieux adaptés', 0, 1),
+(@qid, 'Un changement aléatoire de la fréquence allélique dans une population', 1, 2),
+(@qid, 'La migration d''individus entre populations', 0, 3),
+(@qid, 'L''apparition de nouvelles mutations', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les lipides sont des molécules organiques qui :',
+ 'Les lipides sont des molécules organiques hydrophobes composées principalement de carbone, hydrogène et oxygène. Ils jouent des rôles de réserve énergétique, de structure membranaire (phospholipides) et de signalisation (hormones stéroïdes).', 'Programme NS4 - Biochimie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sont solubles dans l''eau', 0, 1),
+(@qid, 'Sont hydrophobes et servent de réserve énergétique et de constituants membranaires', 1, 2),
+(@qid, 'Sont les monomères des protéines', 0, 3),
+(@qid, 'Stockent l''information génétique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le paludisme (malaria) est transmis par :',
+ 'Le paludisme est causé par le parasite Plasmodium et transmis par la piqûre de la femelle Anophèle (moustique). C''est l''une des maladies à vecteur les plus répandues dans le monde.', 'Programme NS4 - Microbiologie/Parasitologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La consommation d''eau contaminée', 0, 1),
+(@qid, 'La piqûre du moustique femelle Anophèle', 1, 2),
+(@qid, 'Le contact direct avec un malade', 0, 3),
+(@qid, 'La piqûre du moustique Aedes aegypti', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La dengue est une maladie virale transmise par :',
+ 'La dengue est transmise par la piqûre du moustique Aedes aegypti (et Aedes albopictus). C''est une arbovirose (maladie virale à arbovirus) très répandue dans les régions tropicales et subtropicales.', 'Programme NS4 - Virologie/Santé', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le moustique Anophèle', 0, 1),
+(@qid, 'Le moustique Aedes aegypti', 1, 2),
+(@qid, 'La mouche tsé-tsé', 0, 3),
+(@qid, 'Les poux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le VIH est le virus responsable de :',
+ 'Le VIH (Virus de l''Immunodéficience Humaine) est responsable du SIDA (Syndrome d''Immunodéficience Acquise). C''est un rétrovirus qui détruit les lymphocytes T CD4+, affaiblissant le système immunitaire.', 'Programme NS4 - Virologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''hépatite B', 0, 1),
+(@qid, 'Le SIDA', 1, 2),
+(@qid, 'La tuberculose', 0, 3),
+(@qid, 'Le paludisme', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La tuberculose est causée par :',
+ 'La tuberculose est causée par Mycobacterium tuberculosis (bacille de Koch). C''est une infection bactérienne qui touche principalement les poumons.', 'Programme NS4 - Microbiologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un virus (VBK)', 0, 1),
+(@qid, 'Mycobacterium tuberculosis (bacille de Koch)', 1, 2),
+(@qid, 'Plasmodium falciparum', 0, 3),
+(@qid, 'Streptococcus pneumoniae', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quelle est la cellule cible du VIH dans l''organisme ?',
+ 'Le VIH infecte préférentiellement les lymphocytes T CD4+ (lymphocytes T auxiliaires), car ces cellules expriment à leur surface la protéine CD4 qui sert de récepteur au virus.', 'Programme NS4 - Immunologie/Virologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les globules rouges', 0, 1),
+(@qid, 'Les lymphocytes T CD4+', 1, 2),
+(@qid, 'Les plaquettes sanguines', 0, 3),
+(@qid, 'Les cellules musculaires', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La vaccination contre une maladie confère une immunité dite :',
+ 'La vaccination confère une immunité active artificielle : elle stimule le système immunitaire à produire des anticorps et des cellules mémoire sans traverser la maladie. L''immunité passive est le transfert direct d''anticorps préformés.', 'Programme NS4 - Immunologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Passive naturelle', 0, 1),
+(@qid, 'Active artificielle', 1, 2),
+(@qid, 'Passive artificielle', 0, 3),
+(@qid, 'Active naturelle', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le cholestérol est un précurseur de :',
+ 'Le cholestérol est le précurseur de nombreuses molécules biologiques importantes : les hormones stéroïdes (cortisol, testostérone, estrogènes, aldostérone), la vitamine D₃ et les sels biliaires.', 'Programme NS4 - Biochimie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des acides aminés essentiels', 0, 1),
+(@qid, 'Des hormones stéroïdes, de la vitamine D et des sels biliaires', 1, 2),
+(@qid, 'Des vitamines du groupe B', 0, 3),
+(@qid, 'Des acides nucléiques', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les enzymes sont des :',
+ 'Les enzymes sont des protéines (sauf quelques ARN catalytiques = ribozymes) qui servent de biocatalyseurs : elles accélèrent les réactions chimiques sans être consommées, en abaissant l''énergie d''activation.', 'Programme NS4 - Biochimie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Des glucides qui stockent l''énergie', 0, 1),
+(@qid, 'Des protéines biocatalyseurs qui accélèrent les réactions chimiques', 1, 2),
+(@qid, 'Des lipides membranaires', 0, 3),
+(@qid, 'Des acides nucléiques porteurs d''information génétique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Dans les cellules eucaryotes, où est localisé l''ADN nucléaire ?',
+ 'Dans les cellules eucaryotes, l''ADN nucléaire est localisé dans le noyau, enroulé autour de protéines appelées histones, formant la chromatine (chromosomes pendant la division).', 'Programme NS4 - Cytologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Dans les mitochondries', 0, 1),
+(@qid, 'Dans le cytoplasme libre', 0, 2),
+(@qid, 'Dans le noyau cellulaire', 1, 3),
+(@qid, 'Sur les ribosomes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La coagulation sanguine fait intervenir quelle vitamine ?',
+ 'La vitamine K est indispensable à la synthèse de plusieurs facteurs de coagulation (prothrombine, facteurs II, VII, IX, X). Son déficit entraîne des troubles de la coagulation et des hémorragies.', 'Programme NS4 - Physiologie/Vitamines', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamine C', 0, 1),
+(@qid, 'Vitamine B12', 0, 2),
+(@qid, 'Vitamine K', 1, 3),
+(@qid, 'Vitamine A', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le collagène est la protéine la plus abondante du corps humain. La vitamine nécessaire à sa synthèse est :',
+ 'La vitamine C (acide ascorbique) est nécessaire à la synthèse du collagène car elle est le cofacteur des enzymes qui hydroxylent la proline et la lysine (prolyl-hydroxylase). Son déficit cause le scorbut.', 'Programme NS4 - Biochimie/Vitamines', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamine A', 0, 1),
+(@qid, 'Vitamine C', 1, 2),
+(@qid, 'Vitamine D', 0, 3),
+(@qid, 'Vitamine E', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les sources alimentaires de vitamine D comprennent :',
+ 'Les principales sources de vitamine D sont les poissons gras (saumon, thon, maquereau), le foie, les œufs et les produits laitiers enrichis. La peau peut aussi synthétiser la vitamine D sous l''action des UV solaires.', 'Examen NS4 SVT 2022 - Vitamines', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les agrumes (citron, orange)', 0, 1),
+(@qid, 'Les poissons gras (saumon, thon) et les œufs', 1, 2),
+(@qid, 'Les légumes verts (épinards, brocolis)', 0, 3),
+(@qid, 'Les légumineuses (lentilles, pois chiches)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les sources alimentaires de vitamine E (tocophérol) comprennent :',
+ 'La vitamine E est principalement présente dans les huiles végétales (tournesol, olive, soja), les fruits oléagineux (amandes, noix), les graines et les céréales complètes.', 'Examen NS4 SVT 2022 - Vitamines', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les viandes rouges et le lait uniquement', 0, 1),
+(@qid, 'Les huiles végétales, les fruits oléagineux et les céréales complètes', 1, 2),
+(@qid, 'Les fruits tropicaux uniquement', 0, 3),
+(@qid, 'Les produits de la mer uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'L''acide désoxyribonucléique (ADN) est une molécule :',
+ 'L''ADN est une molécule double brin (double hélice) composée de nucléotides (base azotée + désoxyribose + phosphate). Il est le support de l''information génétique chez la plupart des êtres vivants.', 'Programme NS4 - Biologie moléculaire', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Simple brin portant le message génétique vers les ribosomes', 0, 1),
+(@qid, 'Double hélice support de l''information génétique', 1, 2),
+(@qid, 'Protéique servant de biocatalyseur', 0, 3),
+(@qid, 'Lipidique constituant les membranes cellulaires', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les ribosomes sont le siège de :',
+ 'Les ribosomes sont les organites où se déroule la traduction : la synthèse des protéines à partir du message génétique porté par l''ARNm. Ils peuvent être libres dans le cytoplasme ou liés au réticulum endoplasmique rugueux.', 'Programme NS4 - Cytologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La transcription de l''ADN en ARNm', 0, 1),
+(@qid, 'La traduction de l''ARNm en protéines', 1, 2),
+(@qid, 'La production d''énergie (ATP)', 0, 3),
+(@qid, 'La digestion des molécules étrangères', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La structure en double hélice de l''ADN a été proposée par :',
+ 'La structure en double hélice de l''ADN a été proposée par James Watson et Francis Crick en 1953, en utilisant les données de diffraction aux rayons X de Rosalind Franklin et les données de Chargaff.', 'Programme NS4 - Histoire des sciences', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Pasteur et Koch', 0, 1),
+(@qid, 'Watson et Crick (1953)', 1, 2),
+(@qid, 'Mendel et Darwin', 0, 3),
+(@qid, 'Lamarck et Cuvier', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Combien de paires de bases contient approximativement le génome humain ?',
+ 'Le génome humain haploïde contient environ 3 milliards (3 × 10⁹) de paires de bases, réparties sur 23 chromosomes. Il code environ 20 000-25 000 gènes.', 'Programme NS4 - Génomique', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, '3 millions de paires de bases', 0, 1),
+(@qid, '3 milliards de paires de bases', 1, 2),
+(@qid, '3 000 paires de bases', 0, 3),
+(@qid, '300 millions de paires de bases', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La maladie de Parkinson est liée à un déficit de quel neurotransmetteur ?',
+ 'La maladie de Parkinson est liée à la dégénérescence des neurones dopaminergiques de la substance noire, entraînant un déficit en dopamine. Ce déficit perturbe le contrôle des mouvements.', 'Programme NS4 - Neurosciences', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'L''acétylcholine', 0, 1),
+(@qid, 'La sérotonine', 0, 2),
+(@qid, 'La dopamine', 1, 3),
+(@qid, 'Le GABA', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La maladie d''Alzheimer est caractérisée par :',
+ 'La maladie d''Alzheimer est une maladie neurodégénérative caractérisée par des plaques amyloïdes (bêta-amyloïde), des enchevêtrements neurofibrillaires (protéine Tau) et la perte progressive de neurones, entraînant des troubles mnésiques et cognitifs.', 'Programme NS4 - Neurosciences', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un déficit en dopamine dans la substance noire', 0, 1),
+(@qid, 'Des plaques amyloïdes et neurofibrillaires entraînant la dégénérescence neuronale', 1, 2),
+(@qid, 'Une inflammation des méninges', 0, 3),
+(@qid, 'Une démyélinisation des fibres nerveuses', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'L''hémoglobine fœtale (HbF) diffère de l''hémoglobine adulte (HbA) par :',
+ 'L''HbF (α₂γ₂) contient deux chaînes gamma au lieu des deux chaînes bêta de l''HbA (α₂β₂). L''HbF a une plus grande affinité pour l''oxygène que l''HbA, ce qui facilite le transfert d''O₂ de la mère au fœtus.', 'Programme NS4 - Biochimie', 4);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Sa couleur : l''HbF est bleue et l''HbA est rouge', 0, 1),
+(@qid, 'La présence de chaînes gamma au lieu des chaînes bêta (plus grande affinité pour O₂)', 1, 2),
+(@qid, 'Sa localisation : l''HbF est dans le plasma, l''HbA dans les GR', 0, 3),
+(@qid, 'L''HbF contient du fer ferreux et l''HbA du fer ferrique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La moelle épinière fait partie de :',
+ 'La moelle épinière fait partie du système nerveux central (SNC), avec l''encéphale. Elle est contenue dans le canal rachidien (vertèbres) et assure la transmission des informations entre le cerveau et le reste du corps.', 'Programme NS4 - Système nerveux', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Le système nerveux périphérique', 0, 1),
+(@qid, 'Le système nerveux central (avec l''encéphale)', 1, 2),
+(@qid, 'Le système nerveux végétatif uniquement', 0, 3),
+(@qid, 'Le système endocrinien', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Dans un arc réflexe, quel est l''ordre correct des éléments ?',
+ 'L''arc réflexe comprend dans l''ordre : récepteur sensitif → neurone afférent (sensitif) → centre nerveux (moelle épinière) → neurone efférent (moteur) → effecteur (muscle ou glande).', 'Programme NS4 - Système nerveux', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Effecteur → centre nerveux → récepteur', 0, 1),
+(@qid, 'Récepteur → neurone afférent → centre nerveux → neurone efférent → effecteur', 1, 2),
+(@qid, 'Centre nerveux → récepteur → effecteur → neurone', 0, 3),
+(@qid, 'Neurone → récepteur → effecteur uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La myéline qui entoure certains axones est produite par :',
+ 'Dans le système nerveux central, la myéline est produite par les oligodendrocytes. Dans le système nerveux périphérique, elle est produite par les cellules de Schwann. Elle accélère la conduction nerveuse.', 'Programme NS4 - Histologie nerveuse', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les neurones eux-mêmes', 0, 1),
+(@qid, 'Les oligodendrocytes (SNC) et les cellules de Schwann (SNP)', 1, 2),
+(@qid, 'Les macrophages du cerveau', 0, 3),
+(@qid, 'Les cellules endothéliales des vaisseaux', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel est l''effet de l''insuline sur la glycémie ?',
+ 'L''insuline est une hormone hypoglycémiante : elle fait baisser la glycémie en favorisant l''entrée du glucose dans les cellules, la glycogénogenèse (stockage en glycogène) et la lipogenèse (conversion en graisses).', 'Programme NS4 - Endocrinologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle augmente la glycémie (hyperglycémiante)', 0, 1),
+(@qid, 'Elle diminue la glycémie (hypoglycémiante)', 1, 2),
+(@qid, 'Elle n''a aucun effet sur la glycémie', 0, 3),
+(@qid, 'Elle augmente la glycémie seulement à jeun', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le glucose entre dans les cellules sous l''effet de l''insuline via :',
+ 'L''insuline stimule la translocation des transporteurs GLUT4 vers la membrane plasmique des cellules musculaires et adipocytes, permettant l''entrée du glucose par transport facilité.', 'Programme NS4 - Physiologie cellulaire', 4);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un transport actif utilisant l''ATP directement', 0, 1),
+(@qid, 'Des transporteurs GLUT (transport facilité)', 1, 2),
+(@qid, 'La diffusion simple à travers la membrane', 0, 3),
+(@qid, 'L''endocytose par la membrane cellulaire', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les quatre signes cliniques d''une hyperglycémie (diabète) sont :',
+ 'Les signes classiques de l''hyperglycémie/diabète sont : polyurie (urines abondantes), polydipsie (soif intense), polyphagie (faim excessive), asthénie (fatigue), et perte de poids. On retrouve aussi glycosurie (glucose dans les urines).', 'Examen NS4 SVT 2022 - Microbiologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Bradycardie, hypotension, anurie, prise de poids', 0, 1),
+(@qid, 'Polyurie, polydipsie, polyphagie et asthénie (fatigue)', 1, 2),
+(@qid, 'Toux, fièvre, douleurs articulaires, exanthème', 0, 3),
+(@qid, 'Céphalées, vertiges, vomissements, photophobie', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Deux sources alimentaires de cyanocobalamine (vitamine B12) sont :',
+ 'La vitamine B12 se trouve quasi exclusivement dans les produits d''origine animale : viandes (foie surtout), poissons, fruits de mer, œufs et produits laitiers. Les végétaliens risquent une carence.', 'Examen NS4 SVT 2022 - Morphologie_B', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les légumes verts et les fruits', 0, 1),
+(@qid, 'Les viandes (foie) et les fruits de mer', 1, 2),
+(@qid, 'Les céréales complètes et les légumineuses', 0, 3),
+(@qid, 'Les huiles végétales et les noix', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les phospholipides constituent la structure de base des membranes cellulaires. Ils sont :',
+ 'Les phospholipides sont des molécules amphiphiles (tête polaire hydrophile + queues apolaires hydrophobes). Ils s''organisent en bicouche lipidique formant la structure de base de toutes les membranes cellulaires.', 'Programme NS4 - Cytologie/Biochimie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Entièrement hydrophiles (solubles dans l''eau)', 0, 1),
+(@qid, 'Amphiphiles (tête hydrophile + queues hydrophobes), formant une bicouche', 1, 2),
+(@qid, 'Entièrement hydrophobes', 0, 3),
+(@qid, 'Des protéines globulaires', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La sécrétion pancréatique exocrine (suc pancréatique) contient :',
+ 'Le suc pancréatique contient des enzymes digestives : amylase pancréatique (glucides), lipase (lipides), protéases (trypsine, chymotrypsine - protéines), et du bicarbonate de sodium (neutralise l''acidité gastrique).', 'Programme NS4 - Physiologie digestive', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Insuline, glucagon et somatostatine', 0, 1),
+(@qid, 'Amylase, lipase, protéases et bicarbonate de sodium', 1, 2),
+(@qid, 'Bile, cholestérol et acides biliaires', 0, 3),
+(@qid, 'Acide chlorhydrique et pepsine', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le changement climatique actuel est principalement causé par :',
+ 'Le changement climatique actuel est principalement causé par les activités humaines émettant des gaz à effet de serre (GES) : combustion des énergies fossiles, déforestation, agriculture intensive, industrie.', 'Examen NS4 SVT 2022 - Paléontologie/Neurone', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Uniquement des cycles naturels solaires', 0, 1),
+(@qid, 'Les activités humaines émettant des gaz à effet de serre (GES)', 1, 2),
+(@qid, 'L''activité volcanique seule', 0, 3),
+(@qid, 'Les mouvements des continents uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Parmi ces gaz, lequel n''est PAS un gaz à effet de serre ?',
+ 'Les principaux gaz à effet de serre sont : CO₂, CH₄ (méthane), N₂O, vapeur d''eau et les CFC. Le diazote (N₂) n''est pas un gaz à effet de serre malgré sa grande concentration atmosphérique.', 'Examen NS4 SVT 2022 - Neurone/Paléontologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'CO₂ (dioxyde de carbone)', 0, 1),
+(@qid, 'CH₄ (méthane)', 0, 2),
+(@qid, 'N₂ (diazote)', 1, 3),
+(@qid, 'N₂O (protoxyde d''azote)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel pays est considéré parmi les plus grands pollueurs mondiaux (émissions de CO₂) ?',
+ 'Les plus grands émetteurs de CO₂ dans le monde sont : la Chine (1er), les États-Unis (2e), l''Inde (3e), la Russie, le Japon... Ces pays sont responsables d''une grande part des émissions mondiales de gaz à effet de serre.', 'Examen NS4 SVT 2022 - Glucogène', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Haïti et le Sénégal', 0, 1),
+(@qid, 'La Chine, les États-Unis et l''Inde', 1, 2),
+(@qid, 'La France et l''Espagne uniquement', 0, 3),
+(@qid, 'Le Brésil et l''Argentine uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le groupe de vertébrés qui s''est développé après la disparition des dinosaures au Crétacé-Tertiaire est :',
+ 'Après la disparition des dinosaures à la fin du Crétacé (il y a 66 Ma), les mammifères ont connu une radiation évolutive explosive au début du Tertiaire (Paléogène), occupant les niches écologiques laissées vacantes.', 'Examen NS4 SVT 2022 - Microbiologie/Paléontologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les reptiles', 0, 1),
+(@qid, 'Les oiseaux uniquement', 0, 2),
+(@qid, 'Les mammifères', 1, 3),
+(@qid, 'Les poissons', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Deux hypothèses pour expliquer la crise Crétacé-Tertiaire (extinction des dinosaures) sont :',
+ 'Les deux principales hypothèses sont : (1) impact d''un astéroïde/météorite géant (cratère de Chicxulub, Mexique) - hypothèse d''Alvarez ; et (2) l''activité volcanique intense (trapps du Deccan en Inde). Ces deux événements ont perturbé le climat mondial.', 'Examen NS4 SVT 2022 - Microbiologie/Neurone', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La glaciation et la montée des eaux océaniques', 0, 1),
+(@qid, 'L''impact d''un astéroïde et l''activité volcanique intense', 1, 2),
+(@qid, 'Une maladie contagieuse et la sécheresse', 0, 3),
+(@qid, 'La dérive des continents et l''acidification des océans', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La datation radiométrique (absolue) utilise :',
+ 'La datation absolue (radiométrique) est basée sur la désintégration radioactive de certains isotopes (ex : Carbone-14, Uranium-238, Potassium-40). On mesure la quantité d''isotope parent et d''isotope fils pour calculer l''âge.', 'Examen NS4 SVT 2022 - Paléontologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La position stratigraphique des couches uniquement', 0, 1),
+(@qid, 'La désintégration radioactive d''isotopes (C14, U238, K40...)', 1, 2),
+(@qid, 'L''étude des fossiles uniquement', 0, 3),
+(@qid, 'La coloration des roches sédimentaires', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Qu''est-ce que la datation relative en stratigraphie ?',
+ 'La datation relative détermine l''âge d''une roche ou d''un fossile par rapport à d''autres (antérieur, contemporain ou postérieur) sans donner une date chiffrée précise. Elle utilise les principes de superposition, continuité et les fossiles stratigraphiques.', 'Examen NS4 SVT 2022 - Paléontologie/Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Elle donne un âge précis en années grâce aux isotopes', 0, 1),
+(@qid, 'Elle détermine l''âge d''une formation par rapport à d''autres, sans date chiffrée précise', 1, 2),
+(@qid, 'Elle utilise la radioactivité pour dater les roches', 0, 3),
+(@qid, 'Elle ne peut s''appliquer qu''aux roches ignées', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les principaux minerais métalliques exploités en Haïti comprennent :',
+ 'Haïti possède des ressources en or, argent, cuivre (principalement dans le Massif du Nord), ainsi que du bauxite (nord d''Haïti, aluminium). Il existe aussi des indices de fer et de manganèse.', 'Examen NS4 SVT 2022 - Vitamines/Physiologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Diamant, platine et uranium', 0, 1),
+(@qid, 'Or, argent, cuivre et bauxite (aluminium)', 1, 2),
+(@qid, 'Charbon, pétrole et gaz naturel uniquement', 0, 3),
+(@qid, 'Sel, potasse et phosphates uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La lignée humaine se caractérise notamment par :',
+ 'Les critères d''appartenance à la lignée humaine comprennent : la bipédie permanente, le développement du volume crânien (encéphalisation), la fabrication et l''utilisation d''outils, le langage articulé et le feu.', 'Examen NS4 SVT 2022 - Vitamines', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La quadrupédie et une petite taille', 0, 1),
+(@qid, 'La bipédie permanente, l''encéphalisation et l''utilisation d''outils', 1, 2),
+(@qid, 'La nage et les capacités aquatiques', 0, 3),
+(@qid, 'La capacité de photosynthèse', 0, 4);
+
+-- ============================================================
+-- SECTION 16 : QUESTIONS ADDITIONNELLES DE RÉVISION NS4
+-- ============================================================
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le réticulum endoplasmique rugueux (RER) est impliqué dans :',
+ 'Le réticulum endoplasmique rugueux (couvert de ribosomes) est impliqué dans la synthèse et le transport des protéines destinées à être sécrétées ou incorporées dans les membranes.', 'Programme NS4 - Cytologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La production d''énergie cellulaire', 0, 1),
+(@qid, 'La synthèse et le transport des protéines sécrétées', 1, 2),
+(@qid, 'La digestion intracellulaire', 0, 3),
+(@qid, 'La photosynthèse dans les cellules végétales', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'L''appareil de Golgi est impliqué dans :',
+ 'L''appareil de Golgi est impliqué dans la maturation, le tri et l''expédition des protéines et lipides. Il modifie les protéines venues du RER (glycosylation, etc.) et les adresse vers leur destination finale (sécrétion, lysosomes, membrane).', 'Programme NS4 - Cytologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La production d''ATP par oxydation', 0, 1),
+(@qid, 'La maturation, le tri et l''adressage des protéines', 1, 2),
+(@qid, 'La réplication de l''ADN', 0, 3),
+(@qid, 'La synthèse des lipides membranaires exclusivement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Chez un individu de groupe sanguin O :',
+ 'Le groupe O signifie que l''individu ne possède ni agglutinogène A ni agglutinogène B sur ses globules rouges. Son plasma contient les deux agglutinines : anti-A et anti-B. Il est donneur universel.', 'Programme NS4 - Physiologie sanguine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ses GR portent les agglutinogènes A et B', 0, 1),
+(@qid, 'Ses GR n''ont ni agglutinogène A ni B ; son plasma a les anti-A et anti-B', 1, 2),
+(@qid, 'Son plasma contient ni anti-A ni anti-B', 0, 3),
+(@qid, 'Il peut recevoir du sang de tous les groupes sans risque', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le groupe sanguin AB est dit receveur universel car :',
+ 'Le groupe AB est dit receveur universel car ses globules rouges portent les agglutinogènes A et B, mais son plasma ne contient ni anti-A ni anti-B. Il peut donc recevoir du sang de tous les groupes sans risque d''agglutination.', 'Programme NS4 - Physiologie sanguine', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ses GR n''ont aucun agglutinogène', 0, 1),
+(@qid, 'Son plasma ne contient ni anti-A ni anti-B, donc pas de risque d''agglutination', 1, 2),
+(@qid, 'Il produit tous les types d''agglutinines', 0, 3),
+(@qid, 'Ses globules rouges résistent à tous les anticorps', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La loi de superposition en stratigraphie stipule que :',
+ 'La loi de superposition (Nicolas Sténon, 1669) stipule que dans une séquence de couches non déformées, les couches les plus anciennes sont en bas et les plus récentes en haut.', 'Examen NS4 SVT 2022 - Glucogène/Morphologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les couches les plus anciennes sont en haut', 0, 1),
+(@qid, 'Les couches les plus récentes sont en haut et les plus anciennes en bas', 1, 2),
+(@qid, 'Toutes les couches d''une même région ont le même âge', 0, 3),
+(@qid, 'Les couches les plus minces sont les plus anciennes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel est le principal rôle des lymphocytes T cytotoxiques (CD8+) ?',
+ 'Les lymphocytes T cytotoxiques (LTc ou CD8+) détruisent directement les cellules infectées par des virus, les cellules tumorales ou les cellules transplantées. Ils constituent l''immunité cellulaire.', 'Programme NS4 - Immunologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Produire des anticorps (immunoglobulines)', 0, 1),
+(@qid, 'Détruire directement les cellules infectées et les cellules tumorales', 1, 2),
+(@qid, 'Phagocyter les bactéries extracellulaires', 0, 3),
+(@qid, 'Stimuler la production de lymphocytes B', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La loi de continuité en stratigraphie stipule que :',
+ 'La loi de continuité (Sténon) stipule que les couches sédimentaires se déposent horizontalement et latéralement de façon continue dans un bassin sédimentaire donné, même si leur épaisseur peut varier.', 'Programme NS4 - Stratigraphie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Chaque couche a un épaisseur constante partout dans le monde', 0, 1),
+(@qid, 'Une même couche sédimentaire a le même âge sur toute son étendue latérale', 1, 2),
+(@qid, 'Les couches se déposent toujours de bas en haut', 0, 3),
+(@qid, 'Les couches les plus récentes sont nécessairement continues', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Quel est le rôle du foie dans la régulation de la glycémie ?',
+ 'Le foie joue un rôle central dans la régulation de la glycémie : il stocke le glucose sous forme de glycogène (glycogénogenèse) quand la glycémie est élevée, et libère le glucose dans le sang (glycogénolyse, néoglucogenèse) quand elle est basse.', 'Programme NS4 - Physiologie/Endocrinologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Il produit l''insuline pour réguler la glycémie', 0, 1),
+(@qid, 'Il stocke le glucose (glycogénogenèse) ou le libère (glycogénolyse/néoglucogenèse) selon la glycémie', 1, 2),
+(@qid, 'Il dégrade uniquement l''alcool et les toxines', 0, 3),
+(@qid, 'Il n''a aucun rôle dans la régulation glycémique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La trisomie 18 est aussi appelée :',
+ 'La trisomie 18 est aussi connue sous le nom de syndrome d''Edwards (du nom du généticien John Edwards qui l''a décrit en 1960). Elle est due à la présence d''un chromosome 18 surnuméraire (47 chromosomes).', 'Programme NS4 - Génétique', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Syndrome de Down', 0, 1),
+(@qid, 'Syndrome d''Edwards', 1, 2),
+(@qid, 'Syndrome de Patau', 0, 3),
+(@qid, 'Syndrome de Klinefelter', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La trisomie 13 est aussi appelée :',
+ 'La trisomie 13 est le syndrome de Patau (décrit par Klaus Patau en 1960). Elle est due à un chromosome 13 surnuméraire et est la plus grave des trisomies autosomales viables.', 'Programme NS4 - Génétique', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Syndrome de Down', 0, 1),
+(@qid, 'Syndrome d''Edwards', 0, 2),
+(@qid, 'Syndrome de Patau', 1, 3),
+(@qid, 'Syndrome de Turner', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Dans l''hémoglobine, le fer est contenu dans le groupement :',
+ 'Dans l''hémoglobine, le fer (Fe²⁺) est contenu dans le groupement hème. C''est à ce fer que se fixe le dioxygène (O₂). L''hémoglobine est constituée de 4 chaînes polypeptidiques (globines) chacune associée à un hème.', 'Programme NS4 - Biochimie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'La chaîne polypeptidique (globine)', 0, 1),
+(@qid, 'Le groupement hème', 1, 2),
+(@qid, 'Le groupement carboxyle de la protéine', 0, 3),
+(@qid, 'Le noyau central de la porphyrine cuivreuse', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Parmi les maladies suivantes, laquelle se transmet de la même manière que la myopathie de Duchenne ?',
+ 'Le daltonisme et l''hémophilie se transmettent de la même manière que la myopathie de Duchenne : selon le mode gonosomal récessif lié au chromosome X. Les femmes sont vectrices, les hommes malades.', 'Examen NS4 SVT 2022 - Histologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Trisomie 21 et drépanocytose', 0, 1),
+(@qid, 'Daltonisme et hémophilie', 1, 2),
+(@qid, 'Phénylcétonurie et mucoviscidose', 0, 3),
+(@qid, 'Albinisme et syndrome de Down', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le bêta-carotène est une provitamine car il se transforme dans l''organisme en :',
+ 'Le bêta-carotène est la provitamine A. Il est converti en rétinol (vitamine A) dans l''intestin grêle. Il est présent dans les légumes et fruits de couleur orange/rouge (carottes, mangues, tomates).', 'Programme NS4 - Vitamines', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamine C (acide ascorbique)', 0, 1),
+(@qid, 'Vitamine A (rétinol)', 1, 2),
+(@qid, 'Vitamine D (calciférol)', 0, 3),
+(@qid, 'Vitamine K (ménadione)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le 7-déhydrocholestérol est une provitamine transformée sous l''action des UV solaires en :',
+ 'Le 7-déhydrocholestérol (présent dans la peau) est la provitamine D3. Sous l''action des rayons UV-B solaires, il est transformé en vitamine D3 (cholécalciférol) dans la peau.', 'Programme NS4 - Vitamines/Biochimie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Vitamine A (rétinol)', 0, 1),
+(@qid, 'Vitamine D3 (cholécalciférol)', 1, 2),
+(@qid, 'Vitamine E (tocophérol)', 0, 3),
+(@qid, 'Vitamine K (phylloquinone)', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La mémoire immunologique est assurée par :',
+ 'La mémoire immunologique est assurée par les lymphocytes mémoire (lymphocytes B et T mémoire). Ces cellules à longue durée de vie permettent une réponse immunitaire plus rapide et plus intense lors d''une seconde exposition au même antigène.', 'Programme NS4 - Immunologie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les macrophages uniquement', 0, 1),
+(@qid, 'Les lymphocytes mémoire (B et T)', 1, 2),
+(@qid, 'Les plaquettes sanguines', 0, 3),
+(@qid, 'Les anticorps circulants uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les nucléotides sont les monomères des acides nucléiques. Un nucléotide est constitué de :',
+ 'Un nucléotide est constitué de trois éléments : une base azotée (purine ou pyrimidine), un sucre pentose (désoxyribose dans l''ADN, ribose dans l''ARN) et un groupement phosphate.', 'Programme NS4 - Biologie moléculaire', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Un acide aminé, un sucre et un phosphate', 0, 1),
+(@qid, 'Une base azotée, un sucre (pentose) et un groupement phosphate', 1, 2),
+(@qid, 'Deux bases azotées et un sucre', 0, 3),
+(@qid, 'Un acide gras, un glycérol et une base azotée', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La phénylcétonurie (PCU) est une maladie métabolique :',
+ 'La phénylcétonurie est une maladie autosomale récessive due à un déficit en phénylalanine hydroxylase. L''accumulation de phénylalanine est neurotoxique et peut causer un retard mental si non traitée dès la naissance (régime sans phénylalanine).', 'Programme NS4 - Génétique/Biochimie', 4);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Autosomale dominante avec retard mental', 0, 1),
+(@qid, 'Autosomale récessive due à un déficit en phénylalanine hydroxylase', 1, 2),
+(@qid, 'Liée au chromosome X avec troubles musculaires', 0, 3),
+(@qid, 'Due à une trisomie chromosomique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Les gaz à effet de serre ont un effet sur la température de la Terre car :',
+ 'Les gaz à effet de serre (CO₂, CH₄, H₂O, N₂O...) absorbent le rayonnement infrarouge (chaleur) émis par la surface terrestre et le réémettent vers la Terre, empêchant sa dissipation dans l''espace. Sans effet de serre naturel, la température serait de -18°C au lieu de +15°C.', 'Programme NS4 - Écologie/Géologie', 2);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Ils bloquent les rayons UV entrants du soleil', 0, 1),
+(@qid, 'Ils absorbent les infrarouges terrestres et les réémettent vers la Terre, réchauffant l''atmosphère', 1, 2),
+(@qid, 'Ils augmentent la réflexion des rayons solaires vers l''espace', 0, 3),
+(@qid, 'Ils produisent de la chaleur par réaction chimique', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le brassage génétique lors de la reproduction sexuée est assuré par :',
+ 'Le brassage génétique est assuré par : (1) le crossing-over (prophase I de la méiose) qui crée de nouvelles combinaisons alléliques sur les chromosomes ; et (2) la disjonction indépendante des chromosomes homologues en méiose I ; plus (3) la fécondation aléatoire.', 'Programme NS4 - Génétique', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Uniquement par les mutations spontanées', 0, 1),
+(@qid, 'Le crossing-over, la disjonction indépendante des chromosomes et la fécondation aléatoire', 1, 2),
+(@qid, 'Par la mitose uniquement', 0, 3),
+(@qid, 'Par la dérive génétique uniquement', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'Le principe de l''identité (de Steno) en stratigraphie dit que :',
+ 'Le principe d''identité paléontologique stipule que deux couches ayant les mêmes fossiles (surtout fossiles stratigraphiques) sont de même âge, même si elles sont géographiquement éloignées.', 'Programme NS4 - Stratigraphie', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Deux couches identiques visuellement ont le même âge', 0, 1),
+(@qid, 'Deux couches ayant les mêmes fossiles stratigraphiques sont contemporaines', 1, 2),
+(@qid, 'Une couche est toujours identique à elle-même en épaisseur', 0, 3),
+(@qid, 'Les strates se déposent toujours en couches inclinées', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La différence entre un macrofossile et un microfossile est :',
+ 'Un macrofossile est visible à l''œil nu (ammonites, fougères fossiles, ossements). Un microfossile est trop petit pour être vu à l''œil nu et nécessite un microscope (foraminifères, pollens, conodontes).', 'Examen NS4 SVT 2022 - Morphologie/Physiologie', 1);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Les macrofossiles sont anciens et les microfossiles sont récents', 0, 1),
+(@qid, 'Les macrofossiles sont visibles à l''œil nu ; les microfossiles ne sont visibles qu''au microscope', 1, 2),
+(@qid, 'Les macrofossiles sont d''origine animale et les microfossiles végétale', 0, 3),
+(@qid, 'Il n''y a pas de différence, ce sont des synonymes', 0, 4);
+
+INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
+(12, 2, 'La vitamine E (tocophérol) joue principalement le rôle de :',
+ 'La vitamine E est un puissant antioxydant liposoluble. Elle protège les membranes cellulaires contre la peroxydation lipidique due aux radicaux libres, et prévient ainsi l''oxydation des lipides membranaires.', 'Programme NS4 - Vitamines', 3);
+SET @qid = LAST_INSERT_ID();
+INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
+(@qid, 'Cofacteur de la coagulation sanguine', 0, 1),
+(@qid, 'Antioxydant protégeant les membranes contre la peroxydation lipidique', 1, 2),
+(@qid, 'Précurseur des hormones stéroïdes', 0, 3),
+(@qid, 'Régulateur de la calcémie', 0, 4);
+
 
 
 -- ============================================

@@ -23,7 +23,7 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
     <!-- ===== SEO PRIMARY ===== -->
-    <title>Quiz NS4 Haïti 2025 — QCM Philo, Maths, Français, Examens Officiels MENFP | Quiz Ayiti</title>
+    <title>Quiz NS4,QCM NS4 Haïti 2026 — QCM Philo, Maths, Français, Examens Officiels MENFP | Quiz Ayiti</title>
     <meta name="description" content="Quiz NS4 Haïti — Prépare tes examens officiels MENFP avec des QCM de Philosophie, Mathématiques, Français, Physique, Chimie, SVT, Histoire-Géo, Anglais. Kwiz NS4, Qwiz NS4, examens passés 2022-2024, mode examen chronométré. Gratuit pour tous les élèves de Terminale en Haïti.">
     <meta name="keywords" content="quiz ns4, qcm ns4, kwiz ns4, qwiz ns4, kwix ns4, quiz philo, qcm philosophie terminale, kwiz philo, filo haiti, quiz philo haiti, quiz terminale haiti, quiz menfp, examen officiel ns4, examen bac haiti, quiz maths ns4, qcm maths terminale haiti, quiz français ns4, qcm français terminale haiti, quiz physique ns4, quiz chimie ns4, quiz svt ns4, quiz histoire geo ns4, quiz anglais ns4, préparation examen ns4, examens passes ns4 2022 2023 2024, entrainement ns4, révision terminale haiti, programme menfp ns4, bac haiti 2025, kwix philo, qwiz philo, kwiz filo, quiz filo haiti, nouveaux secondaires 4, ns4 haiti">
     <meta name="author" content="Quiz Ayiti">
