@@ -3,19 +3,31 @@
 ├── 9e/
 │   ├── index.php
 |   ├── completer.php
-|   ├── paire.php
+|   ├── quiz_template.php
 |   ├── qcm.php
-|   ├── vf.php
-|   ├── Exam.php
-│   └── examen/ dossiers contanant les examens qu'on va tirer les questions
+|   ├── programmes.php
+|   ├── exam.php
+│   ├── examen/ 
+│   ├──cartes/
+│   └── programmes/
 ├── ns4/
 │   ├── index.php
-│   └── examen/
-│       └── index.html
+|   ├── completer.php
+|   ├── quiz_template.php
+|   ├── qcm.php
+|   ├── programmes.php
+|   ├── exam.php
+│   ├── examen/ 
+│   ├── schema/
+│   └── programmes/
 ├── config/
 │   ├── connexion.php
-├── images/ (dossier vide)
+|   ├── db_quiz.sql
+├── images/ 
+├── about/
+|   └──index.php
 ├── db_quiz.sql
+├── download.php
 ├── structure.txt
 └── LICENSE (fichier licence MIT)
 
