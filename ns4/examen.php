@@ -37,7 +37,6 @@ function getIcon(string $fichier): string {
 function nomAffichage(string $fichier): string {
     $base = pathinfo($fichier, PATHINFO_FILENAME);
 
-    // Mapping matière
     $matiereMap = [
         'anglais'    => 'Anglais',
         'arts'       => 'Arts & Musiques',
@@ -60,27 +59,22 @@ function nomAffichage(string $fichier): string {
         'bio-geo'    => 'Bio-Géo',
     ];
 
-    // Le nom est de la forme : Matière_Année_Session_MotClé
-    // On extrait les parties
     $parts = explode('_', $base);
     $matiere = strtolower($parts[0] ?? '');
     $label   = $matiereMap[$matiere] ?? ($parts[0] ?? $base);
 
-    // Session : LLA, SES, SMP, SVT, SMO, SVT-SMP, etc.
     $session = '';
     foreach ($parts as $i => $p) {
-        if ($i < 2) continue; // ignorer matière + année
+        if ($i < 2) continue;
         if (preg_match('/^(LLA|SES|SMP|SVT|SMO|SM)/', strtoupper($p))) {
             $session = strtoupper($p);
             break;
         }
     }
 
-    // Mot-clé (dernier segment significatif)
     $keyword = '';
     $last = end($parts);
     if ($last && !preg_match('/^\d{4}$/', $last) && !preg_match('/^(LLA|SES|SMP|SVT|SMO|SM)$/i', $last)) {
-        // Retirer suffixes parasites
         $keyword = preg_replace('/([-_]?(NS|SR|B)$)/i', '', $last);
         $keyword = preg_replace('/-NS$|-SR$/i', '', $keyword);
     }
@@ -88,16 +82,6 @@ function nomAffichage(string $fichier): string {
     $parts_display = array_filter([$label, $session, $keyword]);
     return implode(' · ', $parts_display);
 }
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Structure des examens NS4, groupés par matière puis par année
-// Noms de fichiers EXACTS (sans extension — on ajoute .pdf ou .docx ci-dessous)
-// Les fichiers .docx sont convertis en PDF lors de l'affichage, ou on les sert
-// tels quels. Le tableau liste les noms avec leur extension réelle.
-// ─────────────────────────────────────────────────────────────────────────────
-
-// Pour NS4, les fichiers sont dans : /ns4/examen/<MATIERE>/
-// On organise par ANNÉE (accordéon), avec les matières dedans.
 
 $matieres = [
     'Anglais'      => 'Anglais',
@@ -114,10 +98,6 @@ $matieres = [
     'SVT'          => 'SVT / Bio-Géo',
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Liste complète des fichiers par matière
-// (basée sur les captures d'écran fournies)
-// ─────────────────────────────────────────────────────────────────────────────
 $fichiers_par_matiere = [
 
     'Anglais' => [
@@ -667,14 +647,9 @@ $fichiers_par_matiere = [
     ],
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Construire index par ANNÉE à partir de la liste par matière
-// ─────────────────────────────────────────────────────────────────────────────
-$examens_par_annee = []; // ['2022' => [ ['matiere'=>'Anglais', 'dossier'=>'Anglais', 'fichier'=>'...'], ... ], ...]
-
+$examens_par_annee = [];
 foreach ($fichiers_par_matiere as $dossier => $fichiers) {
     foreach ($fichiers as $fichier) {
-        // Extraire l'année du nom de fichier (4 chiffres consécutifs)
         if (preg_match('/_(\d{4})_/', $fichier, $m) || preg_match('/(\d{4})/', $fichier, $m)) {
             $annee = $m[1];
         } else {
@@ -687,7 +662,6 @@ foreach ($fichiers_par_matiere as $dossier => $fichiers) {
         ];
     }
 }
-
 krsort($examens_par_annee);
 ?>
 <!DOCTYPE html>
@@ -699,12 +673,9 @@ krsort($examens_par_annee);
     <title><?= $pageTitle ?> - Quiz Ayiti</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* ══════════════════════════════════════
-           VARIABLES & RESET
-        ══════════════════════════════════════ */
         :root {
-            --blue: #002395; --red: #d21034; --gold: #f1c40f;
-            --purple: #7c3aed; --green: #10b981;
+            --blue: #002395; --red: #d21034; --gold: #f1c40f; --green: #10b981;
+            --purple: #7c3aed;
             --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
             --gray-300: #cbd5e1; --gray-400: #94a3b8; --gray-500: #64748b;
             --gray-600: #475569; --gray-700: #334155; --gray-800: #1e293b;
@@ -725,28 +696,43 @@ krsort($examens_par_annee);
             display: flex; flex-direction: column; min-height: 100vh;
         }
 
-        /* ── NAVBAR ── */
+        /* ═══════════════════ NAVBAR UNIFIÉE ═══════════════════ */
         .navbar {
             display: flex; justify-content: space-between; align-items: center;
             background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
-            padding: 0 2rem; height: 70px;
-            position: sticky; top: 0; z-index: 1000;
+            padding: 0 1.5rem;
+            height: 70px; position: sticky; top: 0; z-index: 1000;
             border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-sm);
         }
-        .nav-brand { display: flex; align-items: center; gap: .75rem; font-size: 1.4rem; font-weight: 800; color: var(--gray-900); text-decoration: none; }
-        .nav-brand .brand-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--blue), #1e40af); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.2rem; font-weight: 800; box-shadow: 0 4px 12px rgba(0,35,149,.25); }
-        .nav-brand .brand-dot { color: var(--red); }
-        .nav-menu { display: flex; list-style: none; gap: .5rem; align-items: center; }
-        .nav-menu a { color: var(--gray-600); text-decoration: none; font-weight: 500; font-size: .95rem; padding: .6rem 1.1rem; border-radius: var(--radius); transition: all var(--transition); }
+        .nav-brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+        .nav-brand img { height: 44px; width: 44px; object-fit: contain; border-radius: var(--radius); }
+        .nav-brand-text { font-size: 1.35rem; font-weight: 800; color: var(--gray-900); }
+        .nav-brand-text span { color: var(--red); }
+        .nav-brand:hover .nav-brand-text { color: var(--blue); }
+        .nav-menu {
+            display: flex; list-style: none;
+            gap: 0.35rem;
+            align-items: center;
+        }
+        .nav-menu a {
+            color: var(--gray-600); text-decoration: none; font-weight: 500; font-size: .9rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: var(--radius); transition: all var(--transition);
+            white-space: nowrap;
+        }
         .nav-menu a:hover { color: var(--blue); background: #eff6ff; }
-        .nav-menu a.active { color: var(--white); background: var(--blue); font-weight: 600; }
+        .nav-menu a.active { color: var(--white); background: var(--purple); font-weight: 600; }
+        .nav-menu a.btn-apk {
+            background: linear-gradient(135deg, var(--green), #059669); color: var(--white);
+            font-weight: 600; box-shadow: 0 3px 10px rgba(16,185,129,.3);
+            padding: 0.5rem 0.9rem;
+        }
+        .nav-menu a.btn-apk:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(16,185,129,.4); }
         .nav-toggle { display: none; flex-direction: column; background: none; border: none; cursor: pointer; gap: 5px; padding: 4px; }
         .nav-toggle .bar { width: 26px; height: 2.5px; background: var(--gray-700); border-radius: 2px; }
 
-        /* ── LAYOUT ── */
         .container { flex: 1; width: 100%; max-width: 1080px; margin: 0 auto; padding: 2.5rem 1.5rem; }
 
-        /* ── PAGE HEADER ── */
         .page-header { text-align: center; margin-bottom: 2.5rem; }
         .class-badge {
             display: inline-flex; align-items: center; gap: .5rem;
@@ -760,12 +746,10 @@ krsort($examens_par_annee);
         .page-header .subtitle { color: var(--gray-500); font-size: .95rem; margin-top: .4rem; }
         .welcome-msg { display: inline-flex; align-items: center; gap: .5rem; background: #f0fdf4; color: #166534; font-weight: 600; font-size: .95rem; padding: .55rem 1.2rem; border-radius: 50px; border: 1px solid #bbf7d0; margin-top: .75rem; }
 
-        /* ── STATS BAR ── */
         .stats-bar { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; margin-bottom: 2rem; }
         .stat-pill { display: flex; align-items: center; gap: .5rem; background: var(--white); border: 1px solid var(--gray-200); border-radius: 50px; padding: .55rem 1.2rem; font-size: .88rem; font-weight: 600; color: var(--gray-700); box-shadow: var(--shadow-sm); }
         .stat-pill .stat-num { color: var(--purple); font-weight: 800; font-size: 1rem; }
 
-        /* ── TABS MATIÈRES ── */
         .filter-bar { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.75rem; }
         .filter-btn {
             display: inline-flex; align-items: center; gap: .4rem;
@@ -779,7 +763,6 @@ krsort($examens_par_annee);
         .filter-btn .fbadge { background: rgba(255,255,255,0.25); border-radius: 50px; padding: .1rem .45rem; font-size: .75rem; }
         .filter-btn:not(.active) .fbadge { background: var(--gray-100); color: var(--gray-500); }
 
-        /* ── RECHERCHE ── */
         .search-wrap { margin-bottom: 1.5rem; position: relative; }
         .search-wrap input {
             width: 100%; padding: .85rem 1rem .85rem 3rem;
@@ -791,7 +774,6 @@ krsort($examens_par_annee);
         .search-wrap input:focus { border-color: var(--purple); }
         .search-wrap .search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; pointer-events: none; }
 
-        /* ── ACCORDÉON ANNÉES ── */
         .years-wrapper { display: flex; flex-direction: column; gap: .85rem; }
         .year-block { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 1.5px solid var(--gray-200); transition: box-shadow var(--transition); }
         .year-block:hover { box-shadow: var(--shadow-lg); }
@@ -818,12 +800,10 @@ krsort($examens_par_annee);
         .yr-arrow { flex-shrink: 0; font-size: 1rem; color: var(--gray-400); transition: transform .3s ease; }
         .year-trigger.open .yr-arrow { transform: rotate(90deg); color: var(--purple); }
 
-        /* Contenu panel */
         .year-panel { display: none; padding: 1.25rem; }
         .year-panel.show { display: block; animation: fadeSlide .25s ease; }
         @keyframes fadeSlide { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Groupes par matière dans le panel */
         .matiere-group { margin-bottom: 1.25rem; }
         .matiere-group:last-child { margin-bottom: 0; }
         .matiere-label {
@@ -834,7 +814,6 @@ krsort($examens_par_annee);
             border-radius: 50px; margin-bottom: .75rem;
         }
 
-        /* Grille fichiers */
         .file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: .65rem; }
         .file-card {
             display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -852,26 +831,39 @@ krsort($examens_par_annee);
         .file-ext.ext-docx, .file-ext.ext-doc { background: #dbeafe; color: #1e40af; }
         .file-ext.ext-jpg, .file-ext.ext-jpeg { background: #fef3c7; color: #92400e; }
 
-        /* ── BOUTON RETOUR ── */
         .btn-back { display: inline-flex; align-items: center; gap: .6rem; padding: .85rem 1.6rem; background: var(--gray-200); color: var(--gray-700); border: none; border-radius: var(--radius); font-size: .95rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: all var(--transition); margin-top: 1rem; }
         .btn-back:hover { background: var(--gray-300); transform: translateX(-3px); }
 
-        /* ── FOOTER ── */
         .footer { background: var(--white); border-top: 1px solid var(--gray-200); padding: 1.5rem; text-align: center; color: var(--gray-400); font-size: .85rem; margin-top: auto; }
 
-        /* ── RESPONSIVE ── */
+        .year-block.hidden { display: none; }
+
+        /* ═══════════════════ RESPONSIVE ═══════════════════ */
         @media (max-width: 768px) {
             .navbar { padding: 0 1.25rem; height: 60px; }
-            .nav-brand { font-size: 1.2rem; }
-            .nav-brand .brand-icon { width: 34px; height: 34px; font-size: 1rem; }
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: var(--white); padding: 1rem; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); z-index: 999; }
+            .nav-menu {
+                display: none; flex-direction: column;
+                position: absolute; top: 60px; left: 0; width: 100%;
+                background: var(--white); padding: 1rem;
+                border-bottom: 1px solid var(--gray-200);
+                box-shadow: var(--shadow-lg); z-index: 999;
+                gap: 0.5rem;
+            }
             .nav-menu.show { display: flex; }
-            .nav-menu a { padding: .8rem 1rem; }
+            .nav-menu a {
+                padding: 0.75rem 1rem;
+                font-size: 0.95rem;
+                width: 100%;
+            }
             .nav-toggle { display: flex; }
             .container { padding: 1.5rem 1rem; }
             .file-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: .55rem; }
             .yr-badge { width: 44px; height: 44px; font-size: .85rem; }
             .stats-bar { gap: .5rem; }
+        }
+        @media (min-width: 641px) and (max-width: 900px) {
+            .nav-menu a { padding: 0.5rem 0.7rem; font-size: 0.85rem; }
+            .nav-menu { gap: 0.25rem; }
         }
         @media (max-width: 480px) {
             .file-grid { grid-template-columns: 1fr 1fr; }
@@ -880,15 +872,15 @@ krsort($examens_par_annee);
         @media (max-width: 340px) {
             .file-grid { grid-template-columns: 1fr; }
         }
-        .year-block.hidden { display: none; }
     </style>
 </head>
 <body>
 
-<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<!-- ═══════════════════════ NAVBAR UNIFIÉE ═══════════════════════ -->
 <nav class="navbar">
     <a href="<?= $basePath ?>/index.php" class="nav-brand">
-        <span class="brand-icon">Q</span>Quiz<span class="brand-dot">.</span>Ayiti
+        <img src="<?= $basePath ?>/images/logo.png" alt="Quiz Ayiti">
+        <span class="nav-brand-text">Quiz Ayiti</span>
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -896,14 +888,15 @@ krsort($examens_par_annee);
     <ul class="nav-menu" id="navMenu">
         <li><a href="<?= $basePath ?>/index.php">Accueil</a></li>
         <li><a href="<?= $basePath ?>/9e/index.php">9ème AF</a></li>
-        <li><a href="<?= $basePath ?>/ns4/index.php" class="active">NS4</a></li>
+        <li><a href="<?= $basePath ?>/ns4/index.php" >NS4</a></li>
+        <li><a href="<?= $basePath ?>/about/index.php">À propos</a></li>
+        <li><a href="<?= $basePath ?>/download.php" >Télécharger l'app</a></li>
     </ul>
 </nav>
 
 <!-- ═══════════════════════ MAIN ═══════════════════════ -->
 <main class="container">
 
-    <!-- En-tête -->
     <div class="page-header">
         <div class="class-badge">🎓 Nouveaux Secondaires 4</div>
         <h1>Examens <span class="highlight">Passés</span></h1>
@@ -913,7 +906,6 @@ krsort($examens_par_annee);
         <?php endif; ?>
     </div>
 
-    <!-- Stats -->
     <?php
         $totalFichiers = array_sum(array_map('count', $examens_par_annee));
         $totalAnnees   = count($examens_par_annee);
@@ -926,7 +918,6 @@ krsort($examens_par_annee);
         <div class="stat-pill">🎯 <span class="stat-num">100 %</span> officiel MENFP</div>
     </div>
 
-    <!-- Filtres par matière -->
     <div class="filter-bar" id="filterBar">
         <button class="filter-btn active" data-matiere="all" onclick="filterMatiere(this, 'all')">
             🗂️ Toutes les matières <span class="fbadge"><?= $totalFichiers ?></span>
@@ -939,16 +930,13 @@ krsort($examens_par_annee);
         <?php endforeach; ?>
     </div>
 
-    <!-- Recherche -->
     <div class="search-wrap">
         <span class="search-icon">🔍</span>
         <input type="text" id="searchInput" placeholder="Rechercher une année, matière ou mot-clé…" autocomplete="off">
     </div>
 
-    <!-- Accordéon des années -->
     <div class="years-wrapper" id="yearsWrapper">
         <?php foreach ($examens_par_annee as $annee => $items):
-            // Grouper par matière pour cette année
             $parMatiere = [];
             foreach ($items as $item) {
                 $parMatiere[$item['dossier']][] = $item['fichier'];
@@ -1009,13 +997,11 @@ krsort($examens_par_annee);
 
 </main>
 
-<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
 <footer class="footer">
     <p>&copy; <?= date('Y') ?> <strong>Quiz Ayiti</strong> &mdash; NS4 — Nouveaux Secondaires 4 &mdash; Programmes officiels MENFP</p>
 </footer>
 
 <script>
-/* ── Navigation mobile ── */
 const navToggle = document.getElementById('navToggle');
 const navMenu   = document.getElementById('navMenu');
 navToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
@@ -1023,7 +1009,6 @@ document.addEventListener('click', e => {
     if (!document.querySelector('.navbar').contains(e.target)) navMenu.classList.remove('show');
 });
 
-/* ── Accordéon ── */
 function toggleYear(btn) {
     const panel  = btn.nextElementSibling;
     const isOpen = panel.classList.contains('show');
@@ -1037,11 +1022,9 @@ function toggleYear(btn) {
     }
 }
 
-// Ouvrir la première année automatiquement
 const firstTrigger = document.querySelector('.year-trigger');
 if (firstTrigger) firstTrigger.click();
 
-/* ── Filtre par matière ── */
 let currentMatiere = 'all';
 
 function filterMatiere(btn, matiere) {
@@ -1051,33 +1034,25 @@ function filterMatiere(btn, matiere) {
     applyFilters();
 }
 
-/* ── Recherche ── */
 document.getElementById('searchInput').addEventListener('input', applyFilters);
 
 function applyFilters() {
     const q = document.getElementById('searchInput').value.trim().toLowerCase();
-
     document.querySelectorAll('.year-block').forEach(block => {
         const year = block.dataset.year;
         let blockVisible = false;
-
         block.querySelectorAll('.matiere-group').forEach(group => {
             const dossier = group.dataset.dossier;
-            // Filtre matière
             const matiereOk = (currentMatiere === 'all' || dossier === currentMatiere);
-
-            // Filtre recherche dans les noms de fichiers et l'année
             let searchOk = true;
             if (q) {
                 const names = [...group.querySelectorAll('.file-name')].map(n => n.textContent.toLowerCase()).join(' ');
                 searchOk = year.includes(q) || names.includes(q) || dossier.toLowerCase().includes(q);
             }
-
             const visible = matiereOk && searchOk;
             group.style.display = visible ? '' : 'none';
             if (visible) blockVisible = true;
         });
-
         block.classList.toggle('hidden', !blockVisible);
     });
 }
