@@ -19,15 +19,13 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
-    <!-- ===== SEO PRIMARY ===== -->
-    <title>QCM NS4 Haïti — Quiz Philo, Maths, Français, Physique | Entraînement Terminale MENFP | Quiz Ayiti</title>
+    <title>QCM NS4 Haïti — Quiz Philo, Maths, Chimie, SVT, Physique | Entraînement Terminale MENFP | Quiz Ayiti</title>
     <meta name="description" content="QCM NS4 Haïti — Jeux et entraînement interactif pour préparer tes examens. Quiz de Philosophie (kwiz philo, quiz filo), Mathématiques, Français, Physique, Chimie, SVT, Anglais, Histoire-Géo. Toutes les matières du programme NS4 MENFP. Kwiz NS4, Qwiz NS4, Kwix NS4. Gratuit, sans inscription.">
     <meta name="keywords" content="qcm ns4, quiz ns4, kwiz ns4, qwiz ns4, kwix ns4, quiz philo ns4, qcm philosophie terminale haiti, kwiz philo, quiz philo haiti, kwiz filo, qwiz philo, filo haiti, quiz terminale haiti, entrainement ns4, jeu quiz ns4, jeu preparation examen haiti, divertissement educatif ns4, quiz maths ns4, qcm maths terminale, quiz francais ns4, qcm francais terminale, quiz physique ns4, qcm chimie ns4, quiz svt ns4, quiz histoire geo ns4, quiz anglais ns4, se preparer examen ns4 haiti, menfp ns4, bac haiti 2025, programme ns4, nouveaux secondaires 4 quiz, quiz interactif ns4, entrainement bac haiti">
     <meta name="author" content="Quiz Ayiti">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="<?= htmlspecialchars($siteUrl) ?>">
 
-    <!-- ===== Open Graph ===== -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="QCM NS4 Haïti — Entraînement Quiz Philo, Maths, Français & toutes les matières">
     <meta property="og:description" content="Jeux et quiz interactifs pour préparer les examens NS4 en Haïti. 8 matières disponibles : Philosophie, Maths, Français, Physique, Chimie, SVT, Anglais, Histoire-Géo. 100% conforme MENFP.">
@@ -36,12 +34,10 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
     <meta property="og:locale" content="fr_HT">
     <meta property="og:image" content="../images/logo.png">
 
-    <!-- ===== Twitter Card ===== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="QCM NS4 Haïti — Quiz Philo, Maths, Français">
     <meta name="twitter:description" content="Entraîne-toi avec des QCM interactifs pour préparer tes examens NS4 en Haïti. Gratuit.">
 
-    <!-- ===== Schema.org ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -78,30 +74,17 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --blue: #002395;
-            --blue-light: #3b82f6;
-            --red: #d21034;
-            --gold: #f1c40f;
-            --green: #28a745;
-            --purple: #7c3aed;
-            --gray-50: #f8fafc;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-300: #cbd5e1;
-            --gray-400: #94a3b8;
-            --gray-500: #64748b;
-            --gray-600: #475569;
-            --gray-700: #334155;
-            --gray-800: #1e293b;
-            --gray-900: #0f172a;
-            --white: #ffffff;
+            --blue: #002395; --blue-light: #3b82f6; --red: #d21034; --gold: #f1c40f;
+            --green: #28a745; --purple: #7c3aed;
+            --gray-50: #f8fafc; --gray-100: #f1f5f9; --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1; --gray-400: #94a3b8; --gray-500: #64748b;
+            --gray-600: #475569; --gray-700: #334155; --gray-800: #1e293b;
+            --gray-900: #0f172a; --white: #ffffff;
             --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
             --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
             --shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
             --shadow-xl: 0 20px 25px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.04);
-            --radius: 12px;
-            --radius-lg: 16px;
-            --radius-xl: 24px;
+            --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
             --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -114,39 +97,52 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
             display: flex; flex-direction: column; min-height: 100vh;
         }
 
-        /* ========== NAVBAR ========== */
+        /* ═══════════════════ NAVBAR UNIFIÉE ═══════════════════ */
         .navbar {
             display: flex; justify-content: space-between; align-items: center;
             background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
-            padding: 0 2rem; height: 70px; position: sticky; top: 0; z-index: 1000;
+            padding: 0 1.5rem;
+            height: 70px; position: sticky; top: 0; z-index: 1000;
             border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-sm);
         }
-        .nav-brand { display: flex; align-items: center; gap: 0.75rem; font-size: 1.4rem; font-weight: 800; color: var(--gray-900); text-decoration: none; transition: var(--transition); }
-        .nav-brand:hover { transform: scale(1.02); }
-        .nav-brand .brand-icon { width: 42px; height: 42px; background: linear-gradient(135deg, var(--blue), #1e40af); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.3rem; font-weight: 800; box-shadow: 0 4px 12px rgba(0,35,149,0.25); }
-        .nav-brand .brand-dot { color: var(--red); }
-        .nav-menu { display: flex; list-style: none; gap: 0.5rem; align-items: center; }
-        .nav-menu a { color: var(--gray-600); text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 0.6rem 1.1rem; border-radius: var(--radius); transition: all var(--transition); }
+        .nav-brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+        .nav-brand img { height: 44px; width: 44px; object-fit: contain; border-radius: var(--radius); }
+        .nav-brand-text { font-size: 1.35rem; font-weight: 800; color: var(--gray-900); }
+        .nav-brand-text span { color: var(--red); }
+        .nav-brand:hover .nav-brand-text { color: var(--blue); }
+        .nav-menu {
+            display: flex; list-style: none;
+            gap: 0.35rem;
+            align-items: center;
+        }
+        .nav-menu a {
+            color: var(--gray-600); text-decoration: none; font-weight: 500; font-size: .9rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: var(--radius); transition: all var(--transition);
+            white-space: nowrap;
+        }
         .nav-menu a:hover { color: var(--blue); background: #eff6ff; }
-        .nav-menu a.active { color: var(--white); background: var(--blue); font-weight: 600; }
+        .nav-menu a.active { color: var(--white); background: var(--purple); font-weight: 600; }
+        .nav-menu a.btn-apk {
+            background: linear-gradient(135deg, var(--green), #059669); color: var(--white);
+            font-weight: 600; box-shadow: 0 3px 10px rgba(16,185,129,.3);
+            padding: 0.5rem 0.9rem;
+        }
+        .nav-menu a.btn-apk:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(16,185,129,.4); }
         .nav-toggle { display: none; flex-direction: column; background: none; border: none; cursor: pointer; gap: 5px; padding: 4px; }
         .nav-toggle .bar { width: 26px; height: 2.5px; background: var(--gray-700); border-radius: 2px; }
 
-        /* ========== CONTAINER ========== */
         .container { flex: 1; width: 100%; max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
 
-        /* ========== PAGE HEADER ========== */
         .page-header { text-align: center; margin-bottom: 2rem; }
         .page-header .class-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #fdf4ff, #ede9fe); color: var(--purple); font-weight: 600; font-size: 0.85rem; padding: 0.5rem 1.2rem; border-radius: 50px; margin-bottom: 0.75rem; border: 1px solid #ddd6fe; }
         .page-header h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; color: var(--gray-900); }
         .page-header h1 .highlight { background: linear-gradient(135deg, var(--purple), #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .page-header .subtitle { color: var(--gray-500); font-size: 0.95rem; margin-top: 0.4rem; }
 
-        /* SEO tags strip */
         .seo-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin: 0.6rem 0 0; }
         .seo-tag { background: var(--gray-100); color: var(--gray-500); font-size: 0.72rem; padding: 0.22rem 0.6rem; border-radius: 50px; border: 1px solid var(--gray-200); }
 
-        /* ========== CARDS ========== */
         .card { background: var(--white); border-radius: var(--radius-xl); padding: 2rem; box-shadow: var(--shadow-lg); margin-bottom: 1.5rem; border: 1px solid var(--gray-100); transition: var(--transition); }
         .card:hover { box-shadow: var(--shadow-xl); }
         .card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--gray-100); }
@@ -154,7 +150,6 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
         .card-header h2 { font-size: 1.3rem; font-weight: 700; color: var(--gray-900); margin: 0; }
         .card-header p { color: var(--gray-400); font-size: 0.85rem; margin: 0; }
 
-        /* ========== GRILLE MATIÈRES ========== */
         .subject-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.85rem; }
         .subject-btn {
             display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
@@ -168,7 +163,6 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
         .subject-btn .subject-name { font-weight: 600; font-size: 0.9rem; color: var(--gray-700); }
         .subject-btn .subject-hint { font-size: 0.72rem; color: var(--gray-400); line-height: 1.3; }
 
-        /* ========== BANNER AUTRES OPTIONS ========== */
         .other-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 2px solid var(--gray-100); }
         .other-btn { display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1rem; border-radius: var(--radius); text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: all var(--transition); border: 2px solid transparent; }
         .other-btn:hover { transform: translateY(-2px); }
@@ -181,7 +175,6 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
         .other-btn.formules { background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe; }
         .other-btn.formules:hover { border-color: #8b5cf6; }
 
-        /* ========== QUIZ AREA ========== */
         #quizContainer { min-height: 100px; }
         .question-progress { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; font-size: 0.85rem; color: var(--gray-500); font-weight: 500; }
         .progress-bar { flex: 1; height: 6px; background: var(--gray-200); border-radius: 3px; overflow: hidden; }
@@ -197,7 +190,6 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
         .btn-next:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(124,58,237,0.35); }
         .btn-back { display: block; width: 100%; padding: 0.9rem; background: var(--gray-200); color: var(--gray-700); border: none; border-radius: var(--radius); font-size: 1rem; font-weight: 600; cursor: pointer; margin-top: 0.5rem; text-align: center; text-decoration: none; }
 
-        /* ========== SCORE ========== */
         .score-final { text-align: center; padding: 1rem 0; }
         .score-circle { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #fdf4ff, #ede9fe); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 1.5rem; border: 4px solid var(--purple); }
         .score-circle .score-number { font-size: 2.5rem; font-weight: 800; color: var(--purple); }
@@ -211,7 +203,6 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
         .summary-table .row-correct { background: #d4edda; }
         .summary-table .row-wrong { background: #f8d7da; }
 
-        /* ========== SEO BLOCK ========== */
         .seo-block { background: var(--white); border-radius: var(--radius-xl); padding: 1.5rem 2rem; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100); margin-bottom: 1.5rem; }
         .seo-block h2 { font-size: 1.05rem; font-weight: 700; color: var(--gray-800); margin-bottom: 0.6rem; }
         .seo-block p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.7; }
@@ -221,17 +212,32 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
         .footer { background: var(--white); border-top: 1px solid var(--gray-200); padding: 1.5rem; text-align: center; color: var(--gray-400); font-size: 0.85rem; margin-top: auto; }
         .footer-keywords { margin-top: 0.5rem; font-size: 0.72rem; color: var(--gray-300); }
 
+        /* ═══════════════════ RESPONSIVE ═══════════════════ */
         @media (max-width: 768px) {
             .navbar { padding: 0 1.25rem; height: 60px; }
-            .nav-brand { font-size: 1.2rem; }
-            .nav-brand .brand-icon { width: 34px; height: 34px; font-size: 1rem; }
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: var(--white); padding: 1rem; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); z-index: 999; }
+            .nav-menu {
+                display: none; flex-direction: column;
+                position: absolute; top: 60px; left: 0; width: 100%;
+                background: var(--white); padding: 1rem;
+                border-bottom: 1px solid var(--gray-200);
+                box-shadow: var(--shadow-lg); z-index: 999;
+                gap: 0.5rem;
+            }
             .nav-menu.show { display: flex; }
+            .nav-menu a {
+                padding: 0.75rem 1rem;
+                font-size: 0.95rem;
+                width: 100%;
+            }
             .nav-toggle { display: flex; }
             .container { padding: 1.25rem 1rem; }
             .card { padding: 1.25rem; }
             .subject-grid { grid-template-columns: repeat(3, 1fr); }
             .seo-block { padding: 1.25rem; }
+        }
+        @media (min-width: 641px) and (max-width: 900px) {
+            .nav-menu a { padding: 0.5rem 0.7rem; font-size: 0.85rem; }
+            .nav-menu { gap: 0.25rem; }
         }
         @media (max-width: 400px) {
             .subject-grid { grid-template-columns: repeat(2, 1fr); }
@@ -239,9 +245,11 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
     </style>
 </head>
 <body>
+    <!-- ═══════════════════ NAVBAR UNIFIÉE ═══════════════════ -->
     <nav class="navbar">
         <a href="<?= $basePath ?>/index.php" class="nav-brand">
-            <span class="brand-icon">Q</span>Quiz<span class="brand-dot">.</span>Ayiti
+            <img src="<?= $basePath ?>/images/logo.png" alt="Quiz Ayiti">
+            <span class="nav-brand-text">Quiz Ayiti</span>
         </a>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
             <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -249,12 +257,13 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
         <ul class="nav-menu" id="navMenu">
             <li><a href="<?= $basePath ?>/index.php">Accueil</a></li>
             <li><a href="<?= $basePath ?>/9e/index.php">9ème AF</a></li>
-            <li><a href="<?= $basePath ?>/ns4/index.php" class="active">NS4</a></li>
+            <li><a href="<?= $basePath ?>/ns4/index.php" >NS4</a></li>
+            <li><a href="<?= $basePath ?>/about/index.php">À propos</a></li>
+            <li><a href="<?= $basePath ?>/download.php">Télécharger l'app</a></li>
         </ul>
     </nav>
 
     <main class="container">
-        <!-- Header -->
         <div class="page-header">
             <div class="class-badge">🎮 Entraînement interactif — NS4 Terminale Haïti — Jeux & Révisions</div>
             <h1>QCM <span class="highlight">NS4</span> Haïti</h1>
@@ -271,7 +280,6 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
             </div>
         </div>
 
-        <!-- Choix de matière -->
         <div class="card">
             <div class="card-header">
                 <div class="card-icon">📚</div>
@@ -291,11 +299,7 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
                     <span class="subject-name">Mathématiques</span>
                     <span class="subject-hint">Algèbre · Géométrie</span>
                 </button>
-                <button class="subject-btn" data-matiere="francais">
-                    <span class="subject-icon">📖</span>
-                    <span class="subject-name">Français</span>
-                    <span class="subject-hint">Grammaire · Littérature</span>
-                </button>
+                
                 <button class="subject-btn" data-matiere="physique">
                     <span class="subject-icon">⚡</span>
                     <span class="subject-name">Physique</span>
@@ -322,11 +326,8 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
                     <span class="subject-hint">Grammar · Reading</span>
                 </button>
             </div>
-
-           
         </div>
 
-        <!-- Zone de quiz -->
         <div class="card" id="quizCard" style="display:none;">
             <div class="card-header">
                 <div class="card-icon">📋</div>
@@ -342,13 +343,11 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
             ⬅️ Retour aux exercices NS4
         </a>
 
-        <!-- SEO text block -->
         <div class="seo-block" style="margin-top:1.5rem;">
             <h2>Quiz NS4 Haïti — Jeux et entraînement pour la Terminale</h2>
             <p>
                 <strong>Quiz Ayiti QCM NS4</strong> est l'endroit idéal pour s'entraîner, réviser et se divertir en préparant les examens officiels de <strong>Terminale (NS4)</strong> en Haïti. Que tu cherches un <strong>kwiz NS4</strong>, un <strong>qwiz NS4</strong>, un <strong>quiz philo</strong>, un <strong>kwiz filo</strong> ou tout simplement un moyen ludique et efficace de réviser, notre plateforme offre tout ça gratuitement.
             </p>
-            
         </div>
     </main>
 
@@ -364,7 +363,6 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
 
 function formatMath(text) {
     if (!text) return text;
-
     const REPLACEMENTS = [
         ['√', '&radic;'], ['∫', '&int;'], ['∞', '&infin;'], ['≈', '&asymp;'],
         ['≠', '&ne;'], ['≤', '&le;'], ['≥', '&ge;'], ['×', '&times;'],
@@ -390,7 +388,6 @@ function formatMath(text) {
         ['₊', '<sub>+</sub>'], ['₋', '<sub>-</sub>'],
         ['½', '&frac12;'], ['⅓', '&frac13;'], ['¼', '&frac14;'], ['¾', '&frac34;'],
     ];
-
     for (const [from, to] of REPLACEMENTS) {
         text = text.split(from).join(to);
     }
@@ -407,7 +404,6 @@ function formatMath(text) {
         const quizCard = document.getElementById('quizCard');
         const quizContainer = document.getElementById('quizContainer');
 
-        // Menu mobile
         document.getElementById('navToggle').addEventListener('click', () => {
             document.getElementById('navMenu').classList.toggle('show');
         });
@@ -417,7 +413,6 @@ function formatMath(text) {
             }
         });
 
-        // Sélection matière
         document.querySelectorAll('.subject-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.subject-btn').forEach(b => b.classList.remove('active'));
@@ -434,7 +429,6 @@ function formatMath(text) {
         async function loadQuiz(matiere) {
             currentIndex = 0; score = 0; userAnswers = [];
             quizContainer.innerHTML = '<p style="text-align:center;padding:2rem;">⏳ Chargement des questions...</p>';
-
             try {
                 const url = `${API_URL}?classe=${CLASSE}&matiere=${matiere}&type=qcm&random=true&limit=20`;
                 const response = await fetch(url);
@@ -466,7 +460,6 @@ function formatMath(text) {
             if (currentIndex >= currentQuestions.length) { showScore(); return; }
             const q = currentQuestions[currentIndex];
             const progress = (currentIndex / currentQuestions.length) * 100;
-
             let html = `
                 <div class="question-progress">
                     <span>Question ${currentIndex + 1}/${currentQuestions.length}</span>
@@ -474,7 +467,6 @@ function formatMath(text) {
                 </div>
                 <p class="question-text">${formatMath(q.enonce)}</p>
             `;
-
             if (q.options && q.options.length >= 2) {
                 q.options.forEach((option, index) => {
                     const letter = String.fromCharCode(65 + index);
@@ -483,9 +475,7 @@ function formatMath(text) {
             } else {
                 html += '<p style="color:#dc3545;text-align:center;">⚠️ Question sans options.</p>';
             }
-
             quizContainer.innerHTML = html;
-
             document.querySelectorAll('.option-btn[data-correct]').forEach(btn => {
                 btn.addEventListener('click', function() {
                     if (this.disabled) return;
@@ -526,7 +516,6 @@ function formatMath(text) {
                       pct >= 50 ? "Pas mal ! Mais tu peux encore t'améliorer." :
                                   'Continue à réviser, tu vas y arriver !';
             let msgColor = pct >= 70 ? '#28a745' : pct >= 50 ? '#f59e0b' : '#dc3545';
-
             let html = `
                 <div class="score-final">
                     <div class="score-emoji">${emoji}</div>
@@ -540,7 +529,6 @@ function formatMath(text) {
                     <a href="<?= $basePath ?>/ns4/index.php" class="btn-back" style="max-width:300px;margin:0.5rem auto;">⬅️ Retour aux exercices</a>
                 </div>
             `;
-
             if (userAnswers.length > 0) {
                 html += `<div style="margin-top:2rem;"><h3 style="text-align:center;margin-bottom:1rem;color:var(--gray-700);">📋 Résumé de tes réponses</h3><div style="overflow-x:auto;"><table class="summary-table"><thead><tr><th style="width:40px;">#</th><th>Question</th><th style="width:60px;">Résultat</th></tr></thead><tbody>`;
                 userAnswers.forEach((a, i) => {
@@ -549,7 +537,6 @@ function formatMath(text) {
                 });
                 html += `</tbody></table></div></div>`;
             }
-
             quizContainer.innerHTML = html;
             quizContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }

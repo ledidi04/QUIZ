@@ -6,11 +6,28 @@ require_once __DIR__ . '/includes/functions.php';
 // DÉTECTION AUTOMATIQUE DU DOSSIER RACINE
 // ═══════════════════════════════════════
 $basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
-// Exemple : si le site est dans /quiz, $basePath = "/quiz"
-//           si le site est à la racine, $basePath = ""
 
 // URL complète actuelle (pour JSON-LD et Open Graph)
 $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $basePath;
+
+// ═══════════════════════════════════════
+// TRAITEMENT DU FORMULAIRE
+// ═══════════════════════════════════════
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['student_name']  = trim($_POST['student_name'] ?? '');
+    $_SESSION['student_class'] = $_POST['student_class'] ?? '9e';
+    
+    // Redirection selon la classe choisie
+    $classe = $_SESSION['student_class'];
+    if ($classe === 'ns4') {
+        header('Location: ' . $basePath . '/ns4/index.php');
+        exit;
+    } else {
+        // Par défaut : 9ème AF
+        header('Location: ' . $basePath . '/9e/index.php');
+        exit;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -80,6 +97,7 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             --blue: #002395;
             --red: #d21034;
             --gold: #f1c40f;
+            --green: #10b981;
             --dark: #0f172a;
             --gray-50: #f8fafc;
             --gray-100: #f1f5f9;
@@ -129,55 +147,54 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             min-height: 100vh;
         }
 
-        /* ========== NAVIGATION ========== */
+        /* ═══════════════════ NAVBAR UNIFIÉE ═══════════════════ */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: var(--white);
-            padding: 0 2rem;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 0 1.5rem;
             height: 70px;
             position: sticky;
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid var(--gray-200);
-            backdrop-filter: blur(10px);
-            background: rgba(255,255,255,0.95);
+            box-shadow: var(--shadow-sm);
         }
 
         .nav-brand {
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            font-size: 1.4rem;
+            text-decoration: none;
+        }
+
+        .nav-brand img {
+            height: 44px;
+            width: 44px;
+            object-fit: contain;
+            border-radius: var(--radius);
+        }
+
+        .nav-brand-text {
+            font-size: 1.35rem;
             font-weight: 800;
             color: var(--gray-900);
-            text-decoration: none;
-            letter-spacing: -0.5px;
         }
 
-        .nav-brand .brand-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--blue), #1e40af);
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold);
-            font-size: 1.2rem;
-            font-weight: 800;
-            box-shadow: 0 4px 12px rgba(0,35,149,0.25);
-        }
-
-        .nav-brand .brand-dot {
+        .nav-brand-text span {
             color: var(--red);
+        }
+
+        .nav-brand:hover .nav-brand-text {
+            color: var(--blue);
         }
 
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 0.5rem;
+            gap: 0.35rem;
             align-items: center;
         }
 
@@ -185,11 +202,11 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             color: var(--gray-600);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
-            padding: 0.6rem 1.1rem;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.9rem;
             border-radius: var(--radius);
             transition: all var(--transition);
-            position: relative;
+            white-space: nowrap;
         }
 
         .nav-menu a:hover {
@@ -201,7 +218,19 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             color: var(--white);
             background: var(--blue);
             font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0,35,149,0.3);
+        }
+
+        .nav-menu a.btn-apk {
+            background: linear-gradient(135deg, var(--green), #059669);
+            color: var(--white);
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(16,185,129,.3);
+            padding: 0.5rem 0.9rem;
+        }
+
+        .nav-menu a.btn-apk:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 14px rgba(16,185,129,.4);
         }
 
         .nav-toggle {
@@ -211,7 +240,6 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             border: none;
             cursor: pointer;
             gap: 5px;
-            padding: 0.5rem;
         }
 
         .nav-toggle .bar {
@@ -219,7 +247,6 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             height: 2.5px;
             background: var(--gray-700);
             border-radius: 2px;
-            transition: var(--transition);
         }
 
         /* ========== MAIN CONTAINER ========== */
@@ -550,21 +577,11 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             text-decoration: underline;
         }
 
-        /* ========== RESPONSIVE ========== */
+        /* ═══════════════════ RESPONSIVE ═══════════════════ */
         @media (max-width: 768px) {
             .navbar {
-                padding: 0 1.25rem;
+                padding: 0 1rem;
                 height: 60px;
-            }
-
-            .nav-brand {
-                font-size: 1.2rem;
-            }
-
-            .nav-brand .brand-icon {
-                width: 34px;
-                height: 34px;
-                font-size: 1rem;
             }
 
             .nav-menu {
@@ -574,10 +591,11 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
                 top: 60px;
                 left: 0;
                 width: 100%;
-                background: var(--white);
+                background: rgba(255,255,255,.98);
                 padding: 1rem;
                 border-bottom: 1px solid var(--gray-200);
                 box-shadow: var(--shadow-lg);
+                gap: 0.5rem;
             }
 
             .nav-menu.show {
@@ -585,12 +603,9 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             }
 
             .nav-menu a {
-                padding: 0.8rem 1rem;
-                border-radius: var(--radius-sm);
-            }
-
-            .nav-menu a.active {
-                border-radius: var(--radius-sm);
+                padding: 0.75rem 1rem;
+                font-size: 0.95rem;
+                width: 100%;
             }
 
             .nav-toggle {
@@ -623,6 +638,16 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             }
         }
 
+        @media (min-width: 641px) and (max-width: 900px) {
+            .nav-menu a {
+                padding: 0.5rem 0.7rem;
+                font-size: 0.85rem;
+            }
+            .nav-menu {
+                gap: 0.25rem;
+            }
+        }
+
         @media (max-width: 400px) {
             .hero-features {
                 gap: 0.4rem;
@@ -648,11 +673,11 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
     </style>
 </head>
 <body>
-    <!-- ========== NAVIGATION ========== -->
+    <!-- ═══════════════════ NAVBAR UNIFIÉE ═══════════════════ -->
     <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <a href="<?= $basePath ?>/index.php" class="nav-brand" title="Quiz Ayiti – Accueil">
-            <span class="brand-icon">Q</span>
-            Quiz<span class="brand-dot">.</span>Ayiti
+            <img src="<?= $basePath ?>/images/logo.png" alt="Quiz Ayiti">
+            <span class="nav-brand-text">Quiz Ayiti</span>
         </a>
         <button class="nav-toggle" id="navToggle" aria-label="Menu">
             <span class="bar"></span>
@@ -660,9 +685,11 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             <span class="bar"></span>
         </button>
         <ul class="nav-menu" id="navMenu">
-            <li><a href="<?= $basePath ?>/index.php" class="active" title="Accueil Quiz Ayiti">Accueil</a></li>
-            <li><a href="<?= $basePath ?>/9e/index.php" title="Quiz 9ème Année Fondamentale">9ème AF</a></li>
-            <li><a href="<?= $basePath ?>/ns4/index.php" title="Quiz NS4 Haïti">NS4</a></li>
+            <li><a href="<?= $basePath ?>/index.php" >Accueil</a></li>
+            <li><a href="<?= $basePath ?>/9e/index.php">9ème AF</a></li>
+            <li><a href="<?= $basePath ?>/ns4/index.php">NS4</a></li>
+            <li><a href="<?= $basePath ?>/about/index.php">À propos</a></li>
+            <li><a href="<?= $basePath ?>/download.php" >Télécharger l'app</a></li>
         </ul>
     </nav>
 
@@ -697,7 +724,8 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
                 <h2>🎯 Commence tes révisions</h2>
                 <p>Entre ton nom et choisis ta classe</p>
             </div>
-            <form action="<?= $basePath ?>/9e/index.php" method="post" class="start-form" novalidate>
+            <!-- Le formulaire pointe vers index.php qui traite et redirige -->
+            <form action="<?= $basePath ?>/index.php" method="post" class="start-form" novalidate>
                 <div class="form-group">
                     <label for="studentName"> Ton prénom ou pseudo</label>
                     <input 
@@ -743,7 +771,7 @@ $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' 
             </div>
         </div>
 
-        <!-- Nouvelle section : niveaux disponibles et à venir (ciblage SEO Philo, Université, Préfac) -->
+        <!-- Niveaux couverts -->
         <section class="levels-section">
             <h2> Niveaux couverts</h2>
             <div class="levels-grid">

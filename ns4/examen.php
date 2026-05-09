@@ -652,9 +652,7 @@ foreach ($fichiers_par_matiere as $dossier => $fichiers) {
     foreach ($fichiers as $fichier) {
         if (preg_match('/_(\d{4})_/', $fichier, $m) || preg_match('/(\d{4})/', $fichier, $m)) {
             $annee = $m[1];
-        } else {
-            $annee = 'Autre';
-        }
+        } 
         $examens_par_annee[$annee][] = [
             'matiere' => $matieres[$dossier] ?? $dossier,
             'dossier' => $dossier,
