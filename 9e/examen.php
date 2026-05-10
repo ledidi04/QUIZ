@@ -432,7 +432,7 @@ krsort($examens);
                     <?php foreach ($fichiers as $fichier):
                         $ext        = strtolower(pathinfo($fichier, PATHINFO_EXTENSION));
                         $affichage  = nomAffichage($fichier);
-                        $urlFichier = $basePath . '/9e/Examen/' . $annee . '/' . rawurlencode($fichier);
+                        $urlFichier = $basePath . '/9e/examen/' . $annee . '/' . rawurlencode($fichier);
                         $extClass   = in_array($ext, ['jpg','jpeg']) ? 'ext-jpg' : 'ext-pdf';
                     ?>
                     <a href="<?= $urlFichier ?>"
