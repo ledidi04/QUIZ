@@ -1,4 +1,4 @@
-/
+quiz/
 ├── index.php
 ├── 9e/
 │   ├── index.php
@@ -27,6 +27,8 @@
 ├── about/
 |   └──index.php
 ├── db_quiz.sql
+├── error.php
+├── .htaccess
 ├── download.php
 ├── structure.txt
 └── LICENSE (fichier licence MIT)
