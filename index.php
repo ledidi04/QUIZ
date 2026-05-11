@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             --blue: #002395;
             --red: #d21034;
             --gold: #f1c40f;
-            --green: #10b981;
+            --green: #1c3029;
             --dark: #0f172a;
             --gray-50: #f8fafc;
             --gray-100: #f1f5f9;

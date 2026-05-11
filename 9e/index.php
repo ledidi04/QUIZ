@@ -45,7 +45,7 @@ $classe = getStudentClass();
     <meta name="twitter:title" content="Quiz 9ème AF - Quiz Ayiti">
     <meta name="twitter:description" content="2000+ questions interactives pour la 9ème AF. Conforme MENFP. Gratuit.">
     
-    <link rel="shortcut icon" href="<?= $basePath ?>/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="../images/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Structured Data -->

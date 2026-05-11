@@ -113,7 +113,7 @@ $programmes = [
     <meta name="twitter:title" content="Programmes 9ème AF - Quiz Ayiti">
     <meta name="twitter:description" content="Programmes officiels 9ème AF conformes MENFP. Téléchargez gratuitement.">
     
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="icon" href="../images/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Structured Data -->

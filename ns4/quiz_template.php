@@ -8,7 +8,7 @@ if (!isset($basePath)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="icon" href="../images/logo.png" type="image/png">
     <title><?= $pageTitle ?> - Quiz Ayiti</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
