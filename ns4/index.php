@@ -346,7 +346,7 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
                 </a>
 
                 <!-- Programmes Officiels -->
-                <a href="<?= $basePath ?>/ns4/programmes.php" class="type-card card-programmes" title="Programmes officiels MENFP 9ème AF">
+                <a href="<?= $basePath ?>/ns4/programmes.php" class="type-card card-programmes" title="Programmes officiels MENFP NS4">
                     <div class="type-icon-wrapper">📚</div>
                     <span class="type-name">Programmes Officiels</span>
                     <span class="type-desc">Chimie, Maths, SVT, Sciences...</span>
