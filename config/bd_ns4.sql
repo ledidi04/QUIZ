@@ -18294,7 +18294,7 @@ INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficu
 (13, 2, 'Quelle grève générale a précipité la chute de Magloire en 1956 ?', 'Une grève générale des commerçants, qui espéraient la candidature de Louis Déjoie, a précipité la chute de Magloire.', 'Programme NS4 - Gouvernement Magloire', 2);
 SET @qid = LAST_INSERT_ID();
 INSERT INTO reponses (question_id, texte, est_correcte, ordre) VALUES
-(@qid, 'Une grève des paysans', 0, 1), (@qid, 'Une grève des enseignants', 0, 2), (@qid, 'Une grève générale des grands commerçants', 1, 3), (@qid, 'Une grève de l''armée', 0, 4);
+(@qid, 'Une grève des paysans', 0, 1), (@qid, 'Une grève des enseignants', 0, 2), (@qid, 'Une grève des grands commerçants', 1, 3), (@qid, 'Une grève de l''armée', 0, 4);
 
 INSERT INTO questions (matiere_id, type_id, enonce, explication, source, difficulte) VALUES
 (13, 2, 'Quel impact la chute de Magloire a-t-elle eu sur l''armée haïtienne selon l''historien Bernardin ?', 'La chute de Magloire marqua le début du déclin de l''omnipotence de l''armée haïtienne.', 'Programme NS4 - Gouvernement Magloire', 3);

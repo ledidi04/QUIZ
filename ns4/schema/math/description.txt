@@ -1,0 +1,11 @@
+1) f(x) = (2x+6)/(x+2) on demandera limite en certain points et le domaine de cette fomction
+2)  on demandera a l'utilisateur quel est la bonne fonction correspondant a cette courbe, la bonne reponse c'est f(x) = x+1+((4)/((x-1)^(2))) 
+3)  on demandera a l'utilisateur quel est la bonne fonction correspondant a cette courbe, la bonne reponse c'est f(x) = x^2
+4)  on demandera a l'utilisateur quel est la bonne fonction correspondant a cette courbe, la bonne reponse c'est f(x)=x.ℯ^(2 x)
+5) Espace          Basesuggérée              Dimension
+   Noyau( Kre f)   (1, -1, -1)               1
+   Image (Im  f)   {(1, 2, 3), (1, 1, -1)}   2
+
+6)on demandera a l'utilisateur quel est la bonne fonction correspondant a cette courbe, la bonne reponse c'est f(x)=sqrt(x)
+7) calcul inverse matrice
+8) calcul Produit Matrice
