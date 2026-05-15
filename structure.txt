@@ -28,6 +28,8 @@ quiz/
 |   └──index.php
 ├── db_quiz.sql
 ├── error.php
+├── Quiz Ayiti.exe
+├── Quiz Ayiti.apk
 ├── .htaccess
 ├── download.php
 ├── structure.txt
