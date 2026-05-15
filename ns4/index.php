@@ -341,7 +341,7 @@ $siteUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
                 <!-- Formules & Fiches -->
                 <a href="<?= $basePath ?>/ns4/formules.php" class="type-card card-formules">
                     <div class="type-icon-wrapper">🧪</div>
-                    <span class="type-name">Formules & Fiches</span>
+                    <span class="type-name">Schema & Graphes</span>
                     <span class="type-desc">Maths, Physique, Chimie, SVT…</span>
                 </a>
 
